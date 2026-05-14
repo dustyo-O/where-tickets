@@ -1,0 +1,10 @@
+[project]
+name = "where-tickets-backend"
+version = "0.1.0"
+description = "Where Tickets backend API"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic-settings",
+]

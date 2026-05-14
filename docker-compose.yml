@@ -1,0 +1,24 @@
+# Local dev database for where-tickets.
+# Started by `just dev` via overmind; backend wiring lands in Slice 3.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: where-tickets-postgres
+    environment:
+      POSTGRES_USER: where_tickets
+      POSTGRES_PASSWORD: where_tickets
+      POSTGRES_DB: where_tickets
+    ports:
+      - "5432:5432"
+    volumes:
+      - where_tickets_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U where_tickets -d where_tickets"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  where_tickets_pgdata:

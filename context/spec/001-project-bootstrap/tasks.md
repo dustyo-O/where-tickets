@@ -11,15 +11,15 @@
   - [x] Create `justfile` with `default` recipe (`just --list`). **[Agent: general-purpose]**
   - [x] **Verify:** `just` at the root prints the recipe list; every README link resolves to an existing file. **[Agent: general-purpose]**
 
-- [ ] **Slice 2: Backend hello-world via `just dev`**
-  - [ ] Scaffold `backend/` with `uv`: `pyproject.toml`, `uv.lock`, `.python-version` (3.12). **[Agent: python-backend]**
-  - [ ] Add FastAPI `app/main.py` with `GET /health` returning `{"status":"ok"}` (no DB yet). **[Agent: python-backend]**
-  - [ ] Add `app/config.py` (pydantic-settings) reading `APP_ENV`, `LOG_LEVEL`. **[Agent: python-backend]**
-  - [ ] Add `docker-compose.yml` with a Postgres service (not yet wired into the backend). **[Agent: postgres-database]**
-  - [ ] Create root `Procfile` with `db:` and `api:` lines. **[Agent: general-purpose]**
-  - [ ] Add `justfile` recipes: `dev` (overmind start), `down`, `fmt`, `lint`, `test`. **[Agent: general-purpose]**
-  - [ ] Add `bin/check-prereqs.sh` that verifies `docker`, `overmind`, `uv`, `node`. **[Agent: general-purpose]**
-  - [ ] **Verify:** `just dev` brings up db + api; `curl http://localhost:8000/health` returns 200. **[Agent: python-backend]**
+- [x] **Slice 2: Backend hello-world via `just dev`**
+  - [x] Scaffold `backend/` with `uv`: `pyproject.toml`, `uv.lock`, `.python-version` (3.12). **[Agent: python-backend]**
+  - [x] Add FastAPI `app/main.py` with `GET /health` returning `{"status":"ok"}` (no DB yet). **[Agent: python-backend]**
+  - [x] Add `app/config.py` (pydantic-settings) reading `APP_ENV`, `LOG_LEVEL`. **[Agent: python-backend]**
+  - [x] Add `docker-compose.yml` with a Postgres service (not yet wired into the backend). **[Agent: postgres-database]**
+  - [x] Create root `Procfile` with `db:` and `api:` lines. **[Agent: general-purpose]**
+  - [x] Add `justfile` recipes: `dev` (overmind start), `down`, `fmt`, `lint`, `test`. **[Agent: general-purpose]**
+  - [x] Add `bin/check-prereqs.sh` that verifies `docker`, `overmind`, `uv`, `node`. **[Agent: general-purpose]**
+  - [x] **Verify:** `just dev` brings up db + api; `curl http://localhost:8000/health` returns 200. **[Agent: python-backend]**
 
 - [ ] **Slice 3: Backend ↔ database wired**
   - [ ] Add `piccolo_conf.py` and `app/db.py` (Piccolo engine from `DATABASE_URL`). **[Agent: postgres-database]**
