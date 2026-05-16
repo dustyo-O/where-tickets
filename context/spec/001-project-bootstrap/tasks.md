@@ -21,21 +21,21 @@
   - [x] Add `bin/check-prereqs.sh` that verifies `docker`, `overmind`, `uv`, `node`. **[Agent: general-purpose]**
   - [x] **Verify:** `just dev` brings up db + api; `curl http://localhost:8000/health` returns 200. **[Agent: python-backend]**
 
-- [ ] **Slice 3: Backend ↔ database wired**
-  - [ ] Add `piccolo_conf.py` and `app/db.py` (Piccolo engine from `DATABASE_URL`). **[Agent: postgres-database]**
-  - [ ] Add `piccolo_migrations/0001_init.py` with a placeholder table. **[Agent: postgres-database]**
-  - [ ] Auto-run migrations on backend boot when `APP_ENV in {local, dev}`. **[Agent: python-backend]**
-  - [ ] Extend `/health` to report `database: ok | down`; return 503 on DB failure. **[Agent: python-backend]**
-  - [ ] Add `tests/test_health.py` (pytest + pytest-asyncio) hitting a real Postgres fixture. **[Agent: python-backend]**
-  - [ ] **Verify:** `just dev` shows /health returning `database: ok`; stopping Postgres flips it to 503 with `database: down`. **[Agent: python-backend]**
+- [x] **Slice 3: Backend ↔ database wired**
+  - [x] Add `piccolo_conf.py` and `app/db.py` (Piccolo engine from `DATABASE_URL`). **[Agent: postgres-database]**
+  - [x] Add `piccolo_migrations/0001_init.py` with a placeholder table. **[Agent: postgres-database]**
+  - [x] Auto-run migrations on backend boot when `APP_ENV in {local, dev}`. **[Agent: python-backend]**
+  - [x] Extend `/health` to report `database: ok | down`; return 503 on DB failure. **[Agent: python-backend]**
+  - [x] Add `tests/test_health.py` (pytest + pytest-asyncio) hitting a real Postgres fixture. **[Agent: python-backend]**
+  - [x] **Verify:** `just dev` shows /health returning `database: ok`; stopping Postgres flips it to 503 with `database: down`. **[Agent: python-backend]**
 
-- [ ] **Slice 4: Mobile hello-world (System Status, hardcoded OK)**
-  - [ ] Scaffold `mobile/` with bare React Native + TypeScript strict mode (`@react-native-community/cli init`). **[Agent: react-native-mobile]**
-  - [ ] Add `@react-navigation/native` + native-stack, `ESLint`, `Prettier`, `Jest` config. **[Agent: react-native-mobile]**
-  - [ ] Build `SystemStatusScreen` with hardcoded "All systems OK" placeholder. **[Agent: react-native-mobile]**
-  - [ ] Add `Procfile` `metro:` line. **[Agent: general-purpose]**
-  - [ ] Add Jest smoke test rendering `App` without crashing. **[Agent: react-native-mobile]**
-  - [ ] **Verify:** `just dev` runs Metro; app builds and shows the System Status screen on iOS simulator AND Android emulator. **[Agent: react-native-mobile]**
+- [x] **Slice 4: Mobile hello-world (System Status, hardcoded OK)**
+  - [x] Scaffold `mobile/` with bare React Native + TypeScript strict mode (`@react-native-community/cli init`). **[Agent: react-native-mobile]**
+  - [x] Add `@react-navigation/native` + native-stack, `ESLint`, `Prettier`, `Jest` config. **[Agent: react-native-mobile]**
+  - [x] Build `SystemStatusScreen` with hardcoded "All systems OK" placeholder. **[Agent: react-native-mobile]**
+  - [x] Add `Procfile` `metro:` line. **[Agent: general-purpose]**
+  - [x] Add Jest smoke test rendering `App` without crashing. **[Agent: react-native-mobile]**
+  - [x] **Verify:** `just dev` runs Metro; app builds and shows the System Status screen on iOS simulator AND Android emulator. **[Agent: react-native-mobile]**
 
 - [ ] **Slice 5: Full vertical — mobile calls real `/health`**
   - [ ] Add `mobile/src/api/client.ts` with `BACKEND_URL` from `react-native-config`. **[Agent: react-native-mobile]**

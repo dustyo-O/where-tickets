@@ -1,0 +1,12 @@
+# Native build artifacts and platform-managed assets
+ios/Pods/
+ios/build/
+ios/**/*.xcassets/
+android/build/
+android/app/build/
+android/.gradle/
+
+# JS build artifacts
+node_modules/
+coverage/
+dist/
