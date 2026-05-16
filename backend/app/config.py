@@ -12,6 +12,7 @@ class Settings(BaseSettings):
 
     APP_ENV: Literal["local", "dev", "staging", "prod"] = "local"
     LOG_LEVEL: str = "INFO"
+    DATABASE_URL: str
 
 
 settings = Settings()
