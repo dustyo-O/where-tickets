@@ -37,11 +37,11 @@
   - [x] Add Jest smoke test rendering `App` without crashing. **[Agent: react-native-mobile]**
   - [x] **Verify:** `just dev` runs Metro; app builds and shows the System Status screen on iOS simulator AND Android emulator. **[Agent: react-native-mobile]**
 
-- [ ] **Slice 5: Full vertical — mobile calls real `/health`**
-  - [ ] Add `mobile/src/api/client.ts` with `BACKEND_URL` from `react-native-config`. **[Agent: react-native-mobile]**
-  - [ ] `.env` defaults: `http://localhost:8000` (iOS sim), `http://10.0.2.2:8000` (Android emu). **[Agent: react-native-mobile]**
-  - [ ] `SystemStatusScreen` fetches `/health` on mount: shows *Checking…*, *All systems OK*, or *Degraded — <link> down* with a hint. **[Agent: react-native-mobile]**
-  - [ ] **Verify:** `just dev` brings up the full stack; sim/emulator both display "All systems OK"; stopping the backend flips the screen to "Degraded — backend down". **[Agent: react-native-mobile]**
+- [x] **Slice 5: Full vertical — mobile calls real `/health`**
+  - [x] Add `mobile/src/api/client.ts` with `BACKEND_URL` from `react-native-config`. **[Agent: react-native-mobile]**
+  - [x] `.env` defaults: `http://localhost:8000` (iOS sim), `http://10.0.2.2:8000` (Android emu). **[Agent: react-native-mobile]**
+  - [x] `SystemStatusScreen` fetches `/health` on mount: shows *Checking…*, *All systems OK*, or *Degraded — <link> down* with a hint. **[Agent: react-native-mobile]**
+  - [x] **Verify:** `just dev` brings up the full stack; sim/emulator both display "All systems OK"; stopping the backend flips the screen to "Degraded — backend down". **[Agent: react-native-mobile]**
 
 - [ ] **Slice 6: Infrastructure baseline (`terraform plan` in dev)**
   - [ ] Create `infra/` with `.terraform-version`, `envs/dev/`, `envs/staging/` skeleton, `envs/prod/` skeleton, `modules/{network,ecr,secrets}/`. **[Agent: terraform-aws]**
