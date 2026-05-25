@@ -90,3 +90,4 @@ the same bucket.
 
 - Terraform `1.9.8` (install via `tfenv install` — it reads `.terraform-version`)
 - AWS credentials are **not** required for the current bootstrap-phase plan.
+
