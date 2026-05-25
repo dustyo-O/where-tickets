@@ -27,9 +27,7 @@ async def run_migrations_if_dev() -> None:
 
         response = await run_forwards(app_name="all")
         if not response.success:
-            raise RuntimeError(
-                f"Piccolo migrations failed: {response.message}"
-            )
+            raise RuntimeError(f"Piccolo migrations failed: {response.message}")
     except Exception:
         logger.exception("Failed to apply Piccolo migrations")
         raise
