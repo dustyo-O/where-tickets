@@ -1,0 +1,111 @@
+{
+  "stops": [
+    {
+      "city": "ATH",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "MUC",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "ARN",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "SVO",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ATH",
+      "mode": "train",
+      "sourceFragmentId": "035-straight-3p-seeded-shuffle-tkt-01",
+      "to": "MUC",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "MUC",
+      "mode": "train",
+      "sourceFragmentId": "035-straight-3p-seeded-shuffle-tkt-01",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "ROM",
+      "mode": "train",
+      "sourceFragmentId": "035-straight-3p-seeded-shuffle-tkt-01",
+      "to": "ARN",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "ARN",
+      "mode": "air",
+      "sourceFragmentId": "035-straight-3p-seeded-shuffle-tkt-02",
+      "to": "SVO",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

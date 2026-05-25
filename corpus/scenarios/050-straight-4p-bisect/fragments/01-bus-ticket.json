@@ -1,0 +1,21 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "LHR",
+      "to": "LIS",
+      "vehicleNumber": "FL103"
+    }
+  ],
+  "pnr": "PNR002050",
+  "sourceDocumentId": "050-straight-4p-bisect-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

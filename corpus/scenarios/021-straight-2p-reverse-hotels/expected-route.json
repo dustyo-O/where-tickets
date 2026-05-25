@@ -1,0 +1,66 @@
+{
+  "stops": [
+    {
+      "city": "BER",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "ARN",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "BER",
+      "mode": "air",
+      "sourceFragmentId": "021-straight-2p-reverse-hotels-tkt-01",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "ROM",
+      "mode": "air",
+      "sourceFragmentId": "021-straight-2p-reverse-hotels-tkt-01",
+      "to": "ARN",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "checkInAt": "2027-03-02T00:00:00Z",
+  "checkOutAt": "2027-03-02T18:00:00Z",
+  "city": "LHR",
+  "confirmationCode": "HTL002062",
+  "documentType": "hotel-booking",
+  "hotelName": "Old Town Hostel",
+  "sourceDocumentId": "062-straight-4p-bisect-return-hotels-htl-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

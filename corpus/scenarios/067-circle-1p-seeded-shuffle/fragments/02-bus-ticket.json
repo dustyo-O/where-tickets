@@ -1,0 +1,18 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "LHR",
+      "to": "MUC",
+      "vehicleNumber": "EU104"
+    }
+  ],
+  "pnr": "PNR003067",
+  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-03",
+  "travelers": [
+    "traveler-1"
+  ]
+}

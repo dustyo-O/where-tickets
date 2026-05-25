@@ -1,0 +1,14 @@
+{
+  "checkInAt": "2027-03-02T00:00:00Z",
+  "checkOutAt": "2027-03-02T18:00:00Z",
+  "city": "BER",
+  "confirmationCode": "HTL002047",
+  "documentType": "hotel-booking",
+  "hotelName": "Old Town Hostel",
+  "sourceDocumentId": "047-straight-3p-seeded-shuffle-return-hotels-htl-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

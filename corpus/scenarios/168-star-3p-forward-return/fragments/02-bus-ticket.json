@@ -1,0 +1,20 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "HEL",
+      "to": "VIE",
+      "vehicleNumber": "FL103"
+    }
+  ],
+  "pnr": "PNR002168",
+  "sourceDocumentId": "168-star-3p-forward-return-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

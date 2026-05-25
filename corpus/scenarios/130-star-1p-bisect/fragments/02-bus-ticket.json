@@ -1,0 +1,18 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "AMS",
+      "to": "ARN",
+      "vehicleNumber": "EU104"
+    }
+  ],
+  "pnr": "PNR003130",
+  "sourceDocumentId": "130-star-1p-bisect-tkt-03",
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "BER",
+      "to": "MUC",
+      "vehicleNumber": "EU104"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "from": "MUC",
+      "to": "LIS",
+      "vehicleNumber": "EU105"
+    }
+  ],
+  "pnr": "PNR003169",
+  "sourceDocumentId": "169-star-3p-reverse-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "stops": [
+    {
+      "city": "FRA",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "JFK",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "BCN",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "VIE",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "FRA",
+      "mode": "bus",
+      "sourceFragmentId": "004-straight-1p-forward-hotels-tkt-01",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "JFK",
+      "mode": "bus",
+      "sourceFragmentId": "004-straight-1p-forward-hotels-tkt-01",
+      "to": "BCN",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "BCN",
+      "mode": "bus",
+      "sourceFragmentId": "004-straight-1p-forward-hotels-tkt-01",
+      "to": "VIE",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

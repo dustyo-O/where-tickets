@@ -1,0 +1,238 @@
+{
+  "stops": [
+    {
+      "city": "LIS",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "WAW",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "MAD",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "WAW",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-03T18:00:00Z",
+          "checkOutAt": "2027-03-04T12:00:00Z",
+          "hotelName": "Central Lodge"
+        }
+      ],
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "FRA",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-04T15:00:00Z",
+          "checkOutAt": "2027-03-05T09:00:00Z",
+          "hotelName": "Harbor View"
+        }
+      ],
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "WAW",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-05T12:00:00Z",
+          "checkOutAt": "2027-03-06T06:00:00Z",
+          "hotelName": "City Garden"
+        }
+      ],
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-06T09:00:00Z",
+      "city": "LIS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "LIS",
+      "mode": "train",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
+      "to": "WAW",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "WAW",
+      "mode": "train",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
+      "to": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "MAD",
+      "mode": "train",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
+      "to": "WAW",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "WAW",
+      "mode": "air",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-02",
+      "to": "FRA",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "FRA",
+      "mode": "train",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
+      "to": "WAW",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "from": "WAW",
+      "mode": "train",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-06T09:00:00Z",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "from": "ROM",
+      "mode": "train",
+      "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
+      "to": "LIS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "checkInAt": "2027-03-02T00:00:00Z",
+  "checkOutAt": "2027-03-02T18:00:00Z",
+  "city": "MAD",
+  "confirmationCode": "HTL002149",
+  "documentType": "hotel-booking",
+  "hotelName": "Old Town Hostel",
+  "sourceDocumentId": "149-star-2p-reverse-hotels-htl-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

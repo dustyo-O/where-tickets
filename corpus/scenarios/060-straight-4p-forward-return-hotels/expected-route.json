@@ -1,0 +1,110 @@
+{
+  "stops": [
+    {
+      "city": "VIE",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "BER",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "SVO",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "VIE",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "VIE",
+      "mode": "air",
+      "sourceFragmentId": "060-straight-4p-forward-return-hotels-tkt-01",
+      "to": "BER",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "BER",
+      "mode": "air",
+      "sourceFragmentId": "060-straight-4p-forward-return-hotels-tkt-01",
+      "to": "SVO",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "SVO",
+      "mode": "air",
+      "sourceFragmentId": "060-straight-4p-forward-return-hotels-tkt-01",
+      "to": "VIE",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "MAD",
+      "to": "FRA",
+      "vehicleNumber": "DB104"
+    }
+  ],
+  "pnr": "PNR003056",
+  "sourceDocumentId": "056-straight-4p-forward-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

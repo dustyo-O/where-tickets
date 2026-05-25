@@ -1,0 +1,80 @@
+{
+  "stops": [
+    {
+      "city": "WAW",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "OSL",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "WAW",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "WAW",
+      "mode": "air",
+      "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "ROM",
+      "mode": "air",
+      "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
+      "to": "OSL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "OSL",
+      "mode": "air",
+      "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
+      "to": "WAW",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "checkInAt": "2027-03-05T12:00:00Z",
+  "checkOutAt": "2027-03-06T06:00:00Z",
+  "city": "HEL",
+  "confirmationCode": "HTL006158",
+  "documentType": "hotel-booking",
+  "hotelName": "City Garden",
+  "sourceDocumentId": "158-star-2p-bisect-return-hotels-htl-06",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

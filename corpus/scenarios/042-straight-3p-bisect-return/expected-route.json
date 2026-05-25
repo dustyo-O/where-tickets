@@ -1,0 +1,88 @@
+{
+  "stops": [
+    {
+      "city": "MAD",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "MUC",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "MAD",
+      "mode": "air",
+      "sourceFragmentId": "042-straight-3p-bisect-return-tkt-01",
+      "to": "MUC",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "MUC",
+      "mode": "air",
+      "sourceFragmentId": "042-straight-3p-bisect-return-tkt-01",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "AMS",
+      "mode": "air",
+      "sourceFragmentId": "042-straight-3p-bisect-return-tkt-01",
+      "to": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

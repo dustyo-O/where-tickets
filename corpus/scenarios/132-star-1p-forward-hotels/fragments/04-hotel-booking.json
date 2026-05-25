@@ -1,0 +1,12 @@
+{
+  "checkInAt": "2027-03-02T21:00:00Z",
+  "checkOutAt": "2027-03-03T15:00:00Z",
+  "city": "ZRH",
+  "confirmationCode": "HTL003132",
+  "documentType": "hotel-booking",
+  "hotelName": "Plaza Suites",
+  "sourceDocumentId": "132-star-1p-forward-hotels-htl-03",
+  "travelers": [
+    "traveler-1"
+  ]
+}

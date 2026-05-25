@@ -1,0 +1,12 @@
+{
+  "checkInAt": "2027-03-02T00:00:00Z",
+  "checkOutAt": "2027-03-02T18:00:00Z",
+  "city": "HEL",
+  "confirmationCode": "HTL002069",
+  "documentType": "hotel-booking",
+  "hotelName": "Old Town Hostel",
+  "sourceDocumentId": "069-circle-1p-reverse-hotels-htl-02",
+  "travelers": [
+    "traveler-1"
+  ]
+}

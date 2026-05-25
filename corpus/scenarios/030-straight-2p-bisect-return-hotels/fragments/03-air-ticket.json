@@ -1,0 +1,35 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "CDG",
+      "to": "LHR",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "LHR",
+      "to": "PRG",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "PRG",
+      "to": "CDG",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001030",
+  "sourceDocumentId": "030-straight-2p-bisect-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

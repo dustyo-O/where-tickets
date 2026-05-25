@@ -1,0 +1,28 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "WAW",
+      "to": "PRG",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "PRG",
+      "to": "MXP",
+      "vehicleNumber": "LO101"
+    }
+  ],
+  "pnr": "PNR001033",
+  "sourceDocumentId": "033-straight-3p-reverse-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "stops": [
+    {
+      "city": "MXP",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "LHR",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "HEL",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "MAD",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-03T18:00:00Z",
+          "checkOutAt": "2027-03-04T12:00:00Z",
+          "hotelName": "Central Lodge"
+        }
+      ],
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "JFK",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "LHR",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "MXP",
+      "mode": "air",
+      "sourceFragmentId": "069-circle-1p-reverse-hotels-tkt-01",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "LHR",
+      "mode": "air",
+      "sourceFragmentId": "069-circle-1p-reverse-hotels-tkt-01",
+      "to": "HEL",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "HEL",
+      "mode": "air",
+      "sourceFragmentId": "069-circle-1p-reverse-hotels-tkt-01",
+      "to": "MAD",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "MAD",
+      "mode": "bus",
+      "sourceFragmentId": "069-circle-1p-reverse-hotels-tkt-02",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "JFK",
+      "mode": "air",
+      "sourceFragmentId": "069-circle-1p-reverse-hotels-tkt-03",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

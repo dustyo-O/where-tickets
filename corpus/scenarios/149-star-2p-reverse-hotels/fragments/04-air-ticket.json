@@ -1,0 +1,19 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "carrier": "AF",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "ROM",
+      "to": "LHR",
+      "vehicleNumber": "AF103"
+    }
+  ],
+  "pnr": "PNR002149",
+  "sourceDocumentId": "149-star-2p-reverse-hotels-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checkInAt": "2027-03-02T00:00:00Z",
+  "checkOutAt": "2027-03-02T18:00:00Z",
+  "city": "BCN",
+  "confirmationCode": "HTL002004",
+  "documentType": "hotel-booking",
+  "hotelName": "Old Town Hostel",
+  "sourceDocumentId": "004-straight-1p-forward-hotels-htl-02",
+  "travelers": [
+    "traveler-1"
+  ]
+}

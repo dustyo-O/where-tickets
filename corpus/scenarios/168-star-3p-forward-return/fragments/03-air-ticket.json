@@ -1,0 +1,20 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "KL",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "VIE",
+      "to": "ATH",
+      "vehicleNumber": "KL104"
+    }
+  ],
+  "pnr": "PNR003168",
+  "sourceDocumentId": "168-star-3p-forward-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

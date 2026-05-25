@@ -1,0 +1,110 @@
+{
+  "stops": [
+    {
+      "city": "OSL",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "JFK",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "IST",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "JFK",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "OSL",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "OSL",
+      "mode": "air",
+      "sourceFragmentId": "072-circle-1p-forward-return-tkt-01",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "JFK",
+      "mode": "air",
+      "sourceFragmentId": "072-circle-1p-forward-return-tkt-01",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "AMS",
+      "mode": "air",
+      "sourceFragmentId": "072-circle-1p-forward-return-tkt-01",
+      "to": "IST",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "IST",
+      "mode": "train",
+      "sourceFragmentId": "072-circle-1p-forward-return-tkt-02",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "JFK",
+      "mode": "air",
+      "sourceFragmentId": "072-circle-1p-forward-return-tkt-03",
+      "to": "OSL",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "MUC",
+      "to": "BCN",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002139",
+  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-02",
+  "travelers": [
+    "traveler-1"
+  ]
+}

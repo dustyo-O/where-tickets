@@ -1,0 +1,134 @@
+{
+  "stops": [
+    {
+      "city": "AMS",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "MAD",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "CPH",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "BCN",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "MXP",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "AMS",
+      "mode": "air",
+      "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-01",
+      "to": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "MAD",
+      "mode": "air",
+      "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-01",
+      "to": "CPH",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "CPH",
+      "mode": "air",
+      "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-01",
+      "to": "BCN",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "BCN",
+      "mode": "bus",
+      "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-02",
+      "to": "MXP",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "MXP",
+      "mode": "air",
+      "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-03",
+      "to": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

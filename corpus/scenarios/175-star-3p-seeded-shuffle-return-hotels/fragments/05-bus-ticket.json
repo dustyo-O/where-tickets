@@ -1,0 +1,28 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "IST",
+      "to": "ZRH",
+      "vehicleNumber": "EU104"
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "from": "ZRH",
+      "to": "SVO",
+      "vehicleNumber": "EU105"
+    }
+  ],
+  "pnr": "PNR003175",
+  "sourceDocumentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "MAD",
+      "to": "ROM",
+      "vehicleNumber": "EU104"
+    }
+  ],
+  "pnr": "PNR003088",
+  "sourceDocumentId": "088-circle-2p-forward-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

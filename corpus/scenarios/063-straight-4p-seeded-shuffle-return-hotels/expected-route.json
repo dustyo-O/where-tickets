@@ -1,0 +1,110 @@
+{
+  "stops": [
+    {
+      "city": "MAD",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "LHR",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "MAD",
+      "mode": "air",
+      "sourceFragmentId": "063-straight-4p-seeded-shuffle-return-hotels-tkt-01",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "ROM",
+      "mode": "air",
+      "sourceFragmentId": "063-straight-4p-seeded-shuffle-return-hotels-tkt-01",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "LHR",
+      "mode": "air",
+      "sourceFragmentId": "063-straight-4p-seeded-shuffle-return-hotels-tkt-01",
+      "to": "MAD",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

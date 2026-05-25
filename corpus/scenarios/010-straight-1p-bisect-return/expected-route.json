@@ -1,0 +1,91 @@
+{
+  "stops": [
+    {
+      "city": "JFK",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "OSL",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "CPH",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "PRG",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "JFK",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "JFK",
+      "mode": "bus",
+      "sourceFragmentId": "010-straight-1p-bisect-return-tkt-01",
+      "to": "OSL",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "OSL",
+      "mode": "bus",
+      "sourceFragmentId": "010-straight-1p-bisect-return-tkt-01",
+      "to": "CPH",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "CPH",
+      "mode": "bus",
+      "sourceFragmentId": "010-straight-1p-bisect-return-tkt-01",
+      "to": "PRG",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "PRG",
+      "mode": "train",
+      "sourceFragmentId": "010-straight-1p-bisect-return-tkt-02",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

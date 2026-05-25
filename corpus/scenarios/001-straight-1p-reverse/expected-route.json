@@ -1,0 +1,72 @@
+{
+  "stops": [
+    {
+      "city": "ZRH",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "ATH",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "ARN",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "SVO",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ZRH",
+      "mode": "bus",
+      "sourceFragmentId": "001-straight-1p-reverse-tkt-01",
+      "to": "ATH",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "ATH",
+      "mode": "bus",
+      "sourceFragmentId": "001-straight-1p-reverse-tkt-01",
+      "to": "ARN",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "ARN",
+      "mode": "bus",
+      "sourceFragmentId": "001-straight-1p-reverse-tkt-01",
+      "to": "SVO",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

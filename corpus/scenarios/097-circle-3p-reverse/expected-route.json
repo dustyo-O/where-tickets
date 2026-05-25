@@ -1,0 +1,134 @@
+{
+  "stops": [
+    {
+      "city": "HEL",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "ZRH",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "BCN",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "BER",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "FRA",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "ZRH",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "HEL",
+      "mode": "bus",
+      "sourceFragmentId": "097-circle-3p-reverse-tkt-01",
+      "to": "ZRH",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "ZRH",
+      "mode": "bus",
+      "sourceFragmentId": "097-circle-3p-reverse-tkt-01",
+      "to": "BCN",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "BCN",
+      "mode": "bus",
+      "sourceFragmentId": "097-circle-3p-reverse-tkt-01",
+      "to": "BER",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "BER",
+      "mode": "train",
+      "sourceFragmentId": "097-circle-3p-reverse-tkt-02",
+      "to": "FRA",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "FRA",
+      "mode": "bus",
+      "sourceFragmentId": "097-circle-3p-reverse-tkt-03",
+      "to": "ZRH",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

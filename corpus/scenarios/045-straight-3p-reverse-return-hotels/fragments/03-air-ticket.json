@@ -1,0 +1,36 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "MAD",
+      "to": "HEL",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "HEL",
+      "to": "ROM",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "ROM",
+      "to": "MAD",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001045",
+  "sourceDocumentId": "045-straight-3p-reverse-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

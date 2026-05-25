@@ -174,23 +174,65 @@ Three workflows, each triggered on `pull_request` with `paths:` filter:
 
 ### 2.8 Corpus (`corpus/`)
 
+**Purpose:** stress-test the future route-assembly engine. The hard problem is composing a coherent travel route from a pile of extracted document fragments delivered in arbitrary order, across varied traveler counts, route shapes, and transport modes. PDF extraction is out of scope here — fragments are pre-structured JSON.
+
 - **Layout:**
   ```
   corpus/
-  ├── README.md                       # explains purpose + expected-route schema
+  ├── README.md                              # purpose, schemas, regen instructions
   ├── schema/
-  │   └── expected-route.schema.json  # JSON Schema for *.expected.json
-  └── examples/
-      ├── 001-placeholder-air-ticket.pdf
-      └── 001-placeholder-air-ticket.expected.json
+  │   ├── extracted-fragment.schema.json     # one fragment = one simulated document
+  │   └── expected-route.schema.json         # the composed answer
+  ├── generator/
+  │   ├── __init__.py
+  │   ├── __main__.py                        # `python -m corpus.generator` → writes scenarios/
+  │   ├── matrix.py                          # enumerates the coverage matrix
+  │   ├── shapes.py                          # straight / circle / star route generators
+  │   ├── fragmenter.py                      # splits a route into per-document fragments
+  │   └── orderings.py                       # forward / reverse / bisect / seeded-shuffle
+  ├── validate.py                            # validates scenarios + checks drift vs generator
+  └── scenarios/                             # **committed, generated** — never hand-edited
+      └── NNN-<shape>-<pax>p-<order>/
+          ├── fragments/
+          │   ├── 01-<doc-type>.json
+          │   └── ...
+          ├── expected-route.json
+          └── README.md                       # one line: human-readable scenario summary
   ```
-- **`expected-route.schema.json`** (shape only, full schema lives in the file):
-  - `document`: `{ filename, declaredType }`
-  - `route`: ordered array of `{ city, arrivalAt?, departureAt?, travelers[] }`
-  - `transit[]`: `{ from, to, mode, departureAt, arrivalAt }`
-  - `accommodations[]`: `{ city, checkInAt, checkOutAt }`
-  - `notes`: free-form text
-- The placeholder PDF is a redacted/synthetic single-leg air ticket so the example is concrete but harmless.
+
+- **Coverage matrix** (cartesian product, generator enumerates):
+  - **Travelers:** `[1, 2, 3, 4]`
+  - **Route shape:** `straight` (a→b→c…), `circle` (a→b→c→d→b→e), `star` (hub-and-spoke: a→b→c→b→d→b→e→…)
+  - **Leg count:** parameterized per shape (typically 2–6)
+  - **Return:** `yes` / `no` — orthogonal to shape; "return" simply means the last hop lands back at the origin. Composes with any shape (e.g., star with return: `a→b→c→b→d→b→e→a`, optionally without `e`).
+  - **Hotels:** generator inserts plausible hotel-booking fragments at stopovers
+  - **Mode mix:** air, bus, train (varied per scenario; `mode` is part of each transit segment)
+  - **Fragment ordering:** `forward` (chronological), `reverse`, `bisect`, `seeded-shuffle` (deterministic with the scenario index as seed)
+  - Target output: ~100+ scenarios from the full cartesian product.
+
+- **Fragment grain:** one fragment = one simulated document (one ticket PDF, one hotel booking confirmation, etc.). A return ticket = one fragment containing two legs. This mirrors what extraction will actually produce and forces the engine to handle multi-leg single documents.
+
+- **Schemas (shape only — full schema lives in the files):**
+  - `extracted-fragment.schema.json`: discriminated union on `documentType`:
+    - `air-ticket | bus-ticket | train-ticket`: `{ documentType, pnr, travelers[], legs[]: { from, to, departureAt, arrivalAt, carrier?, vehicleNumber? } }`
+    - `hotel-booking`: `{ documentType, confirmationCode, travelers[], city, checkInAt, checkOutAt, hotelName? }`
+    - Common: `sourceDocumentId` (stable per fragment), all timestamps ISO 8601 `date-time`.
+  - `expected-route.schema.json`:
+    - `travelers[]`: distinct traveler identifiers seen across fragments
+    - `stops[]`: ordered `{ city, arrivalAt?, departureAt?, travelers[], accommodations[]?: { checkInAt, checkOutAt, hotelName? } }`
+    - `transits[]`: ordered `{ from, to, mode, departureAt, arrivalAt, travelers[], sourceFragmentId }`
+    - `notes?`: free-form
+
+- **Determinism:** generator uses fixed seeds derived from `(scenario_index, axis_values)`; no `random()` without a seed, no `datetime.now()`. Dates are anchored to a fixed epoch (`2027-03-01`) so regeneration is byte-identical.
+
+- **Validation (`just test-corpus`):**
+  1. Walk every `corpus/scenarios/*/fragments/*.json` → validate against `extracted-fragment.schema.json`.
+  2. Walk every `corpus/scenarios/*/expected-route.json` → validate against `expected-route.schema.json`.
+  3. Re-run the generator into a temp dir and diff against `corpus/scenarios/`. Drift → exit non-zero.
+  - Runs via `uv run --with jsonschema python corpus/validate.py` so no project dependency is added.
+  - Wired into the root `test` recipe.
+
+- **PDFs:** not in scope for bootstrap. `source-pdfs/` subfolders may be added per-scenario later under the Document Ingest umbrella.
 
 ---
 

@@ -1,0 +1,34 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "BER",
+      "to": "FRA",
+      "vehicleNumber": "DB100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "FRA",
+      "to": "MXP",
+      "vehicleNumber": "DB101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "MXP",
+      "to": "FRA",
+      "vehicleNumber": "DB102"
+    }
+  ],
+  "pnr": "PNR001128",
+  "sourceDocumentId": "128-star-1p-forward-tkt-01",
+  "travelers": [
+    "traveler-1"
+  ]
+}

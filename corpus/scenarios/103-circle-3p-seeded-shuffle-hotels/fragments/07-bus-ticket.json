@@ -1,0 +1,20 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "DUB",
+      "to": "ZRH",
+      "vehicleNumber": "EU104"
+    }
+  ],
+  "pnr": "PNR003103",
+  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "AF",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "PRG",
+      "to": "LIS",
+      "vehicleNumber": "AF103"
+    }
+  ],
+  "pnr": "PNR002017",
+  "sourceDocumentId": "017-straight-2p-reverse-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

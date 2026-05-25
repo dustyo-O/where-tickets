@@ -1,0 +1,27 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "carrier": "KL",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "ARN",
+      "to": "ATH",
+      "vehicleNumber": "KL104"
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "carrier": "KL",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "from": "ATH",
+      "to": "AMS",
+      "vehicleNumber": "KL105"
+    }
+  ],
+  "pnr": "PNR003093",
+  "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

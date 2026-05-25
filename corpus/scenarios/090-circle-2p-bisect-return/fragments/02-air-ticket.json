@@ -1,0 +1,19 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "KL",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "BER",
+      "to": "OSL",
+      "vehicleNumber": "KL104"
+    }
+  ],
+  "pnr": "PNR003090",
+  "sourceDocumentId": "090-circle-2p-bisect-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

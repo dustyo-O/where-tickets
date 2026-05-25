@@ -1,0 +1,21 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "carrier": "KL",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "SVO",
+      "to": "CDG",
+      "vehicleNumber": "KL104"
+    }
+  ],
+  "pnr": "PNR003189",
+  "sourceDocumentId": "189-star-4p-reverse-return-hotels-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

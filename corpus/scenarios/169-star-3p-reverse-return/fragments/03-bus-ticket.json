@@ -1,0 +1,36 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "LIS",
+      "to": "MUC",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "MUC",
+      "to": "CDG",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "CDG",
+      "to": "MUC",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001169",
+  "sourceDocumentId": "169-star-3p-reverse-return-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "MXP",
+      "to": "BCN",
+      "vehicleNumber": "EU104"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "from": "BCN",
+      "to": "LIS",
+      "vehicleNumber": "EU105"
+    }
+  ],
+  "pnr": "PNR003184",
+  "sourceDocumentId": "184-star-4p-forward-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

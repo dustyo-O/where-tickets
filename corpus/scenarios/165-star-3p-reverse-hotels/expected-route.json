@@ -1,0 +1,132 @@
+{
+  "stops": [
+    {
+      "city": "WAW",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "LHR",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "LHR",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "OSL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "WAW",
+      "mode": "air",
+      "sourceFragmentId": "165-star-3p-reverse-hotels-tkt-01",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "LHR",
+      "mode": "air",
+      "sourceFragmentId": "165-star-3p-reverse-hotels-tkt-01",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "ROM",
+      "mode": "air",
+      "sourceFragmentId": "165-star-3p-reverse-hotels-tkt-01",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "LHR",
+      "mode": "bus",
+      "sourceFragmentId": "165-star-3p-reverse-hotels-tkt-02",
+      "to": "OSL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

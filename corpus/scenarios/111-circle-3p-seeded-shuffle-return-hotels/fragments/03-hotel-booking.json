@@ -1,0 +1,14 @@
+{
+  "checkInAt": "2027-03-02T21:00:00Z",
+  "checkOutAt": "2027-03-03T15:00:00Z",
+  "city": "CPH",
+  "confirmationCode": "HTL003111",
+  "documentType": "hotel-booking",
+  "hotelName": "Plaza Suites",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-htl-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

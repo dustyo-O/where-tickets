@@ -1,0 +1,15 @@
+{
+  "checkInAt": "2027-03-03T18:00:00Z",
+  "checkOutAt": "2027-03-04T12:00:00Z",
+  "city": "MXP",
+  "confirmationCode": "HTL004124",
+  "documentType": "hotel-booking",
+  "hotelName": "Central Lodge",
+  "sourceDocumentId": "124-circle-4p-forward-return-hotels-htl-04",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

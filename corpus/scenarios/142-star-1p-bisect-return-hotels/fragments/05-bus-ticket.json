@@ -1,0 +1,34 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "SVO",
+      "to": "ZRH",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "ZRH",
+      "to": "BER",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "BER",
+      "to": "ZRH",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001142",
+  "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1"
+  ]
+}

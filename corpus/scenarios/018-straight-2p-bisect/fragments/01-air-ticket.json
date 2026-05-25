@@ -1,0 +1,27 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ARN",
+      "to": "ATH",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "ATH",
+      "to": "WAW",
+      "vehicleNumber": "LO101"
+    }
+  ],
+  "pnr": "PNR001018",
+  "sourceDocumentId": "018-straight-2p-bisect-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

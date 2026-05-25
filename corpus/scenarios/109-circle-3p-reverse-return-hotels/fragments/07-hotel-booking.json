@@ -1,0 +1,14 @@
+{
+  "checkInAt": "2027-03-01T03:00:00Z",
+  "checkOutAt": "2027-03-01T21:00:00Z",
+  "city": "PRG",
+  "confirmationCode": "HTL001109",
+  "documentType": "hotel-booking",
+  "hotelName": "Riverside Inn",
+  "sourceDocumentId": "109-circle-3p-reverse-return-hotels-htl-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

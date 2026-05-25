@@ -1,0 +1,19 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "AMS",
+      "to": "DUB",
+      "vehicleNumber": "FL103"
+    }
+  ],
+  "pnr": "PNR002081",
+  "sourceDocumentId": "081-circle-2p-reverse-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

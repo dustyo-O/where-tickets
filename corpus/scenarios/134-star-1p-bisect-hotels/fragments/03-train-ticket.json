@@ -1,0 +1,26 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "DUB",
+      "to": "BER",
+      "vehicleNumber": "DB104"
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "from": "BER",
+      "to": "LIS",
+      "vehicleNumber": "DB105"
+    }
+  ],
+  "pnr": "PNR003134",
+  "sourceDocumentId": "134-star-1p-bisect-hotels-tkt-03",
+  "travelers": [
+    "traveler-1"
+  ]
+}

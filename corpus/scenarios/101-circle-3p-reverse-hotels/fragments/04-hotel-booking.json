@@ -1,0 +1,14 @@
+{
+  "checkInAt": "2027-03-02T21:00:00Z",
+  "checkOutAt": "2027-03-03T15:00:00Z",
+  "city": "LHR",
+  "confirmationCode": "HTL003101",
+  "documentType": "hotel-booking",
+  "hotelName": "Plaza Suites",
+  "sourceDocumentId": "101-circle-3p-reverse-hotels-htl-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "PRG",
+      "to": "MUC",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "MUC",
+      "to": "CPH",
+      "vehicleNumber": "LO101"
+    }
+  ],
+  "pnr": "PNR001006",
+  "sourceDocumentId": "006-straight-1p-bisect-hotels-tkt-01",
+  "travelers": [
+    "traveler-1"
+  ]
+}

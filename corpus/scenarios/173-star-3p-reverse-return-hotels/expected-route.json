@@ -1,0 +1,222 @@
+{
+  "stops": [
+    {
+      "city": "IST",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "SVO",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-03T18:00:00Z",
+          "checkOutAt": "2027-03-04T12:00:00Z",
+          "hotelName": "Central Lodge"
+        }
+      ],
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "LHR",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-04T15:00:00Z",
+          "checkOutAt": "2027-03-05T09:00:00Z",
+          "hotelName": "Harbor View"
+        }
+      ],
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-05T12:00:00Z",
+          "checkOutAt": "2027-03-06T06:00:00Z",
+          "hotelName": "City Garden"
+        }
+      ],
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "MUC",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-06T09:00:00Z",
+      "city": "IST",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "IST",
+      "mode": "train",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-01",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "AMS",
+      "mode": "train",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-01",
+      "to": "SVO",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "SVO",
+      "mode": "train",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-01",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "AMS",
+      "mode": "air",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-02",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "LHR",
+      "mode": "train",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-03",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "from": "AMS",
+      "mode": "train",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-03",
+      "to": "MUC",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-06T09:00:00Z",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "from": "MUC",
+      "mode": "train",
+      "sourceFragmentId": "173-star-3p-reverse-return-hotels-tkt-03",
+      "to": "IST",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

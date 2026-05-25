@@ -1,0 +1,80 @@
+{
+  "stops": [
+    {
+      "city": "ROM",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "VIE",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "CDG",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "JFK",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ROM",
+      "mode": "bus",
+      "sourceFragmentId": "019-straight-2p-seeded-shuffle-tkt-01",
+      "to": "VIE",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "VIE",
+      "mode": "bus",
+      "sourceFragmentId": "019-straight-2p-seeded-shuffle-tkt-01",
+      "to": "CDG",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "CDG",
+      "mode": "bus",
+      "sourceFragmentId": "019-straight-2p-seeded-shuffle-tkt-01",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

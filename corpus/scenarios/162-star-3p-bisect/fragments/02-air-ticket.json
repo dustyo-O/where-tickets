@@ -1,0 +1,36 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ZRH",
+      "to": "FRA",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "FRA",
+      "to": "LHR",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "LHR",
+      "to": "FRA",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001162",
+  "sourceDocumentId": "162-star-3p-bisect-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

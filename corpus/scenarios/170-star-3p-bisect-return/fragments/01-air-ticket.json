@@ -1,0 +1,20 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "AF",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "CDG",
+      "to": "ZRH",
+      "vehicleNumber": "AF103"
+    }
+  ],
+  "pnr": "PNR002170",
+  "sourceDocumentId": "170-star-3p-bisect-return-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

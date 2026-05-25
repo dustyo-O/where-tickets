@@ -1,0 +1,21 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "AF",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "CPH",
+      "to": "WAW",
+      "vehicleNumber": "AF103"
+    }
+  ],
+  "pnr": "PNR002185",
+  "sourceDocumentId": "185-star-4p-reverse-return-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "stops": [
+    {
+      "city": "BER",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "SVO",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "JFK",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "BER",
+      "mode": "bus",
+      "sourceFragmentId": "016-straight-2p-forward-tkt-01",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "AMS",
+      "mode": "bus",
+      "sourceFragmentId": "016-straight-2p-forward-tkt-01",
+      "to": "SVO",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "SVO",
+      "mode": "bus",
+      "sourceFragmentId": "016-straight-2p-forward-tkt-01",
+      "to": "JFK",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

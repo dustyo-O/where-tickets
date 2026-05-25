@@ -51,11 +51,16 @@
   - [x] Write `infra/README.md` covering workspace switching and remote-state TODO. **[Agent: terraform-aws]**
   - [x] **Verify:** `just plan-infra` reports a successful plan with no AWS resources created (no `apply` wired). **[Agent: terraform-aws]**
 
-- [ ] **Slice 7: Corpus folder + expected-route schema**
-  - [ ] Create `corpus/README.md` documenting purpose and `*.expected.json` schema. **[Agent: general-purpose]**
-  - [ ] Add `corpus/schema/expected-route.schema.json` (JSON Schema for the expected-route shape). **[Agent: general-purpose]**
-  - [ ] Add `corpus/examples/001-placeholder-air-ticket.pdf` (synthetic, no PII) and its `.expected.json`. **[Agent: general-purpose]**
-  - [ ] **Verify:** the placeholder `.expected.json` validates against the schema (`ajv` or `python -m jsonschema` invoked from `just test`). **[Agent: general-purpose]**
+- [x] **Slice 7: Corpus generator for route-assembly scenarios**
+  - [x] Remove the placeholder corpus from the earlier draft (`corpus/examples/`, `corpus/README.md`, `corpus/schema/expected-route.schema.json`, `corpus/validate.py`) so the new layout starts clean. **[Agent: general-purpose]**
+  - [x] Add `corpus/schema/extracted-fragment.schema.json` (discriminated union on `documentType`: air/bus/train ticket, hotel booking). **[Agent: general-purpose]**
+  - [x] Add `corpus/schema/expected-route.schema.json` (travelers, ordered stops with accommodations, ordered transits with `sourceFragmentId`). **[Agent: general-purpose]**
+  - [x] Implement `corpus/generator/` (matrix enumeration, shape generators for straight/circle/star, return-trip composition, hotel insertion at stopovers, fragmenter that produces one fragment per simulated document, deterministic orderings: forward/reverse/bisect/seeded-shuffle). Fully deterministic — fixed seeds, fixed epoch date. **[Agent: python-backend]**
+  - [x] Run the generator and commit ~100+ scenarios under `corpus/scenarios/NNN-<shape>-<pax>p-<order>/` with `fragments/*.json`, `expected-route.json`, and one-line `README.md`. **[Agent: python-backend]**
+  - [x] Implement `corpus/validate.py` to (a) schema-validate every fragment and expected-route, (b) re-run the generator into a temp dir and diff against committed scenarios; exit non-zero on any failure. **[Agent: python-backend]**
+  - [x] Add `just test-corpus` recipe (`uv run --with jsonschema python corpus/validate.py`) and wire into root `just test`. **[Agent: general-purpose]**
+  - [x] Write `corpus/README.md` covering: purpose (route assembly, NOT extraction), schema files, coverage matrix, how to regenerate, how to add new axes. **[Agent: general-purpose]**
+  - [x] **Verify:** `just test-corpus` passes against the committed scenarios; manually mutate a committed scenario and confirm validation fails; manually tweak the generator and confirm the drift check fails. **[Agent: python-backend]**
 
 - [ ] **Slice 8: CI workflows + branch protection**
   - [ ] Create `.github/workflows/backend.yml`, `mobile.yml`, `infra.yml`, `meta.yml` with `paths:` filters. **[Agent: general-purpose]**

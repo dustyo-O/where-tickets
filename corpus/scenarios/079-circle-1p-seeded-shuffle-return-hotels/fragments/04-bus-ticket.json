@@ -1,0 +1,34 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "WAW",
+      "to": "HEL",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "HEL",
+      "to": "LHR",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "LHR",
+      "to": "ROM",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001079",
+  "sourceDocumentId": "079-circle-1p-seeded-shuffle-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checkInAt": "2027-03-03T18:00:00Z",
+  "checkOutAt": "2027-03-04T12:00:00Z",
+  "city": "DUB",
+  "confirmationCode": "HTL004103",
+  "documentType": "hotel-booking",
+  "hotelName": "Central Lodge",
+  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-htl-04",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

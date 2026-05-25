@@ -1,0 +1,15 @@
+{
+  "checkInAt": "2027-03-01T03:00:00Z",
+  "checkOutAt": "2027-03-01T21:00:00Z",
+  "city": "VIE",
+  "confirmationCode": "HTL001125",
+  "documentType": "hotel-booking",
+  "hotelName": "Riverside Inn",
+  "sourceDocumentId": "125-circle-4p-reverse-return-hotels-htl-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "VIE",
+      "to": "MXP",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "MXP",
+      "to": "BER",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "BER",
+      "to": "SVO",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001034",
+  "sourceDocumentId": "034-straight-3p-bisect-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

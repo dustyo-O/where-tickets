@@ -1,0 +1,20 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "Eurolines",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "MUC",
+      "to": "JFK",
+      "vehicleNumber": "EU104"
+    }
+  ],
+  "pnr": "PNR003160",
+  "sourceDocumentId": "160-star-3p-forward-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

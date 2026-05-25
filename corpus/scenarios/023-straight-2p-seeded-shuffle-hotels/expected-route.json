@@ -1,0 +1,122 @@
+{
+  "stops": [
+    {
+      "city": "ROM",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "AMS",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "ATH",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "WAW",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "PRG",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ROM",
+      "mode": "train",
+      "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
+      "to": "AMS",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "AMS",
+      "mode": "train",
+      "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
+      "to": "ATH",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "ATH",
+      "mode": "train",
+      "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
+      "to": "WAW",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "WAW",
+      "mode": "bus",
+      "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-02",
+      "to": "PRG",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "stops": [
+    {
+      "city": "ZRH",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "BER",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "FRA",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "BER",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-03T18:00:00Z",
+          "checkOutAt": "2027-03-04T12:00:00Z",
+          "hotelName": "Central Lodge"
+        }
+      ],
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "DUB",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-04T15:00:00Z",
+          "checkOutAt": "2027-03-05T09:00:00Z",
+          "hotelName": "Harbor View"
+        }
+      ],
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "BER",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "LIS",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ZRH",
+      "mode": "train",
+      "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-01",
+      "to": "BER",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "BER",
+      "mode": "train",
+      "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-01",
+      "to": "FRA",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "FRA",
+      "mode": "train",
+      "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-01",
+      "to": "BER",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "BER",
+      "mode": "bus",
+      "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-02",
+      "to": "DUB",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "DUB",
+      "mode": "train",
+      "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-03",
+      "to": "BER",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "from": "BER",
+      "mode": "train",
+      "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-03",
+      "to": "LIS",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "stops": [
+    {
+      "city": "HEL",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "ROM",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "LIS",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "CDG",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "ROM",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "HEL",
+      "mode": "bus",
+      "sourceFragmentId": "064-circle-1p-forward-tkt-01",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "ROM",
+      "mode": "bus",
+      "sourceFragmentId": "064-circle-1p-forward-tkt-01",
+      "to": "LIS",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "LIS",
+      "mode": "bus",
+      "sourceFragmentId": "064-circle-1p-forward-tkt-01",
+      "to": "CDG",
+      "travelers": [
+        "traveler-1"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "CDG",
+      "mode": "air",
+      "sourceFragmentId": "064-circle-1p-forward-tkt-02",
+      "to": "ROM",
+      "travelers": [
+        "traveler-1"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

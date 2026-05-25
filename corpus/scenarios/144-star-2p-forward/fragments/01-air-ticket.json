@@ -1,0 +1,35 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ROM",
+      "to": "FRA",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "FRA",
+      "to": "WAW",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "WAW",
+      "to": "FRA",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001144",
+  "sourceDocumentId": "144-star-2p-forward-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

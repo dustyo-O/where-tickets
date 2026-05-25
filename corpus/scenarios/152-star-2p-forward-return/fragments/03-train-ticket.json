@@ -1,0 +1,35 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "OSL",
+      "to": "PRG",
+      "vehicleNumber": "DB104"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "from": "PRG",
+      "to": "HEL",
+      "vehicleNumber": "DB105"
+    },
+    {
+      "arrivalAt": "2027-03-03T03:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "from": "HEL",
+      "to": "WAW",
+      "vehicleNumber": "DB106"
+    }
+  ],
+  "pnr": "PNR003152",
+  "sourceDocumentId": "152-star-2p-forward-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

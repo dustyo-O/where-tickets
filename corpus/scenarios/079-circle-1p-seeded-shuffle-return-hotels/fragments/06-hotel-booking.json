@@ -1,0 +1,12 @@
+{
+  "checkInAt": "2027-03-04T15:00:00Z",
+  "checkOutAt": "2027-03-05T09:00:00Z",
+  "city": "HEL",
+  "confirmationCode": "HTL005079",
+  "documentType": "hotel-booking",
+  "hotelName": "Harbor View",
+  "sourceDocumentId": "079-circle-1p-seeded-shuffle-return-hotels-htl-05",
+  "travelers": [
+    "traveler-1"
+  ]
+}

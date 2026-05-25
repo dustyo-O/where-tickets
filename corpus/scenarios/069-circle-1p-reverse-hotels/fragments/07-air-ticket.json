@@ -1,0 +1,34 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "MXP",
+      "to": "LHR",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "LHR",
+      "to": "HEL",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "HEL",
+      "to": "MAD",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001069",
+  "sourceDocumentId": "069-circle-1p-reverse-hotels-tkt-01",
+  "travelers": [
+    "traveler-1"
+  ]
+}

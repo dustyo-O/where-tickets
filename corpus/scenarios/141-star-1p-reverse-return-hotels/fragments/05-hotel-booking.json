@@ -1,0 +1,12 @@
+{
+  "checkInAt": "2027-03-02T00:00:00Z",
+  "checkOutAt": "2027-03-02T18:00:00Z",
+  "city": "LIS",
+  "confirmationCode": "HTL002141",
+  "documentType": "hotel-booking",
+  "hotelName": "Old Town Hostel",
+  "sourceDocumentId": "141-star-1p-reverse-return-hotels-htl-02",
+  "travelers": [
+    "traveler-1"
+  ]
+}

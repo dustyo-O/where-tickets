@@ -1,0 +1,150 @@
+{
+  "stops": [
+    {
+      "city": "BER",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-01T03:00:00Z",
+          "checkOutAt": "2027-03-01T21:00:00Z",
+          "hotelName": "Riverside Inn"
+        }
+      ],
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "HEL",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T00:00:00Z",
+          "checkOutAt": "2027-03-02T18:00:00Z",
+          "hotelName": "Old Town Hostel"
+        }
+      ],
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "LHR",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-02T21:00:00Z",
+          "checkOutAt": "2027-03-03T15:00:00Z",
+          "hotelName": "Plaza Suites"
+        }
+      ],
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "HEL",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-03T18:00:00Z",
+          "checkOutAt": "2027-03-04T12:00:00Z",
+          "hotelName": "Central Lodge"
+        }
+      ],
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "VIE",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "HEL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "BER",
+      "mode": "bus",
+      "sourceFragmentId": "148-star-2p-forward-hotels-tkt-01",
+      "to": "HEL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "HEL",
+      "mode": "bus",
+      "sourceFragmentId": "148-star-2p-forward-hotels-tkt-01",
+      "to": "LHR",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "LHR",
+      "mode": "bus",
+      "sourceFragmentId": "148-star-2p-forward-hotels-tkt-01",
+      "to": "HEL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "HEL",
+      "mode": "train",
+      "sourceFragmentId": "148-star-2p-forward-hotels-tkt-02",
+      "to": "VIE",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "VIE",
+      "mode": "bus",
+      "sourceFragmentId": "148-star-2p-forward-hotels-tkt-03",
+      "to": "HEL",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

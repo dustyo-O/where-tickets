@@ -1,0 +1,35 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ROM",
+      "to": "MAD",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "MAD",
+      "to": "LIS",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "LIS",
+      "to": "IST",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001088",
+  "sourceDocumentId": "088-circle-2p-forward-return-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

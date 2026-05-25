@@ -1,0 +1,35 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ATH",
+      "to": "OSL",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "OSL",
+      "to": "BCN",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "BCN",
+      "to": "OSL",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001153",
+  "sourceDocumentId": "153-star-2p-reverse-return-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

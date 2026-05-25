@@ -1,0 +1,19 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "KL",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "DUB",
+      "to": "SVO",
+      "vehicleNumber": "KL104"
+    }
+  ],
+  "pnr": "PNR003081",
+  "sourceDocumentId": "081-circle-2p-reverse-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

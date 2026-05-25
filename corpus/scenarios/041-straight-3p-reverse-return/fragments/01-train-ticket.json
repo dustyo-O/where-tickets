@@ -1,0 +1,20 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "SVO",
+      "to": "LHR",
+      "vehicleNumber": "DB104"
+    }
+  ],
+  "pnr": "PNR003041",
+  "sourceDocumentId": "041-straight-3p-reverse-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

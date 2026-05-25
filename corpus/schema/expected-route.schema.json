@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://where-tickets.local/schema/expected-route.schema.json",
+  "title": "Expected Composed Route",
+  "description": "The canonical route the assembly engine should produce from a scenario's fragments.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["travelers", "stops", "transits"],
+  "properties": {
+    "travelers": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "stops": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/stop" }
+    },
+    "transits": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/transit" }
+    },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "isoDateTime": { "type": "string", "format": "date-time" },
+    "cityCode": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "accommodation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checkInAt", "checkOutAt"],
+      "properties": {
+        "checkInAt": { "$ref": "#/$defs/isoDateTime" },
+        "checkOutAt": { "$ref": "#/$defs/isoDateTime" },
+        "hotelName": { "type": "string", "minLength": 1 }
+      }
+    },
+    "stop": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["city", "travelers"],
+      "properties": {
+        "city": { "$ref": "#/$defs/cityCode" },
+        "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
+        "departureAt": { "$ref": "#/$defs/isoDateTime" },
+        "travelers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "accommodations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/accommodation" }
+        }
+      }
+    },
+    "transit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to", "mode", "departureAt", "arrivalAt", "travelers", "sourceFragmentId"],
+      "properties": {
+        "from": { "$ref": "#/$defs/cityCode" },
+        "to": { "$ref": "#/$defs/cityCode" },
+        "mode": {
+          "type": "string",
+          "enum": ["air", "bus", "train"]
+        },
+        "departureAt": { "$ref": "#/$defs/isoDateTime" },
+        "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
+        "travelers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "sourceFragmentId": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

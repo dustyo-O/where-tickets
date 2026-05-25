@@ -1,0 +1,35 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "VIE",
+      "to": "IST",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "IST",
+      "to": "BCN",
+      "vehicleNumber": "LO101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "BCN",
+      "to": "VIE",
+      "vehicleNumber": "LO102"
+    }
+  ],
+  "pnr": "PNR001024",
+  "sourceDocumentId": "024-straight-2p-forward-return-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

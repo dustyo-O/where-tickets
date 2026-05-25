@@ -1,0 +1,13 @@
+{
+  "checkInAt": "2027-03-01T03:00:00Z",
+  "checkOutAt": "2027-03-01T21:00:00Z",
+  "city": "LHR",
+  "confirmationCode": "HTL001030",
+  "documentType": "hotel-booking",
+  "hotelName": "Riverside Inn",
+  "sourceDocumentId": "030-straight-2p-bisect-return-hotels-htl-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

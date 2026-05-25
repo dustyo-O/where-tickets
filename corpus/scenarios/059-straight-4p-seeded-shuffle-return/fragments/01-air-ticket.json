@@ -1,0 +1,21 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "AF",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "AMS",
+      "to": "OSL",
+      "vehicleNumber": "AF103"
+    }
+  ],
+  "pnr": "PNR002059",
+  "sourceDocumentId": "059-straight-4p-seeded-shuffle-return-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

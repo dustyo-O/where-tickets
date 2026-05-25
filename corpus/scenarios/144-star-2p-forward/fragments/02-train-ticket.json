@@ -1,0 +1,19 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "FRA",
+      "to": "CPH",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002144",
+  "sourceDocumentId": "144-star-2p-forward-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

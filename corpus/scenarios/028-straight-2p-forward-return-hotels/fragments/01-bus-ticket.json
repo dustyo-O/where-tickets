@@ -1,0 +1,35 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "JFK",
+      "to": "IST",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "IST",
+      "to": "OSL",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "OSL",
+      "to": "BCN",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001028",
+  "sourceDocumentId": "028-straight-2p-forward-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

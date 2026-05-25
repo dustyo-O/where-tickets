@@ -1,0 +1,19 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "BCN",
+      "to": "ZRH",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002145",
+  "sourceDocumentId": "145-star-2p-reverse-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

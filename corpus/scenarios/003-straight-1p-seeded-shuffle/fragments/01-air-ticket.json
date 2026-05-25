@@ -1,0 +1,26 @@
+{
+  "documentType": "air-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "WAW",
+      "to": "BCN",
+      "vehicleNumber": "LO100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "LO",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "BCN",
+      "to": "LIS",
+      "vehicleNumber": "LO101"
+    }
+  ],
+  "pnr": "PNR001003",
+  "sourceDocumentId": "003-straight-1p-seeded-shuffle-tkt-01",
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "documentType": "train-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "BER",
+      "to": "ATH",
+      "vehicleNumber": "DB104"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "from": "ATH",
+      "to": "BCN",
+      "vehicleNumber": "DB105"
+    }
+  ],
+  "pnr": "PNR003107",
+  "sourceDocumentId": "107-circle-3p-seeded-shuffle-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

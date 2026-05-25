@@ -1,0 +1,1 @@
+star 6-leg, 1 traveler, primary mode train, return trip, hotels, fragments seeded-shuffle

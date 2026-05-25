@@ -1,0 +1,37 @@
+{
+  "documentType": "bus-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "ARN",
+      "to": "IST",
+      "vehicleNumber": "FL100"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "IST",
+      "to": "SVO",
+      "vehicleNumber": "FL101"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "carrier": "FlixBus",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "SVO",
+      "to": "VIE",
+      "vehicleNumber": "FL102"
+    }
+  ],
+  "pnr": "PNR001115",
+  "sourceDocumentId": "115-circle-4p-seeded-shuffle-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}
