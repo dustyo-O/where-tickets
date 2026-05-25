@@ -43,13 +43,13 @@
   - [x] `SystemStatusScreen` fetches `/health` on mount: shows *Checking…*, *All systems OK*, or *Degraded — <link> down* with a hint. **[Agent: react-native-mobile]**
   - [x] **Verify:** `just dev` brings up the full stack; sim/emulator both display "All systems OK"; stopping the backend flips the screen to "Degraded — backend down". **[Agent: react-native-mobile]**
 
-- [ ] **Slice 6: Infrastructure baseline (`terraform plan` in dev)**
-  - [ ] Create `infra/` with `.terraform-version`, `envs/dev/`, `envs/staging/` skeleton, `envs/prod/` skeleton, `modules/{network,ecr,secrets}/`. **[Agent: terraform-aws]**
-  - [ ] Compose modules into `envs/dev/main.tf` at placeholder level (network + ECR + Secrets Manager). **[Agent: terraform-aws]**
-  - [ ] Pin providers exactly per `terraform-conventions`. **[Agent: terraform-aws]**
-  - [ ] Add `just plan-infra` recipe (`terraform -chdir=infra/envs/dev init && plan`). **[Agent: general-purpose]**
-  - [ ] Write `infra/README.md` covering workspace switching and remote-state TODO. **[Agent: terraform-aws]**
-  - [ ] **Verify:** `just plan-infra` reports a successful plan with no AWS resources created (no `apply` wired). **[Agent: terraform-aws]**
+- [x] **Slice 6: Infrastructure baseline (`terraform plan` in dev)**
+  - [x] Create `infra/` with `.terraform-version`, `envs/dev/`, `envs/staging/` skeleton, `envs/prod/` skeleton, `modules/{network,ecr,secrets}/`. **[Agent: terraform-aws]**
+  - [x] Compose modules into `envs/dev/main.tf` at placeholder level (network + ECR + Secrets Manager). **[Agent: terraform-aws]**
+  - [x] Pin providers exactly per `terraform-conventions`. **[Agent: terraform-aws]**
+  - [x] Add `just plan-infra` recipe (`terraform -chdir=infra/envs/dev init && plan`). **[Agent: general-purpose]**
+  - [x] Write `infra/README.md` covering workspace switching and remote-state TODO. **[Agent: terraform-aws]**
+  - [x] **Verify:** `just plan-infra` reports a successful plan with no AWS resources created (no `apply` wired). **[Agent: terraform-aws]**
 
 - [ ] **Slice 7: Corpus folder + expected-route schema**
   - [ ] Create `corpus/README.md` documenting purpose and `*.expected.json` schema. **[Agent: general-purpose]**

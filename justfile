@@ -25,3 +25,8 @@ lint:
 # Run tests across all sub-projects.
 test:
     cd backend && uv run pytest
+
+# Initialize and plan the dev Terraform environment (no apply wired).
+plan-infra:
+    terraform -chdir=infra/envs/dev init
+    terraform -chdir=infra/envs/dev plan
