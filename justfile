@@ -39,3 +39,17 @@ regen-corpus:
 plan-infra:
     terraform -chdir=infra/envs/dev init
     terraform -chdir=infra/envs/dev plan
+
+# CI: backend lint + type-check + tests (mirrors .github/workflows/backend.yml).
+ci-backend:
+    cd backend && uv sync && uv run ruff check . && uv run ruff format --check . && uv run pyright && uv run pytest
+
+# CI: mobile lint + type-check + tests (mirrors .github/workflows/mobile.yml).
+ci-mobile:
+    cd mobile && npm ci && npm run lint && npx tsc --noEmit && npm test -- --ci
+
+# CI: infra fmt + validate for the dev env (mirrors .github/workflows/infra.yml).
+ci-infra:
+    terraform -chdir=infra/envs/dev fmt -check -recursive ../..
+    terraform -chdir=infra/envs/dev init -backend=false
+    terraform -chdir=infra/envs/dev validate

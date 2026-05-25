@@ -1,0 +1,29 @@
+name: infra
+
+on:
+  pull_request:
+    paths:
+      - "infra/**"
+      - "justfile"
+      - ".github/workflows/infra.yml"
+  push:
+    branches: [main]
+    paths:
+      - "infra/**"
+      - "justfile"
+      - ".github/workflows/infra.yml"
+
+jobs:
+  infra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read Terraform version
+        id: tfver
+        run: echo "version=$(cat infra/.terraform-version)" >> "$GITHUB_OUTPUT"
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ steps.tfver.outputs.version }}
+      - uses: extractions/setup-just@v2
+      - name: Run infra CI
+        run: just ci-infra
