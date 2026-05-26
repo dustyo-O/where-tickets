@@ -7,6 +7,7 @@ default:
 # Start the full local stack (db + api + metro) via overmind.
 dev:
     ./bin/check-prereqs.sh
+    ./bin/dev-banner.sh
     overmind start -f Procfile
 
 # Stop overmind and tear down the local containers.
