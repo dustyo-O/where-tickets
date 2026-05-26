@@ -10,11 +10,11 @@
   - [x] Add `backend/tests/spikes/test_applier.py`: create/enrich/transit/accommodation cases plus the **circle double-`ROM`** case (enrich the right stop, never merge the two) and a dangling-ID rejection case. **[Agent: python-backend]**
   - [x] **Verify:** `cd backend && uv run pytest tests/spikes/test_applier.py` passes; applier never reassigns an existing ID. **[Agent: python-backend]**
 
-- [ ] **Slice 2: Corpus loader + scoring (offline)**
-  - [ ] Add `corpus.py`: load a scenario's ordered `fragments/*.json` + `expected-route.json` from `corpus/scenarios/`, parsing into the Slice 1 models. **[Agent: python-backend]**
-  - [ ] Add `scoring.py`: (a) **final-route match** — strip engine IDs, normalize, compare `stops` sequence + `transits` set field-by-field vs expected; (b) **identity preservation** — stop-ID set append-only, city stable per ID across snapshots; (c) **gap/ordering** — partial stops are an order-preserving subsequence of final positions by identity. A scenario passes only if all three hold. **[Agent: python-backend]**
-  - [ ] Add `backend/tests/spikes/test_scoring.py`: feed an expected route back through the matcher (self-match = pass); crafted snapshot sequences that trip each of the three checks. **[Agent: python-backend]**
-  - [ ] **Verify:** `uv run pytest tests/spikes/test_scoring.py` passes; a deliberately reordered/identity-broken snapshot fails the right check. **[Agent: python-backend]**
+- [x] **Slice 2: Corpus loader + scoring (offline)**
+  - [x] Add `corpus.py`: load a scenario's ordered `fragments/*.json` + `expected-route.json` from `corpus/scenarios/`, parsing into the Slice 1 models. **[Agent: python-backend]**
+  - [x] Add `scoring.py`: (a) **final-route match** — strip engine IDs, normalize, compare `stops` sequence + `transits` set field-by-field vs expected; (b) **identity preservation** — stop-ID set append-only, city stable per ID across snapshots; (c) **gap/ordering** — partial stops are an order-preserving subsequence of final positions by identity. A scenario passes only if all three hold. **[Agent: python-backend]**
+  - [x] Add `backend/tests/spikes/test_scoring.py`: feed an expected route back through the matcher (self-match = pass); crafted snapshot sequences that trip each of the three checks. **[Agent: python-backend]**
+  - [x] **Verify:** `uv run pytest tests/spikes/test_scoring.py` passes; a deliberately reordered/identity-broken snapshot fails the right check. **[Agent: python-backend]**
 
 - [ ] **Slice 3: Engine + Bedrock wiring, proven offline (stubbed)**
   - [ ] Add `anthropic[bedrock]` as a new `spike` dependency group in `backend/pyproject.toml`; add `backend/spikes/route_engine_llm/runs/` to `.gitignore`. **[Agent: python-backend]**
