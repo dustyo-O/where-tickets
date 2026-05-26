@@ -62,9 +62,9 @@
   - [x] Write `corpus/README.md` covering: purpose (route assembly, NOT extraction), schema files, coverage matrix, how to regenerate, how to add new axes. **[Agent: general-purpose]**
   - [x] **Verify:** `just test-corpus` passes against the committed scenarios; manually mutate a committed scenario and confirm validation fails; manually tweak the generator and confirm the drift check fails. **[Agent: python-backend]**
 
-- [ ] **Slice 8: CI workflows + branch protection**
+- [x] **Slice 8: CI workflows + branch protection**
   - [x] Create `.github/workflows/backend.yml`, `mobile.yml`, `infra.yml`, `meta.yml` with `paths:` filters. **[Agent: general-purpose]**
   - [x] Each workflow calls the corresponding `just ci-*` recipe so commands match local. **[Agent: general-purpose]**
   - [x] Write `.github/scripts/setup-branch-protection.sh` (idempotent `gh api PUT` to `branches/main/protection`). **[Agent: general-purpose]**
   - [x] Document one-line invocation in root README. **[Agent: general-purpose]**
-  - [ ] **Verify:** push a throwaway PR touching only `backend/`, only `mobile/`, only `infra/`, and root — each triggers exactly the expected workflow(s). Run the branch-protection script once; confirm a PR with a failing check cannot be merged. **[Agent: general-purpose]**
+  - [x] **Verify:** push a throwaway PR touching only `backend/`, only `mobile/`, only `infra/`, and root — each triggers exactly the expected workflow(s). Run the branch-protection script once; confirm a PR with a failing check cannot be merged. **[Agent: general-purpose]**
