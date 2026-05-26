@@ -12,10 +12,16 @@ drift, so the table is:
 
 Rates are USD **per 1,000,000 tokens** (the unit AWS publishes). Four rates per
 model: input, output, cache-write (5-minute TTL), cache-read. Cache-write is
-~1.25× input and cache-read ~0.1× input for current Claude models — the standard
-Anthropic prompt-caching multipliers, also reflected in the AWS Bedrock pricing
-table (e.g. Claude 3.5 Sonnet v2: input $3.00, cache-write $3.75, cache-read
-$0.30).
+1.25× input and cache-read 0.1× input for current Claude models — the standard
+Anthropic prompt-caching multipliers (e.g. Sonnet 4.6: input $3.00, cache-write
+$3.75, cache-read $0.30).
+
+**Caveat — regional premium:** these are the standard *global*-endpoint rates.
+The spike calls Claude through US cross-region inference profiles (the ``us.``
+prefix in :mod:`bedrock_client`), and for Claude 4.5+ regional/multi-region
+endpoints carry a ~10% premium over global. Reported cost is therefore a slight
+*under*-estimate for those profiles; bump the rates via env (or switch to a
+global endpoint) if you need the premium reflected exactly.
 
 Override any rate via ``SPIKE_PRICE_<ALIAS>_<KIND>`` where ``<KIND>`` is one of
 ``INPUT`` / ``OUTPUT`` / ``CACHE_WRITE`` / ``CACHE_READ`` and the value is USD
@@ -43,11 +49,12 @@ __all__ = [
     "total_cost_usd",
 ]
 
-# Prices as of 2026-05-26, source: https://aws.amazon.com/bedrock/pricing/
-# (Anthropic, On-Demand, US cross-region inference). Per the spec, cost is an
-# estimate and these rates drift — override per-rate via env (see module docs).
+# Prices as of 2026-05-26, verified against the official Anthropic pricing page
+# (standard global-endpoint, on-demand rates; Bedrock matches Claude API list
+# pricing). Per the spec, cost is an estimate and these rates drift — override
+# per-rate via env (see module docs). See also the ~10% US-regional caveat above.
 PRICING_AS_OF = "2026-05-26"
-PRICING_SOURCE = "https://aws.amazon.com/bedrock/pricing/"
+PRICING_SOURCE = "https://platform.claude.com/docs/en/about-claude/pricing"
 
 
 @dataclass(frozen=True, slots=True)
@@ -64,9 +71,10 @@ class ModelPrice:
     cache_read: float
 
 
-# Per-1M-token USD rates for the current Claude generation on Bedrock
-# (On-Demand, US cross-region inference). Cache-write ≈ 1.25× input,
-# cache-read ≈ 0.1× input — the standard Anthropic prompt-caching multipliers.
+# Per-1M-token USD rates for the current Claude generation (verified 2026-05-26):
+# Opus 4.5/4.6/4.7 = 5/25, Sonnet 4.6 = 3/15, Haiku 4.5 = 1/5 (input/output).
+# Cache-write = 1.25× input, cache-read = 0.1× input — the standard Anthropic
+# prompt-caching multipliers. Standard global-endpoint rates (see regional caveat).
 MODEL_PRICE_DEFAULTS: dict[str, ModelPrice] = {
     "opus": ModelPrice(
         input=5.00,
