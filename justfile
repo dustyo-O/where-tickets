@@ -36,6 +36,13 @@ test-corpus:
 regen-corpus:
     uv run --python 3.12 python -m corpus.generator
 
+# Run the LLM route-engine spike against a Bedrock model (live; needs AWS creds
+# and the optional `spike` dep group). Extra flags pass through, e.g.:
+#   just spike-engine model=haiku --limit 3
+#   just spike-engine model=sonnet --shape circle
+spike-engine model="haiku" *args:
+    cd backend && uv run --group spike python -m spikes.route_engine_llm.run --model {{model}} {{args}}
+
 # Initialize and plan the dev Terraform environment (no apply wired).
 plan-infra:
     terraform -chdir=infra/envs/dev init
