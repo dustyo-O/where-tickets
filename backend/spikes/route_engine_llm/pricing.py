@@ -17,11 +17,11 @@ Anthropic prompt-caching multipliers (e.g. Sonnet 4.6: input $3.00, cache-write
 $3.75, cache-read $0.30).
 
 **Caveat — regional premium:** these are the standard *global*-endpoint rates.
-The spike calls Claude through US cross-region inference profiles (the ``us.``
+The spike calls Claude through EU cross-region inference profiles (the ``eu.``
 prefix in :mod:`bedrock_client`), and for Claude 4.5+ regional/multi-region
 endpoints carry a ~10% premium over global. Reported cost is therefore a slight
-*under*-estimate for those profiles; bump the rates via env (or switch to a
-global endpoint) if you need the premium reflected exactly.
+*under*-estimate for those profiles; bump the rates via env (or switch to the
+``global.`` profiles) if you need the premium reflected exactly.
 
 Override any rate via ``SPIKE_PRICE_<ALIAS>_<KIND>`` where ``<KIND>`` is one of
 ``INPUT`` / ``OUTPUT`` / ``CACHE_WRITE`` / ``CACHE_READ`` and the value is USD

@@ -12,16 +12,19 @@ top level — so importing this module and running stubbed tests works without t
 package present.
 
 Model selection: a ``{opus|sonnet|haiku}`` alias maps to a Bedrock
-inference-profile id. Defaults target the US cross-region inference profiles for
-the current Claude models; every id is overridable via environment variables so
-we never hardcode an id that might be wrong for a given account/region:
+inference-profile id. Defaults target the EU cross-region inference profiles for
+the current Claude models (the project runs in eu-north-1); every id is
+overridable via environment variables so we never hardcode an id that might be
+wrong for a given account/region:
 
-    SPIKE_BEDROCK_MODEL_OPUS    (default: us.anthropic.claude-opus-4-7)
-    SPIKE_BEDROCK_MODEL_SONNET  (default: us.anthropic.claude-sonnet-4-6)
-    SPIKE_BEDROCK_MODEL_HAIKU   (default: us.anthropic.claude-haiku-4-5)
+    SPIKE_BEDROCK_MODEL_OPUS    (default: eu.anthropic.claude-opus-4-6-v1)
+    SPIKE_BEDROCK_MODEL_SONNET  (default: eu.anthropic.claude-sonnet-4-6)
+    SPIKE_BEDROCK_MODEL_HAIKU   (default: eu.anthropic.claude-haiku-4-5-20251001-v1:0)
 
-Region comes from ``AWS_REGION`` (the AnthropicBedrock client's own default
-chain otherwise applies).
+Opus default is 4.6 (4.7 was not enabled in the target account); override
+``SPIKE_BEDROCK_MODEL_OPUS`` to use a different one. Region comes from
+``AWS_REGION`` (the AnthropicBedrock client's own default chain otherwise
+applies).
 """
 
 from __future__ import annotations
@@ -50,12 +53,13 @@ __all__ = [
 # The selectable model aliases.
 type ModelAlias = str  # one of: "opus" | "sonnet" | "haiku"
 
-# Default Bedrock inference-profile IDs per alias. US cross-region profiles for
-# the current Claude generation; override per-alias via the env vars below.
+# Default Bedrock inference-profile IDs per alias. EU cross-region profiles for
+# the current Claude generation (project runs in eu-north-1); override per-alias
+# via the env vars below.
 MODEL_PROFILE_DEFAULTS: dict[str, str] = {
-    "opus": "us.anthropic.claude-opus-4-7",
-    "sonnet": "us.anthropic.claude-sonnet-4-6",
-    "haiku": "us.anthropic.claude-haiku-4-5",
+    "opus": "eu.anthropic.claude-opus-4-6-v1",
+    "sonnet": "eu.anthropic.claude-sonnet-4-6",
+    "haiku": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
 }
 
 _ENV_OVERRIDE: dict[str, str] = {

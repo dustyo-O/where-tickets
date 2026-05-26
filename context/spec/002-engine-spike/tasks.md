@@ -23,10 +23,10 @@
   - [x] Add `backend/tests/spikes/test_engine_contract.py`: drive `update_route` end-to-end against a **recorded/stubbed** Bedrock response (no network) and assert the route mutates correctly. **[Agent: bedrock-llm]**
   - [x] **Verify:** `uv run pytest tests/spikes/` passes with no AWS credentials present (CI-safe). **[Agent: python-backend]**
 
-- [ ] **Slice 4: Runner + per-run report, live on a subset**
+- [x] **Slice 4: Runner + per-run report, live on a subset**
   - [x] Add `pricing.py` (dated per-model USD table; cost from token usage) and `report.py` (per-run `results.json` + `report.md`: accuracy, per-axis breakdown, latency p50/p95/mean, cost; failures bucketed by which check failed — counts only). **[Agent: bedrock-llm]**
   - [x] Add `run.py` CLI (`python -m spikes.route_engine_llm.run --model {opus|sonnet|haiku} [--scenario/--shape/--limit]`): empty route → feed fragments in corpus order → `update_route` per fragment → snapshot → score; write to `runs/<timestamp>-<model>/`. Add a `just spike-engine` recipe wrapping it. **[Agent: bedrock-llm]**
-  - [ ] **Verify (live, needs AWS):** `just spike-engine model=haiku --limit 3` completes against real Bedrock, writes `results.json` + `report.md`, and token/cost/latency are populated. **[Agent: bedrock-llm]**
+  - [x] **Verify (live, needs AWS):** `just spike-engine haiku --limit 3` completed against real Bedrock (eu-north-1, eu.* profiles), wrote `results.json` + `report.md` with real token/cost/latency (1/3 smoke pass, ~$0.019). **[Agent: bedrock-llm]**
 
 - [ ] **Slice 5: Full sweep + cross-model comparison & recommendation**
   - [ ] Extend `report.py` with `compare.md` generation: read multiple run JSONs and tabulate Opus vs Sonnet vs Haiku (accuracy, per-axis, latency, cost) with a go/no-go recommendation against the ≥99% bar. **[Agent: bedrock-llm]**
