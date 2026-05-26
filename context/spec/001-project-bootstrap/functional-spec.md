@@ -1,7 +1,7 @@
 # Functional Specification: Project Bootstrap
 
 - **Roadmap Item:** Project Bootstrap (Linear DUS-5) — the foundational developer-environment setup that unblocks every other umbrella in v1.
-- **Status:** Draft
+- **Status:** Completed
 - **Author:** Dusty
 
 ---
@@ -26,69 +26,69 @@ This specification defines the developer-facing experience of that bootstrap mil
 
 - **As a developer, I want to** start the entire local environment with a single command at the repository root, **so that** I can begin working without having to learn three separate setup procedures.
   - **Acceptance Criteria:**
-    - [ ] On a fresh checkout, running the documented root command starts the local database, the backend API, and the mobile development server together.
-    - [ ] The command prints a clear summary at the end showing how to reach the backend (URL) and how to launch the mobile app on a simulator/emulator.
-    - [ ] If a prerequisite is missing on the developer's machine (e.g., the local container runtime is not installed), the command stops with a human-readable error explaining what to install.
+    - [x] On a fresh checkout, running the documented root command starts the local database, the backend API, and the mobile development server together.
+    - [x] The command prints a clear summary at the end showing how to reach the backend (URL) and how to launch the mobile app on a simulator/emulator.
+    - [x] If a prerequisite is missing on the developer's machine (e.g., the local container runtime is not installed), the command stops with a human-readable error explaining what to install.
 
 ### 2.2 End-to-end "hello world" proof
 
 - **As a developer, I want to** see a single screen in the mobile app that confirms the app, the backend, and the database are all talking to each other, **so that** I have confidence the full vertical works from day one.
   - **Acceptance Criteria:**
-    - [ ] On launch (after sign-in is skipped or stubbed for bootstrap), the mobile app shows a "system status" screen.
-    - [ ] The screen reaches out to the backend, the backend touches the database, and the screen shows an "All systems OK" message when the chain succeeds.
-    - [ ] If any link in the chain is broken, the screen shows which link failed and a short, actionable hint.
+    - [x] On launch (after sign-in is skipped or stubbed for bootstrap), the mobile app shows a "system status" screen.
+    - [x] The screen reaches out to the backend, the backend touches the database, and the screen shows an "All systems OK" message when the chain succeeds.
+    - [x] If any link in the chain is broken, the screen shows which link failed and a short, actionable hint.
 
 ### 2.3 Backend baseline
 
 - **As a developer, I want to** be able to run the backend on its own and run its tests, **so that** I can work on backend code in isolation when I don't need the mobile app.
   - **Acceptance Criteria:**
-    - [ ] The backend exposes a health endpoint reachable in a browser or `curl`.
-    - [ ] The backend can be started against an empty local database; database tables are created automatically the first time.
-    - [ ] Running the backend's tests on a fresh checkout passes with zero failures.
+    - [x] The backend exposes a health endpoint reachable in a browser or `curl`.
+    - [x] The backend can be started against an empty local database; database tables are created automatically the first time.
+    - [x] Running the backend's tests on a fresh checkout passes with zero failures.
 
 ### 2.4 Mobile app baseline
 
 - **As a developer, I want to** be able to build and run the mobile app on both iOS and Android, **so that** I can develop and test on either platform.
   - **Acceptance Criteria:**
-    - [ ] The mobile app builds and runs on the iOS simulator from a fresh checkout, with documented steps in the mobile sub-project's README.
-    - [ ] The mobile app builds and runs on an Android emulator from a fresh checkout, with documented steps in the mobile sub-project's README.
-    - [ ] Running the mobile app's tests passes with zero failures.
+    - [x] The mobile app builds and runs on the iOS simulator from a fresh checkout, with documented steps in the mobile sub-project's README.
+    - [x] The mobile app builds and runs on an Android emulator from a fresh checkout, with documented steps in the mobile sub-project's README.
+    - [x] Running the mobile app's tests passes with zero failures.
 
 ### 2.5 Infrastructure baseline
 
 - **As a developer, I want to** validate the cloud-infrastructure configuration without actually creating any cloud resources, **so that** I can review changes safely and only spend money when we're ready.
   - **Acceptance Criteria:**
-    - [ ] A documented command, run from the infrastructure sub-project, reports a successful plan against a "dev" environment without creating any AWS resources.
-    - [ ] The plan includes the foundational pieces the architecture calls for (network, container registry, secrets storage) at a placeholder level — enough to validate the configuration parses and is internally consistent.
-    - [ ] A README explains how to switch between dev / staging / production environments.
+    - [x] A documented command, run from the infrastructure sub-project, reports a successful plan against a "dev" environment without creating any AWS resources.
+    - [x] The plan includes the foundational pieces the architecture calls for (network, container registry, secrets storage) at a placeholder level — enough to validate the configuration parses and is internally consistent.
+    - [x] A README explains how to switch between dev / staging / production environments.
 
 ### 2.6 Automated checks on every change
 
 - **As a developer, I want** every pull request to be automatically checked, **so that** broken code, failing tests, or invalid infrastructure changes never reach `main`.
   - **Acceptance Criteria:**
-    - [ ] Opening a pull request that changes the backend triggers backend lint, type checks, and tests.
-    - [ ] Opening a pull request that changes the mobile app triggers mobile lint, type checks, and tests.
-    - [ ] Opening a pull request that changes infrastructure files triggers an infrastructure validation check.
-    - [ ] A pull request that touches only one sub-project does **not** unnecessarily run the other sub-projects' checks.
-    - [ ] A pull request cannot be merged into `main` until all relevant checks pass. The branch-protection rule is configured as part of this work using the `gh` CLI (committed as a script or documented command), so it can be re-applied or audited from the repo itself.
+    - [x] Opening a pull request that changes the backend triggers backend lint, type checks, and tests.
+    - [x] Opening a pull request that changes the mobile app triggers mobile lint, type checks, and tests.
+    - [x] Opening a pull request that changes infrastructure files triggers an infrastructure validation check.
+    - [x] A pull request that touches only one sub-project does **not** unnecessarily run the other sub-projects' checks.
+    - [x] A pull request cannot be merged into `main` until all relevant checks pass. The branch-protection rule is configured as part of this work using the `gh` CLI (committed as a script or documented command), so it can be re-applied or audited from the repo itself.
 
 ### 2.7 Starter material for the route engine
 
 - **As a route-engine developer, I want to** find a large, systematically generated set of mock travel scenarios in the repository, **so that** I can build and regression-test the engine that composes a travel route from a pile of extracted document fragments — the *real* hard problem, since the order, completeness, and mix of fragments is what trips the engine up.
   - **Acceptance Criteria:**
-    - [ ] A top-level `corpus/` folder exists with a README explaining its purpose: testing **route assembly from extracted document fragments**, not PDF extraction.
-    - [ ] The corpus contains many scenarios (target: ~100+) generated by a committed generator script that enumerates a defined coverage matrix (traveler count, route shape, leg count, return vs one-way, fragment ordering, mode mix, hotels).
-    - [ ] Each scenario is a self-contained folder with `fragments/*.json` (the inputs — one fragment per simulated document, in a deliberately non-chronological order) and `expected-route.json` (the correctly composed route).
-    - [ ] Two JSON Schemas — one for fragment shape, one for expected-route shape — are committed; every fragment and every expected-route validates against its schema.
-    - [ ] The generator is deterministic: re-running it produces byte-identical output, so PRs surface drift between the generator and the committed scenarios.
-    - [ ] A single command (`just test-corpus`, wired into `just test`) validates all scenarios against the schemas **and** verifies the generator output matches what's committed (CI fails on drift).
+    - [x] A top-level `corpus/` folder exists with a README explaining its purpose: testing **route assembly from extracted document fragments**, not PDF extraction.
+    - [x] The corpus contains many scenarios (target: ~100+) generated by a committed generator script that enumerates a defined coverage matrix (traveler count, route shape, leg count, return vs one-way, fragment ordering, mode mix, hotels).
+    - [x] Each scenario is a self-contained folder with `fragments/*.json` (the inputs — one fragment per simulated document, in a deliberately non-chronological order) and `expected-route.json` (the correctly composed route).
+    - [x] Two JSON Schemas — one for fragment shape, one for expected-route shape — are committed; every fragment and every expected-route validates against its schema.
+    - [x] The generator is deterministic: re-running it produces byte-identical output, so PRs surface drift between the generator and the committed scenarios.
+    - [x] A single command (`just test-corpus`, wired into `just test`) validates all scenarios against the schemas **and** verifies the generator output matches what's committed (CI fails on drift).
 
 ### 2.8 Repository navigation
 
 - **As a developer, I want** the root of the repository to clearly point me to the product documents and to each sub-project, **so that** I can orient myself without asking anyone.
   - **Acceptance Criteria:**
-    - [ ] The root README links to the product definition, the roadmap, and the architecture document.
-    - [ ] The root README has a short "Where things live" section pointing to the backend, mobile, infrastructure, and corpus directories.
+    - [x] The root README links to the product definition, the roadmap, and the architecture document.
+    - [x] The root README has a short "Where things live" section pointing to the backend, mobile, infrastructure, and corpus directories.
 
 ---
 
