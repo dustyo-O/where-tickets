@@ -29,18 +29,23 @@ gh api \
   --method PUT \
   -H "Accept: application/vnd.github+json" \
   "/repos/${REPO}/branches/main/protection" \
-  -f "required_status_checks[strict]=true" \
-  -f "required_status_checks[contexts][]=backend" \
-  -f "required_status_checks[contexts][]=mobile" \
-  -f "required_status_checks[contexts][]=infra" \
-  -f "required_status_checks[contexts][]=meta" \
-  -F "enforce_admins=false" \
-  -F "required_pull_request_reviews[required_approving_review_count]=1" \
-  -F "required_pull_request_reviews[dismiss_stale_reviews]=false" \
-  -F "required_pull_request_reviews[require_code_owner_reviews]=false" \
-  -F "restrictions=null" \
-  -F "allow_force_pushes=false" \
-  -F "allow_deletions=false" \
-  -F "required_conversation_resolution=true"
+  --input - <<'JSON'
+{
+  "required_status_checks": {
+    "strict": true,
+    "contexts": ["backend", "mobile", "infra", "meta"]
+  },
+  "enforce_admins": false,
+  "required_pull_request_reviews": {
+    "required_approving_review_count": 1,
+    "dismiss_stale_reviews": false,
+    "require_code_owner_reviews": false
+  },
+  "restrictions": null,
+  "allow_force_pushes": false,
+  "allow_deletions": false,
+  "required_conversation_resolution": true
+}
+JSON
 
 echo "Done."

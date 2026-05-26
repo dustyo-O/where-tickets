@@ -2,19 +2,31 @@ name: backend
 
 on:
   pull_request:
-    paths:
-      - "backend/**"
-      - "justfile"
-      - ".github/workflows/backend.yml"
   push:
     branches: [main]
-    paths:
-      - "backend/**"
-      - "justfile"
-      - ".github/workflows/backend.yml"
 
 jobs:
+  # Always runs; reports the required `backend` status check on every PR.
+  # Detects whether backend-relevant files changed; the heavy `backend-ci` job
+  # only runs when they did.
   backend:
+    runs-on: ubuntu-latest
+    outputs:
+      relevant: ${{ steps.filter.outputs.relevant }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            relevant:
+              - 'backend/**'
+              - 'justfile'
+              - '.github/workflows/backend.yml'
+
+  backend-ci:
+    needs: backend
+    if: needs.backend.outputs.relevant == 'true'
     runs-on: ubuntu-latest
     services:
       postgres:
