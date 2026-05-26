@@ -61,3 +61,6 @@ Thumbs.db
 coverage/
 .coverage
 htmlcov/
+
+# Engine-spike run artifacts (timestamped, not committed)
+backend/spikes/route_engine_llm/runs/

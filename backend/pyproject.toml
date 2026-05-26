@@ -18,6 +18,13 @@ dev = [
     "ruff",
     "pyright",
 ]
+# Optional group for the LLM route-engine spike. Kept OUT of the default
+# runtime deps and out of `dev`, so the FastAPI image and normal CI stay lean
+# and the offline spike tests run even when this is not installed.
+# Install with: uv sync --group spike
+spike = [
+    "anthropic[bedrock]",
+]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

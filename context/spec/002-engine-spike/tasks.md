@@ -16,12 +16,12 @@
   - [x] Add `backend/tests/spikes/test_scoring.py`: feed an expected route back through the matcher (self-match = pass); crafted snapshot sequences that trip each of the three checks. **[Agent: python-backend]**
   - [x] **Verify:** `uv run pytest tests/spikes/test_scoring.py` passes; a deliberately reordered/identity-broken snapshot fails the right check. **[Agent: python-backend]**
 
-- [ ] **Slice 3: Engine + Bedrock wiring, proven offline (stubbed)**
-  - [ ] Add `anthropic[bedrock]` as a new `spike` dependency group in `backend/pyproject.toml`; add `backend/spikes/route_engine_llm/runs/` to `.gitignore`. **[Agent: python-backend]**
-  - [ ] Add `prompts.py` (system prompt + single operation-list tool schema, marked for prompt caching) and `bedrock_client.py` (thin `AnthropicBedrock` wrapper: model alias→inference-profile-ID map, `tool_choice` forced, `temperature=0`, token-usage + per-call latency capture, bounded retry/backoff). **[Agent: bedrock-llm]**
-  - [ ] Add `engine.py`: `update_route(route, fragment)` — render prompt, call client, parse tool-use into op models, `apply`. **[Agent: bedrock-llm]**
-  - [ ] Add `backend/tests/spikes/test_engine_contract.py`: drive `update_route` end-to-end against a **recorded/stubbed** Bedrock response (no network) and assert the route mutates correctly. **[Agent: bedrock-llm]**
-  - [ ] **Verify:** `uv run pytest tests/spikes/` passes with no AWS credentials present (CI-safe). **[Agent: python-backend]**
+- [x] **Slice 3: Engine + Bedrock wiring, proven offline (stubbed)**
+  - [x] Add `anthropic[bedrock]` as a new `spike` dependency group in `backend/pyproject.toml`; add `backend/spikes/route_engine_llm/runs/` to `.gitignore`. **[Agent: python-backend]**
+  - [x] Add `prompts.py` (system prompt + single operation-list tool schema, marked for prompt caching) and `bedrock_client.py` (thin `AnthropicBedrock` wrapper: model alias→inference-profile-ID map, `tool_choice` forced, `temperature=0`, token-usage + per-call latency capture, bounded retry/backoff). **[Agent: bedrock-llm]**
+  - [x] Add `engine.py`: `update_route(route, fragment)` — render prompt, call client, parse tool-use into op models, `apply`. **[Agent: bedrock-llm]**
+  - [x] Add `backend/tests/spikes/test_engine_contract.py`: drive `update_route` end-to-end against a **recorded/stubbed** Bedrock response (no network) and assert the route mutates correctly. **[Agent: bedrock-llm]**
+  - [x] **Verify:** `uv run pytest tests/spikes/` passes with no AWS credentials present (CI-safe). **[Agent: python-backend]**
 
 - [ ] **Slice 4: Runner + per-run report, live on a subset**
   - [ ] Add `pricing.py` (dated per-model USD table; cost from token usage) and `report.py` (per-run `results.json` + `report.md`: accuracy, per-axis breakdown, latency p50/p95/mean, cost; failures bucketed by which check failed — counts only). **[Agent: bedrock-llm]**
