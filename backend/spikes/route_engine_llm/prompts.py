@@ -3,8 +3,10 @@
 The model acts as the route engine: it receives the current route (stops carry
 our engine-owned IDs) and ONE new document fragment, and must return a list of
 operations that APPEND to / ENRICH the existing route. Our applier
-(``operations.apply``) owns identity — the model can only reference existing
-stops by their given IDs, never mint or reassign them.
+(``operations.apply``) owns identity — the model references EXISTING stops by
+their engine-owned IDs (never minting or reassigning them) and references stops
+it CREATES in the same response by a model-chosen ``ref`` handle that the applier
+resolves to a freshly minted id.
 
 The static system prompt and the tool schema are marked for prompt caching
 (``cache_control``), so the (large, fixed) instructions + schema are billed once
@@ -56,14 +58,45 @@ THE ROUTE MODEL
   via a `create_stop` operation; the engine assigns the fresh id.
 - Cities are 3-letter uppercase codes (e.g. "ROM", "HEL").
 
+REFERENCING STOPS (existing ids vs. refs)
+- To reference an EXISTING stop (one already in the route you were given), use
+  its real engine id, e.g. "stop-3". NEVER guess or invent a "stop-N" id.
+- To reference a stop you CREATE in THIS response, give that `create_stop` a
+  short `ref` you choose (e.g. "n1", "n2"; unique within this response). Then, in
+  later operations in the SAME response, reference that new stop by its `ref`
+  anywhere a stop is expected — `after`, `fromStopId`/`toStopId`, `stopId`, and
+  `add_travelers`' `stopId` — exactly as you would reference an existing stop by
+  its id.
+- A `ref` is ONLY valid within the current response and only AFTER the
+  `create_stop` that declares it. Do not reuse a `ref`, and do not reference a
+  `ref` you have not yet declared above.
+
 YOUR OUTPUT
 - Call the `emit_route_operations` tool exactly once with an `operations` list.
 - The list may be empty if the fragment adds nothing new (e.g. a duplicate).
 - Operations are applied IN ORDER. A `create_stop` must precede any operation
-  that references the stop it creates — but since you do not know the id the
-  engine will assign, reference a freshly-created stop's position via the
-  `after` field of later `create_stop`s only; for transits/enrichment, only
-  reference stops that ALREADY EXIST in the route you were given.
+  that references the stop it creates; reference that new stop by the `ref` you
+  gave it.
+- COMMON CASE — a multi-leg ticket whose cities are all new to the route (e.g.
+  HEL -> ROM -> LIS -> CDG on an empty route): `create_stop` each new city in
+  order, giving each a `ref` (e.g. "n1".."n4") and chaining them with `after`
+  (use the PREVIOUS new stop's `ref` as `after` so they land in order), then emit
+  one `add_transit` per leg between the two endpoints' `ref`s. For example:
+  create HEL (ref "n1"), create ROM (ref "n2", after "n1"), create LIS
+  (ref "n3", after "n2"), create CDG (ref "n4", after "n3"), then add_transit
+  n1->n2, n2->n3, n3->n4. You do NOT emit any enrich_stop or add_travelers here:
+  the engine derives each stop's timing and travelers from these transits.
+
+ENGINE-DERIVED STOP FIELDS (build the GRAPH, not the projection)
+- The engine AUTOMATICALLY derives each stop's `arrivalAt`/`departureAt` and
+  `travelers` from the transits you add. A stop's `arrivalAt` comes from the
+  transit(s) arriving at it, its `departureAt` from the transit(s) leaving it,
+  and its `travelers` from the union of all incident transits' travelers.
+- Therefore your job is to build the GRAPH: `create_stop` for each city and
+  `add_transit` between stops with the leg's mode, departure/arrival times,
+  travelers, and sourceFragmentId. Do NOT hand-author stop timing or travelers.
+- Do NOT emit `enrich_stop` or `add_travelers` for a stop that has a transit —
+  it is unnecessary and the engine ignores nothing you add to the transit.
 
 HARD RULES (these are non-negotiable)
 1. APPEND / ENRICH, NEVER DESTROY. The route you are given is authoritative.
@@ -76,9 +109,9 @@ HARD RULES (these are non-negotiable)
    introduces a city not yet in the route, `create_stop` it.
 4. LEGITIMATE REVISITS ARE DISTINCT STOPS. A circle/loop route can visit the same
    city twice (e.g. ROM -> HEL -> ROM). The SECOND visit to ROM is a SEPARATE
-   physical stop and gets its OWN `create_stop` — do NOT merge a genuine revisit
-   into the earlier same-city stop. Use timing/sequence to tell a revisit apart
-   from an enrichment of the existing stop.
+   physical stop and gets its OWN `create_stop` (with its own `ref`) — do NOT
+   merge a genuine revisit into the earlier same-city stop. Use timing/sequence
+   to tell a revisit apart from an enrichment of the existing stop.
 5. KEEP CITY ORDER CORRECT, EVEN WITH GAPS. Place new stops in their true
    chronological position relative to existing stops using the `after` field
    (an existing stop id, or null/"start" to prepend at the front). The route may
@@ -88,19 +121,30 @@ HARD RULES (these are non-negotiable)
 USING THE FRAGMENT
 - A transit ticket (air/bus/train) has one or more legs, each with a `from` city,
   a `to` city, departure/arrival timestamps, and travelers. For each leg:
-  ensure both endpoint cities exist as stops (create the ones that are new, in
-  order), enrich endpoint timing where the leg implies it, and add one
-  `add_transit` between the two endpoint stops with the leg's mode, timestamps,
-  and travelers.
+  ensure both endpoint cities exist as stops (create the new ones in order,
+  giving each a `ref` and chaining with `after`), and add one `add_transit`
+  between the two endpoint stops with the leg's mode, timestamps, and travelers.
+  Reference each endpoint by its existing id if already in the route, otherwise
+  by the `ref` you just gave it. Do NOT enrich_stop / add_travelers the
+  endpoints — the engine derives their timing and travelers from this transit.
 - A hotel booking has a city, check-in/check-out timestamps, and travelers.
   Attach it to the existing stop for that city with `attach_accommodation`; if
-  the city is not yet in the route, `create_stop` it first, then attach.
+  the city is not yet in the route, `create_stop` it first (give it a `ref`),
+  then `attach_accommodation` to that `ref`.
 - `add_transit.sourceFragmentId` and the engine's bookkeeping use the fragment's
   `sourceDocumentId`. Always set `sourceFragmentId` to the fragment's
   `sourceDocumentId`.
-- Carry travelers through: a stop's / transit's travelers come from the
-  fragment's `travelers` list. Use `add_travelers` to union travelers onto an
-  existing stop when the fragment reveals a traveler not yet recorded there.
+- Carry travelers through on the TRANSIT: an `add_transit`'s `travelers` come
+  from the fragment's `travelers` list, and the engine unions them onto both
+  endpoint stops. You do not separately set stop travelers for a ticketed stop.
+
+OVERRIDES — enrich_stop / add_travelers (rare, NO-transit stops only)
+- `enrich_stop` and `add_travelers` exist ONLY for the rare stop that has NO
+  transit and so cannot be derived — e.g. an accommodation-only city the
+  traveler reaches by some untracked means. For such a stop, use `enrich_stop`
+  to set its timing and `add_travelers` to set its travelers explicitly.
+- For any stop that has a transit, do NOT emit these — the engine derives the
+  fields and an explicit conflicting `enrich_stop` value is treated as an error.
 
 Think about identity first: for each city the fragment mentions, decide whether it
 maps to an EXISTING stop (enrich) or is a NEW physical stop (create), then emit the
@@ -158,7 +202,8 @@ def build_tool() -> dict[str, Any]:
         "description": (
             "Emit the ordered list of operations that fold the new document "
             "fragment into the existing route. Reference existing stops by their "
-            "engine-owned ids; create new stops only for genuinely new physical "
+            "engine-owned ids and stops you create in this response by the `ref` "
+            "you give them; create new stops only for genuinely new physical "
             "stops; never destroy or recreate existing stops."
         ),
         "input_schema": _tool_input_schema(),

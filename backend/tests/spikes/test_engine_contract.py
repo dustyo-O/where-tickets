@@ -9,6 +9,7 @@ staying CI-safe.
 
 from __future__ import annotations
 
+from datetime import UTC, datetime
 from typing import Any
 
 import pytest
@@ -20,6 +21,10 @@ from spikes.route_engine_llm.models import (
     TransitTicketFragment,
     WorkingRoute,
 )
+
+
+def _dt(iso: str) -> datetime:
+    return datetime.fromisoformat(iso).replace(tzinfo=UTC)
 
 
 class FakeBedrockClient:
@@ -136,6 +141,53 @@ def test_update_route_builds_stops_and_transit_from_transit_fragment() -> None:
     assert result.usage.input_tokens == 1200
     assert result.usage.cache_read_input_tokens == 900
     assert result.latency_seconds == pytest.approx(0.5)
+
+
+def test_update_route_builds_multi_leg_route_via_refs() -> None:
+    """All-new multi-leg ticket on an empty route, wired with same-batch refs.
+
+    This is the pattern that was previously impossible end-to-end: new stops
+    referenced by transits within one response. The model gives each new stop a
+    `ref` and the applier resolves the refs to minted ids.
+    """
+    route = WorkingRoute()
+    fragment = _bus_fragment()
+
+    client = FakeBedrockClient(
+        [
+            {"op": "create_stop", "city": "HEL", "ref": "n1"},
+            {"op": "create_stop", "city": "ROM", "after": "n1", "ref": "n2"},
+            {
+                "op": "add_transit",
+                "fromStopId": "n1",
+                "toStopId": "n2",
+                "mode": "bus",
+                "departureAt": "2027-03-01T00:00:00+00:00",
+                "arrivalAt": "2027-03-01T03:00:00+00:00",
+                "travelers": ["traveler-1"],
+                "sourceFragmentId": "tkt-01",
+            },
+        ]
+    )
+
+    update_route(route, fragment, client)
+
+    assert [s.city for s in route.stops] == ["HEL", "ROM"]
+    assert route.stop_ids() == ["stop-1", "stop-2"]
+    transit = route.transits[0]
+    assert transit.from_stop_id == "stop-1"
+    assert transit.to_stop_id == "stop-2"
+    assert transit.mode is TransitMode.BUS
+
+    # The engine derives stop timing + travelers from the transit (the op list
+    # carries NO enrich_stop / add_travelers — exactly the new prompt's flow).
+    hel, rom = route.stops
+    assert hel.arrival_at is None
+    assert hel.departure_at == _dt("2027-03-01T00:00:00")
+    assert rom.arrival_at == _dt("2027-03-01T03:00:00")
+    assert rom.departure_at is None
+    assert hel.travelers == ["traveler-1"]
+    assert rom.travelers == ["traveler-1"]
 
 
 def test_update_route_forces_tool_use_and_renders_route_and_fragment() -> None:

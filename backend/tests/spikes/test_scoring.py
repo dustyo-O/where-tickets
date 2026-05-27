@@ -19,6 +19,7 @@ from spikes.route_engine_llm.models import (
     Transit,
     WorkingRoute,
 )
+from spikes.route_engine_llm.operations import apply
 from spikes.route_engine_llm.scoring import (
     FailureCategory,
     final_route_match,
@@ -38,12 +39,18 @@ def _dt(iso: str) -> datetime:
 
 
 def _working_from_expected(expected: ExpectedRoute) -> WorkingRoute:
-    """Build a WorkingRoute equivalent to ``expected`` with synthetic IDs.
+    """Build a WorkingRoute equivalent to ``expected`` and rely on projection.
 
-    Stops get sequential ``stop-N`` IDs in expected order; transits resolve
-    ``from``/``to`` cities to those IDs. When a city appears more than once
-    (a circle), transits are wired to stops in route order so the resolved
-    city sequence matches.
+    Stops get sequential ``stop-N`` IDs in expected order and carry only their
+    accommodations (not derivable from transits). Transits resolve ``from``/``to``
+    cities to those IDs; when a city appears more than once (a circle), transits
+    are wired to stops in route order so the resolved city sequence matches.
+
+    Stop timing/travelers are NOT hand-authored: after wiring stops + transits we
+    let the applier's projection derive each stop's ``arrivalAt``/``departureAt``/
+    ``travelers`` from the incident transits — exactly as the live engine does. A
+    stop with NO incident transit (e.g. accommodation-only) cannot be derived, so
+    its expected timing/travelers are set explicitly first (the override path).
     """
     route = WorkingRoute()
     for stop in expected.stops:
@@ -51,9 +58,6 @@ def _working_from_expected(expected: ExpectedRoute) -> WorkingRoute:
             RouteStop(
                 id=route.mint_stop_id(),
                 city=stop.city,
-                arrivalAt=stop.arrival_at,
-                departureAt=stop.departure_at,
-                travelers=list(stop.travelers),
                 accommodations=[
                     Accommodation(
                         checkInAt=a.check_in_at,
@@ -65,26 +69,35 @@ def _working_from_expected(expected: ExpectedRoute) -> WorkingRoute:
             )
         )
 
-    # Track per-city stop IDs in order to disambiguate repeated cities.
-    available: dict[str, list[str]] = {}
-    for stop in route.stops:
-        available.setdefault(stop.city, []).append(stop.id)
+    # Disambiguate repeated cities (circles) by walking the stop sequence in
+    # order: each transit's `from` is the first matching stop at/after a running
+    # cursor, and its `to` is the first match strictly after that `from`.
+    stops_in_order = route.stops
 
-    cursor: dict[str, int] = {}
+    def _find(city: str, start: int) -> int:
+        index = next(
+            (
+                i
+                for i in range(start, len(stops_in_order))
+                if stops_in_order[i].city == city
+            ),
+            None,
+        )
+        if index is None:
+            msg = f"no stop {city!r} at/after index {start} for transit wiring"
+            raise AssertionError(msg)
+        return index
 
-    def _pick(city: str, *, prefer_after: int) -> str:
-        ids = available[city]
-        # Prefer the first occurrence at/after the cursor position; otherwise
-        # fall back to the first occurrence.
-        start = cursor.get(city, 0)
-        chosen = ids[min(start, len(ids) - 1)]
-        cursor[city] = min(start + 1, len(ids) - 1)
-        _ = prefer_after
-        return chosen
-
+    cursor = 0
+    transit_stop_ids: set[str] = set()
     for transit in expected.transits:
-        from_id = _pick(transit.from_, prefer_after=0)
-        to_id = _pick(transit.to, prefer_after=0)
+        from_index = _find(transit.from_, cursor)
+        to_index = _find(transit.to, from_index + 1)
+        from_id = stops_in_order[from_index].id
+        to_id = stops_in_order[to_index].id
+        cursor = from_index
+        transit_stop_ids.add(from_id)
+        transit_stop_ids.add(to_id)
         route.transits.append(
             Transit(
                 id=route.mint_transit_id(),
@@ -97,6 +110,18 @@ def _working_from_expected(expected: ExpectedRoute) -> WorkingRoute:
                 sourceFragmentId=transit.source_fragment_id,
             )
         )
+
+    # No-transit stops can't be derived; set their expected fields explicitly
+    # (override/fallback path) so projection only fills the ticketed stops.
+    for working_stop, expected_stop in zip(route.stops, expected.stops, strict=True):
+        if working_stop.id not in transit_stop_ids:
+            working_stop.arrival_at = expected_stop.arrival_at
+            working_stop.departure_at = expected_stop.departure_at
+            working_stop.travelers = list(expected_stop.travelers)
+
+    # Empty op batch triggers the applier's end-of-apply stop projection,
+    # deriving arrivalAt/departureAt/travelers on the ticketed stops.
+    apply(route, [])
     return route
 
 
