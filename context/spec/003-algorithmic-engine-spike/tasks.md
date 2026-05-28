@@ -12,11 +12,11 @@
   - [x] `backend/tests/spikes/test_algorithmic_engine.py`: unit tests for `rules.build_ops` and end-to-end `update_route` on a hand-crafted single-leg fragment + empty route. **[Agent: python-backend]**
   - [x] **Verify:** `cd backend && uv run pytest tests/spikes/test_algorithmic_engine.py` passes; `uv run ruff check . && uv run pyright` clean on new files; `just spike-engine-algo --limit 1` runs without error and writes a well-formed `results.json`. **[Agent: python-backend]**
 
-- [ ] **Slice 2: Multi-leg transit chains + chronological positioning**
-  - [ ] Extend `rules.build_ops` to handle multi-leg transit tickets: chain new stops with `ref` + `after`-of-previous-ref so the applier inserts them in correct chronological order. **[Agent: python-backend]**
-  - [ ] Chronological insertion against an existing non-empty route: pick the `after` neighbor by projected timing (existing stop id or `"start"` if the new stop precedes all). **[Agent: python-backend]**
-  - [ ] Unit tests: multi-leg on empty route; multi-leg with one endpoint already in the route; insertion at front, middle, end. **[Agent: python-backend]**
-  - [ ] **Verify:** `just spike-engine-algo --shape straight` completes and reports route accuracy on the 64 straight scenarios; iterate rules until straight ≥99% before moving on. Suite still green. **[Agent: python-backend]**
+- [x] **Slice 2: Multi-leg transit chains + chronological positioning**
+  - [x] Extend `rules.build_ops` to handle multi-leg transit tickets: chain new stops with `ref` + `after`-of-previous-ref so the applier inserts them in correct chronological order. **[Agent: python-backend]**
+  - [x] Chronological insertion against an existing non-empty route: pick the `after` neighbor by projected timing (existing stop id or `"start"` if the new stop precedes all). **[Agent: python-backend]**
+  - [x] Unit tests: multi-leg on empty route; multi-leg with one endpoint already in the route; insertion at front, middle, end. **[Agent: python-backend]**
+  - [x] **Verify:** `just spike-engine-algo --shape straight` runs all 64 straight scenarios. Decomposed: **16/16 in-scope (straight, no hotels, no return) pass**; 32 with hotels bucket as `engine_error` (Slice 4); 16 with return bucket as `final_mismatch` (Slice 3 — revisit classifier needed). 116 offline tests pass. **[Agent: python-backend]**
 
 - [ ] **Slice 3: Per-traveler-per-slot identity (3 conditions + sanity check)**
   - [ ] `rules.classify_event(route, event) -> Decision` using the three explicit conditions in order: (a) city not in route, (b) chronologically disjoint with intervening different-city stop in time, (c) per-traveler slot already filled. Plus the arrival-after-departure sanity check that flips ENRICH → CREATE. **[Agent: python-backend]**

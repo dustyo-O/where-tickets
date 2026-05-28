@@ -7,7 +7,7 @@ shared :func:`spikes.route_engine_llm.operations.apply` — so identity
 preservation, gap-safe insertion, and stop projection from transits all come
 for free, exactly as in the LLM spike.
 
-Rule-pipeline failures (out-of-scope fragment shapes in Slice 1) and applier
+Rule-pipeline failures (e.g. hotel-booking fragments — Slice 4) and applier
 errors are both surfaced as a typed :class:`EngineError` so the runner buckets
 the scenario as failed and continues the sweep instead of crashing.
 """
