@@ -18,12 +18,12 @@
   - [x] Unit tests: multi-leg on empty route; multi-leg with one endpoint already in the route; insertion at front, middle, end. **[Agent: python-backend]**
   - [x] **Verify:** `just spike-engine-algo --shape straight` runs all 64 straight scenarios. Decomposed: **16/16 in-scope (straight, no hotels, no return) pass**; 32 with hotels bucket as `engine_error` (Slice 4); 16 with return bucket as `final_mismatch` (Slice 3 — revisit classifier needed). 116 offline tests pass. **[Agent: python-backend]**
 
-- [ ] **Slice 3: Per-traveler-per-slot identity (3 conditions + sanity check)**
-  - [ ] `rules.classify_event(route, event) -> Decision` using the three explicit conditions in order: (a) city not in route, (b) chronologically disjoint with intervening different-city stop in time, (c) per-traveler slot already filled. Plus the arrival-after-departure sanity check that flips ENRICH → CREATE. **[Agent: python-backend]**
-  - [ ] Wire `classify_event` into `build_ops` for every event (replaces the simpler decision logic from Slice 2 in a backwards-compatible way). **[Agent: python-backend]**
-  - [ ] Unit tests directly mirroring the LLM prompt's worked examples: `LED→MOW→BEG→MOW` revisit (condition b, forward direction); pre-existing later-LHR + new earlier outbound `MXP→LHR→HEL→MAD` (condition b, earlier-event direction — the trap that defeated Sonnet); per-traveler slot conflict (condition c); sanity check (would-make-`arrival > departure`). **[Agent: python-backend]**
-  - [ ] Add `backend/tests/spikes/test_algorithmic_corpus.py`: smoke runs of `000-straight-1p-forward`, `064-circle-1p-forward`, `128-star-1p-forward` via `update_route`+`score_scenario`, all assert pass. **[Agent: python-backend]**
-  - [ ] **Verify:** `just spike-engine-algo --shape circle` and `--shape star` complete; iterate rules until circle ≥99% and star ≥99% on forward ordering before moving on. **[Agent: python-backend]**
+- [x] **Slice 3: Per-traveler-per-slot identity (3 conditions + sanity check)**
+  - [x] `rules.classify_event(route, event) -> Decision` using the three explicit conditions in order: (a) city not in route, (b) chronologically disjoint with intervening different-city stop in time, (c) per-traveler slot already filled. Plus the arrival-after-departure sanity check that flips ENRICH → CREATE. **[Agent: python-backend]**
+  - [x] Wire `classify_event` into `build_ops` for every event (replaces the simpler decision logic from Slice 2 in a backwards-compatible way). **[Agent: python-backend]**
+  - [x] Unit tests directly mirroring the LLM prompt's worked examples: `LED→MOW→BEG→MOW` revisit (condition b, forward direction); pre-existing later-LHR + new earlier outbound `MXP→LHR→HEL→MAD` (condition b, earlier-event direction — the trap that defeated Sonnet); per-traveler slot conflict (condition c); sanity check (would-make-`arrival > departure`). **[Agent: python-backend]**
+  - [x] Add `backend/tests/spikes/test_algorithmic_corpus.py`: smoke runs of `000-straight-1p-forward`, `064-circle-1p-forward`, `128-star-1p-forward` via `update_route`+`score_scenario`, all assert pass. **[Agent: python-backend]**
+  - [x] **Verify:** Full corpus run `just spike-engine-algo`: **96/96 (100%) of no-hotels scenarios pass** across all shapes (straight, circle, star) AND all orderings (forward, reverse, bisect, seeded-shuffle). 96 hotel scenarios bucket as `engine_error` per spec (Slice 4). 125 offline tests pass. **[Agent: python-backend]**
 
 - [ ] **Slice 4: Hotels + multi-traveler + non-forward orderings**
   - [ ] `rules.build_ops` handles hotel-booking events: `attach_accommodation` to the matched stop, with implicit `create_stop` if the city isn't present yet (or condition (b)/(c) triggers a new stop). **[Agent: python-backend]**
