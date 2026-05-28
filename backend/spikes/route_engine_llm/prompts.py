@@ -98,25 +98,54 @@ ENGINE-DERIVED STOP FIELDS (build the GRAPH, not the projection)
 - Do NOT emit `enrich_stop` or `add_travelers` for a stop that has a transit —
   it is unnecessary and the engine ignores nothing you add to the transit.
 
-HARD RULES (these are non-negotiable)
-1. APPEND / ENRICH, NEVER DESTROY. The route you are given is authoritative.
-   Existing stops keep their identity. You never recreate, merge away, or drop an
-   existing stop. You only add new stops and enrich existing ones.
-2. ENRICH EXISTING STOPS BY ID. If the fragment carries timing or travelers for a
-   city already present in the route, target that city's existing stop id with
-   `enrich_stop` / `add_travelers` — do NOT create a second stop for it.
-3. CREATE A NEW STOP ONLY FOR A GENUINELY NEW PHYSICAL STOP. If the fragment
-   introduces a city not yet in the route, `create_stop` it.
-4. LEGITIMATE REVISITS ARE DISTINCT STOPS. A circle/loop route can visit the same
-   city twice (e.g. ROM -> HEL -> ROM). The SECOND visit to ROM is a SEPARATE
-   physical stop and gets its OWN `create_stop` (with its own `ref`) — do NOT
-   merge a genuine revisit into the earlier same-city stop. Use timing/sequence
-   to tell a revisit apart from an enrichment of the existing stop.
-5. KEEP CITY ORDER CORRECT, EVEN WITH GAPS. Place new stops in their true
-   chronological position relative to existing stops using the `after` field
-   (an existing stop id, or null/"start" to prepend at the front). The route may
-   have missing legs between known cities — that is fine; never reorder or drop
-   known cities to "close" a gap.
+STOP IDENTITY — READ CAREFULLY (this is the most-confused decision)
+A "stop" is one VISIT to a city, defined by at most ONE arrival and at most ONE
+departure for each traveler. The SAME city can appear as MULTIPLE stops in a
+route — e.g. `LED -> MOW -> BEG -> MOW` has TWO distinct MOW stops. The decision
+is per-traveler, per-slot — NOT per-city-name.
+
+For each city a fragment mentions, you must decide: does it map to an EXISTING
+stop (enrich it) or is it a NEW stop (create it)?
+
+CREATE A NEW STOP when ANY of these is true:
+(a) The city is not yet in the route.
+(b) The city IS in the route, but BETWEEN this fragment's timing and the
+    existing same-city stop there is a stop in a DIFFERENT city. The
+    intervening different-city stop is proof of a return visit.
+    Example: existing route LED -> MOW (day 1) -> BEG. New fragment is a transit
+    BEG -> MOW arriving day 2. MOW is already in the route, but BEG sits between
+    the existing MOW and this new arrival -> this is a SECOND, distinct MOW
+    stop. Create it (with its own `ref`) and add the transit BEG -> new MOW.
+(c) The city IS in the route, but the SLOT this fragment would fill for THIS
+    TRAVELER is already filled at that same-city stop. E.g. the existing MOW
+    already records this traveler's arrival, and the fragment is another
+    arrival for that traveler at MOW between the previous arrival and departure
+    -> it is a new visit, create a new MOW stop.
+
+Apply the same logic to a fragment's OWN structure: if a single multi-leg ticket
+visits the same city twice with a different city in between (e.g. one ticket
+`LED -> MOW -> BEG -> MOW`), create TWO distinct MOW stops within this response —
+each gets its own `ref`, the first MOW is wired LED -> MOW1 and MOW1 -> BEG,
+and the closing leg is wired BEG -> MOW2.
+
+ENRICH THE EXISTING STOP only when the city IS in the route AND none of
+(a)/(b)/(c) triggers — i.e., the fragment fills a not-yet-filled slot for this
+traveler at the same-city stop that is contiguous with this fragment (no
+different-city stop between them, and this traveler's relevant slot is empty).
+
+HARD RULES (non-negotiable)
+1. APPEND, NEVER DESTROY. The route you are given is authoritative. Existing
+   stops keep their identity — never recreate, merge away, drop, or renumber an
+   existing stop. You only ADD new stops and ADD data to existing ones.
+2. NEW vs ENRICH follows the STOP IDENTITY rules above. NEVER merge a genuine
+   revisit (conditions b/c) into the earlier same-city stop. NEVER create a
+   duplicate stop when none of (a)/(b)/(c) triggers — that case is enrichment.
+3. REFERENCE EXISTING STOPS BY THEIR REAL ID (e.g. "stop-3"). Reference
+   newly-created stops by the `ref` you gave them. Never invent a "stop-N" id.
+4. KEEP CITY ORDER CORRECT, EVEN WITH GAPS. Place stops in their true
+   chronological position using `after` (an existing stop id, a same-batch ref,
+   or null/"start" to prepend at the front). Missing legs between known cities
+   are fine — never reorder or drop known cities to "close" a gap.
 
 USING THE FRAGMENT
 - A transit ticket (air/bus/train) has one or more legs, each with a `from` city,
