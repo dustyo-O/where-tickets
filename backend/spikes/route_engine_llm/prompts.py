@@ -109,13 +109,28 @@ stop (enrich it) or is it a NEW stop (create it)?
 
 CREATE A NEW STOP when ANY of these is true:
 (a) The city is not yet in the route.
-(b) The city IS in the route, but BETWEEN this fragment's timing and the
-    existing same-city stop there is a stop in a DIFFERENT city. The
-    intervening different-city stop is proof of a return visit.
-    Example: existing route LED -> MOW (day 1) -> BEG. New fragment is a transit
-    BEG -> MOW arriving day 2. MOW is already in the route, but BEG sits between
-    the existing MOW and this new arrival -> this is a SECOND, distinct MOW
-    stop. Create it (with its own `ref`) and add the transit BEG -> new MOW.
+(b) The city IS in the route, but this fragment's timing for that city is
+    CHRONOLOGICALLY DISJOINT from the existing same-city stop — strictly
+    BEFORE it OR strictly AFTER it — with at least one DIFFERENT-city stop
+    sitting between the two in TIME. The intervening different-city stop is
+    proof of a return / separate visit. Read this both ways: the new arrival
+    may be later than the existing stop (a return) OR earlier than the
+    existing stop (the existing stop was learned from a later-arriving
+    fragment, e.g. fragments out of order / reverse / shuffled).
+    Example A — later return: existing route LED -> MOW (day 1) -> BEG. New
+    transit BEG -> MOW arriving day 2. MOW is already in the route, but BEG
+    sits between the existing MOW and the new arrival -> a SECOND, distinct
+    (later) MOW stop. Create it with its own `ref` and add the transit
+    BEG -> new MOW.
+    Example B — earlier visit revealed by a later-arriving fragment: the
+    route already has stop-2 = LHR with arrival day 4 (created earlier from
+    a closing leg JFK -> LHR), and stops HEL / MAD / JFK on days 2-4. A new
+    fragment is the original outbound ticket MXP -> LHR -> HEL -> MAD whose
+    LHR arrival is day 1. The new LHR arrival (day 1) is EARLIER than the
+    existing stop-2's arrival (day 4), and HEL / MAD / JFK sit between day 1
+    and day 4 in time -> create a SECOND, distinct (EARLIER) LHR stop and
+    place it at the FRONT of the route (`after: "start"`), then wire
+    MXP -> new LHR, new LHR -> HEL, HEL -> MAD. Do NOT merge into stop-2.
 (c) The city IS in the route, but the SLOT this fragment would fill for THIS
     TRAVELER is already filled at that same-city stop. E.g. the existing MOW
     already records this traveler's arrival, and the fragment is another
@@ -132,6 +147,13 @@ ENRICH THE EXISTING STOP only when the city IS in the route AND none of
 (a)/(b)/(c) triggers — i.e., the fragment fills a not-yet-filled slot for this
 traveler at the same-city stop that is contiguous with this fragment (no
 different-city stop between them, and this traveler's relevant slot is empty).
+
+SANITY CHECK — impossible per-stop timing is proof of a merge
+If folding this fragment into an existing same-city stop would make THAT
+stop's recorded ARRIVAL come AFTER its recorded DEPARTURE (i.e., that one
+stop's own timing becomes physically impossible — you can't depart a city
+before you arrived), you are merging two distinct visits. Create a NEW stop
+for this fragment instead.
 
 HARD RULES (non-negotiable)
 1. APPEND, NEVER DESTROY. The route you are given is authoritative. Existing
