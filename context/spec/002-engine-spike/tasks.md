@@ -28,10 +28,10 @@
   - [x] Add `run.py` CLI (`python -m spikes.route_engine_llm.run --model {opus|sonnet|haiku} [--scenario/--shape/--limit]`): empty route → feed fragments in corpus order → `update_route` per fragment → snapshot → score; write to `runs/<timestamp>-<model>/`. Add a `just spike-engine` recipe wrapping it. **[Agent: bedrock-llm]**
   - [x] **Verify (live, needs AWS):** `just spike-engine haiku --limit 3` completed against real Bedrock (eu-north-1, eu.* profiles), wrote `results.json` + `report.md` with real token/cost/latency (1/3 smoke pass, ~$0.019). **[Agent: bedrock-llm]**
 
-- [ ] **Slice 5: Full sweep + cross-model comparison & recommendation**
-  - [ ] Extend `report.py` with `compare.md` generation: read multiple run JSONs and tabulate Opus vs Sonnet vs Haiku (accuracy, per-axis, latency, cost) with a go/no-go recommendation against the ≥99% bar. **[Agent: bedrock-llm]**
-  - [ ] Run the full 192-scenario corpus for each of the three models; generate the comparison. **[Agent: bedrock-llm]**
-  - [ ] **Verify (live, needs AWS):** three full run dirs exist; `compare.md` renders all three models side-by-side and states whether any clears ≥99% — the evidence for the DUS-21 ADR. **[Agent: bedrock-llm]**
+- [x] **Slice 5: Full sweep + cross-model comparison & recommendation**
+  - [x] Add `compare.py` with `build_compare_md` + `python -m …compare` CLI + `just spike-compare` recipe: read N run JSONs and tabulate models (accuracy, per-axis, latency, cost) with a go/no-go recommendation against the ≥99% bar. 14 offline tests. **[Agent: bedrock-llm]**
+  - [x] Run the full 192-scenario corpus for **Haiku, Sonnet, and Opus 4.6** (Opus 4.7 not enabled in the target account; pricing identical to 4.6). Two prompt-iteration commits in between (per-traveler-per-slot identity + symmetric chronological "between" + arr-after-dep sanity). Final: Haiku 27.1%, Sonnet 79.2%, Opus 4.6 83.9%. Total spike spend ~$34. **[Agent: bedrock-llm]**
+  - [x] **Verify (live):** three full run dirs + `compare.md` (`runs/compare-20260528T135228Z.md`) render Haiku/Sonnet/Opus side-by-side; **no model clears ≥99%**; tool's recommendation: fall back to the algorithmic engine spike (DUS-20). Wall is star routes (Opus 59.4%) and reverse fragment ordering. **[Agent: bedrock-llm]**
 
 ---
 
