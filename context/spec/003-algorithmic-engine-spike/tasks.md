@@ -1,0 +1,38 @@
+# Tasks: Algorithmic Engine Spike
+
+> Each slice is end-to-end runnable. Don't move on until the slice's verification passes.
+
+---
+
+- [x] **Slice 1: Package scaffolding + minimal engine (single-leg, empty route)**
+  - [x] Create package `backend/spikes/route_engine_algorithmic/` with `__init__.py`, `engine.py`, `rules.py`, `run.py`. Module-level comments on shared imports from `route_engine_llm` (with TODO: extract to common `engine_core` when one engine is promoted). **[Agent: python-backend]**
+  - [x] `rules.build_ops(route, fragment)` handles the simplest case only: single-leg transit ticket on an EMPTY route — emits `create_stop` for both endpoints (refs + chaining `after`) + one `add_transit` between them. **[Agent: python-backend]**
+  - [x] `engine.update_route(route, fragment) -> UpdateResult` (re-using the `UpdateResult` shape from `route_engine_llm.engine`) — calls `rules.build_ops`, applies via shared `operations.apply`, captures wall-clock latency, surfaces `EngineError` on failure. **[Agent: python-backend]**
+  - [x] `run.py` CLI with `--scenario / --shape / --limit` mirroring the LLM runner's structure; writes `runs/<ts>-algorithmic/` using shared `report.build_results_json` + `build_report_md` with `model="algorithmic"` and zeroed `usage`/cost. Add `just spike-engine-algo` recipe (no `--group spike`). **[Agent: python-backend]**
+  - [x] `backend/tests/spikes/test_algorithmic_engine.py`: unit tests for `rules.build_ops` and end-to-end `update_route` on a hand-crafted single-leg fragment + empty route. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run pytest tests/spikes/test_algorithmic_engine.py` passes; `uv run ruff check . && uv run pyright` clean on new files; `just spike-engine-algo --limit 1` runs without error and writes a well-formed `results.json`. **[Agent: python-backend]**
+
+- [ ] **Slice 2: Multi-leg transit chains + chronological positioning**
+  - [ ] Extend `rules.build_ops` to handle multi-leg transit tickets: chain new stops with `ref` + `after`-of-previous-ref so the applier inserts them in correct chronological order. **[Agent: python-backend]**
+  - [ ] Chronological insertion against an existing non-empty route: pick the `after` neighbor by projected timing (existing stop id or `"start"` if the new stop precedes all). **[Agent: python-backend]**
+  - [ ] Unit tests: multi-leg on empty route; multi-leg with one endpoint already in the route; insertion at front, middle, end. **[Agent: python-backend]**
+  - [ ] **Verify:** `just spike-engine-algo --shape straight` completes and reports route accuracy on the 64 straight scenarios; iterate rules until straight ≥99% before moving on. Suite still green. **[Agent: python-backend]**
+
+- [ ] **Slice 3: Per-traveler-per-slot identity (3 conditions + sanity check)**
+  - [ ] `rules.classify_event(route, event) -> Decision` using the three explicit conditions in order: (a) city not in route, (b) chronologically disjoint with intervening different-city stop in time, (c) per-traveler slot already filled. Plus the arrival-after-departure sanity check that flips ENRICH → CREATE. **[Agent: python-backend]**
+  - [ ] Wire `classify_event` into `build_ops` for every event (replaces the simpler decision logic from Slice 2 in a backwards-compatible way). **[Agent: python-backend]**
+  - [ ] Unit tests directly mirroring the LLM prompt's worked examples: `LED→MOW→BEG→MOW` revisit (condition b, forward direction); pre-existing later-LHR + new earlier outbound `MXP→LHR→HEL→MAD` (condition b, earlier-event direction — the trap that defeated Sonnet); per-traveler slot conflict (condition c); sanity check (would-make-`arrival > departure`). **[Agent: python-backend]**
+  - [ ] Add `backend/tests/spikes/test_algorithmic_corpus.py`: smoke runs of `000-straight-1p-forward`, `064-circle-1p-forward`, `128-star-1p-forward` via `update_route`+`score_scenario`, all assert pass. **[Agent: python-backend]**
+  - [ ] **Verify:** `just spike-engine-algo --shape circle` and `--shape star` complete; iterate rules until circle ≥99% and star ≥99% on forward ordering before moving on. **[Agent: python-backend]**
+
+- [ ] **Slice 4: Hotels + multi-traveler + non-forward orderings**
+  - [ ] `rules.build_ops` handles hotel-booking events: `attach_accommodation` to the matched stop, with implicit `create_stop` if the city isn't present yet (or condition (b)/(c) triggers a new stop). **[Agent: python-backend]**
+  - [ ] Multi-traveler enrichment via `add_travelers` when a same-city event for a new traveler maps to an existing stop under the classifier. **[Agent: python-backend]**
+  - [ ] Validate non-forward orderings (reverse / bisect / seeded-shuffle) — the chronological classifier from Slice 3 should already handle them; add targeted unit tests covering each ordering's representative trap, especially the reverse-arriving outbound on a pre-existing closing-leg case. **[Agent: python-backend]**
+  - [ ] Extend `test_algorithmic_corpus.py` with hotel + multi-pax + reverse-ordered canonical scenarios. **[Agent: python-backend]**
+  - [ ] **Verify:** `just spike-engine-algo --shape circle` (with the reverse/bisect/shuffle + hotels variants now exercised) at ≥99%; full `just spike-engine-algo --limit 96` (half-corpus sanity) at ≥99%. **[Agent: python-backend]**
+
+- [ ] **Slice 5: Full corpus run + determinism test + cross-engine `compare.md`**
+  - [ ] Full 192-scenario run via `just spike-engine-algo` writes `runs/<ts>-algorithmic/{results.json,report.md}` with the same schema as LLM runs. Fix any `report.build_results_json` assumption that's LLM-specific (smallest possible tweak; add a unit test guarding the algorithmic case). **[Agent: python-backend]**
+  - [ ] Add a determinism test: two back-to-back full runs, diff their `results.json` ignoring `startedAt` and per-scenario `latency*` fields, assert empty diff. **[Agent: python-backend]**
+  - [ ] **Verify:** `just spike-compare <haiku>.json <sonnet>.json <opus>.json <algorithmic>.json` produces a single `compare.md` rendering all four engines side-by-side with the recommendation against the ≥99% bar — the evidence basis for the DUS-21 ADR. Full LLM-spike suite (101 tests) remains green; no `route_engine_llm/*` changes. **[Agent: python-backend]**

@@ -43,6 +43,13 @@ regen-corpus:
 spike-engine model="haiku" *args:
     cd backend && uv run --group spike python -m spikes.route_engine_llm.run --model {{model}} {{args}}
 
+# Run the algorithmic (rules-based) route-engine spike (offline; no AWS, no
+# `spike` group, no token spend). Extra flags pass through, e.g.:
+#   just spike-engine-algo --limit 1
+#   just spike-engine-algo --scenario 000-straight-1p-forward
+spike-engine-algo *args:
+    cd backend && uv run python -m spikes.route_engine_algorithmic.run {{args}}
+
 # Render the cross-model comparison (compare.md) from 2+ per-run results.json
 # files (offline; no AWS, no `spike` group). Example:
 #   just spike-compare runs/<ts>-opus/results.json runs/<ts>-haiku/results.json
