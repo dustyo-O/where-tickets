@@ -2,7 +2,7 @@
 
 - **Roadmap Item:** Route Engine (Foundation) → Engine Spike & Decision
 - **Linear:** [DUS-19](https://linear.app/dusty-work/issue/DUS-19/spike-a-llm-driven-route-updater-on-bedrock)
-- **Status:** Draft
+- **Status:** Completed
 - **Author:** Alexander Shleyko
 
 ---
@@ -28,42 +28,42 @@ This spike answers three questions, in order:
 
 - **As a** decision-maker, **I want to** run the entire scenario corpus against any one of Opus, Sonnet, or Haiku, **so that** I can compare them on the same evidence.
   - **Acceptance Criteria:**
-    - [ ] A single command runs the full corpus against a selected model and produces a report file.
-    - [ ] The same command accepts a subset (e.g., one scenario or one shape) for fast iteration.
-    - [ ] Re-running with the same model and corpus produces results that can be compared run-over-run (timestamped, not overwritten silently).
+    - [x] A single command runs the full corpus against a selected model and produces a report file.
+    - [x] The same command accepts a subset (e.g., one scenario or one shape) for fast iteration.
+    - [x] Re-running with the same model and corpus produces results that can be compared run-over-run (timestamped, not overwritten silently).
 
 ### 2.2 Append, don't rebuild (hard gate)
 
 - **As a** decision-maker, **I want** every scenario to be evaluated by feeding fragments **one at a time**, carrying the prior route forward, **so that** I can verify the AI engine never destroys and re-creates route-cities that already existed.
   - **Acceptance Criteria:**
-    - [ ] For every scenario, fragments are delivered to the engine sequentially in the corpus's defined order (forward / reverse / bisect / seeded-shuffle).
-    - [ ] After each fragment, the engine returns an updated route built **on top of** the prior one — never from scratch.
-    - [ ] A route-city present in step N must still be the **same** route-city in step N+1 unless the new fragment legitimately replaces it (e.g., user edits scope, out of spike).
-    - [ ] A scenario is marked **passed** only if BOTH (a) the final route matches the expected route AND (b) no route-city identity was destroyed and re-created at any step during the replay. Either failure fails the scenario.
+    - [x] For every scenario, fragments are delivered to the engine sequentially in the corpus's defined order (forward / reverse / bisect / seeded-shuffle).
+    - [x] After each fragment, the engine returns an updated route built **on top of** the prior one — never from scratch.
+    - [x] A route-city present in step N must still be the **same** route-city in step N+1 unless the new fragment legitimately replaces it (e.g., user edits scope, out of spike).
+    - [x] A scenario is marked **passed** only if BOTH (a) the final route matches the expected route AND (b) no route-city identity was destroyed and re-created at any step during the replay. Either failure fails the scenario.
 
 ### 2.3 Handle routes with gaps
 
 - **As a** decision-maker, **I want** the engine to keep the city sequence correctly ordered even when some legs between cities are missing, **so that** users who upload documents piecemeal (or leave gaps on purpose) still see their trip in the right order.
   - **Acceptance Criteria:**
-    - [ ] During incremental replay, the partial route after each intermediate step has its cities in the correct order relative to the final expected route, even when the connecting fragment for one or more legs has not yet arrived.
-    - [ ] The engine does not invent, drop, or reorder cities to "close" a gap; gaps are simply the natural state of a partial route. (No explicit "gap marker" is required from the engine in this spike.)
+    - [x] During incremental replay, the partial route after each intermediate step has its cities in the correct order relative to the final expected route, even when the connecting fragment for one or more legs has not yet arrived.
+    - [x] The engine does not invent, drop, or reorder cities to "close" a gap; gaps are simply the natural state of a partial route. (No explicit "gap marker" is required from the engine in this spike.)
 
 ### 2.4 Comparison report
 
 - **As a** decision-maker, **I want** a report comparing all three models on the same corpus, **so that** I can pick one.
   - **Acceptance Criteria:**
-    - [ ] The report shows, per model: route accuracy (% of scenarios passed under the hard gate in 2.2), wall-clock latency per scenario, and estimated cost per scenario and per full corpus run.
-    - [ ] The report includes a per-axis breakdown of accuracy (shape, traveler count, fragment ordering, return, hotels) so weak spots are visible.
-    - [ ] Failures are summarized as **counts only** in the report; no per-scenario diffs are required up front (drilling in is a manual follow-up).
-    - [ ] The report ends with a clear recommendation: which model (if any) clears the ≥99% accuracy bar, and the suggested v1 choice — or "no AI model qualifies, proceed to algorithmic spike."
+    - [x] The report shows, per model: route accuracy (% of scenarios passed under the hard gate in 2.2), wall-clock latency per scenario, and estimated cost per scenario and per full corpus run.
+    - [x] The report includes a per-axis breakdown of accuracy (shape, traveler count, fragment ordering, return, hotels) so weak spots are visible.
+    - [x] Failures are summarized as **counts only** in the report; no per-scenario diffs are required up front (drilling in is a manual follow-up).
+    - [x] The report ends with a clear recommendation: which model (if any) clears the ≥99% accuracy bar, and the suggested v1 choice — or "no AI model qualifies, proceed to algorithmic spike."
 
 ### 2.5 Reference implementation
 
 - **As a** decision-maker, **I want** the spike to leave behind a thin reference implementation shaped like the eventual backend engine, **so that** the cost and shape of integration are visible at decision time, not discovered later.
   - **Acceptance Criteria:**
-    - [ ] The implementation exposes the same conceptual entrypoint the production engine would: "given an existing route and one new document fragment, return an updated route."
-    - [ ] The runner that produces the report uses this same entrypoint — there is no separate "evaluation-only" code path.
-    - [ ] The implementation is readable and small enough to be lifted, with refinement, into the v1 backend.
+    - [x] The implementation exposes the same conceptual entrypoint the production engine would: "given an existing route and one new document fragment, return an updated route."
+    - [x] The runner that produces the report uses this same entrypoint — there is no separate "evaluation-only" code path.
+    - [x] The implementation is readable and small enough to be lifted, with refinement, into the v1 backend.
 
 ---
 
