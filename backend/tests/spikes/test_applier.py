@@ -112,6 +112,190 @@ def test_create_stop_splices_in_the_middle() -> None:
 
 
 # --------------------------------------------------------------------------- #
+# Batch-local refs: same-batch creations referenced by model-chosen handles
+# --------------------------------------------------------------------------- #
+
+
+def test_refs_build_new_stops_and_transits_on_empty_route() -> None:
+    """First multi-leg ticket on an empty route: HEL->ROM->LIS->CDG, all new.
+
+    Previously impossible — transits could only reference stops that already
+    existed. Now each new stop carries a `ref` and transits wire those refs.
+    """
+    route = WorkingRoute()
+
+    ops: list[Op] = [
+        CreateStop(city="HEL", ref="n1"),
+        CreateStop(city="ROM", after="n1", ref="n2"),
+        CreateStop(city="LIS", after="n2", ref="n3"),
+        CreateStop(city="CDG", after="n3", ref="n4"),
+        AddTransit.model_validate(
+            {
+                "fromStopId": "n1",
+                "toStopId": "n2",
+                "mode": "air",
+                "departureAt": "2027-03-01T00:00:00+00:00",
+                "arrivalAt": "2027-03-01T03:00:00+00:00",
+                "travelers": ["traveler-1"],
+                "sourceFragmentId": "tkt-01",
+            }
+        ),
+        AddTransit.model_validate(
+            {
+                "fromStopId": "n2",
+                "toStopId": "n3",
+                "mode": "train",
+                "departureAt": "2027-03-02T00:00:00+00:00",
+                "arrivalAt": "2027-03-02T03:00:00+00:00",
+                "travelers": ["traveler-1"],
+                "sourceFragmentId": "tkt-01",
+            }
+        ),
+        AddTransit.model_validate(
+            {
+                "fromStopId": "n3",
+                "toStopId": "n4",
+                "mode": "bus",
+                "departureAt": "2027-03-03T00:00:00+00:00",
+                "arrivalAt": "2027-03-03T03:00:00+00:00",
+                "travelers": ["traveler-1"],
+                "sourceFragmentId": "tkt-01",
+            }
+        ),
+    ]
+
+    apply(route, ops)
+
+    # Stops built in order with engine-minted ids.
+    assert [s.city for s in route.stops] == ["HEL", "ROM", "LIS", "CDG"]
+    assert route.stop_ids() == ["stop-1", "stop-2", "stop-3", "stop-4"]
+
+    # Transits wired between the resolved (real) stop ids — refs never persisted.
+    assert [(t.from_stop_id, t.to_stop_id) for t in route.transits] == [
+        ("stop-1", "stop-2"),
+        ("stop-2", "stop-3"),
+        ("stop-3", "stop-4"),
+    ]
+    for t in route.transits:
+        assert t.from_stop_id.startswith("stop-")
+        assert t.to_stop_id.startswith("stop-")
+
+
+def test_create_stop_after_references_earlier_ref_chains_in_order() -> None:
+    """`create_stop.after` may point at a ref created earlier in the batch."""
+    route = WorkingRoute()
+
+    apply(
+        route,
+        [
+            CreateStop(city="HEL", ref="a"),
+            CreateStop(city="ROM", after="a", ref="b"),
+            CreateStop(city="LIS", after="b", ref="c"),
+        ],
+    )
+
+    assert [s.city for s in route.stops] == ["HEL", "ROM", "LIS"]
+    assert route.stop_ids() == ["stop-1", "stop-2", "stop-3"]
+
+
+def test_mixed_batch_existing_id_and_same_batch_ref() -> None:
+    """One op list referencing an existing `stop-N` id AND a same-batch ref."""
+    route = WorkingRoute()
+    # Seed an existing stop.
+    apply(route, [CreateStop(city="HEL")])
+    assert route.stop_ids() == ["stop-1"]
+
+    # New batch: create ROM (ref "n1") after the EXISTING stop-1, then a transit
+    # from the existing stop-1 to the new ref "n1".
+    apply(
+        route,
+        [
+            CreateStop(city="ROM", after="stop-1", ref="n1"),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "stop-1",
+                    "toStopId": "n1",
+                    "mode": "air",
+                    "departureAt": "2027-03-01T00:00:00+00:00",
+                    "arrivalAt": "2027-03-01T03:00:00+00:00",
+                    "travelers": ["traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+            AddTravelers(stopId="n1", travelers=["traveler-2"]),
+        ],
+    )
+
+    assert [s.city for s in route.stops] == ["HEL", "ROM"]
+    assert route.stop_ids() == ["stop-1", "stop-2"]
+    transit = route.transits[0]
+    assert transit.from_stop_id == "stop-1"
+    assert transit.to_stop_id == "stop-2"
+    # add_travelers set traveler-2; projection then unions the incident
+    # transit's traveler-1 onto the stop (explicit first, derived appended).
+    assert route.stop_by_id("stop-2").travelers == ["traveler-2", "traveler-1"]  # type: ignore[union-attr]
+
+
+def test_undeclared_ref_raises() -> None:
+    """Referencing a ref that was never declared in this batch -> OpApplyError."""
+    route = WorkingRoute()
+    with pytest.raises(OpApplyError):
+        apply(
+            route,
+            [
+                CreateStop(city="HEL", ref="n1"),
+                AddTransit.model_validate(
+                    {
+                        "fromStopId": "n1",
+                        "toStopId": "n2",  # never declared
+                        "mode": "air",
+                        "departureAt": "2027-03-01T00:00:00+00:00",
+                        "arrivalAt": "2027-03-01T03:00:00+00:00",
+                        "travelers": ["traveler-1"],
+                        "sourceFragmentId": "tkt-01",
+                    }
+                ),
+            ],
+        )
+
+
+def test_forward_ref_raises() -> None:
+    """Referencing a ref declared LATER in the same batch -> OpApplyError."""
+    route = WorkingRoute()
+    with pytest.raises(OpApplyError):
+        apply(
+            route,
+            [
+                # `after` points at "b" before its create_stop runs.
+                CreateStop(city="HEL", after="b", ref="a"),
+                CreateStop(city="ROM", after="a", ref="b"),
+            ],
+        )
+
+
+def test_duplicate_ref_declaration_raises() -> None:
+    """Declaring the same `ref` twice in a batch -> OpApplyError."""
+    route = WorkingRoute()
+    with pytest.raises(OpApplyError):
+        apply(
+            route,
+            [
+                CreateStop(city="HEL", ref="n1"),
+                CreateStop(city="ROM", after="n1", ref="n1"),
+            ],
+        )
+
+
+def test_refs_are_batch_local_not_persisted_across_apply_calls() -> None:
+    """A ref from one apply() call is not visible in the next."""
+    route = WorkingRoute()
+    apply(route, [CreateStop(city="HEL", ref="n1")])
+    # "n1" is not a real stop id and the new batch has no such ref.
+    with pytest.raises(OpApplyError):
+        apply(route, [AddTravelers(stopId="n1", travelers=["traveler-1"])])
+
+
+# --------------------------------------------------------------------------- #
 # Circle: double-ROM stays two distinct stops (064-circle-1p-forward)
 # --------------------------------------------------------------------------- #
 
@@ -183,6 +367,198 @@ def test_add_travelers_unions_without_duplicates_stable_order() -> None:
     )
 
     assert route.stops[0].travelers == ["traveler-1", "traveler-2", "traveler-3"]
+
+
+# --------------------------------------------------------------------------- #
+# Stop projection: derive arrival/departure/travelers from transits
+# --------------------------------------------------------------------------- #
+
+
+def test_projection_derives_stop_timing_from_transits() -> None:
+    """create + transit ops alone yield derived stop arrival/departure.
+
+    First stop has no incoming transit (arrivalAt None); last stop has no
+    outgoing transit (departureAt None); the middle stop carries both.
+    """
+    route = WorkingRoute()
+    apply(
+        route,
+        [
+            CreateStop(city="JFK", ref="n1"),
+            CreateStop(city="FRA", after="n1", ref="n2"),
+            CreateStop(city="LIS", after="n2", ref="n3"),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "n1",
+                    "toStopId": "n2",
+                    "mode": "air",
+                    "departureAt": "2027-03-01T00:00:00+00:00",
+                    "arrivalAt": "2027-03-01T03:00:00+00:00",
+                    "travelers": ["traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "n2",
+                    "toStopId": "n3",
+                    "mode": "air",
+                    "departureAt": "2027-03-01T08:00:00+00:00",
+                    "arrivalAt": "2027-03-01T11:00:00+00:00",
+                    "travelers": ["traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+        ],
+    )
+
+    jfk, fra, lis = route.stops
+    # First stop: only a departure (from the outgoing leg), no arrival.
+    assert jfk.arrival_at is None
+    assert jfk.departure_at == _dt("2027-03-01T00:00:00")
+    # Middle stop: arrival from incoming leg, departure from outgoing leg.
+    assert fra.arrival_at == _dt("2027-03-01T03:00:00")
+    assert fra.departure_at == _dt("2027-03-01T08:00:00")
+    # Last stop: only an arrival (from the incoming leg), no departure.
+    assert lis.arrival_at == _dt("2027-03-01T11:00:00")
+    assert lis.departure_at is None
+    # Travelers projected onto every incident stop.
+    assert jfk.travelers == ["traveler-1"]
+    assert fra.travelers == ["traveler-1"]
+    assert lis.travelers == ["traveler-1"]
+
+
+def test_projection_unions_multi_traveler_from_transits() -> None:
+    """A stop incident to transits with different travelers unions them."""
+    route = WorkingRoute()
+    apply(
+        route,
+        [
+            CreateStop(city="HEL", ref="n1"),
+            CreateStop(city="ROM", after="n1", ref="n2"),
+            CreateStop(city="LIS", after="n2", ref="n3"),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "n1",
+                    "toStopId": "n2",
+                    "mode": "air",
+                    "departureAt": "2027-03-01T00:00:00+00:00",
+                    "arrivalAt": "2027-03-01T03:00:00+00:00",
+                    "travelers": ["traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "n2",
+                    "toStopId": "n3",
+                    "mode": "air",
+                    "departureAt": "2027-03-01T08:00:00+00:00",
+                    "arrivalAt": "2027-03-01T11:00:00+00:00",
+                    "travelers": ["traveler-2", "traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+        ],
+    )
+
+    hel, rom, lis = route.stops
+    assert hel.travelers == ["traveler-1"]
+    # ROM is incident to BOTH legs: union, stable order, no duplicates
+    # (incoming leg's traveler-1 first, then the outgoing leg's traveler-2).
+    assert rom.travelers == ["traveler-1", "traveler-2"]
+    assert lis.travelers == ["traveler-2", "traveler-1"]
+
+
+def test_projection_keeps_explicit_timing_on_no_transit_stop() -> None:
+    """A stop with NO transit keeps its explicit enrich_stop/add_travelers.
+
+    This is the override/fallback path: nothing to derive, so the explicit
+    values stand.
+    """
+    route = WorkingRoute()
+    apply(
+        route,
+        [
+            CreateStop(city="ROM"),
+            EnrichStop.model_validate(
+                {
+                    "stopId": "stop-1",
+                    "arrivalAt": "2027-03-01T03:00:00+00:00",
+                    "departureAt": "2027-03-01T08:00:00+00:00",
+                }
+            ),
+            AddTravelers(stopId="stop-1", travelers=["traveler-1", "traveler-2"]),
+        ],
+    )
+
+    rom = route.stops[0]
+    assert rom.arrival_at == _dt("2027-03-01T03:00:00")
+    assert rom.departure_at == _dt("2027-03-01T08:00:00")
+    assert rom.travelers == ["traveler-1", "traveler-2"]
+
+
+def test_projection_is_fill_only_explicit_timing_preserved_on_transit_stop() -> None:
+    """Explicit enrich_stop timing on a transit stop wins over derived (fill-only).
+
+    The transit's own times differ from the explicit ones; projection must NOT
+    overwrite the explicit values, only fill where unset.
+    """
+    route = WorkingRoute()
+    apply(
+        route,
+        [
+            CreateStop(city="HEL", ref="n1"),
+            CreateStop(city="ROM", after="n1", ref="n2"),
+            # Explicitly pin ROM's arrival to a value DIFFERENT from the leg's.
+            EnrichStop.model_validate(
+                {"stopId": "n2", "arrivalAt": "2027-03-01T05:00:00+00:00"}
+            ),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "n1",
+                    "toStopId": "n2",
+                    "mode": "air",
+                    "departureAt": "2027-03-01T00:00:00+00:00",
+                    "arrivalAt": "2027-03-01T03:00:00+00:00",
+                    "travelers": ["traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+        ],
+    )
+
+    rom = route.stops[1]
+    # Explicit arrival kept (fill-only); NOT overwritten by the leg's 03:00.
+    assert rom.arrival_at == _dt("2027-03-01T05:00:00")
+    # Travelers still unioned from the incident transit.
+    assert rom.travelers == ["traveler-1"]
+
+
+def test_projection_does_not_change_stop_identity_or_order() -> None:
+    """Projection only fills display fields — ids and ordering are untouched."""
+    route = WorkingRoute()
+    apply(
+        route,
+        [
+            CreateStop(city="HEL", ref="n1"),
+            CreateStop(city="ROM", after="n1", ref="n2"),
+            AddTransit.model_validate(
+                {
+                    "fromStopId": "n1",
+                    "toStopId": "n2",
+                    "mode": "bus",
+                    "departureAt": "2027-03-01T00:00:00+00:00",
+                    "arrivalAt": "2027-03-01T03:00:00+00:00",
+                    "travelers": ["traveler-1"],
+                    "sourceFragmentId": "tkt-01",
+                }
+            ),
+        ],
+    )
+
+    assert route.stop_ids() == ["stop-1", "stop-2"]
+    assert [s.city for s in route.stops] == ["HEL", "ROM"]
 
 
 # --------------------------------------------------------------------------- #

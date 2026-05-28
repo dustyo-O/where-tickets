@@ -36,6 +36,19 @@ test-corpus:
 regen-corpus:
     uv run --python 3.12 python -m corpus.generator
 
+# Run the LLM route-engine spike against a Bedrock model (live; needs AWS creds
+# and the optional `spike` dep group). Extra flags pass through, e.g.:
+#   just spike-engine model=haiku --limit 3
+#   just spike-engine model=sonnet --shape circle
+spike-engine model="haiku" *args:
+    cd backend && uv run --group spike python -m spikes.route_engine_llm.run --model {{model}} {{args}}
+
+# Render the cross-model comparison (compare.md) from 2+ per-run results.json
+# files (offline; no AWS, no `spike` group). Example:
+#   just spike-compare runs/<ts>-opus/results.json runs/<ts>-haiku/results.json
+spike-compare *results:
+    cd backend && uv run python -m spikes.route_engine_llm.compare {{results}}
+
 # Initialize and plan the dev Terraform environment (no apply wired).
 plan-infra:
     terraform -chdir=infra/envs/dev init
