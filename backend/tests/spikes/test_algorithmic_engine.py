@@ -4,9 +4,7 @@ Slice 1 covered: single-leg transit on an empty route, with hard guards on
 out-of-scope shapes.
 
 Slice 2 extends to: multi-leg transit tickets and chronological insertion
-against a non-empty route (front / middle / end). Hotel-booking fragments
-remain out of scope and must raise :class:`RuleNotImplementedError` → wrapped
-to :class:`EngineError`.
+against a non-empty route (front / middle / end).
 
 Slice 3 adds the per-traveler-per-slot identity classifier (CREATE-vs-ENRICH)
 driven by the three conditions from the LLM prompt plus the
@@ -15,6 +13,15 @@ worked examples: forward-circle revisit (condition b), reverse-ordering
 earlier-event revisit (condition b in the earlier direction), straight-return
 (the wedge that broke Slice 2's trivial reuse), per-traveler slot conflict
 (condition c), and the sanity check.
+
+Slice 4 folds hotel-booking fragments into the same classifier pipeline. The
+new tests cover: a brand-new hotel-only stop, a hotel that ENRICHes an
+existing stop, two non-overlapping bookings for the same traveler at the
+"same nominal city" splitting into distinct stops (per-traveler accommodation
+slot conflict), the accommodation sanity check that flips ENRICH→CREATE when
+the booking window is disjoint from the stop's transit-known timing, and
+chronological positioning of in-batch creates against an existing stop that
+sits later in time (the wedge that broke seeded-shuffle/reverse + hotels).
 """
 
 from __future__ import annotations
@@ -389,15 +396,63 @@ def test_find_after_neighbor_falls_back_to_last_when_no_timed_stops() -> None:
 
 
 # --------------------------------------------------------------------------- #
+# rules.build_ops — hotel-booking happy path (Slice 4 positive)
+# --------------------------------------------------------------------------- #
+
+
+def test_build_ops_hotel_booking_on_empty_route_creates_hotel_only_stop() -> None:
+    """A hotel-booking fragment on an empty route mints a hotel-only stop.
+
+    The op stream is ``create_stop`` + ``attach_accommodation`` + a final
+    ``add_travelers`` (the projector has no incident transits to derive the
+    travelers from on a freshly minted hotel-only stop, so the rules wire them
+    explicitly).
+    """
+    from spikes.route_engine_llm.operations import AddTravelers, AttachAccommodation
+
+    route = WorkingRoute()
+    ops = build_ops(route, _hotel_booking())
+
+    assert len(ops) == 3
+    assert isinstance(ops[0], CreateStop)
+    assert ops[0].city == "LIS"
+    assert ops[0].after is None
+    assert ops[0].ref == "n1"
+
+    assert isinstance(ops[1], AttachAccommodation)
+    assert ops[1].stop_id == "n1"
+    assert ops[1].check_in_at == _dt("2027-03-01T15:00:00Z")
+    assert ops[1].check_out_at == _dt("2027-03-03T11:00:00Z")
+    assert ops[1].hotel_name == "Hotel Lisboa"
+
+    assert isinstance(ops[2], AddTravelers)
+    assert ops[2].stop_id == "n1"
+    assert ops[2].travelers == ["traveler-1"]
+
+
+# --------------------------------------------------------------------------- #
 # rules.build_ops — out-of-scope guards
 # --------------------------------------------------------------------------- #
 
 
-def test_build_ops_rejects_hotel_fragment() -> None:
-    """Hotel bookings are still out of scope until Slice 4."""
+def test_build_ops_rejects_unknown_fragment_shape() -> None:
+    """A fragment shape outside the Fragment union raises the marker error.
+
+    Future fragment kinds (e.g. a car-rental) will arrive as new ``Fragment``
+    union members. Until their rules land, ``build_ops`` must surface them as
+    a typed :class:`RuleNotImplementedError` so the engine wraps them into
+    :class:`EngineError` and the runner buckets the scenario as failed
+    instead of crashing. A bare stand-in (not a real ``Fragment``) drives the
+    defensive ``else`` branch in :func:`build_ops` without dragging in any
+    half-built domain types.
+    """
     route = WorkingRoute()
-    with pytest.raises(RuleNotImplementedError, match="hotel"):
-        build_ops(route, _hotel_booking())
+
+    class _StubFragment:
+        """Stand-in for a future fragment shape with no rules yet."""
+
+    with pytest.raises(RuleNotImplementedError, match="unknown fragment type"):
+        build_ops(route, _StubFragment())  # type: ignore[arg-type]
 
 
 # --------------------------------------------------------------------------- #
@@ -437,10 +492,20 @@ def test_update_route_single_leg_builds_expected_route_shape() -> None:
 
 
 def test_update_route_wraps_rule_not_implemented_as_engine_error() -> None:
-    """Out-of-scope shapes (hotel) surface as EngineError chained from the marker."""
+    """Future fragment shapes surface as :class:`EngineError` chained from the marker.
+
+    Same scope as :func:`test_build_ops_rejects_unknown_fragment_shape`, but at
+    the engine seam — the wrap-as-:class:`EngineError` behavior survives even
+    once today's :class:`RuleNotImplementedError` trigger (a hotel fragment)
+    is gone, because tomorrow's fragment shapes will use the same hatch.
+    """
     route = WorkingRoute()
+
+    class _StubFragment:
+        """Stand-in for a future fragment shape with no rules yet."""
+
     with pytest.raises(EngineError) as exc_info:
-        update_route(route, _hotel_booking())
+        update_route(route, _StubFragment())  # type: ignore[arg-type]
 
     assert isinstance(exc_info.value.__cause__, RuleNotImplementedError)
     # Route was not mutated — no ops applied.
@@ -727,3 +792,383 @@ def test_classifier_pure_function_call_returns_create_for_unseen_city() -> None:
     decision = classify_event(route, event)
     assert decision == Decision.create()
     assert decision.kind is DecisionKind.CREATE
+
+
+# --------------------------------------------------------------------------- #
+# Slice 4 — hotel-booking fragments
+# --------------------------------------------------------------------------- #
+
+
+def _hotel_for(
+    *,
+    source_id: str,
+    city: str,
+    check_in: str,
+    check_out: str,
+    travelers: list[str] | None = None,
+    hotel_name: str = "Test Hotel",
+) -> HotelBookingFragment:
+    """Tiny factory for crafting hotel-booking fragments in Slice-4 tests."""
+    return HotelBookingFragment.model_validate(
+        {
+            "documentType": "hotel-booking",
+            "sourceDocumentId": source_id,
+            "confirmationCode": "C" + source_id[-3:],
+            "travelers": travelers or ["traveler-1"],
+            "city": city,
+            "checkInAt": check_in,
+            "checkOutAt": check_out,
+            "hotelName": hotel_name,
+        }
+    )
+
+
+def test_hotel_enriches_existing_same_city_stop_under_forward_order() -> None:
+    """A hotel for a city already in the route ENRICHes the existing stop.
+
+    Seed a transit JFK -> FRA (FRA arrives day 1 08:00, departs day 2 08:00),
+    then a hotel in FRA whose window sits inside that timing. The classifier
+    must ENRICH stop FRA, not create a second one — single new accommodation
+    attached, no new stop minted.
+    """
+    route = WorkingRoute()
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="enrich-seed-01",
+            from_city="JFK",
+            to_city="FRA",
+            departure="2027-04-01T00:00:00Z",
+            arrival="2027-04-01T08:00:00Z",
+        ),
+    )
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="enrich-seed-02",
+            from_city="FRA",
+            to_city="LIS",
+            departure="2027-04-02T08:00:00Z",
+            arrival="2027-04-02T11:00:00Z",
+        ),
+    )
+    fra_id = next(s.id for s in route.stops if s.city == "FRA")
+
+    update_route(
+        route,
+        _hotel_for(
+            source_id="enrich-htl-03",
+            city="FRA",
+            check_in="2027-04-01T08:00:00Z",
+            check_out="2027-04-02T08:00:00Z",
+        ),
+    )
+
+    fra_stops = [s for s in route.stops if s.city == "FRA"]
+    assert len(fra_stops) == 1, (
+        f"hotel should ENRICH the only same-city stop, got {[s.city for s in route.stops]!r}"
+    )
+    fra = route.stop_by_id(fra_id)
+    assert fra is not None
+    assert len(fra.accommodations) == 1
+    assert fra.accommodations[0].check_in_at == _dt("2027-04-01T08:00:00Z")
+    assert fra.accommodations[0].check_out_at == _dt("2027-04-02T08:00:00Z")
+
+
+def test_hotel_creates_new_stop_when_city_not_in_route() -> None:
+    """A hotel-booking for a brand-new city under condition (a) → CREATE."""
+    route = WorkingRoute()
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="virgin-seed-01",
+            from_city="JFK",
+            to_city="FRA",
+            departure="2027-05-01T00:00:00Z",
+            arrival="2027-05-01T08:00:00Z",
+        ),
+    )
+
+    update_route(
+        route,
+        _hotel_for(
+            source_id="virgin-htl-02",
+            city="LIS",
+            check_in="2027-05-02T15:00:00Z",
+            check_out="2027-05-03T11:00:00Z",
+        ),
+    )
+
+    cities = [s.city for s in route.stops]
+    assert cities == ["JFK", "FRA", "LIS"], (
+        f"new-city LIS hotel must mint a fresh stop, got {cities!r}"
+    )
+    lis = next(s for s in route.stops if s.city == "LIS")
+    assert lis.travelers == ["traveler-1"], (
+        "freshly minted hotel-only stop must carry its booking's travelers"
+    )
+    assert len(lis.accommodations) == 1
+
+
+def test_hotel_for_existing_city_creates_new_stop_under_condition_b() -> None:
+    """Hotel for a city already in the route + intervening different-city stop → CREATE.
+
+    Seed JFK -> FRA (day 1) and FRA -> LIS (day 3) so FRA has both ends set
+    and LIS sits chronologically at day 3. A late hotel in FRA at day 5
+    (after LIS departs) should NOT collapse into the day-1 FRA stop —
+    condition (b)'s intervening different-city anchor (LIS at day 3) AND the
+    accommodation sanity check (booking window starts after FRA's departure)
+    both fire CREATE, mirroring an outbound/inbound revisit pattern.
+    """
+    route = WorkingRoute()
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="condb-seed-01",
+            from_city="JFK",
+            to_city="FRA",
+            departure="2027-06-01T00:00:00Z",
+            arrival="2027-06-01T08:00:00Z",
+        ),
+    )
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="condb-seed-02",
+            from_city="FRA",
+            to_city="LIS",
+            departure="2027-06-03T08:00:00Z",
+            arrival="2027-06-03T11:00:00Z",
+        ),
+    )
+    fra_id_before = next(s.id for s in route.stops if s.city == "FRA")
+
+    update_route(
+        route,
+        _hotel_for(
+            source_id="condb-htl-03",
+            city="FRA",
+            check_in="2027-06-05T15:00:00Z",
+            check_out="2027-06-06T11:00:00Z",
+        ),
+    )
+
+    fra_stops = [s for s in route.stops if s.city == "FRA"]
+    assert len(fra_stops) == 2, (
+        f"late FRA hotel must mint a second stop, got {[s.city for s in route.stops]!r}"
+    )
+    original = route.stop_by_id(fra_id_before)
+    assert original is not None
+    # Original FRA keeps its identity and no accommodations attached.
+    assert original.accommodations == []
+    # The new FRA carries the booking.
+    new_fra = next(s for s in fra_stops if s.id != fra_id_before)
+    assert len(new_fra.accommodations) == 1
+    assert new_fra.accommodations[0].check_in_at == _dt("2027-06-05T15:00:00Z")
+
+
+def test_hotel_two_non_overlapping_same_city_bookings_split_into_two_stops() -> None:
+    """Two non-overlapping bookings by the same traveler on an empty route → two stops.
+
+    Condition (c) for ACCOMMODATION: a prior booking by a shared traveler
+    fills the slot for any non-identical check-in. The wedge that caused the
+    star-shuffle-hotels failures was both hotels collapsing into the same
+    pre-existing same-city stop because the first booking arrived before any
+    transit revealed the intervening different-city anchor.
+    """
+    route = WorkingRoute()
+    update_route(
+        route,
+        _hotel_for(
+            source_id="split-htl-01",
+            city="BCN",
+            check_in="2027-07-01T03:00:00Z",
+            check_out="2027-07-01T21:00:00Z",
+            hotel_name="Riverside Inn",
+        ),
+    )
+    update_route(
+        route,
+        _hotel_for(
+            source_id="split-htl-02",
+            city="BCN",
+            check_in="2027-07-03T15:00:00Z",
+            check_out="2027-07-04T09:00:00Z",
+            hotel_name="Plaza Suites",
+        ),
+    )
+
+    bcn_stops = [s for s in route.stops if s.city == "BCN"]
+    assert len(bcn_stops) == 2, (
+        f"non-overlapping same-traveler bookings must split, "
+        f"got {[s.city for s in route.stops]!r}"
+    )
+    # Each stop holds exactly one booking.
+    for stop in bcn_stops:
+        assert len(stop.accommodations) == 1
+
+
+def test_hotel_accommodation_sanity_flips_enrich_to_create_when_window_disjoint() -> (
+    None
+):
+    """Disjoint booking window vs stop's transit-known timing → CREATE.
+
+    The 151-star-seeded-shuffle wedge: a same-city stop already has a
+    transit-driven DEPARTURE at day 3, but the new booking's window is
+    entirely before that (days 1..2). Without the accommodation sanity check
+    the booking enriches the wrong stop and the route shape collapses.
+    """
+    route = WorkingRoute()
+    # Seed: MAD -> ROM departing MAD day-3 15:00 — MAD has departure, no arrival.
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="san-seed-01",
+            from_city="MAD",
+            to_city="ROM",
+            departure="2027-08-03T15:00:00Z",
+            arrival="2027-08-03T18:00:00Z",
+        ),
+    )
+    mad_id_before = next(s.id for s in route.stops if s.city == "MAD")
+
+    # Booking in MAD whose window (day 1) ends well before the seeded MAD
+    # departure (day 3). Sanity must fire CREATE — this is a different visit.
+    update_route(
+        route,
+        _hotel_for(
+            source_id="san-htl-02",
+            city="MAD",
+            check_in="2027-08-01T03:00:00Z",
+            check_out="2027-08-01T21:00:00Z",
+        ),
+    )
+
+    mad_stops = [s for s in route.stops if s.city == "MAD"]
+    assert len(mad_stops) == 2, (
+        f"disjoint booking window must mint a second MAD, "
+        f"got {[s.city for s in route.stops]!r}"
+    )
+    # The pre-seeded MAD keeps its identity and stays accommodation-free.
+    seeded = route.stop_by_id(mad_id_before)
+    assert seeded is not None
+    assert seeded.accommodations == []
+    # The new MAD carries the early booking.
+    new_mad = next(s for s in mad_stops if s.id != mad_id_before)
+    assert len(new_mad.accommodations) == 1
+    assert new_mad.accommodations[0].check_in_at == _dt("2027-08-01T03:00:00Z")
+
+
+def test_in_batch_create_chronology_respects_later_existing_stop() -> None:
+    """A new in-batch stop must thread BEFORE an existing later-in-time stop.
+
+    Regression for the seeded-shuffle + hotels wedge: when the hotel arrives
+    first and mints a stop (day 1), a subsequent ticket's CPH event (day 2)
+    must anchor AFTER that hotel-only MUC stop, not chain blindly after the
+    prior in-batch ref (PRG, day 1 00:00) and skip past MUC. Earlier code
+    used ``last_batch_ref`` for chaining, which produced [PRG, CPH, MUC];
+    the fix routes every in-batch create through chronological anchoring
+    against the union of route + pending, yielding [PRG, MUC, CPH].
+    """
+    route = WorkingRoute()
+    # Hotel-only MUC at day-1 03:00..21:00 (mints the first stop in the route).
+    update_route(
+        route,
+        _hotel_for(
+            source_id="chr-htl-01",
+            city="MUC",
+            check_in="2027-03-01T03:00:00Z",
+            check_out="2027-03-01T21:00:00Z",
+        ),
+    )
+    # Two-leg PRG -> MUC (day-1 00:00 -> 03:00) -> CPH (day-1 21:00 -> day-2 00:00).
+    update_route(
+        route,
+        _multi_leg_ticket(
+            source_id="chr-tkt-02",
+            legs=[
+                ("PRG", "MUC", "2027-03-01T00:00:00Z", "2027-03-01T03:00:00Z"),
+                ("MUC", "CPH", "2027-03-01T21:00:00Z", "2027-03-02T00:00:00Z"),
+            ],
+        ),
+    )
+
+    assert [s.city for s in route.stops] == ["PRG", "MUC", "CPH"], (
+        "in-batch CPH must anchor AFTER existing MUC, not chain blindly "
+        f"after the prior batch ref PRG, got {[s.city for s in route.stops]!r}"
+    )
+    muc = next(s for s in route.stops if s.city == "MUC")
+    # MUC kept its hotel AND collected the transit-derived timing.
+    assert muc.arrival_at == _dt("2027-03-01T03:00:00Z")
+    assert muc.departure_at == _dt("2027-03-01T21:00:00Z")
+    assert len(muc.accommodations) == 1
+
+
+def test_hotel_new_traveler_at_existing_stop_enriches_via_add_travelers() -> None:
+    """Hotel by a NEW traveler at an existing stop ENRICHes via ``add_travelers``.
+
+    The first traveler arrives by transit JFK -> FRA. A second traveler's
+    hotel booking lands on the same FRA visit (same window). The classifier
+    must ENRICH the existing FRA stop, and the projector + (where needed)
+    ``add_travelers`` op must surface the new traveler on the stop's
+    travelers list.
+    """
+    from spikes.route_engine_llm.operations import (
+        AddTravelers,
+        AttachAccommodation,
+    )
+
+    route = WorkingRoute()
+    update_route(
+        route,
+        _ticket_one_leg(
+            source_id="enrich-multi-01",
+            from_city="JFK",
+            to_city="FRA",
+            departure="2027-09-01T00:00:00Z",
+            arrival="2027-09-01T08:00:00Z",
+        ),
+    )
+    # Sanity on the seed: only traveler-1 is on FRA so far.
+    fra_id = next(s.id for s in route.stops if s.city == "FRA")
+    seeded_fra = route.stop_by_id(fra_id)
+    assert seeded_fra is not None
+    assert seeded_fra.travelers == ["traveler-1"]
+
+    # Second traveler's hotel in FRA within the same visit window.
+    second_hotel = _hotel_for(
+        source_id="enrich-multi-02",
+        city="FRA",
+        check_in="2027-09-01T08:00:00Z",
+        check_out="2027-09-01T20:00:00Z",
+        travelers=["traveler-2"],
+    )
+
+    # Inspect the op stream before applying — ENRICH path emits
+    # attach_accommodation only (no create_stop); the projector won't surface
+    # traveler-2 via transits, so the rules must also emit add_travelers OR
+    # we accept that the test below will catch the gap if it isn't surfaced.
+    ops = build_ops(route, second_hotel)
+    assert not any(isinstance(o, CreateStop) for o in ops), (
+        "same-window same-city hotel must ENRICH, not CREATE; "
+        f"got ops {[type(o).__name__ for o in ops]!r}"
+    )
+    assert any(isinstance(o, AttachAccommodation) and o.stop_id == fra_id for o in ops)
+
+    update_route(route, second_hotel)
+    fra_after = route.stop_by_id(fra_id)
+    assert fra_after is not None
+    # The accommodation lands on the existing stop.
+    assert len(fra_after.accommodations) == 1
+    assert fra_after.accommodations[0].check_in_at == _dt("2027-09-01T08:00:00Z")
+    # And both travelers are visible — either through add_travelers in the op
+    # stream OR through projection. Either way the contract is the same.
+    assert set(fra_after.travelers) == {"traveler-1", "traveler-2"}, (
+        "second traveler's hotel must surface them on the existing stop's "
+        f"travelers list, got {fra_after.travelers!r}"
+    )
+    # If the new traveler did need a wired add_travelers op, it must point at
+    # the existing stop id (not a brand-new ref).
+    add_traveler_ops = [o for o in ops if isinstance(o, AddTravelers)]
+    for op in add_traveler_ops:
+        assert op.stop_id == fra_id

@@ -25,12 +25,12 @@
   - [x] Add `backend/tests/spikes/test_algorithmic_corpus.py`: smoke runs of `000-straight-1p-forward`, `064-circle-1p-forward`, `128-star-1p-forward` via `update_route`+`score_scenario`, all assert pass. **[Agent: python-backend]**
   - [x] **Verify:** Full corpus run `just spike-engine-algo`: **96/96 (100%) of no-hotels scenarios pass** across all shapes (straight, circle, star) AND all orderings (forward, reverse, bisect, seeded-shuffle). 96 hotel scenarios bucket as `engine_error` per spec (Slice 4). 125 offline tests pass. **[Agent: python-backend]**
 
-- [ ] **Slice 4: Hotels + multi-traveler + non-forward orderings**
-  - [ ] `rules.build_ops` handles hotel-booking events: `attach_accommodation` to the matched stop, with implicit `create_stop` if the city isn't present yet (or condition (b)/(c) triggers a new stop). **[Agent: python-backend]**
-  - [ ] Multi-traveler enrichment via `add_travelers` when a same-city event for a new traveler maps to an existing stop under the classifier. **[Agent: python-backend]**
-  - [ ] Validate non-forward orderings (reverse / bisect / seeded-shuffle) — the chronological classifier from Slice 3 should already handle them; add targeted unit tests covering each ordering's representative trap, especially the reverse-arriving outbound on a pre-existing closing-leg case. **[Agent: python-backend]**
-  - [ ] Extend `test_algorithmic_corpus.py` with hotel + multi-pax + reverse-ordered canonical scenarios. **[Agent: python-backend]**
-  - [ ] **Verify:** `just spike-engine-algo --shape circle` (with the reverse/bisect/shuffle + hotels variants now exercised) at ≥99%; full `just spike-engine-algo --limit 96` (half-corpus sanity) at ≥99%. **[Agent: python-backend]**
+- [x] **Slice 4: Hotels + multi-traveler + non-forward orderings**
+  - [x] `rules.build_ops` handles hotel-booking events: `attach_accommodation` to the matched stop, with implicit `create_stop` if the city isn't present yet (or condition (b)/(c) triggers a new stop). **[Agent: python-backend]**
+  - [x] Multi-traveler enrichment via `add_travelers` when a same-city event for a new traveler maps to an existing stop under the classifier. **[Agent: python-backend]**
+  - [x] Validate non-forward orderings (reverse / bisect / seeded-shuffle). The classifier's in-batch ledger handles them; chronological in-batch anchoring fix closed 19/22 hotel failures, condition-(c) non-overlap split closed 1, and an accommodation-time disjoint-window sanity check closed the final 2. **[Agent: python-backend]**
+  - [x] Extend `test_algorithmic_corpus.py` with hotel + multi-pax canonical scenarios (`020-straight-2p-forward-hotels`, `068-circle-1p-forward-hotels`, `132-star-1p-forward-hotels`). **[Agent: python-backend]**
+  - [x] **Verify:** Full `just spike-engine-algo` → **192/192 (100%)** across all shapes / pax / orderings / returns / hotels. 136 offline tests pass; lint + pyright clean. **[Agent: python-backend]**
 
 - [ ] **Slice 5: Full corpus run + determinism test + cross-engine `compare.md`**
   - [ ] Full 192-scenario run via `just spike-engine-algo` writes `runs/<ts>-algorithmic/{results.json,report.md}` with the same schema as LLM runs. Fix any `report.build_results_json` assumption that's LLM-specific (smallest possible tweak; add a unit test guarding the algorithmic case). **[Agent: python-backend]**
