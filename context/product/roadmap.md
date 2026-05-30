@@ -10,7 +10,7 @@ _Prove the core promise: a user can upload PDFs and see an accurate, structured 
 
 - [ ] **Route Engine (Foundation)**
   - [ ] **Mock-Document Corpus:** Curate a representative set of real-world ticket/booking PDFs and expected route outputs to drive engine quality and regression testing.
-  - [ ] **Engine Spike & Decision:** Prototype both an LLM-driven and an algorithmic route-building approach against the corpus, then commit to one for v1.
+  - [x] **Engine Spike & Decision:** Prototype both an LLM-driven and an algorithmic route-building approach against the corpus, then commit to one for v1. _Done: algorithmic picked for v1 (192/192 = 100%); LLM topped out at 83.9%. ADR: [`004-engine-decision-adr/decision.md`](../spec/004-engine-decision-adr/decision.md). DUS-21._
   - [ ] **Trip Route View:** Display the parsed route as an ordered sequence of cities with the documents attached to each leg; preserves prior user edits when new documents arrive.
 
 - [ ] **Document Ingest**

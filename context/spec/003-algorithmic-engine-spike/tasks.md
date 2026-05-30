@@ -32,7 +32,7 @@
   - [x] Extend `test_algorithmic_corpus.py` with hotel + multi-pax canonical scenarios (`020-straight-2p-forward-hotels`, `068-circle-1p-forward-hotels`, `132-star-1p-forward-hotels`). **[Agent: python-backend]**
   - [x] **Verify:** Full `just spike-engine-algo` → **192/192 (100%)** across all shapes / pax / orderings / returns / hotels. 136 offline tests pass; lint + pyright clean. **[Agent: python-backend]**
 
-- [x] **Slice 5: Full corpus run + cross-engine `compare.md`** (determinism test skipped — see note)
+- [x] **Slice 5: Full corpus run + cross-engine `compare.md`**
   - [x] Full 192-scenario run via `just spike-engine-algo` writes `runs/<ts>-algorithmic/{results.json,report.md}` with the same schema as LLM runs. `report.build_results_json` accepted `model="algorithmic"` and zeroed `usage`/cost without modification (no schema fork needed). **[Agent: python-backend]**
-  - [~] **Determinism test deliberately skipped.** The engine is deterministic by construction (no randomness, no wall-clock-dependent decisions, byte-stable inputs from the corpus). The 192/192 result across both Slice 3 and Slice 4 runs confirms stability in practice. The two-back-to-back-runs assertion would only verify what the architecture already guarantees; deferred unless a future change introduces non-determinism risk.
+  - [x] **Determinism verified.** Two back-to-back full `just spike-engine-algo` runs produced byte-identical `results.json` modulo `startedAt` + per-scenario latency fields (the spec's carve-out). 192/192 on both runs.
   - [x] **Verify:** `just spike-compare` over Haiku/Sonnet/Opus/algorithmic results produced `runs/compare-20260529T213439Z.md` (in `route_engine_llm/runs/`) rendering all four engines side-by-side. Tool's recommendation: **"`algorithmic` — the only model that clears the bar"** (100.0% / $0.00 / sub-ms latency). LLM spike's 101 tests still green; no `route_engine_llm/*` changes. **[Agent: python-backend]**
