@@ -1,0 +1,288 @@
+/* Solana Hotels — fictional pan-European hospitality brand for the PDF
+   corpus. Sunburst mark, ink+amber palette inspired by warm hotel-lobby
+   lighting. NOT associated with any real hotel chain. */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    /* Resolved relative to base_url (the templates root) at render time. */
+    src: url("fonts/InterVariable.woff2") format("woff2-variations");
+    font-display: swap;
+}
+
+:root {
+    --solana-ink: #2a1a0d;
+    --solana-sun: #d9883a;
+    --solana-mist: #fbf3e8;
+    --solana-line: #ead2b5;
+    --solana-accent: #6b3e1e;
+}
+
+@page {
+    size: A4;
+    margin: 16mm 14mm 16mm 14mm;
+}
+
+body.font-inter-inter,
+body.font-inter-inter h1,
+body.font-inter-inter h2,
+body.font-inter-inter h3 {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-inter-system {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.font-inter-system h1,
+body.font-inter-system h2,
+body.font-inter-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-system-system,
+body.font-system-system h1,
+body.font-system-system h2,
+body.font-system-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: var(--solana-ink);
+    font-size: 10.5pt;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--solana-sun);
+    padding-bottom: 6mm;
+    margin-bottom: 6mm;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+}
+
+.brand-mark .sunburst {
+    width: 12mm;
+    height: 12mm;
+    background:
+        radial-gradient(circle at center, var(--solana-sun) 0 30%, transparent 31%),
+        conic-gradient(
+            var(--solana-sun) 0 12.5%,
+            transparent 12.5% 25%,
+            var(--solana-sun) 25% 37.5%,
+            transparent 37.5% 50%,
+            var(--solana-sun) 50% 62.5%,
+            transparent 62.5% 75%,
+            var(--solana-sun) 75% 87.5%,
+            transparent 87.5% 100%
+        );
+    border-radius: 50%;
+}
+
+.brand-mark .name {
+    font-size: 17pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--solana-ink);
+}
+
+.brand-mark .tagline {
+    font-size: 8.5pt;
+    color: var(--solana-sun);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--solana-ink);
+}
+
+.doc-meta .doc-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--solana-sun);
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 6mm;
+}
+
+section h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--solana-sun);
+    border-bottom: 1px solid var(--solana-line);
+    padding-bottom: 1.5mm;
+    margin-bottom: 3mm;
+}
+
+.stays {
+    border: 1px solid var(--solana-line);
+    border-radius: 2mm;
+    overflow: hidden;
+}
+
+.stay {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5mm;
+    padding: 5mm 5mm;
+    border-bottom: 1px solid var(--solana-line);
+}
+
+.stay:last-child {
+    border-bottom: none;
+}
+
+.stay .property {
+    display: flex;
+    flex-direction: column;
+}
+
+.stay .property .role,
+.stay .dates .endpoint .role {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--solana-sun);
+}
+
+.stay .property .property-name {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-top: 1mm;
+    color: var(--solana-ink);
+}
+
+.stay .property .property-city {
+    font-size: 10pt;
+    color: var(--solana-accent);
+    margin-top: 1mm;
+}
+
+.stay .dates {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 3mm;
+    align-items: center;
+}
+
+.stay .dates .endpoint {
+    display: flex;
+    flex-direction: column;
+}
+
+.stay .dates .endpoint .datetime {
+    margin-top: 1mm;
+    font-size: 10pt;
+}
+
+.stay .dates .endpoint .datetime .label {
+    color: var(--solana-sun);
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 1mm;
+}
+
+.stay .dates .connector {
+    color: var(--solana-sun);
+    font-size: 18pt;
+    text-align: center;
+}
+
+.travelers ul,
+.qr-block ul {
+    margin: 0;
+    padding-left: 4mm;
+}
+
+.travelers li,
+.qr-block li {
+    margin-bottom: 1mm;
+}
+
+.price-block {
+    display: flex;
+    gap: 4mm;
+    align-items: baseline;
+}
+
+.price-block .amount {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--solana-accent);
+}
+
+.qr-block {
+    border: 1px dashed var(--solana-line);
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    background: var(--solana-mist);
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+}
+
+.qr-block.placement-bottom {
+    margin-top: 4mm;
+}
+
+.qr-block.placement-side {
+    margin-top: 0;
+}
+
+.marketing-banner {
+    background: var(--solana-mist);
+    border-left: 3px solid var(--solana-sun);
+    padding: 2mm 4mm;
+    margin-bottom: 3mm;
+    font-size: 9.5pt;
+    color: var(--solana-ink);
+}
+
+.tc-block {
+    border-top: 1px solid var(--solana-line);
+    margin-top: 4mm;
+    padding-top: 3mm;
+    font-size: 8pt;
+    color: #5a4233;
+}
+
+.tc-block .tc-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--solana-sun);
+    margin-bottom: 2mm;
+}
+
+.footer-ad {
+    margin-top: 6mm;
+    padding: 3mm 4mm;
+    border: 1px solid var(--solana-line);
+    border-radius: 2mm;
+    font-size: 8.5pt;
+    color: var(--solana-ink);
+    background: #fefaf3;
+}
+
+.footer {
+    margin-top: 8mm;
+    font-size: 7.5pt;
+    color: #7a6657;
+    text-align: center;
+    border-top: 1px solid var(--solana-line);
+    padding-top: 2mm;
+}

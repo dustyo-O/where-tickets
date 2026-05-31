@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Riverfront Studio near Sachsenhausen",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 741030503676497484,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 264.5,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-103-airbnb-5nt-1pax-frankfurt"
+  ],
+  "scenario_id": "103-airbnb-5nt-1pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Julien Lefevre"
+  ],
+  "venues": []
+}

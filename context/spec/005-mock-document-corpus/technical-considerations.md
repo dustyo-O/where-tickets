@@ -106,7 +106,7 @@ Draft 2020-12. Validated with the existing `jsonschema` dependency.
 | Rendering | `text` (default; WeasyPrint PDF with text layer) \| `rasterized` (~15% of scenarios; same template + data, each page converted to a ~120 DPI image with PyMuPDF and re-embedded as an image-only PDF) |
 | Language | English only (v1) |
 
-Matrix enumerated in `generator/matrix.py`; scenario IDs are `NNN-<slug>` and stable across regenerations. Layer 1 ships ~150 individual PDFs across ~50 logical trips, with ~22 of those rendered as `rasterized` to deterministically exercise the vision-fallback extraction path. Same data, same `expected-fields.json` either way — only `pdf_kind` differs.
+Matrix enumerated in `generator/matrix.py`; scenario IDs are `NNN-<slug>` and stable across regenerations. **Each Layer 1 scenario is a single-PDF unit** (one `document.pdf` + one `expected-fields.json` per scenario directory). Layer 1 ships ~150 individual PDFs total — i.e. ~150 single-PDF scenario directories — with ~22 of those rendered as `rasterized` to deterministically exercise the vision-fallback extraction path. Same data, same `expected-fields.json` either way — only `pdf_kind` differs. The multi-PDF "trip" framing only applies to Layer 2 (contributor-supplied real PDFs), where grouping is purely organizational.
 
 - **Rendering:** Jinja2 + WeasyPrint for the text path. For the rasterized path, `render.py` takes the WeasyPrint output and uses PyMuPDF to render each page to a PNG at ~120 DPI ("web quality"), then re-emits as an image-only PDF. Fonts ship with templates and are open-source (Inter, IBM Plex) so the toolchain is portable.
 

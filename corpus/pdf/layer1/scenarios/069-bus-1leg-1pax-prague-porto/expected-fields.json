@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Porto"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 2157196979039873569,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 71.79,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-069-bus-1leg-1pax-prague-porto"
+  ],
+  "scenario_id": "069-bus-1leg-1pax-prague-porto",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Praha UAN Florenc",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Porto",
+      "identifier": "Porto Campanha Bus",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Sven Olsen"
+  ],
+  "venues": []
+}

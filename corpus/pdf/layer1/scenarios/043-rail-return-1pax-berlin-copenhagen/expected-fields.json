@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 11830849500893514468,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 66.96,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-043-rail-return-1pax-berlin-copenhagen"
+  ],
+  "scenario_id": "043-rail-return-1pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Copenhagen",
+      "departure_datetime": "2027-03-15T17:20:00",
+      "identifier": "Kobenhavn H",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Carla Mendes"
+  ],
+  "venues": []
+}

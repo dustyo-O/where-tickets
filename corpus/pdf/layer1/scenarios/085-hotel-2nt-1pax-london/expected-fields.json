@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "London",
+      "identifier": "Hotel Bloomsbury Square",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 3442823938026629090,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 236.18,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-085-hotel-2nt-1pax-london"
+  ],
+  "scenario_id": "085-hotel-2nt-1pax-london",
+  "stations": [],
+  "travelers": [
+    "Quentin Moreau"
+  ],
+  "venues": []
+}

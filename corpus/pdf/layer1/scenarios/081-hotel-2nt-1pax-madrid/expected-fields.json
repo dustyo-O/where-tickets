@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Madrid",
+      "identifier": "Hotel Gran Via Mirador",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Madrid"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 12262039365786511096,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 94.02,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-081-hotel-2nt-1pax-madrid"
+  ],
+  "scenario_id": "081-hotel-2nt-1pax-madrid",
+  "stations": [],
+  "travelers": [
+    "Alice Example"
+  ],
+  "venues": []
+}

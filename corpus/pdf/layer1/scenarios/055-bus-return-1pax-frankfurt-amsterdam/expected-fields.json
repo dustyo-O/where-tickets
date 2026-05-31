@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 1428881468025581784,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 12.77,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-055-bus-return-1pax-frankfurt-amsterdam"
+  ],
+  "scenario_id": "055-bus-return-1pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Frankfurt Hauptbahnhof Sud",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Amsterdam",
+      "departure_datetime": "2027-03-15T15:45:00",
+      "identifier": "Amsterdam Sloterdijk",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-15T22:15:00",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof Sud",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Hugo van der Berg"
+  ],
+  "venues": []
+}

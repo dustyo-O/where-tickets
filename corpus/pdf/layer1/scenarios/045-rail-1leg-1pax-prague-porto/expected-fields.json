@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Porto"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 1073855159671579968,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 184.86,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-045-rail-1leg-1pax-prague-porto"
+  ],
+  "scenario_id": "045-rail-1leg-1pax-prague-porto",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Praha hlavni nadrazi",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Porto",
+      "identifier": "Porto Sao Bento",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Hugo van der Berg"
+  ],
+  "venues": []
+}

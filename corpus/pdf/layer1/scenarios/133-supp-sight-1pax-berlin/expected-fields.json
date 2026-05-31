@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 16708565179376333551,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 9.73,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-133-supp-sight-1pax-berlin"
+  ],
+  "scenario_id": "133-supp-sight-1pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": [
+    {
+      "city": "Berlin",
+      "identifier": "Tiergarten Observation Tower",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

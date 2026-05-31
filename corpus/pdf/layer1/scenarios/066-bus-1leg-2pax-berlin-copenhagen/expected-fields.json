@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 5166945900392208493,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 48.53,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-066-bus-1leg-2pax-berlin-copenhagen-01",
+    "BUSTKT-066-bus-1leg-2pax-berlin-copenhagen-02"
+  ],
+  "scenario_id": "066-bus-1leg-2pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Berlin ZOB",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Copenhagen",
+      "identifier": "Ingerslevsgade Coach",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Felix Bauer",
+    "Olga Ivanova"
+  ],
+  "venues": []
+}

@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Prague",
+      "identifier": "Hotel Vltava Riverside",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 8384009099881813385,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 301.25,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-093-hotel-2nt-1pax-prague"
+  ],
+  "scenario_id": "093-hotel-2nt-1pax-prague",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

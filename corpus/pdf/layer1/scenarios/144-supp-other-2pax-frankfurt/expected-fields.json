@@ -1,0 +1,33 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 9465061557774626954,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 32.88,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-OTHER-144-supp-other-2pax-frankfurt"
+  ],
+  "scenario_id": "144-supp-other-2pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Olga Ivanova",
+    "Felix Bauer"
+  ],
+  "venues": [
+    {
+      "city": "Frankfurt",
+      "identifier": "Mainufer Welcome Voucher",
+      "kind": "other",
+      "valid_from_datetime": "2027-03-12T00:00:00",
+      "valid_to_datetime": "2027-03-13T23:59:00"
+    }
+  ]
+}

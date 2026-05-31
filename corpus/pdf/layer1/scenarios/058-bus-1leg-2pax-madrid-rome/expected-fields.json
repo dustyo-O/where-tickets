@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 6692525105407972412,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 16.43,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-058-bus-1leg-2pax-madrid-rome-01",
+    "BUSTKT-058-bus-1leg-2pax-madrid-rome-02"
+  ],
+  "scenario_id": "058-bus-1leg-2pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Madrid Mendez Alvaro",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Rome",
+      "identifier": "Roma Tiburtina Bus",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Niko Virtanen",
+    "Karin Andersson"
+  ],
+  "venues": []
+}

@@ -1,0 +1,352 @@
+/* Supplementary documents — one stylesheet, three fictional brand palettes
+   keyed off the body's `kind-<kind>` class:
+
+   - sightseeing -> Paseo Tickets (teal/ink palette, ticket badge).
+   - parking     -> Parquin (slate/amber palette, lot stencil).
+   - other       -> City Atlas (plum/gold palette, pass card).
+
+   None of these brands match any real-world brand (verified by hand on
+   2026-05-31). */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    /* Resolved relative to base_url (the templates root) at render time. */
+    src: url("fonts/InterVariable.woff2") format("woff2-variations");
+    font-display: swap;
+}
+
+:root {
+    /* Defaults; per-kind overrides land in the kind-* selectors below. */
+    --supp-ink: #2a1a0d;
+    --supp-accent: #3a7d6b;
+    --supp-mist: #f1f7f5;
+    --supp-line: #c8dcd5;
+    --supp-secondary: #6b3e1e;
+    --supp-paper: #ffffff;
+}
+
+body.kind-sightseeing {
+    --supp-ink: #0f2a2f;
+    --supp-accent: #137a6a;
+    --supp-mist: #e7f3f1;
+    --supp-line: #c0dcd6;
+    --supp-secondary: #b8552c;
+    --supp-paper: #f7fcfb;
+}
+
+body.kind-parking {
+    --supp-ink: #1a2230;
+    --supp-accent: #d77b1a;
+    --supp-mist: #f3eee5;
+    --supp-line: #d5c9b3;
+    --supp-secondary: #5a6478;
+    --supp-paper: #fbf7ee;
+}
+
+body.kind-other {
+    --supp-ink: #2a0f3a;
+    --supp-accent: #9c4ab2;
+    --supp-mist: #f3e9f6;
+    --supp-line: #d8c1de;
+    --supp-secondary: #b58a2f;
+    --supp-paper: #fdf8fe;
+}
+
+@page {
+    size: A4;
+    margin: 16mm 14mm 16mm 14mm;
+}
+
+body.font-inter-inter,
+body.font-inter-inter h1,
+body.font-inter-inter h2,
+body.font-inter-inter h3 {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-inter-system {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.font-inter-system h1,
+body.font-inter-system h2,
+body.font-inter-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-system-system,
+body.font-system-system h1,
+body.font-system-system h2,
+body.font-system-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: var(--supp-ink);
+    font-size: 10.5pt;
+    line-height: 1.5;
+    margin: 0;
+    background: var(--supp-paper);
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--supp-accent);
+    padding-bottom: 5mm;
+    margin-bottom: 6mm;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+}
+
+.brand-mark .badge {
+    width: 12mm;
+    height: 12mm;
+    background: var(--supp-accent);
+    border-radius: 2mm;
+}
+
+body.kind-sightseeing .brand-mark .badge {
+    /* Ticket stub silhouette */
+    clip-path: polygon(
+        0 20%,
+        15% 20%,
+        15% 0,
+        85% 0,
+        85% 20%,
+        100% 20%,
+        100% 80%,
+        85% 80%,
+        85% 100%,
+        15% 100%,
+        15% 80%,
+        0 80%
+    );
+}
+
+body.kind-parking .brand-mark .badge {
+    /* Block letter "P" stencil-style */
+    clip-path: polygon(
+        10% 0,
+        70% 0,
+        90% 15%,
+        90% 45%,
+        70% 60%,
+        35% 60%,
+        35% 100%,
+        10% 100%
+    );
+}
+
+body.kind-other .brand-mark .badge {
+    /* Stylized 5-point star */
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+}
+
+.brand-mark .name {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--supp-ink);
+}
+
+.brand-mark .tagline {
+    font-size: 8.5pt;
+    color: var(--supp-accent);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--supp-ink);
+}
+
+.doc-meta .doc-label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--supp-accent);
+    font-weight: 600;
+    font-size: 11pt;
+}
+
+section {
+    margin-bottom: 6mm;
+}
+
+section h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--supp-accent);
+    border-bottom: 1px solid var(--supp-line);
+    padding-bottom: 1.5mm;
+    margin-bottom: 3mm;
+}
+
+.venue-card {
+    border: 1px solid var(--supp-line);
+    border-radius: 3mm;
+    padding: 5mm 6mm;
+    background: #ffffff;
+}
+
+.venue-card .venue-name {
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--supp-ink);
+}
+
+.venue-card .venue-city {
+    font-size: 10pt;
+    color: var(--supp-secondary);
+    margin-top: 1mm;
+    font-style: italic;
+}
+
+.venue-card .validity {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 4mm;
+    align-items: center;
+    margin-top: 4mm;
+}
+
+.venue-card .validity .endpoint {
+    display: flex;
+    flex-direction: column;
+}
+
+.venue-card .validity .endpoint .role {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--supp-accent);
+    font-weight: 600;
+}
+
+.venue-card .validity .endpoint .datetime {
+    margin-top: 1mm;
+    font-size: 10pt;
+}
+
+.venue-card .validity .endpoint .datetime .label {
+    color: var(--supp-secondary);
+    font-size: 8.5pt;
+    letter-spacing: 0.04em;
+    margin-right: 1mm;
+}
+
+.venue-card .validity .connector {
+    color: var(--supp-accent);
+    font-size: 16pt;
+    text-align: center;
+}
+
+.travelers ul,
+.qr-block ul {
+    margin: 0;
+    padding-left: 4mm;
+}
+
+.travelers li,
+.qr-block li {
+    margin-bottom: 1mm;
+}
+
+.price-block {
+    display: flex;
+    gap: 4mm;
+    align-items: baseline;
+}
+
+.price-block .amount {
+    font-size: 16pt;
+    font-weight: 700;
+    color: var(--supp-accent);
+}
+
+.price-block .currency {
+    color: var(--supp-secondary);
+    font-size: 11pt;
+    text-transform: uppercase;
+}
+
+.qr-block {
+    border: 1px dashed var(--supp-accent);
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    background: var(--supp-mist);
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+}
+
+.qr-block.placement-bottom {
+    margin-top: 4mm;
+}
+
+.qr-block.placement-side {
+    margin-top: 0;
+}
+
+.marketing-banner {
+    background: var(--supp-mist);
+    border-left: 3px solid var(--supp-accent);
+    padding: 2mm 4mm;
+    margin-bottom: 3mm;
+    font-size: 9.5pt;
+    color: var(--supp-ink);
+}
+
+.tc-block {
+    border-top: 1px solid var(--supp-line);
+    margin-top: 4mm;
+    padding-top: 3mm;
+    font-size: 8pt;
+    color: #5a4233;
+}
+
+.tc-block .tc-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--supp-accent);
+    margin-bottom: 2mm;
+}
+
+.footer-ad {
+    margin-top: 6mm;
+    padding: 3mm 4mm;
+    border: 1px solid var(--supp-line);
+    border-radius: 2mm;
+    font-size: 8.5pt;
+    color: var(--supp-ink);
+    background: var(--supp-mist);
+}
+
+.footer {
+    margin-top: 8mm;
+    font-size: 7.5pt;
+    color: #7a6657;
+    text-align: center;
+    border-top: 1px solid var(--supp-line);
+    padding-top: 2mm;
+}

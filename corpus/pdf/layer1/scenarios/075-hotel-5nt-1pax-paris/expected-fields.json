@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Paris",
+      "identifier": "Hotel Lutece Marais",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 8418440727485041824,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 230.39,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-075-hotel-5nt-1pax-paris"
+  ],
+  "scenario_id": "075-hotel-5nt-1pax-paris",
+  "stations": [],
+  "travelers": [
+    "Lucas Costa"
+  ],
+  "venues": []
+}

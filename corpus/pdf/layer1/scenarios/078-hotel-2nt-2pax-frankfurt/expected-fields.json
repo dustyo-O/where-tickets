@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Hotel Westend Residenz",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 10184261046931909233,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 299.91,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-078-hotel-2nt-2pax-frankfurt"
+  ],
+  "scenario_id": "078-hotel-2nt-2pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Niko Virtanen",
+    "Hugo van der Berg"
+  ],
+  "venues": []
+}

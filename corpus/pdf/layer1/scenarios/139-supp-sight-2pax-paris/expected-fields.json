@@ -1,0 +1,33 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 5252592874950330934,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 29.44,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-139-supp-sight-2pax-paris"
+  ],
+  "scenario_id": "139-supp-sight-2pax-paris",
+  "stations": [],
+  "travelers": [
+    "Hugo van der Berg",
+    "Alice Example"
+  ],
+  "venues": [
+    {
+      "city": "Paris",
+      "identifier": "Riverside Mosaic Gallery",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{# Solana Hotels booking confirmation — fictional pan-European hotel chain
+   used only for the synthetic PDF corpus. Geometric sunburst mark via CSS,
+   ink+amber palette. NOT associated with any real hotel chain. The template
+   prints every `cities[]` value and every YYYY-MM-DD date portion of the
+   check-in/check-out datetimes verbatim so the validator's PDF/JSON token
+   sanity check passes. #}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Solana Hotels — Booking {{ data.scenario_id }}</title>
+    <link rel="stylesheet" href="styles/solana-hotels.css">
+</head>
+<body class="font-{{ noise.font_pair }}">
+    <header class="brand-header">
+        <div class="brand-mark">
+            <div class="sunburst" aria-hidden="true"></div>
+            <div>
+                <div class="name">SOLANA HOTELS</div>
+                <div class="tagline">Fictional Stays, Real Test Data</div>
+            </div>
+        </div>
+        <div class="doc-meta">
+            <div class="doc-label">Booking Confirmation</div>
+            <div>Ref: {{ data.scenario_id }}</div>
+            <div>Issued: {{ stays[0].check_in_date }}</div>
+            <div>Confirmation: SH-{{ data.scenario_id[:3] }}</div>
+        </div>
+    </header>
+
+    {% for partial in noise.partial_order %}
+        {% if partial == "marketing_banner" and noise.marketing_banner_count > 0 %}
+            {% include "partials/marketing_banner.html.j2" %}
+        {% endif %}
+    {% endfor %}
+
+    <section class="route-summary">
+        <h2>Destination</h2>
+        <p>
+            {% for city in data.cities -%}
+                <strong>{{ city }}</strong>{% if not loop.last %} &middot; {% endif %}
+            {%- endfor %}
+        </p>
+    </section>
+
+    <section class="stay-section">
+        <h2>Your stay</h2>
+        <div class="stays">
+            {% for stay in stays %}
+            <div class="stay">
+                <div class="property">
+                    <span class="role">Property</span>
+                    <span class="property-name">{{ stay.identifier }}</span>
+                    <span class="property-city">{{ stay.identifier }}, {{ stay.city }}</span>
+                </div>
+                <div class="dates">
+                    <div class="endpoint check-in">
+                        <span class="role">Check-in</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ stay.check_in_date }}
+                            <span class="label">Time</span>{{ stay.check_in_time }}
+                        </span>
+                    </div>
+                    <div class="connector">&#x1F319;</div>
+                    <div class="endpoint check-out">
+                        <span class="role">Check-out</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ stay.check_out_date }}
+                            <span class="label">Time</span>{{ stay.check_out_time }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="travelers">
+        <h2>Guest{{ 's' if data.travelers|length > 1 else '' }}</h2>
+        <ul>
+            {% for name in data.travelers %}
+            <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="price-section">
+        <h2>Total stay</h2>
+        {% for price in data.prices %}
+        <div class="price-block">
+            <span class="amount">{{ "%.2f"|format(price.amount) }}</span>
+            <span class="currency">{{ price.currency }}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    {% if not noise.secondary_qr_placement %}
+        {% include "partials/qr_block.html.j2" %}
+    {% endif %}
+
+    {% for partial in noise.partial_order %}
+        {% if partial == "tc_block" and noise.tc_block %}
+            {% include "partials/tc_block.html.j2" %}
+        {% elif partial == "footer_ad" %}
+            {% include "partials/footer_ad.html.j2" %}
+        {% endif %}
+    {% endfor %}
+
+    {% if noise.secondary_qr_placement %}
+        {% include "partials/qr_block.html.j2" %}
+    {% endif %}
+
+    <div class="footer">
+        Solana Hotels is a fictional hospitality brand used only for synthetic
+        PDF-extraction testing. Not affiliated with any real hotel chain.
+        Scenario {{ data.scenario_id }}.
+    </div>
+</body>
+</html>

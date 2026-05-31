@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Madrid",
+      "identifier": "Solana Madrid Salamanca",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Madrid"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 8035266081705491557,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 289.59,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-084-hotel-5nt-2pax-madrid"
+  ],
+  "scenario_id": "084-hotel-5nt-2pax-madrid",
+  "stations": [],
+  "travelers": [
+    "Sven Olsen",
+    "Diego Romano"
+  ],
+  "venues": []
+}

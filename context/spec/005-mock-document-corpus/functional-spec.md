@@ -29,9 +29,9 @@ The corpus has two layers:
 
 ### 2.1 Layer 1 — Generated Fake PDFs
 
-- **The corpus must contain ~50 generated trips totalling ~150 PDFs.**
+- **The corpus must contain ~150 single-PDF generated scenarios.**
   - **Acceptance Criteria:**
-    - [ ] The shared codebase holds 45–55 fake trip scenarios and 135–165 individual fake PDFs in total.
+    - [ ] The shared codebase holds 135–165 single-PDF scenario directories under `corpus/pdf/layer1/scenarios/`. Each directory ships exactly one `document.pdf` + one `expected-fields.json` (Layer 1 dropped the multi-PDF "trip" framing; that framing applies only to Layer 2 contributor-supplied real PDFs).
 
 - **Every document type the product accepts must be represented.**
   - **Acceptance Criteria:**

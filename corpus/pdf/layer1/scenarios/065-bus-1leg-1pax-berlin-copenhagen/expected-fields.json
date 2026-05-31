@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 18259010619680662637,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 24.72,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-065-bus-1leg-1pax-berlin-copenhagen"
+  ],
+  "scenario_id": "065-bus-1leg-1pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Berlin ZOB",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Copenhagen",
+      "identifier": "Ingerslevsgade Coach",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": []
+}

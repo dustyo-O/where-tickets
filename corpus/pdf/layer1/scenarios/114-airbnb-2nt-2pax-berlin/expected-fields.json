@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Berlin",
+      "identifier": "Sunny Flat near Boxhagener Platz",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 4219413977487378097,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 134.06,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-114-airbnb-2nt-2pax-berlin"
+  ],
+  "scenario_id": "114-airbnb-2nt-2pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Sven Olsen",
+    "Julien Lefevre"
+  ],
+  "venues": []
+}

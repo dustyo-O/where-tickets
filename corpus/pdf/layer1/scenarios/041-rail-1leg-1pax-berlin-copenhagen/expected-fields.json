@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 7781267893840404187,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 59.88,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-041-rail-1leg-1pax-berlin-copenhagen"
+  ],
+  "scenario_id": "041-rail-1leg-1pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Copenhagen",
+      "identifier": "Kobenhavn H",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Alice Example"
+  ],
+  "venues": []
+}

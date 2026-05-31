@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 1090027051518471447,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 19.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-035-rail-return-1pax-madrid-rome"
+  ],
+  "scenario_id": "035-rail-return-1pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Madrid Atocha",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Rome",
+      "departure_datetime": "2027-03-15T17:20:00",
+      "identifier": "Roma Termini",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Madrid",
+      "identifier": "Madrid Atocha",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Carla Mendes"
+  ],
+  "venues": []
+}

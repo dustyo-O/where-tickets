@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Solana Frankfurt Bankenviertel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 14856347986232582525,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 270.39,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-077-hotel-2nt-1pax-frankfurt"
+  ],
+  "scenario_id": "077-hotel-2nt-1pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Lucas Costa"
+  ],
+  "venues": []
+}

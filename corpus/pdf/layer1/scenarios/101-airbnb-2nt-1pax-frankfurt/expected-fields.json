@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Quiet Apartment in Bornheim",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 12924621374237763954,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 242.72,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-101-airbnb-2nt-1pax-frankfurt"
+  ],
+  "scenario_id": "101-airbnb-2nt-1pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": []
+}

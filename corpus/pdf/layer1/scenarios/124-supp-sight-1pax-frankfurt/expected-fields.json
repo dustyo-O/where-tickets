@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 7432006951809097365,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 48.57,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-124-supp-sight-1pax-frankfurt"
+  ],
+  "scenario_id": "124-supp-sight-1pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Gabriela Rossi"
+  ],
+  "venues": [
+    {
+      "city": "Frankfurt",
+      "identifier": "Westend Skyline Observatory",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

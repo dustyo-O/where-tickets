@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Bright Suite near Roemerberg",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 593023972127335302,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 238.06,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-104-airbnb-5nt-2pax-frankfurt"
+  ],
+  "scenario_id": "104-airbnb-5nt-2pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Niko Virtanen",
+    "Ines Marques"
+  ],
+  "venues": []
+}

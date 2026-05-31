@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Porto"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 17915090913927679082,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 30.04,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-072-bus-return-2pax-prague-porto-01",
+    "BUSTKT-072-bus-return-2pax-prague-porto-02"
+  ],
+  "scenario_id": "072-bus-return-2pax-prague-porto",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Praha UAN Florenc",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Porto",
+      "departure_datetime": "2027-03-15T15:45:00",
+      "identifier": "Porto Campanha Bus",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-15T22:15:00",
+      "city": "Prague",
+      "identifier": "Praha UAN Florenc",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Julien Lefevre",
+    "Alice Example"
+  ],
+  "venues": []
+}

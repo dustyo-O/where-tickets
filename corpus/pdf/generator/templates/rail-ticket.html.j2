@@ -1,0 +1,116 @@
+{# Conex Rail ticket — fictional pan-European rail brand for the PDF corpus.
+   Geometric track-bar logo via CSS, no real-operator references. The template
+   is responsible for printing every `cities[]` value and every YYYY-MM-DD date
+   portion of any station datetime verbatim, so the validator's PDF/JSON token
+   sanity passes. The printed station identifiers (Gare du Nord etc.) are
+   surfaced too for realism. #}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Conex Rail — Itinerary {{ data.scenario_id }}</title>
+    <link rel="stylesheet" href="styles/conex-rail.css">
+</head>
+<body class="font-{{ noise.font_pair }}">
+    <header class="brand-header">
+        <div class="brand-mark">
+            <div class="track-bar" aria-hidden="true"></div>
+            <div>
+                <div class="name">CONEX RAIL</div>
+                <div class="tagline">Fictional Rails, Real Test Data</div>
+            </div>
+        </div>
+        <div class="doc-meta">
+            <div class="doc-label">E-Ticket Itinerary</div>
+            <div>Ref: {{ data.scenario_id }}</div>
+            <div>Issued: {{ legs[0].departure_date }}</div>
+            <div>Service: CX-{{ data.scenario_id[:3] }}</div>
+        </div>
+    </header>
+
+    {% for partial in noise.partial_order %}
+        {% if partial == "marketing_banner" and noise.marketing_banner_count > 0 %}
+            {% include "partials/marketing_banner.html.j2" %}
+        {% endif %}
+    {% endfor %}
+
+    <section class="route-summary">
+        <h2>Route</h2>
+        <p>
+            {% for city in data.cities -%}
+                <strong>{{ city }}</strong>{% if not loop.last %} &rarr; {% endif %}
+            {%- endfor %}
+        </p>
+    </section>
+
+    <section class="legs-section">
+        <h2>Train services</h2>
+        <div class="legs">
+            {% for leg in legs %}
+            <div class="leg">
+                <div class="endpoint origin">
+                    <span class="role">Departure</span>
+                    <span class="city">{{ leg.origin_city }}</span>
+                    <span class="station">{{ leg.origin_identifier }}</span>
+                    <span class="datetime">
+                        <span class="label">Date</span>{{ leg.departure_date }}
+                        <span class="label">Time</span>{{ leg.departure_time }}
+                    </span>
+                </div>
+                <div class="connector">&#x1F686;</div>
+                <div class="endpoint destination">
+                    <span class="role">Arrival</span>
+                    <span class="city">{{ leg.destination_city }}</span>
+                    <span class="station">{{ leg.destination_identifier }}</span>
+                    <span class="datetime">
+                        <span class="label">Date</span>{{ leg.arrival_date }}
+                        <span class="label">Time</span>{{ leg.arrival_time }}
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="travelers">
+        <h2>Passenger{{ 's' if data.travelers|length > 1 else '' }}</h2>
+        <ul>
+            {% for name in data.travelers %}
+            <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="price-section">
+        <h2>Total fare</h2>
+        {% for price in data.prices %}
+        <div class="price-block">
+            <span class="amount">{{ "%.2f"|format(price.amount) }}</span>
+            <span class="currency">{{ price.currency }}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    {% if not noise.secondary_qr_placement %}
+        {% include "partials/qr_block.html.j2" %}
+    {% endif %}
+
+    {% for partial in noise.partial_order %}
+        {% if partial == "tc_block" and noise.tc_block %}
+            {% include "partials/tc_block.html.j2" %}
+        {% elif partial == "footer_ad" %}
+            {% include "partials/footer_ad.html.j2" %}
+        {% endif %}
+    {% endfor %}
+
+    {% if noise.secondary_qr_placement %}
+        {% include "partials/qr_block.html.j2" %}
+    {% endif %}
+
+    <div class="footer">
+        Conex Rail is a fictional operator used only for synthetic
+        PDF-extraction testing. Not affiliated with any real railway. Scenario
+        {{ data.scenario_id }}.
+    </div>
+</body>
+</html>

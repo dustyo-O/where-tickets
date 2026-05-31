@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Paris",
+      "identifier": "Quiet Studio in Le Marais",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 10762359657422219081,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 244.43,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-098-airbnb-2nt-2pax-paris"
+  ],
+  "scenario_id": "098-airbnb-2nt-2pax-paris",
+  "stations": [],
+  "travelers": [
+    "Hugo van der Berg",
+    "Sven Olsen"
+  ],
+  "venues": []
+}

@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 15616883866337542140,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 51.67,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-068-bus-return-2pax-berlin-copenhagen-01",
+    "BUSTKT-068-bus-return-2pax-berlin-copenhagen-02"
+  ],
+  "scenario_id": "068-bus-return-2pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Berlin ZOB",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Copenhagen",
+      "departure_datetime": "2027-03-15T15:45:00",
+      "identifier": "Ingerslevsgade Coach",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-15T22:15:00",
+      "city": "Berlin",
+      "identifier": "Berlin ZOB",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Bob Sample",
+    "Karin Andersson"
+  ],
+  "venues": []
+}

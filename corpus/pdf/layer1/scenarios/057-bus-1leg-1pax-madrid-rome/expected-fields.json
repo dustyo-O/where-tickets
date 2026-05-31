@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 13132073949995009403,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 17.18,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-057-bus-1leg-1pax-madrid-rome"
+  ],
+  "scenario_id": "057-bus-1leg-1pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Madrid Mendez Alvaro",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Rome",
+      "identifier": "Roma Tiburtina Bus",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": []
+}

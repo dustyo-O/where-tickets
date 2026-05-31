@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Berlin",
+      "identifier": "Hotel Charlottenburg Residenz",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 9766698617930745662,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 292.76,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-089-hotel-2nt-1pax-berlin"
+  ],
+  "scenario_id": "089-hotel-2nt-1pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Marta Kowalski"
+  ],
+  "venues": []
+}

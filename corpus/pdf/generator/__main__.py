@@ -31,7 +31,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from corpus.pdf.generator.matrix import ScenarioSpec, enumerate_scenarios
+from corpus.pdf.generator.data import SUPPLEMENTARY_BRANDS
+from corpus.pdf.generator.matrix import DocumentType, ScenarioSpec, enumerate_scenarios
 from corpus.pdf.generator.noise import (
     MARKETING_BANNERS,
     NoiseChoices,
@@ -43,8 +44,25 @@ from corpus.pdf.generator.render import render_pdf
 # this with a tmpdir via the CLI flag.
 DEFAULT_OUTPUT: Path = Path(__file__).resolve().parent.parent / "layer1" / "scenarios"
 
-# Single document type for Slice 3.
-AIR_TICKET_TEMPLATE: str = "air-ticket.html.j2"
+# Document-type -> Jinja2 template name. Each template lives at the
+# templates/ root and pulls partials from templates/partials/.
+TEMPLATES_BY_DOCUMENT_TYPE: dict[DocumentType, str] = {
+    "air_ticket": "air-ticket.html.j2",
+    "rail_ticket": "rail-ticket.html.j2",
+    "bus_ticket": "bus-ticket.html.j2",
+    "hotel_booking": "hotel-booking.html.j2",
+    "airbnb_booking": "airbnb-booking.html.j2",
+    "supplementary": "supplementary.html.j2",
+}
+
+# Document types that print a leg-by-leg transit table; everything else uses
+# the doc-type's own template-specific layout.
+_TRANSIT_DOCUMENT_TYPES: frozenset[DocumentType] = frozenset(
+    {"air_ticket", "rail_ticket", "bus_ticket"}
+)
+_ACCOMMODATION_DOCUMENT_TYPES: frozenset[DocumentType] = frozenset(
+    {"hotel_booking", "airbnb_booking"}
+)
 
 
 def _split_datetime(value: str | None) -> tuple[str, str]:
@@ -76,6 +94,12 @@ def _build_legs(stations: list[dict[str, Any]]) -> list[dict[str, str]]:
     Both shapes satisfy "every consecutive pair where the first has
     ``departure_datetime`` and the second has ``arrival_datetime`` is one
     leg". Anything else would be a matrix bug.
+
+    The leg dict uses neutral key names — ``origin_identifier`` /
+    ``destination_identifier`` rather than ``_iata`` — so the same shape
+    serves the air, rail, and bus templates. ``origin_iata`` /
+    ``destination_iata`` aliases are kept for the air-ticket template's
+    legacy bindings.
     """
     legs: list[dict[str, str]] = []
     for i in range(len(stations) - 1):
@@ -88,12 +112,16 @@ def _build_legs(stations: list[dict[str, Any]]) -> list[dict[str, str]]:
             continue
         dep_date, dep_time = _split_datetime(origin.get("departure_datetime"))
         arr_date, arr_time = _split_datetime(destination.get("arrival_datetime"))
+        origin_identifier = str(origin["identifier"])
+        destination_identifier = str(destination["identifier"])
         legs.append(
             {
                 "origin_city": str(origin["city"]),
-                "origin_iata": str(origin["identifier"]),
+                "origin_identifier": origin_identifier,
+                "origin_iata": origin_identifier,  # alias for air-ticket template
                 "destination_city": str(destination["city"]),
-                "destination_iata": str(destination["identifier"]),
+                "destination_identifier": destination_identifier,
+                "destination_iata": destination_identifier,  # alias for air-ticket
                 "departure_date": dep_date,
                 "departure_time": dep_time,
                 "arrival_date": arr_date,
@@ -103,35 +131,131 @@ def _build_legs(stations: list[dict[str, Any]]) -> list[dict[str, str]]:
     return legs
 
 
+def _build_accommodation_stays(
+    accommodations: list[dict[str, Any]],
+) -> list[dict[str, str]]:
+    """Pre-split each accommodation's datetimes into ``YYYY-MM-DD`` + ``HH:MM`` pieces.
+
+    The templates pull the date halves directly so the validator's PDF/JSON
+    token-presence check sees verbatim ``YYYY-MM-DD`` strings without needing
+    to do its own parsing.
+    """
+    stays: list[dict[str, str]] = []
+    for entry in accommodations:
+        check_in_date, check_in_time = _split_datetime(entry.get("check_in_datetime"))
+        check_out_date, check_out_time = _split_datetime(
+            entry.get("check_out_datetime")
+        )
+        stays.append(
+            {
+                "city": str(entry.get("city", "")),
+                "kind": str(entry.get("kind", "")),
+                "identifier": str(entry.get("identifier", "")),
+                "check_in_date": check_in_date,
+                "check_in_time": check_in_time,
+                "check_out_date": check_out_date,
+                "check_out_time": check_out_time,
+            }
+        )
+    return stays
+
+
+def _build_supplementary_venues(
+    venues: list[dict[str, Any]],
+) -> list[dict[str, str]]:
+    """Pre-split each venue's validity-window datetimes into date + time pieces.
+
+    The supplementary template pulls the date halves directly so the
+    validator's PDF/JSON token-presence check sees verbatim ``YYYY-MM-DD``
+    strings without needing to parse them itself.
+    """
+    rendered: list[dict[str, str]] = []
+    for entry in venues:
+        valid_from_date, valid_from_time = _split_datetime(
+            entry.get("valid_from_datetime")
+        )
+        valid_to_date, valid_to_time = _split_datetime(
+            entry.get("valid_to_datetime")
+        )
+        rendered.append(
+            {
+                "city": str(entry.get("city", "")),
+                "kind": str(entry.get("kind", "")),
+                "identifier": str(entry.get("identifier", "")),
+                "valid_from_date": valid_from_date,
+                "valid_from_time": valid_from_time,
+                "valid_to_date": valid_to_date,
+                "valid_to_time": valid_to_time,
+            }
+        )
+    return rendered
+
+
 def _build_context(
     spec: ScenarioSpec, fields: dict[str, Any], noise: NoiseChoices
 ) -> dict[str, Any]:
     """Assemble the Jinja2 render context for one scenario."""
-    legs = _build_legs(list(fields.get("stations", [])))
-    if not legs:
-        raise ValueError(
-            f"scenario {spec.scenario_id} produced zero legs; "
-            "stations[] is malformed for the air-ticket template"
-        )
-    # Banners are selected from a fixed catalog by index so the rendered text
-    # stays inside the catalog. The count itself is the noise axis.
     banners = list(MARKETING_BANNERS[: noise.marketing_banner_count])
-    return {
+    context: dict[str, Any] = {
         "data": fields,
         "noise": noise,
-        "legs": legs,
         "banners": banners,
         "tc_block": noise.tc_block,
         "footer_variant": noise.footer_variant,
         "qr_codes": list(fields.get("qr_codes", [])),
     }
+    if spec.document_type in _TRANSIT_DOCUMENT_TYPES:
+        legs = _build_legs(list(fields.get("stations", [])))
+        if not legs:
+            raise ValueError(
+                f"scenario {spec.scenario_id} produced zero legs; "
+                "stations[] is malformed for the transit-ticket template"
+            )
+        context["legs"] = legs
+    elif spec.document_type in _ACCOMMODATION_DOCUMENT_TYPES:
+        # Accommodation booking — surface per-stay pre-split datetimes so the
+        # template stays declarative.
+        stays = _build_accommodation_stays(list(fields.get("accommodations", [])))
+        if not stays:
+            raise ValueError(
+                f"scenario {spec.scenario_id} produced zero stays; "
+                "accommodations[] is malformed for the accommodation template"
+            )
+        context["stays"] = stays
+    else:
+        # Supplementary — pre-split the venue validity window and pick the
+        # per-kind brand block.
+        venues = _build_supplementary_venues(list(fields.get("venues", [])))
+        if not venues:
+            raise ValueError(
+                f"scenario {spec.scenario_id} produced zero venues; "
+                "venues[] is malformed for the supplementary template"
+            )
+        kind = venues[0]["kind"]
+        try:
+            brand = SUPPLEMENTARY_BRANDS[kind]
+        except KeyError as exc:
+            raise ValueError(
+                f"unknown supplementary venue kind {kind!r} on scenario "
+                f"{spec.scenario_id}"
+            ) from exc
+        context["venues"] = venues
+        context["venue"] = venues[0]
+        context["brand"] = brand
+    return context
 
 
 def _summary_line(spec: ScenarioSpec, fields: dict[str, Any]) -> str:
-    """One-line README content: shape + travelers + cities."""
+    """One-line README content: shape/nights/kind + travelers + cities."""
     cities = " -> ".join(fields.get("cities", []))
+    if spec.document_type in _TRANSIT_DOCUMENT_TYPES:
+        descriptor = f"shape={spec.shape}"
+    elif spec.document_type in _ACCOMMODATION_DOCUMENT_TYPES:
+        descriptor = f"nights={spec.stay_nights}"
+    else:
+        descriptor = f"venue_kind={spec.venue_kind}"
     return (
-        f"{spec.scenario_id}: shape={spec.shape}, travelers={spec.travelers}, "
+        f"{spec.scenario_id}: {descriptor}, travelers={spec.travelers}, "
         f"cities={cities}\n"
     )
 
@@ -172,8 +296,13 @@ def _write_scenario(
     scenario_dir = output_dir / spec.scenario_id
     scenario_dir.mkdir(parents=True, exist_ok=True)
 
+    template_name = TEMPLATES_BY_DOCUMENT_TYPE.get(spec.document_type)
+    if template_name is None:
+        raise ValueError(
+            f"no template registered for document_type={spec.document_type!r}"
+        )
     render_pdf(
-        AIR_TICKET_TEMPLATE,
+        template_name,
         scenario_dir / "document.pdf",
         context=context,
     )

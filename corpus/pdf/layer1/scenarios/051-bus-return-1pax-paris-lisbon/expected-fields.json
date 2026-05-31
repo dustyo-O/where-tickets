@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 17153086247371685312,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 73.64,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-051-bus-return-1pax-paris-lisbon"
+  ],
+  "scenario_id": "051-bus-return-1pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Paris Bercy Seine",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Lisbon",
+      "departure_datetime": "2027-03-15T15:45:00",
+      "identifier": "Sete Rios",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-15T22:15:00",
+      "city": "Paris",
+      "identifier": "Paris Bercy Seine",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Marta Kowalski"
+  ],
+  "venues": []
+}

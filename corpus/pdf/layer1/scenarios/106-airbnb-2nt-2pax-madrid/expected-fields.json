@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Madrid",
+      "identifier": "Charming Studio in La Latina",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Madrid"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 7234877656676631729,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 104.07,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-106-airbnb-2nt-2pax-madrid"
+  ],
+  "scenario_id": "106-airbnb-2nt-2pax-madrid",
+  "stations": [],
+  "travelers": [
+    "Quentin Moreau",
+    "Pierre Dubois"
+  ],
+  "venues": []
+}

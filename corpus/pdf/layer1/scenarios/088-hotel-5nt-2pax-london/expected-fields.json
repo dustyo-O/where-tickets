@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "London",
+      "identifier": "Hotel Kensington Garden Court",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 13568049630697959377,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 258.62,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-088-hotel-5nt-2pax-london"
+  ],
+  "scenario_id": "088-hotel-5nt-2pax-london",
+  "stations": [],
+  "travelers": [
+    "Alice Example",
+    "Ines Marques"
+  ],
+  "venues": []
+}

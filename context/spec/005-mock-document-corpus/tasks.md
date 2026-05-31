@@ -60,14 +60,14 @@
 
 *Value: corpus reaches the ~50 trips / ~150 PDFs coverage target. Every document type the product accepts is represented.*
 
-- [ ] **Slice 4: Extend generator to the remaining 5 document types**
-  - [ ] Add `rail-ticket.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
-  - [ ] Add `bus-ticket.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
-  - [ ] Add `hotel-booking.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
-  - [ ] Add `airbnb-booking.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
-  - [ ] Add `supplementary.html.j2` (voucher / sightseeing / parking variants) + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
-  - [ ] Commit final regenerated corpus. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` passes. Count: `ls corpus/pdf/layer1/scenarios/ | wc -l` is in [45, 55]; total PDFs in [135, 165]. At least one scenario per document type. `just test-pdf-corpus` exercises all of them. **[Agent: python-backend]**
+- [x] **Slice 4: Extend generator to the remaining 5 document types**
+  - [x] Add `rail-ticket.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
+  - [x] Add `bus-ticket.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
+  - [x] Add `hotel-booking.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
+  - [x] Add `airbnb-booking.html.j2` + brand styles + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
+  - [x] Add `supplementary.html.j2` (voucher / sightseeing / parking variants) + matrix entries. Regen. Confirm validator still passes. **[Agent: python-backend]**
+  - [x] Commit final regenerated corpus. **[Agent: python-backend]**
+  - [x] **Verify:** `just test-corpus` passes. Count: `ls corpus/pdf/layer1/scenarios/ | wc -l` is in [135, 165] (single-PDF scenarios; the "trip" framing was dropped for Layer 1 — see tech spec §2.3). At least one scenario per document type. `just test-pdf-corpus` exercises all of them. **[Agent: python-backend]**
 
 ---
 
@@ -108,7 +108,7 @@
 
 - [ ] **Slice 7: Coverage assertions + cross-schema sanity**
   - [ ] Extend `corpus/pdf/validate.py` with **coverage assertions** per the functional spec:
-    - Layer 1 trips ∈ [45, 55]; Layer 1 PDFs ∈ [135, 165]
+    - Layer 1 single-PDF scenarios ∈ [135, 165]
     - ≥1 scenario per document type (all 6)
     - ≥3 multi-leg scenarios (`cities[].length ≥ 3`)
     - ≥3 multi-traveler scenarios (`travelers[].length ≥ 2`)

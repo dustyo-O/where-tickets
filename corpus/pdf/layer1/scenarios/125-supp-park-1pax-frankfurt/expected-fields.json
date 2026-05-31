@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 9340323726440358046,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 15.67,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-PARK-125-supp-park-1pax-frankfurt"
+  ],
+  "scenario_id": "125-supp-park-1pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Olga Ivanova"
+  ],
+  "venues": [
+    {
+      "city": "Frankfurt",
+      "identifier": "Parking Westend Court",
+      "kind": "parking",
+      "valid_from_datetime": "2027-03-12T14:00:00",
+      "valid_to_datetime": "2027-03-13T11:00:00"
+    }
+  ]
+}

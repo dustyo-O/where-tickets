@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "London",
+      "identifier": "Quiet Apartment in Notting Hill",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 7289971238875398850,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 237.37,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-111-airbnb-5nt-1pax-london"
+  ],
+  "scenario_id": "111-airbnb-5nt-1pax-london",
+  "stations": [],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": []
+}

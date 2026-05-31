@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 3391007253752515596,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 10.2,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-050-bus-1leg-2pax-paris-lisbon-01",
+    "BUSTKT-050-bus-1leg-2pax-paris-lisbon-02"
+  ],
+  "scenario_id": "050-bus-1leg-2pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Paris Bercy Seine",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Lisbon",
+      "identifier": "Sete Rios",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Pierre Dubois",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

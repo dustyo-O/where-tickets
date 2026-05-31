@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 9882143499189821929,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 188.31,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-025-rail-1leg-1pax-paris-lisbon"
+  ],
+  "scenario_id": "025-rail-1leg-1pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Paris Gare du Nord",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Lisbon",
+      "identifier": "Lisboa Oriente",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Bob Sample"
+  ],
+  "venues": []
+}

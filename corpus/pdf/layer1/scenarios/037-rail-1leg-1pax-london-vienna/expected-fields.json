@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London",
+    "Vienna"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 3850862571359268910,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 22.98,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-037-rail-1leg-1pax-london-vienna"
+  ],
+  "scenario_id": "037-rail-1leg-1pax-london-vienna",
+  "stations": [
+    {
+      "city": "London",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "London St Pancras",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Vienna",
+      "identifier": "Wien Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": []
+}

@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 14333671516280258994,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 115.51,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-029-rail-1leg-1pax-frankfurt-amsterdam"
+  ],
+  "scenario_id": "029-rail-1leg-1pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Centraal",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Alice Example"
+  ],
+  "venues": []
+}
