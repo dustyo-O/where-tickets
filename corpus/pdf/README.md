@@ -5,6 +5,21 @@ extraction** step of the pipeline. This is the input-side counterpart to the
 sibling fragment corpus at [`../scenarios/`](../scenarios/) — different
 artifact, different layer.
 
+## Local-dev setup
+
+The Layer 1 generator uses WeasyPrint (Slice 3+) to render HTML/CSS templates
+to PDF. WeasyPrint pulls in native dependencies (Pango / Cairo) that must be
+installed at the system level:
+
+- **macOS**: `brew install pango` (pulls in Cairo and the other transitive
+  native libs).
+- **Linux (Debian / Ubuntu)**: `apt-get install libpango-1.0-0 libpangoft2-1.0-0`
+  (or the `pango1.0-tools` + `libcairo2` package set, depending on distro).
+
+The Slice 1 fixture toolchain (`fpdf2`) needs **no** system dependencies and
+works out of the box once the `corpus` dep group is installed
+(`cd backend && uv sync --group corpus`).
+
 - **This corpus** (`corpus/pdf/`) tests **PDF -> extracted fields**: given a
   realistic-looking ticket PDF, does the extractor produce the right cities,
   dates, travelers, prices, and QR codes?

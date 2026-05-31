@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 3672769149034002136,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 136.39,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-001-air-1leg-1pax-paris-lisbon"
+  ],
+  "scenario_id": "001-air-1leg-1pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Pierre Dubois"
+  ],
+  "venues": []
+}

@@ -39,20 +39,20 @@
 
 *Value: `just regen-pdf-corpus` produces ~25 deterministic-data air-ticket scenarios. Validator drift-checks JSON and confirms PDF/JSON consistency. The hand-authored fixture is gone, replaced by generator output.*
 
-- [ ] **Slice 3: Generator for ONE document type (air ticket) + JSON drift check + PDF/JSON sanity**
-  - [ ] Add `weasyprint` and `jinja2` to the backend's `corpus` (or new `pdf-corpus`) dep group. Document `brew install pango` for macOS in `corpus/pdf/README.md`. **[Agent: python-backend]**
-  - [ ] Write `corpus/pdf/generator/data.py`: stable data API (city pool, dates from epoch `2027-03-01T00:00:00Z`, traveler names, prices, QR payloads) seeded from scenario axes via SHA-256. **[Agent: python-backend]**
-  - [ ] Write `corpus/pdf/generator/noise.py`: bounded randomized noise functions (banner count 0–2, T&C presence, footer ad variant from fixed catalog, font-pair pick from small palette). Each takes a `Random` instance. **[Agent: python-backend]**
-  - [ ] Write `corpus/pdf/generator/render.py`: WeasyPrint orchestration — `render_pdf(template, data, noise, out_path)`. **[Agent: python-backend]**
-  - [ ] Author template tree: `corpus/pdf/generator/templates/air-ticket.html.j2`, plus `templates/partials/` (ads, T&Cs, footers) and `templates/styles/` (CSS palette for one fictional airline brand). Use open-source bundled fonts (Inter or IBM Plex). **[Agent: python-backend]**
-  - [ ] Write `corpus/pdf/generator/matrix.py`: enumerate air-ticket scenarios across coverage axes (~25 scenarios for this slice). Stable `NNN-<slug>` IDs. **[Agent: python-backend]**
-  - [ ] Write `corpus/pdf/generator/__main__.py` — entry point for `python -m corpus.pdf.generator`. Removes the hand-authored fixture from Slice 1 and emits the generated air-ticket scenarios into `corpus/pdf/layer1/scenarios/`. **[Agent: python-backend]**
-  - [ ] Add `just regen-pdf-corpus` recipe. **[Agent: python-backend]**
-  - [ ] Extend `corpus/pdf/validate.py` with the **JSON drift check**: regenerate Layer 1 JSON into a tempdir (data layer only, no rendering), diff against committed `expected-fields.json`, fail on any drift. **[Agent: python-backend]**
-  - [ ] Extend `corpus/pdf/validate.py` with **PDF/JSON consistency sanity for `pdf_kind: text`**: PyMuPDF extracts the text layer, asserts every `cities[]` and `dates[]` token appears verbatim. **[Agent: python-backend]**
-  - [ ] Pytest unit test on `noise.py`: with a seeded RNG, generated noise stays within configured palettes (counts capped, fonts from pool). **[Agent: python-backend]**
-  - [ ] Commit the regenerated air-ticket scenarios (~25 PDFs + JSON) into `corpus/pdf/layer1/scenarios/`. **[Agent: python-backend]**
-  - [ ] **Verify:** `just regen-pdf-corpus` runs cleanly. Run it twice; `git diff -- '*.json'` is empty (JSON is byte-stable). `just test-corpus` passes (schema + drift + token sanity). `just test-pdf-corpus` runs against the ~25 scenarios with the "extractor not wired" banner. `uv run pytest backend/tests/corpus/` passes. **[Agent: python-backend]**
+- [x] **Slice 3: Generator for ONE document type (air ticket) + JSON drift check + PDF/JSON sanity**
+  - [x] Add `weasyprint` and `jinja2` to the backend's `corpus` (or new `pdf-corpus`) dep group. Document `brew install pango` for macOS in `corpus/pdf/README.md`. **[Agent: python-backend]**
+  - [x] Write `corpus/pdf/generator/data.py`: stable data API (city pool, dates from epoch `2027-03-01T00:00:00Z`, traveler names, prices, QR payloads) seeded from scenario axes via SHA-256. **[Agent: python-backend]**
+  - [x] Write `corpus/pdf/generator/noise.py`: bounded randomized noise functions (banner count 0–2, T&C presence, footer ad variant from fixed catalog, font-pair pick from small palette). Each takes a `Random` instance. **[Agent: python-backend]**
+  - [x] Write `corpus/pdf/generator/render.py`: WeasyPrint orchestration — `render_pdf(template, data, noise, out_path)`. **[Agent: python-backend]**
+  - [x] Author template tree: `corpus/pdf/generator/templates/air-ticket.html.j2`, plus `templates/partials/` (ads, T&Cs, footers) and `templates/styles/` (CSS palette for one fictional airline brand). Use open-source bundled fonts (Inter or IBM Plex). **[Agent: python-backend]**
+  - [x] Write `corpus/pdf/generator/matrix.py`: enumerate air-ticket scenarios across coverage axes (~25 scenarios for this slice). Stable `NNN-<slug>` IDs. **[Agent: python-backend]**
+  - [x] Write `corpus/pdf/generator/__main__.py` — entry point for `python -m corpus.pdf.generator`. Removes the hand-authored fixture from Slice 1 and emits the generated air-ticket scenarios into `corpus/pdf/layer1/scenarios/`. **[Agent: python-backend]**
+  - [x] Add `just regen-pdf-corpus` recipe. **[Agent: python-backend]**
+  - [x] Extend `corpus/pdf/validate.py` with the **JSON drift check**: regenerate Layer 1 JSON into a tempdir (data layer only, no rendering), diff against committed `expected-fields.json`, fail on any drift. **[Agent: python-backend]**
+  - [x] Extend `corpus/pdf/validate.py` with **PDF/JSON consistency sanity for `pdf_kind: text`**: PyMuPDF extracts the text layer, asserts every `cities[]` and `dates[]` token appears verbatim. **[Agent: python-backend]**
+  - [x] Pytest unit test on `noise.py`: with a seeded RNG, generated noise stays within configured palettes (counts capped, fonts from pool). **[Agent: python-backend]**
+  - [x] Commit the regenerated air-ticket scenarios (~25 PDFs + JSON) into `corpus/pdf/layer1/scenarios/`. **[Agent: python-backend]**
+  - [x] **Verify:** `just regen-pdf-corpus` runs cleanly. Run it twice; `git diff -- '*.json'` is empty (JSON is byte-stable). `just test-corpus` passes (schema + drift + token sanity). `just test-pdf-corpus` runs against the ~25 scenarios with the "extractor not wired" banner. `uv run pytest backend/tests/corpus/` passes. **[Agent: python-backend]**
 
 ---
 

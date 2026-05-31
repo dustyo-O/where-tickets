@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 17362895450514230573,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 142.56,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-006-air-1leg-2pax-frankfurt-amsterdam-01",
+    "AIRTKT-006-air-1leg-2pax-frankfurt-amsterdam-02"
+  ],
+  "scenario_id": "006-air-1leg-2pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Pierre Dubois"
+  ],
+  "venues": []
+}

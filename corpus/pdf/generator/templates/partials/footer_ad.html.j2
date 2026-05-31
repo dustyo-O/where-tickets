@@ -1,0 +1,15 @@
+{# Footer ad strip. Variant is selected by `noise.footer_variant`. #}
+<div class="footer-ad">
+    {% if footer_variant == "ad-rental-car" %}
+    Need wheels? Book a rental car at your destination from EUR 24 / day with
+    Vela Drive (fictional partner).
+    {% elif footer_variant == "ad-travel-insurance" %}
+    Add Vela Cover travel insurance from EUR 9 — fictional coverage for the
+    synthetic-corpus traveler.
+    {% elif footer_variant == "ad-hotel-bundle" %}
+    Bundle a hotel night with your fare and save 12% — Vela Stays, fictional
+    lodging partner.
+    {% else %}
+    Vela Air — fictional brand for PDF-extraction testing.
+    {% endif %}
+</div>

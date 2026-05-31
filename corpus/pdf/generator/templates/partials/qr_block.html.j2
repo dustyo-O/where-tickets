@@ -1,0 +1,11 @@
+{# QR block. Slice 3 renders the QR payload as styled text only (real QR
+   image rendering is a later concern; the validator only checks text-layer
+   token presence for cities/dates, not QR images). #}
+<div class="qr-block placement-{{ 'bottom' if noise.secondary_qr_placement else 'side' }}">
+    <strong>Boarding pass code{{ 's' if qr_codes|length > 1 else '' }}:</strong>
+    <ul>
+        {% for payload in qr_codes %}
+        <li>{{ payload }}</li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 13035311126521912708,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 266.89,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-020-air-return-2pax-berlin-copenhagen-01",
+    "AIRTKT-020-air-return-2pax-berlin-copenhagen-02"
+  ],
+  "scenario_id": "020-air-return-2pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Copenhagen",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "CPH",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Diego Romano",
+    "Eva Lindqvist"
+  ],
+  "venues": []
+}

@@ -28,7 +28,10 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parents[3]
 RUNNER_PATH = REPO_ROOT / "corpus" / "pdf" / "runner.py"
 REAL_SCHEMA = REPO_ROOT / "corpus" / "pdf" / "schema" / "expected-fields.schema.json"
-REAL_FIXTURE_DIR = REPO_ROOT / "corpus" / "pdf" / "layer1" / "scenarios" / "001-fixture-air-ticket"
+# Slice 3 replaced the hand-authored Slice 1 fixture with the generator's
+# first matrix scenario; this test only needs *any* committed PDF whose bytes
+# can be copied into the per-test tempdir, so the path is fine to swap.
+REAL_FIXTURE_DIR = REPO_ROOT / "corpus" / "pdf" / "layer1" / "scenarios" / "001-air-1leg-1pax-paris-lisbon"
 
 
 # --------------------------------------------------------------------------- #

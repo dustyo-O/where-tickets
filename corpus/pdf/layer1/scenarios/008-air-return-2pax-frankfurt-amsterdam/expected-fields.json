@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 2161227299906027042,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 446.67,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-008-air-return-2pax-frankfurt-amsterdam-01",
+    "AIRTKT-008-air-return-2pax-frankfurt-amsterdam-02"
+  ],
+  "scenario_id": "008-air-return-2pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Amsterdam",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Marta Kowalski",
+    "Eva Lindqvist"
+  ],
+  "venues": []
+}

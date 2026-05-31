@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 6254737059456576893,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 111.79,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-003-air-return-1pax-paris-lisbon"
+  ],
+  "scenario_id": "003-air-return-1pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Lisbon",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "LIS",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Paris",
+      "identifier": "CDG",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

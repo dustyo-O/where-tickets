@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 1619648699820494545,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 480.3,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-011-air-return-1pax-madrid-rome"
+  ],
+  "scenario_id": "011-air-return-1pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Rome",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "FCO",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Madrid",
+      "identifier": "MAD",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Tara Murphy"
+  ],
+  "venues": []
+}

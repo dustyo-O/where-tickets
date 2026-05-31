@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 14801135369438775590,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 155.06,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-017-air-1leg-1pax-berlin-copenhagen"
+  ],
+  "scenario_id": "017-air-1leg-1pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Quentin Moreau"
+  ],
+  "venues": []
+}

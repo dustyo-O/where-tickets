@@ -26,11 +26,14 @@ spike = [
     "anthropic[bedrock]",
 ]
 # Optional group for the mock-document PDF corpus (spec 005). Kept out of
-# runtime deps and `dev` so the FastAPI image stays lean. Holds the small
-# Layer 1 fixture toolchain until WeasyPrint lands in Slice 3.
+# runtime deps and `dev` so the FastAPI image stays lean. WeasyPrint pulls in
+# native deps (Pango / Cairo) - see corpus/pdf/README.md for local-dev setup.
 # Install with: uv sync --group corpus
 corpus = [
     "fpdf2",
+    "weasyprint==68.1",
+    "jinja2==3.1.6",
+    "pymupdf",
 ]
 
 [tool.pytest.ini_options]

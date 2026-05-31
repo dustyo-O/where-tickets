@@ -1,0 +1,264 @@
+/* Vela Air — fictional airline brand for the PDF corpus. Geometric chevron
+   logo, ink-blue palette. NOT associated with any real airline. */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    /* Resolved relative to base_url (the templates root) at render time. */
+    src: url("fonts/InterVariable.woff2") format("woff2-variations");
+    font-display: swap;
+}
+
+:root {
+    --vela-ink: #102a43;
+    --vela-sky: #3e7cb1;
+    --vela-mist: #f1f5f9;
+    --vela-line: #d4dde6;
+    --vela-accent: #c6541b;
+}
+
+@page {
+    size: A4;
+    margin: 16mm 14mm 16mm 14mm;
+}
+
+/* Font-pair selector classes — toggled by `noise.font_pair`. The bundled
+   Inter is always available; the "system" stacks fall back at print time. */
+body.font-inter-inter,
+body.font-inter-inter h1,
+body.font-inter-inter h2,
+body.font-inter-inter h3 {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-inter-system {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.font-inter-system h1,
+body.font-inter-system h2,
+body.font-inter-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-system-system,
+body.font-system-system h1,
+body.font-system-system h2,
+body.font-system-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: var(--vela-ink);
+    font-size: 10.5pt;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--vela-sky);
+    padding-bottom: 6mm;
+    margin-bottom: 6mm;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+}
+
+.brand-mark .chevron {
+    width: 12mm;
+    height: 12mm;
+    background: var(--vela-sky);
+    clip-path: polygon(0 0, 100% 50%, 0 100%, 30% 50%);
+}
+
+.brand-mark .name {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--vela-ink);
+}
+
+.brand-mark .tagline {
+    font-size: 8.5pt;
+    color: var(--vela-sky);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--vela-ink);
+}
+
+.doc-meta .doc-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--vela-sky);
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 6mm;
+}
+
+section h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--vela-sky);
+    border-bottom: 1px solid var(--vela-line);
+    padding-bottom: 1.5mm;
+    margin-bottom: 3mm;
+}
+
+.legs {
+    border: 1px solid var(--vela-line);
+    border-radius: 2mm;
+    overflow: hidden;
+}
+
+.leg {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 4mm;
+    padding: 4mm 5mm;
+    border-bottom: 1px solid var(--vela-line);
+}
+
+.leg:last-child {
+    border-bottom: none;
+}
+
+.leg .endpoint {
+    display: flex;
+    flex-direction: column;
+}
+
+.leg .endpoint .role {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--vela-sky);
+}
+
+.leg .endpoint .city {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-top: 1mm;
+}
+
+.leg .endpoint .iata {
+    font-size: 11pt;
+    color: var(--vela-ink);
+    margin-top: 0.5mm;
+}
+
+.leg .endpoint .datetime {
+    margin-top: 2mm;
+    font-size: 10pt;
+}
+
+.leg .endpoint .datetime .label {
+    color: var(--vela-sky);
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 1mm;
+}
+
+.leg .connector {
+    align-self: center;
+    color: var(--vela-sky);
+    font-size: 18pt;
+}
+
+.travelers ul,
+.qr-block ul {
+    margin: 0;
+    padding-left: 4mm;
+}
+
+.travelers li,
+.qr-block li {
+    margin-bottom: 1mm;
+}
+
+.price-block {
+    display: flex;
+    gap: 4mm;
+    align-items: baseline;
+}
+
+.price-block .amount {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--vela-accent);
+}
+
+.qr-block {
+    border: 1px dashed var(--vela-line);
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    background: var(--vela-mist);
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+}
+
+.qr-block.placement-bottom {
+    margin-top: 4mm;
+}
+
+.qr-block.placement-side {
+    margin-top: 0;
+}
+
+.marketing-banner {
+    background: var(--vela-mist);
+    border-left: 3px solid var(--vela-sky);
+    padding: 2mm 4mm;
+    margin-bottom: 3mm;
+    font-size: 9.5pt;
+    color: var(--vela-ink);
+}
+
+.tc-block {
+    border-top: 1px solid var(--vela-line);
+    margin-top: 4mm;
+    padding-top: 3mm;
+    font-size: 8pt;
+    color: #4d5e72;
+}
+
+.tc-block .tc-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--vela-sky);
+    margin-bottom: 2mm;
+}
+
+.footer-ad {
+    margin-top: 6mm;
+    padding: 3mm 4mm;
+    border: 1px solid var(--vela-line);
+    border-radius: 2mm;
+    font-size: 8.5pt;
+    color: var(--vela-ink);
+    background: #fbfcfd;
+}
+
+.footer {
+    margin-top: 8mm;
+    font-size: 7.5pt;
+    color: #6c7c8c;
+    text-align: center;
+    border-top: 1px solid var(--vela-line);
+    padding-top: 2mm;
+}
