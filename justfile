@@ -27,10 +27,12 @@ lint:
 test: test-corpus
     cd backend && uv run pytest
 
-# Validate the corpus: schema-check every fragment + expected-route, then
-# regenerate into a tempdir and confirm zero drift vs the committed scenarios.
+# Validate the corpus: schema-check every fragment + expected-route, regenerate
+# into a tempdir and confirm zero drift vs the committed scenarios, then run the
+# PDF-corpus validator (schema + city-integrity + per-document-type min counts).
 test-corpus:
     uv run --python 3.12 --with jsonschema python corpus/validate.py
+    uv run --python 3.12 --with jsonschema python corpus/pdf/validate.py
 
 # Regenerate the committed corpus from the deterministic generator.
 regen-corpus:

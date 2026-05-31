@@ -1,0 +1,17 @@
+{
+  "document_type": "air_ticket",
+  "cities": ["Paris", "Lisbon"],
+  "stations": [
+    { "city": "Paris",  "kind": "airport", "identifier": "CDG",
+      "departure_datetime": "2027-04-12T08:30:00" },
+    { "city": "Lisbon", "kind": "airport", "identifier": "LIS",
+      "arrival_datetime":   "2027-04-12T10:45:00" }
+  ],
+  "accommodations": [],
+  "venues": [],
+  "travelers": ["Alice Example"],
+  "prices": [{"amount": 129.50, "currency": "EUR"}],
+  "qr_codes": ["FIXTURE-QR-001"],
+  "pdf_kind": "text",
+  "scenario_id": "001-fixture-air-ticket"
+}

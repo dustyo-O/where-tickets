@@ -65,3 +65,9 @@ htmlcov/
 # Engine-spike run artifacts (timestamped, not committed)
 backend/spikes/route_engine_llm/runs/
 backend/spikes/route_engine_algorithmic/runs/
+
+# Mock-Document Corpus — Layer 2 (real PDFs, never committed)
+# Real tickets/bookings carry personal data and must stay strictly local.
+# The .gitkeep placeholder keeps the directory in the tree.
+corpus/pdf/layer2/**
+!corpus/pdf/layer2/.gitkeep
