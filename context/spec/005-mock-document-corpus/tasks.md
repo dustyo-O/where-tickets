@@ -25,13 +25,13 @@
 
 *Value: `just test-pdf-corpus` exists, discovers scenarios, calls the extractor interface, and emits the PASS/FAIL + path-mix report. With no real extractor yet, it degrades gracefully.*
 
-- [ ] **Slice 2: Runner CLI + stub extractor + PASS/FAIL report against the fixture**
-  - [ ] Define the extractor interface in code: a `Protocol` (or `Callable` type alias) in `corpus/pdf/runner.py` with signature `extract_pdf(pdf_path: Path) -> ExtractedFields`, where `ExtractedFields` is a TypedDict (or dataclass) matching the schema plus optional `extraction_path: Literal["text", "vision"]`. **[Agent: python-backend]**
-  - [ ] Write `corpus/pdf/runner.py` with `python -m corpus.pdf.runner [--layer 1|2|both] [--filter PATTERN] [--json-report PATH]`. Discovery: walk Layer 1 scenarios + Layer 2 dirs. Per-PDF flow: load PDF + JSON → call extractor → field-by-field compare → PASS/FAIL. Report shape per tech spec §2.5 (Layer 1 / Layer 2 / TOTAL counts, accuracy %, FAILED section with diff). **[Agent: python-backend]**
-  - [ ] Implement lazy import of `where_tickets.extraction.extract_pdf` with a graceful fallback: if the module is missing, the runner prints `extractor not wired: install per AI Document Understanding spec` and exits 0. (Missing extractor is not a corpus failure.) **[Agent: python-backend]**
-  - [ ] Add `just test-pdf-corpus` recipe wrapping the runner. **[Agent: python-backend]**
-  - [ ] Pytest test in `backend/tests/corpus/test_pdf_runner.py`: runs the runner against a tiny tempdir fixture (2 scenarios, one matching expected and one mismatching) using a **stub extractor injected via a CLI flag** (e.g., `--extractor-import-path tests.stubs.stub_extractor`). Asserts: exit code, PASS/FAIL counts, path-mix line present, diff format on the failing scenario. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-pdf-corpus` runs against the Slice 1 fixture and prints the "extractor not wired" banner cleanly (exit 0). `uv run pytest backend/tests/corpus/test_pdf_runner.py` passes. **[Agent: python-backend]**
+- [x] **Slice 2: Runner CLI + stub extractor + PASS/FAIL report against the fixture**
+  - [x] Define the extractor interface in code: a `Protocol` (or `Callable` type alias) in `corpus/pdf/runner.py` with signature `extract_pdf(pdf_path: Path) -> ExtractedFields`, where `ExtractedFields` is a TypedDict (or dataclass) matching the schema plus optional `extraction_path: Literal["text", "vision"]`. **[Agent: python-backend]**
+  - [x] Write `corpus/pdf/runner.py` with `python -m corpus.pdf.runner [--layer 1|2|both] [--filter PATTERN] [--json-report PATH]`. Discovery: walk Layer 1 scenarios + Layer 2 dirs. Per-PDF flow: load PDF + JSON → call extractor → field-by-field compare → PASS/FAIL. Report shape per tech spec §2.5 (Layer 1 / Layer 2 / TOTAL counts, accuracy %, FAILED section with diff). **[Agent: python-backend]**
+  - [x] Implement lazy import of `where_tickets.extraction.extract_pdf` with a graceful fallback: if the module is missing, the runner prints `extractor not wired: install per AI Document Understanding spec` and exits 0. (Missing extractor is not a corpus failure.) **[Agent: python-backend]**
+  - [x] Add `just test-pdf-corpus` recipe wrapping the runner. **[Agent: python-backend]**
+  - [x] Pytest test in `backend/tests/corpus/test_pdf_runner.py`: runs the runner against a tiny tempdir fixture (2 scenarios, one matching expected and one mismatching) using a **stub extractor injected via a CLI flag** (e.g., `--extractor-import-path tests.stubs.stub_extractor`). Asserts: exit code, PASS/FAIL counts, path-mix line present, diff format on the failing scenario. **[Agent: python-backend]**
+  - [x] **Verify:** `just test-pdf-corpus` runs against the Slice 1 fixture and prints the "extractor not wired" banner cleanly (exit 0). `uv run pytest backend/tests/corpus/test_pdf_runner.py` passes. **[Agent: python-backend]**
 
 ---
 

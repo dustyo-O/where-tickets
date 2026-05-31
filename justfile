@@ -34,6 +34,13 @@ test-corpus:
     uv run --python 3.12 --with jsonschema python corpus/validate.py
     uv run --python 3.12 --with jsonschema python corpus/pdf/validate.py
 
+# Run the PDF-corpus runner against Layer 1 + Layer 2 scenarios with whatever
+# extractor is installed and report PASS/FAIL + accuracy. Degrades gracefully
+# (prints a banner, skips all scenarios, exits 0) when no extractor is wired,
+# so it is safe to run before AI Document Understanding lands.
+test-pdf-corpus:
+    uv run --python 3.12 python corpus/pdf/runner.py
+
 # Regenerate the committed corpus from the deterministic generator.
 regen-corpus:
     uv run --python 3.12 python -m corpus.generator
