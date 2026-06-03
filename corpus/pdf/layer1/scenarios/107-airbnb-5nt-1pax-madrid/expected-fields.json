@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Madrid",
+      "identifier": "Sun-soaked Apartment in Chueca",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Madrid"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 5395227491460785872,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 108.98,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-107-airbnb-5nt-1pax-madrid"
+  ],
+  "scenario_id": "107-airbnb-5nt-1pax-madrid",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

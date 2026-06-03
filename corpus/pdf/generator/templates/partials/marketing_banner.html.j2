@@ -1,0 +1,5 @@
+{# Marketing-banner strip. Rendered 0..N times where N = noise.marketing_banner_count.
+   Copy is owned by noise.MARKETING_BANNERS; passed in as `banners`. #}
+{% for banner in banners %}
+<div class="marketing-banner">{{ banner }}</div>
+{% endfor %}

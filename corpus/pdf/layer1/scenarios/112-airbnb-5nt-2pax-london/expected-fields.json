@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "London",
+      "identifier": "Garden Studio near Hampstead Heath",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 15391961745247465090,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 222.58,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-112-airbnb-5nt-2pax-london"
+  ],
+  "scenario_id": "112-airbnb-5nt-2pax-london",
+  "stations": [],
+  "travelers": [
+    "Marta Kowalski",
+    "Sven Olsen"
+  ],
+  "venues": []
+}

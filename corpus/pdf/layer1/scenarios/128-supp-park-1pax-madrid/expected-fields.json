@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 1693095323697986798,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 6.89,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-PARK-128-supp-park-1pax-madrid"
+  ],
+  "scenario_id": "128-supp-park-1pax-madrid",
+  "stations": [],
+  "travelers": [
+    "Lucas Costa"
+  ],
+  "venues": [
+    {
+      "city": "Madrid",
+      "identifier": "Parking Atocha Sur",
+      "kind": "parking",
+      "valid_from_datetime": "2027-03-12T14:00:00",
+      "valid_to_datetime": "2027-03-15T11:00:00"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Prague",
+      "identifier": "Solana Prague Old Town",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 14168369702392829528,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 173.53,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-096-hotel-5nt-2pax-prague"
+  ],
+  "scenario_id": "096-hotel-5nt-2pax-prague",
+  "stations": [],
+  "travelers": [
+    "Rita Santos",
+    "Quentin Moreau"
+  ],
+  "venues": []
+}

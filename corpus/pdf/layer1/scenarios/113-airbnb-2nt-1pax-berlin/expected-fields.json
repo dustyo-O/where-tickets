@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Berlin",
+      "identifier": "Cozy Studio in Kreuzberg",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 1068301940636983618,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 79.8,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-113-airbnb-2nt-1pax-berlin"
+  ],
+  "scenario_id": "113-airbnb-2nt-1pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Sven Olsen"
+  ],
+  "venues": []
+}

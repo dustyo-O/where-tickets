@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Berlin",
+      "identifier": "Industrial Loft in Prenzlauer Berg",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 10473069904867844840,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 80.47,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-115-airbnb-5nt-1pax-berlin"
+  ],
+  "scenario_id": "115-airbnb-5nt-1pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Hugo van der Berg"
+  ],
+  "venues": []
+}

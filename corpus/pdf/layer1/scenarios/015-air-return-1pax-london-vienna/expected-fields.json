@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London",
+    "Vienna"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 17697474321231258793,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 400.64,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-015-air-return-1pax-london-vienna"
+  ],
+  "scenario_id": "015-air-return-1pax-london-vienna",
+  "stations": [
+    {
+      "city": "London",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Vienna",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Sven Olsen"
+  ],
+  "venues": []
+}

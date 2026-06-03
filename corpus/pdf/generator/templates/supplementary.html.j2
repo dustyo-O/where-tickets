@@ -1,0 +1,163 @@
+{# Supplementary document — single template covering three variants chosen
+   by `venue.kind`:
+     - sightseeing -> Paseo Tickets, admission-ticket layout (fictional
+       pan-European sightseeing operator).
+     - parking     -> Parquin, parking-confirmation layout (fictional
+       parking-chain umbrella).
+     - other       -> City Atlas, city-pass / voucher layout (fictional
+       multi-attraction pass).
+   None of the brand names match any real-world brand (verified by hand on
+   2026-05-31). The per-kind palette and accent are switched via the
+   `kind-<kind>` body class declared in
+   templates/styles/supplementary.css. The template prints every
+   `cities[]` value and every YYYY-MM-DD date portion of the
+   valid_from/valid_to datetimes verbatim so the validator's PDF/JSON token
+   sanity check passes. #}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ brand.name }} — {{ brand.doc_label }} {{ data.scenario_id }}</title>
+    <link rel="stylesheet" href="styles/supplementary.css">
+</head>
+<body class="font-{{ noise.font_pair }} kind-{{ venue.kind }}">
+    <header class="brand-header">
+        <div class="brand-mark">
+            <div class="badge" aria-hidden="true"></div>
+            <div>
+                <div class="name">{{ brand.name }}</div>
+                <div class="tagline">{{ brand.tagline }}</div>
+            </div>
+        </div>
+        <div class="doc-meta">
+            <div class="doc-label">{{ brand.doc_label }}</div>
+            <div>Ref: {{ data.scenario_id }}</div>
+            <div>Issued: {{ venue.valid_from_date }}</div>
+            <div>Code: {{ brand.ref_prefix }}-{{ data.scenario_id[:3] }}</div>
+        </div>
+    </header>
+
+    {% for partial in noise.partial_order %}
+        {% if partial == "marketing_banner" and noise.marketing_banner_count > 0 %}
+            {% include "partials/marketing_banner.html.j2" %}
+        {% endif %}
+    {% endfor %}
+
+    <section class="route-summary">
+        <h2>City</h2>
+        <p>
+            {% for city in data.cities -%}
+                <strong>{{ city }}</strong>{% if not loop.last %} &middot; {% endif %}
+            {%- endfor %}
+        </p>
+    </section>
+
+    <section class="venue-section">
+        <h2>{{ brand.kind_word }}</h2>
+        <div class="venue-card">
+            {% if venue.kind == "sightseeing" %}
+                <div class="venue-name">{{ venue.identifier }}</div>
+                <div class="venue-city">in {{ venue.city }}</div>
+                <div class="validity">
+                    <div class="endpoint valid-from">
+                        <span class="role">Doors open</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ venue.valid_from_date }}
+                            <span class="label">Time</span>{{ venue.valid_from_time }}
+                        </span>
+                    </div>
+                    <div class="connector">&#x2606;</div>
+                    <div class="endpoint valid-to">
+                        <span class="role">Last entry</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ venue.valid_to_date }}
+                            <span class="label">Time</span>{{ venue.valid_to_time }}
+                        </span>
+                    </div>
+                </div>
+            {% elif venue.kind == "parking" %}
+                <div class="venue-name">{{ venue.identifier }}</div>
+                <div class="venue-city">in {{ venue.city }}</div>
+                <div class="validity">
+                    <div class="endpoint valid-from">
+                        <span class="role">Gate entry</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ venue.valid_from_date }}
+                            <span class="label">Time</span>{{ venue.valid_from_time }}
+                        </span>
+                    </div>
+                    <div class="connector">&#x21C6;</div>
+                    <div class="endpoint valid-to">
+                        <span class="role">Gate exit by</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ venue.valid_to_date }}
+                            <span class="label">Time</span>{{ venue.valid_to_time }}
+                        </span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="venue-name">{{ venue.identifier }}</div>
+                <div class="venue-city">redeemable in {{ venue.city }}</div>
+                <div class="validity">
+                    <div class="endpoint valid-from">
+                        <span class="role">Valid from</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ venue.valid_from_date }}
+                            <span class="label">Time</span>{{ venue.valid_from_time }}
+                        </span>
+                    </div>
+                    <div class="connector">&#x2605;</div>
+                    <div class="endpoint valid-to">
+                        <span class="role">Valid until</span>
+                        <span class="datetime">
+                            <span class="label">Date</span>{{ venue.valid_to_date }}
+                            <span class="label">Time</span>{{ venue.valid_to_time }}
+                        </span>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="travelers">
+        <h2>Holder{{ 's' if data.travelers|length > 1 else '' }}</h2>
+        <ul>
+            {% for name in data.travelers %}
+            <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="price-section">
+        <h2>Amount paid</h2>
+        {% for price in data.prices %}
+        <div class="price-block">
+            <span class="amount">{{ "%.2f"|format(price.amount) }}</span>
+            <span class="currency">{{ price.currency }}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    {% if not noise.secondary_qr_placement %}
+        {% include "partials/qr_block.html.j2" %}
+    {% endif %}
+
+    {% for partial in noise.partial_order %}
+        {% if partial == "tc_block" and noise.tc_block %}
+            {% include "partials/tc_block.html.j2" %}
+        {% elif partial == "footer_ad" %}
+            {% include "partials/footer_ad.html.j2" %}
+        {% endif %}
+    {% endfor %}
+
+    {% if noise.secondary_qr_placement %}
+        {% include "partials/qr_block.html.j2" %}
+    {% endif %}
+
+    <div class="footer">
+        {{ brand.name }} is a fictional brand used only for synthetic
+        PDF-extraction testing. Not affiliated with any real venue or
+        operator. Scenario {{ data.scenario_id }}.
+    </div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+/* Vela Coach — fictional pan-European inter-city bus brand for the PDF
+   corpus. Geometric bus-front logo, warm-amber palette. NOT associated with
+   any real coach operator. Shares the "Vela" naming family with Vela Air
+   purely for in-corpus visual coherence; both are fictional. */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    /* Resolved relative to base_url (the templates root) at render time. */
+    src: url("fonts/InterVariable.woff2") format("woff2-variations");
+    font-display: swap;
+}
+
+:root {
+    --coach-ink: #3b2410;
+    --coach-amber: #c2710b;
+    --coach-mist: #fdf5e9;
+    --coach-line: #ead6b3;
+    --coach-accent: #1c4f7e;
+}
+
+@page {
+    size: A4;
+    margin: 16mm 14mm 16mm 14mm;
+}
+
+body.font-inter-inter,
+body.font-inter-inter h1,
+body.font-inter-inter h2,
+body.font-inter-inter h3 {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-inter-system {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.font-inter-system h1,
+body.font-inter-system h2,
+body.font-inter-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-system-system,
+body.font-system-system h1,
+body.font-system-system h2,
+body.font-system-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: var(--coach-ink);
+    font-size: 10.5pt;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--coach-amber);
+    padding-bottom: 6mm;
+    margin-bottom: 6mm;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+}
+
+.brand-mark .bus-front {
+    width: 14mm;
+    height: 12mm;
+    background: var(--coach-amber);
+    border-radius: 3mm 3mm 1mm 1mm;
+    position: relative;
+}
+
+.brand-mark .bus-front::after {
+    content: "";
+    position: absolute;
+    left: 1.5mm;
+    top: 2mm;
+    width: 11mm;
+    height: 4mm;
+    background: var(--coach-mist);
+    border-radius: 1mm;
+}
+
+.brand-mark .name {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--coach-ink);
+}
+
+.brand-mark .tagline {
+    font-size: 8.5pt;
+    color: var(--coach-amber);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--coach-ink);
+}
+
+.doc-meta .doc-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--coach-amber);
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 6mm;
+}
+
+section h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--coach-amber);
+    border-bottom: 1px solid var(--coach-line);
+    padding-bottom: 1.5mm;
+    margin-bottom: 3mm;
+}
+
+.legs {
+    border: 1px solid var(--coach-line);
+    border-radius: 2mm;
+    overflow: hidden;
+}
+
+.leg {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 4mm;
+    padding: 4mm 5mm;
+    border-bottom: 1px solid var(--coach-line);
+}
+
+.leg:last-child {
+    border-bottom: none;
+}
+
+.leg .endpoint {
+    display: flex;
+    flex-direction: column;
+}
+
+.leg .endpoint .role {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--coach-amber);
+}
+
+.leg .endpoint .city {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-top: 1mm;
+}
+
+.leg .endpoint .station {
+    font-size: 10pt;
+    color: var(--coach-ink);
+    margin-top: 0.5mm;
+}
+
+.leg .endpoint .datetime {
+    margin-top: 2mm;
+    font-size: 10pt;
+}
+
+.leg .endpoint .datetime .label {
+    color: var(--coach-amber);
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 1mm;
+}
+
+.leg .connector {
+    align-self: center;
+    color: var(--coach-amber);
+    font-size: 18pt;
+}
+
+.travelers ul,
+.qr-block ul {
+    margin: 0;
+    padding-left: 4mm;
+}
+
+.travelers li,
+.qr-block li {
+    margin-bottom: 1mm;
+}
+
+.price-block {
+    display: flex;
+    gap: 4mm;
+    align-items: baseline;
+}
+
+.price-block .amount {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--coach-accent);
+}
+
+.qr-block {
+    border: 1px dashed var(--coach-line);
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    background: var(--coach-mist);
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+}
+
+.qr-block.placement-bottom {
+    margin-top: 4mm;
+}
+
+.qr-block.placement-side {
+    margin-top: 0;
+}
+
+.marketing-banner {
+    background: var(--coach-mist);
+    border-left: 3px solid var(--coach-amber);
+    padding: 2mm 4mm;
+    margin-bottom: 3mm;
+    font-size: 9.5pt;
+    color: var(--coach-ink);
+}
+
+.tc-block {
+    border-top: 1px solid var(--coach-line);
+    margin-top: 4mm;
+    padding-top: 3mm;
+    font-size: 8pt;
+    color: #5b452a;
+}
+
+.tc-block .tc-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--coach-amber);
+    margin-bottom: 2mm;
+}
+
+.footer-ad {
+    margin-top: 6mm;
+    padding: 3mm 4mm;
+    border: 1px solid var(--coach-line);
+    border-radius: 2mm;
+    font-size: 8.5pt;
+    color: var(--coach-ink);
+    background: #fdfaf1;
+}
+
+.footer {
+    margin-top: 8mm;
+    font-size: 7.5pt;
+    color: #7c6a4e;
+    text-align: center;
+    border-top: 1px solid var(--coach-line);
+    padding-top: 2mm;
+}

@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Porto"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 267290853237695698,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 176.57,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-024-air-return-2pax-prague-porto-01",
+    "AIRTKT-024-air-return-2pax-prague-porto-02"
+  ],
+  "scenario_id": "024-air-return-2pax-prague-porto",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Porto",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "OPO",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Sven Olsen",
+    "Gabriela Rossi"
+  ],
+  "venues": []
+}

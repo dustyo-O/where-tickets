@@ -1,0 +1,46 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome",
+    "Berlin"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 17753353475496528014,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 348.79,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-147-air-multileg-1pax-madrid-rome-berlin"
+  ],
+  "scenario_id": "147-air-multileg-1pax-madrid-rome-berlin",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T08:00:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:15:00",
+      "city": "Rome",
+      "departure_datetime": "2027-03-11T12:15:00",
+      "identifier": "FCO",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T14:30:00",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Olga Ivanova"
+  ],
+  "venues": []
+}

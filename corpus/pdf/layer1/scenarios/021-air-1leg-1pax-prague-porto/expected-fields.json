@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Porto"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 9111001150960960825,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 108.64,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-021-air-1leg-1pax-prague-porto"
+  ],
+  "scenario_id": "021-air-1leg-1pax-prague-porto",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Porto",
+      "identifier": "OPO",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Pierre Dubois"
+  ],
+  "venues": []
+}

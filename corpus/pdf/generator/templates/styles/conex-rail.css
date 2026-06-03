@@ -1,0 +1,266 @@
+/* Conex Rail — fictional pan-European rail brand for the PDF corpus.
+   Geometric track-bar logo, forest-green palette. NOT associated with any
+   real rail operator. */
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    /* Resolved relative to base_url (the templates root) at render time. */
+    src: url("fonts/InterVariable.woff2") format("woff2-variations");
+    font-display: swap;
+}
+
+:root {
+    --conex-ink: #14352b;
+    --conex-leaf: #2f7a55;
+    --conex-mist: #eef5f1;
+    --conex-line: #cddcd3;
+    --conex-accent: #b04a1c;
+}
+
+@page {
+    size: A4;
+    margin: 16mm 14mm 16mm 14mm;
+}
+
+body.font-inter-inter,
+body.font-inter-inter h1,
+body.font-inter-inter h2,
+body.font-inter-inter h3 {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-inter-system {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.font-inter-system h1,
+body.font-inter-system h2,
+body.font-inter-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body.font-system-system,
+body.font-system-system h1,
+body.font-system-system h2,
+body.font-system-system h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    color: var(--conex-ink);
+    font-size: 10.5pt;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--conex-leaf);
+    padding-bottom: 6mm;
+    margin-bottom: 6mm;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+}
+
+.brand-mark .track-bar {
+    width: 14mm;
+    height: 10mm;
+    background:
+        linear-gradient(var(--conex-leaf), var(--conex-leaf)) center / 100% 3mm no-repeat,
+        linear-gradient(var(--conex-ink), var(--conex-ink)) center top / 100% 2mm no-repeat,
+        linear-gradient(var(--conex-ink), var(--conex-ink)) center bottom / 100% 2mm no-repeat;
+    border-radius: 1mm;
+}
+
+.brand-mark .name {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--conex-ink);
+}
+
+.brand-mark .tagline {
+    font-size: 8.5pt;
+    color: var(--conex-leaf);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--conex-ink);
+}
+
+.doc-meta .doc-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--conex-leaf);
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 6mm;
+}
+
+section h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--conex-leaf);
+    border-bottom: 1px solid var(--conex-line);
+    padding-bottom: 1.5mm;
+    margin-bottom: 3mm;
+}
+
+.legs {
+    border: 1px solid var(--conex-line);
+    border-radius: 2mm;
+    overflow: hidden;
+}
+
+.leg {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 4mm;
+    padding: 4mm 5mm;
+    border-bottom: 1px solid var(--conex-line);
+}
+
+.leg:last-child {
+    border-bottom: none;
+}
+
+.leg .endpoint {
+    display: flex;
+    flex-direction: column;
+}
+
+.leg .endpoint .role {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--conex-leaf);
+}
+
+.leg .endpoint .city {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-top: 1mm;
+}
+
+.leg .endpoint .station {
+    font-size: 10pt;
+    color: var(--conex-ink);
+    margin-top: 0.5mm;
+}
+
+.leg .endpoint .datetime {
+    margin-top: 2mm;
+    font-size: 10pt;
+}
+
+.leg .endpoint .datetime .label {
+    color: var(--conex-leaf);
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 1mm;
+}
+
+.leg .connector {
+    align-self: center;
+    color: var(--conex-leaf);
+    font-size: 18pt;
+}
+
+.travelers ul,
+.qr-block ul {
+    margin: 0;
+    padding-left: 4mm;
+}
+
+.travelers li,
+.qr-block li {
+    margin-bottom: 1mm;
+}
+
+.price-block {
+    display: flex;
+    gap: 4mm;
+    align-items: baseline;
+}
+
+.price-block .amount {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--conex-accent);
+}
+
+.qr-block {
+    border: 1px dashed var(--conex-line);
+    border-radius: 2mm;
+    padding: 3mm 4mm;
+    background: var(--conex-mist);
+    font-family: "Courier New", monospace;
+    font-size: 9pt;
+}
+
+.qr-block.placement-bottom {
+    margin-top: 4mm;
+}
+
+.qr-block.placement-side {
+    margin-top: 0;
+}
+
+.marketing-banner {
+    background: var(--conex-mist);
+    border-left: 3px solid var(--conex-leaf);
+    padding: 2mm 4mm;
+    margin-bottom: 3mm;
+    font-size: 9.5pt;
+    color: var(--conex-ink);
+}
+
+.tc-block {
+    border-top: 1px solid var(--conex-line);
+    margin-top: 4mm;
+    padding-top: 3mm;
+    font-size: 8pt;
+    color: #45554c;
+}
+
+.tc-block .tc-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--conex-leaf);
+    margin-bottom: 2mm;
+}
+
+.footer-ad {
+    margin-top: 6mm;
+    padding: 3mm 4mm;
+    border: 1px solid var(--conex-line);
+    border-radius: 2mm;
+    font-size: 8.5pt;
+    color: var(--conex-ink);
+    background: #fbfdfc;
+}
+
+.footer {
+    margin-top: 8mm;
+    font-size: 7.5pt;
+    color: #6c7c75;
+    text-align: center;
+    border-top: 1px solid var(--conex-line);
+    padding-top: 2mm;
+}

@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 9073470097492092614,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 41.94,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-054-bus-1leg-2pax-frankfurt-amsterdam-01",
+    "BUSTKT-054-bus-1leg-2pax-frankfurt-amsterdam-02"
+  ],
+  "scenario_id": "054-bus-1leg-2pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Frankfurt Hauptbahnhof Sud",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Sloterdijk",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Sven Olsen",
+    "Diego Romano"
+  ],
+  "venues": []
+}

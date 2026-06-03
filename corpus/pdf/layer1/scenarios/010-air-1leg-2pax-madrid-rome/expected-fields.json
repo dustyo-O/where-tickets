@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 4533683688683330051,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 142.65,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-010-air-1leg-2pax-madrid-rome-01",
+    "AIRTKT-010-air-1leg-2pax-madrid-rome-02"
+  ],
+  "scenario_id": "010-air-1leg-2pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Rome",
+      "identifier": "FCO",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Eva Lindqvist",
+    "Hugo van der Berg"
+  ],
+  "venues": []
+}

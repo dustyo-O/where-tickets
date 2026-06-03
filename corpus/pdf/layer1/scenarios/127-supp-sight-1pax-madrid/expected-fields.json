@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 5478574657837913858,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 36.62,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-127-supp-sight-1pax-madrid"
+  ],
+  "scenario_id": "127-supp-sight-1pax-madrid",
+  "stations": [],
+  "travelers": [
+    "Alice Example"
+  ],
+  "venues": [
+    {
+      "city": "Madrid",
+      "identifier": "Mirador Atlas Tower",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

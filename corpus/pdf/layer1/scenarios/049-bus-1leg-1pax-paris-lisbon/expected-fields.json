@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 6296966826892380884,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 78.42,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-049-bus-1leg-1pax-paris-lisbon"
+  ],
+  "scenario_id": "049-bus-1leg-1pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Paris Bercy Seine",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Lisbon",
+      "identifier": "Sete Rios",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Gabriela Rossi"
+  ],
+  "venues": []
+}

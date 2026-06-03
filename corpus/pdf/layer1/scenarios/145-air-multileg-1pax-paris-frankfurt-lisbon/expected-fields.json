@@ -1,0 +1,46 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Frankfurt",
+    "Lisbon"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 17822508266961929033,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 258.8,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-145-air-multileg-1pax-paris-frankfurt-lisbon"
+  ],
+  "scenario_id": "145-air-multileg-1pax-paris-frankfurt-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T08:00:00",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:15:00",
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T12:15:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T14:30:00",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Alice Example"
+  ],
+  "venues": []
+}

@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Prague",
+      "identifier": "Charming Flat in Zizkov",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 3058735735702995897,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 244.69,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-117-airbnb-2nt-1pax-prague"
+  ],
+  "scenario_id": "117-airbnb-2nt-1pax-prague",
+  "stations": [],
+  "travelers": [
+    "Pierre Dubois"
+  ],
+  "venues": []
+}

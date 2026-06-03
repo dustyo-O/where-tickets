@@ -1,0 +1,38 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 6020619069766894338,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 284.32,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-009-air-1leg-1pax-madrid-rome"
+  ],
+  "scenario_id": "009-air-1leg-1pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Rome",
+      "identifier": "FCO",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Quentin Moreau"
+  ],
+  "venues": []
+}

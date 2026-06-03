@@ -1,0 +1,33 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 12510623729140233290,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 20.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-OTHER-141-supp-other-2pax-paris"
+  ],
+  "scenario_id": "141-supp-other-2pax-paris",
+  "stations": [],
+  "travelers": [
+    "Tara Murphy",
+    "Carla Mendes"
+  ],
+  "venues": [
+    {
+      "city": "Paris",
+      "identifier": "City Atlas 48h Pass",
+      "kind": "other",
+      "valid_from_datetime": "2027-03-12T00:00:00",
+      "valid_to_datetime": "2027-03-13T23:59:00"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Prague",
+      "identifier": "Quiet Studio near Letna Park",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 13873067967358882302,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 113.28,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-118-airbnb-2nt-2pax-prague"
+  ],
+  "scenario_id": "118-airbnb-2nt-2pax-prague",
+  "stations": [],
+  "travelers": [
+    "Lucas Costa",
+    "Pierre Dubois"
+  ],
+  "venues": []
+}

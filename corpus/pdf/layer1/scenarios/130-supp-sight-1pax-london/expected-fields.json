@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 16997178936620853471,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 43.02,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-130-supp-sight-1pax-london"
+  ],
+  "scenario_id": "130-supp-sight-1pax-london",
+  "stations": [],
+  "travelers": [
+    "Karin Andersson"
+  ],
+  "venues": [
+    {
+      "city": "London",
+      "identifier": "Southbank Riverside Museum",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

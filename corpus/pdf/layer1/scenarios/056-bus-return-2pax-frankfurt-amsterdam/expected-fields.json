@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 2717431499234617880,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 57.21,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-056-bus-return-2pax-frankfurt-amsterdam-01",
+    "BUSTKT-056-bus-return-2pax-frankfurt-amsterdam-02"
+  ],
+  "scenario_id": "056-bus-return-2pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "Frankfurt Hauptbahnhof Sud",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Amsterdam",
+      "departure_datetime": "2027-03-15T15:45:00",
+      "identifier": "Amsterdam Sloterdijk",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-15T22:15:00",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof Sud",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Quentin Moreau",
+    "Julien Lefevre"
+  ],
+  "venues": []
+}

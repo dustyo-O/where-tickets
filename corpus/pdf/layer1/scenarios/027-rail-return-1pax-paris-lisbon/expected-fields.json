@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Lisbon"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 10676070027139938867,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 186.62,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-027-rail-return-1pax-paris-lisbon"
+  ],
+  "scenario_id": "027-rail-return-1pax-paris-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Paris Gare du Nord",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Lisbon",
+      "departure_datetime": "2027-03-15T17:20:00",
+      "identifier": "Lisboa Oriente",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Paris",
+      "identifier": "Paris Gare du Nord",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Karin Andersson"
+  ],
+  "venues": []
+}

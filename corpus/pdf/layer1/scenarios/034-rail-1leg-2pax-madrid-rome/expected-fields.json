@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 5137049590655473552,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 80.28,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-034-rail-1leg-2pax-madrid-rome-01",
+    "RAILTKT-034-rail-1leg-2pax-madrid-rome-02"
+  ],
+  "scenario_id": "034-rail-1leg-2pax-madrid-rome",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Madrid Atocha",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Rome",
+      "identifier": "Roma Termini",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Julien Lefevre",
+    "Gabriela Rossi"
+  ],
+  "venues": []
+}

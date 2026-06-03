@@ -1,0 +1,40 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London",
+    "Vienna"
+  ],
+  "document_type": "bus_ticket",
+  "noise_seed": 10590928550537178403,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 59.05,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-062-bus-1leg-2pax-london-vienna-01",
+    "BUSTKT-062-bus-1leg-2pax-london-vienna-02"
+  ],
+  "scenario_id": "062-bus-1leg-2pax-london-vienna",
+  "stations": [
+    {
+      "city": "London",
+      "departure_datetime": "2027-03-11T06:15:00",
+      "identifier": "London Victoria Coach",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-03-11T12:45:00",
+      "city": "Vienna",
+      "identifier": "Wien Erdberg VIB",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Karin Andersson",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

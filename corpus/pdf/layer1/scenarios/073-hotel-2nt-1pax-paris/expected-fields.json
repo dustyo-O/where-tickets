@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Paris",
+      "identifier": "Hotel Saint-Cloud Rive Gauche",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 3920266811613978865,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 181.58,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-073-hotel-2nt-1pax-paris"
+  ],
+  "scenario_id": "073-hotel-2nt-1pax-paris",
+  "stations": [],
+  "travelers": [
+    "Karin Andersson"
+  ],
+  "venues": []
+}

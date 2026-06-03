@@ -1,0 +1,33 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 6253554437350191270,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 10.64,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-142-supp-sight-2pax-frankfurt"
+  ],
+  "scenario_id": "142-supp-sight-2pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Carla Mendes",
+    "Tara Murphy"
+  ],
+  "venues": [
+    {
+      "city": "Frankfurt",
+      "identifier": "Nordend Modern Gallery",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

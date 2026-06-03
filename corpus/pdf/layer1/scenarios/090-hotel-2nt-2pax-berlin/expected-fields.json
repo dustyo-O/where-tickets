@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Berlin",
+      "identifier": "Hotel Spreebogen Mitte",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 12947305997504755097,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 168.31,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-090-hotel-2nt-2pax-berlin"
+  ],
+  "scenario_id": "090-hotel-2nt-2pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Karin Andersson",
+    "Alice Example"
+  ],
+  "venues": []
+}

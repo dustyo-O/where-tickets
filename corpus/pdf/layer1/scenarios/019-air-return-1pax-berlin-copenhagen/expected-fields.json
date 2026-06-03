@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Copenhagen"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 17399466153899756367,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 163.66,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-019-air-return-1pax-berlin-copenhagen"
+  ],
+  "scenario_id": "019-air-return-1pax-berlin-copenhagen",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2027-03-11T08:30:00",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:45:00",
+      "city": "Copenhagen",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "CPH",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

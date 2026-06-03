@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://where-tickets.local/corpus/pdf/schema/expected-fields.schema.json",
+  "title": "ExtractedFields",
+  "description": "Ground-truth field set for a single PDF in the mock-document corpus (one PDF = one ExtractedFields payload). Field names align with corpus/schema/extracted-fragment.schema.json where the concepts overlap (notably `travelers`); fields here use snake_case per tech-spec sec. 2.2 and capture the printed text on the document rather than normalized engine values (e.g. city names as they appear on the PDF, not IATA codes).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_type",
+    "cities",
+    "stations",
+    "accommodations",
+    "venues",
+    "travelers",
+    "prices",
+    "qr_codes",
+    "pdf_kind",
+    "scenario_id"
+  ],
+  "$defs": {
+    "isoLocalDatetime": {
+      "type": "string",
+      "description": "ISO 8601 local datetime as printed on the document: `YYYY-MM-DDTHH:MM:SS`, no timezone designator.",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$"
+    },
+    "placeEntry": {
+      "type": "object",
+      "description": "Shared core shape for structured place arrays (`stations`, `accommodations`, `venues`). Each concrete array composes this with a bucket-specific datetime fragment via `allOf` + `unevaluatedProperties: false`, and narrows `kind` via its own enum. The cross-field rule that `city` must appear in the document's top-level `cities[]` is enforced by the validator code, not by this schema.",
+      "required": ["city", "kind", "identifier"],
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name as printed on the document. Must conceptually match an entry in the document's top-level `cities[]`; integrity is checked by the validator, not by this schema.",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "description": "Subtype of the place. Each array narrows this to its own enum (see the concrete array's `items.properties.kind`)."
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Stable identifier as printed on the document - IATA code for airports, printed name otherwise.",
+          "minLength": 1
+        }
+      }
+    },
+    "stationDatetimes": {
+      "type": "object",
+      "description": "Optional departure / arrival datetimes for a transit station. An origin has departure only; a terminus has arrival only; a layover or return-leg turnaround has both. Either or both may be absent; the validator enforces per-document-type presence rules.",
+      "properties": {
+        "departure_datetime": { "$ref": "#/$defs/isoLocalDatetime" },
+        "arrival_datetime": { "$ref": "#/$defs/isoLocalDatetime" }
+      }
+    },
+    "accommodationDatetimes": {
+      "type": "object",
+      "description": "Required check-in / check-out datetimes for an accommodation entry.",
+      "required": ["check_in_datetime", "check_out_datetime"],
+      "properties": {
+        "check_in_datetime": { "$ref": "#/$defs/isoLocalDatetime" },
+        "check_out_datetime": { "$ref": "#/$defs/isoLocalDatetime" }
+      }
+    },
+    "venueDatetimes": {
+      "type": "object",
+      "description": "Optional valid-from / valid-to datetimes for a venue entry (e.g. timed-entry sightseeing slot, parking validity window).",
+      "properties": {
+        "valid_from_datetime": { "$ref": "#/$defs/isoLocalDatetime" },
+        "valid_to_datetime": { "$ref": "#/$defs/isoLocalDatetime" }
+      }
+    }
+  },
+  "properties": {
+    "document_type": {
+      "type": "string",
+      "description": "Kind of travel document. Snake_case mirror of the engine fragment schema's `documentType` enum (e.g. `air_ticket` here corresponds to `air-ticket` there); `airbnb_booking` and `supplementary` are PDF-corpus-specific extensions.",
+      "enum": [
+        "air_ticket",
+        "rail_ticket",
+        "bus_ticket",
+        "hotel_booking",
+        "airbnb_booking",
+        "supplementary"
+      ]
+    },
+    "cities": {
+      "type": "array",
+      "description": "City names exactly as printed on the document (e.g. \"Paris\", \"Lisbon\"). Distinct from the engine fragment schema's `cityCode` IATA codes - the corpus captures the printed surface form so PDF extraction can be evaluated literally.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "stations": {
+      "type": "array",
+      "description": "Transit endpoints printed on the document (airports, rail stations, bus terminals). May be empty for documents that don't carry this bucket (e.g. a hotel booking). Per-`document_type` minimum-count rules (transit >= 2) and per-entry datetime-presence rules are enforced by the validator, not by this schema.",
+      "minItems": 0,
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/placeEntry" },
+          { "$ref": "#/$defs/stationDatetimes" }
+        ],
+        "unevaluatedProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "Station subtype.",
+            "enum": ["airport", "rail_station", "bus_terminal"]
+          },
+          "identifier": {
+            "type": "string",
+            "description": "IATA code for `airport`; printed station name for `rail_station` / `bus_terminal`.",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "accommodations": {
+      "type": "array",
+      "description": "Lodging entries printed on the document (hotels, Airbnb properties). May be empty for non-lodging documents. Per-`document_type` minimum-count rules (lodging >= 1) are enforced by the validator, not by this schema.",
+      "minItems": 0,
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/placeEntry" },
+          { "$ref": "#/$defs/accommodationDatetimes" }
+        ],
+        "unevaluatedProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "Accommodation subtype.",
+            "enum": ["hotel", "airbnb"]
+          },
+          "identifier": {
+            "type": "string",
+            "description": "Printed property name (e.g. \"Hotel Lutetia\", \"Airbnb - Loft in Alfama\").",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "venues": {
+      "type": "array",
+      "description": "Other places of interest printed on the document (sightseeing, parking, miscellaneous). May be empty.",
+      "minItems": 0,
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/placeEntry" },
+          { "$ref": "#/$defs/venueDatetimes" }
+        ],
+        "unevaluatedProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "Venue subtype.",
+            "enum": ["sightseeing", "parking", "other"]
+          },
+          "identifier": {
+            "type": "string",
+            "description": "Printed venue name.",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "travelers": {
+      "type": "array",
+      "description": "Traveler names as printed on the document. Matches the `travelers` field in corpus/schema/extracted-fragment.schema.json.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "prices": {
+      "type": "array",
+      "description": "Prices printed on the document. May be empty.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["amount", "currency"],
+        "properties": {
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "type": "string",
+            "description": "3-letter ISO 4217 currency code, uppercase.",
+            "pattern": "^[A-Z]{3}$"
+          }
+        }
+      }
+    },
+    "qr_codes": {
+      "type": "array",
+      "description": "Raw payload strings of every QR code visible on the document. May be empty.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pdf_kind": {
+      "type": "string",
+      "description": "Whether the PDF carries a real text layer (`text`) or is image-only (`rasterized`). Drives the validator's per-PDF sanity check and the runner's path-mix summary.",
+      "enum": ["text", "rasterized"]
+    },
+    "scenario_id": {
+      "type": "string",
+      "description": "Stable scenario identifier. Layer 1 uses the generator's `NNN-<slug>`; Layer 2 uses any stable contributor-chosen string (e.g. `porto-trip/02-hotel-booking`).",
+      "minLength": 1
+    },
+    "noise_seed": {
+      "type": "integer",
+      "description": "Seed used by the generator's noise layer. Layer 1 only; absent for Layer 2 scenarios.",
+      "minimum": 0
+    }
+  }
+}

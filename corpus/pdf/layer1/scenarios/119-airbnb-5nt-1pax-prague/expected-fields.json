@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Prague",
+      "identifier": "Cozy Loft near Old Town Square",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 402536192842659501,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 67.3,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-119-airbnb-5nt-1pax-prague"
+  ],
+  "scenario_id": "119-airbnb-5nt-1pax-prague",
+  "stations": [],
+  "travelers": [
+    "Lucas Costa"
+  ],
+  "venues": []
+}

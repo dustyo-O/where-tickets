@@ -1,0 +1,31 @@
+{# Terms-and-conditions fine-print block. Marked clearly as fictional.
+   Selected by `noise.tc_block` (one of TC_BLOCKS) or skipped entirely.
+   Brand-neutral wording so the same partial serves the Vela Air, Conex Rail,
+   and Vela Coach templates. #}
+<div class="tc-block">
+    <div class="tc-title">Terms &amp; Conditions ({{ tc_block }})</div>
+    <p>
+        FICTIONAL: This document is part of a synthetic test corpus and does not
+        represent a real booking. The carrier shown is a fictional brand created
+        for PDF-extraction evaluation. No real fare rules apply.
+    </p>
+    {% if tc_block == "fare-rules" %}
+    <p>
+        Tickets are non-transferable. Changes incur a fictional EUR 35 service
+        charge per passenger per leg. Refunds processed within an imaginary
+        14 business days.
+    </p>
+    {% elif tc_block == "baggage-policy" %}
+    <p>
+        One personal item (40 x 25 x 20 cm) included. Cabin baggage up to 8 kg.
+        Checked luggage allowances vary by fare class. Fictional values; consult
+        the booking confirmation for real numbers.
+    </p>
+    {% elif tc_block == "covid-advisory" %}
+    <p>
+        Travelers are responsible for verifying entry requirements at destination.
+        A flexible-fare option is recommended for itineraries subject to change.
+        (Synthetic advisory — for corpus testing only.)
+    </p>
+    {% endif %}
+</div>

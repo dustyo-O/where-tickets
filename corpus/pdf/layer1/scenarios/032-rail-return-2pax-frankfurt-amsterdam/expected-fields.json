@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 10219289447603512781,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 158.99,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-032-rail-return-2pax-frankfurt-amsterdam-01",
+    "RAILTKT-032-rail-return-2pax-frankfurt-amsterdam-02"
+  ],
+  "scenario_id": "032-rail-return-2pax-frankfurt-amsterdam",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Amsterdam",
+      "departure_datetime": "2027-03-15T17:20:00",
+      "identifier": "Amsterdam Centraal",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Karin Andersson",
+    "Felix Bauer"
+  ],
+  "venues": []
+}

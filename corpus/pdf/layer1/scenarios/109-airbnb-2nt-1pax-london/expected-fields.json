@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "London",
+      "identifier": "Cozy Loft near Brick Lane",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 6845942552580068048,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 241.14,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-109-airbnb-2nt-1pax-london"
+  ],
+  "scenario_id": "109-airbnb-2nt-1pax-london",
+  "stations": [],
+  "travelers": [
+    "Quentin Moreau"
+  ],
+  "venues": []
+}

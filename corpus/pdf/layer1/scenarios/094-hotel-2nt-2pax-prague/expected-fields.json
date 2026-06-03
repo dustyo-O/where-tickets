@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Prague",
+      "identifier": "Hotel Vinohrady Court",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 9016127902200815782,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 251.91,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-094-hotel-2nt-2pax-prague"
+  ],
+  "scenario_id": "094-hotel-2nt-2pax-prague",
+  "stations": [],
+  "travelers": [
+    "Marta Kowalski",
+    "Alice Example"
+  ],
+  "venues": []
+}

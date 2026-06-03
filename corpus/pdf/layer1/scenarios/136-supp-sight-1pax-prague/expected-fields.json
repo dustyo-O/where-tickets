@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 7816157966388450959,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 22.25,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-136-supp-sight-1pax-prague"
+  ],
+  "scenario_id": "136-supp-sight-1pax-prague",
+  "stations": [],
+  "travelers": [
+    "Rita Santos"
+  ],
+  "venues": [
+    {
+      "city": "Prague",
+      "identifier": "Mala Strana Modern Gallery",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2027-03-12T09:00:00",
+      "valid_to_datetime": "2027-03-12T18:00:00"
+    }
+  ]
+}

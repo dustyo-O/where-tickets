@@ -1,0 +1,32 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "supplementary",
+  "noise_seed": 18057318506379274138,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 38.89,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-PARK-134-supp-park-1pax-berlin"
+  ],
+  "scenario_id": "134-supp-park-1pax-berlin",
+  "stations": [],
+  "travelers": [
+    "Sven Olsen"
+  ],
+  "venues": [
+    {
+      "city": "Berlin",
+      "identifier": "Parquin Tiergarten Sud",
+      "kind": "parking",
+      "valid_from_datetime": "2027-03-12T14:00:00",
+      "valid_to_datetime": "2027-03-15T11:00:00"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Hotel Bockenheim Court",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 9056070716958007103,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 244.65,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-080-hotel-5nt-2pax-frankfurt"
+  ],
+  "scenario_id": "080-hotel-5nt-2pax-frankfurt",
+  "stations": [],
+  "travelers": [
+    "Carla Mendes",
+    "Marta Kowalski"
+  ],
+  "venues": []
+}

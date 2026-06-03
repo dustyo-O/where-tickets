@@ -1,0 +1,47 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Porto"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 8983189843436397511,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 26.88,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-048-rail-return-2pax-prague-porto-01",
+    "RAILTKT-048-rail-return-2pax-prague-porto-02"
+  ],
+  "scenario_id": "048-rail-return-2pax-prague-porto",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "Praha hlavni nadrazi",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Porto",
+      "departure_datetime": "2027-03-15T17:20:00",
+      "identifier": "Porto Sao Bento",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Prague",
+      "identifier": "Praha hlavni nadrazi",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Olga Ivanova"
+  ],
+  "venues": []
+}

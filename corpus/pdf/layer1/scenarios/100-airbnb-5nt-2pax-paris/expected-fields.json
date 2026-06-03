@@ -1,0 +1,33 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "Paris",
+      "identifier": "Bright Apartment by Buttes-Chaumont",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "airbnb_booking",
+  "noise_seed": 16493666244358436605,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 65.6,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-100-airbnb-5nt-2pax-paris"
+  ],
+  "scenario_id": "100-airbnb-5nt-2pax-paris",
+  "stations": [],
+  "travelers": [
+    "Felix Bauer",
+    "Marta Kowalski"
+  ],
+  "venues": []
+}

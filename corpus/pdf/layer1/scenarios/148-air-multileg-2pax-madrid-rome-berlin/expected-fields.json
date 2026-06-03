@@ -1,0 +1,48 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome",
+    "Berlin"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 1282163056886435172,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 334.23,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-148-air-multileg-2pax-madrid-rome-berlin-01",
+    "AIRTKT-148-air-multileg-2pax-madrid-rome-berlin-02"
+  ],
+  "scenario_id": "148-air-multileg-2pax-madrid-rome-berlin",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-03-11T08:00:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:15:00",
+      "city": "Rome",
+      "departure_datetime": "2027-03-11T12:15:00",
+      "identifier": "FCO",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T14:30:00",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Niko Virtanen",
+    "Rita Santos"
+  ],
+  "venues": []
+}

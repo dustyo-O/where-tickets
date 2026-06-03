@@ -1,0 +1,45 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London",
+    "Vienna"
+  ],
+  "document_type": "rail_ticket",
+  "noise_seed": 10694386500792364384,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 67.91,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-039-rail-return-1pax-london-vienna"
+  ],
+  "scenario_id": "039-rail-return-1pax-london-vienna",
+  "stations": [
+    {
+      "city": "London",
+      "departure_datetime": "2027-03-11T07:45:00",
+      "identifier": "London St Pancras",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:55:00",
+      "city": "Vienna",
+      "departure_datetime": "2027-03-15T17:20:00",
+      "identifier": "Wien Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "London",
+      "identifier": "London St Pancras",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Sven Olsen"
+  ],
+  "venues": []
+}

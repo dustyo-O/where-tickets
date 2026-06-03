@@ -27,10 +27,26 @@ lint:
 test: test-corpus
     cd backend && uv run pytest
 
-# Validate the corpus: schema-check every fragment + expected-route, then
-# regenerate into a tempdir and confirm zero drift vs the committed scenarios.
+# Validate the corpus: schema-check every fragment + expected-route, regenerate
+# into a tempdir and confirm zero drift vs the committed scenarios, then run the
+# PDF-corpus validator (schema + city-integrity + per-document-type min counts).
 test-corpus:
     uv run --python 3.12 --with jsonschema python corpus/validate.py
+    uv run --python 3.12 --with jsonschema --with pymupdf python corpus/pdf/validate.py
+
+# Run the PDF-corpus runner against Layer 1 + Layer 2 scenarios with whatever
+# extractor is installed and report PASS/FAIL + accuracy. Degrades gracefully
+# (prints a banner, skips all scenarios, exits 0) when no extractor is wired,
+# so it is safe to run before AI Document Understanding lands.
+test-pdf-corpus:
+    uv run --python 3.12 python corpus/pdf/runner.py
+
+# Regenerate Layer 1 PDF scenarios from the deterministic generator (data is
+# stable across runs; noise varies). Refreshes corpus/pdf/layer1/scenarios/.
+# Uses the backend's `corpus` dep group for WeasyPrint + Jinja2; PYTHONPATH
+# points at the repo root so `python -m corpus.pdf.generator` resolves.
+regen-pdf-corpus:
+    cd backend && PYTHONPATH=.. uv run --group corpus python -m corpus.pdf.generator --output-dir ../corpus/pdf/layer1/scenarios
 
 # Regenerate the committed corpus from the deterministic generator.
 regen-corpus:

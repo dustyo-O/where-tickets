@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-13T15:00:00",
+      "check_out_datetime": "2027-03-18T11:00:00",
+      "city": "London",
+      "identifier": "Hotel Marylebone Residenz",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "document_type": "hotel_booking",
+  "noise_seed": 14293934435732207023,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 321.36,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-087-hotel-5nt-1pax-london"
+  ],
+  "scenario_id": "087-hotel-5nt-1pax-london",
+  "stations": [],
+  "travelers": [
+    "Diego Romano"
+  ],
+  "venues": []
+}
