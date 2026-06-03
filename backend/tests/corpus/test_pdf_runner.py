@@ -182,6 +182,7 @@ def _write_stub(tmp_path: Path, responses: dict[str, dict[str, Any]]) -> None:
 def _run_runner(
     tmp_path: Path,
     extractor_import_path: str = "test_stub.extract_pdf",
+    extra_env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess[str]:
     """Invoke the runner with ``tmp_path`` as ``WT_REPO_ROOT`` and ``PYTHONPATH``."""
     env = {
@@ -189,6 +190,8 @@ def _run_runner(
         "WT_REPO_ROOT": str(tmp_path),
         "PYTHONPATH": str(tmp_path),
     }
+    if extra_env:
+        env.update(extra_env)
     return subprocess.run(
         [
             sys.executable,
@@ -381,3 +384,150 @@ def test_diagnostic_lists_text_pdf_routed_to_vision(corpus_tree: Path) -> None:
     assert "pdf_kind=text but extractor fell back to vision" in diagnostic_block
     # The text-path scenario should NOT appear in the diagnostic block.
     assert "001-pass" not in diagnostic_block, diagnostic_block
+
+
+# --------------------------------------------------------------------------- #
+# Slice 6: Layer 2 discovery + leak guard.
+# --------------------------------------------------------------------------- #
+
+
+VALIDATE_PATH = REPO_ROOT / "corpus" / "pdf" / "validate.py"
+
+
+def _write_layer2_scenario(
+    layer2_root: Path,
+    trip_slug: str,
+    pdf_stem: str,
+    expected: dict[str, Any],
+    source_pdf: Path,
+) -> None:
+    """Create ``<layer2_root>/<trip>/<stem>.pdf`` + sibling expected-fields JSON."""
+    trip_dir = layer2_root / trip_slug
+    trip_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy(source_pdf, trip_dir / f"{pdf_stem}.pdf")
+    payload = dict(expected)
+    payload["scenario_id"] = f"{trip_slug}/{pdf_stem}"
+    (trip_dir / f"{pdf_stem}.expected-fields.json").write_text(
+        json.dumps(payload, indent=2, sort_keys=True)
+    )
+
+
+def test_layer_2_trip_is_discovered_and_reported(corpus_tree: Path) -> None:
+    """A Layer 2 trip dropped into ``corpus/pdf/layer2/`` is discovered and reported.
+
+    Builds the same tree as the other tests (one PASS-stub Layer 1 scenario)
+    plus a single Layer 2 PDF + sibling JSON under
+    ``corpus/pdf/layer2/porto-trip/01-hotel-booking.*``. Sets ``WT_LAYER2_ROOT``
+    so the runner discovers the tempdir's layer2 even if a contributor wires
+    it independently from ``WT_REPO_ROOT``.
+    """
+    layer2_root = corpus_tree / "corpus" / "pdf" / "layer2"
+    # Reuse the same fixture PDF the other tests use; the runner doesn't read
+    # the bytes, only the path layout + sibling JSON.
+    source_pdf = REAL_FIXTURE_DIR / "document.pdf"
+    _write_layer2_scenario(
+        layer2_root,
+        trip_slug="porto-trip",
+        pdf_stem="01-hotel-booking",
+        expected=_hotel_payload(),
+        source_pdf=source_pdf,
+    )
+
+    # Replace the second Layer 1 scenario so the tree is clean: one Layer 1
+    # PASS scenario + one Layer 2 PASS scenario.
+    shutil.rmtree(corpus_tree / "corpus" / "pdf" / "layer1" / "scenarios" / "002-hotel")
+
+    _write_stub(
+        corpus_tree,
+        {
+            "001-pass": _with_path(_air_ticket_payload(), "text"),
+            # Layer 2 stub key matches the trip directory name (the PDF's parent).
+            "porto-trip": _with_path(_hotel_payload(), "text"),
+        },
+    )
+
+    proc = _run_runner(
+        corpus_tree,
+        extra_env={"WT_LAYER2_ROOT": str(layer2_root)},
+    )
+
+    assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
+    assert re.search(r"Layer 1 \(synthetic\):\s+1/1 PASS\s+\(100\.0%\)", proc.stdout), (
+        proc.stdout
+    )
+    assert re.search(r"Layer 2 \(real\):\s+1/1 PASS\s+\(100\.0%\)", proc.stdout), (
+        proc.stdout
+    )
+    assert re.search(r"TOTAL:\s+2/2 PASS\s+\(100\.0%\)", proc.stdout), proc.stdout
+
+    # The Layer 2 line carries its own path-mix segment.
+    layer2_line = next(
+        line for line in proc.stdout.splitlines() if line.startswith("Layer 2 (real):")
+    )
+    assert "path: text=1" in layer2_line, layer2_line
+    # No FAILED: block on an all-pass run.
+    assert "FAILED:" not in proc.stdout
+
+
+def test_layer_2_leak_guard_catches_tracked_pdf(tmp_path: Path) -> None:
+    """Stage a fake PDF under ``corpus/pdf/layer2/`` → validator exits non-zero."""
+    # Build the minimum tree the validator needs: schema + layer1 + layer2.
+    pdf_root = tmp_path / "corpus" / "pdf"
+    (pdf_root / "schema").mkdir(parents=True)
+    (pdf_root / "layer1" / "scenarios").mkdir(parents=True)
+    (pdf_root / "layer2").mkdir(parents=True)
+
+    shutil.copy(REAL_SCHEMA, pdf_root / "schema" / "expected-fields.schema.json")
+
+    # Init a fresh repo so `git ls-files` has an index to read.
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+
+    # Track the .gitkeep placeholder + a fake leaked PDF (no commit needed —
+    # `git ls-files` reads the index, which is populated by `git add`).
+    (pdf_root / "layer2" / ".gitkeep").touch()
+    leaked_pdf = pdf_root / "layer2" / "porto-trip" / "01-hotel-booking.pdf"
+    leaked_pdf.parent.mkdir(parents=True)
+    leaked_pdf.write_bytes(b"%PDF-1.4 fake bytes")
+    subprocess.run(
+        ["git", "-C", str(tmp_path), "add", "corpus/pdf/layer2/.gitkeep", str(leaked_pdf)],
+        check=True,
+    )
+
+    # The leak guard runs `git -C $WT_REPO_ROOT ls-files corpus/pdf/layer2/`.
+    # Schema / drift / sanity stay anchored at the real repo, which is fine —
+    # this test only cares that the leak guard fires. We shell out via
+    # ``uv run --with jsonschema`` so the validator gets the same dependency
+    # bundle ``just test-corpus`` uses (the backend's own venv lacks
+    # jsonschema by design).
+    env = {**os.environ, "WT_REPO_ROOT": str(tmp_path)}
+    proc = subprocess.run(
+        [
+            "uv",
+            "run",
+            "--python",
+            "3.12",
+            "--with",
+            "jsonschema",
+            "python",
+            str(VALIDATE_PATH),
+        ],
+        capture_output=True,
+        text=True,
+        env=env,
+        cwd=tmp_path,
+        check=False,
+    )
+
+    assert proc.returncode == 1, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
+    assert "Layer 2 leak guard failed" in proc.stdout, proc.stdout
+    assert (
+        "layer2-leak: corpus/pdf/layer2/porto-trip/01-hotel-booking.pdf "
+        "is tracked under corpus/pdf/layer2/"
+    ) in proc.stdout, proc.stdout
+    # Remediation hint points at `git rm --cached` with the offending path.
+    assert (
+        "git rm --cached corpus/pdf/layer2/porto-trip/01-hotel-booking.pdf"
+        in proc.stdout
+    ), proc.stdout
+    # The allowed .gitkeep entry is NOT flagged.
+    assert ".gitkeep is tracked" not in proc.stdout

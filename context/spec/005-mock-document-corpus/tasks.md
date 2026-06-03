@@ -91,14 +91,14 @@
 
 *Value: a contributor can drop a real PDF + expected-fields.json into `corpus/pdf/layer2/<trip-slug>/` and the next run picks it up. Leak guard prevents accidental commits.*
 
-- [ ] **Slice 6: Layer 2 (real-PDF) support end-to-end**
-  - [ ] Extend `runner.py` Layer 2 discovery: walk `corpus/pdf/layer2/<trip>/*.pdf` + sibling `*.expected-fields.json`, validate each JSON against the schema, run the same per-PDF flow. **[Agent: python-backend]**
-  - [ ] Confirm the runner's Layer 1 / Layer 2 / TOTAL split in the report works with a non-empty Layer 2. **[Agent: python-backend]**
-  - [ ] Extend `corpus/pdf/validate.py` with the **layer2 leak guard**: assert `git ls-files corpus/pdf/layer2/` returns only `.gitkeep`; any other tracked path fails the validator. **[Agent: python-backend]**
-  - [ ] Document the Layer 2 contributor workflow in `corpus/pdf/README.md`: directory shape, how to author `expected-fields.json`, how to determine `pdf_kind`, that PDFs must never be committed. **[Agent: python-backend]**
-  - [ ] Pytest test that drops a synthetic real-PDF + JSON pair into a tempdir layer2 (with `WT_LAYER2_ROOT` env override on the runner — add the env hook), runs the runner, asserts the trip is discovered and reported under Layer 2 totals. **[Agent: python-backend]**
-  - [ ] Pytest test for the leak guard: stage a fake PDF under `corpus/pdf/layer2/`, run the validator, assert it fails with a clear message. **[Agent: python-backend]**
-  - [ ] **Verify:** With Layer 2 empty, `just test-pdf-corpus` and `just test-corpus` pass. With a stubbed `layer2/<trip>/foo.pdf` + `foo.expected-fields.json` in a tempdir, the runner discovers and reports it. The leak guard catches a deliberate `git add` of a fake real PDF. **[Agent: python-backend]**
+- [x] **Slice 6: Layer 2 (real-PDF) support end-to-end**
+  - [x] Extend `runner.py` Layer 2 discovery: walk `corpus/pdf/layer2/<trip>/*.pdf` + sibling `*.expected-fields.json`, validate each JSON against the schema, run the same per-PDF flow. **[Agent: python-backend]**
+  - [x] Confirm the runner's Layer 1 / Layer 2 / TOTAL split in the report works with a non-empty Layer 2. **[Agent: python-backend]**
+  - [x] Extend `corpus/pdf/validate.py` with the **layer2 leak guard**: assert `git ls-files corpus/pdf/layer2/` returns only `.gitkeep`; any other tracked path fails the validator. **[Agent: python-backend]**
+  - [x] Document the Layer 2 contributor workflow in `corpus/pdf/README.md`: directory shape, how to author `expected-fields.json`, how to determine `pdf_kind`, that PDFs must never be committed. **[Agent: python-backend]**
+  - [x] Pytest test that drops a synthetic real-PDF + JSON pair into a tempdir layer2 (with `WT_LAYER2_ROOT` env override on the runner — add the env hook), runs the runner, asserts the trip is discovered and reported under Layer 2 totals. **[Agent: python-backend]**
+  - [x] Pytest test for the leak guard: stage a fake PDF under `corpus/pdf/layer2/`, run the validator, assert it fails with a clear message. **[Agent: python-backend]**
+  - [x] **Verify:** With Layer 2 empty, `just test-pdf-corpus` and `just test-corpus` pass. With a stubbed `layer2/<trip>/foo.pdf` + `foo.expected-fields.json` in a tempdir, the runner discovers and reports it. The leak guard catches a deliberate `git add` of a fake real PDF. **[Agent: python-backend]**
 
 ---
 

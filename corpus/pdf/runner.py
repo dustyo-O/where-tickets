@@ -22,6 +22,14 @@ Invocation (matches ``corpus/pdf/validate.py`` style)::
     python corpus/pdf/runner.py [--layer 1|2|both] [--filter SUBSTR] \\
         [--extractor-import-path DOTTED.PATH] [--json-report PATH]
 
+Environment overrides:
+- ``WT_REPO_ROOT`` — when set, the runner anchors *both* Layer 1 and Layer 2
+  discovery at ``<WT_REPO_ROOT>/corpus/pdf/<layer1|layer2>``. Useful for tests
+  that build a corpus tree in a tempdir.
+- ``WT_LAYER2_ROOT`` — when set, the runner walks this absolute path for
+  Layer 2 discovery instead of ``<repo_root>/corpus/pdf/layer2``. Independent
+  from ``WT_REPO_ROOT``; either or both may be set, and Layer 1 is unaffected.
+
 Exit codes:
 - ``0`` — all comparisons passed (including the extractor-not-wired case and
   the zero-scenarios case).
@@ -126,6 +134,9 @@ def _layer1_dir() -> Path:
 
 
 def _layer2_dir() -> Path:
+    override = os.environ.get("WT_LAYER2_ROOT")
+    if override:
+        return Path(override).resolve()
     return _repo_root() / "corpus" / "pdf" / "layer2"
 
 
@@ -149,6 +160,7 @@ class DiscoveredScenario(TypedDict):
     pdf_path: Path
     expected_path: Path
     label: str  # short label used in the FAILED: block, e.g. "L1 001-foo/document.pdf"
+    discovery_error: NotRequired[str]
 
 
 def _discover_layer1() -> list[DiscoveredScenario]:
@@ -172,21 +184,42 @@ def _discover_layer1() -> list[DiscoveredScenario]:
 
 
 def _discover_layer2() -> list[DiscoveredScenario]:
+    """Walk ``<layer2-root>/<trip>/*.pdf`` (single-level, no recursion past trip dirs).
+
+    Each ``<name>.pdf`` is expected to have a sibling ``<name>.expected-fields.json``.
+    A missing sibling JSON is surfaced as a *discovery error* scenario (forced
+    FAIL with a clear message); the trip itself is not skipped silently.
+    """
     root = _layer2_dir()
     if not root.exists():
         return []
     scenarios: list[DiscoveredScenario] = []
-    for pdf_path in sorted(root.glob("*/*.pdf")):
-        expected_path = pdf_path.with_suffix(".expected-fields.json")
-        if expected_path.exists():
-            scenarios.append(
-                DiscoveredScenario(
-                    layer="2",
-                    pdf_path=pdf_path,
-                    expected_path=expected_path,
-                    label=f"L2 {pdf_path.parent.name}/{pdf_path.name}",
+    for trip_dir in sorted(p for p in root.iterdir() if p.is_dir()):
+        for pdf_path in sorted(trip_dir.glob("*.pdf")):
+            expected_path = pdf_path.with_suffix(".expected-fields.json")
+            label = f"L2 {trip_dir.name}/{pdf_path.name}"
+            if expected_path.exists():
+                scenarios.append(
+                    DiscoveredScenario(
+                        layer="2",
+                        pdf_path=pdf_path,
+                        expected_path=expected_path,
+                        label=label,
+                    )
                 )
-            )
+            else:
+                scenarios.append(
+                    DiscoveredScenario(
+                        layer="2",
+                        pdf_path=pdf_path,
+                        expected_path=expected_path,
+                        label=label,
+                        discovery_error=(
+                            f"discovery: {_rel(pdf_path)} has no sibling "
+                            f"{expected_path.name}"
+                        ),
+                    )
+                )
     return scenarios
 
 
@@ -539,6 +572,18 @@ def _run_scenarios(
 ) -> list[ScenarioResult]:
     results: list[ScenarioResult] = []
     for scenario in scenarios:
+        if "discovery_error" in scenario:
+            results.append(
+                ScenarioResult(
+                    layer=scenario["layer"],
+                    label=scenario["label"],
+                    passed=False,
+                    failures=[scenario["discovery_error"]],
+                    extraction_path=None,
+                    expected_pdf_kind=None,
+                )
+            )
+            continue
         expected_payload = json.loads(scenario["expected_path"].read_text())
         expected_pdf_kind = expected_payload.get("pdf_kind")
         try:

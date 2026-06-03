@@ -1,7 +1,13 @@
 """Per-PDF structural + drift + token-sanity validation for the corpus.
 
-Runs six checks for each committed scenario (technical-considerations §2.7):
+Runs the following checks for each committed scenario (technical-considerations
+§2.7):
 
+0. **Layer 2 leak guard:** ``git ls-files corpus/pdf/layer2/`` must return only
+   ``.gitkeep``. Any other tracked path under ``corpus/pdf/layer2/`` is a leak
+   (real PDFs / JSON must never be committed) and fails the validator. Runs
+   before per-file checks so a leak fails fast. Skipped with a warning if
+   ``git`` is unavailable.
 1. Schema (Draft 2020-12) against ``schema/expected-fields.schema.json``.
 2. City-integrity: every ``stations[]/accommodations[]/venues[].city`` value
    must appear in the top-level ``cities[]``.
@@ -20,6 +26,11 @@ Runs six checks for each committed scenario (technical-considerations §2.7):
    the extracted text. ``pdf_kind=="rasterized"`` asserts the text layer is
    empty. Skipped with a warning if pymupdf isn't importable.
 
+Environment overrides:
+- ``WT_REPO_ROOT`` — when set, anchors discovery and the leak-guard's
+  ``git -C`` invocation at this absolute path instead of the repo containing
+  this file.
+
 Invocation::
 
     uv run --python 3.12 --with jsonschema --with pymupdf python corpus/pdf/validate.py
@@ -31,6 +42,8 @@ from __future__ import annotations
 
 import difflib
 import json
+import os
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -57,6 +70,16 @@ REPO_ROOT = ROOT.parent.parent
 # ``corpus`` resolves as a PEP 420 namespace package (no __init__.py needed).
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+
+
+def _leak_guard_repo_root() -> Path:
+    """Resolve the repo root for the leak-guard's ``git ls-files`` invocation.
+
+    Honors ``WT_REPO_ROOT`` so tests can point the leak guard at a synthetic
+    tempdir git repo without disturbing schema / drift / sanity checks.
+    """
+    override = os.environ.get("WT_REPO_ROOT")
+    return Path(override).resolve() if override else REPO_ROOT
 
 # Per-document-type minimum counts (see technical-considerations sec. 2.2).
 MIN_STATIONS = {"air_ticket", "rail_ticket", "bus_ticket"}
@@ -289,6 +312,57 @@ def _drift_check() -> tuple[list[str], list[str]]:
 
 
 # ---------------------------------------------------------------------------
+# Layer 2 leak guard.
+# ---------------------------------------------------------------------------
+
+
+_LAYER2_LEAK_ALLOWLIST = frozenset({"corpus/pdf/layer2/.gitkeep"})
+
+
+def _leak_guard_check() -> tuple[list[str], list[str]]:
+    """Layer-2 leak guard. Returns ``(failures, warnings)``.
+
+    Runs ``git -C <repo-root> ls-files corpus/pdf/layer2/``. Anything other
+    than the ``.gitkeep`` placeholder counts as a leaked real PDF / JSON and
+    fails the validator with actionable guidance. If ``git`` is unavailable
+    (script run outside a repo, no git binary, etc.) emit a single warning
+    and return no failures — mirrors the drift check's skip pattern.
+    """
+    failures: list[str] = []
+    warnings: list[str] = []
+    repo_root = _leak_guard_repo_root()
+
+    try:
+        proc = subprocess.run(
+            ["git", "-C", str(repo_root), "ls-files", "corpus/pdf/layer2/"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except (FileNotFoundError, OSError) as exc:
+        warnings.append(f"layer2-leak: git unavailable — leak check skipped ({exc})")
+        return failures, warnings
+
+    if proc.returncode != 0:
+        warnings.append(
+            "layer2-leak: git unavailable — leak check skipped "
+            f"(git ls-files exited {proc.returncode}: {proc.stderr.strip()})"
+        )
+        return failures, warnings
+
+    tracked = [line for line in proc.stdout.splitlines() if line.strip()]
+    for entry in tracked:
+        if entry in _LAYER2_LEAK_ALLOWLIST:
+            continue
+        failures.append(
+            f"layer2-leak: {entry} is tracked under corpus/pdf/layer2/ — "
+            "real PDFs and their JSON must never be committed.\n"
+            f"              Drop them from git index with: git rm --cached {entry}"
+        )
+    return failures, warnings
+
+
+# ---------------------------------------------------------------------------
 # PDF/JSON token sanity.
 # ---------------------------------------------------------------------------
 
@@ -421,6 +495,11 @@ def main() -> int:
         print(f"ERROR: schema does not exist: {SCHEMA_PATH}", file=sys.stderr)
         return 2
 
+    # Leak guard runs first so an accidental commit fails fast in the log.
+    leak_failures, leak_warnings = _leak_guard_check()
+    for warning in leak_warnings:
+        print(f"WARNING: {warning}")
+
     validator = _load_validator(SCHEMA_PATH)
     files = _discover_files()
 
@@ -450,6 +529,11 @@ def main() -> int:
                 _sanity_check_file(json_path, payload, pymupdf_module)
             )
 
+    if leak_failures:
+        print(f"Layer 2 leak guard failed ({len(leak_failures)} tracked files):")
+        for failure in leak_failures:
+            _print_indented("  - ", failure, "    ")
+
     passed = 0
     failed = 0
     for path, results, _payload in file_results:
@@ -469,7 +553,7 @@ def main() -> int:
 
     total = passed + failed
     print(f"Validated {total} files: {passed} passed, {failed} failed")
-    return 1 if failed or drift_failures else 0
+    return 1 if failed or drift_failures or leak_failures else 0
 
 
 if __name__ == "__main__":
