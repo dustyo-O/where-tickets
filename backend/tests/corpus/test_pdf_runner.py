@@ -31,7 +31,14 @@ REAL_SCHEMA = REPO_ROOT / "corpus" / "pdf" / "schema" / "expected-fields.schema.
 # Slice 3 replaced the hand-authored Slice 1 fixture with the generator's
 # first matrix scenario; this test only needs *any* committed PDF whose bytes
 # can be copied into the per-test tempdir, so the path is fine to swap.
-REAL_FIXTURE_DIR = REPO_ROOT / "corpus" / "pdf" / "layer1" / "scenarios" / "001-air-1leg-1pax-paris-lisbon"
+REAL_FIXTURE_DIR = (
+    REPO_ROOT
+    / "corpus"
+    / "pdf"
+    / "layer1"
+    / "scenarios"
+    / "001-air-1leg-1pax-paris-lisbon"
+)
 
 
 # --------------------------------------------------------------------------- #
@@ -280,15 +287,14 @@ def test_extractor_not_wired_prints_banner_and_exits_zero(corpus_tree: Path) -> 
 
     assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
     assert (
-        "extractor not wired: install per AI Document Understanding spec"
-        in proc.stdout
+        "extractor not wired: install per AI Document Understanding spec" in proc.stdout
     )
     # Skipped summary: 0/2 for Layer 1, 0/0 for Layer 2, 0/2 overall.
     assert re.search(r"Layer 1 \(synthetic\):\s+0/2 skipped", proc.stdout), proc.stdout
     assert re.search(r"Layer 2 \(real\):\s+0/0 skipped", proc.stdout), proc.stdout
-    assert re.search(
-        r"TOTAL:\s+0/2 skipped\s+—\s+extractor not wired", proc.stdout
-    ), proc.stdout
+    assert re.search(r"TOTAL:\s+0/2 skipped\s+—\s+extractor not wired", proc.stdout), (
+        proc.stdout
+    )
     # No FAILED: block when nothing was actually compared.
     assert "FAILED:" not in proc.stdout
     # No path-mix or DIAGNOSTIC blocks when nothing was extracted.
@@ -323,7 +329,8 @@ def test_path_mix_summary_appears_on_layer_lines(corpus_tree: Path) -> None:
     assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
     # Locate the Layer 1 line and assert path-mix tokens, with no `unknown=`.
     layer1_line = next(
-        line for line in proc.stdout.splitlines()
+        line
+        for line in proc.stdout.splitlines()
         if line.startswith("Layer 1 (synthetic):")
     )
     assert "path: text=1 vision=1" in layer1_line, layer1_line
@@ -352,7 +359,8 @@ def test_unknown_path_category_appears_when_extraction_path_missing(
 
     assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
     layer1_line = next(
-        line for line in proc.stdout.splitlines()
+        line
+        for line in proc.stdout.splitlines()
         if line.startswith("Layer 1 (synthetic):")
     )
     # 1 text, 1 unknown (the air-ticket scenario), in that exact order.
@@ -489,7 +497,14 @@ def test_layer_2_leak_guard_catches_tracked_pdf(tmp_path: Path) -> None:
     leaked_pdf.parent.mkdir(parents=True)
     leaked_pdf.write_bytes(b"%PDF-1.4 fake bytes")
     subprocess.run(
-        ["git", "-C", str(tmp_path), "add", "corpus/pdf/layer2/.gitkeep", str(leaked_pdf)],
+        [
+            "git",
+            "-C",
+            str(tmp_path),
+            "add",
+            "corpus/pdf/layer2/.gitkeep",
+            str(leaked_pdf),
+        ],
         check=True,
     )
 

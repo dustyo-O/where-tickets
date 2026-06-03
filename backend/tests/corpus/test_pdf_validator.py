@@ -151,5 +151,3 @@ def test_coverage_fails_when_multileg_missing(cloned_corpus: Path) -> None:
         "coverage: only 0 multi-leg scenarios (cities[] ≥ 3); expected ≥3"
         in proc.stdout
     ), proc.stdout
-
-
