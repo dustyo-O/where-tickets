@@ -1,7 +1,7 @@
 # Functional Specification: Mock-Document Corpus
 
 - **Roadmap Item:** Mock-Document Corpus (Phase 1 → Route Engine Foundation)
-- **Status:** Draft
+- **Status:** Completed
 - **Author:** Dusty
 
 ---
@@ -31,68 +31,68 @@ The corpus has two layers:
 
 - **The corpus must contain ~150 single-PDF generated scenarios.**
   - **Acceptance Criteria:**
-    - [ ] The shared codebase holds 135–165 single-PDF scenario directories under `corpus/pdf/layer1/scenarios/`. Each directory ships exactly one `document.pdf` + one `expected-fields.json` (Layer 1 dropped the multi-PDF "trip" framing; that framing applies only to Layer 2 contributor-supplied real PDFs).
+    - [x] The shared codebase holds 135–165 single-PDF scenario directories under `corpus/pdf/layer1/scenarios/`. Each directory ships exactly one `document.pdf` + one `expected-fields.json` (Layer 1 dropped the multi-PDF "trip" framing; that framing applies only to Layer 2 contributor-supplied real PDFs).
 
 - **Every document type the product accepts must be represented.**
   - **Acceptance Criteria:**
-    - [ ] At least one fake PDF exists for each of: air ticket, rail ticket, bus ticket, hotel booking, Airbnb booking, supplementary (voucher / sightseeing / parking).
+    - [x] At least one fake PDF exists for each of: air ticket, rail ticket, bus ticket, hotel booking, Airbnb booking, supplementary (voucher / sightseeing / parking).
 
 - **Generated fake PDFs must look like real-world tickets.**
   - **Acceptance Criteria:**
-    - [ ] Each fake PDF carries a fictional brand/provider logo, realistic field placement, and noise of the kind found on real tickets: marketing footer, terms-and-conditions block, voucher codes, or multiple QR codes where appropriate to the document type.
+    - [x] Each fake PDF carries a fictional brand/provider logo, realistic field placement, and noise of the kind found on real tickets: marketing footer, terms-and-conditions block, voucher codes, or multiple QR codes where appropriate to the document type.
 
 - **All Layer 1 PDFs are in English for v1.**
   - **Acceptance Criteria:**
-    - [ ] No fake PDF contains non-English copy.
+    - [x] No fake PDF contains non-English copy.
 
 - **The corpus must cover these scenario shapes:**
   - **Acceptance Criteria:**
-    - [ ] At least three scenarios are multi-leg trips with 3 or more cities in sequence.
-    - [ ] At least three scenarios include a PDF covering two or more travelers on a single ticket/booking.
-    - [ ] At least three scenarios are return tickets where one PDF covers both outbound and return legs.
-    - [ ] At least three scenarios include a standalone supplementary document (voucher, sightseeing ticket, or parking confirmation) attached to a city.
+    - [x] At least three scenarios are multi-leg trips with 3 or more cities in sequence.
+    - [x] At least three scenarios include a PDF covering two or more travelers on a single ticket/booking.
+    - [x] At least three scenarios are return tickets where one PDF covers both outbound and return legs.
+    - [x] At least three scenarios include a standalone supplementary document (voucher, sightseeing ticket, or parking confirmation) attached to a city.
 
 - **Every Layer 1 PDF ships with its expected extracted fields (the ground truth for extraction).**
   - **Acceptance Criteria:**
-    - [ ] For each fake PDF there is an expected-fields record specifying: document type, all cities mentioned, all dates and times, all travelers named, all prices, and all QR codes present.
-    - [ ] When extraction runs against the PDF and produces those same fields, the scenario PASSES for extraction; any deviation in any field counts as a FAIL.
+    - [x] For each fake PDF there is an expected-fields record specifying: document type, all cities mentioned, all dates and times, all travelers named, all prices, and all QR codes present.
+    - [x] When extraction runs against the PDF and produces those same fields, the scenario PASSES for extraction; any deviation in any field counts as a FAIL.
 
 ### 2.2 Layer 2 — Real PDFs (Local-Only)
 
 - **Real PDFs are never committed to the shared codebase.**
   - **Acceptance Criteria:**
-    - [ ] The folder holding Layer 2 PDFs is excluded from version control.
-    - [ ] No real personal documents ever land in the project history.
+    - [x] The folder holding Layer 2 PDFs is excluded from version control.
+    - [x] No real personal documents ever land in the project history.
 
 - **The team can drop a real PDF into a known local folder alongside its expected fields, and the next corpus run picks it up.**
   - **Acceptance Criteria:**
-    - [ ] When a new real PDF and its expected-fields file are placed in the Layer 2 folder, running the corpus includes that PDF automatically, without any code change.
+    - [x] When a new real PDF and its expected-fields file are placed in the Layer 2 folder, running the corpus includes that PDF automatically, without any code change.
 
 - **Every Layer 2 PDF ships with its expected extracted fields (the ground truth for extraction).**
   - **Acceptance Criteria:**
-    - [ ] Each Layer 2 PDF has an expected-fields record specifying: document type, all cities mentioned, all dates and times, all travelers named, all prices, and all QR codes present.
-    - [ ] When extraction runs against the PDF and produces those same fields, the scenario PASSES; any deviation in any field counts as a FAIL.
+    - [x] Each Layer 2 PDF has an expected-fields record specifying: document type, all cities mentioned, all dates and times, all travelers named, all prices, and all QR codes present.
+    - [x] When extraction runs against the PDF and produces those same fields, the scenario PASSES; any deviation in any field counts as a FAIL.
 
 - **Layer 2 has no fixed size target for v1.**
   - **Acceptance Criteria:**
-    - [ ] Layer 2 grows organically as real PDFs are collected; the run does not error or fail if Layer 2 is empty on a given machine.
+    - [x] Layer 2 grows organically as real PDFs are collected; the run does not error or fail if Layer 2 is empty on a given machine.
 
 ### 2.3 Running the Corpus
 
 - **The engineer can run the full corpus on demand, and is expected to run it on every engine change.**
   - **Acceptance Criteria:**
-    - [ ] A single command runs every Layer 1 scenario and every Layer 2 scenario present on the local machine.
-    - [ ] Every scenario produces one of two outcomes: PASS or FAIL.
+    - [x] A single command runs every Layer 1 scenario and every Layer 2 scenario present on the local machine.
+    - [x] Every scenario produces one of two outcomes: PASS or FAIL.
 
 - **The run produces a global accuracy report, broken out by layer.**
   - **Acceptance Criteria:**
-    - [ ] At the end of every run, the engineer sees: total scenarios, scenarios passed, scenarios failed, and overall accuracy %.
-    - [ ] Layer 1 and Layer 2 accuracy are reported separately so each layer's quality is visible at a glance.
+    - [x] At the end of every run, the engineer sees: total scenarios, scenarios passed, scenarios failed, and overall accuracy %.
+    - [x] Layer 1 and Layer 2 accuracy are reported separately so each layer's quality is visible at a glance.
 
 - **For any failed scenario, the engineer can drill down into the expected-vs-actual diff.**
   - **Acceptance Criteria:**
-    - [ ] Each failed scenario lists which fields did not match.
-    - [ ] The diff shows expected and actual side-by-side for each mismatch.
+    - [x] Each failed scenario lists which fields did not match.
+    - [x] The diff shows expected and actual side-by-side for each mismatch.
 
 ---
 

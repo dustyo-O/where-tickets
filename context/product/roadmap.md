@@ -9,7 +9,7 @@ _This roadmap outlines our strategic direction based on customer needs and busin
 _Prove the core promise: a user can upload PDFs and see an accurate, structured trip. Tackle the riskiest unknown (the engine) first; account essentials come last because nothing else depends on them._
 
 - [ ] **Route Engine (Foundation)**
-  - [ ] **Mock-Document Corpus:** Curate a representative set of real-world ticket/booking PDFs and expected route outputs to drive engine quality and regression testing.
+  - [x] **Mock-Document Corpus:** Curate a representative set of real-world ticket/booking PDFs and expected route outputs to drive engine quality and regression testing. _Done: 150 single-PDF Layer 1 scenarios across 6 doc types; ~15% rasterized; runner reports per-scenario PASS / FAIL + path-mix; validator enforces schema + integrity + drift + sanity + leak guard + coverage. DUS-30._
   - [x] **Engine Spike & Decision:** Prototype both an LLM-driven and an algorithmic route-building approach against the corpus, then commit to one for v1. _Done: algorithmic picked for v1 (192/192 = 100%); LLM topped out at 83.9%. ADR: [`004-engine-decision-adr/decision.md`](../spec/004-engine-decision-adr/decision.md). DUS-21._
   - [ ] **Trip Route View:** Display the parsed route as an ordered sequence of cities with the documents attached to each leg; preserves prior user edits when new documents arrive.
 
