@@ -75,15 +75,15 @@
 
 *Value: ~22 of ~150 PDFs are rasterized (image-only). Validator distinguishes `text` vs `rasterized` sanity. Runner reports path-mix and the diagnostic for accidental vision fallback.*
 
-- [ ] **Slice 5: Rasterized rendering axis (~15%) + path-mix reporting**
-  - [ ] Extend `render.py` with a `rasterize=True` mode: take WeasyPrint PDF output, render each page to PNG at 120 DPI via PyMuPDF, re-emit as image-only PDF. **[Agent: python-backend]**
-  - [ ] Extend `matrix.py` to flag ~15% of scenarios as `rendering=rasterized` (deterministic selection). **[Agent: python-backend]**
-  - [ ] Regen and commit. ~22 scenarios now have `pdf_kind: rasterized` in their JSON and image-only PDFs. **[Agent: python-backend]**
-  - [ ] Extend `corpus/pdf/validate.py` PDF/JSON sanity to **split by `pdf_kind`**: `text` → existing check; `rasterized` → assert text layer is empty (whitespace-only). **[Agent: python-backend]**
-  - [ ] Extend `runner.py` report with the **path-mix summary** (`text=N vision=M`) per layer, computed from each result's `extraction_path`. **[Agent: python-backend]**
-  - [ ] Extend `runner.py` with the **DIAGNOSTIC** section listing `pdf_kind=text` scenarios where the extractor reported `extraction_path=vision` (non-failing; informational). **[Agent: python-backend]**
-  - [ ] Extend the stub extractor in the pytest fixtures to optionally return `extraction_path: "vision"` for rasterized PDFs, so the test covers both branches. Update `test_pdf_runner.py` to assert path-mix output and the diagnostic line. **[Agent: python-backend]**
-  - [ ] **Verify:** ~22 of the committed PDFs are rasterized; validator's split sanity passes both branches. `just test-pdf-corpus` shows path mix in its report. The diagnostic line appears when the stub reports a false fallback. Pytest passes. **[Agent: python-backend]**
+- [x] **Slice 5: Rasterized rendering axis (~15%) + path-mix reporting**
+  - [x] Extend `render.py` with a `rasterize=True` mode: take WeasyPrint PDF output, render each page to PNG at 120 DPI via PyMuPDF, re-emit as image-only PDF. **[Agent: python-backend]**
+  - [x] Extend `matrix.py` to flag ~15% of scenarios as `rendering=rasterized` (deterministic selection). **[Agent: python-backend]**
+  - [x] Regen and commit. ~22 scenarios now have `pdf_kind: rasterized` in their JSON and image-only PDFs. **[Agent: python-backend]**
+  - [x] Extend `corpus/pdf/validate.py` PDF/JSON sanity to **split by `pdf_kind`**: `text` → existing check; `rasterized` → assert text layer is empty (whitespace-only). **[Agent: python-backend]**
+  - [x] Extend `runner.py` report with the **path-mix summary** (`text=N vision=M`) per layer, computed from each result's `extraction_path`. **[Agent: python-backend]**
+  - [x] Extend `runner.py` with the **DIAGNOSTIC** section listing `pdf_kind=text` scenarios where the extractor reported `extraction_path=vision` (non-failing; informational). **[Agent: python-backend]**
+  - [x] Extend the stub extractor in the pytest fixtures to optionally return `extraction_path: "vision"` for rasterized PDFs, so the test covers both branches. Update `test_pdf_runner.py` to assert path-mix output and the diagnostic line. **[Agent: python-backend]**
+  - [x] **Verify:** ~22 of the committed PDFs are rasterized; validator's split sanity passes both branches. `just test-pdf-corpus` shows path mix in its report. The diagnostic line appears when the stub reports a false fallback. Pytest passes. **[Agent: python-backend]**
 
 ---
 

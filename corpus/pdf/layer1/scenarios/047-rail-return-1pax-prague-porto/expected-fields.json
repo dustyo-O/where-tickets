@@ -6,7 +6,7 @@
   ],
   "document_type": "rail_ticket",
   "noise_seed": 1094593875353597972,
-  "pdf_kind": "text",
+  "pdf_kind": "rasterized",
   "prices": [
     {
       "amount": 181.2,

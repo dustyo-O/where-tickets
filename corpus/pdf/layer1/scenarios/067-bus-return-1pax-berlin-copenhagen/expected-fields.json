@@ -6,7 +6,7 @@
   ],
   "document_type": "bus_ticket",
   "noise_seed": 10675211125525396148,
-  "pdf_kind": "text",
+  "pdf_kind": "rasterized",
   "prices": [
     {
       "amount": 28.65,

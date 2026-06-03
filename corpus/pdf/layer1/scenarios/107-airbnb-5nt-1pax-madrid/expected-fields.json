@@ -13,7 +13,7 @@
   ],
   "document_type": "airbnb_booking",
   "noise_seed": 5395227491460785872,
-  "pdf_kind": "text",
+  "pdf_kind": "rasterized",
   "prices": [
     {
       "amount": 108.98,

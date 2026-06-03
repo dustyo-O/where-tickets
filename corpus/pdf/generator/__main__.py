@@ -305,6 +305,7 @@ def _write_scenario(
         template_name,
         scenario_dir / "document.pdf",
         context=context,
+        rasterized=spec.rendering == "rasterized",
     )
 
     # `sort_keys=True` makes the JSON byte-stable across runs.

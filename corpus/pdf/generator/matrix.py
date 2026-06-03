@@ -40,7 +40,7 @@ from __future__ import annotations
 import hashlib
 import re
 from collections.abc import Iterator
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Any, Literal
 
 from corpus.pdf.generator.data import (
@@ -65,6 +65,7 @@ type DocumentType = Literal[
 ]
 type AccommodationKind = Literal["hotel", "airbnb"]
 type VenueKind = Literal["sightseeing", "parking", "other"]
+type Rendering = Literal["text", "rasterized"]
 
 # Each entry is an index pair into the data layer's `CITY_POOL`. Picking
 # concrete indices (rather than re-rolling per-scenario) keeps coverage
@@ -151,6 +152,21 @@ DOCUMENT_TYPES: tuple[DocumentType, ...] = (
     *ACCOMMODATION_DOCUMENT_TYPES,
     "supplementary",
 )
+
+# Per-doc-type rasterized quota. Sum = 22, sits inside the [18, 28] band the
+# functional spec calls "~15% rasterized" and gives each doc-type at least 3
+# rasterized scenarios. Tuning the individual quotas (rather than picking a
+# single global %) keeps the spread even across doc types — the maximum share
+# of any one doc-type is 4/22 ≈ 18%, well under the 35% cap the slice plan
+# calls for.
+_RASTERIZED_QUOTA: dict[DocumentType, int] = {
+    "air_ticket": 4,
+    "rail_ticket": 4,
+    "bus_ticket": 4,
+    "hotel_booking": 3,
+    "airbnb_booking": 3,
+    "supplementary": 4,
+}
 
 
 # Per-document_type metadata for stations[] entries and scenario_id slugs.
@@ -364,6 +380,9 @@ class ScenarioSpec:
     and ``destination_index``. Accommodation scenarios (hotel / airbnb) carry
     ``stay_nights`` and reuse ``origin_index`` as the property's city
     (``destination_index`` is set equal to ``origin_index`` for those rows).
+    ``rendering`` is set by :func:`enumerate_scenarios` after the per-doc-type
+    rasterized selection is computed; it drives both ``render.render_pdf``'s
+    rasterize branch and the ``pdf_kind`` value baked into ``expected_fields``.
     The default values keep the existing transit call-sites working
     unchanged.
     """
@@ -377,6 +396,7 @@ class ScenarioSpec:
     shape: Shape = "one_leg"
     stay_nights: int = 0
     venue_kind: VenueKind | None = None
+    rendering: Rendering = "text"
 
     def _resolve_cities(self) -> tuple[City, City]:
         """Resolve the origin / destination ``City`` records.
@@ -503,7 +523,7 @@ class ScenarioSpec:
             "travelers": traveler_names,
             "prices": prices,
             "qr_codes": qr_codes,
-            "pdf_kind": "text",
+            "pdf_kind": self.rendering,
             "scenario_id": self.scenario_id,
             "noise_seed": self.noise_seed,
         }
@@ -552,7 +572,7 @@ class ScenarioSpec:
             "travelers": traveler_names,
             "prices": prices,
             "qr_codes": qr_codes,
-            "pdf_kind": "text",
+            "pdf_kind": self.rendering,
             "scenario_id": self.scenario_id,
             "noise_seed": self.noise_seed,
         }
@@ -603,7 +623,7 @@ class ScenarioSpec:
             "travelers": traveler_names,
             "prices": prices,
             "qr_codes": qr_codes,
-            "pdf_kind": "text",
+            "pdf_kind": self.rendering,
             "scenario_id": self.scenario_id,
             "noise_seed": self.noise_seed,
         }
@@ -807,21 +827,44 @@ def _enumerate_supplementary_scenarios(start_index: int) -> Iterator[ScenarioSpe
             index += 1
 
 
-def enumerate_scenarios() -> Iterator[ScenarioSpec]:
-    """Yield the full scenario matrix across every Slice 4 document type.
+def _rasterized_rank(scenario_id: str) -> int:
+    """Stable per-scenario rank used to pick the rasterized subset.
 
-    Order is fixed so scenario_id indices are stable:
+    SHA-256 of ``"rasterize:" + scenario_id``, first 8 bytes interpreted as a
+    big-endian unsigned integer. Sorting by this value then taking the lowest
+    N per doc-type gives a deterministic, spread-by-doc-type selection that
+    is reproducible from the scenario_id alone — no extra state needed.
 
-    - Transit: air (001..024) -> rail (025..048) -> bus (049..072), grouped
-      by city-pair -> shape -> traveler count.
-    - Accommodation: hotel (073..096) -> airbnb (097..120), grouped by
-      city -> stay_nights -> traveler count.
-    - Supplementary: 121..144 — 18 single-traveler (one per city per kind)
-      then 6 two-traveler (first 2 cities per kind).
+    Prefixing the hash input keeps this seed independent of the data and
+    noise seeds so any future tweak to those stays orthogonal to the
+    rasterized membership set.
+    """
+    digest = hashlib.sha256(("rasterize:" + scenario_id).encode("utf-8")).digest()
+    return int.from_bytes(digest[:8], "big")
 
-    ``list(enumerate_scenarios()) == list(enumerate_scenarios())`` must
-    always hold. The 120 committed transit + accommodation scenarios stay
-    byte-identical because supplementary rows are appended, not interleaved.
+
+def _select_rasterized_ids(specs: list[ScenarioSpec]) -> frozenset[str]:
+    """Pick the rasterized subset deterministically, per-doc-type quota.
+
+    Groups ``specs`` by ``document_type``, ranks each group's scenario_ids by
+    :func:`_rasterized_rank`, and takes the lowest ``_RASTERIZED_QUOTA[type]``
+    per group. Stable across regenerations because the rank is a pure
+    function of the scenario_id string.
+    """
+    selected: set[str] = set()
+    for document_type, quota in _RASTERIZED_QUOTA.items():
+        group = [s for s in specs if s.document_type == document_type]
+        ranked = sorted(group, key=lambda s: _rasterized_rank(s.scenario_id))
+        selected.update(s.scenario_id for s in ranked[:quota])
+    return frozenset(selected)
+
+
+def _enumerate_all_text() -> Iterator[ScenarioSpec]:
+    """Yield every scenario with the default ``rendering="text"`` flag.
+
+    Internal helper used by :func:`enumerate_scenarios` to materialise the
+    full matrix once so the rasterized selection can be computed against the
+    real scenario_ids.
     """
     yield from _enumerate_transit_scenarios(start_index=1)
     transit_total = (
@@ -839,6 +882,34 @@ def enumerate_scenarios() -> Iterator[ScenarioSpec]:
     yield from _enumerate_supplementary_scenarios(
         start_index=transit_total + accommodation_total + 1
     )
+
+
+def enumerate_scenarios() -> Iterator[ScenarioSpec]:
+    """Yield the full scenario matrix across every Slice 4 document type.
+
+    Order is fixed so scenario_id indices are stable:
+
+    - Transit: air (001..024) -> rail (025..048) -> bus (049..072), grouped
+      by city-pair -> shape -> traveler count.
+    - Accommodation: hotel (073..096) -> airbnb (097..120), grouped by
+      city -> stay_nights -> traveler count.
+    - Supplementary: 121..144 — 18 single-traveler (one per city per kind)
+      then 6 two-traveler (first 2 cities per kind).
+
+    Each spec also carries a ``rendering`` flag of ``"text"`` (default) or
+    ``"rasterized"`` (~15% of the corpus, ``_RASTERIZED_QUOTA`` per doc-type).
+    The rasterized subset is deterministic per scenario_id, so
+    ``list(enumerate_scenarios()) == list(enumerate_scenarios())`` always
+    holds. Text-only callers can ignore the flag — the JSON payload's
+    ``pdf_kind`` mirrors it automatically.
+    """
+    all_specs = list(_enumerate_all_text())
+    rasterized_ids = _select_rasterized_ids(all_specs)
+    for spec in all_specs:
+        if spec.scenario_id in rasterized_ids:
+            yield replace(spec, rendering="rasterized")
+        else:
+            yield spec
 
 
 # Sanity guards: each document_type's axis sweep must stay at "~25" (20..30
@@ -877,6 +948,7 @@ __all__ = [
     "DocumentType",
     "AccommodationKind",
     "VenueKind",
+    "Rendering",
     "DOCUMENT_TYPES",
     "TRANSIT_DOCUMENT_TYPES",
     "ACCOMMODATION_DOCUMENT_TYPES",

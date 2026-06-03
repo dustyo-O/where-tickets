@@ -288,3 +288,96 @@ def test_extractor_not_wired_prints_banner_and_exits_zero(corpus_tree: Path) -> 
     ), proc.stdout
     # No FAILED: block when nothing was actually compared.
     assert "FAILED:" not in proc.stdout
+    # No path-mix or DIAGNOSTIC blocks when nothing was extracted.
+    assert "path:" not in proc.stdout
+    assert "DIAGNOSTIC" not in proc.stdout
+
+
+# --------------------------------------------------------------------------- #
+# Sub-task 5/6 tests: path-mix summary + DIAGNOSTIC accidental-vision block.
+# --------------------------------------------------------------------------- #
+
+
+def _with_path(payload: dict[str, Any], extraction_path: str) -> dict[str, Any]:
+    """Return a copy of ``payload`` tagged with the given ``extraction_path``."""
+    tagged = dict(payload)
+    tagged["extraction_path"] = extraction_path
+    return tagged
+
+
+def test_path_mix_summary_appears_on_layer_lines(corpus_tree: Path) -> None:
+    """Layer 1 line shows ``path: text=1 vision=1``; TOTAL has no path-mix."""
+    _write_stub(
+        corpus_tree,
+        {
+            "001-pass": _with_path(_air_ticket_payload(), "text"),
+            "002-hotel": _with_path(_hotel_payload(), "vision"),
+        },
+    )
+
+    proc = _run_runner(corpus_tree)
+
+    assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
+    # Locate the Layer 1 line and assert path-mix tokens, with no `unknown=`.
+    layer1_line = next(
+        line for line in proc.stdout.splitlines()
+        if line.startswith("Layer 1 (synthetic):")
+    )
+    assert "path: text=1 vision=1" in layer1_line, layer1_line
+    assert "unknown" not in layer1_line, layer1_line
+    # TOTAL line has no path-mix segment.
+    total_line = next(
+        line for line in proc.stdout.splitlines() if line.startswith("TOTAL:")
+    )
+    assert "path:" not in total_line, total_line
+
+
+def test_unknown_path_category_appears_when_extraction_path_missing(
+    corpus_tree: Path,
+) -> None:
+    """A response omitting ``extraction_path`` is counted as ``unknown``."""
+    _write_stub(
+        corpus_tree,
+        {
+            # No extraction_path on either response.
+            "001-pass": _air_ticket_payload(),
+            "002-hotel": _with_path(_hotel_payload(), "text"),
+        },
+    )
+
+    proc = _run_runner(corpus_tree)
+
+    assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
+    layer1_line = next(
+        line for line in proc.stdout.splitlines()
+        if line.startswith("Layer 1 (synthetic):")
+    )
+    # 1 text, 1 unknown (the air-ticket scenario), in that exact order.
+    assert "path: text=1 unknown=1" in layer1_line, layer1_line
+    assert "vision" not in layer1_line, layer1_line
+
+
+def test_diagnostic_lists_text_pdf_routed_to_vision(corpus_tree: Path) -> None:
+    """``pdf_kind=text`` + ``extraction_path=vision`` → DIAGNOSTIC entry, exit 0."""
+    _write_stub(
+        corpus_tree,
+        {
+            # Air ticket: text PDF, extractor (correctly) returns text path.
+            "001-pass": _with_path(_air_ticket_payload(), "text"),
+            # Hotel: expected pdf_kind=text, but extractor fell back to vision.
+            "002-hotel": _with_path(_hotel_payload(), "vision"),
+        },
+    )
+
+    proc = _run_runner(corpus_tree)
+
+    # Still a PASS run — diagnostic does not flip exit code.
+    assert proc.returncode == 0, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
+    assert "DIAGNOSTIC (non-failing):" in proc.stdout, proc.stdout
+
+    diagnostic_block = proc.stdout.split("DIAGNOSTIC (non-failing):", 1)[1]
+    # The hotel scenario appears with the layer prefix and the canonical phrasing.
+    assert "L1 002-hotel/document.pdf" in diagnostic_block, diagnostic_block
+    assert "pdf_kind=text but extractor fell back to vision" in diagnostic_block
+    # The text-path scenario should NOT appear in the diagnostic block.
+    assert "001-pass" not in diagnostic_block, diagnostic_block

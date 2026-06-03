@@ -13,7 +13,7 @@
   ],
   "document_type": "hotel_booking",
   "noise_seed": 14168369702392829528,
-  "pdf_kind": "text",
+  "pdf_kind": "rasterized",
   "prices": [
     {
       "amount": 173.53,

@@ -354,13 +354,50 @@ class ScenarioResult(TypedDict):
     label: str
     passed: bool
     failures: list[str]
-    extraction_path: str | None  # collected but not displayed at this slice
+    extraction_path: str | None
+    expected_pdf_kind: str | None  # from expected-fields.json; used for diagnostics
 
 
 def _accuracy(passed: int, total: int) -> str:
     if total == 0:
         return " n/a %"
     return f"{(passed / total) * 100:.1f}%"
+
+
+def _path_mix(group: list[ScenarioResult]) -> str:
+    """Return a `path: text=N vision=N unknown=N` fragment, or '' if empty.
+
+    Categories with a zero count are omitted entirely. Used only on per-layer
+    lines, never on the TOTAL line.
+    """
+    if not group:
+        return ""
+    counts = {"text": 0, "vision": 0, "unknown": 0}
+    for result in group:
+        path = result["extraction_path"]
+        if path == "text":
+            counts["text"] += 1
+        elif path == "vision":
+            counts["vision"] += 1
+        else:
+            counts["unknown"] += 1
+    tokens = [f"{name}={count}" for name, count in counts.items() if count > 0]
+    if not tokens:
+        return ""
+    return "path: " + " ".join(tokens)
+
+
+def _diagnostics(results: list[ScenarioResult]) -> list[ScenarioResult]:
+    """Return results where pdf_kind=text but extractor returned vision.
+
+    These do not fail the run; they surface an accidental vision-fallback
+    on a text PDF that could have been parsed cheaper.
+    """
+    return [
+        r
+        for r in results
+        if r["expected_pdf_kind"] == "text" and r["extraction_path"] == "vision"
+    ]
 
 
 def _print_summary(results: list[ScenarioResult], extractor_wired: bool) -> None:
@@ -376,14 +413,20 @@ def _print_summary(results: list[ScenarioResult], extractor_wired: bool) -> None
         print(f"TOTAL:               0/{total} skipped — extractor not wired")
         return
 
-    def _line(label: str, group: list[ScenarioResult]) -> str:
+    def _line(label: str, group: list[ScenarioResult], with_path_mix: bool) -> str:
         total = len(group)
         passed = sum(1 for r in group if r["passed"])
-        return f"{label} {passed}/{total} PASS  ({_accuracy(passed, total)})"
+        base = f"{label} {passed}/{total} PASS  ({_accuracy(passed, total)})"
+        if with_path_mix:
+            mix = _path_mix(group)
+            if mix:
+                # Pad the base portion so per-layer lines align tidily.
+                base = f"{base:<45} {mix}"
+        return base
 
-    print(_line("Layer 1 (synthetic):", layer1))
-    print(_line("Layer 2 (real):     ", layer2))
-    print(_line("TOTAL:              ", results))
+    print(_line("Layer 1 (synthetic):", layer1, with_path_mix=True))
+    print(_line("Layer 2 (real):     ", layer2, with_path_mix=True))
+    print(_line("TOTAL:              ", results, with_path_mix=False))
 
     failed = [r for r in results if not r["passed"]]
     if failed:
@@ -393,6 +436,16 @@ def _print_summary(results: list[ScenarioResult], extractor_wired: bool) -> None
             print(f"  {result['label']}")
             for failure in result["failures"]:
                 print(f"    {failure}")
+
+    diagnostics = _diagnostics(results)
+    if diagnostics:
+        print()
+        print("DIAGNOSTIC (non-failing):")
+        for result in diagnostics:
+            print(
+                f"  {result['label']}  pdf_kind=text but extractor fell back to "
+                f"vision  ← perf regression worth a look"
+            )
 
 
 def _write_json_report(
@@ -487,6 +540,7 @@ def _run_scenarios(
     results: list[ScenarioResult] = []
     for scenario in scenarios:
         expected_payload = json.loads(scenario["expected_path"].read_text())
+        expected_pdf_kind = expected_payload.get("pdf_kind")
         try:
             actual: dict[str, Any] = dict(extractor(scenario["pdf_path"]))
         except Exception as exc:  # noqa: BLE001 — surface as a per-file failure
@@ -497,6 +551,7 @@ def _run_scenarios(
                     passed=False,
                     failures=[f"extractor raised {type(exc).__name__}: {exc}"],
                     extraction_path=None,
+                    expected_pdf_kind=expected_pdf_kind,
                 )
             )
             continue
@@ -508,6 +563,7 @@ def _run_scenarios(
                 passed=not failures,
                 failures=failures,
                 extraction_path=actual.get("extraction_path"),
+                expected_pdf_kind=expected_pdf_kind,
             )
         )
     return results
@@ -530,6 +586,7 @@ def main(argv: list[str] | None = None) -> int:
                     passed=False,
                     failures=[],
                     extraction_path=None,
+                    expected_pdf_kind=None,
                 )
                 for s in scenarios
             ]

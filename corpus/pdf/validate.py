@@ -361,10 +361,17 @@ def _sanity_check_file(
 
     pdf_kind = payload.get("pdf_kind")
     if pdf_kind == "rasterized":
-        if text.strip():
+        stripped = text.strip()
+        if stripped:
+            # Collapse whitespace and truncate so the report stays one-line;
+            # the snippet makes a real-world flip ("this PDF actually has text")
+            # immediately obvious in CI without dumping the whole page.
+            preview = " ".join(stripped.split())
+            if len(preview) > 50:
+                preview = preview[:47] + "..."
             return [
-                f"{_rel(pdf_path)} pdf_kind=rasterized but text layer "
-                "is non-empty"
+                f"rasterized PDF {_rel(pdf_path)} has non-empty text "
+                f"layer (got {preview!r})"
             ]
         return []
 
