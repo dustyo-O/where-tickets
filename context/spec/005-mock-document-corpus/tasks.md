@@ -106,8 +106,8 @@
 
 *Value: the corpus's own acceptance criteria are mechanically checked on every CI run. We can't accidentally drop below the required scenario shapes or break the engine's fragment-schema contract.*
 
-- [ ] **Slice 7: Coverage assertions + cross-schema sanity**
-  - [ ] Extend `corpus/pdf/validate.py` with **coverage assertions** per the functional spec:
+- [x] **Slice 7: Coverage assertions + cross-schema sanity**
+  - [x] Extend `corpus/pdf/validate.py` with **coverage assertions** per the functional spec:
     - Layer 1 single-PDF scenarios ∈ [135, 165]
     - ≥1 scenario per document type (all 6)
     - ≥3 multi-leg scenarios (`cities[].length ≥ 3`)
@@ -116,6 +116,6 @@
     - ≥3 standalone-supplementary scenarios
     - ~15% rasterized (count ∈ [18, 28])
     - **[Agent: python-backend]**
-  - [ ] Extend `corpus/pdf/validate.py` with **cross-schema sanity**: load `corpus/schema/extracted-fragment.schema.json` and one sample `expected-fields.json`; assert the sample also validates against the engine's fragment schema. Fails loudly if the two schemas diverge. **[Agent: python-backend]**
-  - [ ] Pytest test for the coverage assertions: deliberately exclude a category from a tempdir-cloned corpus, run the validator, assert it fails with a category-specific message. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` passes against the real corpus. Manually delete one document-type subtree in a scratch copy and confirm the validator fails with a clear "missing document type" message. Run `just test` end-to-end — all green. **[Agent: python-backend]**
+  - [x] Extend `corpus/pdf/validate.py` with **cross-schema sanity**: load `corpus/schema/extracted-fragment.schema.json` and one sample `expected-fields.json`; assert the sample also validates against the engine's fragment schema. Fails loudly if the two schemas diverge. **[Agent: python-backend]**
+  - [x] Pytest test for the coverage assertions: deliberately exclude a category from a tempdir-cloned corpus, run the validator, assert it fails with a category-specific message. **[Agent: python-backend]**
+  - [x] **Verify:** `just test-corpus` passes against the real corpus. Manually delete one document-type subtree in a scratch copy and confirm the validator fails with a clear "missing document type" message. Run `just test` end-to-end — all green. **[Agent: python-backend]**

@@ -1,0 +1,48 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London",
+    "Vienna",
+    "Prague"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 2804729929829391673,
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 301.73,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-150-air-multileg-2pax-london-vienna-prague-01",
+    "AIRTKT-150-air-multileg-2pax-london-vienna-prague-02"
+  ],
+  "scenario_id": "150-air-multileg-2pax-london-vienna-prague",
+  "stations": [
+    {
+      "city": "London",
+      "departure_datetime": "2027-03-11T08:00:00",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:15:00",
+      "city": "Vienna",
+      "departure_datetime": "2027-03-11T12:15:00",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T14:30:00",
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Gabriela Rossi",
+    "Diego Romano"
+  ],
+  "venues": []
+}

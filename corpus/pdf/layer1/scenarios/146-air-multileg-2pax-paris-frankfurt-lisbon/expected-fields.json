@@ -1,0 +1,48 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Frankfurt",
+    "Lisbon"
+  ],
+  "document_type": "air_ticket",
+  "noise_seed": 5385908644820589005,
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 411.73,
+      "currency": "GBP"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-146-air-multileg-2pax-paris-frankfurt-lisbon-01",
+    "AIRTKT-146-air-multileg-2pax-paris-frankfurt-lisbon-02"
+  ],
+  "scenario_id": "146-air-multileg-2pax-paris-frankfurt-lisbon",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-03-11T08:00:00",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T10:15:00",
+      "city": "Frankfurt",
+      "departure_datetime": "2027-03-11T12:15:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-11T14:30:00",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Carla Mendes",
+    "Tara Murphy"
+  ],
+  "venues": []
+}

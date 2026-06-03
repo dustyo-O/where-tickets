@@ -25,6 +25,13 @@ Runs the following checks for each committed scenario (technical-considerations
    ``YYYY-MM-DD`` date prefix from any ``*_datetime`` field must appear in
    the extracted text. ``pdf_kind=="rasterized"`` asserts the text layer is
    empty. Skipped with a warning if pymupdf isn't importable.
+7. **Layer 1 coverage assertions:** the functional spec's required scenario
+   shapes (multi-leg, multi-traveler, return-ticket, standalone-supplementary)
+   plus a Layer-1 size band (``N ∈ [135, 165]``), all six ``document_type``
+   values represented, and a rasterized-share band (``M ∈ [18, 28]``,
+   ~15% target). Corpus-wide; runs after per-file checks. The cross-schema
+   sanity check (engine-fragment-schema validation) is deferred to DUS-31 and
+   ships as a documented mapping note in ``corpus/pdf/README.md``.
 
 Environment overrides:
 - ``WT_REPO_ROOT`` — when set, anchors discovery and the leak-guard's
@@ -60,10 +67,22 @@ except ImportError:  # pragma: no cover - guidance for direct invocation
     sys.exit(2)
 
 ROOT = Path(__file__).resolve().parent
-SCHEMA_PATH = ROOT / "schema" / "expected-fields.schema.json"
-LAYER1_DIR = ROOT / "layer1" / "scenarios"
-LAYER2_DIR = ROOT / "layer2"
 REPO_ROOT = ROOT.parent.parent
+
+# Per-test redirect: ``WT_REPO_ROOT=<tmp>`` repoints discovery (schema,
+# Layer 1, Layer 2) at a tempdir tree of shape
+# ``<tmp>/corpus/pdf/{schema,layer1/scenarios,layer2}`` so tests can clone +
+# mutate the corpus without touching the real one. Defaults to the actual
+# repo root containing this file.
+_REPO_ROOT_OVERRIDE = os.environ.get("WT_REPO_ROOT")
+_DISCOVERY_ROOT = (
+    Path(_REPO_ROOT_OVERRIDE).resolve() / "corpus" / "pdf"
+    if _REPO_ROOT_OVERRIDE
+    else ROOT
+)
+SCHEMA_PATH = _DISCOVERY_ROOT / "schema" / "expected-fields.schema.json"
+LAYER1_DIR = _DISCOVERY_ROOT / "layer1" / "scenarios"
+LAYER2_DIR = _DISCOVERY_ROOT / "layer2"
 
 # Make ``corpus.pdf.generator.matrix`` importable when invoked as a script via
 # ``uv run --with jsonschema --with pymupdf python corpus/pdf/validate.py``.
@@ -95,7 +114,9 @@ DRIFT_SNIPPET_LIMIT = 3
 DRIFT_SNIPPET_LINES = 15
 
 # Per-file check ordering. The keys here drive the report layout, so keep
-# the iteration order stable (schema first, sanity last).
+# the iteration order stable (schema first, sanity last). ``drift`` and
+# ``coverage`` are corpus-wide aggregates that print after the per-file
+# blocks; they appear in this tuple so the report layout stays predictable.
 CHECK_ORDER: tuple[str, ...] = (
     "schema",
     "integrity",
@@ -103,6 +124,31 @@ CHECK_ORDER: tuple[str, ...] = (
     "datetime",
     "drift",
     "sanity",
+    "coverage",
+)
+
+# Functional-spec coverage bands and minima (see functional-spec §2.1 +
+# technical-considerations §2.3 scenario-coverage matrix). All band edges
+# are inclusive.
+LAYER1_SIZE_MIN = 135
+LAYER1_SIZE_MAX = 165
+RASTERIZED_MIN = 18
+RASTERIZED_MAX = 28
+MULTI_LEG_MIN = 3
+MULTI_TRAVELER_MIN = 3
+RETURN_TICKET_MIN = 3
+SUPPLEMENTARY_MIN = 3
+
+# Source-of-truth ``document_type`` values. Mirrors the schema enum at
+# ``schema/expected-fields.schema.json``. Kept as a tuple to preserve the
+# stable order used in the failure-message loop.
+ALL_DOCUMENT_TYPES: tuple[str, ...] = (
+    "air_ticket",
+    "rail_ticket",
+    "bus_ticket",
+    "hotel_booking",
+    "airbnb_booking",
+    "supplementary",
 )
 
 
@@ -465,6 +511,131 @@ def _sanity_check_file(
     return failures
 
 
+# ---------------------------------------------------------------------------
+# Layer 1 coverage assertions (functional spec §2.1).
+# ---------------------------------------------------------------------------
+
+
+def _is_return_ticket(payload: dict[str, Any]) -> bool:
+    """A transit ticket whose stations revisit a city (e.g. A -> B -> A)."""
+    if payload.get("document_type") not in TRANSIT_TICKETS:
+        return False
+    stations = payload.get("stations")
+    if not isinstance(stations, list):
+        return False
+    cities: list[str] = []
+    for entry in stations:
+        if not isinstance(entry, dict):
+            continue
+        city = entry.get("city")
+        if isinstance(city, str):
+            cities.append(city)
+    return len(cities) > len(set(cities))
+
+
+def _is_standalone_supplementary(payload: dict[str, Any]) -> bool:
+    """document_type=supplementary with at least one venues[] entry."""
+    if payload.get("document_type") != "supplementary":
+        return False
+    venues = payload.get("venues")
+    return isinstance(venues, list) and len(venues) > 0
+
+
+def _coverage_check() -> list[str]:
+    """Layer-1 corpus-wide coverage assertions. Returns aggregated failures.
+
+    Loads every Layer 1 ``expected-fields.json`` once and applies the
+    functional-spec coverage criteria (§2.1 + tech-spec §2.3 matrix). All
+    failing assertions are collected; the check never short-circuits, so the
+    report shows every category that needs more scenarios.
+    """
+    failures: list[str] = []
+    payloads: list[dict[str, Any]] = []
+    if LAYER1_DIR.exists():
+        for path in sorted(LAYER1_DIR.glob("*/expected-fields.json")):
+            try:
+                payload = json.loads(path.read_text())
+            except json.JSONDecodeError:
+                continue
+            if isinstance(payload, dict):
+                payloads.append(payload)
+
+    # Layer 1 size band.
+    total = len(payloads)
+    if not LAYER1_SIZE_MIN <= total <= LAYER1_SIZE_MAX:
+        failures.append(
+            f"coverage: Layer 1 has {total} scenarios; "
+            f"expected {LAYER1_SIZE_MIN}–{LAYER1_SIZE_MAX}"
+        )
+
+    # Document-type coverage: every enum value must appear at least once.
+    seen_types: set[str] = {
+        payload["document_type"]
+        for payload in payloads
+        if isinstance(payload.get("document_type"), str)
+    }
+    for doc_type in ALL_DOCUMENT_TYPES:
+        if doc_type not in seen_types:
+            failures.append(f"coverage: missing document_type {doc_type!r}")
+
+    # Multi-leg (cities[] length >= 3).
+    multi_leg = sum(
+        1
+        for payload in payloads
+        if isinstance(payload.get("cities"), list) and len(payload["cities"]) >= 3
+    )
+    if multi_leg < MULTI_LEG_MIN:
+        failures.append(
+            f"coverage: only {multi_leg} multi-leg scenarios "
+            f"(cities[] ≥ 3); expected ≥{MULTI_LEG_MIN}"
+        )
+
+    # Multi-traveler (travelers[] length >= 2).
+    multi_traveler = sum(
+        1
+        for payload in payloads
+        if isinstance(payload.get("travelers"), list)
+        and len(payload["travelers"]) >= 2
+    )
+    if multi_traveler < MULTI_TRAVELER_MIN:
+        failures.append(
+            f"coverage: only {multi_traveler} multi-traveler scenarios "
+            f"(travelers[] ≥ 2); expected ≥{MULTI_TRAVELER_MIN}"
+        )
+
+    # Return-ticket: transit ticket whose stations revisit a city.
+    return_tickets = sum(1 for payload in payloads if _is_return_ticket(payload))
+    if return_tickets < RETURN_TICKET_MIN:
+        failures.append(
+            f"coverage: only {return_tickets} return-ticket scenarios "
+            "(transit ticket with stations revisiting a city); "
+            f"expected ≥{RETURN_TICKET_MIN}"
+        )
+
+    # Standalone supplementary: document_type=supplementary with venues[].
+    standalone_supp = sum(
+        1 for payload in payloads if _is_standalone_supplementary(payload)
+    )
+    if standalone_supp < SUPPLEMENTARY_MIN:
+        failures.append(
+            f"coverage: only {standalone_supp} standalone-supplementary "
+            "scenarios (document_type=supplementary with venues[]); "
+            f"expected ≥{SUPPLEMENTARY_MIN}"
+        )
+
+    # Rasterized share band (~15% target).
+    rasterized = sum(
+        1 for payload in payloads if payload.get("pdf_kind") == "rasterized"
+    )
+    if not RASTERIZED_MIN <= rasterized <= RASTERIZED_MAX:
+        failures.append(
+            f"coverage: {rasterized} rasterized scenarios; "
+            f"expected {RASTERIZED_MIN}–{RASTERIZED_MAX} (~15% target)"
+        )
+
+    return failures
+
+
 def _load_pymupdf() -> tuple[Any | None, str | None]:
     """Try to import PyMuPDF. Returns ``(module, warning_or_none)``."""
     try:
@@ -551,9 +722,19 @@ def main() -> int:
         for failure in drift_failures:
             _print_indented("  - ", failure, "    ")
 
+    coverage_failures = _coverage_check()
+    if coverage_failures:
+        print(f"Coverage check failed ({len(coverage_failures)} issues):")
+        for failure in coverage_failures:
+            _print_indented("  - ", failure, "    ")
+    else:
+        print("Coverage check passed")
+
     total = passed + failed
     print(f"Validated {total} files: {passed} passed, {failed} failed")
-    return 1 if failed or drift_failures or leak_failures else 0
+    return 1 if (
+        failed or drift_failures or leak_failures or coverage_failures
+    ) else 0
 
 
 if __name__ == "__main__":

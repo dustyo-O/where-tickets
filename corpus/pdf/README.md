@@ -108,6 +108,38 @@ Minimal valid `expected-fields.json` example:
 }
 ```
 
+## Cross-schema mapping with the engine fragment schema (deferred to DUS-31)
+
+The validator's §2.7 step 4 — asserting an `ExtractedFields` payload also
+validates against the engine's fragment schema at
+[`../schema/extracted-fragment.schema.json`](../schema/extracted-fragment.schema.json)
+— **ships as documentation, not as a runtime assertion**, until the fragment
+schema is extended on the engine side (tracked as **DUS-31**).
+
+**Current divergence:**
+
+- The PDF corpus's `expected-fields` shape captures the *printed surface form*
+  of a document: a flat top-level `cities[]` (e.g. `"Paris"`, `"Lisbon"`) plus
+  structured arrays `stations[]`, `accommodations[]`, `venues[]` carrying
+  per-place datetimes, identifiers, and kinds.
+- The engine's fragment schema currently models only `cityCode` (3-letter IATA,
+  e.g. `"CDG"`, `"LIS"`) on `transitTicket` legs / `hotelBooking` city —
+  no station identifiers, no venues, no accommodations array.
+
+**Intended mapping (once DUS-31 lands):**
+
+- `cities[]` → fragment `cityCode` via a printed-name → IATA lookup.
+- `stations[].departure_datetime` / `arrival_datetime` → fragment `leg.departureAt` / `arrivalAt`.
+- `accommodations[]` → fragment `hotelBooking.checkInAt` / `checkOutAt` / `hotelName`.
+- `venues[]` is richer context the engine currently ignores; DUS-31 will decide
+  whether to model it or document it as out-of-scope for route assembly.
+
+**DUS-31 plan:** extend `corpus/schema/extracted-fragment.schema.json` to
+accept the richer shape, then upgrade `corpus/pdf/validate.py`'s coverage
+block to also run `jsonschema.validate(sample, fragment_schema)` against one
+mapped sample per `document_type`. The assertion becomes load-bearing only
+once both sides agree on the field set.
+
 ## Where the design lives
 
 The authoritative design for this folder — schema, generator, runner,

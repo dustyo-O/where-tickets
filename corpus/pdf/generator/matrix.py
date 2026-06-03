@@ -54,7 +54,7 @@ from corpus.pdf.generator.data import (
     pick_validity_window,
 )
 
-type Shape = Literal["one_leg", "return"]
+type Shape = Literal["one_leg", "return", "multileg"]
 type DocumentType = Literal[
     "air_ticket",
     "rail_ticket",
@@ -87,7 +87,26 @@ CITY_PAIR_INDICES: tuple[tuple[int, int], ...] = (
     (18, 28),  # Prague     -> Porto
 )
 
-SHAPES: tuple[Shape, ...] = ("one_leg", "return")
+# Multi-leg air-ticket triples. Each entry is an index triple into
+# ``CITY_POOL`` representing a 3-city itinerary (origin -> layover -> final
+# destination), used by the multi-leg air-ticket section appended after the
+# 144 base scenarios. Hand-picked so all three IATA codes per triple are
+# distinct and the cities are already in the pool. Triples chosen for
+# geographic plausibility of a layover routing.
+CITY_TRIPLE_INDICES: tuple[tuple[int, int, int], ...] = (
+    (0, 4, 1),  # Paris   -> Frankfurt -> Lisbon
+    (2, 12, 5),  # Madrid  -> Rome      -> Berlin
+    (26, 9, 18),  # London  -> Vienna    -> Prague
+)
+
+# Base transit shapes — the axis the original 24-per-doc-type sweep iterates
+# over. ``SHAPES`` is kept as a public alias for backwards compatibility with
+# any downstream importer (it pre-dates ``multileg`` as a shape value).
+# ``SHAPES_BASE`` is the explicit internal name used by the per-doc transit
+# enumeration so the multi-leg block does not accidentally re-enter that
+# sweep when ``Shape`` gains new variants.
+SHAPES_BASE: tuple[Shape, ...] = ("one_leg", "return")
+SHAPES: tuple[Shape, ...] = SHAPES_BASE
 TRAVELER_COUNTS: tuple[int, ...] = (1, 2)
 
 # Transit document types that ride the same axis structure (6 city-pairs *
@@ -397,6 +416,11 @@ class ScenarioSpec:
     stay_nights: int = 0
     venue_kind: VenueKind | None = None
     rendering: Rendering = "text"
+    # Optional intermediate city index for multi-leg transit scenarios.
+    # When non-``None`` and ``shape == "multileg"`` the scenario renders a
+    # 3-station itinerary: origin -> layover -> destination. Kept optional
+    # so existing 2-station / return scenarios are unaffected.
+    layover_index: int | None = None
 
     def _resolve_cities(self) -> tuple[City, City]:
         """Resolve the origin / destination ``City`` records.
@@ -446,6 +470,7 @@ class ScenarioSpec:
         station_kind = mode.station_kind
 
         stations: list[dict[str, Any]]
+        cities_payload: list[str]
         if self.shape == "one_leg":
             stations = [
                 {
@@ -461,6 +486,86 @@ class ScenarioSpec:
                     "arrival_datetime": outbound_arrival,
                 },
             ]
+            cities_payload = [origin.name, destination.name]
+        elif self.shape == "multileg":
+            if self.layover_index is None:
+                raise ValueError(
+                    f"multileg scenario {self.scenario_id!r} missing layover_index"
+                )
+            layover = CITY_POOL[self.layover_index]
+            layover_identifier = _identifier_for(layover, self.document_type)
+            # Outbound: origin departs at 08:00, arrives at layover after the
+            # mode's outbound duration.
+            multi_leg_origin_hour = 8
+            multi_leg_origin_minute = 0
+            outbound_dep = pick_datetime(
+                seed,
+                day_offset=10,
+                hour=multi_leg_origin_hour,
+                minute=multi_leg_origin_minute,
+            )
+            layover_arrival = pick_transit_arrival(
+                seed,
+                day_offset=10,
+                departure_hour=multi_leg_origin_hour,
+                departure_minute=multi_leg_origin_minute,
+                duration_hours=mode.outbound_duration_hours,
+                duration_minutes=mode.outbound_duration_minutes,
+            )
+            # Onward: layover departs ~2h after arrival (normal connection
+            # window), arrives at final destination after the mode's outbound
+            # duration. Decompose the layover arrival back into hour+minute so
+            # the helper can compute the onward arrival via pure arithmetic on
+            # integer offsets — keeps determinism intact and avoids new helpers.
+            layover_dep_hour = (
+                multi_leg_origin_hour
+                + mode.outbound_duration_hours
+                + 2  # +2h connection window
+            )
+            layover_dep_minute = (
+                multi_leg_origin_minute + mode.outbound_duration_minutes
+            )
+            # Carry any minute overflow into the hour count so pick_* helpers
+            # see canonical 0..59 values.
+            if layover_dep_minute >= 60:
+                layover_dep_hour += layover_dep_minute // 60
+                layover_dep_minute %= 60
+            layover_departure = pick_datetime(
+                seed,
+                day_offset=10,
+                hour=layover_dep_hour,
+                minute=layover_dep_minute,
+            )
+            final_arrival = pick_transit_arrival(
+                seed,
+                day_offset=10,
+                departure_hour=layover_dep_hour,
+                departure_minute=layover_dep_minute,
+                duration_hours=mode.outbound_duration_hours,
+                duration_minutes=mode.outbound_duration_minutes,
+            )
+            stations = [
+                {
+                    "city": origin.name,
+                    "kind": station_kind,
+                    "identifier": origin_identifier,
+                    "departure_datetime": outbound_dep,
+                },
+                {
+                    "city": layover.name,
+                    "kind": station_kind,
+                    "identifier": layover_identifier,
+                    "arrival_datetime": layover_arrival,
+                    "departure_datetime": layover_departure,
+                },
+                {
+                    "city": destination.name,
+                    "kind": station_kind,
+                    "identifier": destination_identifier,
+                    "arrival_datetime": final_arrival,
+                },
+            ]
+            cities_payload = [origin.name, layover.name, destination.name]
         else:  # "return"
             return_departure = pick_datetime(
                 seed,
@@ -497,6 +602,7 @@ class ScenarioSpec:
                     "arrival_datetime": return_arrival,
                 },
             ]
+            cities_payload = [origin.name, destination.name]
 
         traveler_names = list(pick_travelers(seed, self.travelers))
 
@@ -516,7 +622,7 @@ class ScenarioSpec:
 
         return {
             "document_type": self.document_type,
-            "cities": [origin.name, destination.name],
+            "cities": cities_payload,
             "stations": stations,
             "accommodations": [],
             "venues": [],
@@ -655,6 +761,13 @@ def _pick_venue_identifier(
     return pool[index]
 
 
+_SHAPE_SLUGS: dict[Shape, str] = {
+    "one_leg": "1leg",
+    "return": "return",
+    "multileg": "multileg",
+}
+
+
 def _build_transit_scenario_id(
     index: int,
     document_type: DocumentType,
@@ -669,7 +782,7 @@ def _build_transit_scenario_id(
     ``rail`` / ``bus``). Stable across regenerations because ``index`` is a
     fixed function of the enumeration order in :func:`enumerate_scenarios`.
     """
-    shape_slug = "1leg" if shape == "one_leg" else "return"
+    shape_slug = _SHAPE_SLUGS[shape]
     pax_slug = f"{travelers}pax"
     mode_slug = _DOCUMENT_MODES[document_type].slug
     origin_slug = _slugify(origin.name)
@@ -677,6 +790,30 @@ def _build_transit_scenario_id(
     return (
         f"{index:03d}-{mode_slug}-{shape_slug}-{pax_slug}-"
         f"{origin_slug}-{destination_slug}"
+    )
+
+
+def _build_multileg_scenario_id(
+    index: int,
+    document_type: DocumentType,
+    travelers: int,
+    origin: City,
+    layover: City,
+    destination: City,
+) -> str:
+    """`NNN-<mode>-multileg-<pax>pax-<origin>-<layover>-<destination>` slug.
+
+    Mirrors :func:`_build_transit_scenario_id` but encodes three city slugs
+    so the layover is visible in the scenario_id.
+    """
+    pax_slug = f"{travelers}pax"
+    mode_slug = _DOCUMENT_MODES[document_type].slug
+    origin_slug = _slugify(origin.name)
+    layover_slug = _slugify(layover.name)
+    destination_slug = _slugify(destination.name)
+    return (
+        f"{index:03d}-{mode_slug}-multileg-{pax_slug}-"
+        f"{origin_slug}-{layover_slug}-{destination_slug}"
     )
 
 
@@ -722,7 +859,7 @@ def _enumerate_transit_scenarios(start_index: int) -> Iterator[ScenarioSpec]:
         for origin_index, destination_index in CITY_PAIR_INDICES:
             origin = CITY_POOL[origin_index]
             destination = CITY_POOL[destination_index]
-            for shape in SHAPES:
+            for shape in SHAPES_BASE:
                 for traveler_count in TRAVELER_COUNTS:
                     scenario_id = _build_transit_scenario_id(
                         index,
@@ -742,6 +879,42 @@ def _enumerate_transit_scenarios(start_index: int) -> Iterator[ScenarioSpec]:
                         noise_seed=_noise_seed_for(scenario_id),
                     )
                     index += 1
+
+
+def _enumerate_multileg_air_scenarios(start_index: int) -> Iterator[ScenarioSpec]:
+    """Yield multi-leg (3-city) air-ticket scenarios.
+
+    Pattern: 3 city-triples * 2 traveler counts = 6 scenarios. Appended after
+    the 144 base scenarios so the existing scenario_ids stay byte-stable.
+    Each scenario carries ``shape == "multileg"`` and a non-``None``
+    ``layover_index`` so :meth:`ScenarioSpec.expected_fields` builds a
+    3-station itinerary (origin -> layover -> destination).
+    """
+    index = start_index
+    for origin_index, layover_index, destination_index in CITY_TRIPLE_INDICES:
+        origin = CITY_POOL[origin_index]
+        layover = CITY_POOL[layover_index]
+        destination = CITY_POOL[destination_index]
+        for traveler_count in TRAVELER_COUNTS:
+            scenario_id = _build_multileg_scenario_id(
+                index,
+                document_type="air_ticket",
+                travelers=traveler_count,
+                origin=origin,
+                layover=layover,
+                destination=destination,
+            )
+            yield ScenarioSpec(
+                scenario_id=scenario_id,
+                document_type="air_ticket",
+                shape="multileg",
+                travelers=traveler_count,
+                origin_index=origin_index,
+                destination_index=destination_index,
+                noise_seed=_noise_seed_for(scenario_id),
+                layover_index=layover_index,
+            )
+            index += 1
 
 
 def _enumerate_accommodation_scenarios(start_index: int) -> Iterator[ScenarioSpec]:
@@ -870,7 +1043,7 @@ def _enumerate_all_text() -> Iterator[ScenarioSpec]:
     transit_total = (
         len(TRANSIT_DOCUMENT_TYPES)
         * len(CITY_PAIR_INDICES)
-        * len(SHAPES)
+        * len(SHAPES_BASE)
         * len(TRAVELER_COUNTS)
     )
     yield from _enumerate_accommodation_scenarios(start_index=transit_total + 1)
@@ -881,6 +1054,13 @@ def _enumerate_all_text() -> Iterator[ScenarioSpec]:
     )
     yield from _enumerate_supplementary_scenarios(
         start_index=transit_total + accommodation_total + 1
+    )
+    supplementary_total = _PER_SUPPLEMENTARY_DOC_SCENARIOS
+    # Multi-leg air-ticket block — appended last so the existing 001..144
+    # scenario_ids stay byte-stable. Uses 3-city itineraries to satisfy the
+    # functional spec's "at least three scenarios with 3+ cities" rule.
+    yield from _enumerate_multileg_air_scenarios(
+        start_index=transit_total + accommodation_total + supplementary_total + 1
     )
 
 
@@ -895,6 +1075,8 @@ def enumerate_scenarios() -> Iterator[ScenarioSpec]:
       city -> stay_nights -> traveler count.
     - Supplementary: 121..144 — 18 single-traveler (one per city per kind)
       then 6 two-traveler (first 2 cities per kind).
+    - Multi-leg air: 145..150 — 3 city-triples * 2 traveler counts. Appended
+      last so the existing 001..144 scenario_ids stay byte-stable.
 
     Each spec also carries a ``rendering`` flag of ``"text"`` (default) or
     ``"rasterized"`` (~15% of the corpus, ``_RASTERIZED_QUOTA`` per doc-type).
@@ -914,7 +1096,9 @@ def enumerate_scenarios() -> Iterator[ScenarioSpec]:
 
 # Sanity guards: each document_type's axis sweep must stay at "~25" (20..30
 # inclusive) so the overall corpus stays evenly weighted across types.
-_PER_TRANSIT_DOC_SCENARIOS = len(CITY_PAIR_INDICES) * len(SHAPES) * len(TRAVELER_COUNTS)
+_PER_TRANSIT_DOC_SCENARIOS = (
+    len(CITY_PAIR_INDICES) * len(SHAPES_BASE) * len(TRAVELER_COUNTS)
+)
 _PER_ACCOMMODATION_DOC_SCENARIOS = (
     len(ACCOMMODATION_CITY_INDICES)
     * len(ACCOMMODATION_NIGHT_COUNTS)
@@ -935,10 +1119,14 @@ for _per_doc in (
             "rebalance the axis tuples"
         )
 
+# Multi-leg air-ticket block: 3 city-triples * 2 traveler counts = 6.
+_MULTILEG_AIR_SCENARIOS = len(CITY_TRIPLE_INDICES) * len(TRAVELER_COUNTS)
+
 _TOTAL_SCENARIOS = (
     _PER_TRANSIT_DOC_SCENARIOS * len(TRANSIT_DOCUMENT_TYPES)
     + _PER_ACCOMMODATION_DOC_SCENARIOS * len(ACCOMMODATION_DOCUMENT_TYPES)
     + _PER_SUPPLEMENTARY_DOC_SCENARIOS
+    + _MULTILEG_AIR_SCENARIOS
 )
 
 
@@ -957,6 +1145,7 @@ __all__ = [
     "ACCOMMODATION_CITY_INDICES",
     "ACCOMMODATION_NIGHT_COUNTS",
     "CITY_PAIR_INDICES",
+    "CITY_TRIPLE_INDICES",
     "SUPPLEMENTARY_CITY_INDICES",
     "SUPPLEMENTARY_KINDS",
     "SUPPLEMENTARY_TWO_PAX_CITY_COUNT",

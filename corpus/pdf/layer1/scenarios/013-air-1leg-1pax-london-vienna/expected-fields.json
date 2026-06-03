@@ -6,7 +6,7 @@
   ],
   "document_type": "air_ticket",
   "noise_seed": 245215427520025691,
-  "pdf_kind": "rasterized",
+  "pdf_kind": "text",
   "prices": [
     {
       "amount": 148.47,
