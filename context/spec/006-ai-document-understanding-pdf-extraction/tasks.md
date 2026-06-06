@@ -119,6 +119,15 @@
 
 ---
 
+## Scope adjustment — QR/barcode extraction deferred to DUS-33
+
+After Slice 5 surfaced that the only consistent text-path failure was the model returning `qr_codes: []` while the corpus expected payloads, QR/barcode extraction was moved out of this ticket. Reading a barcode requires decoding the image region (not reading a text label), and the LLM-side "infer from nearby text" approach risks hallucination — see DUS-33 for the deferred work.
+
+Changes made (commit on this branch):
+- Both system prompts in `backend/where_tickets/extraction/prompts.py` now instruct the model NOT to extract QR/barcode payloads (text path emits `qr_codes: []` always; vision path ignores QR/barcode regions entirely).
+- `corpus/pdf/runner.py`'s `compare()` temporarily skips the `qr_codes` field. The corpus's expected payloads are kept intact so DUS-33 can re-enable the check trivially.
+- The functional + technical specs were updated to reflect the new scope.
+
 ## Follow-up notes
 
 - **Pre-existing pyright errors in `backend/spikes/route_engine_llm/bedrock_client.py`** surface as soon as `anthropic[bedrock]` is installed in the persistent backend venv. Slice 1 sidesteps this by running `test-pdf-corpus` with `uv run --isolated`. **Before Slice 5** (which is the first slice that imports `anthropic` from production code), either: (a) fix the spike's pyright issues, or (b) move the spike under a pyright-exclusion path. Otherwise `just lint` will break the moment the `extraction` group lands in the dev venv.

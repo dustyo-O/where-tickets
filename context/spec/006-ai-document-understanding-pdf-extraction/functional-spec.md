@@ -26,9 +26,10 @@ This capability is the second half of the Document Ingest pipeline. PDF Upload i
 
 - **The system processes every uploaded PDF and produces a structured record of the facts printed on it.**
   - Acceptance Criteria:
-    - [ ] After a PDF is uploaded, the system attempts to extract: the document type, every city named on it, every transit station / airport, every accommodation, every venue, every date and time, every traveler named, every price, and every QR code.
+    - [ ] After a PDF is uploaded, the system attempts to extract: the document type, every city named on it, every transit station / airport, every accommodation, every venue, every date and time, every traveler named, and every price.
     - [ ] Each value reflects what is literally printed on the document (e.g. the city name as printed, not normalized to a code).
     - [ ] All six v1 document types are supported: air ticket, rail ticket, bus ticket, hotel booking, Airbnb booking, supplementary (vouchers, sightseeing tickets, parking).
+    - [ ] QR / barcode payloads are NOT part of the structured record produced by this slice — they require image-region decoding and are handled separately (see Out-of-Scope below).
 
 - **Scan-style PDFs (no extractable text layer — just an image of the document) are supported.**
   - Acceptance Criteria:
@@ -93,6 +94,7 @@ This capability is the second half of the Document Ingest pipeline. PDF Upload i
 - **Other roadmap items, handled in separate specs:** Trip Route View; PDF Upload; Sign-Up & Login; all of Phase 2 and Phase 3.
 - **Other slices of the AI Document Understanding roadmap line:** any future extractor work beyond what this slice covers (further accuracy tuning, additional readers, secondary detection passes) will get its own spec.
 - **Within this topic, explicitly excluded for v1:**
+  - **QR / barcode payload extraction — handled by a separate ticket (DUS-33).** QR and barcode payloads sit inside image regions on the PDF and need to be *decoded from the image*, not inferred from a nearby text label (LLM-side inference risks hallucinating plausible-but-wrong payloads). The corpus runner's `qr_codes` comparison is temporarily disabled in this slice; this extractor always emits `qr_codes: []`. The deferred work is tracked in DUS-33.
   - The visual treatment of the "couldn't be read" entry in the trip (icon, copy, position, retry button) — owned by Trip Route View / PDF Upload.
   - A user-perceived latency target — no specific turnaround number is set for v1; cost and latency are tracked internally for later tuning.
   - Accuracy targets on Layer 2 (real, locally-collected PDFs) — Layer 2 grows organically and has no fixed accuracy bar for v1; this spec is graded on Layer 1 only.

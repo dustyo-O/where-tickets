@@ -113,6 +113,8 @@ Modeled on `backend/spikes/route_engine_llm/bedrock_client.py`:
 
 ### 2.4 Prompts and tool schemas
 
+**QR / barcode deferral.** Both system prompts explicitly tell the model NOT to extract QR or barcode payloads — the field is always emitted as `qr_codes: []`. Reading the actual barcode image is owned by DUS-33; this slice keeps the schema field present (so re-enabling it later is purely additive) but the comparison is also temporarily skipped in `corpus/pdf/runner.py`'s `compare()`.
+
 `prompts.py` exposes:
 
 - `SYSTEM_PROMPT_TEXT` — instructs Haiku/Sonnet text-path to extract every printed fact into the `emit_extracted_fields` tool, and to call `report_no_useful_information` instead when the text is travel-document-irrelevant (only on the **first** Haiku-on-text call; the vision-leg Haiku call sees only `emit_extracted_fields`).

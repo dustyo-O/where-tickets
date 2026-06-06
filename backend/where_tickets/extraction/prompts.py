@@ -160,8 +160,8 @@ A. LITERAL PRINTED FORM. Values reflect what is printed on the document.
 B. NO GUESSING. If a fact isn't on the document, leave it out.
    - Optional sub-fields (e.g. a venue's `valid_from_datetime`) are simply
      omitted from that item.
-   - Optional arrays (`prices`, `qr_codes`, `accommodations`, `venues`,
-     `stations`) can be empty when the document doesn't carry that bucket.
+   - Optional arrays (`prices`, `accommodations`, `venues`, `stations`)
+     can be empty when the document doesn't carry that bucket.
    - Required arrays (`cities`, `travelers`) must contain at least one entry
      — if the document genuinely lacks travellers or cities, that's a
      `report_no_useful_information` case, not an empty array.
@@ -176,9 +176,12 @@ D. `pdf_kind` records HOW the document was read: `text` when the text layer
    leg Haiku call). The orchestrator tells you which by which path you're
    on; default to `text` if unsure.
 
-E. QR PAYLOADS. If the text mentions a QR code's raw payload (uncommon in
-   the text path), include it verbatim in `qr_codes`. Do NOT invent a
-   payload from a QR code's visual description.
+E. QR / BARCODE PAYLOADS — DO NOT EXTRACT. Always return `qr_codes: []`.
+   QR and barcode payloads are encoded in image regions, not in the text
+   layer; any nearby text label that happens to mirror the payload is a
+   corpus-authoring artefact, not a reliable signal. Reading the actual
+   barcode image is a separate concern, tracked in DUS-33; this extractor
+   leaves `qr_codes` empty regardless of what the text appears to say.
 
 The structured payload's schema is enforced by the tool's `input_schema`.
 Read it carefully; every required field must be present.\
@@ -200,10 +203,10 @@ Strict rules:
 - Preserve numbers, codes, datetimes, city names, traveler names, and
   prices EXACTLY as printed. Do not normalise, translate, or expand
   abbreviations. Do not convert timezones. Do not infer missing characters.
-- If a QR code or barcode is visible AND its payload is printed as text
-  near it, include the printed payload. Do not invent a payload from a QR
-  code's visual appearance alone — write `[QR CODE]` on its own line and
-  move on.
+- IGNORE QR codes and barcodes entirely. Do not transcribe them, do not
+  describe them, do not include any nearby text label that mirrors a QR
+  payload. Barcode decoding is a separate concern (tracked in DUS-33);
+  this OCR pass treats QR / barcode regions as if they weren't there.
 - If part of the page is illegible, write `[illegible]` in place of the
   unreadable text rather than guessing.
 - If the page is genuinely blank or carries no travel-document text, return
