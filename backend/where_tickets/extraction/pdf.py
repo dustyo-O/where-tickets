@@ -23,7 +23,7 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:  # pragma: no cover - typing only, never imported at runtime
     from pathlib import Path
 
-__all__ = ["extract_text", "render_pages_to_jpeg"]
+__all__ = ["extract_text", "page_count", "render_pages_to_jpeg"]
 
 # Raster DPI for the vision path. Mirrors corpus/pdf/generator/render.py's
 # ``_RASTER_DPI`` so the extractor sees the same pixels the rasterized corpus
@@ -61,6 +61,22 @@ def extract_text(pdf_path: Path) -> str:
     if len(text.strip()) < _PYMUPDF_NULL_TEXT_FLOOR:
         return ""
     return text
+
+
+def page_count(pdf_path: Path) -> int:
+    """Return the page count of ``pdf_path``.
+
+    Useful for the extractor's per-call structured log line (``pdf_page_count``)
+    and for tests that need to assert page-count parity. Imports ``pymupdf``
+    lazily, matching the rest of this module's lazy-optional-dep contract.
+    """
+    import pymupdf  # noqa: PLC0415  # pyright: ignore[reportMissingImports]
+
+    doc = pymupdf.open(str(pdf_path))
+    try:
+        return int(doc.page_count)
+    finally:
+        doc.close()
 
 
 def render_pages_to_jpeg(

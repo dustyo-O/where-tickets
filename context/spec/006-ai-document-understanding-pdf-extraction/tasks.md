@@ -62,12 +62,12 @@
 
 *Value: text-bearing PDFs now extract for real. `just test-pdf-corpus` reports a real accuracy number against the ~85% non-rasterized scenarios (rasterized scenarios still FAIL — empty text → vision path doesn't exist yet, so they fall through to `ExtractionFailedError`).*
 
-- [ ] **Slice 5: Path A — Haiku-on-text happy path**
-  - [ ] Replace the Slice 1 stub `extract_pdf`: read text via `pdf.extract_text`; on empty text, raise `ExtractionFailedError("empty text; vision path not implemented")` (temporary; Slice 6 fills this in). On non-empty text, build the Haiku call (system + tool schemas cached, user message = text), call `complete_text`, check `tool_name`. If `emit_extracted_fields` + schema-valid → `_tag(payload, extraction_path="text")` and return. On sentinel → raise `ExtractionFailedError("sentinel; vision path not implemented")`. On invalid → raise `ExtractionFailedError("schema fail; sonnet fallback not implemented")`. **[Agent: bedrock-llm]**
-  - [ ] Inject the Bedrock client via a module-level factory (default: `make_client`) so tests swap in `FakeBedrockExtractionClient`. **[Agent: python-backend]**
-  - [ ] Emit the structured JSON log line per §2.7 on every call (success or failure). Use stdlib `logging`. **[Agent: python-backend]**
-  - [ ] `backend/tests/extraction/test_extract_text_path.py`: fake returns valid payload → `extract_pdf` returns it with `extraction_path="text"`; fake returns sentinel → `ExtractionFailedError` (the "vision not implemented" reason); fake returns invalid → `ExtractionFailedError` (the "sonnet not implemented" reason); log line is emitted with the expected fields. **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction` passes. `just test-pdf-corpus` reports a real PASS count for text-bearing scenarios and FAIL with `extraction_path` not yet tagged on rasterized ones; the runner's path-mix line shows mostly `text`. `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 5: Path A — Haiku-on-text happy path**
+  - [x] Replace the Slice 1 stub `extract_pdf`: read text via `pdf.extract_text`; on empty text, raise `ExtractionFailedError("empty text; vision path not implemented")` (temporary; Slice 6 fills this in). On non-empty text, build the Haiku call (system + tool schemas cached, user message = text), call `complete_text`, check `tool_name`. If `emit_extracted_fields` + schema-valid → `_tag(payload, extraction_path="text")` and return. On sentinel → raise `ExtractionFailedError("sentinel; vision path not implemented")`. On invalid → raise `ExtractionFailedError("schema fail; sonnet fallback not implemented")`. **[Agent: bedrock-llm]**
+  - [x] Inject the Bedrock client via a module-level factory (default: `make_client`) so tests swap in `FakeBedrockExtractionClient`. **[Agent: python-backend]**
+  - [x] Emit the structured JSON log line per §2.7 on every call (success or failure). Use stdlib `logging`. **[Agent: python-backend]**
+  - [x] `backend/tests/extraction/test_extract_text_path.py`: fake returns valid payload → `extract_pdf` returns it with `extraction_path="text"`; fake returns sentinel → `ExtractionFailedError` (the "vision not implemented" reason); fake returns invalid → `ExtractionFailedError` (the "sonnet not implemented" reason); log line is emitted with the expected fields. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction` passes. `just test-pdf-corpus` reports a real PASS count for text-bearing scenarios and FAIL with `extraction_path` not yet tagged on rasterized ones; the runner's path-mix line shows mostly `text`. `just lint` clean. **[Agent: python-backend]**
 
 ---
 
