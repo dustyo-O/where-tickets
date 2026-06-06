@@ -49,12 +49,12 @@
 
 *Value: a tested abstraction sits between the extractor and `anthropic`. All future slices can use the fake in CI; live work happens against the real wrapper.*
 
-- [ ] **Slice 4: Bedrock client wrapper + injectable fake**
-  - [ ] Implement `backend/where_tickets/extraction/bedrock.py`: `Usage` + `ToolUseResult` dataclasses; `BedrockExtractionClient` Protocol with `complete_text(model_alias, system, user_text, tools, tool_choice) -> ToolUseResult` and `complete_vision(model_alias, system, images, prompt) -> str`; `AnthropicBedrockExtractionClient` concrete impl with lazy `anthropic` import (`TYPE_CHECKING` guard for pyright). Env overrides: `WT_BEDROCK_MODEL_HAIKU`, `WT_BEDROCK_MODEL_SONNET`. Region from `AWS_REGION`. `temperature=0`, `max_retries=4`. Apply `cache_control` on system + tools. **[Agent: bedrock-llm]**
-  - [ ] Add `make_client()` factory mirroring the spike's pattern: clear `ImportError` message when the `extraction` group isn't installed. **[Agent: bedrock-llm]**
-  - [ ] Add a `FakeBedrockExtractionClient` test helper under `backend/tests/extraction/fakes.py`: records calls, returns canned `ToolUseResult`s / vision strings in declared order, raises a clear error when the script is exhausted. **[Agent: python-backend]**
-  - [ ] `backend/tests/extraction/test_bedrock_wrapper.py`: model-id resolution honors env overrides; missing env falls back to the documented EU profile; `make_client` raises a clear `ImportError` with install hint when `anthropic` is absent (simulate via `sys.modules`). No live Bedrock. **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run pytest tests/extraction/test_bedrock_wrapper.py` passes WITHOUT the `extraction` group (the lazy-import contract). Then `uv run --group extraction pytest tests/extraction` passes. `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 4: Bedrock client wrapper + injectable fake**
+  - [x] Implement `backend/where_tickets/extraction/bedrock.py`: `Usage` + `ToolUseResult` dataclasses; `BedrockExtractionClient` Protocol with `complete_text(model_alias, system, user_text, tools, tool_choice) -> ToolUseResult` and `complete_vision(model_alias, system, images, prompt) -> str`; `AnthropicBedrockExtractionClient` concrete impl with lazy `anthropic` import (`TYPE_CHECKING` guard for pyright). Env overrides: `WT_BEDROCK_MODEL_HAIKU`, `WT_BEDROCK_MODEL_SONNET`. Region from `AWS_REGION`. `temperature=0`, `max_retries=4`. Apply `cache_control` on system + tools. **[Agent: bedrock-llm]**
+  - [x] Add `make_client()` factory mirroring the spike's pattern: clear `ImportError` message when the `extraction` group isn't installed. **[Agent: bedrock-llm]**
+  - [x] Add a `FakeBedrockExtractionClient` test helper under `backend/tests/extraction/fakes.py`: records calls, returns canned `ToolUseResult`s / vision strings in declared order, raises a clear error when the script is exhausted. **[Agent: python-backend]**
+  - [x] `backend/tests/extraction/test_bedrock_wrapper.py`: model-id resolution honors env overrides; missing env falls back to the documented EU profile; `make_client` raises a clear `ImportError` with install hint when `anthropic` is absent (simulate via `sys.modules`). No live Bedrock. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run pytest tests/extraction/test_bedrock_wrapper.py` passes WITHOUT the `extraction` group (the lazy-import contract). Then `uv run --group extraction pytest tests/extraction` passes. `just lint` clean. **[Agent: python-backend]**
 
 ---
 
