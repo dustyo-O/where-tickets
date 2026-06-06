@@ -45,6 +45,7 @@ __all__ = [
     "TOOL_EMIT_EXTRACTED_FIELDS_NAME",
     "TOOL_REPORT_NO_USEFUL_INFORMATION",
     "TOOL_REPORT_NO_USEFUL_INFORMATION_NAME",
+    "VISION_USER_PROMPT",
 ]
 
 
@@ -186,6 +187,18 @@ E. QR / BARCODE PAYLOADS — DO NOT EXTRACT. Always return `qr_codes: []`.
 The structured payload's schema is enforced by the tool's `input_schema`.
 Read it carefully; every required field must be present.\
 """
+
+
+# The user-message text that accompanies the page-image blocks in the Sonnet
+# vision (PATH B) call. The image blocks come first in the user message, and
+# this short orientation string follows them — it just points Sonnet back at
+# the strict OCR rules in :data:`SYSTEM_PROMPT_VISION`. Kept terse and static
+# (no per-document interpolation) so it lives in the prompt-cache prefix and
+# never invalidates the cache.
+VISION_USER_PROMPT: Final[str] = (
+    "Transcribe the printed text on the pages above into plain text, "
+    "following the OCR rules in the system prompt."
+)
 
 
 SYSTEM_PROMPT_VISION: Final[str] = """\

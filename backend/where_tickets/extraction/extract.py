@@ -1,4 +1,4 @@
-"""PDF extractor entry point — Path A live (Slice 5 of spec 006).
+"""PDF extractor entry point — PATH A + PATH B live (Slice 6 of spec 006).
 
 This module owns the public surface the corpus runner (and, later, the SQS
 pipeline) calls into: :func:`extract_pdf`, :class:`ExtractedFields`, and
@@ -7,24 +7,31 @@ the runner's ``ExtractedFields`` in ``corpus/pdf/runner.py`` exactly — the
 runner is a script, not an importable package, so the contract is duplicated
 here rather than imported.
 
-Slice 5 wires PATH A only: text-bearing PDFs go through a single
-Haiku-on-text tool-use call. The three placeholder raises below are the
-exact lines Slice 6 (vision) and Slice 7 (Sonnet text fallback) will replace
-with their respective code paths. Each raise carries a distinct message so
-test assertions (and the corpus runner's per-failure diff) can branch on it:
+Two of the three placeholder raises from Slice 5 are now real code paths:
 
-- empty text → ``"empty text; vision path not implemented"``
-- sentinel   → ``"sentinel; vision path not implemented"``
-- schema-fail / wrong tool → ``"schema fail; sonnet fallback not implemented"``
+- empty text → PATH B (vision): render the PDF pages to JPEGs, OCR via
+  Sonnet vision, feed the raw text into a Haiku ``emit_extracted_fields``
+  call, validate, tag ``extraction_path="vision"``.
+- sentinel → PATH B (vision): the first Haiku-on-text call returned
+  ``report_no_useful_information``; we fall through into the same vision
+  path. The structured log line records ``sentinel_fired=True`` to
+  distinguish this trigger from the empty-text trigger.
+
+The third placeholder raise remains:
+
+- schema-fail / wrong tool → ``"schema fail; sonnet fallback not
+  implemented"`` (Slice 7's job).
 
 A module-level ``_client_factory`` provides the test-injection seam: it
 defaults to :func:`bedrock.make_client` and tests monkey-patch it to return a
-:class:`tests.extraction.fakes.FakeBedrockExtractionClient`.
+:class:`tests.extraction.fakes.FakeBedrockExtractionClient`. The factory is
+called ONCE per :func:`extract_pdf` invocation and the resulting client is
+reused for every Bedrock call in that run.
 
 Every call emits ONE structured log line via the stdlib :mod:`logging`
 module (per tech-spec §2.7). The shape is identical across the success path
-and the three failure paths so CloudWatch / a log aggregator can rely on a
-fixed field set.
+and the failure paths so CloudWatch / a log aggregator can rely on a fixed
+field set.
 """
 
 from __future__ import annotations
@@ -134,13 +141,21 @@ _ExtractionPath = Literal["text", "vision"]
 def extract_pdf(pdf_path: Path) -> ExtractedFields:
     """Extract structured fields from a single PDF.
 
-    Slice 5 implements PATH A (Haiku on printed text). Empty text, sentinel,
-    and schema-mismatch cases raise distinct :class:`ExtractionFailedError`
-    messages that Slice 6 (vision) and Slice 7 (Sonnet text fallback) will
-    replace with their respective code paths.
+    Routes:
+
+    - PATH A — text layer present → Haiku-on-text tool-use call. Valid
+      payload → tagged ``extraction_path="text"``; sentinel → fall through
+      to PATH B; wrong tool / schema fail → Slice 7's placeholder raise.
+    - PATH B — empty text OR sentinel → Sonnet vision OCRs the rendered
+      pages, then a Haiku tool-use call extracts fields from the OCR text.
+      Schema fail on the vision leg surfaces as
+      :class:`ExtractionFailedError` ("vision path produced invalid
+      payload") — there is no Sonnet-text fallback from the vision path.
 
     Emits one structured ``"extract_pdf"`` log line per call (success or
-    failure), shaped per tech-spec §2.7.
+    failure), shaped per tech-spec §2.7. The :data:`_client_factory` is
+    invoked ONCE and the resulting client is reused across every Bedrock
+    call in this run.
     """
     # Lazy local imports — see module docstring: pdf/prompts/schema pull in
     # PyMuPDF and `jsonschema`, both optional-group-only.
@@ -149,23 +164,21 @@ def extract_pdf(pdf_path: Path) -> ExtractedFields:
     started = time.perf_counter()
     text = pdf.extract_text(pdf_path)
     pdf_page_count = pdf.page_count(pdf_path)
+    client = _client_factory()
 
     if not text:
-        reason = "empty text; vision path not implemented"
-        _log_call(
-            pdf_path=pdf_path,
-            extraction_path=None,
-            model_path="failed",
+        # PATH B triggered by empty text from PyMuPDF. No prior Bedrock
+        # calls have happened yet, so the carry-forward lists are empty.
+        return _run_vision_path(
+            pdf_path,
+            client,
             sentinel_fired=False,
-            latency_ms_total=_ms_since(started),
-            latency_ms_per_call=[],
-            usages=[],
+            started=started,
+            prior_latency_ms_per_call=[],
+            prior_usages=[],
             pdf_page_count=pdf_page_count,
-            error_reason=reason,
         )
-        raise ExtractionFailedError(reason)
 
-    client = _client_factory()
     call_started = time.perf_counter()
     result = client.complete_text(
         model_alias="haiku",
@@ -180,19 +193,18 @@ def extract_pdf(pdf_path: Path) -> ExtractedFields:
     call_latency_ms = _ms_since(call_started)
 
     if result.tool_name == prompts.TOOL_REPORT_NO_USEFUL_INFORMATION_NAME:
-        reason = "sentinel; vision path not implemented"
-        _log_call(
-            pdf_path=pdf_path,
-            extraction_path=None,
-            model_path="failed",
+        # PATH B triggered by the sentinel. Carry the Haiku-on-text call's
+        # latency + usage forward so the final log line sums all three
+        # calls (haiku-text + sonnet-vision + haiku-text-via-vision).
+        return _run_vision_path(
+            pdf_path,
+            client,
             sentinel_fired=True,
-            latency_ms_total=_ms_since(started),
-            latency_ms_per_call=[call_latency_ms],
-            usages=[result.usage],
+            started=started,
+            prior_latency_ms_per_call=[call_latency_ms],
+            prior_usages=[result.usage],
             pdf_page_count=pdf_page_count,
-            error_reason=reason,
         )
-        raise ExtractionFailedError(reason)
 
     if result.tool_name != prompts.TOOL_EMIT_EXTRACTED_FIELDS_NAME:
         reason = "schema fail; sonnet fallback not implemented"
@@ -234,6 +246,102 @@ def extract_pdf(pdf_path: Path) -> ExtractedFields:
         latency_ms_total=_ms_since(started),
         latency_ms_per_call=[call_latency_ms],
         usages=[result.usage],
+        pdf_page_count=pdf_page_count,
+        error_reason=None,
+    )
+    return payload
+
+
+def _run_vision_path(
+    pdf_path: Path,
+    client: BedrockExtractionClient,
+    *,
+    sentinel_fired: bool,
+    started: float,
+    prior_latency_ms_per_call: list[int],
+    prior_usages: list[Usage],
+    pdf_page_count: int,
+) -> ExtractedFields:
+    """Run PATH B (vision): Sonnet OCR → Haiku tool-use → validate → tag.
+
+    Carry-forwards: when PATH B is triggered by the sentinel (rather than by
+    empty text), the caller has already burned one Haiku-on-text call; its
+    latency and usage are passed in via ``prior_*`` so the structured log
+    line on success can sum everything into one accurate total.
+
+    On schema fail, raises :class:`ExtractionFailedError` with the message
+    ``"vision path produced invalid payload"`` — there is no Sonnet-text
+    fallback from the vision path (per tech-spec §2.2).
+    """
+    from where_tickets.extraction import pdf as pdf_mod  # noqa: PLC0415
+    from where_tickets.extraction import prompts, schema  # noqa: PLC0415
+
+    # --- Sonnet vision leg -------------------------------------------------
+    images = pdf_mod.render_pages_to_jpeg(pdf_path)
+    vision_started = time.perf_counter()
+    raw_text = client.complete_vision(
+        model_alias="sonnet",
+        system=prompts.SYSTEM_PROMPT_VISION,
+        images=images,
+        prompt=prompts.VISION_USER_PROMPT,
+    )
+    vision_latency_ms = _ms_since(vision_started)
+
+    # --- Haiku vision-leg extraction call ---------------------------------
+    # Only ONE tool is exposed (no sentinel here): if Sonnet read pixels and
+    # Haiku still can't make sense of them, we surface the failure rather
+    # than looping forever. `tool_choice="any"` forces the single tool.
+    call_started = time.perf_counter()
+    result = client.complete_text(
+        model_alias="haiku",
+        system=prompts.SYSTEM_PROMPT_TEXT,
+        user_text=raw_text,
+        tools=[prompts.TOOL_EMIT_EXTRACTED_FIELDS],
+        tool_choice={"type": "any"},
+    )
+    haiku_latency_ms = _ms_since(call_started)
+
+    latency_ms_per_call = [
+        *prior_latency_ms_per_call,
+        vision_latency_ms,
+        haiku_latency_ms,
+    ]
+    usages = [*prior_usages, result.usage]
+
+    ok = (
+        result.tool_name == prompts.TOOL_EMIT_EXTRACTED_FIELDS_NAME
+        and schema.validate(result.tool_input)[0]
+    )
+    if not ok:
+        reason = "vision path produced invalid payload"
+        _log_call(
+            pdf_path=pdf_path,
+            extraction_path=None,
+            model_path="failed",
+            sentinel_fired=sentinel_fired,
+            latency_ms_total=_ms_since(started),
+            latency_ms_per_call=latency_ms_per_call,
+            usages=usages,
+            pdf_page_count=pdf_page_count,
+            error_reason=reason,
+        )
+        raise ExtractionFailedError(reason)
+
+    # We KNOW we ran vision, so `pdf_kind` is mechanically `"rasterized"`.
+    # Force it rather than trusting the model to pick the right value — the
+    # corpus's expected ``pdf_kind`` for these scenarios is always
+    # ``"rasterized"``, so any model-guessed ``"text"`` here would be a
+    # false negative against the corpus.
+    payload = _tag(result.tool_input, extraction_path="vision")
+    payload["pdf_kind"] = "rasterized"
+    _log_call(
+        pdf_path=pdf_path,
+        extraction_path="vision",
+        model_path="sonnet-vision+haiku-text",
+        sentinel_fired=sentinel_fired,
+        latency_ms_total=_ms_since(started),
+        latency_ms_per_call=latency_ms_per_call,
+        usages=usages,
         pdf_page_count=pdf_page_count,
         error_reason=None,
     )

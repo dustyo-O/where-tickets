@@ -1,18 +1,16 @@
-"""Slice 5 — PATH A (Haiku-on-text) control-flow tests.
+"""PATH A (Haiku-on-text) control-flow tests.
 
-The four-branch matrix exercised here:
+The two PATH-A-only branches exercised here:
 
 1. Valid Haiku tool-use payload → ``extract_pdf`` returns it with
    ``extraction_path="text"``. Asserts the call shape (model alias, tool list,
    tool_choice) and the structured ``"extract_pdf"`` log line.
-2. Sentinel (``report_no_useful_information``) → :class:`ExtractionFailedError`
-   with the Slice 6 placeholder message; the log line records
-   ``sentinel_fired=True``.
-3. Schema-fail (Haiku returns an ``emit_extracted_fields`` payload that
+2. Schema-fail (Haiku returns an ``emit_extracted_fields`` payload that
    doesn't validate) → :class:`ExtractionFailedError` with the Slice 7
    placeholder message; the log line records ``model_path="failed"``.
-4. Empty text (rasterized fixture) → :class:`ExtractionFailedError` with the
-   Slice 6 placeholder message; no Bedrock call is made.
+
+The sentinel and empty-text branches both now route through PATH B (Slice
+6) — see ``test_extract_vision_path.py`` for that coverage.
 
 The test seam: tests swap :data:`where_tickets.extraction.extract._client_factory`
 to return a :class:`tests.extraction.fakes.FakeBedrockExtractionClient`.
@@ -24,7 +22,6 @@ extraction group) collects-but-skips, matching the pattern used by
 
 from __future__ import annotations
 
-import json
 import logging
 import shutil
 from pathlib import Path
@@ -62,21 +59,6 @@ SCENARIOS_DIR = REPO_ROOT / "corpus" / "pdf" / "layer1" / "scenarios"
 # deterministic across regenerations of the corpus. Picked from the committed
 # Layer 1 scenarios; any ``pdf_kind: "text"`` scenario would work.
 _TEXT_FIXTURE_DIR = SCENARIOS_DIR / "001-air-1leg-1pax-paris-lisbon"
-_RASTERIZED_FIXTURE_NAME_PREFIX = "003-"  # 003-air-return-1pax-paris-lisbon is rasterized
-
-
-def _first_rasterized_pdf() -> Path:
-    """Return any committed Layer 1 ``pdf_kind: rasterized`` fixture's PDF."""
-    for scenario_dir in sorted(SCENARIOS_DIR.iterdir()):
-        if not scenario_dir.is_dir():
-            continue
-        expected = scenario_dir / "expected-fields.json"
-        if not expected.exists():
-            continue
-        payload = json.loads(expected.read_text())
-        if payload.get("pdf_kind") == "rasterized":
-            return scenario_dir / "document.pdf"
-    pytest.skip("corpus has no rasterized scenarios")
 
 
 def _valid_payload() -> dict[str, Any]:
@@ -224,47 +206,7 @@ def test_haiku_returns_valid_payload(
 
 
 # --------------------------------------------------------------------------- #
-# 2. Sentinel tool → ExtractionFailedError ("vision path not implemented")
-# --------------------------------------------------------------------------- #
-
-
-def test_haiku_sentinel_raises_vision_not_implemented(
-    monkeypatch: pytest.MonkeyPatch,
-    caplog: pytest.LogCaptureFixture,
-    tmp_path: Path,
-) -> None:
-    """report_no_useful_information → placeholder raise + sentinel_fired log."""
-    pdf_path = _copy_fixture(tmp_path, _TEXT_FIXTURE_DIR / "document.pdf")
-    fake = FakeBedrockExtractionClient(
-        text_responses=[
-            ToolUseResult(
-                tool_name=TOOL_REPORT_NO_USEFUL_INFORMATION_NAME,
-                tool_input={"reason": "looks like a generic web page"},
-                usage=Usage(input_tokens=80, output_tokens=10),
-                latency_seconds=0.2,
-            )
-        ],
-    )
-    monkeypatch.setattr(extract, "_client_factory", lambda: fake)
-
-    with (
-        caplog.at_level(logging.INFO, logger="where_tickets.extraction.extract"),
-        pytest.raises(
-            ExtractionFailedError, match=r"sentinel; vision path not implemented"
-        ),
-    ):
-        extract_pdf(pdf_path)
-
-    extras = _find_log_extras(caplog)
-    assert extras["extraction_path"] is None
-    assert extras["model_path"] == "failed"
-    assert extras["sentinel_fired"] is True
-    assert extras["error_reason"] == "sentinel; vision path not implemented"
-    assert extras["tokens_input"] == 80
-
-
-# --------------------------------------------------------------------------- #
-# 3. Schema fail → ExtractionFailedError ("sonnet fallback not implemented")
+# 2. Schema fail → ExtractionFailedError ("sonnet fallback not implemented")
 # --------------------------------------------------------------------------- #
 
 
@@ -303,42 +245,3 @@ def test_haiku_invalid_payload_raises_sonnet_not_implemented(
     assert extras["model_path"] == "failed"
     assert extras["sentinel_fired"] is False
     assert extras["error_reason"] == "schema fail; sonnet fallback not implemented"
-
-
-# --------------------------------------------------------------------------- #
-# 4. Empty text (rasterized fixture) → placeholder raise, no Bedrock call
-# --------------------------------------------------------------------------- #
-
-
-def test_empty_text_raises_without_calling_bedrock(
-    monkeypatch: pytest.MonkeyPatch,
-    caplog: pytest.LogCaptureFixture,
-    tmp_path: Path,
-) -> None:
-    """Rasterized PDF → empty text → short-circuit raise; fake is never called."""
-    pdf_path = _copy_fixture(tmp_path, _first_rasterized_pdf())
-    fake = FakeBedrockExtractionClient(text_responses=[])
-    monkeypatch.setattr(extract, "_client_factory", lambda: fake)
-
-    with (
-        caplog.at_level(logging.INFO, logger="where_tickets.extraction.extract"),
-        pytest.raises(
-            ExtractionFailedError, match=r"empty text; vision path not implemented"
-        ),
-    ):
-        extract_pdf(pdf_path)
-
-    # No Bedrock call should have been made (the short-circuit happens before
-    # the factory is touched at all).
-    assert fake.text_calls == []
-    assert fake.vision_calls == []
-
-    extras = _find_log_extras(caplog)
-    assert extras["extraction_path"] is None
-    assert extras["model_path"] == "failed"
-    assert extras["sentinel_fired"] is False
-    assert extras["error_reason"] == "empty text; vision path not implemented"
-    assert extras["latency_ms_per_call"] == []
-    assert extras["tokens_input"] == 0
-    assert extras["tokens_output"] == 0
-    assert extras["pdf_page_count"] >= 1

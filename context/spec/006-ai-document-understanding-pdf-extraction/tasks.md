@@ -75,11 +75,11 @@
 
 *Value: rasterized scenarios now extract for real too. `just test-pdf-corpus` accuracy jumps to cover the full 150 scenarios; the runner's path-mix line shows text + vision split that matches the corpus's `pdf_kind` mix.*
 
-- [ ] **Slice 6: Path B — Sonnet vision → Haiku text**
-  - [ ] In `extract_pdf`: replace both "vision not implemented" raises (empty text + sentinel) with the documented PATH B. Render JPEGs via `pdf.render_pages_to_jpeg` (single multi-image Sonnet call per §2.2 question 1); pass `raw_text` into a Haiku call with only `emit_extracted_fields` exposed. Validate, then `_tag(payload, extraction_path="vision")`. On schema fail → `ExtractionFailedError("vision path produced invalid payload")`. **[Agent: bedrock-llm]**
-  - [ ] Extend the structured log line to record `model_path` (one of `haiku-text`, `sonnet-vision+haiku-text`, `sonnet-text`, `failed`) and `sentinel_fired`. **[Agent: python-backend]**
-  - [ ] `backend/tests/extraction/test_extract_vision_path.py`: empty-text + sentinel both route via vision; fake `complete_vision` returns canned plain text; subsequent `complete_text` returns valid payload → returned with `extraction_path="vision"`; vision-leg Haiku response that fails schema raises `ExtractionFailedError`. **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction` passes. `just test-pdf-corpus` runs full 150 scenarios; path-mix line shows roughly the corpus's text vs. rasterized split (~85/15); accuracy is a real number for both paths. **[Agent: python-backend]**
+- [x] **Slice 6: Path B — Sonnet vision → Haiku text**
+  - [x] In `extract_pdf`: replace both "vision not implemented" raises (empty text + sentinel) with the documented PATH B. Render JPEGs via `pdf.render_pages_to_jpeg` (single multi-image Sonnet call per §2.2 question 1); pass `raw_text` into a Haiku call with only `emit_extracted_fields` exposed. Validate, then `_tag(payload, extraction_path="vision")`. On schema fail → `ExtractionFailedError("vision path produced invalid payload")`. **[Agent: bedrock-llm]**
+  - [x] Extend the structured log line to record `model_path` (one of `haiku-text`, `sonnet-vision+haiku-text`, `sonnet-text`, `failed`) and `sentinel_fired`. **[Agent: python-backend]**
+  - [x] `backend/tests/extraction/test_extract_vision_path.py`: empty-text + sentinel both route via vision; fake `complete_vision` returns canned plain text; subsequent `complete_text` returns valid payload → returned with `extraction_path="vision"`; vision-leg Haiku response that fails schema raises `ExtractionFailedError`. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction` passes. `just test-pdf-corpus` runs full 150 scenarios; path-mix line shows roughly the corpus's text vs. rasterized split (~85/15); accuracy is a real number for both paths. **[Agent: python-backend]**
 
 ---
 
