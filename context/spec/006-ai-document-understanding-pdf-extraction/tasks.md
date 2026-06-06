@@ -25,10 +25,10 @@
 
 *Value: deterministic, unit-tested low-level helpers exist; the extractor is one step closer to real. Nothing user-facing changes yet.*
 
-- [ ] **Slice 2: PDF helpers**
-  - [ ] Implement `backend/where_tickets/extraction/pdf.py`: `extract_text(pdf_path) -> str` (joins all pages, returns empty string when nothing extractable) and `render_pages_to_jpeg(pdf_path, dpi=120, quality=80) -> list[bytes]`. Constants for DPI/quality/empty-text floor live at module top. **[Agent: python-backend]**
-  - [ ] Add `backend/tests/extraction/test_pdf_helpers.py` using committed Layer 1 fixtures: assert `extract_text` returns non-empty on a `pdf_kind: text` scenario and empty/whitespace on a `pdf_kind: rasterized` scenario; assert `render_pages_to_jpeg` returns one JPEG per page with decodable bytes (Pillow available transitively via PyMuPDF, or use PyMuPDF's own decoder for the sanity check). **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction/test_pdf_helpers.py` passes. `just lint` clean. `just test-pdf-corpus` still runs (still 0 / 150 — extractor still stubbed). **[Agent: python-backend]**
+- [x] **Slice 2: PDF helpers**
+  - [x] Implement `backend/where_tickets/extraction/pdf.py`: `extract_text(pdf_path) -> str` (joins all pages, returns empty string when nothing extractable) and `render_pages_to_jpeg(pdf_path, dpi=120, quality=80) -> list[bytes]`. Constants for DPI/quality/empty-text floor live at module top. **[Agent: python-backend]**
+  - [x] Add `backend/tests/extraction/test_pdf_helpers.py` using committed Layer 1 fixtures: assert `extract_text` returns non-empty on a `pdf_kind: text` scenario and empty/whitespace on a `pdf_kind: rasterized` scenario; assert `render_pages_to_jpeg` returns one JPEG per page with decodable bytes (Pillow available transitively via PyMuPDF, or use PyMuPDF's own decoder for the sanity check). **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction/test_pdf_helpers.py` passes. `just lint` clean. `just test-pdf-corpus` still runs (still 0 / 150 — extractor still stubbed). **[Agent: python-backend]**
 
 ---
 
