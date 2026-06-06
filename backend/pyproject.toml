@@ -25,6 +25,17 @@ dev = [
 spike = [
     "anthropic[bedrock]",
 ]
+# Optional group for the PDF extractor (spec 006: AI Document Understanding).
+# Kept out of runtime deps and `dev` so the FastAPI ECS image stays lean —
+# extraction runs in Lambda, and the extraction tests fake the Bedrock client.
+# Brings PyMuPDF (text + image extraction), the Bedrock Anthropic SDK, and
+# jsonschema (validate model JSON output against the ExtractedFields schema).
+# Install with: uv sync --group extraction
+extraction = [
+    "anthropic[bedrock]",
+    "pymupdf",
+    "jsonschema",
+]
 # Optional group for the mock-document PDF corpus (spec 005). Kept out of
 # runtime deps and `dev` so the FastAPI image stays lean. WeasyPrint pulls in
 # native deps (Pango / Cairo) - see corpus/pdf/README.md for local-dev setup.
