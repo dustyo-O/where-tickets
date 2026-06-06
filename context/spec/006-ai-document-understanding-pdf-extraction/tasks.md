@@ -36,12 +36,12 @@
 
 *Value: every model payload that ever flows back through `extract_pdf` is validated against the corpus schema. The tool `input_schema` used for forced tool-use is derived from the same JSON schema — there is exactly one source of truth.*
 
-- [ ] **Slice 3: Schema validator + tool-schema derivation**
-  - [ ] Implement `backend/where_tickets/extraction/schema.py`: load `corpus/pdf/schema/expected-fields.schema.json` once; expose `validate(payload) -> tuple[bool, list[str]]`. Strip `scenario_id` and `noise_seed` from the required list (extractor doesn't know corpus metadata). **[Agent: python-backend]**
-  - [ ] In `backend/where_tickets/extraction/prompts.py`, derive `TOOL_EMIT_EXTRACTED_FIELDS["input_schema"]` from the same loaded JSON schema (same trimming as `schema.py`). Define `TOOL_REPORT_NO_USEFUL_INFORMATION` with `{ "reason": string }`. **[Agent: bedrock-llm]**
-  - [ ] Draft `SYSTEM_PROMPT_TEXT` (for first Haiku-on-text call; allows either tool) and `SYSTEM_PROMPT_VISION` (Sonnet vision OCR-to-plain-text). Keep both static — they will be cached. **[Agent: bedrock-llm]**
-  - [ ] `backend/tests/extraction/test_schema_contract.py`: a hand-built valid payload validates clean; a payload missing a required field fails; a payload with the wrong `document_type` enum fails; assert the derived tool `input_schema` does not require `scenario_id`. **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction/test_schema_contract.py` passes. `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 3: Schema validator + tool-schema derivation**
+  - [x] Implement `backend/where_tickets/extraction/schema.py`: load `corpus/pdf/schema/expected-fields.schema.json` once; expose `validate(payload) -> tuple[bool, list[str]]`. Strip `scenario_id` and `noise_seed` from the required list (extractor doesn't know corpus metadata). **[Agent: python-backend]**
+  - [x] In `backend/where_tickets/extraction/prompts.py`, derive `TOOL_EMIT_EXTRACTED_FIELDS["input_schema"]` from the same loaded JSON schema (same trimming as `schema.py`). Define `TOOL_REPORT_NO_USEFUL_INFORMATION` with `{ "reason": string }`. **[Agent: bedrock-llm]**
+  - [x] Draft `SYSTEM_PROMPT_TEXT` (for first Haiku-on-text call; allows either tool) and `SYSTEM_PROMPT_VISION` (Sonnet vision OCR-to-plain-text). Keep both static — they will be cached. **[Agent: bedrock-llm]**
+  - [x] `backend/tests/extraction/test_schema_contract.py`: a hand-built valid payload validates clean; a payload missing a required field fails; a payload with the wrong `document_type` enum fails; assert the derived tool `input_schema` does not require `scenario_id`. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction/test_schema_contract.py` passes. `just lint` clean. **[Agent: python-backend]**
 
 ---
 
@@ -122,3 +122,4 @@
 ## Follow-up notes
 
 - **Pre-existing pyright errors in `backend/spikes/route_engine_llm/bedrock_client.py`** surface as soon as `anthropic[bedrock]` is installed in the persistent backend venv. Slice 1 sidesteps this by running `test-pdf-corpus` with `uv run --isolated`. **Before Slice 5** (which is the first slice that imports `anthropic` from production code), either: (a) fix the spike's pyright issues, or (b) move the spike under a pyright-exclusion path. Otherwise `just lint` will break the moment the `extraction` group lands in the dev venv.
+- **Bedrock tool-schema risk (Slice 5/6).** The corpus schema uses `unevaluatedProperties: false` inside `allOf` on `stations`/`accommodations`/`venues`, and Bedrock's pre-flight tool-schema validation may reject that. If the first live call in Slice 5/6 rejects the schema, the fix is either to flatten the `allOf` (inline the per-bucket datetime fragments into each items shape and drop `unevaluatedProperties`) or replace `unevaluatedProperties: false` with `additionalProperties: false`. The single source of truth lives in the corpus tree, so any structural change is deliberate — don't pre-flatten.
