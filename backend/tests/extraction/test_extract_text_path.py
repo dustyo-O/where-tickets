@@ -1,16 +1,16 @@
 """PATH A (Haiku-on-text) control-flow tests.
 
-The two PATH-A-only branches exercised here:
+The PATH-A happy-path branch exercised here:
 
 1. Valid Haiku tool-use payload → ``extract_pdf`` returns it with
    ``extraction_path="text"``. Asserts the call shape (model alias, tool list,
    tool_choice) and the structured ``"extract_pdf"`` log line.
-2. Schema-fail (Haiku returns an ``emit_extracted_fields`` payload that
-   doesn't validate) → :class:`ExtractionFailedError` with the Slice 7
-   placeholder message; the log line records ``model_path="failed"``.
 
-The sentinel and empty-text branches both now route through PATH B (Slice
-6) — see ``test_extract_vision_path.py`` for that coverage.
+The sentinel and empty-text branches both route through PATH B (Slice 6) —
+see ``test_extract_vision_path.py`` for that coverage. The schema-fail /
+wrong-tool branch routes through PATH C (Slice 7) — see
+``test_extract_sonnet_fallback.py`` for that coverage; the worst case
+(Haiku invalid → Sonnet invalid) lives in ``test_extract_failure.py``.
 
 The test seam: tests swap :data:`where_tickets.extraction.extract._client_factory`
 to return a :class:`tests.extraction.fakes.FakeBedrockExtractionClient`.
@@ -39,7 +39,6 @@ from where_tickets.extraction.bedrock import (  # noqa: E402 — importorskip ga
     Usage,
 )
 from where_tickets.extraction.extract import (  # noqa: E402 — importorskip gate
-    ExtractionFailedError,
     extract_pdf,
 )
 from where_tickets.extraction.prompts import (  # noqa: E402 — importorskip gate
@@ -205,43 +204,9 @@ def test_haiku_returns_valid_payload(
     assert len(extras["latency_ms_per_call"]) == 1
 
 
-# --------------------------------------------------------------------------- #
-# 2. Schema fail → ExtractionFailedError ("sonnet fallback not implemented")
-# --------------------------------------------------------------------------- #
-
-
-def test_haiku_invalid_payload_raises_sonnet_not_implemented(
-    monkeypatch: pytest.MonkeyPatch,
-    caplog: pytest.LogCaptureFixture,
-    tmp_path: Path,
-) -> None:
-    """An emit_extracted_fields payload that fails schema → placeholder raise."""
-    pdf_path = _copy_fixture(tmp_path, _TEXT_FIXTURE_DIR / "document.pdf")
-    # Missing every required field → guaranteed to fail schema.validate.
-    invalid_payload: dict[str, Any] = {"document_type": "air_ticket"}
-    fake = FakeBedrockExtractionClient(
-        text_responses=[
-            ToolUseResult(
-                tool_name=TOOL_EMIT_EXTRACTED_FIELDS_NAME,
-                tool_input=invalid_payload,
-                usage=Usage(input_tokens=120, output_tokens=20),
-                latency_seconds=0.3,
-            )
-        ],
-    )
-    monkeypatch.setattr(extract, "_client_factory", lambda: fake)
-
-    with (
-        caplog.at_level(logging.INFO, logger="where_tickets.extraction.extract"),
-        pytest.raises(
-            ExtractionFailedError,
-            match=r"schema fail; sonnet fallback not implemented",
-        ),
-    ):
-        extract_pdf(pdf_path)
-
-    extras = _find_log_extras(caplog)
-    assert extras["extraction_path"] is None
-    assert extras["model_path"] == "failed"
-    assert extras["sentinel_fired"] is False
-    assert extras["error_reason"] == "schema fail; sonnet fallback not implemented"
+# Schema-fail / wrong-tool coverage now lives in ``test_extract_sonnet_fallback.py``
+# (PATH C — Sonnet text fallback). The total-failure case (Haiku invalid → Sonnet
+# invalid) lives in ``test_extract_failure.py``. Slice 7 replaced the
+# "schema fail; sonnet fallback not implemented" placeholder with the real
+# PATH C call, so the old placeholder-raise assertion that lived here has been
+# moved into the new files where it belongs.

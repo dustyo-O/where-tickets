@@ -87,11 +87,11 @@
 
 *Value: malformed-JSON / schema-mismatch responses from Haiku no longer cost the scenario — they upgrade to Sonnet on the same text. `ExtractionFailedError` is now reserved for genuinely unreadable PDFs (the "couldn't be read" signal the spec promises).*
 
-- [ ] **Slice 7: Path C + total-failure path**
-  - [ ] In `extract_pdf`: replace the "sonnet fallback not implemented" branch with the documented PATH C (Sonnet `complete_text` with `emit_extracted_fields` only). Validate, then `_tag(payload, extraction_path="text")`. On invalid → `ExtractionFailedError("sonnet text fallback produced invalid payload")`. Confirm the path-trigger taxonomy is mutually exclusive (no path falls into another's trigger). **[Agent: bedrock-llm]**
-  - [ ] `backend/tests/extraction/test_extract_sonnet_fallback.py`: invalid-payload Haiku → Sonnet text → valid payload → returned with `extraction_path="text"`; Sonnet-text returns invalid too → `ExtractionFailedError`. **[Agent: python-backend]**
-  - [ ] `backend/tests/extraction/test_extract_failure.py`: assemble the worst case (Haiku invalid → Sonnet text invalid) and an empty-text worst case (vision → invalid Haiku); both raise `ExtractionFailedError` and log `model_path="failed"`. **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction` passes. `just lint` clean. `just test-pdf-corpus` accuracy improves (Path C catches schema flakes). **[Agent: python-backend]**
+- [x] **Slice 7: Path C + total-failure path**
+  - [x] In `extract_pdf`: replace the "sonnet fallback not implemented" branch with the documented PATH C (Sonnet `complete_text` with `emit_extracted_fields` only). Validate, then `_tag(payload, extraction_path="text")`. On invalid → `ExtractionFailedError("sonnet text fallback produced invalid payload")`. Confirm the path-trigger taxonomy is mutually exclusive (no path falls into another's trigger). **[Agent: bedrock-llm]** _(landed in Slice 6 commit during the `_run_vision_path` refactor — scope overreach, but coherent.)_
+  - [x] `backend/tests/extraction/test_extract_sonnet_fallback.py`: invalid-payload Haiku → Sonnet text → valid payload → returned with `extraction_path="text"`; Sonnet-text returns invalid too → `ExtractionFailedError`. **[Agent: python-backend]**
+  - [x] `backend/tests/extraction/test_extract_failure.py`: assemble the worst case (Haiku invalid → Sonnet text invalid) and an empty-text worst case (vision → invalid Haiku); both raise `ExtractionFailedError` and log `model_path="failed"`. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction` passes. `just lint` clean. `just test-pdf-corpus` accuracy improves (Path C catches schema flakes). **[Agent: python-backend]** _(Held at 142/150 — none of the 8 remaining failures are schema-invalid; they're all bus-return stations-length-mismatch cases that produce valid payloads. Slice 9 territory.)_
 
 ---
 

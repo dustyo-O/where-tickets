@@ -1,4 +1,4 @@
-"""PDF extractor entry point — PATH A + PATH B live (Slice 6 of spec 006).
+"""PDF extractor entry point — PATH A + PATH B + PATH C live (Slice 7 of spec 006).
 
 This module owns the public surface the corpus runner (and, later, the SQS
 pipeline) calls into: :func:`extract_pdf`, :class:`ExtractedFields`, and
@@ -7,7 +7,7 @@ the runner's ``ExtractedFields`` in ``corpus/pdf/runner.py`` exactly — the
 runner is a script, not an importable package, so the contract is duplicated
 here rather than imported.
 
-Two of the three placeholder raises from Slice 5 are now real code paths:
+All three placeholder raises from Slice 5 are now real code paths:
 
 - empty text → PATH B (vision): render the PDF pages to JPEGs, OCR via
   Sonnet vision, feed the raw text into a Haiku ``emit_extracted_fields``
@@ -16,11 +16,13 @@ Two of the three placeholder raises from Slice 5 are now real code paths:
   ``report_no_useful_information``; we fall through into the same vision
   path. The structured log line records ``sentinel_fired=True`` to
   distinguish this trigger from the empty-text trigger.
-
-The third placeholder raise remains:
-
-- schema-fail / wrong tool → ``"schema fail; sonnet fallback not
-  implemented"`` (Slice 7's job).
+- schema-fail / wrong tool → PATH C (Sonnet-on-text): re-issue the same
+  text to Sonnet with only the ``emit_extracted_fields`` tool. Valid
+  payload → tagged ``extraction_path="text"`` with ``model_path="sonnet-text"``.
+  Invalid payload → :class:`ExtractionFailedError` ("sonnet text fallback
+  produced invalid payload"). Every ``ExtractionFailedError`` from this
+  module is now a genuine total-failure case — no more "not implemented"
+  reasons.
 
 A module-level ``_client_factory`` provides the test-injection seam: it
 defaults to :func:`bedrock.make_client` and tests monkey-patch it to return a
@@ -145,12 +147,26 @@ def extract_pdf(pdf_path: Path) -> ExtractedFields:
 
     - PATH A — text layer present → Haiku-on-text tool-use call. Valid
       payload → tagged ``extraction_path="text"``; sentinel → fall through
-      to PATH B; wrong tool / schema fail → Slice 7's placeholder raise.
+      to PATH B; wrong tool / schema fail → fall through to PATH C.
     - PATH B — empty text OR sentinel → Sonnet vision OCRs the rendered
       pages, then a Haiku tool-use call extracts fields from the OCR text.
       Schema fail on the vision leg surfaces as
       :class:`ExtractionFailedError` ("vision path produced invalid
       payload") — there is no Sonnet-text fallback from the vision path.
+    - PATH C — Haiku-on-text returned a non-sentinel response that did NOT
+      validate (malformed payload or unexpected tool name). Re-issue the
+      same text to Sonnet with only ``emit_extracted_fields`` exposed.
+      Valid payload → tagged ``extraction_path="text"`` and logged with
+      ``model_path="sonnet-text"``. Invalid payload →
+      :class:`ExtractionFailedError` ("sonnet text fallback produced
+      invalid payload").
+
+    The path-trigger taxonomy is mutually exclusive: empty text triggers
+    PATH B (and never reaches Haiku-on-text), the sentinel triggers PATH B
+    (and never reaches PATH C — by construction, a sentinel response is a
+    non-emit tool_name *we explicitly recognise*), and schema-fail / wrong
+    tool triggers PATH C (and only after Haiku-on-text returned a real
+    non-sentinel response).
 
     Emits one structured ``"extract_pdf"`` log line per call (success or
     failure), shaped per tech-spec §2.7. The :data:`_client_factory` is
@@ -207,35 +223,31 @@ def extract_pdf(pdf_path: Path) -> ExtractedFields:
         )
 
     if result.tool_name != prompts.TOOL_EMIT_EXTRACTED_FIELDS_NAME:
-        reason = "schema fail; sonnet fallback not implemented"
-        _log_call(
-            pdf_path=pdf_path,
-            extraction_path=None,
-            model_path="failed",
-            sentinel_fired=False,
-            latency_ms_total=_ms_since(started),
-            latency_ms_per_call=[call_latency_ms],
-            usages=[result.usage],
+        # Defensive: with `tool_choice={"type":"any"}` over our two tools
+        # this is unreachable, but if a future model surprises us with a
+        # third tool name, treat it as a schema fail and let Sonnet have a
+        # go on PATH C.
+        return _run_sonnet_text_fallback(
+            pdf_path,
+            client,
+            text=text,
+            started=started,
+            prior_call_latency_ms=call_latency_ms,
+            prior_usage=result.usage,
             pdf_page_count=pdf_page_count,
-            error_reason=reason,
         )
-        raise ExtractionFailedError(reason)
 
     ok, _errors = schema.validate(result.tool_input)
     if not ok:
-        reason = "schema fail; sonnet fallback not implemented"
-        _log_call(
-            pdf_path=pdf_path,
-            extraction_path=None,
-            model_path="failed",
-            sentinel_fired=False,
-            latency_ms_total=_ms_since(started),
-            latency_ms_per_call=[call_latency_ms],
-            usages=[result.usage],
+        return _run_sonnet_text_fallback(
+            pdf_path,
+            client,
+            text=text,
+            started=started,
+            prior_call_latency_ms=call_latency_ms,
+            prior_usage=result.usage,
             pdf_page_count=pdf_page_count,
-            error_reason=reason,
         )
-        raise ExtractionFailedError(reason)
 
     payload = _tag(result.tool_input, extraction_path="text")
     _log_call(
@@ -339,6 +351,82 @@ def _run_vision_path(
         extraction_path="vision",
         model_path="sonnet-vision+haiku-text",
         sentinel_fired=sentinel_fired,
+        latency_ms_total=_ms_since(started),
+        latency_ms_per_call=latency_ms_per_call,
+        usages=usages,
+        pdf_page_count=pdf_page_count,
+        error_reason=None,
+    )
+    return payload
+
+
+def _run_sonnet_text_fallback(
+    pdf_path: Path,
+    client: BedrockExtractionClient,
+    *,
+    text: str,
+    started: float,
+    prior_call_latency_ms: int,
+    prior_usage: Usage,
+    pdf_page_count: int,
+) -> ExtractedFields:
+    """Run PATH C (sonnet text): re-issue the same text to Sonnet, validate, tag.
+
+    Triggered ONLY when Haiku-on-text returned a non-sentinel response that
+    failed validation (malformed payload or an unexpected ``tool_name``).
+    Sonnet sees the SAME ``text`` Haiku saw and ONLY the
+    ``emit_extracted_fields`` tool — no sentinel here, because the sentinel
+    is mutually exclusive with the PATH C trigger (per tech-spec §2.2).
+
+    Carry-forwards: Haiku-on-text's latency and usage are passed in via
+    ``prior_*`` so the final log line records the 2-element
+    ``latency_ms_per_call`` (Haiku + Sonnet) and the summed token usage,
+    per tech-spec §2.7.
+
+    On schema fail, raises :class:`ExtractionFailedError` with the message
+    ``"sonnet text fallback produced invalid payload"``. There is no further
+    fallback — this is a genuine total-failure case.
+    """
+    from where_tickets.extraction import prompts, schema  # noqa: PLC0415
+
+    call_started = time.perf_counter()
+    result = client.complete_text(
+        model_alias="sonnet",
+        system=prompts.SYSTEM_PROMPT_TEXT,
+        user_text=text,
+        tools=[prompts.TOOL_EMIT_EXTRACTED_FIELDS],
+        tool_choice={"type": "any"},
+    )
+    sonnet_latency_ms = _ms_since(call_started)
+
+    latency_ms_per_call = [prior_call_latency_ms, sonnet_latency_ms]
+    usages = [prior_usage, result.usage]
+
+    ok = (
+        result.tool_name == prompts.TOOL_EMIT_EXTRACTED_FIELDS_NAME
+        and schema.validate(result.tool_input)[0]
+    )
+    if not ok:
+        reason = "sonnet text fallback produced invalid payload"
+        _log_call(
+            pdf_path=pdf_path,
+            extraction_path=None,
+            model_path="failed",
+            sentinel_fired=False,
+            latency_ms_total=_ms_since(started),
+            latency_ms_per_call=latency_ms_per_call,
+            usages=usages,
+            pdf_page_count=pdf_page_count,
+            error_reason=reason,
+        )
+        raise ExtractionFailedError(reason)
+
+    payload = _tag(result.tool_input, extraction_path="text")
+    _log_call(
+        pdf_path=pdf_path,
+        extraction_path="text",
+        model_path="sonnet-text",
+        sentinel_fired=False,
         latency_ms_total=_ms_since(started),
         latency_ms_per_call=latency_ms_per_call,
         usages=usages,
