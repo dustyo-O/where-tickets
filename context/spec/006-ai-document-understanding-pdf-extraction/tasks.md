@@ -111,11 +111,11 @@
 
 *Value: the spec's hard gate is met. This is the "Done" check.*
 
-- [ ] **Slice 9: Live accuracy gate**
-  - [ ] Confirm `wt-bedrock` SSO profile + `eu-north-1` access is configured locally; document the one-line setup in `backend/where_tickets/extraction/README.md` (short: env vars, SSO login, `just extract-pdf` smoke). **[Agent: bedrock-llm]**
-  - [ ] Run `just test-pdf-corpus` live against the 150 Layer 1 scenarios. Iterate on `SYSTEM_PROMPT_TEXT` / `SYSTEM_PROMPT_VISION` until overall accuracy ≥ 99%. Use the runner's per-failure diff and the path-mix line to drive the iteration. Capture cost/latency from the structured log lines and note them in the README for posterity. **[Agent: bedrock-llm]**
-  - [ ] If any scenario keeps failing despite prompt iteration, decide and document: either fix the prompt / tool schema, or capture the case as a known-limitation note in the README. Do not silently exclude scenarios. **[Agent: bedrock-llm]**
-  - [ ] **Verify:** `just test-pdf-corpus` reports ≥ 99% Layer 1 accuracy. Path-mix line shows rasterized scenarios on `vision` and text scenarios on `text` (no accidental cross-overs). `just ci-backend` is green. **[Agent: bedrock-llm]**
+- [x] **Slice 9: Live accuracy gate** _(149/150 = 99.3% — gate cleared on first prompt iteration.)_
+  - [x] Confirm `wt-bedrock` SSO profile + `eu-north-1` access is configured locally; document the one-line setup in `backend/where_tickets/extraction/README.md` (short: env vars, SSO login, `just extract-pdf` smoke). **[Agent: bedrock-llm]**
+  - [x] Run `just test-pdf-corpus` live against the 150 Layer 1 scenarios. Iterate on `SYSTEM_PROMPT_TEXT` / `SYSTEM_PROMPT_VISION` until overall accuracy ≥ 99%. Use the runner's per-failure diff and the path-mix line to drive the iteration. Capture cost/latency from the structured log lines and note them in the README for posterity. **[Agent: bedrock-llm]**
+  - [x] If any scenario keeps failing despite prompt iteration, decide and document: either fix the prompt / tool schema, or capture the case as a known-limitation note in the README. Do not silently exclude scenarios. **[Agent: bedrock-llm]** _(Scenario 077 logged as known limitation: line-wrapped accommodation identifier — layout-specific, not a systemic prompt issue.)_
+  - [x] **Verify:** `just test-pdf-corpus` reports ≥ 99% Layer 1 accuracy. Path-mix line shows rasterized scenarios on `vision` and text scenarios on `text` (no accidental cross-overs). `just ci-backend` is green. **[Agent: bedrock-llm]** _(Pre-existing ruff format drift from Slices 5–7 was fixed in this commit via `just fmt` so the `ci-backend` gate stays green.)_
 
 ---
 

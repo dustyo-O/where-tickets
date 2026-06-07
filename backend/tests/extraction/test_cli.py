@@ -55,9 +55,7 @@ SCENARIOS_DIR = REPO_ROOT / "corpus" / "pdf" / "layer1" / "scenarios"
 
 # Pinned text-bearing fixture — same scenario the Slice 5/6/7 tests use, so
 # the CLI test stays deterministic across corpus regenerations.
-_TEXT_FIXTURE = (
-    SCENARIOS_DIR / "001-air-1leg-1pax-paris-lisbon" / "document.pdf"
-)
+_TEXT_FIXTURE = SCENARIOS_DIR / "001-air-1leg-1pax-paris-lisbon" / "document.pdf"
 
 
 def _valid_payload() -> dict[str, Any]:

@@ -451,7 +451,9 @@ def _tag(
     schema doesn't require them, so we drop them defensively before returning
     the payload upstream.
     """
-    cleaned = {k: v for k, v in payload.items() if k not in {"scenario_id", "noise_seed"}}
+    cleaned = {
+        k: v for k, v in payload.items() if k not in {"scenario_id", "noise_seed"}
+    }
     cleaned["extraction_path"] = extraction_path
     return cleaned  # type: ignore[return-value]
 
@@ -461,9 +463,7 @@ def _ms_since(t0: float) -> int:
     return int((time.perf_counter() - t0) * 1000)
 
 
-_ModelPath = Literal[
-    "haiku-text", "sonnet-vision+haiku-text", "sonnet-text", "failed"
-]
+_ModelPath = Literal["haiku-text", "sonnet-vision+haiku-text", "sonnet-text", "failed"]
 
 
 def _log_call(
@@ -497,9 +497,7 @@ def _log_call(
             "tokens_input": sum(u.input_tokens for u in usages),
             "tokens_output": sum(u.output_tokens for u in usages),
             "tokens_cache_read": sum(u.cache_read_input_tokens for u in usages),
-            "tokens_cache_creation": sum(
-                u.cache_creation_input_tokens for u in usages
-            ),
+            "tokens_cache_creation": sum(u.cache_creation_input_tokens for u in usages),
             "pdf_page_count": pdf_page_count,
             "error_reason": error_reason,
         },

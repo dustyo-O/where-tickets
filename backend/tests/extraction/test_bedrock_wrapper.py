@@ -34,10 +34,7 @@ def test_resolve_haiku_default_is_eu_inference_profile(
 ) -> None:
     """With no env override, ``haiku`` resolves to the documented EU profile."""
     monkeypatch.delenv("WT_BEDROCK_MODEL_HAIKU", raising=False)
-    assert (
-        resolve_model_id("haiku")
-        == "eu.anthropic.claude-haiku-4-5-20251001-v1:0"
-    )
+    assert resolve_model_id("haiku") == "eu.anthropic.claude-haiku-4-5-20251001-v1:0"
     # Sanity-check the constant matches so the contract is enforced in one place.
     assert MODEL_PROFILE_DEFAULTS["haiku"] == resolve_model_id("haiku")
 

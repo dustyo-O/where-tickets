@@ -171,6 +171,20 @@ C. ONE PAYLOAD PER DOCUMENT. A multi-leg ticket is still one document and
    one `emit_extracted_fields` call; list every endpoint city in `cities`
    and every transit endpoint in `stations`, in the order they're printed.
 
+   RETURN TICKETS — turnaround city is ONE station entry. When the document
+   covers an outbound leg AND a return leg back through the same city pair
+   (e.g. "Frankfurt -> Amsterdam" on date X then "Amsterdam -> Frankfurt"
+   on date Y, regardless of mode: air, rail, or bus), the turnaround city
+   appears as a SINGLE `stations` entry that carries BOTH `arrival_datetime`
+   (when you arrived outbound) AND `departure_datetime` (when you depart on
+   the return). The origin city appears twice: once with only
+   `departure_datetime` (outbound start) and once with only
+   `arrival_datetime` (return end). A round-trip therefore emits THREE
+   station entries, not four. This applies ONLY to outbound+return ticket
+   pairs through the same city; one-way multi-leg tickets that pass through
+   intermediate cities (e.g. "London -> Vienna -> Prague") keep one station
+   entry per transit endpoint as printed.
+
 D. `pdf_kind` records HOW the document was read: `text` when the text layer
    carries the facts (this call's case for the first Haiku-on-text pass) or
    `rasterized` when the facts come from OCR of the page images (the vision-
