@@ -1,7 +1,7 @@
 # Technical Specification: AI Document Understanding — PDF Extraction
 
 - **Functional Specification:** [`functional-spec.md`](./functional-spec.md)
-- **Status:** Draft
+- **Status:** Completed
 - **Author(s):** Dusty
 
 ---
