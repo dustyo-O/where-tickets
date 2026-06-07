@@ -34,12 +34,30 @@ test-corpus:
     uv run --python 3.12 --with jsonschema python corpus/validate.py
     uv run --python 3.12 --with jsonschema --with pymupdf python corpus/pdf/validate.py
 
-# Run the PDF-corpus runner against Layer 1 + Layer 2 scenarios with whatever
-# extractor is installed and report PASS/FAIL + accuracy. Degrades gracefully
-# (prints a banner, skips all scenarios, exits 0) when no extractor is wired,
-# so it is safe to run before AI Document Understanding lands.
+# Run the PDF-corpus runner against Layer 1 + Layer 2 scenarios via the
+# `where_tickets.extraction.extract_pdf` entry point. While spec 006 is in
+# flight the extractor is a stub that raises ExtractionFailedError("not
+# implemented yet"), so every scenario FAILs by design; real accuracy lands
+# in Slice 9 of 006-ai-document-understanding-pdf-extraction.
+# PYTHONPATH=. (= backend/) puts the where_tickets package on sys.path; the
+# script itself is referenced by filesystem path (../corpus/pdf/runner.py).
+# --isolated runs in an ephemeral venv so the extraction-group anthropic
+# install doesn't mutate the backend venv (which would surface latent
+# pyright errors in spikes/route_engine_llm/bedrock_client.py and break
+# `just lint`).
 test-pdf-corpus:
-    uv run --python 3.12 python corpus/pdf/runner.py
+    cd backend && PYTHONPATH=. uv run --isolated --group extraction --group corpus python ../corpus/pdf/runner.py
+
+# Run the production extractor against a single PDF and pretty-print the
+# extracted fields on stdout. Diagnostics (extraction_path, model_path) go to
+# stderr so stdout can be piped into `jq`. Live Bedrock — costs a few cents
+# per call; useful for ad-hoc debugging of one scenario without re-running the
+# full corpus. PYTHONPATH=. + --isolated mirror `test-pdf-corpus` (keeps
+# anthropic out of the persistent backend venv so `just lint` stays clean).
+# Example:
+#   just extract-pdf corpus/pdf/layer1/scenarios/001-air-1leg-1pax-paris-lisbon/document.pdf
+extract-pdf path:
+    cd backend && PYTHONPATH=. uv run --isolated --group extraction python -m where_tickets.extraction {{path}}
 
 # Regenerate Layer 1 PDF scenarios from the deterministic generator (data is
 # stable across runs; noise varies). Refreshes corpus/pdf/layer1/scenarios/.

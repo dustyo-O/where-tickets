@@ -15,7 +15,7 @@ _Prove the core promise: a user can upload PDFs and see an accurate, structured 
 
 - [ ] **Document Ingest**
   - [ ] **PDF Upload:** Users can upload travel PDFs (air, rail, bus tickets; hotel and Airbnb bookings; supplementary documents like vouchers) into a trip.
-  - [ ] **AI Document Understanding:** The app automatically detects what each PDF is (ticket vs. accommodation vs. supplementary) and extracts the structured data — cities, dates, times, travelers, prices, QR codes.
+  - [x] **AI Document Understanding:** The app automatically detects what each PDF is (ticket vs. accommodation vs. supplementary) and extracts the structured data — cities, dates, times, travelers, prices, QR codes. _Done for non-QR fields: 149/150 (99.3%) on the Layer 1 corpus across all six document types via Haiku-on-text primary + Sonnet-vision fallback + Sonnet-text fallback. Spec: [`006-ai-document-understanding-pdf-extraction`](../spec/006-ai-document-understanding-pdf-extraction/). DUS-32. QR/barcode payload extraction is deferred to DUS-33 (needs image-region decoding, not LLM text inference)._
 
 - [ ] **Account Essentials**
   - [ ] **Sign-Up & Login:** Email/password account creation and authentication so each traveler has a secure, personal space for their trips.
