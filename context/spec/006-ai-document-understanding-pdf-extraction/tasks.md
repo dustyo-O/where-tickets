@@ -99,11 +99,11 @@
 
 *Value: the engineer can inspect any single PDF on demand and see the chosen path + the returned fields, without re-running the whole corpus.*
 
-- [ ] **Slice 8: Debug CLI**
-  - [ ] Implement `backend/where_tickets/extraction/cli.py` and `backend/where_tickets/extraction/__main__.py`: `python -m where_tickets.extraction <pdf-path>` runs `extract_pdf`, prints the result as JSON (pretty), prints the chosen `extraction_path` + `model_path` on stderr, exits 0; on `ExtractionFailedError`, prints the reason on stderr and exits 1. **[Agent: python-backend]**
-  - [ ] Add `extract-pdf path` recipe to `justfile`: `cd backend && uv run --group extraction python -m where_tickets.extraction {{path}}`. **[Agent: python-backend]**
-  - [ ] `backend/tests/extraction/test_cli.py`: with `FakeBedrockExtractionClient` (wired in via the same module-level factory swap used by the other tests), assert exit 0 + JSON on success and exit 1 + diagnostic on `ExtractionFailedError`. **[Agent: python-backend]**
-  - [ ] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction/test_cli.py` passes. `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 8: Debug CLI**
+  - [x] Implement `backend/where_tickets/extraction/cli.py` and `backend/where_tickets/extraction/__main__.py`: `python -m where_tickets.extraction <pdf-path>` runs `extract_pdf`, prints the result as JSON (pretty), prints the chosen `extraction_path` + `model_path` on stderr, exits 0; on `ExtractionFailedError`, prints the reason on stderr and exits 1. **[Agent: python-backend]**
+  - [x] Add `extract-pdf path` recipe to `justfile`: `cd backend && uv run --group extraction python -m where_tickets.extraction {{path}}`. **[Agent: python-backend]**
+  - [x] `backend/tests/extraction/test_cli.py`: with `FakeBedrockExtractionClient` (wired in via the same module-level factory swap used by the other tests), assert exit 0 + JSON on success and exit 1 + diagnostic on `ExtractionFailedError`. **[Agent: python-backend]**
+  - [x] **Verify:** `cd backend && uv run --group extraction pytest tests/extraction/test_cli.py` passes. `just lint` clean. **[Agent: python-backend]**
 
 ---
 

@@ -48,6 +48,17 @@ test-corpus:
 test-pdf-corpus:
     cd backend && PYTHONPATH=. uv run --isolated --group extraction --group corpus python ../corpus/pdf/runner.py
 
+# Run the production extractor against a single PDF and pretty-print the
+# extracted fields on stdout. Diagnostics (extraction_path, model_path) go to
+# stderr so stdout can be piped into `jq`. Live Bedrock — costs a few cents
+# per call; useful for ad-hoc debugging of one scenario without re-running the
+# full corpus. PYTHONPATH=. + --isolated mirror `test-pdf-corpus` (keeps
+# anthropic out of the persistent backend venv so `just lint` stays clean).
+# Example:
+#   just extract-pdf corpus/pdf/layer1/scenarios/001-air-1leg-1pax-paris-lisbon/document.pdf
+extract-pdf path:
+    cd backend && PYTHONPATH=. uv run --isolated --group extraction python -m where_tickets.extraction {{path}}
+
 # Regenerate Layer 1 PDF scenarios from the deterministic generator (data is
 # stable across runs; noise varies). Refreshes corpus/pdf/layer1/scenarios/.
 # Uses the backend's `corpus` dep group for WeasyPrint + Jinja2; PYTHONPATH
