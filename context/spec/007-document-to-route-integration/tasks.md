@@ -13,14 +13,14 @@
   - [x] Regenerate the 192-scenario corpus via `just regen-corpus`; commit the result. **[Agent: python-backend]** _(generator carries a `_SEED_MODE_ALIAS = {"rail": "train"}` internally so the per-scenario seed stays byte-stable; every emitted file uses `rail`.)_
   - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` reports 192/192; `cd backend && uv run pytest tests/spikes/` green; `just lint` clean. **[Agent: python-backend]**
 
-- [ ] **Slice 2: Drop the IATA pattern; city is a printed name + normalizer collapse**
-  - [ ] Remove the 3-letter pattern from `cityCode` in both schemas; rename the JSON Schema `$def` accordingly (`cityCode` → `cityName`); update all `pattern` references. **[Agent: python-backend]**
-  - [ ] Update the generator to emit printed city names ("Paris", "Lisbon") on legs / accommodations / expected-route stops instead of IATA codes. **[Agent: python-backend]**
-  - [ ] Update Pydantic models in `spikes/route_engine_llm/models.py` and `corpus.py` — drop `Field(pattern=r"^[A-Z]{3}$")` on `RouteStop.city`, `Leg.from_/to`, `ExpectedStop.city`, `ExpectedTransit.from_/to`. **[Agent: python-backend]**
-  - [ ] Add a small `city_identity(name: str) -> str` helper (`strip().casefold()`) in `spikes/route_engine_llm/models.py`; route the classifier's same-city lookups through it. **[Agent: python-backend]**
-  - [ ] Unit test: `RouteStop` with city `"Paris"` collapses with a same-fragment leg using `"PARIS"`. **[Agent: python-backend]**
-  - [ ] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; `cd backend && uv run pytest tests/spikes/` green; `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 2: Drop the IATA pattern; city is a printed name + normalizer collapse**
+  - [x] Remove the 3-letter pattern from `cityCode` in both schemas; rename the JSON Schema `$def` accordingly (`cityCode` → `cityName`); update all `pattern` references. **[Agent: python-backend]**
+  - [x] Update the generator to emit printed city names ("Paris", "Lisbon") on legs / accommodations / expected-route stops instead of IATA codes. **[Agent: python-backend]**
+  - [x] Update Pydantic models in `spikes/route_engine_llm/models.py` and `corpus.py` — drop `Field(pattern=r"^[A-Z]{3}$")` on `RouteStop.city`, `Leg.from_/to`, `ExpectedStop.city`, `ExpectedTransit.from_/to`. **[Agent: python-backend]** _(also `operations.CreateStop.city` and `HotelBookingFragment.city` — both carried the same pattern.)_
+  - [x] Add a small `city_identity(name: str) -> str` helper (`strip().casefold()`) in `spikes/route_engine_llm/models.py`; route the classifier's same-city lookups through it. **[Agent: python-backend]** _(also `scoring.final_route_match` on both sides; `rules.fragment_events` dict key.)_
+  - [x] Unit test: `RouteStop` with city `"Paris"` collapses with a same-fragment leg using `"PARIS"`. **[Agent: python-backend]** _(new `tests/spikes/test_city_identity.py`: 8 cases incl. whitespace variant + "stored city preserves original casing".)_
+  - [x] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
+  - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; `cd backend && uv run pytest tests/spikes/` green (144 passed); `just lint` clean. **[Agent: python-backend]**
 
 - [ ] **Slice 3: Replace `legs[]` with `stations[]` on transit fragments**
   - [ ] Reshape `transitTicket` in `corpus/schema/extracted-fragment.schema.json`: remove `legs[]`, add `stations[]` (each `{ city, kind ∈ {airport, rail_station, bus_terminal}, identifier, departureAt?, arrivalAt? }`) and `cities[]`. **[Agent: python-backend]**
