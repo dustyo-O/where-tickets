@@ -82,3 +82,13 @@
 - [ ] **Slice 10: Cross-schema validation upgrade (DUS-31 done-when)**
   - [ ] In `corpus/pdf/validate.py`, replace the documented mapping between `expected-fields.schema.json` and `extracted-fragment.schema.json` with a real `jsonschema.validate(sample_fragment, fragment_schema)` step over a fixture fragment derived from one layer-1 extracted-fields payload. **[Agent: python-backend]**
   - [ ] **Verify:** `just test-corpus` runs the new cross-schema validation step and is green; `just lint` clean. **[Agent: python-backend]**
+
+- [ ] **Slice 11: Retire `_SEED_MODE_ALIAS` (DUS-31 self-cleanup)**
+
+  > Cleanup, not a feature. Deletes the known-debt shim introduced by Slice 1 (`_SEED_MODE_ALIAS = {"rail": "train"}` in `corpus/generator/scenario.py`) so future mode renames don't need it. Lands after the 100% integration gate so integration scenarios stay stable while the engine corpus reshuffles.
+
+  - [ ] In `corpus/generator/scenario.py`, replace the `_SEED_MODE_ALIAS` lookup with a stable mode key (preferred: `matrix.MODES.index(spec.primary_mode)` or a frozen `{"air": 0, "bus": 1, "rail": 2}` map). The seed payload becomes mode-rename-proof. **[Agent: python-backend]**
+  - [ ] Regenerate the 192-scenario corpus; commit. **[Agent: python-backend]**
+  - [ ] Run `just spike-engine-algo` on the reshuffled corpus. **Path A (best case):** still 192/192 — the reshuffle didn't land on a pathological scenario; re-bless and move on. **Path B:** a small number of scenarios fail (e.g. the ZRH-revisit case flagged during Slice 1). For each failure, decide between (i) fixing the engine rule when the failure exposes a real classifier bug AND the fix is small (≤2 scenarios, narrow classifier tweak), or (ii) reverting the seed decouple and carving a separate engine ticket for the latent bug. Document the decision in the commit body. **[Agent: python-backend]**
+  - [ ] Remove the `_SEED_MODE_ALIAS` constant and its callsite in `_seed_for`. **[Agent: python-backend]**
+  - [ ] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; `cd backend && uv run pytest tests/spikes/` green; `just lint` clean. **[Agent: python-backend]**
