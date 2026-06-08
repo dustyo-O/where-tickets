@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Athens",
+    "Moscow",
+    "Frankfurt",
+    "Amsterdam"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001081",
+  "sourceDocumentId": "081-circle-2p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Athens",
-      "to": "Moscow",
-      "vehicleNumber": "LO100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Moscow",
-      "to": "Frankfurt",
-      "vehicleNumber": "LO101"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Frankfurt",
-      "to": "Amsterdam",
-      "vehicleNumber": "LO102"
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001081",
-  "sourceDocumentId": "081-circle-2p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

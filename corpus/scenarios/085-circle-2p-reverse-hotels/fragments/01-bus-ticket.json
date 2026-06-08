@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Berlin",
-      "to": "Frankfurt",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Berlin",
+    "Frankfurt"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003085",
   "sourceDocumentId": "085-circle-2p-reverse-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

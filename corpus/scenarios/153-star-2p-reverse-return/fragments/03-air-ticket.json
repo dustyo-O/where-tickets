@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Athens",
+    "Oslo",
+    "Barcelona"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001153",
+  "sourceDocumentId": "153-star-2p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Athens",
-      "to": "Oslo",
-      "vehicleNumber": "LO100"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Oslo",
-      "to": "Barcelona",
-      "vehicleNumber": "LO101"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Barcelona",
-      "to": "Oslo",
-      "vehicleNumber": "LO102"
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001153",
-  "sourceDocumentId": "153-star-2p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

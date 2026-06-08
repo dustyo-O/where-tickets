@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Athens",
+    "Helsinki",
+    "Munich"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001168",
+  "sourceDocumentId": "168-star-3p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Athens",
-      "to": "Helsinki",
-      "vehicleNumber": "LO100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Helsinki",
-      "to": "Munich",
-      "vehicleNumber": "LO101"
+      "city": "Munich",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Munich",
-      "to": "Helsinki",
-      "vehicleNumber": "LO102"
+      "city": "Helsinki",
+      "identifier": "HEL",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001168",
-  "sourceDocumentId": "168-star-3p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Prague",
-      "to": "Lisbon",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Prague",
+    "Lisbon"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002017",
   "sourceDocumentId": "017-straight-2p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

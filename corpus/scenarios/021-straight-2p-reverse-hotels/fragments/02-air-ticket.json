@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Berlin",
+    "Rome",
+    "Stockholm"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001021",
+  "sourceDocumentId": "021-straight-2p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "Rome",
-      "vehicleNumber": "LO100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
-      "to": "Stockholm",
-      "vehicleNumber": "LO101"
+      "city": "Stockholm",
+      "identifier": "ARN",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001021",
-  "sourceDocumentId": "021-straight-2p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

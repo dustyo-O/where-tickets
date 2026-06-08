@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Helsinki",
+    "Frankfurt",
+    "Moscow",
+    "London"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001050",
+  "sourceDocumentId": "050-straight-4p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Helsinki",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
-      "to": "Moscow",
-      "vehicleNumber": "DB101"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Moscow",
-      "to": "London",
-      "vehicleNumber": "DB102"
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001050",
-  "sourceDocumentId": "050-straight-4p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

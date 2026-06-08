@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Berlin",
+    "Amsterdam",
+    "Moscow",
+    "New York"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001016",
+  "sourceDocumentId": "016-straight-2p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "Amsterdam",
-      "vehicleNumber": "FL100"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Amsterdam",
-      "to": "Moscow",
-      "vehicleNumber": "FL101"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Moscow",
-      "to": "New York",
-      "vehicleNumber": "FL102"
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001016",
-  "sourceDocumentId": "016-straight-2p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

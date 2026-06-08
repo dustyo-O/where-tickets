@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Berlin",
+    "Frankfurt",
+    "Milan"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001128",
+  "sourceDocumentId": "128-star-1p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
-      "to": "Milan",
-      "vehicleNumber": "DB101"
+      "city": "Milan",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Milan",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB102"
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001128",
-  "sourceDocumentId": "128-star-1p-forward-tkt-01",
   "travelers": [
     "traveler-1"
   ]

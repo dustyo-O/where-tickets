@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Paris",
+    "Berlin",
+    "Frankfurt"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003176",
+  "sourceDocumentId": "176-star-4p-forward-tkt-03",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Paris",
-      "to": "Berlin",
-      "vehicleNumber": "DB104"
+      "city": "Berlin",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Berlin",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB105"
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003176",
-  "sourceDocumentId": "176-star-4p-forward-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

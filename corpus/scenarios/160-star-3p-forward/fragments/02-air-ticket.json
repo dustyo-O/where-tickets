@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "New York",
-      "to": "Munich",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "New York",
+    "Munich"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002160",
   "sourceDocumentId": "160-star-3p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

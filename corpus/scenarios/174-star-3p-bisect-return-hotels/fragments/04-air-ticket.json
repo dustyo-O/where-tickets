@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Copenhagen",
-      "to": "Barcelona",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Copenhagen",
+    "Barcelona"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003174",
   "sourceDocumentId": "174-star-3p-bisect-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Barcelona",
+      "identifier": "BCN",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

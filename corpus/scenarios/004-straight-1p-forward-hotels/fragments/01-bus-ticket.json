@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Frankfurt",
+    "New York",
+    "Barcelona",
+    "Vienna"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001004",
+  "sourceDocumentId": "004-straight-1p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Frankfurt",
-      "to": "New York",
-      "vehicleNumber": "FL100"
+      "city": "New York",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "New York",
-      "to": "Barcelona",
-      "vehicleNumber": "FL101"
+      "city": "Barcelona",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Barcelona",
-      "to": "Vienna",
-      "vehicleNumber": "FL102"
+      "city": "Vienna",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001004",
-  "sourceDocumentId": "004-straight-1p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

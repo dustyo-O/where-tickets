@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Berlin",
-      "to": "New York",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Berlin",
+    "New York"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003159",
   "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "New York",
+      "identifier": "JFK",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

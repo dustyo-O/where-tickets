@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Berlin",
+    "Amsterdam",
+    "Rome",
+    "Istanbul"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001114",
+  "sourceDocumentId": "114-circle-4p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "Amsterdam",
-      "vehicleNumber": "LO100"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Amsterdam",
-      "to": "Rome",
-      "vehicleNumber": "LO101"
+      "city": "Rome",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Rome",
-      "to": "Istanbul",
-      "vehicleNumber": "LO102"
+      "city": "Istanbul",
+      "identifier": "IST",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001114",
-  "sourceDocumentId": "114-circle-4p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

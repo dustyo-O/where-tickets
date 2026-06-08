@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Amsterdam",
+    "Vienna",
+    "Copenhagen"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001187",
+  "sourceDocumentId": "187-star-4p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "Vienna",
-      "vehicleNumber": "FL100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Vienna",
-      "to": "Copenhagen",
-      "vehicleNumber": "FL101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Copenhagen",
-      "to": "Vienna",
-      "vehicleNumber": "FL102"
+      "city": "Vienna",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001187",
-  "sourceDocumentId": "187-star-4p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

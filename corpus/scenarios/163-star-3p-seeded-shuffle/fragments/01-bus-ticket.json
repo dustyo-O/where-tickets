@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Munich",
+    "Rome",
+    "Vienna"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001163",
+  "sourceDocumentId": "163-star-3p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
-      "to": "Rome",
-      "vehicleNumber": "FL100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Rome",
-      "to": "Vienna",
-      "vehicleNumber": "FL101"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Vienna",
-      "to": "Rome",
-      "vehicleNumber": "FL102"
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001163",
-  "sourceDocumentId": "163-star-3p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

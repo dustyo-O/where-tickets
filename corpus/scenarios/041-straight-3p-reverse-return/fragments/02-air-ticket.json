@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Vienna",
-      "to": "Moscow",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Vienna",
+    "Moscow"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002041",
   "sourceDocumentId": "041-straight-3p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Moscow",
+      "identifier": "SVO",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -5,7 +5,8 @@ timestamps + traveler list + hotel decisions). The fragmenter shatters that
 route into the documents a traveler would actually receive:
 
 - A multi-hop transit on the same mode and contiguous carriers becomes ONE
-  ticket fragment with multiple legs (mirrors a single PDF with multiple legs).
+  ticket fragment whose ``stations[]`` carries the journey's endpoints in
+  compact form (DUS-31 Slice 3 — see ``corpus/schema/extracted-fragment.schema.json``).
 - A mode change forces a new ticket fragment.
 - Each stopover with a hotel becomes one hotel-booking fragment.
 
@@ -19,6 +20,8 @@ import random
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from typing import Any
+
+from .cities import station_identifier, station_kind
 
 EPOCH = datetime(2027, 3, 1, tzinfo=timezone.utc)
 TRAVEL_HOURS = 3
@@ -117,6 +120,69 @@ def _doc_type_for_mode(mode: str) -> str:
     return {"air": "air-ticket", "bus": "bus-ticket", "rail": "rail-ticket"}[mode]
 
 
+def _cities_in_first_seen_order(hops: list[Hop]) -> list[str]:
+    """Return every city the hop group touches, deduped, in first-seen order."""
+    cities: list[str] = []
+    seen: set[str] = set()
+    for hop in hops:
+        for city in (hop.from_city, hop.to_city):
+            if city not in seen:
+                cities.append(city)
+                seen.add(city)
+    return cities
+
+
+def _stations_from_hops(hops: list[Hop], mode: str) -> list[dict[str, Any]]:
+    """Reshape chronological hops into the compact ``stations[]`` payload.
+
+    For a 1-hop A->B group: two entries (A dep, B arr).
+    For a layover A->B->C: three entries (A dep, B arr+dep, C arr) — the
+    middle ``B`` entry collapses the contiguous (arr at B, dep from B) pair.
+    For a return A->B->A: three entries (A dep, B arr+dep, A arr) — the two
+    A visits stay distinct because they are not contiguous in hop order.
+
+    The fold rule: walk the hop chain to build a chronological sequence of
+    ``(kind, time, city)`` events, then fold any two adjacent events that
+    are ``(arr at S, dep from S)`` for the same city S into a single entry
+    carrying both timestamps. Two same-city events that are NOT adjacent
+    (e.g. A->B->A's two A visits) stay as separate entries.
+    """
+    events: list[tuple[str, datetime, str]] = []
+    for hop in hops:
+        events.append(("departure", hop.depart, hop.from_city))
+        events.append(("arrival", hop.arrive, hop.to_city))
+
+    stations: list[dict[str, Any]] = []
+    kind = station_kind(mode)
+    i = 0
+    while i < len(events):
+        event_kind, event_time, event_city = events[i]
+        entry: dict[str, Any] = {
+            "city": event_city,
+            "kind": kind,
+            "identifier": station_identifier(event_city, mode),
+        }
+        if event_kind == "departure":
+            entry["departureAt"] = _isoformat(event_time)
+        else:
+            entry["arrivalAt"] = _isoformat(event_time)
+
+        # Fold (arr at S, dep from S) when this entry is an arrival and the
+        # very next event is a departure from the SAME city.
+        if (
+            event_kind == "arrival"
+            and i + 1 < len(events)
+            and events[i + 1][0] == "departure"
+            and events[i + 1][2] == event_city
+        ):
+            entry["departureAt"] = _isoformat(events[i + 1][1])
+            i += 2
+        else:
+            i += 1
+        stations.append(entry)
+    return stations
+
+
 def build_fragments_and_route(
     cities: list[str],
     pax: int,
@@ -136,20 +202,10 @@ def build_fragments_and_route(
     # Build ticket fragments first (one fragment per group of contiguous hops).
     for group_idx, group in enumerate(ticket_groups):
         mode = group[0].mode
-        carrier = group[0].carrier
         fragment_id = f"{scenario_slug}-tkt-{group_idx + 1:02d}"
-        legs_payload = []
+        stations_payload = _stations_from_hops(group, mode)
+        cities_payload = _cities_in_first_seen_order(group)
         for hop in group:
-            legs_payload.append(
-                {
-                    "from": hop.from_city,
-                    "to": hop.to_city,
-                    "departureAt": _isoformat(hop.depart),
-                    "arrivalAt": _isoformat(hop.arrive),
-                    "carrier": carrier,
-                    "vehicleNumber": hop.vehicle,
-                }
-            )
             transits.append(
                 {
                     "from": hop.from_city,
@@ -167,7 +223,8 @@ def build_fragments_and_route(
                 "sourceDocumentId": fragment_id,
                 "pnr": f"PNR{group_idx + 1:03d}{scenario_slug[:3].upper()}",
                 "travelers": list(travelers),
-                "legs": legs_payload,
+                "cities": cities_payload,
+                "stations": stations_payload,
             }
         )
 
@@ -230,7 +287,13 @@ def build_fragments_and_route(
     def fragment_sort_key(fragment: dict[str, Any]) -> str:
         if fragment["documentType"] == "hotel-booking":
             return fragment["checkInAt"] + "-htl"
-        return fragment["legs"][0]["departureAt"] + "-tkt"
+        # Transit fragments: pick the earliest departureAt across the compact
+        # stations[]. Always at least one station has a departureAt — every
+        # transit ticket has an origin event.
+        departures = [
+            s["departureAt"] for s in fragment["stations"] if "departureAt" in s
+        ]
+        return min(departures) + "-tkt"
 
     chronological_fragments.sort(key=fragment_sort_key)
 

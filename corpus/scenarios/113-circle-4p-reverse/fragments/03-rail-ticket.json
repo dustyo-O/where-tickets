@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Dublin",
+    "New York",
+    "Istanbul",
+    "Oslo"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001113",
+  "sourceDocumentId": "113-circle-4p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Dublin",
-      "to": "New York",
-      "vehicleNumber": "DB100"
+      "city": "New York",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "New York",
-      "to": "Istanbul",
-      "vehicleNumber": "DB101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Istanbul",
-      "to": "Oslo",
-      "vehicleNumber": "DB102"
+      "city": "Oslo",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001113",
-  "sourceDocumentId": "113-circle-4p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

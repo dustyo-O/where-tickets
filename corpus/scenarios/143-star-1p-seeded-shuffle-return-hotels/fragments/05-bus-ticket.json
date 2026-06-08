@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Barcelona",
-      "to": "Istanbul",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Barcelona",
+    "Istanbul"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002143",
   "sourceDocumentId": "143-star-1p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

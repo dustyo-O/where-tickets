@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Zurich",
+    "Copenhagen",
+    "Stockholm"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001156",
+  "sourceDocumentId": "156-star-2p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Copenhagen",
-      "to": "Stockholm",
-      "vehicleNumber": "LO101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO102"
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001156",
-  "sourceDocumentId": "156-star-2p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

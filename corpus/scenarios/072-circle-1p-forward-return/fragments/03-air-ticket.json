@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "New York",
-      "to": "Oslo",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "New York",
+    "Oslo"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003072",
   "sourceDocumentId": "072-circle-1p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Frankfurt",
-      "to": "Barcelona",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Frankfurt",
+    "Barcelona"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002098",
   "sourceDocumentId": "098-circle-3p-bisect-tkt-02",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Barcelona",
+      "identifier": "BCN",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

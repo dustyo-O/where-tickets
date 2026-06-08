@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "London",
+    "Frankfurt",
+    "Athens",
+    "Amsterdam"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001059",
+  "sourceDocumentId": "059-straight-4p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "London",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB102"
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001059",
-  "sourceDocumentId": "059-straight-4p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Barcelona",
+    "Stockholm",
+    "Athens"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001022",
+  "sourceDocumentId": "022-straight-2p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
-      "to": "Barcelona",
-      "vehicleNumber": "FL100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Barcelona",
-      "to": "Stockholm",
-      "vehicleNumber": "FL101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
-      "to": "Athens",
-      "vehicleNumber": "FL102"
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001022",
-  "sourceDocumentId": "022-straight-2p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

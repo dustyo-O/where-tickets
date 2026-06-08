@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Stockholm",
+    "Milan",
+    "Madrid",
+    "Munich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001124",
+  "sourceDocumentId": "124-circle-4p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Stockholm",
-      "to": "Milan",
-      "vehicleNumber": "FL100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Milan",
-      "to": "Madrid",
-      "vehicleNumber": "FL101"
+      "city": "Madrid",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
-      "to": "Munich",
-      "vehicleNumber": "FL102"
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001124",
-  "sourceDocumentId": "124-circle-4p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

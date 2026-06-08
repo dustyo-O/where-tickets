@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Zurich",
+    "Copenhagen",
+    "Milan"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003154",
+  "sourceDocumentId": "154-star-2p-bisect-return-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
-      "to": "Copenhagen",
-      "vehicleNumber": "EU104"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Copenhagen",
-      "to": "Milan",
-      "vehicleNumber": "EU105"
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003154",
-  "sourceDocumentId": "154-star-2p-bisect-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

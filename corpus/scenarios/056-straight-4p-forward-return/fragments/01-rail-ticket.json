@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Vienna",
+    "Rome",
+    "Barcelona"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001056",
+  "sourceDocumentId": "056-straight-4p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Frankfurt",
-      "to": "Vienna",
-      "vehicleNumber": "DB100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Vienna",
-      "to": "Rome",
-      "vehicleNumber": "DB101"
+      "city": "Rome",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Rome",
-      "to": "Barcelona",
-      "vehicleNumber": "DB102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001056",
-  "sourceDocumentId": "056-straight-4p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

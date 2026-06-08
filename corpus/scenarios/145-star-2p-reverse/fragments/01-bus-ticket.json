@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
-      "to": "Barcelona",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Zurich",
+    "Barcelona"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003145",
   "sourceDocumentId": "145-star-2p-reverse-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

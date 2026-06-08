@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Amsterdam",
+    "Madrid",
+    "Copenhagen",
+    "Barcelona"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001099",
+  "sourceDocumentId": "099-circle-3p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "Madrid",
-      "vehicleNumber": "LO100"
+      "city": "Madrid",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Madrid",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Copenhagen",
-      "to": "Barcelona",
-      "vehicleNumber": "LO102"
+      "city": "Barcelona",
+      "identifier": "BCN",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001099",
-  "sourceDocumentId": "099-circle-3p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Berlin",
+    "Prague",
+    "Moscow"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003073",
+  "sourceDocumentId": "073-circle-1p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Berlin",
-      "to": "Prague",
-      "vehicleNumber": "EU104"
+      "city": "Prague",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Prague",
-      "to": "Moscow",
-      "vehicleNumber": "EU105"
+      "city": "Moscow",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003073",
-  "sourceDocumentId": "073-circle-1p-reverse-return-tkt-03",
   "travelers": [
     "traveler-1"
   ]

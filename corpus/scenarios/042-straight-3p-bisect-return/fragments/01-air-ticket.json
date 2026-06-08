@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Madrid",
+    "Munich",
+    "Amsterdam"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001042",
+  "sourceDocumentId": "042-straight-3p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
-      "to": "Munich",
-      "vehicleNumber": "LO100"
+      "city": "Munich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Munich",
-      "to": "Amsterdam",
-      "vehicleNumber": "LO101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Amsterdam",
-      "to": "Madrid",
-      "vehicleNumber": "LO102"
+      "city": "Madrid",
+      "identifier": "MAD",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001042",
-  "sourceDocumentId": "042-straight-3p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

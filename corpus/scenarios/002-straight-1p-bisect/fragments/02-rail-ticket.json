@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "London",
+    "Warsaw",
+    "Berlin",
+    "Oslo"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001002",
+  "sourceDocumentId": "002-straight-1p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "London",
-      "to": "Warsaw",
-      "vehicleNumber": "DB100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Warsaw",
-      "to": "Berlin",
-      "vehicleNumber": "DB101"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
-      "to": "Oslo",
-      "vehicleNumber": "DB102"
+      "city": "Oslo",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001002",
-  "sourceDocumentId": "002-straight-1p-bisect-tkt-01",
   "travelers": [
     "traveler-1"
   ]

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Amsterdam",
+    "Helsinki",
+    "Zurich",
+    "Paris"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001075",
+  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "Helsinki",
-      "vehicleNumber": "LO100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Helsinki",
-      "to": "Zurich",
-      "vehicleNumber": "LO101"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Zurich",
-      "to": "Paris",
-      "vehicleNumber": "LO102"
+      "city": "Paris",
+      "identifier": "CDG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001075",
-  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

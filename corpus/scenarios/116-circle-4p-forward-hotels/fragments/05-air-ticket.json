@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Munich",
-      "to": "Rome",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Munich",
+    "Rome"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002116",
   "sourceDocumentId": "116-circle-4p-forward-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Rome",
+      "identifier": "ROM",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

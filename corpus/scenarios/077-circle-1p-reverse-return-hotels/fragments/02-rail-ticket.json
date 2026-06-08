@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Munich",
+    "Paris",
+    "Rome"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003077",
+  "sourceDocumentId": "077-circle-1p-reverse-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Munich",
-      "to": "Paris",
-      "vehicleNumber": "DB104"
+      "city": "Paris",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Paris",
-      "to": "Rome",
-      "vehicleNumber": "DB105"
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003077",
-  "sourceDocumentId": "077-circle-1p-reverse-return-hotels-tkt-03",
   "travelers": [
     "traveler-1"
   ]

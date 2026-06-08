@@ -68,13 +68,20 @@ def _bus_fragment() -> TransitTicketFragment:
             "sourceDocumentId": "tkt-01",
             "pnr": "ABC123",
             "travelers": ["traveler-1"],
-            "legs": [
+            "cities": ["HEL", "ROM"],
+            "stations": [
                 {
-                    "from": "HEL",
-                    "to": "ROM",
+                    "city": "HEL",
+                    "kind": "bus_terminal",
+                    "identifier": "HEL Bus Terminal",
                     "departureAt": "2027-03-01T00:00:00+00:00",
+                },
+                {
+                    "city": "ROM",
+                    "kind": "bus_terminal",
+                    "identifier": "ROM Bus Terminal",
                     "arrivalAt": "2027-03-01T03:00:00+00:00",
-                }
+                },
             ],
         }
     )

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Moscow",
+    "Stockholm",
+    "Madrid"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001094",
+  "sourceDocumentId": "094-circle-2p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
-      "to": "Moscow",
-      "vehicleNumber": "FL100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Moscow",
-      "to": "Stockholm",
-      "vehicleNumber": "FL101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
-      "to": "Madrid",
-      "vehicleNumber": "FL102"
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001094",
-  "sourceDocumentId": "094-circle-2p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Milan",
-      "to": "Munich",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Milan",
+    "Munich"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002032",
   "sourceDocumentId": "032-straight-3p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

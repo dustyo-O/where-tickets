@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Munich",
-      "to": "Warsaw",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Munich",
+    "Warsaw"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002136",
   "sourceDocumentId": "136-star-1p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

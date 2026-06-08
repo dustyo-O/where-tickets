@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Berlin",
+    "Helsinki",
+    "Madrid",
+    "Paris"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001029",
+  "sourceDocumentId": "029-straight-2p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "Helsinki",
-      "vehicleNumber": "DB100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Helsinki",
-      "to": "Madrid",
-      "vehicleNumber": "DB101"
+      "city": "Madrid",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
-      "to": "Paris",
-      "vehicleNumber": "DB102"
+      "city": "Paris",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001029",
-  "sourceDocumentId": "029-straight-2p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

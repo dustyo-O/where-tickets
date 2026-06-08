@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Dublin",
+    "Rome",
+    "Madrid"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001149",
+  "sourceDocumentId": "149-star-2p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Dublin",
-      "to": "Rome",
-      "vehicleNumber": "DB100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
-      "to": "Madrid",
-      "vehicleNumber": "DB101"
+      "city": "Madrid",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
-      "to": "Rome",
-      "vehicleNumber": "DB102"
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001149",
-  "sourceDocumentId": "149-star-2p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

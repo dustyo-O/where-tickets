@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Rome",
-      "to": "New York",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Rome",
+    "New York"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003087",
   "sourceDocumentId": "087-circle-2p-seeded-shuffle-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "New York",
+      "identifier": "JFK",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

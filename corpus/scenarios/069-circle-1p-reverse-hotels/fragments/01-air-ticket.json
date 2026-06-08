@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "New York",
-      "to": "London",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "New York",
+    "London"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003069",
   "sourceDocumentId": "069-circle-1p-reverse-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

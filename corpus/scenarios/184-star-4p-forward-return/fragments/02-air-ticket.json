@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Barcelona",
-      "to": "Milan",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Barcelona",
+    "Milan"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002184",
   "sourceDocumentId": "184-star-4p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Milan",
+      "identifier": "MXP",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

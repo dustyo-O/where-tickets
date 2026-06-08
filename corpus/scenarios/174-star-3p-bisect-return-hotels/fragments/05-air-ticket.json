@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Barcelona",
+    "Dublin",
+    "London"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001174",
+  "sourceDocumentId": "174-star-3p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Barcelona",
-      "to": "Dublin",
-      "vehicleNumber": "LO100"
+      "city": "Dublin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Dublin",
-      "to": "London",
-      "vehicleNumber": "LO101"
+      "city": "London",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
-      "to": "Dublin",
-      "vehicleNumber": "LO102"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001174",
-  "sourceDocumentId": "174-star-3p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

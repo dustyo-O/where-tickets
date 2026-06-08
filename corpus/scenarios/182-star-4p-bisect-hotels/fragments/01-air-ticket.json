@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Zurich",
-      "to": "Berlin",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Zurich",
+    "Berlin"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002182",
   "sourceDocumentId": "182-star-4p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

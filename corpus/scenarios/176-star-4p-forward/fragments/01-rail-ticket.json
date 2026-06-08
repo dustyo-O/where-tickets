@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Prague",
+    "Berlin",
+    "Athens"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001176",
+  "sourceDocumentId": "176-star-4p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
-      "to": "Berlin",
-      "vehicleNumber": "DB100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Berlin",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Berlin",
-      "vehicleNumber": "DB102"
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001176",
-  "sourceDocumentId": "176-star-4p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

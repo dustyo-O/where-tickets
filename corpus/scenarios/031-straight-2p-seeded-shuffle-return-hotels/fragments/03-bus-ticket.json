@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Milan",
+    "Athens",
+    "Dublin",
+    "Amsterdam"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001031",
+  "sourceDocumentId": "031-straight-2p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Milan",
-      "to": "Athens",
-      "vehicleNumber": "FL100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Athens",
-      "to": "Dublin",
-      "vehicleNumber": "FL101"
+      "city": "Dublin",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Dublin",
-      "to": "Amsterdam",
-      "vehicleNumber": "FL102"
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001031",
-  "sourceDocumentId": "031-straight-2p-seeded-shuffle-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

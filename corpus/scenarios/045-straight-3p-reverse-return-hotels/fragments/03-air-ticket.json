@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Madrid",
+    "Helsinki",
+    "Rome"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001045",
+  "sourceDocumentId": "045-straight-3p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
-      "to": "Helsinki",
-      "vehicleNumber": "LO100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Helsinki",
-      "to": "Rome",
-      "vehicleNumber": "LO101"
+      "city": "Rome",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Rome",
-      "to": "Madrid",
-      "vehicleNumber": "LO102"
+      "city": "Madrid",
+      "identifier": "MAD",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001045",
-  "sourceDocumentId": "045-straight-3p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "New York",
+    "Stockholm",
+    "Amsterdam"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001157",
+  "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Stockholm",
-      "vehicleNumber": "FL100"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Stockholm",
-      "to": "Amsterdam",
-      "vehicleNumber": "FL101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Amsterdam",
-      "to": "Stockholm",
-      "vehicleNumber": "FL102"
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001157",
-  "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

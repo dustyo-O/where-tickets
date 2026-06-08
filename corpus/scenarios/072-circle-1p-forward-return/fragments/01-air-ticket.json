@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "New York",
+    "Amsterdam",
+    "Istanbul"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001072",
+  "sourceDocumentId": "072-circle-1p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "New York",
-      "vehicleNumber": "LO100"
+      "city": "New York",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "New York",
-      "to": "Amsterdam",
-      "vehicleNumber": "LO101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Amsterdam",
-      "to": "Istanbul",
-      "vehicleNumber": "LO102"
+      "city": "Istanbul",
+      "identifier": "IST",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001072",
-  "sourceDocumentId": "072-circle-1p-forward-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Athens",
+    "Rome",
+    "Vienna"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003089",
+  "sourceDocumentId": "089-circle-2p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Athens",
-      "to": "Rome",
-      "vehicleNumber": "DB104"
+      "city": "Rome",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Rome",
-      "to": "Vienna",
-      "vehicleNumber": "DB105"
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003089",
-  "sourceDocumentId": "089-circle-2p-reverse-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

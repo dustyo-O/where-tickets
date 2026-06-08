@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "Dublin",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Amsterdam",
+    "Dublin"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002081",
   "sourceDocumentId": "081-circle-2p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

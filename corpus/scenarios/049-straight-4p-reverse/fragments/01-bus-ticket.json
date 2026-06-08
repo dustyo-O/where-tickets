@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Istanbul",
+    "Lisbon",
+    "Copenhagen"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001049",
+  "sourceDocumentId": "049-straight-4p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Istanbul",
-      "vehicleNumber": "FL100"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Istanbul",
-      "to": "Lisbon",
-      "vehicleNumber": "FL101"
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Lisbon",
-      "to": "Copenhagen",
-      "vehicleNumber": "FL102"
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001049",
-  "sourceDocumentId": "049-straight-4p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

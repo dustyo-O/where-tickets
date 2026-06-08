@@ -50,16 +50,18 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import StrEnum
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Literal
 
 from spikes.route_engine_llm.models import (
     Fragment,
     HotelBookingFragment,
+    Station,
     TransitTicketFragment,
     WorkingRoute,
     city_identity,
 )
 from spikes.route_engine_llm.operations import (
+    AddStations,
     AddTransit,
     AddTravelers,
     AttachAccommodation,
@@ -80,6 +82,114 @@ __all__ = [
     "classify_event",
     "find_after_neighbor",
 ]
+
+
+@dataclass(frozen=True, slots=True)
+class _LegView:
+    """Internal view of one ``(departure, arrival)`` pair derived from stations[].
+
+    Replaces the public ``Leg`` model that vanished in DUS-31 Slice 3.
+    Carries both the city strings AND the originating Station objects so the
+    rules can wire ``CreateStop.stations`` and ``AddTransit.origin_station``
+    / ``destination_station`` without re-walking the station list.
+    """
+
+    from_city: str
+    to_city: str
+    from_station: Station
+    to_station: Station
+    departure_at: datetime
+    arrival_at: datetime
+
+
+@dataclass(frozen=True, slots=True)
+class _StationEdge:
+    """One ``(dep|arr, time, station)`` flattening of a single station entry.
+
+    A station with only ``departure_at`` produces one departure edge; with only
+    ``arrival_at`` one arrival edge; with both, two edges (arrival first by
+    sort, then departure). Used by ``_legs_from_stations``.
+    """
+
+    kind: Literal["departure", "arrival"]
+    time: datetime
+    station: Station
+
+
+def _legs_from_stations(stations: list[Station]) -> list[_LegView]:
+    """Derive chronological ``_LegView`` pairs from a compact ``stations[]`` list.
+
+    Each station contributes 0–2 edges. The full edge list is sorted by time
+    and must strictly alternate ``departure -> arrival -> departure -> ...``
+    starting with a departure and ending with an arrival. Consecutive
+    ``(dep_i, arr_i)`` pairs become one ``_LegView``.
+
+    Raises :class:`RuleNotImplementedError` if the input is empty, doesn't
+    alternate, or ends on a departure — the engine surfaces it as
+    :class:`EngineError` so the scenario buckets cleanly.
+    """
+    edges: list[_StationEdge] = []
+    for station in stations:
+        if station.departure_at is not None:
+            edges.append(
+                _StationEdge(
+                    kind="departure", time=station.departure_at, station=station
+                )
+            )
+        if station.arrival_at is not None:
+            edges.append(
+                _StationEdge(
+                    kind="arrival", time=station.arrival_at, station=station
+                )
+            )
+
+    if not edges:
+        msg = "transit ticket has no station datetimes (cannot derive any leg)"
+        raise RuleNotImplementedError(msg)
+
+    # Sort by time. For a station with both arrival and departure (layover /
+    # return turnaround), arrival precedes departure as a tiebreak — but the
+    # alternation check below will refuse any pathological input where two
+    # consecutive edges are the same kind.
+    edges.sort(key=lambda e: (e.time, 0 if e.kind == "arrival" else 1))
+
+    if len(edges) % 2 != 0:
+        msg = (
+            f"transit ticket has an odd number of station events ({len(edges)}); "
+            "cannot pair into (departure, arrival) legs"
+        )
+        raise RuleNotImplementedError(msg)
+
+    legs: list[_LegView] = []
+    expected: Literal["departure", "arrival"] = "departure"
+    pending_dep: _StationEdge | None = None
+    for edge in edges:
+        if edge.kind != expected:
+            msg = (
+                "transit ticket station events do not strictly alternate "
+                f"departure -> arrival (saw {edge.kind!r} when expecting "
+                f"{expected!r})"
+            )
+            raise RuleNotImplementedError(msg)
+        if expected == "departure":
+            pending_dep = edge
+            expected = "arrival"
+        else:
+            assert pending_dep is not None  # noqa: S101 (alternation guarantee)
+            legs.append(
+                _LegView(
+                    from_city=pending_dep.station.city,
+                    to_city=edge.station.city,
+                    from_station=pending_dep.station,
+                    to_station=edge.station,
+                    departure_at=pending_dep.time,
+                    arrival_at=edge.time,
+                )
+            )
+            pending_dep = None
+            expected = "departure"
+
+    return legs
 
 
 class RuleNotImplementedError(Exception):
@@ -170,10 +280,13 @@ def build_ops(route: WorkingRoute, fragment: Fragment) -> list[Op]:
 def _build_ops_transit(
     route: WorkingRoute, fragment: TransitTicketFragment
 ) -> list[Op]:
-    """Translate a transit-ticket fragment into ops (per-leg arrival/departure)."""
-    if not fragment.legs:  # pragma: no cover - schema forbids empty legs
-        msg = "transit ticket has no legs"
-        raise RuleNotImplementedError(msg)
+    """Translate a transit-ticket fragment into ops (per-leg arrival/departure).
+
+    The fragment carries ``stations[]`` in compact form; ``_legs_from_stations``
+    expands it into chronological ``_LegView`` pairs that the classifier then
+    consumes exactly the way the pre-Slice-3 ``Leg`` objects did.
+    """
+    legs = _legs_from_stations(fragment.stations)
 
     mode = _ticket_mode(fragment.document_type)
     travelers = list(fragment.travelers)
@@ -188,36 +301,39 @@ def _build_ops_transit(
     # Example B reasoning, where the fragment's OWN cities count as the
     # intervening different-city stops between an event and an existing
     # same-city stop.
-    fragment_events = _fragment_events_transit(fragment)
+    fragment_events = _fragment_events_transit(legs)
     state = _BatchState()
 
-    def _resolve_event(event: Event) -> str:
+    def _resolve_event(event: Event, station: Station) -> str:
         return _resolve_or_create(
             route=route,
             event=event,
+            station=station,
             pending=pending,
             fragment_events=fragment_events,
             state=state,
             ops=ops,
         )
 
-    # Walk legs in fragment order. Each leg = (from-departure event, to-arrival event).
-    for leg in fragment.legs:
+    # Walk legs in chronological order. Each leg = (from-departure event,
+    # to-arrival event); each event carries the originating Station so the
+    # applier can stamp it onto the resulting stop / transit.
+    for leg in legs:
         from_event = Event(
-            city=leg.from_,
+            city=leg.from_city,
             time=leg.departure_at,
             role=EventRole.DEPARTURE,
             travelers=travelers_t,
         )
         to_event = Event(
-            city=leg.to,
+            city=leg.to_city,
             time=leg.arrival_at,
             role=EventRole.ARRIVAL,
             travelers=travelers_t,
         )
 
-        from_handle = _resolve_event(from_event)
-        to_handle = _resolve_event(to_event)
+        from_handle = _resolve_event(from_event, leg.from_station)
+        to_handle = _resolve_event(to_event, leg.to_station)
 
         ops.append(
             AddTransit.model_validate(
@@ -229,6 +345,8 @@ def _build_ops_transit(
                     "arrivalAt": leg.arrival_at,
                     "travelers": list(travelers),
                     "sourceFragmentId": source_id,
+                    "originStation": leg.from_station.model_dump(by_alias=True),
+                    "destinationStation": leg.to_station.model_dump(by_alias=True),
                 }
             )
         )
@@ -354,6 +472,7 @@ def _resolve_or_create(
     *,
     route: WorkingRoute,
     event: Event,
+    station: Station | None = None,
     pending: _PendingLedger,
     fragment_events: dict[str, list[datetime]],
     state: _BatchState,
@@ -373,6 +492,10 @@ def _resolve_or_create(
     fragment) sits later in time than an event being minted in the current
     batch. Anchoring by chronology fixes both forward-ordering chaining and
     non-forward / hotel-seeded routes with one code path.
+
+    When ``station`` is provided (transit events), the resulting CREATE stamps
+    it onto the minted stop, and ENRICH emits an :class:`AddStations` op so
+    the applier appends the station to the existing stop's ``stations[]``.
     """
     decision = classify_event(
         route,
@@ -384,6 +507,15 @@ def _resolve_or_create(
         assert decision.target_stop_id is not None  # noqa: S101 (sanity)
         token = decision.target_stop_id
         pending.add_contribution(token, event)
+        if station is not None:
+            ops.append(
+                AddStations.model_validate(
+                    {
+                        "target": token,
+                        "stations": [station.model_dump(by_alias=True)],
+                    }
+                )
+            )
         return token
 
     # CREATE: mint a fresh batch ref. Chronological anchoring considers BOTH
@@ -393,7 +525,17 @@ def _resolve_or_create(
     ref = f"n{state.next_ref_index}"
     state.next_ref_index += 1
     after = _find_after_neighbor_with_pending(route, pending, event.time)
-    ops.append(CreateStop(city=event.city, after=after, ref=ref))
+    stations_payload = [station.model_dump(by_alias=True)] if station is not None else []
+    ops.append(
+        CreateStop.model_validate(
+            {
+                "city": event.city,
+                "after": after,
+                "ref": ref,
+                "stations": stations_payload,
+            }
+        )
+    )
     pending.register_batch_stop(ref, event.city)
     pending.add_contribution(ref, event)
     state.batch_refs.add(ref)
@@ -945,7 +1087,7 @@ def _time_distance(a: datetime | None, b: datetime) -> float:
 
 
 def _fragment_events_transit(
-    fragment: TransitTicketFragment,
+    legs: list[_LegView],
 ) -> dict[str, list[datetime]]:
     """Pre-collect every (city -> [times]) a transit fragment will emit.
 
@@ -961,9 +1103,9 @@ def _fragment_events_transit(
     case / whitespace variants.
     """
     by_city: dict[str, list[datetime]] = {}
-    for leg in fragment.legs:
-        by_city.setdefault(city_identity(leg.from_), []).append(leg.departure_at)
-        by_city.setdefault(city_identity(leg.to), []).append(leg.arrival_at)
+    for leg in legs:
+        by_city.setdefault(city_identity(leg.from_city), []).append(leg.departure_at)
+        by_city.setdefault(city_identity(leg.to_city), []).append(leg.arrival_at)
     return by_city
 
 

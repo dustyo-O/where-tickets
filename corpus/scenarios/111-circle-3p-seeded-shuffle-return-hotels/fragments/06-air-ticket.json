@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Stockholm",
+    "Barcelona",
+    "Amsterdam",
+    "Copenhagen"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001111",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Stockholm",
-      "to": "Barcelona",
-      "vehicleNumber": "LO100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Barcelona",
-      "to": "Amsterdam",
-      "vehicleNumber": "LO101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Amsterdam",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO102"
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001111",
-  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

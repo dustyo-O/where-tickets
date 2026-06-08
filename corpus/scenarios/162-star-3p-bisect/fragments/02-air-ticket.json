@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Zurich",
+    "Frankfurt",
+    "London"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001162",
+  "sourceDocumentId": "162-star-3p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Frankfurt",
-      "vehicleNumber": "LO100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
-      "to": "London",
-      "vehicleNumber": "LO101"
+      "city": "London",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "London",
-      "to": "Frankfurt",
-      "vehicleNumber": "LO102"
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001162",
-  "sourceDocumentId": "162-star-3p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

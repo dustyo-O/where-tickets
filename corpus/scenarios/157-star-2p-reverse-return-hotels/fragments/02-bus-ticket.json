@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Stockholm",
+    "New York"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003157",
+  "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Frankfurt",
-      "to": "Stockholm",
-      "vehicleNumber": "EU104"
+      "city": "Stockholm",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Stockholm",
-      "to": "New York",
-      "vehicleNumber": "EU105"
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003157",
-  "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

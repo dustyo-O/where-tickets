@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Dublin",
-      "to": "Zurich",
-      "vehicleNumber": "DB104"
-    }
+  "cities": [
+    "Dublin",
+    "Zurich"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR003104",
   "sourceDocumentId": "104-circle-3p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

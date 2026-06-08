@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "London",
+    "Helsinki",
+    "Amsterdam"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR003075",
+  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "London",
-      "to": "Helsinki",
-      "vehicleNumber": "KL104"
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Helsinki",
-      "to": "Amsterdam",
-      "vehicleNumber": "KL105"
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003075",
-  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
   "travelers": [
     "traveler-1"
   ]

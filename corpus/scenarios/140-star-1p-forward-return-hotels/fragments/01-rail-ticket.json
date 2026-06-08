@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Zurich",
+    "Oslo",
+    "Rome"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001140",
+  "sourceDocumentId": "140-star-1p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Oslo",
-      "vehicleNumber": "DB100"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Oslo",
-      "to": "Rome",
-      "vehicleNumber": "DB101"
+      "city": "Rome",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Rome",
-      "to": "Oslo",
-      "vehicleNumber": "DB102"
+      "city": "Oslo",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001140",
-  "sourceDocumentId": "140-star-1p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Zurich",
+    "Vienna",
+    "Paris"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001167",
+  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Vienna",
-      "vehicleNumber": "DB100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Vienna",
-      "to": "Paris",
-      "vehicleNumber": "DB101"
+      "city": "Paris",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Paris",
-      "to": "Vienna",
-      "vehicleNumber": "DB102"
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001167",
-  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

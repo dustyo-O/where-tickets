@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Paris",
+    "Istanbul",
+    "Oslo"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001189",
+  "sourceDocumentId": "189-star-4p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Paris",
-      "to": "Istanbul",
-      "vehicleNumber": "LO100"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Istanbul",
-      "to": "Oslo",
-      "vehicleNumber": "LO101"
+      "city": "Oslo",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Oslo",
-      "to": "Istanbul",
-      "vehicleNumber": "LO102"
+      "city": "Istanbul",
+      "identifier": "IST",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001189",
-  "sourceDocumentId": "189-star-4p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

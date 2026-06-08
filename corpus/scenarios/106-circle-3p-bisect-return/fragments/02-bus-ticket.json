@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Istanbul",
-      "to": "Warsaw",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Istanbul",
+    "Warsaw"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003106",
   "sourceDocumentId": "106-circle-3p-bisect-return-tkt-03",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Warsaw",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

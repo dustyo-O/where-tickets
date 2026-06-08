@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Frankfurt",
-      "to": "Barcelona",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Frankfurt",
+    "Barcelona"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002162",
   "sourceDocumentId": "162-star-3p-bisect-tkt-02",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

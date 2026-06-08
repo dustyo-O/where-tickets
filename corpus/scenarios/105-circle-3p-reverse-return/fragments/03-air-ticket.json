@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Barcelona",
+    "Milan",
+    "Copenhagen",
+    "Dublin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001105",
+  "sourceDocumentId": "105-circle-3p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Barcelona",
-      "to": "Milan",
-      "vehicleNumber": "LO100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Milan",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Copenhagen",
-      "to": "Dublin",
-      "vehicleNumber": "LO102"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001105",
-  "sourceDocumentId": "105-circle-3p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

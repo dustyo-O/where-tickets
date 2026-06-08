@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "New York",
+    "Oslo",
+    "Copenhagen",
+    "Prague"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001010",
+  "sourceDocumentId": "010-straight-1p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Oslo",
-      "vehicleNumber": "FL100"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Oslo",
-      "to": "Copenhagen",
-      "vehicleNumber": "FL101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Copenhagen",
-      "to": "Prague",
-      "vehicleNumber": "FL102"
+      "city": "Prague",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001010",
-  "sourceDocumentId": "010-straight-1p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

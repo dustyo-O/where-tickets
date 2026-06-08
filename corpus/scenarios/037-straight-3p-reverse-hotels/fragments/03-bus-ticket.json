@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Munich",
+    "Warsaw",
+    "Moscow",
+    "Rome"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001037",
+  "sourceDocumentId": "037-straight-3p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
-      "to": "Warsaw",
-      "vehicleNumber": "FL100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Warsaw",
-      "to": "Moscow",
-      "vehicleNumber": "FL101"
+      "city": "Moscow",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Moscow",
-      "to": "Rome",
-      "vehicleNumber": "FL102"
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001037",
-  "sourceDocumentId": "037-straight-3p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

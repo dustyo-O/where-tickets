@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Lisbon",
+    "Warsaw",
+    "Madrid"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001188",
+  "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Lisbon Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Lisbon",
-      "to": "Warsaw",
-      "vehicleNumber": "DB100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Warsaw",
-      "to": "Madrid",
-      "vehicleNumber": "DB101"
+      "city": "Madrid",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
-      "to": "Warsaw",
-      "vehicleNumber": "DB102"
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001188",
-  "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

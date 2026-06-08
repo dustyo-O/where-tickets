@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Helsinki",
-      "to": "London",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Helsinki",
+    "London"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002122",
   "sourceDocumentId": "122-circle-4p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "London",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Stockholm",
+    "Paris",
+    "Athens"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001179",
+  "sourceDocumentId": "179-star-4p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Stockholm",
-      "to": "Paris",
-      "vehicleNumber": "DB100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Paris",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Paris",
-      "vehicleNumber": "DB102"
+      "city": "Paris",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001179",
-  "sourceDocumentId": "179-star-4p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Berlin",
-      "to": "Helsinki",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Berlin",
+    "Helsinki"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002102",
   "sourceDocumentId": "102-circle-3p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

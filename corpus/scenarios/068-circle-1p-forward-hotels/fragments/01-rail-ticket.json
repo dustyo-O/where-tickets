@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Stockholm",
+    "Helsinki",
+    "Paris",
+    "Rome"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001068",
+  "sourceDocumentId": "068-circle-1p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Stockholm",
-      "to": "Helsinki",
-      "vehicleNumber": "DB100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Helsinki",
-      "to": "Paris",
-      "vehicleNumber": "DB101"
+      "city": "Paris",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Paris",
-      "to": "Rome",
-      "vehicleNumber": "DB102"
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001068",
-  "sourceDocumentId": "068-circle-1p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

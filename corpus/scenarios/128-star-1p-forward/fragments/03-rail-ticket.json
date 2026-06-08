@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Oslo",
+    "Frankfurt",
+    "Dublin"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003128",
+  "sourceDocumentId": "128-star-1p-forward-tkt-03",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Oslo",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB104"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Frankfurt",
-      "to": "Dublin",
-      "vehicleNumber": "DB105"
+      "city": "Dublin",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003128",
-  "sourceDocumentId": "128-star-1p-forward-tkt-03",
   "travelers": [
     "traveler-1"
   ]

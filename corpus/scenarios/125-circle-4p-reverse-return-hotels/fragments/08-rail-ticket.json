@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Istanbul",
+    "Vienna",
+    "London",
+    "Copenhagen"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001125",
+  "sourceDocumentId": "125-circle-4p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
-      "to": "Vienna",
-      "vehicleNumber": "DB100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Vienna",
-      "to": "London",
-      "vehicleNumber": "DB101"
+      "city": "London",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB102"
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001125",
-  "sourceDocumentId": "125-circle-4p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

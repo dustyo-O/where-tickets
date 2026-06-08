@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Istanbul",
+    "Vienna",
+    "Milan"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001138",
+  "sourceDocumentId": "138-star-1p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
-      "to": "Vienna",
-      "vehicleNumber": "LO100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Vienna",
-      "to": "Milan",
-      "vehicleNumber": "LO101"
+      "city": "Milan",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Milan",
-      "to": "Vienna",
-      "vehicleNumber": "LO102"
+      "city": "Vienna",
+      "identifier": "VIE",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001138",
-  "sourceDocumentId": "138-star-1p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

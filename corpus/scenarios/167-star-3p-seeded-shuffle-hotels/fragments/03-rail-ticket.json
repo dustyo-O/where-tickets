@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Oslo",
+    "Vienna",
+    "London"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003167",
+  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Oslo",
-      "to": "Vienna",
-      "vehicleNumber": "DB104"
+      "city": "Vienna",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Vienna",
-      "to": "London",
-      "vehicleNumber": "DB105"
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003167",
-  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

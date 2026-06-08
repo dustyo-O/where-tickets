@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "New York",
+    "Prague",
+    "Istanbul"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001164",
+  "sourceDocumentId": "164-star-3p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Prague",
-      "vehicleNumber": "DB100"
+      "city": "Prague",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Prague",
-      "to": "Istanbul",
-      "vehicleNumber": "DB101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Istanbul",
-      "to": "Prague",
-      "vehicleNumber": "DB102"
+      "city": "Prague",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001164",
-  "sourceDocumentId": "164-star-3p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

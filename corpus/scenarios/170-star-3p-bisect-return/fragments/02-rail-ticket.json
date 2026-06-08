@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Zurich",
+    "Paris",
+    "Munich",
+    "Copenhagen"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003170",
+  "sourceDocumentId": "170-star-3p-bisect-return-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
-      "to": "Paris",
-      "vehicleNumber": "DB104"
+      "city": "Paris",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Paris",
-      "to": "Munich",
-      "vehicleNumber": "DB105"
+      "city": "Munich",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Munich",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB106"
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003170",
-  "sourceDocumentId": "170-star-3p-bisect-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Rome",
+    "New York",
+    "London"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001020",
+  "sourceDocumentId": "020-straight-2p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Rome",
-      "vehicleNumber": "DB100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
-      "to": "New York",
-      "vehicleNumber": "DB101"
+      "city": "New York",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "New York",
-      "to": "London",
-      "vehicleNumber": "DB102"
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001020",
-  "sourceDocumentId": "020-straight-2p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

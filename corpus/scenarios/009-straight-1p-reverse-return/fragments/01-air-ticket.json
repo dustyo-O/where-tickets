@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Oslo",
+    "Moscow",
+    "Rome"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001009",
+  "sourceDocumentId": "009-straight-1p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Moscow",
-      "vehicleNumber": "LO100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Moscow",
-      "to": "Rome",
-      "vehicleNumber": "LO101"
+      "city": "Rome",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Rome",
-      "to": "Oslo",
-      "vehicleNumber": "LO102"
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001009",
-  "sourceDocumentId": "009-straight-1p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

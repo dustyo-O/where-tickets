@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Prague",
+    "London",
+    "Oslo",
+    "Amsterdam"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001096",
+  "sourceDocumentId": "096-circle-3p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
-      "to": "London",
-      "vehicleNumber": "LO100"
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "London",
-      "to": "Oslo",
-      "vehicleNumber": "LO101"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Oslo",
-      "to": "Amsterdam",
-      "vehicleNumber": "LO102"
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001096",
-  "sourceDocumentId": "096-circle-3p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

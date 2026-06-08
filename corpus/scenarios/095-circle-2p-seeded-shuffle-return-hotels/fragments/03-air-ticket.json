@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Rome",
-      "to": "Lisbon",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Rome",
+    "Lisbon"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002095",
   "sourceDocumentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

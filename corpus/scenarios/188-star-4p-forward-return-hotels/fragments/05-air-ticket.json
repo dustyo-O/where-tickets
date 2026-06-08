@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Warsaw",
-      "to": "Frankfurt",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Warsaw",
+    "Frankfurt"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002188",
   "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

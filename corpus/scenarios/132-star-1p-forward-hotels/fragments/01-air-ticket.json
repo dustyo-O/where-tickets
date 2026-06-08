@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "New York",
+    "Zurich",
+    "Paris"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001132",
+  "sourceDocumentId": "132-star-1p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Zurich",
-      "vehicleNumber": "LO100"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Zurich",
-      "to": "Paris",
-      "vehicleNumber": "LO101"
+      "city": "Paris",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "CDG",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Paris",
-      "to": "Zurich",
-      "vehicleNumber": "LO102"
+      "city": "Zurich",
+      "identifier": "ZRH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001132",
-  "sourceDocumentId": "132-star-1p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

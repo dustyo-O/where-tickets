@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "London",
+    "Amsterdam",
+    "Munich",
+    "Istanbul"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003173",
+  "sourceDocumentId": "173-star-3p-reverse-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "London",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB104"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Amsterdam",
-      "to": "Munich",
-      "vehicleNumber": "DB105"
+      "city": "Munich",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-06T06:00:00Z",
-      "from": "Munich",
-      "to": "Istanbul",
-      "vehicleNumber": "DB106"
+      "city": "Istanbul",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003173",
-  "sourceDocumentId": "173-star-3p-reverse-return-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

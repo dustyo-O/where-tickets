@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Istanbul",
-      "to": "New York",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Istanbul",
+    "New York"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002072",
   "sourceDocumentId": "072-circle-1p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

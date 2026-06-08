@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Istanbul",
+    "Barcelona",
+    "Zurich",
+    "Helsinki"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003143",
+  "sourceDocumentId": "143-star-1p-seeded-shuffle-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Istanbul",
-      "to": "Barcelona",
-      "vehicleNumber": "DB104"
+      "city": "Barcelona",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Barcelona",
-      "to": "Zurich",
-      "vehicleNumber": "DB105"
+      "city": "Zurich",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-06T06:00:00Z",
-      "from": "Zurich",
-      "to": "Helsinki",
-      "vehicleNumber": "DB106"
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003143",
-  "sourceDocumentId": "143-star-1p-seeded-shuffle-return-hotels-tkt-03",
   "travelers": [
     "traveler-1"
   ]

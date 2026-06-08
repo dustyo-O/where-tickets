@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Milan",
+    "Zurich",
+    "Oslo"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR003123",
+  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Milan",
-      "to": "Zurich",
-      "vehicleNumber": "KL104"
+      "city": "Zurich",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Zurich",
-      "to": "Oslo",
-      "vehicleNumber": "KL105"
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003123",
-  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

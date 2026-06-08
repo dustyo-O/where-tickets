@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Rome",
-      "to": "Copenhagen",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Rome",
+    "Copenhagen"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002079",
   "sourceDocumentId": "079-circle-1p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

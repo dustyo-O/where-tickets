@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Zurich",
+    "Amsterdam",
+    "Helsinki",
+    "London"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001058",
+  "sourceDocumentId": "058-straight-4p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Amsterdam",
-      "vehicleNumber": "FL100"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Amsterdam",
-      "to": "Helsinki",
-      "vehicleNumber": "FL101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Helsinki",
-      "to": "London",
-      "vehicleNumber": "FL102"
+      "city": "London",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001058",
-  "sourceDocumentId": "058-straight-4p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

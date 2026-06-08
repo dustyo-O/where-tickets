@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Copenhagen",
-      "to": "Amsterdam",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Copenhagen",
+    "Amsterdam"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002125",
   "sourceDocumentId": "125-circle-4p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

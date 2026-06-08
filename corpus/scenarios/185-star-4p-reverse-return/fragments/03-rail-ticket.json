@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Paris",
+    "Copenhagen",
+    "Athens"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001185",
+  "sourceDocumentId": "185-star-4p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Paris",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Copenhagen",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB102"
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001185",
-  "sourceDocumentId": "185-star-4p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

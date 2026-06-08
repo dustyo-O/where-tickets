@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Zurich",
+    "Athens",
+    "Stockholm",
+    "Moscow"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001001",
+  "sourceDocumentId": "001-straight-1p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Athens",
-      "vehicleNumber": "FL100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
-      "to": "Stockholm",
-      "vehicleNumber": "FL101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Stockholm",
-      "to": "Moscow",
-      "vehicleNumber": "FL102"
+      "city": "Moscow",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001001",
-  "sourceDocumentId": "001-straight-1p-reverse-tkt-01",
   "travelers": [
     "traveler-1"
   ]

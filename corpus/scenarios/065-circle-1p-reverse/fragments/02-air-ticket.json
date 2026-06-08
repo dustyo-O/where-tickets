@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Rome",
-      "to": "Amsterdam",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Rome",
+    "Amsterdam"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002065",
   "sourceDocumentId": "065-circle-1p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

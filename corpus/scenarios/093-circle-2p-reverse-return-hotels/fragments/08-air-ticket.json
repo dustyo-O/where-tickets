@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Amsterdam",
+    "Athens",
+    "Berlin",
+    "Milan"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001093",
+  "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "Athens",
-      "vehicleNumber": "LO100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Athens",
-      "to": "Berlin",
-      "vehicleNumber": "LO101"
+      "city": "Berlin",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Berlin",
-      "to": "Milan",
-      "vehicleNumber": "LO102"
+      "city": "Milan",
+      "identifier": "MXP",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001093",
-  "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

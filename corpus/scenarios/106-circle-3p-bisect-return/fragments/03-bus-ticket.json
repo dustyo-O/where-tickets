@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "Istanbul",
+    "New York",
+    "Prague"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001106",
+  "sourceDocumentId": "106-circle-3p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
-      "to": "Istanbul",
-      "vehicleNumber": "FL100"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Istanbul",
-      "to": "New York",
-      "vehicleNumber": "FL101"
+      "city": "New York",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "New York",
-      "to": "Prague",
-      "vehicleNumber": "FL102"
+      "city": "Prague",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001106",
-  "sourceDocumentId": "106-circle-3p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

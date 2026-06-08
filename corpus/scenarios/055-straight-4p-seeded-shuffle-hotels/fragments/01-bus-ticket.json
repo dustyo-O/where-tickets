@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Oslo",
+    "Stockholm",
+    "Zurich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001055",
+  "sourceDocumentId": "055-straight-4p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
-      "to": "Oslo",
-      "vehicleNumber": "FL100"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Oslo",
-      "to": "Stockholm",
-      "vehicleNumber": "FL101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
-      "to": "Zurich",
-      "vehicleNumber": "FL102"
+      "city": "Zurich",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001055",
-  "sourceDocumentId": "055-straight-4p-seeded-shuffle-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

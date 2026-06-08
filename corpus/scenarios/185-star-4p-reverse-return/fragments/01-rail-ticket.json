@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "Copenhagen",
+    "Frankfurt",
+    "Paris"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003185",
+  "sourceDocumentId": "185-star-4p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Warsaw",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB104"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Copenhagen",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB105"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Frankfurt",
-      "to": "Paris",
-      "vehicleNumber": "DB106"
+      "city": "Paris",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003185",
-  "sourceDocumentId": "185-star-4p-reverse-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

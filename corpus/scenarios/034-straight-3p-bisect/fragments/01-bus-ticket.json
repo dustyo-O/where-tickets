@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Milan",
+    "Berlin",
+    "Moscow"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001034",
+  "sourceDocumentId": "034-straight-3p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
-      "to": "Milan",
-      "vehicleNumber": "FL100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Milan",
-      "to": "Berlin",
-      "vehicleNumber": "FL101"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
-      "to": "Moscow",
-      "vehicleNumber": "FL102"
+      "city": "Moscow",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001034",
-  "sourceDocumentId": "034-straight-3p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

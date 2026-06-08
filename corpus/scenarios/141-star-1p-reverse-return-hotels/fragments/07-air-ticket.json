@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Zurich",
+    "Paris",
+    "Lisbon"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001141",
+  "sourceDocumentId": "141-star-1p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Paris",
-      "vehicleNumber": "LO100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "CDG",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Paris",
-      "to": "Lisbon",
-      "vehicleNumber": "LO101"
+      "city": "Lisbon",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "LIS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Lisbon",
-      "to": "Paris",
-      "vehicleNumber": "LO102"
+      "city": "Paris",
+      "identifier": "CDG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001141",
-  "sourceDocumentId": "141-star-1p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

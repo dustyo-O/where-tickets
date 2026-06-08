@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Rome",
+    "Amsterdam",
+    "Munich"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001116",
+  "sourceDocumentId": "116-circle-4p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Frankfurt",
-      "to": "Rome",
-      "vehicleNumber": "DB100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Amsterdam",
-      "to": "Munich",
-      "vehicleNumber": "DB102"
+      "city": "Munich",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001116",
-  "sourceDocumentId": "116-circle-4p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Moscow",
-      "to": "London",
-      "vehicleNumber": "DB104"
-    }
+  "cities": [
+    "Moscow",
+    "London"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR003041",
   "sourceDocumentId": "041-straight-3p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

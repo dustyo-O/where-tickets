@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "London",
+    "Oslo",
+    "Athens"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001146",
+  "sourceDocumentId": "146-star-2p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "London",
-      "to": "Oslo",
-      "vehicleNumber": "DB100"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Oslo",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Oslo",
-      "vehicleNumber": "DB102"
+      "city": "Oslo",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001146",
-  "sourceDocumentId": "146-star-2p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

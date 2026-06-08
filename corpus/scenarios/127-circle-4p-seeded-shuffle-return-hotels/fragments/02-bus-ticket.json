@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Dublin",
+    "Rome",
+    "Munich",
+    "Barcelona"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001127",
+  "sourceDocumentId": "127-circle-4p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Dublin",
-      "to": "Rome",
-      "vehicleNumber": "FL100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
-      "to": "Munich",
-      "vehicleNumber": "FL101"
+      "city": "Munich",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Munich",
-      "to": "Barcelona",
-      "vehicleNumber": "FL102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001127",
-  "sourceDocumentId": "127-circle-4p-seeded-shuffle-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

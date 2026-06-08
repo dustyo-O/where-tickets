@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Barcelona",
+    "Athens",
+    "Vienna",
+    "Madrid"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001107",
+  "sourceDocumentId": "107-circle-3p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Barcelona",
-      "to": "Athens",
-      "vehicleNumber": "DB100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
-      "to": "Vienna",
-      "vehicleNumber": "DB101"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Vienna",
-      "to": "Madrid",
-      "vehicleNumber": "DB102"
+      "city": "Madrid",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001107",
-  "sourceDocumentId": "107-circle-3p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

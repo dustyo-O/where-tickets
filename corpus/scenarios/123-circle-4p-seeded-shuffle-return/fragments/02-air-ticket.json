@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Zurich",
+    "Moscow",
+    "Vienna"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001123",
+  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Zurich",
-      "vehicleNumber": "LO100"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Zurich",
-      "to": "Moscow",
-      "vehicleNumber": "LO101"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Moscow",
-      "to": "Vienna",
-      "vehicleNumber": "LO102"
+      "city": "Vienna",
+      "identifier": "VIE",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001123",
-  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

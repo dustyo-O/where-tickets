@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Copenhagen",
-      "to": "Zurich",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Copenhagen",
+    "Zurich"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002154",
   "sourceDocumentId": "154-star-2p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

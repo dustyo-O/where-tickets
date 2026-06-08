@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Milan",
+    "Munich",
+    "London"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001139",
+  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Milan",
-      "to": "Munich",
-      "vehicleNumber": "FL100"
+      "city": "Munich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Munich",
-      "to": "London",
-      "vehicleNumber": "FL101"
+      "city": "London",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "London",
-      "to": "Munich",
-      "vehicleNumber": "FL102"
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001139",
-  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

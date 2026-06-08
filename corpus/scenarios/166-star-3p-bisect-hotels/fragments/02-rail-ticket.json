@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Milan",
-      "to": "Dublin",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Milan",
+    "Dublin"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002166",
   "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

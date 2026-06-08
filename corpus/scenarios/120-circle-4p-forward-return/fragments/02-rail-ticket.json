@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Helsinki",
-      "to": "Zurich",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Helsinki",
+    "Zurich"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002120",
   "sourceDocumentId": "120-circle-4p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

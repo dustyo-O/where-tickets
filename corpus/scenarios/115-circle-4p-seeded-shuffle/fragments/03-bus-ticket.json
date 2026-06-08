@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Munich",
-      "to": "Istanbul",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Munich",
+    "Istanbul"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003115",
   "sourceDocumentId": "115-circle-4p-seeded-shuffle-tkt-03",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Moscow",
+    "Prague",
+    "Istanbul",
+    "Dublin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001073",
+  "sourceDocumentId": "073-circle-1p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Moscow",
-      "to": "Prague",
-      "vehicleNumber": "FL100"
+      "city": "Prague",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Prague",
-      "to": "Istanbul",
-      "vehicleNumber": "FL101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Istanbul",
-      "to": "Dublin",
-      "vehicleNumber": "FL102"
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001073",
-  "sourceDocumentId": "073-circle-1p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

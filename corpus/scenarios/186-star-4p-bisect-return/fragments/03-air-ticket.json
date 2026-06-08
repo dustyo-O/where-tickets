@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Amsterdam",
+    "Athens",
+    "Frankfurt"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001186",
+  "sourceDocumentId": "186-star-4p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "Athens",
-      "vehicleNumber": "LO100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
-      "to": "Frankfurt",
-      "vehicleNumber": "LO101"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Frankfurt",
-      "to": "Athens",
-      "vehicleNumber": "LO102"
+      "city": "Athens",
+      "identifier": "ATH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001186",
-  "sourceDocumentId": "186-star-4p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

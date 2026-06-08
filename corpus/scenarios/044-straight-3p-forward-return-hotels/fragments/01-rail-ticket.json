@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Munich",
+    "Vienna",
+    "Istanbul",
+    "Prague"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001044",
+  "sourceDocumentId": "044-straight-3p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
-      "to": "Vienna",
-      "vehicleNumber": "DB100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Vienna",
-      "to": "Istanbul",
-      "vehicleNumber": "DB101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Istanbul",
-      "to": "Prague",
-      "vehicleNumber": "DB102"
+      "city": "Prague",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001044",
-  "sourceDocumentId": "044-straight-3p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

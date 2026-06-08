@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Copenhagen",
-      "to": "Milan",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Copenhagen",
+    "Milan"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002156",
   "sourceDocumentId": "156-star-2p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

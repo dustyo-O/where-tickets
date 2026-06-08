@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Madrid",
+    "Barcelona",
+    "Oslo",
+    "Frankfurt"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001098",
+  "sourceDocumentId": "098-circle-3p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
-      "to": "Barcelona",
-      "vehicleNumber": "DB100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Barcelona",
-      "to": "Oslo",
-      "vehicleNumber": "DB101"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Oslo",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB102"
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001098",
-  "sourceDocumentId": "098-circle-3p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

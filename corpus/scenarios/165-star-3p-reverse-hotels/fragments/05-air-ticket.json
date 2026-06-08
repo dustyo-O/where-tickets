@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Warsaw",
+    "London",
+    "Rome"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001165",
+  "sourceDocumentId": "165-star-3p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
-      "to": "London",
-      "vehicleNumber": "LO100"
+      "city": "London",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "London",
-      "to": "Rome",
-      "vehicleNumber": "LO101"
+      "city": "Rome",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Rome",
-      "to": "London",
-      "vehicleNumber": "LO102"
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001165",
-  "sourceDocumentId": "165-star-3p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

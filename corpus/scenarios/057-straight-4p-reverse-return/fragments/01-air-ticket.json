@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Munich",
+    "Dublin",
+    "Lisbon"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001057",
+  "sourceDocumentId": "057-straight-4p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
-      "to": "Dublin",
-      "vehicleNumber": "LO100"
+      "city": "Dublin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Dublin",
-      "to": "Lisbon",
-      "vehicleNumber": "LO101"
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "LIS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Lisbon",
-      "to": "Munich",
-      "vehicleNumber": "LO102"
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001057",
-  "sourceDocumentId": "057-straight-4p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

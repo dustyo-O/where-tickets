@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "New York",
+    "Istanbul",
+    "Oslo",
+    "Barcelona"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001028",
+  "sourceDocumentId": "028-straight-2p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Istanbul",
-      "vehicleNumber": "FL100"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Istanbul",
-      "to": "Oslo",
-      "vehicleNumber": "FL101"
+      "city": "Oslo",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Oslo",
-      "to": "Barcelona",
-      "vehicleNumber": "FL102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001028",
-  "sourceDocumentId": "028-straight-2p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

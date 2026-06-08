@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "Athens",
+    "Moscow",
+    "Copenhagen"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001011",
+  "sourceDocumentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
-      "to": "Athens",
-      "vehicleNumber": "DB100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
-      "to": "Moscow",
-      "vehicleNumber": "DB101"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Moscow",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB102"
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001011",
-  "sourceDocumentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

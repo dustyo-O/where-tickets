@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Warsaw",
+    "Munich",
+    "Barcelona"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003136",
+  "sourceDocumentId": "136-star-1p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Warsaw",
-      "to": "Munich",
-      "vehicleNumber": "EU104"
+      "city": "Munich",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Munich",
-      "to": "Barcelona",
-      "vehicleNumber": "EU105"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003136",
-  "sourceDocumentId": "136-star-1p-forward-return-tkt-03",
   "travelers": [
     "traveler-1"
   ]

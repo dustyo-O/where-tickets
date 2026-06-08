@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Vienna",
+    "Frankfurt",
+    "Oslo"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003121",
+  "sourceDocumentId": "121-circle-4p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Vienna",
-      "to": "Frankfurt",
-      "vehicleNumber": "EU104"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Frankfurt",
-      "to": "Oslo",
-      "vehicleNumber": "EU105"
+      "city": "Oslo",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003121",
-  "sourceDocumentId": "121-circle-4p-reverse-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

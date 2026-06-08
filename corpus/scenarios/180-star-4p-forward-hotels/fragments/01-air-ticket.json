@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Dublin",
+    "Berlin",
+    "Madrid"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001180",
+  "sourceDocumentId": "180-star-4p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Dublin",
-      "to": "Berlin",
-      "vehicleNumber": "LO100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Berlin",
-      "to": "Madrid",
-      "vehicleNumber": "LO101"
+      "city": "Madrid",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
-      "to": "Berlin",
-      "vehicleNumber": "LO102"
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001180",
-  "sourceDocumentId": "180-star-4p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

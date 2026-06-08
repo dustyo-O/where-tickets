@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Istanbul",
+    "Berlin",
+    "Copenhagen"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001015",
+  "sourceDocumentId": "015-straight-1p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
-      "to": "Berlin",
-      "vehicleNumber": "LO100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Berlin",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Copenhagen",
-      "to": "Istanbul",
-      "vehicleNumber": "LO102"
+      "city": "Istanbul",
+      "identifier": "IST",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001015",
-  "sourceDocumentId": "015-straight-1p-seeded-shuffle-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Madrid",
+    "Stockholm",
+    "Frankfurt",
+    "Vienna"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001053",
+  "sourceDocumentId": "053-straight-4p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
-      "to": "Stockholm",
-      "vehicleNumber": "DB100"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Stockholm",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB101"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Frankfurt",
-      "to": "Vienna",
-      "vehicleNumber": "DB102"
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001053",
-  "sourceDocumentId": "053-straight-4p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Helsinki",
+    "Munich",
+    "Warsaw",
+    "Dublin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001067",
+  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Helsinki",
-      "to": "Munich",
-      "vehicleNumber": "FL100"
+      "city": "Munich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Munich",
-      "to": "Warsaw",
-      "vehicleNumber": "FL101"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Warsaw",
-      "to": "Dublin",
-      "vehicleNumber": "FL102"
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001067",
-  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1"
   ]

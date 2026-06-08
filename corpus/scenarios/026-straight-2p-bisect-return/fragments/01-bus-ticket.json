@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "New York",
-      "to": "Oslo",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "New York",
+    "Oslo"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002026",
   "sourceDocumentId": "026-straight-2p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Oslo",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

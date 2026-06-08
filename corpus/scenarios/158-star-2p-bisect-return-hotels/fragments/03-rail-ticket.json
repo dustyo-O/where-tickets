@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Rome",
+    "Warsaw",
+    "Helsinki",
+    "Milan"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003158",
+  "sourceDocumentId": "158-star-2p-bisect-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Rome",
-      "to": "Warsaw",
-      "vehicleNumber": "DB104"
+      "city": "Warsaw",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Warsaw",
-      "to": "Helsinki",
-      "vehicleNumber": "DB105"
+      "city": "Helsinki",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-06T06:00:00Z",
-      "from": "Helsinki",
-      "to": "Milan",
-      "vehicleNumber": "DB106"
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003158",
-  "sourceDocumentId": "158-star-2p-bisect-return-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

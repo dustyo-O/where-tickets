@@ -21,9 +21,9 @@ __all__ = [
     "TransitMode",
     "Accommodation",
     "RouteStop",
+    "Station",
     "Transit",
     "WorkingRoute",
-    "Leg",
     "TransitTicketFragment",
     "HotelBookingFragment",
     "Fragment",
@@ -54,6 +54,25 @@ class TransitMode(StrEnum):
     RAIL = "rail"
 
 
+class Station(BaseModel):
+    """One transit endpoint (airport / rail station / bus terminal).
+
+    A station entry is one *visit* to a physical place — so the same airport
+    appears twice for a return trip (outbound origin + return destination).
+    ``departure_at`` is set when the traveler leaves from this station;
+    ``arrival_at`` is set when they arrive. A layover or return-leg turnaround
+    carries both.
+    """
+
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+    city: str
+    kind: Literal["airport", "rail_station", "bus_terminal"]
+    identifier: str
+    departure_at: datetime | None = Field(default=None, alias="departureAt")
+    arrival_at: datetime | None = Field(default=None, alias="arrivalAt")
+
+
 # --------------------------------------------------------------------------- #
 # Working route (engine-owned identity)
 # --------------------------------------------------------------------------- #
@@ -80,6 +99,11 @@ class RouteStop(BaseModel):
     departure_at: datetime | None = Field(default=None, alias="departureAt")
     travelers: list[str] = Field(default_factory=list)
     accommodations: list[Accommodation] = Field(default_factory=list)
+    # Stations contributed to this stop by the transits / source PDFs that
+    # touched the city. The expected-route schema does NOT carry this field
+    # in DUS-31 Slice 3 — scoring.final_route_match strips it so the working
+    # route can grow station detail without breaking the comparison.
+    stations: list[Station] = Field(default_factory=list)
 
 
 class Transit(BaseModel):
@@ -95,6 +119,13 @@ class Transit(BaseModel):
     arrival_at: datetime = Field(alias="arrivalAt")
     travelers: list[str] = Field(default_factory=list)
     source_fragment_id: str = Field(alias="sourceFragmentId")
+    # Which station in the from/to city the transit actually departs/arrives
+    # at. Not part of the expected-route comparison in Slice 3 — see
+    # scoring.final_route_match for the strip.
+    origin_station: Station | None = Field(default=None, alias="originStation")
+    destination_station: Station | None = Field(
+        default=None, alias="destinationStation"
+    )
 
 
 class WorkingRoute(BaseModel):
@@ -170,21 +201,15 @@ class WorkingRoute(BaseModel):
 # --------------------------------------------------------------------------- #
 
 
-class Leg(BaseModel):
-    """One leg of a transit ticket."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    from_: str = Field(alias="from")
-    to: str
-    departure_at: datetime = Field(alias="departureAt")
-    arrival_at: datetime = Field(alias="arrivalAt")
-    carrier: str | None = None
-    vehicle_number: str | None = Field(default=None, alias="vehicleNumber")
-
-
 class TransitTicketFragment(BaseModel):
-    """A transit ticket fragment (air / bus / rail)."""
+    """A transit ticket fragment (air / bus / rail).
+
+    Endpoints arrive in compact ``stations[]`` form (one entry per visit to a
+    physical station): an origin carries ``departure_at`` only, a terminus
+    carries ``arrival_at`` only, a layover or return-leg turnaround carries
+    both. The algorithmic rules derive ordered legs from this list — see
+    ``spikes.route_engine_algorithmic.rules._legs_from_stations``.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
@@ -194,7 +219,8 @@ class TransitTicketFragment(BaseModel):
     source_document_id: str = Field(alias="sourceDocumentId")
     pnr: str
     travelers: list[str]
-    legs: list[Leg]
+    cities: list[str] = Field(min_length=1)
+    stations: list[Station] = Field(min_length=2)
 
 
 class HotelBookingFragment(BaseModel):

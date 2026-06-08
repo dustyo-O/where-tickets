@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Berlin",
+    "Athens",
+    "Lisbon"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001090",
+  "sourceDocumentId": "090-circle-2p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Berlin",
-      "vehicleNumber": "LO100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Berlin",
-      "to": "Athens",
-      "vehicleNumber": "LO101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Lisbon",
-      "vehicleNumber": "LO102"
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001090",
-  "sourceDocumentId": "090-circle-2p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

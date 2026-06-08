@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Stockholm",
+    "Prague",
+    "Munich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003109",
+  "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Stockholm",
-      "to": "Prague",
-      "vehicleNumber": "EU104"
+      "city": "Prague",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Prague",
-      "to": "Munich",
-      "vehicleNumber": "EU105"
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003109",
-  "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

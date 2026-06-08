@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Lisbon",
+    "Athens",
+    "Prague"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001147",
+  "sourceDocumentId": "147-star-2p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "LIS",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Lisbon",
-      "to": "Athens",
-      "vehicleNumber": "LO100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
-      "to": "Prague",
-      "vehicleNumber": "LO101"
+      "city": "Prague",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Prague",
-      "to": "Athens",
-      "vehicleNumber": "LO102"
+      "city": "Athens",
+      "identifier": "ATH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001147",
-  "sourceDocumentId": "147-star-2p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

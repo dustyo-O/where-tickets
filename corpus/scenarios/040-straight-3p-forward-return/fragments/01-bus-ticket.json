@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Berlin",
+    "Moscow",
+    "Dublin",
+    "Amsterdam"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001040",
+  "sourceDocumentId": "040-straight-3p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "Moscow",
-      "vehicleNumber": "FL100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Moscow",
-      "to": "Dublin",
-      "vehicleNumber": "FL101"
+      "city": "Dublin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Dublin",
-      "to": "Amsterdam",
-      "vehicleNumber": "FL102"
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001040",
-  "sourceDocumentId": "040-straight-3p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "New York",
+    "Helsinki",
+    "Milan"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001032",
+  "sourceDocumentId": "032-straight-3p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
-      "to": "New York",
-      "vehicleNumber": "DB100"
+      "city": "New York",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "New York",
-      "to": "Helsinki",
-      "vehicleNumber": "DB101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Helsinki",
-      "to": "Milan",
-      "vehicleNumber": "DB102"
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001032",
-  "sourceDocumentId": "032-straight-3p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

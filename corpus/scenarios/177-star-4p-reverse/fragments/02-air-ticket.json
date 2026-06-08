@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Warsaw",
+    "Moscow",
+    "New York"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001177",
+  "sourceDocumentId": "177-star-4p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
-      "to": "Moscow",
-      "vehicleNumber": "LO100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Moscow",
-      "to": "New York",
-      "vehicleNumber": "LO101"
+      "city": "New York",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "New York",
-      "to": "Moscow",
-      "vehicleNumber": "LO102"
+      "city": "Moscow",
+      "identifier": "SVO",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001177",
-  "sourceDocumentId": "177-star-4p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

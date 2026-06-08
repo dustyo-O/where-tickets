@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "London",
-      "to": "Madrid",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "London",
+    "Madrid"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003078",
   "sourceDocumentId": "078-circle-1p-bisect-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Madrid",
+      "identifier": "MAD",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

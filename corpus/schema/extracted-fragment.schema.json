@@ -21,23 +21,35 @@
       "type": "string",
       "minLength": 1
     },
-    "leg": {
+    "placeEntry": {
       "type": "object",
-      "additionalProperties": false,
-      "required": ["from", "to", "departureAt", "arrivalAt"],
+      "description": "Shared core shape for structured place arrays (currently `stations` on transit tickets; mirrors the PDF corpus's `placeEntry` def). Each concrete array composes this with a bucket-specific datetime fragment via `allOf` + `unevaluatedProperties: false` and narrows `kind` via its own enum.",
+      "required": ["city", "kind", "identifier"],
       "properties": {
-        "from": { "$ref": "#/$defs/cityName" },
-        "to": { "$ref": "#/$defs/cityName" },
+        "city": { "$ref": "#/$defs/cityName" },
+        "kind": {
+          "type": "string",
+          "description": "Subtype of the place. Each array narrows this to its own enum (see the concrete array's `items.properties.kind`)."
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Stable identifier as printed on the document - IATA code for airports, printed name otherwise.",
+          "minLength": 1
+        }
+      }
+    },
+    "stationDatetimes": {
+      "type": "object",
+      "description": "Optional departure / arrival datetimes for a transit station. An origin has departure only; a terminus has arrival only; a layover or return-leg turnaround has both. Either or both may be absent; per-document-type presence rules are enforced by the rules engine, not by this schema.",
+      "properties": {
         "departureAt": { "$ref": "#/$defs/isoDateTime" },
-        "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
-        "carrier": { "type": "string", "minLength": 1 },
-        "vehicleNumber": { "type": "string", "minLength": 1 }
+        "arrivalAt": { "$ref": "#/$defs/isoDateTime" }
       }
     },
     "transitTicket": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["documentType", "sourceDocumentId", "pnr", "travelers", "legs"],
+      "required": ["documentType", "sourceDocumentId", "pnr", "travelers", "cities", "stations"],
       "properties": {
         "documentType": {
           "type": "string",
@@ -51,10 +63,35 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/traveler" }
         },
-        "legs": {
+        "cities": {
           "type": "array",
+          "description": "City names exactly as printed on the document, in first-seen order. Distinct from `stations[].city`, which is the per-endpoint printed city — `cities[]` is the deduplicated top-level set used by the engine when classifying same-city collapses.",
           "minItems": 1,
-          "items": { "$ref": "#/$defs/leg" }
+          "items": { "$ref": "#/$defs/cityName" }
+        },
+        "stations": {
+          "type": "array",
+          "description": "Transit endpoints printed on the document (airports, rail stations, bus terminals) in compact form: one entry per visit to a station. An origin has departureAt only, a terminus has arrivalAt only, a layover or return-leg turnaround has both. Every transit ticket has at least one origin and one terminus.",
+          "minItems": 2,
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/stationDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Station subtype.",
+                "enum": ["airport", "rail_station", "bus_terminal"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "IATA code for `airport`; printed station name for `rail_station` / `bus_terminal`.",
+                "minLength": 1
+              }
+            }
+          }
         }
       }
     },

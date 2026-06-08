@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Milan",
-      "to": "Rome",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Milan",
+    "Rome"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003163",
   "sourceDocumentId": "163-star-3p-seeded-shuffle-tkt-03",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Copenhagen",
-      "to": "Milan",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Copenhagen",
+    "Milan"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002082",
   "sourceDocumentId": "082-circle-2p-bisect-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

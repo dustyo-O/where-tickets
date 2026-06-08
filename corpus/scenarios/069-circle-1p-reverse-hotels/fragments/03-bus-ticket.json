@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Madrid",
-      "to": "New York",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Madrid",
+    "New York"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002069",
   "sourceDocumentId": "069-circle-1p-reverse-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

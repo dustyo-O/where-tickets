@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Copenhagen",
+    "Stockholm",
+    "Berlin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001130",
+  "sourceDocumentId": "130-star-1p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Copenhagen",
-      "to": "Stockholm",
-      "vehicleNumber": "FL100"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Stockholm",
-      "to": "Berlin",
-      "vehicleNumber": "FL101"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
-      "to": "Stockholm",
-      "vehicleNumber": "FL102"
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001130",
-  "sourceDocumentId": "130-star-1p-bisect-tkt-01",
   "travelers": [
     "traveler-1"
   ]

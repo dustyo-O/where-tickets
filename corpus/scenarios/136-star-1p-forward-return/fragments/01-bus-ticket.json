@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Barcelona",
+    "Munich",
+    "Athens"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001136",
+  "sourceDocumentId": "136-star-1p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Barcelona",
-      "to": "Munich",
-      "vehicleNumber": "FL100"
+      "city": "Munich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Munich",
-      "to": "Athens",
-      "vehicleNumber": "FL101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Munich",
-      "vehicleNumber": "FL102"
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001136",
-  "sourceDocumentId": "136-star-1p-forward-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Dublin",
+    "Barcelona",
+    "Stockholm"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR003111",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Dublin",
-      "to": "Barcelona",
-      "vehicleNumber": "KL104"
+      "city": "Barcelona",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Barcelona",
-      "to": "Stockholm",
-      "vehicleNumber": "KL105"
+      "city": "Stockholm",
+      "identifier": "ARN",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003111",
-  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

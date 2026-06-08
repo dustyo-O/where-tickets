@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Rome",
+    "Amsterdam",
+    "Athens",
+    "Warsaw"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001023",
+  "sourceDocumentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Rome",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB100"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Amsterdam",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Athens",
-      "to": "Warsaw",
-      "vehicleNumber": "DB102"
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001023",
-  "sourceDocumentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

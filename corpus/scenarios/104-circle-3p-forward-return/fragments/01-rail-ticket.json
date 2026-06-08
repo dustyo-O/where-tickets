@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Zurich",
+    "Dublin",
+    "Frankfurt",
+    "Munich"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001104",
+  "sourceDocumentId": "104-circle-3p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
-      "to": "Dublin",
-      "vehicleNumber": "DB100"
+      "city": "Dublin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Dublin",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB101"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Frankfurt",
-      "to": "Munich",
-      "vehicleNumber": "DB102"
+      "city": "Munich",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001104",
-  "sourceDocumentId": "104-circle-3p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

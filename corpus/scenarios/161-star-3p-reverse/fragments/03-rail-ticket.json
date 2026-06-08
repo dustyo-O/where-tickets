@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Berlin",
+    "London",
+    "Madrid"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001161",
+  "sourceDocumentId": "161-star-3p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
-      "to": "London",
-      "vehicleNumber": "DB100"
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "London",
-      "to": "Madrid",
-      "vehicleNumber": "DB101"
+      "city": "Madrid",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Madrid",
-      "to": "London",
-      "vehicleNumber": "DB102"
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001161",
-  "sourceDocumentId": "161-star-3p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

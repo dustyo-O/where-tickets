@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Prague",
+    "Vienna",
+    "Moscow"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001051",
+  "sourceDocumentId": "051-straight-4p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
-      "to": "Vienna",
-      "vehicleNumber": "LO100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Vienna",
-      "to": "Moscow",
-      "vehicleNumber": "LO101"
+      "city": "Moscow",
+      "identifier": "SVO",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001051",
-  "sourceDocumentId": "051-straight-4p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

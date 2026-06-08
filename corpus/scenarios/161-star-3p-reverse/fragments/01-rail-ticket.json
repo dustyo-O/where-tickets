@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Copenhagen",
+    "London",
+    "Helsinki"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003161",
+  "sourceDocumentId": "161-star-3p-reverse-tkt-03",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Copenhagen",
-      "to": "London",
-      "vehicleNumber": "DB104"
+      "city": "London",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "London",
-      "to": "Helsinki",
-      "vehicleNumber": "DB105"
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003161",
-  "sourceDocumentId": "161-star-3p-reverse-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

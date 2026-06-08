@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Dublin",
-      "to": "Berlin",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Dublin",
+    "Berlin"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002073",
   "sourceDocumentId": "073-circle-1p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Moscow",
-      "to": "Helsinki",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Moscow",
+    "Helsinki"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002177",
   "sourceDocumentId": "177-star-4p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

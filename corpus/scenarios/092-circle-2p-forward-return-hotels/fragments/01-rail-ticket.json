@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Munich",
+    "Helsinki",
+    "Prague",
+    "Frankfurt"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001092",
+  "sourceDocumentId": "092-circle-2p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
-      "to": "Helsinki",
-      "vehicleNumber": "DB100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Helsinki",
-      "to": "Prague",
-      "vehicleNumber": "DB101"
+      "city": "Prague",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Prague",
-      "to": "Frankfurt",
-      "vehicleNumber": "DB102"
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001092",
-  "sourceDocumentId": "092-circle-2p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

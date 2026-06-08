@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Rome",
+    "Copenhagen",
+    "Amsterdam",
+    "Berlin"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001014",
+  "sourceDocumentId": "014-straight-1p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Rome",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Copenhagen",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Amsterdam",
-      "to": "Berlin",
-      "vehicleNumber": "DB102"
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001014",
-  "sourceDocumentId": "014-straight-1p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

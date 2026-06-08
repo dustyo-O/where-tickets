@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Helsinki",
+    "Zurich",
+    "Barcelona",
+    "Berlin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001097",
+  "sourceDocumentId": "097-circle-3p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Helsinki",
-      "to": "Zurich",
-      "vehicleNumber": "FL100"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Zurich",
-      "to": "Barcelona",
-      "vehicleNumber": "FL101"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Barcelona",
-      "to": "Berlin",
-      "vehicleNumber": "FL102"
+      "city": "Berlin",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001097",
-  "sourceDocumentId": "097-circle-3p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

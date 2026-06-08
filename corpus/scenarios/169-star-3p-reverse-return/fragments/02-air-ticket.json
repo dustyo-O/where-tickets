@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Munich",
-      "to": "Berlin",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Munich",
+    "Berlin"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002169",
   "sourceDocumentId": "169-star-3p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

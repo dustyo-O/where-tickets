@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Prague",
+    "Rome",
+    "Helsinki"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001183",
+  "sourceDocumentId": "183-star-4p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
-      "to": "Rome",
-      "vehicleNumber": "LO100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
-      "to": "Helsinki",
-      "vehicleNumber": "LO101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Helsinki",
-      "to": "Rome",
-      "vehicleNumber": "LO102"
+      "city": "Rome",
+      "identifier": "ROM",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001183",
-  "sourceDocumentId": "183-star-4p-seeded-shuffle-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

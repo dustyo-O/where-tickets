@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Prague",
+    "London",
+    "Berlin",
+    "Dublin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001066",
+  "sourceDocumentId": "066-circle-1p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
-      "to": "London",
-      "vehicleNumber": "LO100"
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "London",
-      "to": "Berlin",
-      "vehicleNumber": "LO101"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
-      "to": "Dublin",
-      "vehicleNumber": "LO102"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001066",
-  "sourceDocumentId": "066-circle-1p-bisect-tkt-01",
   "travelers": [
     "traveler-1"
   ]

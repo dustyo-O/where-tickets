@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Milan",
+    "London",
+    "Helsinki",
+    "Madrid"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001069",
+  "sourceDocumentId": "069-circle-1p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Milan",
-      "to": "London",
-      "vehicleNumber": "LO100"
+      "city": "London",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "London",
-      "to": "Helsinki",
-      "vehicleNumber": "LO101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Helsinki",
-      "to": "Madrid",
-      "vehicleNumber": "LO102"
+      "city": "Madrid",
+      "identifier": "MAD",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001069",
-  "sourceDocumentId": "069-circle-1p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

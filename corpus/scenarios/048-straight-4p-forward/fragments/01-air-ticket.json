@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Istanbul",
+    "Rome",
+    "Prague"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001048",
+  "sourceDocumentId": "048-straight-4p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
-      "to": "Rome",
-      "vehicleNumber": "LO100"
+      "city": "Rome",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Rome",
-      "to": "Prague",
-      "vehicleNumber": "LO101"
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001048",
-  "sourceDocumentId": "048-straight-4p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

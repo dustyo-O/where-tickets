@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Athens",
+    "Stockholm",
+    "Istanbul",
+    "Zurich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001118",
+  "sourceDocumentId": "118-circle-4p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Athens",
-      "to": "Stockholm",
-      "vehicleNumber": "FL100"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Stockholm",
-      "to": "Istanbul",
-      "vehicleNumber": "FL101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Istanbul",
-      "to": "Zurich",
-      "vehicleNumber": "FL102"
+      "city": "Zurich",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001118",
-  "sourceDocumentId": "118-circle-4p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

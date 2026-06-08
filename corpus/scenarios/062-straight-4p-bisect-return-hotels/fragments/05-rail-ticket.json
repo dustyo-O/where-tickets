@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Istanbul",
+    "New York",
+    "London",
+    "Amsterdam"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001062",
+  "sourceDocumentId": "062-straight-4p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
-      "to": "New York",
-      "vehicleNumber": "DB100"
+      "city": "New York",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "New York",
-      "to": "London",
-      "vehicleNumber": "DB101"
+      "city": "London",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB102"
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001062",
-  "sourceDocumentId": "062-straight-4p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

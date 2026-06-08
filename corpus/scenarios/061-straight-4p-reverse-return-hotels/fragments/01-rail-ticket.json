@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Stockholm",
-      "to": "Dublin",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Stockholm",
+    "Dublin"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002061",
   "sourceDocumentId": "061-straight-4p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

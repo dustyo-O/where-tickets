@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "London",
+    "Berlin",
+    "Zurich",
+    "Moscow"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001071",
+  "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "London",
-      "to": "Berlin",
-      "vehicleNumber": "DB100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Berlin",
-      "to": "Zurich",
-      "vehicleNumber": "DB101"
+      "city": "Zurich",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Zurich",
-      "to": "Moscow",
-      "vehicleNumber": "DB102"
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001071",
-  "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

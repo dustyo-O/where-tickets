@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Rome",
+    "Frankfurt",
+    "Warsaw"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001144",
+  "sourceDocumentId": "144-star-2p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Rome",
-      "to": "Frankfurt",
-      "vehicleNumber": "LO100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
-      "to": "Warsaw",
-      "vehicleNumber": "LO101"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Warsaw",
-      "to": "Frankfurt",
-      "vehicleNumber": "LO102"
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001144",
-  "sourceDocumentId": "144-star-2p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

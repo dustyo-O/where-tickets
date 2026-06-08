@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Amsterdam",
+    "London",
+    "Athens",
+    "Helsinki"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001122",
+  "sourceDocumentId": "122-circle-4p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "to": "London",
-      "vehicleNumber": "DB100"
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "London",
-      "to": "Athens",
-      "vehicleNumber": "DB101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
-      "to": "Helsinki",
-      "vehicleNumber": "DB102"
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001122",
-  "sourceDocumentId": "122-circle-4p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

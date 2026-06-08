@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Berlin",
+    "Helsinki",
+    "Moscow"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001083",
+  "sourceDocumentId": "083-circle-2p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
-      "to": "Berlin",
-      "vehicleNumber": "DB100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Berlin",
-      "to": "Helsinki",
-      "vehicleNumber": "DB101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Helsinki",
-      "to": "Moscow",
-      "vehicleNumber": "DB102"
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001083",
-  "sourceDocumentId": "083-circle-2p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

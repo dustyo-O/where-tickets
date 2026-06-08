@@ -56,13 +56,20 @@ def test_paris_and_PARIS_collapse_to_one_stop() -> None:
             "sourceDocumentId": "doc-a",
             "pnr": "AAA111",
             "travelers": ["traveler-1"],
-            "legs": [
+            "cities": ["Warsaw", "Paris"],
+            "stations": [
                 {
-                    "from": "Warsaw",
-                    "to": "Paris",
+                    "city": "Warsaw",
+                    "kind": "airport",
+                    "identifier": "WAW",
                     "departureAt": "2027-03-01T08:00:00Z",
+                },
+                {
+                    "city": "Paris",
+                    "kind": "airport",
+                    "identifier": "CDG",
                     "arrivalAt": "2027-03-01T11:00:00Z",
-                }
+                },
             ],
         }
     )
@@ -72,13 +79,20 @@ def test_paris_and_PARIS_collapse_to_one_stop() -> None:
             "sourceDocumentId": "doc-b",
             "pnr": "BBB222",
             "travelers": ["traveler-1"],
-            "legs": [
+            "cities": ["PARIS", "Berlin"],
+            "stations": [
                 {
-                    "from": "PARIS",
-                    "to": "Berlin",
+                    "city": "PARIS",
+                    "kind": "airport",
+                    "identifier": "CDG",
                     "departureAt": "2027-03-02T08:00:00Z",
+                },
+                {
+                    "city": "Berlin",
+                    "kind": "airport",
+                    "identifier": "BER",
                     "arrivalAt": "2027-03-02T10:00:00Z",
-                }
+                },
             ],
         }
     )
@@ -108,13 +122,20 @@ def test_paris_whitespace_variant_collapses_to_one_stop() -> None:
             "sourceDocumentId": "doc-a",
             "pnr": "AAA111",
             "travelers": ["traveler-1"],
-            "legs": [
+            "cities": ["Warsaw", "Paris"],
+            "stations": [
                 {
-                    "from": "Warsaw",
-                    "to": "Paris",
+                    "city": "Warsaw",
+                    "kind": "airport",
+                    "identifier": "WAW",
                     "departureAt": "2027-03-01T08:00:00Z",
+                },
+                {
+                    "city": "Paris",
+                    "kind": "airport",
+                    "identifier": "CDG",
                     "arrivalAt": "2027-03-01T11:00:00Z",
-                }
+                },
             ],
         }
     )
@@ -124,13 +145,20 @@ def test_paris_whitespace_variant_collapses_to_one_stop() -> None:
             "sourceDocumentId": "doc-b",
             "pnr": "BBB222",
             "travelers": ["traveler-1"],
-            "legs": [
+            "cities": ["  paris  ", "Berlin"],
+            "stations": [
                 {
-                    "from": "  paris  ",
-                    "to": "Berlin",
+                    "city": "  paris  ",
+                    "kind": "airport",
+                    "identifier": "CDG",
                     "departureAt": "2027-03-02T08:00:00Z",
+                },
+                {
+                    "city": "Berlin",
+                    "kind": "airport",
+                    "identifier": "BER",
                     "arrivalAt": "2027-03-02T10:00:00Z",
-                }
+                },
             ],
         }
     )

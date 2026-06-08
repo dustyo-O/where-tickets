@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Athens",
+    "Copenhagen",
+    "Warsaw"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001110",
+  "sourceDocumentId": "110-circle-3p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Athens",
-      "vehicleNumber": "DB100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Athens",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Copenhagen",
-      "to": "Warsaw",
-      "vehicleNumber": "DB102"
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001110",
-  "sourceDocumentId": "110-circle-3p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

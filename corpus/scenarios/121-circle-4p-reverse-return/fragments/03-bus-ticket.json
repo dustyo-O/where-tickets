@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Frankfurt",
+    "Munich",
+    "Lisbon"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001121",
+  "sourceDocumentId": "121-circle-4p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
-      "to": "Frankfurt",
-      "vehicleNumber": "FL100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
-      "to": "Munich",
-      "vehicleNumber": "FL101"
+      "city": "Munich",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Munich",
-      "to": "Lisbon",
-      "vehicleNumber": "FL102"
+      "city": "Lisbon",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001121",
-  "sourceDocumentId": "121-circle-4p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

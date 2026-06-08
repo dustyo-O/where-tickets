@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Copenhagen",
+    "Zurich",
+    "New York"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001190",
+  "sourceDocumentId": "190-star-4p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Copenhagen",
-      "to": "Zurich",
-      "vehicleNumber": "FL100"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Zurich",
-      "to": "New York",
-      "vehicleNumber": "FL101"
+      "city": "New York",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "New York",
-      "to": "Zurich",
-      "vehicleNumber": "FL102"
+      "city": "Zurich",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001190",
-  "sourceDocumentId": "190-star-4p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

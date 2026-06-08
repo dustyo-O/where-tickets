@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Madrid",
+    "Paris",
+    "Moscow",
+    "Zurich"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001119",
+  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
-      "to": "Paris",
-      "vehicleNumber": "DB100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Paris",
-      "to": "Moscow",
-      "vehicleNumber": "DB101"
+      "city": "Moscow",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Moscow",
-      "to": "Zurich",
-      "vehicleNumber": "DB102"
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001119",
-  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

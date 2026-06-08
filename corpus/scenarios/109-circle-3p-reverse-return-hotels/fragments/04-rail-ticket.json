@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Zurich",
-      "to": "Stockholm",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Zurich",
+    "Stockholm"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002109",
   "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

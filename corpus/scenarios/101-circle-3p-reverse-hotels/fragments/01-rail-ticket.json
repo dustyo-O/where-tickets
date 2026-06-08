@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Dublin",
-      "to": "Copenhagen",
-      "vehicleNumber": "DB104"
-    }
+  "cities": [
+    "Dublin",
+    "Copenhagen"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR003101",
   "sourceDocumentId": "101-circle-3p-reverse-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Paris",
+    "Barcelona",
+    "Amsterdam"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001131",
+  "sourceDocumentId": "131-star-1p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Paris",
-      "to": "Barcelona",
-      "vehicleNumber": "DB100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Barcelona",
-      "to": "Amsterdam",
-      "vehicleNumber": "DB101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Amsterdam",
-      "to": "Barcelona",
-      "vehicleNumber": "DB102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001131",
-  "sourceDocumentId": "131-star-1p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1"
   ]

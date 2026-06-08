@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "New York",
+    "Copenhagen",
+    "London"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001159",
+  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Copenhagen",
-      "to": "London",
-      "vehicleNumber": "LO101"
+      "city": "London",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
-      "to": "Copenhagen",
-      "vehicleNumber": "LO102"
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001159",
-  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

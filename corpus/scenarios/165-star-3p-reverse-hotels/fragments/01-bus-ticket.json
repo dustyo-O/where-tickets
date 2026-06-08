@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "London",
-      "to": "Oslo",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "London",
+    "Oslo"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002165",
   "sourceDocumentId": "165-star-3p-reverse-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Oslo",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

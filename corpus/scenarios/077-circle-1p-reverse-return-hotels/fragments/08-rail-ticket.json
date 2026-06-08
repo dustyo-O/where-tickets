@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Rome",
+    "Paris",
+    "New York",
+    "Zurich"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001077",
+  "sourceDocumentId": "077-circle-1p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Rome",
-      "to": "Paris",
-      "vehicleNumber": "DB100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Paris",
-      "to": "New York",
-      "vehicleNumber": "DB101"
+      "city": "New York",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "New York",
-      "to": "Zurich",
-      "vehicleNumber": "DB102"
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001077",
-  "sourceDocumentId": "077-circle-1p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

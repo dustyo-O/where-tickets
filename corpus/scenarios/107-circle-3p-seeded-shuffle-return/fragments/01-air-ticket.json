@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Madrid",
-      "to": "Berlin",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Madrid",
+    "Berlin"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002107",
   "sourceDocumentId": "107-circle-3p-seeded-shuffle-return-tkt-02",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

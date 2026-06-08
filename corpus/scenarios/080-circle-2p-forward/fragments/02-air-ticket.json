@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Oslo",
-      "to": "Moscow",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Oslo",
+    "Moscow"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002080",
   "sourceDocumentId": "080-circle-2p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Moscow",
+      "identifier": "SVO",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

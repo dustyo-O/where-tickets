@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Rome",
-      "to": "Milan",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Rome",
+    "Milan"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002163",
   "sourceDocumentId": "163-star-3p-seeded-shuffle-tkt-02",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

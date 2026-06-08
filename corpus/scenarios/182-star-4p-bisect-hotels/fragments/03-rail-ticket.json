@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Berlin",
+    "Zurich",
+    "Milan"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003182",
+  "sourceDocumentId": "182-star-4p-bisect-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Berlin",
-      "to": "Zurich",
-      "vehicleNumber": "DB104"
+      "city": "Zurich",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Zurich",
-      "to": "Milan",
-      "vehicleNumber": "DB105"
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003182",
-  "sourceDocumentId": "182-star-4p-bisect-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

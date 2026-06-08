@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Oslo",
-      "to": "Copenhagen",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Oslo",
+    "Copenhagen"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002146",
   "sourceDocumentId": "146-star-2p-bisect-tkt-02",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

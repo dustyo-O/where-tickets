@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Prague",
+    "Lisbon",
+    "Zurich",
+    "Helsinki"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001074",
+  "sourceDocumentId": "074-circle-1p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
-      "to": "Lisbon",
-      "vehicleNumber": "DB100"
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Lisbon Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Lisbon",
-      "to": "Zurich",
-      "vehicleNumber": "DB101"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Zurich",
-      "to": "Helsinki",
-      "vehicleNumber": "DB102"
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001074",
-  "sourceDocumentId": "074-circle-1p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

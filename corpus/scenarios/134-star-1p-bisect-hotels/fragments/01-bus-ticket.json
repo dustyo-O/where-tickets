@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Berlin",
-      "to": "Dublin",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Berlin",
+    "Dublin"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002134",
   "sourceDocumentId": "134-star-1p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

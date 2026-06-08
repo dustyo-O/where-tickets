@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "Copenhagen",
+    "Barcelona",
+    "Dublin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001091",
+  "sourceDocumentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
-      "to": "Copenhagen",
-      "vehicleNumber": "FL100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Copenhagen",
-      "to": "Barcelona",
-      "vehicleNumber": "FL101"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Barcelona",
-      "to": "Dublin",
-      "vehicleNumber": "FL102"
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001091",
-  "sourceDocumentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

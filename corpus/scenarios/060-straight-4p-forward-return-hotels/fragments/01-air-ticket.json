@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Vienna",
+    "Berlin",
+    "Moscow"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001060",
+  "sourceDocumentId": "060-straight-4p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
-      "to": "Berlin",
-      "vehicleNumber": "LO100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Berlin",
-      "to": "Moscow",
-      "vehicleNumber": "LO101"
+      "city": "Moscow",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Moscow",
-      "to": "Vienna",
-      "vehicleNumber": "LO102"
+      "city": "Vienna",
+      "identifier": "VIE",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001060",
-  "sourceDocumentId": "060-straight-4p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

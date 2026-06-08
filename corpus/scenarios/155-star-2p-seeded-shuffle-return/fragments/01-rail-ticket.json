@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Zurich",
+    "Dublin",
+    "Lisbon",
+    "Istanbul"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR003155",
+  "sourceDocumentId": "155-star-2p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
-      "to": "Dublin",
-      "vehicleNumber": "DB104"
+      "city": "Dublin",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Dublin",
-      "to": "Lisbon",
-      "vehicleNumber": "DB105"
+      "city": "Lisbon",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "identifier": "Lisbon Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Lisbon",
-      "to": "Istanbul",
-      "vehicleNumber": "DB106"
+      "city": "Istanbul",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR003155",
-  "sourceDocumentId": "155-star-2p-seeded-shuffle-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Dublin",
-      "to": "Copenhagen",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Dublin",
+    "Copenhagen"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002174",
   "sourceDocumentId": "174-star-3p-bisect-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

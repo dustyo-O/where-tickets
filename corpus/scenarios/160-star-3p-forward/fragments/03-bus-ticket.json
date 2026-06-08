@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Munich",
-      "to": "New York",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Munich",
+    "New York"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003160",
   "sourceDocumentId": "160-star-3p-forward-tkt-03",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

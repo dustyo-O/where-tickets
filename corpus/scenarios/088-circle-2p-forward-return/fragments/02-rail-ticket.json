@@ -1,17 +1,25 @@
 {
-  "documentType": "rail-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "OBB",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Istanbul",
-      "to": "Madrid",
-      "vehicleNumber": "OB103"
-    }
+  "cities": [
+    "Istanbul",
+    "Madrid"
   ],
+  "documentType": "rail-ticket",
   "pnr": "PNR002088",
   "sourceDocumentId": "088-circle-2p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Madrid",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

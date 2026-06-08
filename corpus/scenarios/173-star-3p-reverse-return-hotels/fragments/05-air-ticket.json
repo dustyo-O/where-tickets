@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Amsterdam",
-      "to": "London",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Amsterdam",
+    "London"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002173",
   "sourceDocumentId": "173-star-3p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

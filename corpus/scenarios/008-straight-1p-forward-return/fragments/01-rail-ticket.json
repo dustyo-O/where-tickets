@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "New York",
+    "Athens",
+    "Stockholm",
+    "Rome"
+  ],
   "documentType": "rail-ticket",
-  "legs": [
+  "pnr": "PNR001008",
+  "sourceDocumentId": "008-straight-1p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
-      "to": "Athens",
-      "vehicleNumber": "DB100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
-      "to": "Stockholm",
-      "vehicleNumber": "DB101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "DB",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Stockholm",
-      "to": "Rome",
-      "vehicleNumber": "DB102"
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
     }
   ],
-  "pnr": "PNR001008",
-  "sourceDocumentId": "008-straight-1p-forward-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

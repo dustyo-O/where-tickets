@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Munich",
+    "London",
+    "Dublin",
+    "Amsterdam"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001046",
+  "sourceDocumentId": "046-straight-3p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
-      "to": "London",
-      "vehicleNumber": "FL100"
+      "city": "London",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "London",
-      "to": "Dublin",
-      "vehicleNumber": "FL101"
+      "city": "Dublin",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Dublin",
-      "to": "Amsterdam",
-      "vehicleNumber": "FL102"
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001046",
-  "sourceDocumentId": "046-straight-3p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

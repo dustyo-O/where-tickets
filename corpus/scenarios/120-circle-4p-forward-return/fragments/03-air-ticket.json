@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
-      "to": "Munich",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Zurich",
+    "Munich"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003120",
   "sourceDocumentId": "120-circle-4p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

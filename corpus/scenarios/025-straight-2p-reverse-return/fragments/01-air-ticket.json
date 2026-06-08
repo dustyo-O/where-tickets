@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Helsinki",
-      "to": "Prague",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Helsinki",
+    "Prague"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002025",
   "sourceDocumentId": "025-straight-2p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

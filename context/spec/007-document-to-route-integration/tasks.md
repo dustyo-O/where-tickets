@@ -22,15 +22,15 @@
   - [x] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
   - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; `cd backend && uv run pytest tests/spikes/` green (144 passed); `just lint` clean. **[Agent: python-backend]**
 
-- [ ] **Slice 3: Replace `legs[]` with `stations[]` on transit fragments**
-  - [ ] Reshape `transitTicket` in `corpus/schema/extracted-fragment.schema.json`: remove `legs[]`, add `stations[]` (each `{ city, kind ∈ {airport, rail_station, bus_terminal}, identifier, departureAt?, arrivalAt? }`) and `cities[]`. **[Agent: python-backend]**
-  - [ ] Update the generator to emit `stations[]` (paired chronologically) and `cities[]` (city names) instead of `legs[]`. **[Agent: python-backend]**
-  - [ ] Add `Station` Pydantic model in `spikes/route_engine_llm/models.py`; replace `Fragment.legs` with `Fragment.stations` + `Fragment.cities`. **[Agent: python-backend]**
-  - [ ] Add an internal `_LegView` dataclass in `spikes/route_engine_algorithmic/rules.py`; derive legs from `stations[]` by sorting by `(departureAt or arrivalAt)` and pairing departure → arrival. **[Agent: python-backend]**
-  - [ ] Extend `RouteStop` with `stations: list[Station]` and `Transit` with `originStation` / `destinationStation`; populate them in `operations.apply` when `create_stop` / `add_transit` execute. **[Agent: python-backend]**
-  - [ ] Unit tests for `_LegView` derivation across 1 / 2 / 3 / 4 station inputs (straight, return, layover, dual-direction). **[Agent: python-backend]**
-  - [ ] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; offline tests green; `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 3: Replace `legs[]` with `stations[]` on transit fragments**
+  - [x] Reshape `transitTicket` in `corpus/schema/extracted-fragment.schema.json`: remove `legs[]`, add `stations[]` (each `{ city, kind ∈ {airport, rail_station, bus_terminal}, identifier, departureAt?, arrivalAt? }`) and `cities[]`. **[Agent: python-backend]**
+  - [x] Update the generator to emit `stations[]` (paired chronologically) and `cities[]` (city names) instead of `legs[]`. **[Agent: python-backend]**
+  - [x] Add `Station` Pydantic model in `spikes/route_engine_llm/models.py`; replace `Fragment.legs` with `Fragment.stations` + `Fragment.cities`. **[Agent: python-backend]** _(also deleted the public `Leg` model; the rules derive an internal `_LegView` from `stations[]`.)_
+  - [x] Add an internal `_LegView` dataclass in `spikes/route_engine_algorithmic/rules.py`; derive legs from `stations[]` by sorting by `(departureAt or arrivalAt)` and pairing departure → arrival. **[Agent: python-backend]** _(strict `dep → arr → dep → arr` alternation; bad inputs raise `RuleNotImplementedError`.)_
+  - [x] Extend `RouteStop` with `stations: list[Station]` and `Transit` with `originStation` / `destinationStation`; populate them in `operations.apply` when `create_stop` / `add_transit` execute. **[Agent: python-backend]** _(also new `AddStations` op for ENRICH-path station propagation; `scoring.final_route_match` ignores the new fields so expected-route shape is unchanged.)_
+  - [x] Unit tests for `_LegView` derivation across 1 / 2 / 3 / 4 station inputs (straight, return, layover, dual-direction). **[Agent: python-backend]** _(new `backend/tests/spikes/test_leg_view.py`: 9 cases incl. malformed alternation, empty input, station-object propagation, and the `final_route_match` insensitivity check.)_
+  - [x] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
+  - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; offline tests green; `just lint` clean. **[Agent: python-backend]**
 
 - [ ] **Slice 4: Accommodations carry `kind` + `identifier`**
   - [ ] Reshape `hotelBooking` in the fragment schema: remove `city` + `checkInAt` + `checkOutAt` + `hotelName` as top-level; replace with `accommodations[]` (each `{ city, kind ∈ {hotel, airbnb}, identifier, checkInAt, checkOutAt }`) + `cities[]`. **[Agent: python-backend]**

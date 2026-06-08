@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Madrid",
+    "Barcelona",
+    "Paris"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001145",
+  "sourceDocumentId": "145-star-2p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
-      "to": "Barcelona",
-      "vehicleNumber": "FL100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Barcelona",
-      "to": "Paris",
-      "vehicleNumber": "FL101"
+      "city": "Paris",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Paris",
-      "to": "Barcelona",
-      "vehicleNumber": "FL102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001145",
-  "sourceDocumentId": "145-star-2p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"
