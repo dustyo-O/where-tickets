@@ -5,7 +5,7 @@ can never mint or reassign them — that is the structural guarantee behind the
 append/identity hard gate. New IDs are minted only by the applier, monotonically.
 
 The `Fragment` union mirrors `corpus/schema/extracted-fragment.schema.json`: a
-transit ticket (air/bus/train) or a hotel booking, discriminated on
+transit ticket (air/bus/rail) or a hotel booking, discriminated on
 `documentType`.
 """
 
@@ -38,7 +38,7 @@ class TransitMode(StrEnum):
 
     AIR = "air"
     BUS = "bus"
-    TRAIN = "train"
+    RAIL = "rail"
 
 
 # --------------------------------------------------------------------------- #
@@ -171,11 +171,11 @@ class Leg(BaseModel):
 
 
 class TransitTicketFragment(BaseModel):
-    """A transit ticket fragment (air / bus / train)."""
+    """A transit ticket fragment (air / bus / rail)."""
 
     model_config = ConfigDict(extra="forbid")
 
-    document_type: Literal["air-ticket", "bus-ticket", "train-ticket"] = Field(
+    document_type: Literal["air-ticket", "bus-ticket", "rail-ticket"] = Field(
         alias="documentType"
     )
     source_document_id: str = Field(alias="sourceDocumentId")

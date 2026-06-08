@@ -1,1 +1,1 @@
-star 6-leg, 4 travelers, primary mode train, hotels, fragments bisect
+star 6-leg, 4 travelers, primary mode rail, hotels, fragments bisect

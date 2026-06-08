@@ -4,7 +4,7 @@ Sampling rule (kept simple on purpose):
 - Iterate the cartesian product of (shape, pax, return, hotels, ordering).
 - For each combination, emit ONE scenario at a shape-appropriate leg count
   picked deterministically from the scenario index.
-- Mode mix is rotated so all three modes (air/bus/train) appear frequently.
+- Mode mix is rotated so all three modes (air/bus/rail) appear frequently.
 
 This yields 3 (shapes) * 4 (pax) * 2 (return) * 2 (hotels) * 4 (orderings) = 192
 scenarios. Each ordering appears with every shape and every pax count, so the
@@ -28,7 +28,7 @@ LEG_COUNT_BY_SHAPE: dict[str, tuple[int, ...]] = {
     "star": (4, 5, 6),
 }
 
-MODES: tuple[str, ...] = ("air", "bus", "train")
+MODES: tuple[str, ...] = ("air", "bus", "rail")
 
 
 @dataclass(frozen=True, slots=True)

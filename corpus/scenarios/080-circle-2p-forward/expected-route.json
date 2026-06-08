@@ -49,7 +49,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "FRA",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "080-circle-2p-forward-tkt-01",
       "to": "SVO",
       "travelers": [
@@ -61,7 +61,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "SVO",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "080-circle-2p-forward-tkt-01",
       "to": "MAD",
       "travelers": [
@@ -73,7 +73,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "MAD",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "080-circle-2p-forward-tkt-01",
       "to": "OSL",
       "travelers": [

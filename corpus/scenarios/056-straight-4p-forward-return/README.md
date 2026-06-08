@@ -1,1 +1,1 @@
-straight 4-leg, 4 travelers, primary mode train, return trip, fragments forward
+straight 4-leg, 4 travelers, primary mode rail, return trip, fragments forward

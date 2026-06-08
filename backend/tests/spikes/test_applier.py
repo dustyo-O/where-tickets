@@ -144,7 +144,7 @@ def test_refs_build_new_stops_and_transits_on_empty_route() -> None:
             {
                 "fromStopId": "n2",
                 "toStopId": "n3",
-                "mode": "train",
+                "mode": "rail",
                 "departureAt": "2027-03-02T00:00:00+00:00",
                 "arrivalAt": "2027-03-02T03:00:00+00:00",
                 "travelers": ["traveler-1"],
@@ -710,7 +710,7 @@ def test_applying_ops_never_reassigns_existing_ids() -> None:
                 {
                     "fromStopId": "stop-1",
                     "toStopId": "stop-2",
-                    "mode": "train",
+                    "mode": "rail",
                     "departureAt": "2027-03-01T00:00:00+00:00",
                     "arrivalAt": "2027-03-01T03:00:00+00:00",
                     "travelers": ["traveler-1"],

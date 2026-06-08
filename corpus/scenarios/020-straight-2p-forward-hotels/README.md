@@ -1,1 +1,1 @@
-straight 4-leg, 2 travelers, primary mode train, hotels, fragments forward
+straight 4-leg, 2 travelers, primary mode rail, hotels, fragments forward

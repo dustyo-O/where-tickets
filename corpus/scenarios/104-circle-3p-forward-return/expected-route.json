@@ -64,7 +64,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "ZRH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "104-circle-3p-forward-return-tkt-01",
       "to": "DUB",
       "travelers": [
@@ -77,7 +77,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "DUB",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "104-circle-3p-forward-return-tkt-01",
       "to": "FRA",
       "travelers": [
@@ -90,7 +90,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "FRA",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "104-circle-3p-forward-return-tkt-01",
       "to": "MUC",
       "travelers": [
@@ -116,7 +116,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "DUB",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "104-circle-3p-forward-return-tkt-03",
       "to": "ZRH",
       "travelers": [

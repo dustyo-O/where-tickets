@@ -122,7 +122,7 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
       "from": "OSL",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "087-circle-2p-seeded-shuffle-hotels-tkt-02",
       "to": "ROM",
       "travelers": [

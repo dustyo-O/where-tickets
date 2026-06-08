@@ -85,7 +85,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "CPH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "082-circle-2p-bisect-tkt-02",
       "to": "MXP",
       "travelers": [

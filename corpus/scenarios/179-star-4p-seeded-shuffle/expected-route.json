@@ -81,7 +81,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "ARN",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-01",
       "to": "CDG",
       "travelers": [
@@ -95,7 +95,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "CDG",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-01",
       "to": "ATH",
       "travelers": [
@@ -109,7 +109,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "ATH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-01",
       "to": "CDG",
       "travelers": [
@@ -137,7 +137,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "IST",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-03",
       "to": "CDG",
       "travelers": [
@@ -151,7 +151,7 @@
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
       "from": "CDG",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-03",
       "to": "ZRH",
       "travelers": [

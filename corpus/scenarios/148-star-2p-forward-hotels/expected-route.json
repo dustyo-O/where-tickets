@@ -122,7 +122,7 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
       "from": "HEL",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "148-star-2p-forward-hotels-tkt-02",
       "to": "VIE",
       "travelers": [

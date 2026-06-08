@@ -1011,8 +1011,8 @@ def _ticket_mode(document_type: str) -> str:
             return "air"
         case "bus-ticket":
             return "bus"
-        case "train-ticket":
-            return "train"
+        case "rail-ticket":
+            return "rail"
         case _:  # pragma: no cover - Fragment union forbids other values
             msg = f"unknown transit ticket document type: {document_type!r}"
             raise RuleNotImplementedError(msg)

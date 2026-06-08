@@ -1,0 +1,18 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "MAD",
+      "to": "JFK",
+      "vehicleNumber": "DB104"
+    }
+  ],
+  "pnr": "PNR003008",
+  "sourceDocumentId": "008-straight-1p-forward-return-tkt-03",
+  "travelers": [
+    "traveler-1"
+  ]
+}

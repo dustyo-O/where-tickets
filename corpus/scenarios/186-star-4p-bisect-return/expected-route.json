@@ -112,7 +112,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "ATH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "186-star-4p-bisect-return-tkt-02",
       "to": "IST",
       "travelers": [

@@ -70,7 +70,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "DUB",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "113-circle-4p-reverse-tkt-01",
       "to": "JFK",
       "travelers": [
@@ -84,7 +84,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "JFK",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "113-circle-4p-reverse-tkt-01",
       "to": "IST",
       "travelers": [
@@ -98,7 +98,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "IST",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "113-circle-4p-reverse-tkt-01",
       "to": "OSL",
       "travelers": [
@@ -126,7 +126,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "BER",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "113-circle-4p-reverse-tkt-03",
       "to": "JFK",
       "travelers": [

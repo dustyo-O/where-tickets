@@ -1,0 +1,36 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "MUC",
+      "to": "VIE",
+      "vehicleNumber": "DB100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "VIE",
+      "to": "IST",
+      "vehicleNumber": "DB101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "IST",
+      "to": "PRG",
+      "vehicleNumber": "DB102"
+    }
+  ],
+  "pnr": "PNR001044",
+  "sourceDocumentId": "044-straight-3p-forward-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

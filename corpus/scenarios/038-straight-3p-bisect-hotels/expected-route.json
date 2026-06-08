@@ -75,7 +75,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "LIS",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
       "to": "BCN",
       "travelers": [
@@ -88,7 +88,7 @@
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
       "from": "BCN",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
       "to": "AMS",
       "travelers": [
@@ -101,7 +101,7 @@
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
       "from": "AMS",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
       "to": "JFK",
       "travelers": [

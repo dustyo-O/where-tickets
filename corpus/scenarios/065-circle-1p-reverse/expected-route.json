@@ -52,7 +52,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "JFK",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-01",
       "to": "MUC",
       "travelers": [
@@ -63,7 +63,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "MUC",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-01",
       "to": "WAW",
       "travelers": [
@@ -74,7 +74,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "WAW",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-01",
       "to": "ROM",
       "travelers": [
@@ -96,7 +96,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "AMS",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-03",
       "to": "MUC",
       "travelers": [

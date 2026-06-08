@@ -92,7 +92,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "MUC",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "044-straight-3p-forward-return-hotels-tkt-01",
       "to": "VIE",
       "travelers": [
@@ -105,7 +105,7 @@
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
       "from": "VIE",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "044-straight-3p-forward-return-hotels-tkt-01",
       "to": "IST",
       "travelers": [
@@ -118,7 +118,7 @@
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
       "from": "IST",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "044-straight-3p-forward-return-hotels-tkt-01",
       "to": "PRG",
       "travelers": [
@@ -144,7 +144,7 @@
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
       "from": "LHR",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "044-straight-3p-forward-return-hotels-tkt-03",
       "to": "MUC",
       "travelers": [

@@ -123,7 +123,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "VIE",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-02",
       "to": "WAW",
       "travelers": [

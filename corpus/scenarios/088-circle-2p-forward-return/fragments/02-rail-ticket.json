@@ -1,0 +1,19 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "IST",
+      "to": "MAD",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002088",
+  "sourceDocumentId": "088-circle-2p-forward-return-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

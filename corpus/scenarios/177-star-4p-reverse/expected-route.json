@@ -101,7 +101,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "SVO",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "177-star-4p-reverse-tkt-02",
       "to": "HEL",
       "travelers": [

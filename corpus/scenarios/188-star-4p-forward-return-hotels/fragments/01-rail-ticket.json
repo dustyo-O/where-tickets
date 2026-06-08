@@ -1,0 +1,37 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "LIS",
+      "to": "WAW",
+      "vehicleNumber": "DB100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "WAW",
+      "to": "MAD",
+      "vehicleNumber": "DB101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "MAD",
+      "to": "WAW",
+      "vehicleNumber": "DB102"
+    }
+  ],
+  "pnr": "PNR001188",
+  "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

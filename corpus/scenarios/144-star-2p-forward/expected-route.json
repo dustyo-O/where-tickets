@@ -85,7 +85,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "FRA",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "144-star-2p-forward-tkt-02",
       "to": "CPH",
       "travelers": [

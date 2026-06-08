@@ -67,7 +67,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "VIE",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "089-circle-2p-reverse-return-tkt-01",
       "to": "ROM",
       "travelers": [
@@ -79,7 +79,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "ROM",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "089-circle-2p-reverse-return-tkt-01",
       "to": "PRG",
       "travelers": [
@@ -91,7 +91,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "PRG",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "089-circle-2p-reverse-return-tkt-01",
       "to": "JFK",
       "travelers": [
@@ -115,7 +115,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "ATH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "089-circle-2p-reverse-return-tkt-03",
       "to": "ROM",
       "travelers": [
@@ -127,7 +127,7 @@
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
       "from": "ROM",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "089-circle-2p-reverse-return-tkt-03",
       "to": "VIE",
       "travelers": [

@@ -28,7 +28,7 @@ SHORT_LAYOVER_HOURS = 5  # used when no hotel
 CARRIERS_BY_MODE: dict[str, tuple[str, ...]] = {
     "air": ("LO", "BA", "LH", "AF", "KL"),
     "bus": ("FlixBus", "Eurolines", "RegioJet"),
-    "train": ("DB", "SNCF", "Trenitalia", "OBB"),
+    "rail": ("DB", "SNCF", "Trenitalia", "OBB"),
 }
 
 HOTEL_NAMES: tuple[str, ...] = (
@@ -114,7 +114,7 @@ def _group_hops_into_tickets(hops: list[Hop]) -> list[list[Hop]]:
 
 
 def _doc_type_for_mode(mode: str) -> str:
-    return {"air": "air-ticket", "bus": "bus-ticket", "train": "train-ticket"}[mode]
+    return {"air": "air-ticket", "bus": "bus-ticket", "rail": "rail-ticket"}[mode]
 
 
 def build_fragments_and_route(

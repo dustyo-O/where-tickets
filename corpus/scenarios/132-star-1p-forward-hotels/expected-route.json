@@ -98,7 +98,7 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
       "from": "ZRH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "132-star-1p-forward-hotels-tkt-02",
       "to": "LHR",
       "travelers": [

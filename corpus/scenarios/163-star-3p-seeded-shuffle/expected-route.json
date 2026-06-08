@@ -103,7 +103,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "ROM",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "163-star-3p-seeded-shuffle-tkt-02",
       "to": "MXP",
       "travelers": [

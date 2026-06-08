@@ -65,7 +65,7 @@
         "to": { "$ref": "#/$defs/cityCode" },
         "mode": {
           "type": "string",
-          "enum": ["air", "bus", "train"]
+          "enum": ["air", "bus", "rail"]
         },
         "departureAt": { "$ref": "#/$defs/isoDateTime" },
         "arrivalAt": { "$ref": "#/$defs/isoDateTime" },

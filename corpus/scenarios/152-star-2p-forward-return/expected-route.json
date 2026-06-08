@@ -76,7 +76,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "WAW",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
       "to": "PRG",
       "travelers": [
@@ -88,7 +88,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "PRG",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
       "to": "ATH",
       "travelers": [
@@ -100,7 +100,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "ATH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
       "to": "PRG",
       "travelers": [
@@ -124,7 +124,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "OSL",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
       "to": "PRG",
       "travelers": [
@@ -136,7 +136,7 @@
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
       "from": "PRG",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
       "to": "HEL",
       "travelers": [
@@ -148,7 +148,7 @@
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
       "from": "HEL",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
       "to": "WAW",
       "travelers": [

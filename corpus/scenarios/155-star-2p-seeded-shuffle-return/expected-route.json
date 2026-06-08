@@ -76,7 +76,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "IST",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
       "to": "DUB",
       "travelers": [
@@ -88,7 +88,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "DUB",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
       "to": "VIE",
       "travelers": [
@@ -100,7 +100,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "VIE",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
       "to": "DUB",
       "travelers": [
@@ -124,7 +124,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "ZRH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
       "to": "DUB",
       "travelers": [
@@ -136,7 +136,7 @@
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
       "from": "DUB",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
       "to": "LIS",
       "travelers": [
@@ -148,7 +148,7 @@
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
       "from": "LIS",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
       "to": "IST",
       "travelers": [

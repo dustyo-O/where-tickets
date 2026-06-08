@@ -170,7 +170,7 @@ HARD RULES (non-negotiable)
    are fine — never reorder or drop known cities to "close" a gap.
 
 USING THE FRAGMENT
-- A transit ticket (air/bus/train) has one or more legs, each with a `from` city,
+- A transit ticket (air/bus/rail) has one or more legs, each with a `from` city,
   a `to` city, departure/arrival timestamps, and travelers. For each leg:
   ensure both endpoint cities exist as stops (create the new ones in order,
   giving each a `ref` and chaining with `after`), and add one `add_transit`

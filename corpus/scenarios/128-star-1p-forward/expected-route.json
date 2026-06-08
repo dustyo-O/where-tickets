@@ -60,7 +60,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "BER",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "128-star-1p-forward-tkt-01",
       "to": "FRA",
       "travelers": [
@@ -71,7 +71,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "FRA",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "128-star-1p-forward-tkt-01",
       "to": "MXP",
       "travelers": [
@@ -82,7 +82,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "MXP",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "128-star-1p-forward-tkt-01",
       "to": "FRA",
       "travelers": [
@@ -104,7 +104,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "OSL",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "128-star-1p-forward-tkt-03",
       "to": "FRA",
       "travelers": [
@@ -115,7 +115,7 @@
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
       "from": "FRA",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "128-star-1p-forward-tkt-03",
       "to": "DUB",
       "travelers": [

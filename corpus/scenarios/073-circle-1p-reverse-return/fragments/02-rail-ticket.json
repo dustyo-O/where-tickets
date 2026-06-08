@@ -1,0 +1,18 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "DUB",
+      "to": "BER",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002073",
+  "sourceDocumentId": "073-circle-1p-reverse-return-tkt-02",
+  "travelers": [
+    "traveler-1"
+  ]
+}

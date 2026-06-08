@@ -1,0 +1,20 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "from": "LHR",
+      "to": "MUC",
+      "vehicleNumber": "DB104"
+    }
+  ],
+  "pnr": "PNR003044",
+  "sourceDocumentId": "044-straight-3p-forward-return-hotels-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

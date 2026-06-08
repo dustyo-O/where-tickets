@@ -93,7 +93,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "MUC",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "136-star-1p-forward-return-tkt-02",
       "to": "WAW",
       "travelers": [

@@ -103,7 +103,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "BER",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "097-circle-3p-reverse-tkt-02",
       "to": "FRA",
       "travelers": [

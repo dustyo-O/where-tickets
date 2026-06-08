@@ -1,0 +1,20 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "from": "MXP",
+      "to": "DUB",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002166",
+  "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

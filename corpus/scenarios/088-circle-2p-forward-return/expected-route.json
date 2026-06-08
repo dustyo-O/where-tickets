@@ -94,7 +94,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "IST",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "088-circle-2p-forward-return-tkt-02",
       "to": "MAD",
       "travelers": [

@@ -13,6 +13,14 @@ from .orderings import apply_ordering
 from .shapes import build_city_sequence
 
 
+# Map the public mode name onto its seed-payload alias. This keeps the per-
+# scenario seed byte-stable across the DUS-31 ``train`` → ``rail`` rename so the
+# regenerated corpus only relabels mode strings without re-rolling cities /
+# hotels / shuffle orders. The alias is purely a generator-internal detail; the
+# emitted fragments and expected-routes use the public mode name throughout.
+_SEED_MODE_ALIAS: dict[str, str] = {"rail": "train"}
+
+
 def _seed_for(spec: ScenarioSpec) -> int:
     payload = "|".join(
         [
@@ -23,7 +31,7 @@ def _seed_for(spec: ScenarioSpec) -> int:
             str(spec.hotels),
             spec.ordering,
             str(spec.leg_count),
-            spec.primary_mode,
+            _SEED_MODE_ALIAS.get(spec.primary_mode, spec.primary_mode),
         ]
     )
     digest = hashlib.sha256(payload.encode("utf-8")).digest()

@@ -1,0 +1,37 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "from": "FRA",
+      "to": "ROM",
+      "vehicleNumber": "DB100"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "ROM",
+      "to": "AMS",
+      "vehicleNumber": "DB101"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "AMS",
+      "to": "MUC",
+      "vehicleNumber": "DB102"
+    }
+  ],
+  "pnr": "PNR001116",
+  "sourceDocumentId": "116-circle-4p-forward-hotels-tkt-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

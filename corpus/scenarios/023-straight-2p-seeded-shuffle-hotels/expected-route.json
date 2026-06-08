@@ -70,7 +70,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "ROM",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
       "to": "AMS",
       "travelers": [
@@ -82,7 +82,7 @@
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
       "from": "AMS",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
       "to": "ATH",
       "travelers": [
@@ -94,7 +94,7 @@
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
       "from": "ATH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
       "to": "WAW",
       "travelers": [

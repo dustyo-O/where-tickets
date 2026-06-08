@@ -1,0 +1,18 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "carrier": "OBB",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "from": "MUC",
+      "to": "WAW",
+      "vehicleNumber": "OB103"
+    }
+  ],
+  "pnr": "PNR002136",
+  "sourceDocumentId": "136-star-1p-forward-return-tkt-02",
+  "travelers": [
+    "traveler-1"
+  ]
+}

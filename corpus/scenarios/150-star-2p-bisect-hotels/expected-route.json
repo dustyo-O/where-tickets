@@ -106,7 +106,7 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
       "from": "DUB",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "150-star-2p-bisect-hotels-tkt-02",
       "to": "LHR",
       "travelers": [

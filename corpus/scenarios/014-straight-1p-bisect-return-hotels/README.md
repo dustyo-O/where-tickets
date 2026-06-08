@@ -1,1 +1,1 @@
-straight 4-leg, 1 traveler, primary mode train, return trip, hotels, fragments bisect
+straight 4-leg, 1 traveler, primary mode rail, return trip, hotels, fragments bisect

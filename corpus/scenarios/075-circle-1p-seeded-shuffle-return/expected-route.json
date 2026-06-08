@@ -93,7 +93,7 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
       "from": "CDG",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-02",
       "to": "LHR",
       "travelers": [

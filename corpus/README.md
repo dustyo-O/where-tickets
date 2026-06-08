@@ -52,7 +52,7 @@ The generator enumerates the cartesian product of these axes:
 | Hotels          | `no`, `yes` (one hotel-booking per stopover)      |
 | Fragment order  | `forward`, `reverse`, `bisect`, `seeded-shuffle`  |
 | Leg count       | shape-appropriate (e.g., straight 2–4, circle 4–5, star 4–6) |
-| Primary mode    | rotates across `air`, `bus`, `train`              |
+| Primary mode    | rotates across `air`, `bus`, `rail`               |
 
 Total: `3 * 4 * 2 * 2 * 4 = 192` scenarios. Every value of every axis appears
 many times, and every ordering appears with every shape × pax count.

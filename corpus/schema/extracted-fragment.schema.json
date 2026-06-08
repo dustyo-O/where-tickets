@@ -41,7 +41,7 @@
       "properties": {
         "documentType": {
           "type": "string",
-          "enum": ["air-ticket", "bus-ticket", "train-ticket"]
+          "enum": ["air-ticket", "bus-ticket", "rail-ticket"]
         },
         "sourceDocumentId": { "type": "string", "minLength": 1 },
         "pnr": { "type": "string", "minLength": 1 },

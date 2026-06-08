@@ -140,7 +140,7 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
       "from": "IST",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "189-star-4p-reverse-return-hotels-tkt-02",
       "to": "SVO",
       "travelers": [

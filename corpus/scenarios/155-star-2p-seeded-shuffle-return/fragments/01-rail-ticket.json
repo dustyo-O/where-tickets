@@ -1,0 +1,35 @@
+{
+  "documentType": "rail-ticket",
+  "legs": [
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "from": "ZRH",
+      "to": "DUB",
+      "vehicleNumber": "DB104"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "from": "DUB",
+      "to": "LIS",
+      "vehicleNumber": "DB105"
+    },
+    {
+      "arrivalAt": "2027-03-03T03:00:00Z",
+      "carrier": "DB",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "from": "LIS",
+      "to": "IST",
+      "vehicleNumber": "DB106"
+    }
+  ],
+  "pnr": "PNR003155",
+  "sourceDocumentId": "155-star-2p-seeded-shuffle-return-tkt-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,1 +1,1 @@
-star 6-leg, 3 travelers, primary mode train, fragments reverse
+star 6-leg, 3 travelers, primary mode rail, fragments reverse

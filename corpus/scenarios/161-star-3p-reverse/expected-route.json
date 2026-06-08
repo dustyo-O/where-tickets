@@ -74,7 +74,7 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
       "from": "BER",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "161-star-3p-reverse-tkt-01",
       "to": "LHR",
       "travelers": [
@@ -87,7 +87,7 @@
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
       "from": "LHR",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "161-star-3p-reverse-tkt-01",
       "to": "MAD",
       "travelers": [
@@ -100,7 +100,7 @@
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
       "from": "MAD",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "161-star-3p-reverse-tkt-01",
       "to": "LHR",
       "travelers": [
@@ -126,7 +126,7 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
       "from": "CPH",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "161-star-3p-reverse-tkt-03",
       "to": "LHR",
       "travelers": [
@@ -139,7 +139,7 @@
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
       "from": "LHR",
-      "mode": "train",
+      "mode": "rail",
       "sourceFragmentId": "161-star-3p-reverse-tkt-03",
       "to": "HEL",
       "travelers": [

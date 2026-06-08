@@ -1,1 +1,1 @@
-star 6-leg, 2 travelers, primary mode train, fragments bisect
+star 6-leg, 2 travelers, primary mode rail, fragments bisect

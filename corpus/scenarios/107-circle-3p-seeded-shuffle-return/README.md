@@ -1,1 +1,1 @@
-circle 5-leg, 3 travelers, primary mode train, return trip, fragments seeded-shuffle
+circle 5-leg, 3 travelers, primary mode rail, return trip, fragments seeded-shuffle
