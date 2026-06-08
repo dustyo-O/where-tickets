@@ -4,14 +4,14 @@
 
 ---
 
-- [ ] **Slice 1: Rename `train` → `rail` everywhere**
-  - [ ] Update `corpus/schema/extracted-fragment.schema.json`: change `transitTicket.documentType` enum from `train-ticket` to `rail-ticket`. **[Agent: python-backend]**
-  - [ ] Update `corpus/schema/expected-route.schema.json`: change `transit.mode` enum from `train` to `rail`. **[Agent: python-backend]**
-  - [ ] Update `corpus/generator/` so regenerated fragments and expected-routes emit `rail-ticket` / `rail`. **[Agent: python-backend]**
-  - [ ] Update `spikes/route_engine_llm/models.py`: `TransitMode.TRAIN = "train"` → `RAIL = "rail"`; `TransitTicketFragment.documentType` literal includes `rail-ticket` instead of `train-ticket`. **[Agent: python-backend]**
-  - [ ] Update `spikes/route_engine_llm/corpus.py` and `scoring.py` for the rename. **[Agent: python-backend]**
-  - [ ] Regenerate the 192-scenario corpus via `just regen-corpus`; commit the result. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` green; `just spike-engine-algo` reports 192/192; `cd backend && uv run pytest tests/spikes/` green; `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 1: Rename `train` → `rail` everywhere**
+  - [x] Update `corpus/schema/extracted-fragment.schema.json`: change `transitTicket.documentType` enum from `train-ticket` to `rail-ticket`. **[Agent: python-backend]**
+  - [x] Update `corpus/schema/expected-route.schema.json`: change `transit.mode` enum from `train` to `rail`. **[Agent: python-backend]**
+  - [x] Update `corpus/generator/` so regenerated fragments and expected-routes emit `rail-ticket` / `rail`. **[Agent: python-backend]**
+  - [x] Update `spikes/route_engine_llm/models.py`: `TransitMode.TRAIN = "train"` → `RAIL = "rail"`; `TransitTicketFragment.documentType` literal includes `rail-ticket` instead of `train-ticket`. **[Agent: python-backend]**
+  - [x] Update `spikes/route_engine_llm/corpus.py` and `scoring.py` for the rename. **[Agent: python-backend]** _(no references found in those files; rename handled at the model layer via `TransitMode.RAIL`.)_
+  - [x] Regenerate the 192-scenario corpus via `just regen-corpus`; commit the result. **[Agent: python-backend]** _(generator carries a `_SEED_MODE_ALIAS = {"rail": "train"}` internally so the per-scenario seed stays byte-stable; every emitted file uses `rail`.)_
+  - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` reports 192/192; `cd backend && uv run pytest tests/spikes/` green; `just lint` clean. **[Agent: python-backend]**
 
 - [ ] **Slice 2: Drop the IATA pattern; city is a printed name + normalizer collapse**
   - [ ] Remove the 3-letter pattern from `cityCode` in both schemas; rename the JSON Schema `$def` accordingly (`cityCode` → `cityName`); update all `pattern` references. **[Agent: python-backend]**
