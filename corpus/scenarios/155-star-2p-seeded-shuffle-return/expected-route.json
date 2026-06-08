@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "IST",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ZRH",
+      "city": "Zurich",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "LIS",
+      "city": "Lisbon",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -64,7 +64,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "IST",
+      "city": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
+      "from": "Istanbul",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -87,10 +87,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-02",
-      "to": "ZRH",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -123,10 +123,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ZRH",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -135,10 +135,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
-      "to": "LIS",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "LIS",
+      "from": "Lisbon",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
-      "to": "IST",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"

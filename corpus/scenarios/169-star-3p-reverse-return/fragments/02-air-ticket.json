@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "carrier": "AF",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "MUC",
-      "to": "BER",
+      "from": "Munich",
+      "to": "Berlin",
       "vehicleNumber": "AF103"
     }
   ],

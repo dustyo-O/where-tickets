@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MAD",
-      "to": "CDG",
+      "from": "Madrid",
+      "to": "Paris",
       "vehicleNumber": "DB100"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "CDG",
-      "to": "SVO",
+      "from": "Paris",
+      "to": "Moscow",
       "vehicleNumber": "DB101"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "SVO",
-      "to": "ZRH",
+      "from": "Moscow",
+      "to": "Zurich",
       "vehicleNumber": "DB102"
     }
   ],

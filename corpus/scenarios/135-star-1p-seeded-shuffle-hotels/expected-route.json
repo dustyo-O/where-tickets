@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "IST",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -16,7 +16,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -31,7 +31,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "BER",
+      "city": "Berlin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -46,7 +46,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -54,7 +54,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -64,10 +64,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1"
       ]
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "BER",
+      "to": "Berlin",
       "travelers": [
         "traveler-1"
       ]
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BER",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1"
       ]
@@ -97,10 +97,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "OSL",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-02",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]

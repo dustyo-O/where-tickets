@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "WAW",
-      "to": "CPH",
+      "from": "Warsaw",
+      "to": "Copenhagen",
       "vehicleNumber": "DB104"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "CPH",
-      "to": "FRA",
+      "from": "Copenhagen",
+      "to": "Frankfurt",
       "vehicleNumber": "DB105"
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "FRA",
-      "to": "CDG",
+      "from": "Frankfurt",
+      "to": "Paris",
       "vehicleNumber": "DB106"
     }
   ],

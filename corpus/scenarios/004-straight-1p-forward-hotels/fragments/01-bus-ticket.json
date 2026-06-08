@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "FRA",
-      "to": "JFK",
+      "from": "Frankfurt",
+      "to": "New York",
       "vehicleNumber": "FL100"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "JFK",
-      "to": "BCN",
+      "from": "New York",
+      "to": "Barcelona",
       "vehicleNumber": "FL101"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BCN",
-      "to": "VIE",
+      "from": "Barcelona",
+      "to": "Vienna",
       "vehicleNumber": "FL102"
     }
   ],

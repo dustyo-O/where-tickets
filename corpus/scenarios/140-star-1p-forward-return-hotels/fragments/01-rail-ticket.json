@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
-      "to": "OSL",
+      "from": "Zurich",
+      "to": "Oslo",
       "vehicleNumber": "DB100"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
-      "to": "ROM",
+      "from": "Oslo",
+      "to": "Rome",
       "vehicleNumber": "DB101"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ROM",
-      "to": "OSL",
+      "from": "Rome",
+      "to": "Oslo",
       "vehicleNumber": "DB102"
     }
   ],

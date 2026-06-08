@@ -26,7 +26,12 @@ from datetime import UTC, datetime
 from enum import StrEnum
 
 from spikes.route_engine_llm.corpus import ExpectedRoute, ExpectedStop, ExpectedTransit
-from spikes.route_engine_llm.models import Accommodation, RouteStop, WorkingRoute
+from spikes.route_engine_llm.models import (
+    Accommodation,
+    RouteStop,
+    WorkingRoute,
+    city_identity,
+)
 
 __all__ = [
     "FailureCategory",
@@ -103,8 +108,12 @@ def _accoms(accoms: list[Accommodation]) -> tuple[_AccomKey, ...]:
 
 
 def _working_stop_key(stop: RouteStop) -> _StopKey:
+    # City is normalized via `city_identity` so a stop printed as ``"Paris"``
+    # on the engine side matches an expected entry printed as ``"PARIS"`` —
+    # the stored `RouteStop.city` keeps the original casing for display,
+    # only the comparison key is folded.
     return (
-        stop.city,
+        city_identity(stop.city),
         _stamp(stop.arrival_at),
         _stamp(stop.departure_at),
         _travelers(stop.travelers),
@@ -114,7 +123,7 @@ def _working_stop_key(stop: RouteStop) -> _StopKey:
 
 def _expected_stop_key(stop: ExpectedStop) -> _StopKey:
     return (
-        stop.city,
+        city_identity(stop.city),
         _stamp(stop.arrival_at),
         _stamp(stop.departure_at),
         _travelers(stop.travelers),
@@ -131,11 +140,17 @@ def _working_transit_keys(route: WorkingRoute) -> list[_TransitKey]:
         if from_stop is None or to_stop is None:
             # Dangling reference — represent it distinctly so it can never
             # match a valid expected transit.
-            from_city = from_stop.city if from_stop else f"?{transit.from_stop_id}"
-            to_city = to_stop.city if to_stop else f"?{transit.to_stop_id}"
+            from_city = (
+                city_identity(from_stop.city)
+                if from_stop
+                else f"?{transit.from_stop_id}"
+            )
+            to_city = (
+                city_identity(to_stop.city) if to_stop else f"?{transit.to_stop_id}"
+            )
         else:
-            from_city = from_stop.city
-            to_city = to_stop.city
+            from_city = city_identity(from_stop.city)
+            to_city = city_identity(to_stop.city)
         keys.append(
             (
                 from_city,
@@ -152,8 +167,8 @@ def _working_transit_keys(route: WorkingRoute) -> list[_TransitKey]:
 
 def _expected_transit_key(transit: ExpectedTransit) -> _TransitKey:
     return (
-        transit.from_,
-        transit.to,
+        city_identity(transit.from_),
+        city_identity(transit.to),
         str(transit.mode),
         _stamp(transit.departure_at),
         _stamp(transit.arrival_at),

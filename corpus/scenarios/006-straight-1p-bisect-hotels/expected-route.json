@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -16,7 +16,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -24,7 +24,7 @@
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "CPH",
+      "city": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]
@@ -34,10 +34,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "006-straight-1p-bisect-hotels-tkt-01",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -45,10 +45,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "air",
       "sourceFragmentId": "006-straight-1p-bisect-hotels-tkt-01",
-      "to": "CPH",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]

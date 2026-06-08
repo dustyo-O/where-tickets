@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -16,7 +16,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "HEL",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -31,7 +31,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -46,7 +46,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ROM",
+      "city": "Rome",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -54,7 +54,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "HEL",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1"
       ]
@@ -64,10 +64,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "rail",
       "sourceFragmentId": "068-circle-1p-forward-hotels-tkt-01",
-      "to": "HEL",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1"
       ]
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "HEL",
+      "from": "Helsinki",
       "mode": "rail",
       "sourceFragmentId": "068-circle-1p-forward-hotels-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "068-circle-1p-forward-hotels-tkt-01",
-      "to": "ROM",
+      "to": "Rome",
       "travelers": [
         "traveler-1"
       ]
@@ -97,10 +97,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ROM",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "068-circle-1p-forward-hotels-tkt-02",
-      "to": "HEL",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1"
       ]

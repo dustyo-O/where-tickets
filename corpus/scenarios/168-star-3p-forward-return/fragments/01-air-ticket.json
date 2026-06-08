@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ATH",
-      "to": "HEL",
+      "from": "Athens",
+      "to": "Helsinki",
       "vehicleNumber": "LO100"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "HEL",
-      "to": "MUC",
+      "from": "Helsinki",
+      "to": "Munich",
       "vehicleNumber": "LO101"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MUC",
-      "to": "HEL",
+      "from": "Munich",
+      "to": "Helsinki",
       "vehicleNumber": "LO102"
     }
   ],

@@ -5,16 +5,16 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "carrier": "Eurolines",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ZRH",
-      "to": "CPH",
+      "from": "Zurich",
+      "to": "Copenhagen",
       "vehicleNumber": "EU104"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "carrier": "Eurolines",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "CPH",
-      "to": "MXP",
+      "from": "Copenhagen",
+      "to": "Milan",
       "vehicleNumber": "EU105"
     }
   ],

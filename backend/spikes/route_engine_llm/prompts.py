@@ -56,7 +56,9 @@ THE ROUTE MODEL
   see these ids. You MUST reference existing stops by their given id.
 - You CANNOT mint, rename, renumber, or reassign ids. New stops are created ONLY
   via a `create_stop` operation; the engine assigns the fresh id.
-- Cities are 3-letter uppercase codes (e.g. "ROM", "HEL").
+- Cities are printed city names as they appear on the source document
+  (e.g. "Rome", "Helsinki"). Same-city comparison is case-insensitive and
+  whitespace-tolerant, so "PARIS" and "Paris" denote the same stop.
 
 REFERENCING STOPS (existing ids vs. refs)
 - To reference an EXISTING stop (one already in the route you were given), use

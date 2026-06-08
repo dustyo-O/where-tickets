@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MAD",
-      "to": "JFK",
+      "from": "Madrid",
+      "to": "New York",
       "vehicleNumber": "DB104"
     }
   ],

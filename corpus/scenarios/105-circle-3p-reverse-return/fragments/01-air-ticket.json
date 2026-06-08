@@ -5,16 +5,16 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "carrier": "KL",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MUC",
-      "to": "MXP",
+      "from": "Munich",
+      "to": "Milan",
       "vehicleNumber": "KL104"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "carrier": "KL",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "MXP",
-      "to": "BCN",
+      "from": "Milan",
+      "to": "Barcelona",
       "vehicleNumber": "KL105"
     }
   ],

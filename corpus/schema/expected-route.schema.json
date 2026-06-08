@@ -25,7 +25,7 @@
   },
   "$defs": {
     "isoDateTime": { "type": "string", "format": "date-time" },
-    "cityCode": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "cityName": { "type": "string", "minLength": 1 },
     "accommodation": {
       "type": "object",
       "additionalProperties": false,
@@ -41,7 +41,7 @@
       "additionalProperties": false,
       "required": ["city", "travelers"],
       "properties": {
-        "city": { "$ref": "#/$defs/cityCode" },
+        "city": { "$ref": "#/$defs/cityName" },
         "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
         "departureAt": { "$ref": "#/$defs/isoDateTime" },
         "travelers": {
@@ -61,8 +61,8 @@
       "additionalProperties": false,
       "required": ["from", "to", "mode", "departureAt", "arrivalAt", "travelers", "sourceFragmentId"],
       "properties": {
-        "from": { "$ref": "#/$defs/cityCode" },
-        "to": { "$ref": "#/$defs/cityCode" },
+        "from": { "$ref": "#/$defs/cityName" },
+        "to": { "$ref": "#/$defs/cityName" },
         "mode": {
           "type": "string",
           "enum": ["air", "bus", "rail"]

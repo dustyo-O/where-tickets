@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ROM",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -16,7 +16,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -31,7 +31,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "JFK",
+      "city": "New York",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -46,7 +46,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ZRH",
+      "city": "Zurich",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -61,7 +61,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1"
@@ -76,7 +76,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1"
@@ -84,7 +84,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "ROM",
+      "city": "Rome",
       "travelers": [
         "traveler-1"
       ]
@@ -94,10 +94,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ROM",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "077-circle-1p-reverse-return-hotels-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -105,10 +105,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "077-circle-1p-reverse-return-hotels-tkt-01",
-      "to": "JFK",
+      "to": "New York",
       "travelers": [
         "traveler-1"
       ]
@@ -116,10 +116,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "JFK",
+      "from": "New York",
       "mode": "rail",
       "sourceFragmentId": "077-circle-1p-reverse-return-hotels-tkt-01",
-      "to": "ZRH",
+      "to": "Zurich",
       "travelers": [
         "traveler-1"
       ]
@@ -127,10 +127,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ZRH",
+      "from": "Zurich",
       "mode": "bus",
       "sourceFragmentId": "077-circle-1p-reverse-return-hotels-tkt-02",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -138,10 +138,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "rail",
       "sourceFragmentId": "077-circle-1p-reverse-return-hotels-tkt-03",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -149,10 +149,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "077-circle-1p-reverse-return-hotels-tkt-03",
-      "to": "ROM",
+      "to": "Rome",
       "travelers": [
         "traveler-1"
       ]

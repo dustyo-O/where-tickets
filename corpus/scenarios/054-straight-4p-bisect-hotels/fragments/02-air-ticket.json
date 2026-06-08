@@ -5,16 +5,16 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
-      "to": "WAW",
+      "from": "Milan",
+      "to": "Warsaw",
       "vehicleNumber": "LO100"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "WAW",
-      "to": "SVO",
+      "from": "Warsaw",
+      "to": "Moscow",
       "vehicleNumber": "LO101"
     }
   ],

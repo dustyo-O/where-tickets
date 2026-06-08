@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ROM",
-      "to": "FRA",
+      "from": "Rome",
+      "to": "Frankfurt",
       "vehicleNumber": "LO100"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
-      "to": "WAW",
+      "from": "Frankfurt",
+      "to": "Warsaw",
       "vehicleNumber": "LO101"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "WAW",
-      "to": "FRA",
+      "from": "Warsaw",
+      "to": "Frankfurt",
       "vehicleNumber": "LO102"
     }
   ],

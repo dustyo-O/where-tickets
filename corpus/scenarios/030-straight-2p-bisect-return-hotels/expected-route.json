@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -17,7 +17,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "LHR",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,7 +33,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -42,7 +42,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "air",
       "sourceFragmentId": "030-straight-2p-bisect-return-hotels-tkt-01",
-      "to": "LHR",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -65,10 +65,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "LHR",
+      "from": "London",
       "mode": "air",
       "sourceFragmentId": "030-straight-2p-bisect-return-hotels-tkt-01",
-      "to": "PRG",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -77,10 +77,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "030-straight-2p-bisect-return-hotels-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"

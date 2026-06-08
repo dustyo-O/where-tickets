@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "JFK",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -17,7 +17,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,7 +33,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "AMS",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -49,7 +49,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -65,7 +65,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "FRA",
+      "city": "Frankfurt",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -81,7 +81,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -90,7 +90,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "JFK",
+      "city": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -101,10 +101,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "JFK",
+      "from": "New York",
       "mode": "bus",
       "sourceFragmentId": "157-star-2p-reverse-return-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "bus",
       "sourceFragmentId": "157-star-2p-reverse-return-hotels-tkt-01",
-      "to": "AMS",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "AMS",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "157-star-2p-reverse-return-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -137,10 +137,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "157-star-2p-reverse-return-hotels-tkt-02",
-      "to": "FRA",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -149,10 +149,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "FRA",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "157-star-2p-reverse-return-hotels-tkt-03",
-      "to": "ARN",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -161,10 +161,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "bus",
       "sourceFragmentId": "157-star-2p-reverse-return-hotels-tkt-03",
-      "to": "JFK",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"

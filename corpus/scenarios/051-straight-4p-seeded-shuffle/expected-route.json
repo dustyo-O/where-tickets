@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "SVO",
+      "city": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -36,10 +36,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "051-straight-4p-seeded-shuffle-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -50,10 +50,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "051-straight-4p-seeded-shuffle-tkt-01",
-      "to": "SVO",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",

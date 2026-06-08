@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "JFK",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "FRA",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "LIS",
+      "city": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -27,10 +27,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "JFK",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "000-straight-1p-forward-tkt-01",
-      "to": "FRA",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]
@@ -38,10 +38,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
+      "from": "Frankfurt",
       "mode": "air",
       "sourceFragmentId": "000-straight-1p-forward-tkt-01",
-      "to": "LIS",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]

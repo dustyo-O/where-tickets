@@ -5,16 +5,16 @@
       "arrivalAt": "2027-03-02T11:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "BER",
-      "to": "ATH",
+      "from": "Berlin",
+      "to": "Athens",
       "vehicleNumber": "DB104"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "ATH",
-      "to": "BCN",
+      "from": "Athens",
+      "to": "Barcelona",
       "vehicleNumber": "DB105"
     }
   ],

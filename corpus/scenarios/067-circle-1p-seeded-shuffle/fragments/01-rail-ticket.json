@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "carrier": "OBB",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "DUB",
-      "to": "LHR",
+      "from": "Dublin",
+      "to": "London",
       "vehicleNumber": "OB103"
     }
   ],

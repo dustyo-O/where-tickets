@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "FRA",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "ROM",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "BCN",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "MAD",
+      "city": "Madrid",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "FRA",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -69,10 +69,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "FRA",
+      "from": "Frankfurt",
       "mode": "rail",
       "sourceFragmentId": "056-straight-4p-forward-return-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -83,10 +83,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "056-straight-4p-forward-return-tkt-01",
-      "to": "ROM",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -97,10 +97,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ROM",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "056-straight-4p-forward-return-tkt-01",
-      "to": "BCN",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "BCN",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "056-straight-4p-forward-return-tkt-02",
-      "to": "MAD",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MAD",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "056-straight-4p-forward-return-tkt-03",
-      "to": "FRA",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ZRH",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "AMS",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "HEL",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "LHR",
+      "city": "London",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ZRH",
+      "city": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -58,10 +58,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
+      "from": "Zurich",
       "mode": "bus",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-01",
-      "to": "AMS",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "AMS",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-01",
-      "to": "HEL",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "HEL",
+      "from": "Helsinki",
       "mode": "bus",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-01",
-      "to": "LHR",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "LHR",
+      "from": "London",
       "mode": "rail",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-02",
-      "to": "ZRH",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",

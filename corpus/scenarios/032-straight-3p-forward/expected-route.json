@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "WAW",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "JFK",
+      "city": "New York",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "HEL",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "MXP",
+      "city": "Milan",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
+      "from": "Warsaw",
       "mode": "rail",
       "sourceFragmentId": "032-straight-3p-forward-tkt-01",
-      "to": "JFK",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -66,10 +66,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "JFK",
+      "from": "New York",
       "mode": "rail",
       "sourceFragmentId": "032-straight-3p-forward-tkt-01",
-      "to": "HEL",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "HEL",
+      "from": "Helsinki",
       "mode": "rail",
       "sourceFragmentId": "032-straight-3p-forward-tkt-01",
-      "to": "MXP",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "MXP",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "032-straight-3p-forward-tkt-02",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",

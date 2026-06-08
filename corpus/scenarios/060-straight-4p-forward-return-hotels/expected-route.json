@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BER",
+      "city": "Berlin",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "SVO",
+      "city": "Moscow",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,7 +48,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -61,10 +61,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "060-straight-4p-forward-return-hotels-tkt-01",
-      "to": "BER",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BER",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "060-straight-4p-forward-return-hotels-tkt-01",
-      "to": "SVO",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "SVO",
+      "from": "Moscow",
       "mode": "air",
       "sourceFragmentId": "060-straight-4p-forward-return-hotels-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",

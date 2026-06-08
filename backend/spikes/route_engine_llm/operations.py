@@ -107,7 +107,7 @@ class CreateStop(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     op: Literal["create_stop"] = "create_stop"
-    city: str = Field(pattern=r"^[A-Z]{3}$")
+    city: str
     after: str | None = None
     ref: str | None = None
 

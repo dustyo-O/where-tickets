@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "CPH",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "HEL",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ZRH",
+      "city": "Zurich",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,7 +61,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -71,7 +71,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "CPH",
+      "city": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -83,10 +83,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CPH",
+      "from": "Copenhagen",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -96,10 +96,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-01",
-      "to": "HEL",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -109,10 +109,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "HEL",
+      "from": "Helsinki",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -122,10 +122,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "air",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-02",
-      "to": "ZRH",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -135,10 +135,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ZRH",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-03",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -148,10 +148,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-03",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -161,10 +161,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-03",
-      "to": "CPH",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",

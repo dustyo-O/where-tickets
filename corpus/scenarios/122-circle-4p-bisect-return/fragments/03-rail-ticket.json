@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
-      "to": "LHR",
+      "from": "Amsterdam",
+      "to": "London",
       "vehicleNumber": "DB100"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "LHR",
-      "to": "ATH",
+      "from": "London",
+      "to": "Athens",
       "vehicleNumber": "DB101"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ATH",
-      "to": "HEL",
+      "from": "Athens",
+      "to": "Helsinki",
       "vehicleNumber": "DB102"
     }
   ],

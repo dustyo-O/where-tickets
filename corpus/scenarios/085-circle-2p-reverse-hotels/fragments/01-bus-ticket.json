@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-04T15:00:00Z",
       "carrier": "Eurolines",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "BER",
-      "to": "FRA",
+      "from": "Berlin",
+      "to": "Frankfurt",
       "vehicleNumber": "EU104"
     }
   ],

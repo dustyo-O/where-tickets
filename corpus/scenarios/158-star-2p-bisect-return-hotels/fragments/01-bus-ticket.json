@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "WAW",
-      "to": "ROM",
+      "from": "Warsaw",
+      "to": "Rome",
       "vehicleNumber": "FL103"
     }
   ],

@@ -27,10 +27,23 @@ __all__ = [
     "TransitTicketFragment",
     "HotelBookingFragment",
     "Fragment",
+    "city_identity",
 ]
 
-# A 3-letter uppercase IATA-style city code, e.g. "ROM".
+# A printed city name as it appears on the source document, e.g. "Warsaw".
 type CityCode = str
+
+
+def city_identity(name: str) -> str:
+    """Normalize a printed city name to a comparison key.
+
+    The engine identifies cities by their printed name; two strings that
+    differ only by surrounding whitespace or case (e.g. ``"Paris"`` vs
+    ``"PARIS"``) refer to the same city. Anything more aggressive
+    (locale folding, accent stripping) is deferred — see spec 007
+    Impact & Risks "City identity collisions".
+    """
+    return name.strip().casefold()
 
 
 class TransitMode(StrEnum):
@@ -62,7 +75,7 @@ class RouteStop(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     id: str
-    city: str = Field(pattern=r"^[A-Z]{3}$")
+    city: str
     arrival_at: datetime | None = Field(default=None, alias="arrivalAt")
     departure_at: datetime | None = Field(default=None, alias="departureAt")
     travelers: list[str] = Field(default_factory=list)
@@ -162,8 +175,8 @@ class Leg(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    from_: str = Field(alias="from", pattern=r"^[A-Z]{3}$")
-    to: str = Field(pattern=r"^[A-Z]{3}$")
+    from_: str = Field(alias="from")
+    to: str
     departure_at: datetime = Field(alias="departureAt")
     arrival_at: datetime = Field(alias="arrivalAt")
     carrier: str | None = None
@@ -193,7 +206,7 @@ class HotelBookingFragment(BaseModel):
     source_document_id: str = Field(alias="sourceDocumentId")
     confirmation_code: str = Field(alias="confirmationCode")
     travelers: list[str]
-    city: str = Field(pattern=r"^[A-Z]{3}$")
+    city: str
     check_in_at: datetime = Field(alias="checkInAt")
     check_out_at: datetime = Field(alias="checkOutAt")
     hotel_name: str | None = Field(default=None, alias="hotelName")

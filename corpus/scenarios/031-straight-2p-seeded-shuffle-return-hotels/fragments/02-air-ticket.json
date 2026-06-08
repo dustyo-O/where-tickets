@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "carrier": "AF",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "AMS",
-      "to": "MXP",
+      "from": "Amsterdam",
+      "to": "Milan",
       "vehicleNumber": "AF103"
     }
   ],

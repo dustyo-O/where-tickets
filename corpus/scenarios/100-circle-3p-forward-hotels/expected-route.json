@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "IST",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "LIS",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -62,7 +62,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -74,10 +74,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -87,10 +87,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-01",
-      "to": "LIS",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-02",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",

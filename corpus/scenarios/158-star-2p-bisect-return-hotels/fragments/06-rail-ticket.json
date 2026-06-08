@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
-      "to": "WAW",
+      "from": "Milan",
+      "to": "Warsaw",
       "vehicleNumber": "DB100"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "WAW",
-      "to": "LIS",
+      "from": "Warsaw",
+      "to": "Lisbon",
       "vehicleNumber": "DB101"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
-      "to": "WAW",
+      "from": "Lisbon",
+      "to": "Warsaw",
       "vehicleNumber": "DB102"
     }
   ],

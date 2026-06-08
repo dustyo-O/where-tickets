@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "DUB",
-      "to": "JFK",
+      "from": "Dublin",
+      "to": "New York",
       "vehicleNumber": "DB100"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "JFK",
-      "to": "IST",
+      "from": "New York",
+      "to": "Istanbul",
       "vehicleNumber": "DB101"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "IST",
-      "to": "OSL",
+      "from": "Istanbul",
+      "to": "Oslo",
       "vehicleNumber": "DB102"
     }
   ],

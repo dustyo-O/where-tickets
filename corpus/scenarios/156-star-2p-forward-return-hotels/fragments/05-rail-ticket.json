@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "carrier": "OBB",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "CPH",
-      "to": "MXP",
+      "from": "Copenhagen",
+      "to": "Milan",
       "vehicleNumber": "OB103"
     }
   ],

@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "HEL",
-      "to": "FRA",
+      "from": "Helsinki",
+      "to": "Frankfurt",
       "vehicleNumber": "DB100"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
-      "to": "SVO",
+      "from": "Frankfurt",
+      "to": "Moscow",
       "vehicleNumber": "DB101"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "SVO",
-      "to": "LHR",
+      "from": "Moscow",
+      "to": "London",
       "vehicleNumber": "DB102"
     }
   ],

@@ -140,10 +140,10 @@ def test_load_scenario_orders_fragments_and_parses_expected() -> None:
         "bus-ticket",
         "air-ticket",
     ]
-    # ROM appears as two distinct stops in this circle scenario.
+    # Rome appears as two distinct stops in this circle scenario.
     cities = [s.city for s in scenario.expected.stops]
-    assert cities == ["HEL", "ROM", "LIS", "CDG", "ROM"]
-    assert cities.count("ROM") == 2
+    assert cities == ["Helsinki", "Rome", "Lisbon", "Paris", "Rome"]
+    assert cities.count("Rome") == 2
 
 
 # --------------------------------------------------------------------------- #
@@ -165,8 +165,8 @@ def test_final_route_match_self_match_circle_double_rom() -> None:
     expected = load_scenario("064-circle-1p-forward").expected
     working = _working_from_expected(expected)
 
-    # Sanity: two distinct ROM stop IDs survive into the working route.
-    rom_ids = [s.id for s in working.stops if s.city == "ROM"]
+    # Sanity: two distinct Rome stop IDs survive into the working route.
+    rom_ids = [s.id for s in working.stops if s.city == "Rome"]
     assert len(rom_ids) == 2
 
     result = final_route_match(working, expected)

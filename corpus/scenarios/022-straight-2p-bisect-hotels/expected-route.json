@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -17,7 +17,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BCN",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,7 +33,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -42,7 +42,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ATH",
+      "city": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "BCN",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -65,10 +65,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BCN",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -77,10 +77,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "ATH",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2"

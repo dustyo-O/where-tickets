@@ -5,16 +5,16 @@
       "arrivalAt": "2027-03-04T15:00:00Z",
       "carrier": "KL",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "DUB",
-      "to": "BCN",
+      "from": "Dublin",
+      "to": "Barcelona",
       "vehicleNumber": "KL104"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "carrier": "KL",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "BCN",
-      "to": "ARN",
+      "from": "Barcelona",
+      "to": "Stockholm",
       "vehicleNumber": "KL105"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "LHR",
+      "city": "London",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "AMS",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "LHR",
+      "city": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "096-circle-3p-forward-tkt-01",
-      "to": "LHR",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -66,10 +66,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "LHR",
+      "from": "London",
       "mode": "air",
       "sourceFragmentId": "096-circle-3p-forward-tkt-01",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "OSL",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "096-circle-3p-forward-tkt-01",
-      "to": "AMS",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "AMS",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "096-circle-3p-forward-tkt-02",
-      "to": "LHR",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",

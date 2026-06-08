@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "CPH",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "AMS",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,7 +48,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "BER",
+      "city": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -61,10 +61,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CPH",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "052-straight-4p-forward-hotels-tkt-01",
-      "to": "AMS",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "AMS",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "052-straight-4p-forward-hotels-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "052-straight-4p-forward-hotels-tkt-01",
-      "to": "BER",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",

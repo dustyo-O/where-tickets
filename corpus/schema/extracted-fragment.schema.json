@@ -13,9 +13,9 @@
       "type": "string",
       "format": "date-time"
     },
-    "cityCode": {
+    "cityName": {
       "type": "string",
-      "pattern": "^[A-Z]{3}$"
+      "minLength": 1
     },
     "traveler": {
       "type": "string",
@@ -26,8 +26,8 @@
       "additionalProperties": false,
       "required": ["from", "to", "departureAt", "arrivalAt"],
       "properties": {
-        "from": { "$ref": "#/$defs/cityCode" },
-        "to": { "$ref": "#/$defs/cityCode" },
+        "from": { "$ref": "#/$defs/cityName" },
+        "to": { "$ref": "#/$defs/cityName" },
         "departureAt": { "$ref": "#/$defs/isoDateTime" },
         "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
         "carrier": { "type": "string", "minLength": 1 },
@@ -72,7 +72,7 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/traveler" }
         },
-        "city": { "$ref": "#/$defs/cityCode" },
+        "city": { "$ref": "#/$defs/cityName" },
         "checkInAt": { "$ref": "#/$defs/isoDateTime" },
         "checkOutAt": { "$ref": "#/$defs/isoDateTime" },
         "hotelName": { "type": "string", "minLength": 1 }

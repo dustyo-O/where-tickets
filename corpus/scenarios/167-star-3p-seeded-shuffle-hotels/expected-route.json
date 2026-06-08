@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ZRH",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "CDG",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,7 +69,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -86,7 +86,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -96,7 +96,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "LHR",
+      "city": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "167-star-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -121,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "167-star-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "CDG",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -134,10 +134,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "CDG",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "167-star-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "167-star-3p-seeded-shuffle-hotels-tkt-02",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -160,10 +160,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "OSL",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "167-star-3p-seeded-shuffle-hotels-tkt-03",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -173,10 +173,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "167-star-3p-seeded-shuffle-hotels-tkt-03",
-      "to": "LHR",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",

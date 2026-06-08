@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "HEL",
-      "to": "LHR",
+      "from": "Helsinki",
+      "to": "London",
       "vehicleNumber": "FL103"
     }
   ],

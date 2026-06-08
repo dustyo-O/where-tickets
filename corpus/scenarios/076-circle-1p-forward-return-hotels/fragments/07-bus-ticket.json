@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-04T15:00:00Z",
       "carrier": "Eurolines",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "JFK",
-      "to": "MUC",
+      "from": "New York",
+      "to": "Munich",
       "vehicleNumber": "EU104"
     }
   ],

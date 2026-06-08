@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "SVO",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -16,7 +16,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "OSL",
+      "city": "Oslo",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -31,7 +31,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "BCN",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -39,7 +39,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "SVO",
+      "city": "Moscow",
       "travelers": [
         "traveler-1"
       ]
@@ -49,10 +49,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "SVO",
+      "from": "Moscow",
       "mode": "air",
       "sourceFragmentId": "012-straight-1p-forward-return-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Oslo",
       "travelers": [
         "traveler-1"
       ]
@@ -60,10 +60,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "012-straight-1p-forward-return-hotels-tkt-01",
-      "to": "BCN",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1"
       ]
@@ -71,10 +71,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BCN",
+      "from": "Barcelona",
       "mode": "air",
       "sourceFragmentId": "012-straight-1p-forward-return-hotels-tkt-01",
-      "to": "SVO",
+      "to": "Moscow",
       "travelers": [
         "traveler-1"
       ]

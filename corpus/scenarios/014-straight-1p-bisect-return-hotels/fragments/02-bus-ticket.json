@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BER",
-      "to": "FRA",
+      "from": "Berlin",
+      "to": "Frankfurt",
       "vehicleNumber": "FL103"
     }
   ],

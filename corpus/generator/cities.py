@@ -1,8 +1,9 @@
 """Deterministic city pool for scenarios.
 
-City codes are real IATA codes for readability, but the generator treats them as
-opaque 3-letter labels. Picks are seeded so two scenarios with the same seed and
-``count`` always pick the same cities in the same order.
+Cities are English printed exonyms (e.g. ``"Warsaw"``, ``"Paris"``) as they
+would appear on a real travel document — what the engine identifies a stop by
+after DUS-31 dropped the IATA-code pattern. Picks are seeded so two scenarios
+with the same seed and ``count`` always pick the same cities in the same order.
 """
 
 from __future__ import annotations
@@ -10,9 +11,9 @@ from __future__ import annotations
 import random
 
 CITY_POOL: tuple[str, ...] = (
-    "WAW", "JFK", "LHR", "CDG", "MAD", "BCN", "BER", "AMS",
-    "FRA", "ZRH", "VIE", "PRG", "DUB", "LIS", "ROM", "ATH",
-    "IST", "SVO", "ARN", "CPH", "HEL", "OSL", "MXP", "MUC",
+    "Warsaw", "New York", "London", "Paris", "Madrid", "Barcelona", "Berlin", "Amsterdam",
+    "Frankfurt", "Zurich", "Vienna", "Prague", "Dublin", "Lisbon", "Rome", "Athens",
+    "Istanbul", "Moscow", "Stockholm", "Copenhagen", "Helsinki", "Oslo", "Milan", "Munich",
 )
 
 

@@ -5,8 +5,8 @@
       "arrivalAt": "2027-03-02T03:00:00Z",
       "carrier": "AF",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CPH",
-      "to": "DUB",
+      "from": "Copenhagen",
+      "to": "Dublin",
       "vehicleNumber": "AF103"
     }
   ],

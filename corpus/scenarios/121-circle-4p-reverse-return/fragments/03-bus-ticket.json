@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "OSL",
-      "to": "FRA",
+      "from": "Oslo",
+      "to": "Frankfurt",
       "vehicleNumber": "FL100"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
-      "to": "MUC",
+      "from": "Frankfurt",
+      "to": "Munich",
       "vehicleNumber": "FL101"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "carrier": "FlixBus",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MUC",
-      "to": "LIS",
+      "from": "Munich",
+      "to": "Lisbon",
       "vehicleNumber": "FL102"
     }
   ],

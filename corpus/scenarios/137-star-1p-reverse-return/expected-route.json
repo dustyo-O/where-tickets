@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ARN",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -49,7 +49,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "MAD",
+      "city": "Madrid",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -57,7 +57,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -67,10 +67,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "rail",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-01",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1"
       ]
@@ -78,10 +78,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-01",
-      "to": "PRG",
+      "to": "Prague",
       "travelers": [
         "traveler-1"
       ]
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "rail",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-01",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1"
       ]
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-02",
-      "to": "ARN",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1"
       ]
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ARN",
+      "from": "Stockholm",
       "mode": "rail",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-03",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1"
       ]
@@ -122,10 +122,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-03",
-      "to": "MAD",
+      "to": "Madrid",
       "travelers": [
         "traveler-1"
       ]
@@ -133,10 +133,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "MAD",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "137-star-1p-reverse-return-tkt-03",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]

@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-01T03:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
-      "to": "CDG",
+      "from": "Prague",
+      "to": "Paris",
       "vehicleNumber": "LO100"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "CDG",
-      "to": "BCN",
+      "from": "Paris",
+      "to": "Barcelona",
       "vehicleNumber": "LO101"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "carrier": "LO",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BCN",
-      "to": "IST",
+      "from": "Barcelona",
+      "to": "Istanbul",
       "vehicleNumber": "LO102"
     }
   ],

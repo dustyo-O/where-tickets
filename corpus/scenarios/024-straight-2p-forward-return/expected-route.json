@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "VIE",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "IST",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "BCN",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "VIE",
+      "city": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -39,10 +39,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "024-straight-2p-forward-return-tkt-01",
-      "to": "IST",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "IST",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "024-straight-2p-forward-return-tkt-01",
-      "to": "BCN",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "BCN",
+      "from": "Barcelona",
       "mode": "air",
       "sourceFragmentId": "024-straight-2p-forward-return-tkt-01",
-      "to": "VIE",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"

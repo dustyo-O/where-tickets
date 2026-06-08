@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "LHR",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "AMS",
+      "city": "Amsterdam",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -62,7 +62,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -74,10 +74,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "bus",
       "sourceFragmentId": "046-straight-3p-bisect-return-hotels-tkt-01",
-      "to": "LHR",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -87,10 +87,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "LHR",
+      "from": "London",
       "mode": "bus",
       "sourceFragmentId": "046-straight-3p-bisect-return-hotels-tkt-01",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "DUB",
+      "from": "Dublin",
       "mode": "bus",
       "sourceFragmentId": "046-straight-3p-bisect-return-hotels-tkt-01",
-      "to": "AMS",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "AMS",
+      "from": "Amsterdam",
       "mode": "rail",
       "sourceFragmentId": "046-straight-3p-bisect-return-hotels-tkt-02",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",

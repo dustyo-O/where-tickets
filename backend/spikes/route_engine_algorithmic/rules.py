@@ -57,6 +57,7 @@ from spikes.route_engine_llm.models import (
     HotelBookingFragment,
     TransitTicketFragment,
     WorkingRoute,
+    city_identity,
 )
 from spikes.route_engine_llm.operations import (
     AddTransit,
@@ -257,7 +258,9 @@ def _build_ops_hotel(route: WorkingRoute, fragment: HotelBookingFragment) -> lis
     travelers_t = tuple(travelers)
 
     pending = _PendingLedger.from_route(route)
-    fragment_events: dict[str, list[datetime]] = {fragment.city: [fragment.check_in_at]}
+    fragment_events: dict[str, list[datetime]] = {
+        city_identity(fragment.city): [fragment.check_in_at]
+    }
     state = _BatchState()
 
     event = Event(
@@ -505,9 +508,12 @@ def classify_event(
     # All stops (any city) with a projected time — needed for condition (b)
     # "intervening different-city stop in time". Includes the fragment's OWN
     # other-city events because they too will land as stops in this batch.
+    # `fragment_events` is keyed by the normalized city identity so callers
+    # don't need to know the comparison rule.
     other_city_times = _other_city_times(route, pending, event.city)
-    for other_city, times in fragment_events.items():
-        if other_city == event.city:
+    event_city_id = city_identity(event.city)
+    for other_city_id, times in fragment_events.items():
+        if other_city_id == event_city_id:
             continue
         other_city_times.extend(times)
 
@@ -683,18 +689,24 @@ class _PendingLedger:
         entry.add(event)
 
     def iter_same_city(self, city: str) -> list[tuple[str, _Pending]]:
-        """All `(token, entry)` pairs whose city matches `city`."""
+        """All `(token, entry)` pairs whose city matches `city`.
+
+        Comparison is by :func:`city_identity` so a fragment naming a city as
+        ``"PARIS"`` matches an in-batch entry already registered as ``"Paris"``.
+        """
+        target = city_identity(city)
         return [
             (token, entry)
             for token, entry in self.pending.items()
-            if entry.city == city
+            if city_identity(entry.city) == target
         ]
 
     def iter_other_city_times(self, city: str) -> list[datetime]:
         """Projected times of every DIFFERENT-city token currently known."""
+        target = city_identity(city)
         times: list[datetime] = []
         for entry in self.pending.values():
-            if entry.city == city:
+            if city_identity(entry.city) == target:
                 continue
             proj = entry.projected_time()
             if proj is not None:
@@ -727,8 +739,9 @@ def _same_city_candidates(
     timing for the next event in the batch.
     """
     out: list[_SameCityCandidate] = []
+    target = city_identity(city)
     for stop in route.stops:
-        if stop.city != city:
+        if city_identity(stop.city) != target:
             continue
         entry = pending.pending.get(stop.id)
         arrival, departure, projected = _combine_real_and_pending(stop, entry)
@@ -788,17 +801,18 @@ def _other_city_times(
     Combines explicit stop timing on the route with the pending ledger so
     that an in-batch enrichment is visible as a between-time anchor.
     """
+    target = city_identity(city)
     times: list[datetime] = []
     for stop in route.stops:
-        if stop.city == city:
+        if city_identity(stop.city) == target:
             continue
         entry = pending.pending.get(stop.id)
         _arr, _dep, proj = _combine_real_and_pending(stop, entry)
         if proj is not None:
             times.append(proj)
     # Batch-only tokens (not backed by a real route stop yet).
-    for token, entry in pending.pending.items():
-        if entry.city == city or not entry.is_batch:
+    for entry in pending.pending.values():
+        if city_identity(entry.city) == target or not entry.is_batch:
             continue
         proj = entry.projected_time()
         if proj is not None:
@@ -941,11 +955,15 @@ def _fragment_events_transit(
     fragment like SVO -> LHR -> DUB -> LHR see DUB (its own different-city
     leg, not yet in the route) as proof that the two LHR events are distinct
     visits — matching the LLM prompt's Example A reasoning within one ticket.
+
+    Keys are :func:`city_identity` of the printed city name so the
+    self-vs-other lookup in :func:`classify_event` is comparison-safe across
+    case / whitespace variants.
     """
     by_city: dict[str, list[datetime]] = {}
     for leg in fragment.legs:
-        by_city.setdefault(leg.from_, []).append(leg.departure_at)
-        by_city.setdefault(leg.to, []).append(leg.arrival_at)
+        by_city.setdefault(city_identity(leg.from_), []).append(leg.departure_at)
+        by_city.setdefault(city_identity(leg.to), []).append(leg.arrival_at)
     return by_city
 
 

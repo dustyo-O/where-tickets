@@ -5,24 +5,24 @@
       "arrivalAt": "2027-03-04T15:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "ROM",
-      "to": "WAW",
+      "from": "Rome",
+      "to": "Warsaw",
       "vehicleNumber": "DB104"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "WAW",
-      "to": "HEL",
+      "from": "Warsaw",
+      "to": "Helsinki",
       "vehicleNumber": "DB105"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
       "carrier": "DB",
       "departureAt": "2027-03-06T06:00:00Z",
-      "from": "HEL",
-      "to": "MXP",
+      "from": "Helsinki",
+      "to": "Milan",
       "vehicleNumber": "DB106"
     }
   ],

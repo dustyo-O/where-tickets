@@ -43,7 +43,7 @@ class ExpectedStop(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    city: str = Field(pattern=r"^[A-Z]{3}$")
+    city: str
     arrival_at: datetime | None = Field(default=None, alias="arrivalAt")
     departure_at: datetime | None = Field(default=None, alias="departureAt")
     travelers: list[str] = Field(min_length=1)
@@ -55,8 +55,8 @@ class ExpectedTransit(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    from_: str = Field(alias="from", pattern=r"^[A-Z]{3}$")
-    to: str = Field(pattern=r"^[A-Z]{3}$")
+    from_: str = Field(alias="from")
+    to: str
     mode: TransitMode
     departure_at: datetime = Field(alias="departureAt")
     arrival_at: datetime = Field(alias="arrivalAt")

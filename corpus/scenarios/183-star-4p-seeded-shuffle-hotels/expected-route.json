@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ROM",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "HEL",
+      "city": "Helsinki",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ROM",
+      "city": "Rome",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -66,7 +66,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "MXP",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "183-star-4p-seeded-shuffle-hotels-tkt-01",
-      "to": "ROM",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -93,10 +93,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ROM",
+      "from": "Rome",
       "mode": "air",
       "sourceFragmentId": "183-star-4p-seeded-shuffle-hotels-tkt-01",
-      "to": "HEL",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -107,10 +107,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "HEL",
+      "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "183-star-4p-seeded-shuffle-hotels-tkt-01",
-      "to": "ROM",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -121,10 +121,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ROM",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "183-star-4p-seeded-shuffle-hotels-tkt-02",
-      "to": "MXP",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
