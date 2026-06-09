@@ -20,7 +20,13 @@ from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, Field, TypeAdapter
 
-from spikes.route_engine_llm.models import Accommodation, Fragment, TransitMode
+from spikes.route_engine_llm.models import (
+    Accommodation,
+    Fragment,
+    TransitMode,
+    UnattachedDocument,
+    Venue,
+)
 
 __all__ = [
     "ExpectedStop",
@@ -39,7 +45,11 @@ __all__ = [
 
 
 class ExpectedStop(BaseModel):
-    """One ordered stop in the expected route (no engine ID)."""
+    """One ordered stop in the expected route (no engine ID).
+
+    DUS-31 Slice 5: ``venues`` is optional / defaulted so the existing 192
+    scenarios (which don't carry venues) continue to parse.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
@@ -48,6 +58,7 @@ class ExpectedStop(BaseModel):
     departure_at: datetime | None = Field(default=None, alias="departureAt")
     travelers: list[str] = Field(min_length=1)
     accommodations: list[Accommodation] = Field(default_factory=list)
+    venues: list[Venue] = Field(default_factory=list)
 
 
 class ExpectedTransit(BaseModel):
@@ -65,13 +76,21 @@ class ExpectedTransit(BaseModel):
 
 
 class ExpectedRoute(BaseModel):
-    """The canonical composed route for a scenario."""
+    """The canonical composed route for a scenario.
 
-    model_config = ConfigDict(extra="forbid")
+    DUS-31 Slice 5: ``unattached_documents`` is optional / defaulted so the
+    existing 192 scenarios (which don't carry unattached docs) continue to
+    parse.
+    """
+
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
 
     travelers: list[str] = Field(min_length=1)
     stops: list[ExpectedStop] = Field(default_factory=list)
     transits: list[ExpectedTransit] = Field(default_factory=list)
+    unattached_documents: list[UnattachedDocument] = Field(
+        default_factory=list, alias="unattachedDocuments"
+    )
     notes: str | None = None
 
 

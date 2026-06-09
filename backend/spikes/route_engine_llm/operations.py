@@ -66,6 +66,8 @@ from spikes.route_engine_llm.models import (
     Station,
     Transit,
     TransitMode,
+    UnattachedDocument,
+    Venue,
     WorkingRoute,
 )
 
@@ -77,6 +79,8 @@ __all__ = [
     "AttachAccommodation",
     "AddTravelers",
     "AddStations",
+    "AttachVenue",
+    "AddUnattachedDocument",
     "Op",
     "apply",
 ]
@@ -156,9 +160,8 @@ class AddTransit(BaseModel):
 class AttachAccommodation(BaseModel):
     """Attach an accommodation stay to a referenced stop.
 
-    DUS-31 Slice 4: ``kind`` and ``identifier`` are now required and replace
-    the optional ``hotel_name``. ``kind`` is currently locked to ``"hotel"``;
-    Slice 5 widens to include ``"airbnb"``.
+    DUS-31 Slice 5: ``kind`` widens to ``{"hotel", "airbnb"}``; airbnb rides
+    the existing accommodation path.
     """
 
     model_config = ConfigDict(extra="forbid")
@@ -167,7 +170,7 @@ class AttachAccommodation(BaseModel):
     stop_id: str = Field(alias="stopId")
     check_in_at: datetime = Field(alias="checkInAt")
     check_out_at: datetime = Field(alias="checkOutAt")
-    kind: Literal["hotel"]
+    kind: Literal["hotel", "airbnb"]
     identifier: str
 
 
@@ -198,13 +201,50 @@ class AddStations(BaseModel):
     stations: list[Station]
 
 
+class AttachVenue(BaseModel):
+    """Attach a venue to a referenced stop (existing id or same-batch ref).
+
+    DUS-31 Slice 5. Mirrors :class:`AttachAccommodation`'s shape on the
+    venue side. ``target`` is a stop reference; ``venue`` is the
+    :class:`Venue` to append. The applier de-duplicates against existing
+    entries on the stop by ``(kind, identifier)`` — venues are
+    stop-attached regardless of traveler, so the dedupe key does NOT include
+    travelers.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    op: Literal["attach_venue"] = "attach_venue"
+    target: str
+    venue: Venue
+
+
+class AddUnattachedDocument(BaseModel):
+    """Append an unattached supplementary document to the working route.
+
+    DUS-31 Slice 5. Intentionally identity-clean: the applier does NOT touch
+    ``stops[]``, ``transits[]``, ``next_stop_seq``, or ``next_transit_seq`` —
+    it just appends ``document`` to ``WorkingRoute.unattached_documents``.
+    The unattached list is strictly invisible to ``scoring.final_route_match``
+    / ``identity_preserved`` / ``ordering_consistent`` so this op cannot
+    affect any of the engine's scoring gates.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    op: Literal["add_unattached_document"] = "add_unattached_document"
+    document: UnattachedDocument
+
+
 type Op = Annotated[
     CreateStop
     | EnrichStop
     | AddTransit
     | AttachAccommodation
     | AddTravelers
-    | AddStations,
+    | AddStations
+    | AttachVenue
+    | AddUnattachedDocument,
     Field(discriminator="op"),
 ]
 
@@ -238,6 +278,10 @@ def apply(route: WorkingRoute, ops: list[Op]) -> WorkingRoute:
                 _apply_add_travelers(route, op, refs)
             case AddStations():
                 _apply_add_stations(route, op, refs)
+            case AttachVenue():
+                _apply_attach_venue(route, op, refs)
+            case AddUnattachedDocument():
+                _apply_add_unattached_document(route, op)
     _project_stops(route)
     return route
 
@@ -396,6 +440,34 @@ def _apply_add_stations(
 ) -> None:
     stop = _resolve_stop(route, op.target, refs)
     _extend_stations_uniq(stop.stations, op.stations)
+
+
+def _apply_attach_venue(
+    route: WorkingRoute, op: AttachVenue, refs: dict[str, str]
+) -> None:
+    """Append ``op.venue`` to the resolved stop, deduped by ``(kind, identifier)``.
+
+    Travelers are intentionally NOT part of the dedupe key — a venue is
+    attached to the stop as a whole, not to a per-traveler slot.
+    """
+    stop = _resolve_stop(route, op.target, refs)
+    seen = {(v.kind, v.identifier) for v in stop.venues}
+    key = (op.venue.kind, op.venue.identifier)
+    if key in seen:
+        return
+    stop.venues.append(op.venue)
+
+
+def _apply_add_unattached_document(
+    route: WorkingRoute, op: AddUnattachedDocument
+) -> None:
+    """Append ``op.document`` to ``route.unattached_documents`` — nothing else.
+
+    Identity-clean by design: stops, transits, and the two id counters are
+    untouched, so this op cannot affect any of the scoring gates (which
+    ignore ``unattached_documents`` entirely).
+    """
+    route.unattached_documents.append(op.document)
 
 
 def _station_identity(station: Station) -> tuple[str, str, str]:
