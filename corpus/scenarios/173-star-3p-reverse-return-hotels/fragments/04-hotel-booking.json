@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "London",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "London",
+      "identifier": "Central Lodge",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
   "confirmationCode": "HTL004173",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
   "sourceDocumentId": "173-star-3p-reverse-return-hotels-htl-04",
   "travelers": [
     "traveler-1",

@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-04T15:00:00Z",
-  "checkOutAt": "2027-03-05T09:00:00Z",
-  "city": "Istanbul",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Istanbul"
+  ],
   "confirmationCode": "HTL005172",
   "documentType": "hotel-booking",
-  "hotelName": "Harbor View",
   "sourceDocumentId": "172-star-3p-forward-return-hotels-htl-05",
   "travelers": [
     "traveler-1",

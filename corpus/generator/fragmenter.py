@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-from .cities import station_identifier, station_kind
+from .cities import accommodation_identifier, station_identifier, station_kind
 
 EPOCH = datetime(2027, 3, 1, tzinfo=timezone.utc)
 TRAVEL_HOURS = 3
@@ -251,14 +251,17 @@ def build_fragments_and_route(
         }
         if hotels:
             hotel_name = HOTEL_NAMES[idx % len(HOTEL_NAMES)]
+            identifier = accommodation_identifier(hotel_name)
             stop["accommodations"] = [
                 {
                     "checkInAt": _isoformat(arrive_hop.arrive),
                     "checkOutAt": _isoformat(depart_hop.depart),
-                    "hotelName": hotel_name,
+                    "kind": "hotel",
+                    "identifier": identifier,
                 }
             ]
-            # And a matching hotel-booking fragment.
+            # And a matching accommodation fragment (DUS-31 Slice 4: compact
+            # accommodations[] shape, one entry per generator-emitted fragment).
             hotel_fragment_id = f"{scenario_slug}-htl-{idx:02d}"
             chronological_fragments.append(
                 {
@@ -266,10 +269,16 @@ def build_fragments_and_route(
                     "sourceDocumentId": hotel_fragment_id,
                     "confirmationCode": f"HTL{idx:03d}{scenario_slug[:3].upper()}",
                     "travelers": list(travelers),
-                    "city": cities[idx],
-                    "checkInAt": _isoformat(arrive_hop.arrive),
-                    "checkOutAt": _isoformat(depart_hop.depart),
-                    "hotelName": hotel_name,
+                    "cities": [cities[idx]],
+                    "accommodations": [
+                        {
+                            "city": cities[idx],
+                            "kind": "hotel",
+                            "identifier": identifier,
+                            "checkInAt": _isoformat(arrive_hop.arrive),
+                            "checkOutAt": _isoformat(depart_hop.depart),
+                        }
+                    ],
                 }
             )
         stops.append(stop)
@@ -286,7 +295,9 @@ def build_fragments_and_route(
     # Order chronological_fragments by the timestamp of the first leg / check-in.
     def fragment_sort_key(fragment: dict[str, Any]) -> str:
         if fragment["documentType"] == "hotel-booking":
-            return fragment["checkInAt"] + "-htl"
+            # Earliest checkInAt across the compact accommodations[].
+            check_ins = [a["checkInAt"] for a in fragment["accommodations"]]
+            return min(check_ins) + "-htl"
         # Transit fragments: pick the earliest departureAt across the compact
         # stations[]. Always at least one station has a departureAt — every
         # transit ticket has an origin event.

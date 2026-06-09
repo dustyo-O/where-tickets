@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "Copenhagen",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Copenhagen"
+  ],
   "confirmationCode": "HTL003125",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
   "sourceDocumentId": "125-circle-4p-reverse-return-hotels-htl-03",
   "travelers": [
     "traveler-1",

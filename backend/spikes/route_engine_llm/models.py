@@ -20,12 +20,13 @@ from pydantic import BaseModel, ConfigDict, Field
 __all__ = [
     "TransitMode",
     "Accommodation",
+    "FragmentAccommodation",
     "RouteStop",
     "Station",
     "Transit",
     "WorkingRoute",
     "TransitTicketFragment",
-    "HotelBookingFragment",
+    "AccommodationFragment",
     "Fragment",
     "city_identity",
 ]
@@ -79,13 +80,20 @@ class Station(BaseModel):
 
 
 class Accommodation(BaseModel):
-    """A hotel stay attached to a stop."""
+    """An accommodation stay attached to a stop.
+
+    DUS-31 Slice 4: every accommodation carries a ``kind`` (currently only
+    ``"hotel"``; Slice 5 widens to include ``"airbnb"``) and a printed
+    ``identifier`` (the property name as it appears on the document — what was
+    previously stored in the optional ``hotel_name``).
+    """
 
     model_config = ConfigDict(extra="forbid")
 
     check_in_at: datetime = Field(alias="checkInAt")
     check_out_at: datetime = Field(alias="checkOutAt")
-    hotel_name: str | None = Field(default=None, alias="hotelName")
+    kind: Literal["hotel"]
+    identifier: str
 
 
 class RouteStop(BaseModel):
@@ -223,8 +231,39 @@ class TransitTicketFragment(BaseModel):
     stations: list[Station] = Field(min_length=2)
 
 
-class HotelBookingFragment(BaseModel):
-    """A hotel booking fragment."""
+class FragmentAccommodation(BaseModel):
+    """One accommodation entry inside an :class:`AccommodationFragment`.
+
+    Mirrors the extractor's compact ``accommodations[]`` shape: a per-entry
+    city + kind + identifier + required check-in / check-out datetimes. The
+    surrounding fragment's ``cities[]`` is the deduplicated set of cities the
+    document mentions; each accommodation entry independently names the city
+    it belongs to.
+    """
+
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+    city: str
+    kind: Literal["hotel"]
+    identifier: str
+    check_in_at: datetime = Field(alias="checkInAt")
+    check_out_at: datetime = Field(alias="checkOutAt")
+
+
+class AccommodationFragment(BaseModel):
+    """A lodging-document fragment (currently only ``hotel-booking``).
+
+    DUS-31 Slice 4: replaces the single-shot ``city`` / ``check_in_at`` /
+    ``check_out_at`` / ``hotel_name`` fields with a compact
+    ``accommodations[]`` plus ``cities[]``. Each entry inside
+    ``accommodations[]`` carries its own city, kind, identifier and dates so
+    a single fragment can describe multiple stays (e.g. a multi-night chain
+    booking spanning two cities). Today's generator emits exactly one entry
+    per fragment; Slice 6's adapter / Slice 7+ scenarios may emit several.
+
+    The ``document_type`` literal stays ``"hotel-booking"`` for now — Slice 5
+    widens it to include ``"airbnb-booking"``.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
@@ -232,13 +271,11 @@ class HotelBookingFragment(BaseModel):
     source_document_id: str = Field(alias="sourceDocumentId")
     confirmation_code: str = Field(alias="confirmationCode")
     travelers: list[str]
-    city: str
-    check_in_at: datetime = Field(alias="checkInAt")
-    check_out_at: datetime = Field(alias="checkOutAt")
-    hotel_name: str | None = Field(default=None, alias="hotelName")
+    cities: list[str] = Field(min_length=1)
+    accommodations: list[FragmentAccommodation] = Field(min_length=1)
 
 
 type Fragment = Annotated[
-    TransitTicketFragment | HotelBookingFragment,
+    TransitTicketFragment | AccommodationFragment,
     Field(discriminator="document_type"),
 ]

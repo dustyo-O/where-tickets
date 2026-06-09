@@ -76,7 +76,7 @@ class CheckResult:
 
 # Canonical comparable forms (hashable) for the fields expected-route carries.
 type _Stamp = str | None
-type _AccomKey = tuple[_Stamp, _Stamp, str | None]
+type _AccomKey = tuple[_Stamp, _Stamp, str, str]
 type _StopKey = tuple[str, _Stamp, _Stamp, tuple[str, ...], tuple[_AccomKey, ...]]
 type _TransitKey = tuple[str, str, str, _Stamp, _Stamp, tuple[str, ...], str]
 
@@ -99,7 +99,12 @@ def _travelers(values: list[str]) -> tuple[str, ...]:
 
 
 def _accom_key(accom: Accommodation) -> _AccomKey:
-    return (_stamp(accom.check_in_at), _stamp(accom.check_out_at), accom.hotel_name)
+    return (
+        _stamp(accom.check_in_at),
+        _stamp(accom.check_out_at),
+        accom.kind,
+        accom.identifier,
+    )
 
 
 def _accoms(accoms: list[Accommodation]) -> tuple[_AccomKey, ...]:

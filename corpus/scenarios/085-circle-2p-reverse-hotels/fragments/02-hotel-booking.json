@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "Berlin",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "Berlin",
+      "identifier": "Central Lodge",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
   "confirmationCode": "HTL004085",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
   "sourceDocumentId": "085-circle-2p-reverse-hotels-htl-04",
   "travelers": [
     "traveler-1",

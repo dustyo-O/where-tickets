@@ -63,7 +63,8 @@ def test_create_enrich_transit_accommodation_happy_path() -> None:
                 "stopId": "stop-2",
                 "checkInAt": "2027-03-01T03:00:00+00:00",
                 "checkOutAt": "2027-03-01T08:00:00+00:00",
-                "hotelName": "Hotel Roma",
+                "kind": "hotel",
+                "identifier": "Hotel Roma",
             }
         ),
     ]
@@ -87,7 +88,8 @@ def test_create_enrich_transit_accommodation_happy_path() -> None:
     assert transit.source_fragment_id == "tkt-01"
 
     assert len(rom.accommodations) == 1
-    assert rom.accommodations[0].hotel_name == "Hotel Roma"
+    assert rom.accommodations[0].kind == "hotel"
+    assert rom.accommodations[0].identifier == "Hotel Roma"
 
 
 def test_create_stop_prepends_at_front_when_after_is_start() -> None:
@@ -636,6 +638,8 @@ def test_attach_accommodation_rejects_unknown_id() -> None:
                         "stopId": "stop-99",
                         "checkInAt": "2027-03-01T03:00:00+00:00",
                         "checkOutAt": "2027-03-01T08:00:00+00:00",
+                        "kind": "hotel",
+                        "identifier": "Hotel X",
                     }
                 )
             ],

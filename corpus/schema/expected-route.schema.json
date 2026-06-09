@@ -29,11 +29,20 @@
     "accommodation": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["checkInAt", "checkOutAt"],
+      "required": ["checkInAt", "checkOutAt", "kind", "identifier"],
       "properties": {
         "checkInAt": { "$ref": "#/$defs/isoDateTime" },
         "checkOutAt": { "$ref": "#/$defs/isoDateTime" },
-        "hotelName": { "type": "string", "minLength": 1 }
+        "kind": {
+          "type": "string",
+          "description": "Accommodation subtype (Slice 5 widens to include `airbnb`).",
+          "enum": ["hotel"]
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Printed property name as it appears on the document.",
+          "minLength": 1
+        }
       }
     },
     "stop": {

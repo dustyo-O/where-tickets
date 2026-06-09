@@ -154,7 +154,12 @@ class AddTransit(BaseModel):
 
 
 class AttachAccommodation(BaseModel):
-    """Attach a hotel stay to a referenced stop (existing id or same-batch ref)."""
+    """Attach an accommodation stay to a referenced stop.
+
+    DUS-31 Slice 4: ``kind`` and ``identifier`` are now required and replace
+    the optional ``hotel_name``. ``kind`` is currently locked to ``"hotel"``;
+    Slice 5 widens to include ``"airbnb"``.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
@@ -162,7 +167,8 @@ class AttachAccommodation(BaseModel):
     stop_id: str = Field(alias="stopId")
     check_in_at: datetime = Field(alias="checkInAt")
     check_out_at: datetime = Field(alias="checkOutAt")
-    hotel_name: str | None = Field(default=None, alias="hotelName")
+    kind: Literal["hotel"]
+    identifier: str
 
 
 class AddTravelers(BaseModel):
@@ -368,7 +374,8 @@ def _apply_attach_accommodation(
         Accommodation(
             checkInAt=op.check_in_at,
             checkOutAt=op.check_out_at,
-            hotelName=op.hotel_name,
+            kind=op.kind,
+            identifier=op.identifier,
         )
     )
 

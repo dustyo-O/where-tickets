@@ -37,7 +37,7 @@ from spikes.route_engine_algorithmic.rules import (
     find_after_neighbor,
 )
 from spikes.route_engine_llm.models import (
-    HotelBookingFragment,
+    AccommodationFragment,
     RouteStop,
     TransitMode,
     TransitTicketFragment,
@@ -163,18 +163,24 @@ def _ticket_one_leg(
     )
 
 
-def _hotel_booking() -> HotelBookingFragment:
-    """Out-of-Slice-2 shape: a hotel booking (Slice 4)."""
-    return HotelBookingFragment.model_validate(
+def _hotel_booking() -> AccommodationFragment:
+    """An accommodation fragment carrying one hotel-booking entry."""
+    return AccommodationFragment.model_validate(
         {
             "documentType": "hotel-booking",
             "sourceDocumentId": "doc-gamma-01",
             "confirmationCode": "HOTEL-1",
             "travelers": ["traveler-1"],
-            "city": "LIS",
-            "checkInAt": "2027-03-01T15:00:00Z",
-            "checkOutAt": "2027-03-03T11:00:00Z",
-            "hotelName": "Hotel Lisboa",
+            "cities": ["LIS"],
+            "accommodations": [
+                {
+                    "city": "LIS",
+                    "kind": "hotel",
+                    "identifier": "Hotel Lisboa",
+                    "checkInAt": "2027-03-01T15:00:00Z",
+                    "checkOutAt": "2027-03-03T11:00:00Z",
+                }
+            ],
         }
     )
 
@@ -454,7 +460,8 @@ def test_build_ops_hotel_booking_on_empty_route_creates_hotel_only_stop() -> Non
     assert ops[1].stop_id == "n1"
     assert ops[1].check_in_at == _dt("2027-03-01T15:00:00Z")
     assert ops[1].check_out_at == _dt("2027-03-03T11:00:00Z")
-    assert ops[1].hotel_name == "Hotel Lisboa"
+    assert ops[1].kind == "hotel"
+    assert ops[1].identifier == "Hotel Lisboa"
 
     assert isinstance(ops[2], AddTravelers)
     assert ops[2].stop_id == "n1"
@@ -832,18 +839,24 @@ def _hotel_for(
     check_out: str,
     travelers: list[str] | None = None,
     hotel_name: str = "Test Hotel",
-) -> HotelBookingFragment:
-    """Tiny factory for crafting hotel-booking fragments in Slice-4 tests."""
-    return HotelBookingFragment.model_validate(
+) -> AccommodationFragment:
+    """Tiny factory for crafting accommodation fragments in Slice-4 tests."""
+    return AccommodationFragment.model_validate(
         {
             "documentType": "hotel-booking",
             "sourceDocumentId": source_id,
             "confirmationCode": "C" + source_id[-3:],
             "travelers": travelers or ["traveler-1"],
-            "city": city,
-            "checkInAt": check_in,
-            "checkOutAt": check_out,
-            "hotelName": hotel_name,
+            "cities": [city],
+            "accommodations": [
+                {
+                    "city": city,
+                    "kind": "hotel",
+                    "identifier": hotel_name,
+                    "checkInAt": check_in,
+                    "checkOutAt": check_out,
+                }
+            ],
         }
     )
 

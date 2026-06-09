@@ -62,7 +62,8 @@ def _working_from_expected(expected: ExpectedRoute) -> WorkingRoute:
                     Accommodation(
                         checkInAt=a.check_in_at,
                         checkOutAt=a.check_out_at,
-                        hotelName=a.hotel_name,
+                        kind=a.kind,
+                        identifier=a.identifier,
                     )
                     for a in stop.accommodations
                 ],

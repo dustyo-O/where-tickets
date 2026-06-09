@@ -81,6 +81,20 @@ def station_kind(mode: str) -> str:
     return {"air": "airport", "rail": "rail_station", "bus": "bus_terminal"}[mode]
 
 
+def accommodation_identifier(hotel_name: str) -> str:
+    """Deterministic accommodation identifier for the compact ``accommodations[]``.
+
+    DUS-31 Slice 4 replaces the optional ``hotelName`` field with a required
+    printed ``identifier``. The fragmenter already picks a stable hotel name
+    per stop slot (``HOTEL_NAMES[idx % len(HOTEL_NAMES)]``); this helper is a
+    thin pass-through that documents the convention — the identifier IS the
+    printed property name. Kept as a one-line helper so any future
+    transformation (e.g. trimming, normalisation) lands in one place rather
+    than scattered across the fragmenter.
+    """
+    return hotel_name
+
+
 def pick_cities(rng: random.Random, count: int) -> list[str]:
     """Pick ``count`` distinct cities from the pool using ``rng``."""
     if count > len(CITY_POOL):

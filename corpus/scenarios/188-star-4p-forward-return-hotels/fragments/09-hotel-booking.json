@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-05T12:00:00Z",
-  "checkOutAt": "2027-03-06T06:00:00Z",
-  "city": "Rome",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-05T12:00:00Z",
+      "checkOutAt": "2027-03-06T06:00:00Z",
+      "city": "Rome",
+      "identifier": "City Garden",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Rome"
+  ],
   "confirmationCode": "HTL006188",
   "documentType": "hotel-booking",
-  "hotelName": "City Garden",
   "sourceDocumentId": "188-star-4p-forward-return-hotels-htl-06",
   "travelers": [
     "traveler-1",

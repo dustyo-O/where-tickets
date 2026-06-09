@@ -3,12 +3,13 @@
 ``build_ops(route, fragment)`` translates a single fragment into an ordered op
 list ready for :func:`spikes.route_engine_llm.operations.apply`.
 
-Slice 4 scope: transit-ticket fragments (any leg count) AND hotel-booking
-fragments folded into empty OR non-empty routes, with the per-traveler-per-slot
-identity classifier (:func:`classify_event`) deciding CREATE-vs-ENRICH for
-every event regardless of role. The classifier is a faithful code translation
-of the LLM prompt's three explicit conditions + the arrival-after-departure
-sanity check (see ``spikes.route_engine_llm.prompts.SYSTEM_PROMPT``).
+Slice 4 scope: transit-ticket fragments (any leg count) AND accommodation
+fragments (one or more ``accommodations[]`` entries per fragment) folded into
+empty OR non-empty routes, with the per-traveler-per-slot identity classifier
+(:func:`classify_event`) deciding CREATE-vs-ENRICH for every event regardless
+of role. The classifier is a faithful code translation of the LLM prompt's
+three explicit conditions + the arrival-after-departure sanity check (see
+``spikes.route_engine_llm.prompts.SYSTEM_PROMPT``).
 
 Hotel events ride exactly the same classifier as transit arrivals/departures,
 with two role-specific knobs:
@@ -53,8 +54,9 @@ from enum import StrEnum
 from typing import TYPE_CHECKING, Literal
 
 from spikes.route_engine_llm.models import (
+    AccommodationFragment,
     Fragment,
-    HotelBookingFragment,
+    FragmentAccommodation,
     Station,
     TransitTicketFragment,
     WorkingRoute,
@@ -195,10 +197,11 @@ def _legs_from_stations(stations: list[Station]) -> list[_LegView]:
 class RuleNotImplementedError(Exception):
     """A fragment shape the current slice does not yet handle.
 
-    Slice 4 covers transit tickets and hotel-booking fragments. The error
-    survives as a safety net for any new fragment shape introduced later —
-    the engine wraps it as an :class:`EngineError` so the scenario buckets
-    cleanly instead of crashing the sweep.
+    Slice 4 covers transit tickets and accommodation fragments (one or more
+    ``accommodations[]`` entries). The error survives as a safety net for any
+    new fragment shape introduced later — the engine wraps it as an
+    :class:`EngineError` so the scenario buckets cleanly instead of crashing
+    the sweep.
     """
 
 
@@ -269,8 +272,8 @@ def build_ops(route: WorkingRoute, fragment: Fragment) -> list[Op]:
     if isinstance(fragment, TransitTicketFragment):
         return _build_ops_transit(route, fragment)
 
-    if isinstance(fragment, HotelBookingFragment):
-        return _build_ops_hotel(route, fragment)
+    if isinstance(fragment, AccommodationFragment):
+        return _build_ops_accommodation(route, fragment)
 
     # pragma: no cover - Fragment is a closed union; this is defensive.
     msg = f"unknown fragment type: {type(fragment).__name__}"
@@ -354,91 +357,117 @@ def _build_ops_transit(
     return ops
 
 
-def _build_ops_hotel(route: WorkingRoute, fragment: HotelBookingFragment) -> list[Op]:
-    """Translate a hotel-booking fragment into ops.
+def _build_ops_accommodation(
+    route: WorkingRoute, fragment: AccommodationFragment
+) -> list[Op]:
+    """Translate an accommodation-bearing fragment into ops.
 
-    One accommodation event ``(city, check_in_at, check_out_at, travelers)``
-    is routed through the same :func:`classify_event` used for transit events.
+    DUS-31 Slice 4: the fragment carries a list of ``accommodations[]``;
+    each entry is treated as one independent accommodation event
+    ``(city, check_in_at, check_out_at, travelers, kind, identifier)`` and
+    routed through the same :func:`classify_event` used for transit events.
 
-    Decision mapping:
+    Multi-entry semantics: the per-batch ledger persists across the loop, so
+    a second accommodation at the same city sees the first one's effects
+    (the classifier's condition (c) treats a freshly-pending booking with a
+    different check-in time as a filled slot and forces CREATE).
+
+    Decision mapping (per entry):
     - CREATE → emit ``create_stop`` (chronologically positioned), then
       ``attach_accommodation`` to that ref. If the booking has any travelers
       AND the new stop is hotel-only (no transit will land on it from this
-      fragment — always true for hotel-booking fragments) emit a final
+      fragment — always true for accommodation fragments) emit a final
       ``add_travelers`` so the projector finds them — incident transits would
       otherwise be the only source of travelers on a stop.
     - ENRICH(target_stop_id) → emit just ``attach_accommodation`` on the
       target. The target's travelers are already populated (either from its
       incident transits via projection, or via a prior ``add_travelers`` on a
-      hotel-only stop), so we don't re-emit them.
+      hotel-only stop), so we re-emit only the names the target hasn't seen.
     """
     travelers = list(fragment.travelers)
     travelers_t = tuple(travelers)
 
     pending = _PendingLedger.from_route(route)
-    fragment_events: dict[str, list[datetime]] = {
-        city_identity(fragment.city): [fragment.check_in_at]
-    }
+    fragment_events = _fragment_events_accommodations(fragment.accommodations)
     state = _BatchState()
 
-    event = Event(
-        city=fragment.city,
-        time=fragment.check_in_at,
-        role=EventRole.ACCOMMODATION,
-        travelers=travelers_t,
-        time_end=fragment.check_out_at,
-    )
-
     ops: list[Op] = []
-    handle = _resolve_or_create(
-        route=route,
-        event=event,
-        pending=pending,
-        fragment_events=fragment_events,
-        state=state,
-        ops=ops,
-    )
-
-    # Whether the resolved handle refers to a brand-new batch-created stop
-    # (vs an existing route stop or an in-batch ref already created earlier).
-    is_new_batch_stop = handle in state.batch_refs
-
-    ops.append(
-        AttachAccommodation.model_validate(
-            {
-                "stopId": handle,
-                "checkInAt": fragment.check_in_at,
-                "checkOutAt": fragment.check_out_at,
-                "hotelName": fragment.hotel_name,
-            }
+    for accom in fragment.accommodations:
+        event = Event(
+            city=accom.city,
+            time=accom.check_in_at,
+            role=EventRole.ACCOMMODATION,
+            travelers=travelers_t,
+            time_end=accom.check_out_at,
         )
-    )
 
-    # Travelers wiring:
-    # - On a freshly-minted hotel-only stop the projector has no incident
-    #   transits to derive travelers from, so we wire ALL of them explicitly.
-    # - When ENRICHing an existing stop, the prior travelers are already
-    #   visible via incident transits (or an earlier add_travelers). But a
-    #   booking may bring NEW travelers the stop hasn't seen — those would
-    #   never surface through projection because the accommodation model
-    #   doesn't carry travelers. Emit an add_travelers for only the novel
-    #   names so multi-pax hotels enrich correctly.
-    if travelers:
-        if is_new_batch_stop:
-            ops.append(
-                AddTravelers.model_validate(
-                    {"stopId": handle, "travelers": list(travelers)}
-                )
+        handle = _resolve_or_create(
+            route=route,
+            event=event,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        )
+
+        # Whether the resolved handle refers to a brand-new batch-created stop
+        # (vs an existing route stop or an in-batch ref already created earlier).
+        is_new_batch_stop = handle in state.batch_refs
+
+        ops.append(
+            AttachAccommodation.model_validate(
+                {
+                    "stopId": handle,
+                    "checkInAt": accom.check_in_at,
+                    "checkOutAt": accom.check_out_at,
+                    "kind": accom.kind,
+                    "identifier": accom.identifier,
+                }
             )
-        else:
-            existing_travelers = _resolved_stop_travelers(route, handle)
-            novel = [t for t in travelers if t not in existing_travelers]
-            if novel:
+        )
+
+        # Travelers wiring (per-entry):
+        # - On a freshly-minted hotel-only stop the projector has no incident
+        #   transits to derive travelers from, so we wire ALL of them explicitly.
+        # - When ENRICHing an existing stop, the prior travelers are already
+        #   visible via incident transits (or an earlier add_travelers). But a
+        #   booking may bring NEW travelers the stop hasn't seen — those would
+        #   never surface through projection because the accommodation model
+        #   doesn't carry travelers. Emit an add_travelers for only the novel
+        #   names so multi-pax hotels enrich correctly.
+        if travelers:
+            if is_new_batch_stop:
                 ops.append(
-                    AddTravelers.model_validate({"stopId": handle, "travelers": novel})
+                    AddTravelers.model_validate(
+                        {"stopId": handle, "travelers": list(travelers)}
+                    )
                 )
+            else:
+                existing_travelers = _resolved_stop_travelers(route, handle)
+                novel = [t for t in travelers if t not in existing_travelers]
+                if novel:
+                    ops.append(
+                        AddTravelers.model_validate(
+                            {"stopId": handle, "travelers": novel}
+                        )
+                    )
 
     return ops
+
+
+def _fragment_events_accommodations(
+    accommodations: list[FragmentAccommodation],
+) -> dict[str, list[datetime]]:
+    """Pre-collect every ``(city -> [check_in_at])`` for an accommodation fragment.
+
+    Mirrors :func:`_fragment_events_transit`: gives condition (b)'s
+    intervening-different-city scan a view of the fragment's OWN cities
+    before any of them have been classified.
+    """
+    by_city: dict[str, list[datetime]] = {}
+    for accom in accommodations:
+        by_city.setdefault(city_identity(accom.city), []).append(accom.check_in_at)
+    return by_city
 
 
 def _resolved_stop_travelers(route: WorkingRoute, stop_id: str) -> set[str]:

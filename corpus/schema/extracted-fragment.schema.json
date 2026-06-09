@@ -46,6 +46,15 @@
         "arrivalAt": { "$ref": "#/$defs/isoDateTime" }
       }
     },
+    "accommodationDatetimes": {
+      "type": "object",
+      "description": "Required check-in / check-out datetimes for an accommodation entry. Mirrors the PDF corpus's accommodationDatetimes def — both endpoints are required.",
+      "required": ["checkInAt", "checkOutAt"],
+      "properties": {
+        "checkInAt": { "$ref": "#/$defs/isoDateTime" },
+        "checkOutAt": { "$ref": "#/$defs/isoDateTime" }
+      }
+    },
     "transitTicket": {
       "type": "object",
       "additionalProperties": false,
@@ -98,7 +107,7 @@
     "hotelBooking": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["documentType", "sourceDocumentId", "confirmationCode", "travelers", "city", "checkInAt", "checkOutAt"],
+      "required": ["documentType", "sourceDocumentId", "confirmationCode", "travelers", "cities", "accommodations"],
       "properties": {
         "documentType": { "const": "hotel-booking" },
         "sourceDocumentId": { "type": "string", "minLength": 1 },
@@ -109,10 +118,36 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/traveler" }
         },
-        "city": { "$ref": "#/$defs/cityName" },
-        "checkInAt": { "$ref": "#/$defs/isoDateTime" },
-        "checkOutAt": { "$ref": "#/$defs/isoDateTime" },
-        "hotelName": { "type": "string", "minLength": 1 }
+        "cities": {
+          "type": "array",
+          "description": "City names exactly as printed on the document, in first-seen order. Distinct from `accommodations[].city`, which is the per-entry printed city — `cities[]` is the deduplicated top-level set used by the engine when classifying same-city collapses.",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/cityName" }
+        },
+        "accommodations": {
+          "type": "array",
+          "description": "Lodging entries printed on the document. Each entry carries its own city, kind (currently only `hotel` — Slice 5 widens to include `airbnb`), printed identifier (property name), and required check-in / check-out datetimes.",
+          "minItems": 1,
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/accommodationDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Accommodation subtype.",
+                "enum": ["hotel"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "Printed property name (e.g. \"Hotel Lutetia\").",
+                "minLength": 1
+              }
+            }
+          }
+        }
       }
     }
   }

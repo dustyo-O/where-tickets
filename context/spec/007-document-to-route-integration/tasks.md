@@ -32,14 +32,14 @@
   - [x] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
   - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; offline tests green; `just lint` clean. **[Agent: python-backend]**
 
-- [ ] **Slice 4: Accommodations carry `kind` + `identifier`**
-  - [ ] Reshape `hotelBooking` in the fragment schema: remove `city` + `checkInAt` + `checkOutAt` + `hotelName` as top-level; replace with `accommodations[]` (each `{ city, kind ∈ {hotel, airbnb}, identifier, checkInAt, checkOutAt }`) + `cities[]`. **[Agent: python-backend]**
-  - [ ] Update the generator to emit `accommodations[]` with `kind: "hotel"` for existing scenarios. **[Agent: python-backend]**
-  - [ ] Update `HotelBookingFragment` Pydantic model (rename to `AccommodationFragment`, retain `documentType: "hotel-booking"`); `Accommodation` model gains `kind: Literal["hotel", "airbnb"]` and `identifier: str`. **[Agent: python-backend]**
-  - [ ] Update `expected-route.schema.json` `accommodation` to carry `kind` and `identifier`; regenerate expected-routes. **[Agent: python-backend]**
-  - [ ] Update `rules.py` event extraction to read from `accommodations[]` instead of single-shot fields. **[Agent: python-backend]**
-  - [ ] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; offline tests green; `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 4: Accommodations carry `kind` + `identifier`**
+  - [x] Reshape `hotelBooking` in the fragment schema: remove `city` + `checkInAt` + `checkOutAt` + `hotelName` as top-level; replace with `accommodations[]` (each `{ city, kind ∈ {hotel, airbnb}, identifier, checkInAt, checkOutAt }`) + `cities[]`. **[Agent: python-backend]** _(`kind` enum narrowed to `["hotel"]` for now; Slice 5 widens to include `"airbnb"`. Added an `accommodationDatetimes` `$def` mirroring the PDF schema convention.)_
+  - [x] Update the generator to emit `accommodations[]` with `kind: "hotel"` for existing scenarios. **[Agent: python-backend]** _(also added a deterministic `accommodation_identifier` helper alongside `station_identifier` in `corpus/generator/cities.py`.)_
+  - [x] Update `HotelBookingFragment` Pydantic model (rename to `AccommodationFragment`, retain `documentType: "hotel-booking"`); `Accommodation` model gains `kind: Literal["hotel", "airbnb"]` and `identifier: str`. **[Agent: python-backend]** _(also introduced a `FragmentAccommodation` model for the fragment side; `kind` literal stays `["hotel"]` in Slice 4.)_
+  - [x] Update `expected-route.schema.json` `accommodation` to carry `kind` and `identifier`; regenerate expected-routes. **[Agent: python-backend]**
+  - [x] Update `rules.py` event extraction to read from `accommodations[]` instead of single-shot fields. **[Agent: python-backend]** _(renamed `_build_ops_hotel` → `_build_ops_accommodation`; loops over `fragment.accommodations`, each entry independently routed through the classifier and pending-projection ledger so two same-city entries in one fragment still split correctly.)_
+  - [x] Regenerate the 192 corpus; commit. **[Agent: python-backend]**
+  - [x] **Verify:** `just test-corpus` green; `just spike-engine-algo` 192/192; offline tests green (158 passed); `just lint` clean. **[Agent: python-backend]**
 
 - [ ] **Slice 5: Airbnb + supplementary doc types, venues, unattached docs**
   - [ ] Add `airbnb-booking` and `supplementary` to the `documentType` enum in the fragment schema and `AccommodationFragment` / new `SupplementaryFragment` Pydantic types. **[Agent: python-backend]**

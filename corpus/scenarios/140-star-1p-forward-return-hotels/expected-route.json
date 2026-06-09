@@ -12,7 +12,8 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
@@ -27,7 +28,8 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
@@ -42,7 +44,8 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
@@ -57,7 +60,8 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
@@ -72,7 +76,8 @@
         {
           "checkInAt": "2027-03-04T15:00:00Z",
           "checkOutAt": "2027-03-05T09:00:00Z",
-          "hotelName": "Harbor View"
+          "identifier": "Harbor View",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
@@ -87,7 +92,8 @@
         {
           "checkInAt": "2027-03-05T12:00:00Z",
           "checkOutAt": "2027-03-06T06:00:00Z",
-          "hotelName": "City Garden"
+          "identifier": "City Garden",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-05T12:00:00Z",
