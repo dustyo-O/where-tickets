@@ -47,6 +47,13 @@ corpus = [
     "pymupdf",
 ]
 
+[tool.pyright]
+# DUS-31 Slice 8: tests under `tests/corpus/` import `corpus.integration.generator`
+# from the repo root. ``corpus`` resolves as a PEP 420 namespace package; pyright
+# needs the repo root on its search path so it can find that import. Other
+# packages (where_tickets, spikes) live under this directory already.
+extraPaths = [".."]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]

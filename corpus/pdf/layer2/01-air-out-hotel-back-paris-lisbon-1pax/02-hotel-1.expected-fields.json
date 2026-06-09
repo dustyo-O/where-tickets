@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-03-11T15:00:00",
+      "check_out_datetime": "2027-03-15T11:00:00",
+      "city": "Lisbon",
+      "identifier": "Hotel Marques de Pombal",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Lisbon"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 620.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-01-air-out-hotel-back-paris-lisbon-1pax/02-hotel-1"
+  ],
+  "scenario_id": "01-air-out-hotel-back-paris-lisbon-1pax/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

@@ -101,7 +101,23 @@ def _default_integration_root() -> Path:
     return _repo_root() / "corpus" / "integration"
 
 
+def _default_pdf_root() -> Path:
+    """Default root for resolving ``manifest.documents[*].pdf`` paths.
+
+    Manifests now reference PDFs under both ``layer1/scenarios/<slug>/...``
+    (legacy hand-rolled trips) and ``layer2/<trip-slug>/<NN>-<docname>.pdf``
+    (DUS-31 Slice 8 generated trips), so the resolution root sits at
+    ``corpus/pdf/``. Tests still override via ``--pdf-root``.
+    """
+    return _repo_root() / "corpus" / "pdf"
+
+
 def _default_layer1_root() -> Path:
+    """Backwards-compatible alias kept for tests that pre-date ``--pdf-root``.
+
+    Returns the layer-1 scenarios directory; tests still set
+    ``--layer1-root`` when their stubs dispatch on layer-1 PDF basenames.
+    """
     return _repo_root() / "corpus" / "pdf" / "layer1" / "scenarios"
 
 
@@ -113,10 +129,12 @@ def _default_layer1_root() -> Path:
 class ManifestDocument(BaseModel):
     """One document entry inside a trip's ``manifest.json``.
 
-    ``pdf`` is the path relative to ``--layer1-root`` (default
-    ``corpus/pdf/layer1/scenarios/``). ``expect_unreadable`` flags a PDF the
-    runner should accept as a failed extraction without failing the trip —
-    exercises spec 007 §2.6.
+    ``pdf`` is the path relative to ``--pdf-root`` (default
+    ``corpus/pdf/``). Both ``layer1/scenarios/<slug>/document.pdf`` (legacy
+    hand-rolled trips) and ``layer2/<trip-slug>/<NN>-<docname>.pdf`` (DUS-31
+    Slice 8 generated trips) resolve under the same root.
+    ``expect_unreadable`` flags a PDF the runner should accept as a failed
+    extraction without failing the trip — exercises spec 007 §2.6.
     """
 
     model_config = ConfigDict(extra="forbid")
@@ -211,6 +229,12 @@ class _NeverRaised(Exception):
 # --------------------------------------------------------------------------- #
 
 
+# Subdirectories that sit alongside trip dirs under ``corpus/integration/``
+# but are NOT themselves trips (e.g. the Slice-8 trip-bundle generator). The
+# integration runner skips them silently.
+_NON_TRIP_DIRECTORIES: frozenset[str] = frozenset({"generator"})
+
+
 @dataclass(slots=True)
 class _DiscoveryError:
     """A trip directory that couldn't be turned into a :class:`Trip`."""
@@ -237,6 +261,10 @@ def discover(
     errors: list[_DiscoveryError] = []
     for entry in sorted(p for p in integration_root.iterdir() if p.is_dir()):
         slug = entry.name
+        # Skip non-trip subdirectories that ship alongside trip dirs (e.g.
+        # the generator package at ``corpus/integration/generator/``).
+        if slug in _NON_TRIP_DIRECTORIES:
+            continue
         manifest_path = entry / "manifest.json"
         expected_route_path = entry / "expected-route.json"
         if not manifest_path.is_file():
@@ -288,7 +316,7 @@ def run_trip(
     trip: Trip,
     *,
     extractor: Extractor,
-    layer1_root: Path,
+    pdf_root: Path,
     route_check: bool = True,
     extraction_failed_error: type[BaseException] | None = None,
 ) -> TripResult:
@@ -318,7 +346,7 @@ def run_trip(
     for doc in trip.manifest.documents:
         outcome = DocumentOutcome(pdf=doc.pdf)
         result.documents.append(outcome)
-        pdf_path = layer1_root / doc.pdf
+        pdf_path = pdf_root / doc.pdf
 
         # --- 1. Extract -------------------------------------------------- #
         extract_started = time.perf_counter()
@@ -400,7 +428,7 @@ def run_trips(
     trips: list[Trip],
     *,
     extractor: Extractor,
-    layer1_root: Path,
+    pdf_root: Path,
     route_check: bool = True,
     extraction_failed_error: type[BaseException] | None = None,
 ) -> list[TripResult]:
@@ -409,7 +437,7 @@ def run_trips(
         run_trip(
             trip,
             extractor=extractor,
-            layer1_root=layer1_root,
+            pdf_root=pdf_root,
             route_check=route_check,
             extraction_failed_error=extraction_failed_error,
         )
@@ -471,11 +499,23 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
+        "--pdf-root",
+        default=None,
+        help=(
+            "Override the PDF root used to resolve manifest "
+            "documents (default: <repo>/corpus/pdf). Manifest entries are "
+            "RELATIVE to this root, so a generated trip references "
+            "'layer2/<slug>/<NN>-<docname>.pdf' and a hand-rolled trip "
+            "references 'layer1/scenarios/<slug>/document.pdf'."
+        ),
+    )
+    parser.add_argument(
         "--layer1-root",
         default=None,
         help=(
-            "Override the layer-1 PDF root used to resolve manifest "
-            "documents (default: <repo>/corpus/pdf/layer1/scenarios)."
+            "DEPRECATED — superseded by --pdf-root. When set, takes "
+            "precedence over --pdf-root and is used verbatim for "
+            "compatibility with tests that pre-date the rename."
         ),
     )
     return parser
@@ -503,11 +543,16 @@ def main(argv: list[str] | None = None) -> int:
             if args.integration_root is not None
             else _default_integration_root()
         )
-        layer1_root = (
-            Path(args.layer1_root).resolve()
-            if args.layer1_root is not None
-            else _default_layer1_root()
-        )
+        # ``--layer1-root`` (legacy) wins over ``--pdf-root`` only when set.
+        # Tests that predate Slice 8 pass ``--layer1-root`` and dispatch
+        # their stub extractor by basename, so the resolution root doesn't
+        # actually matter for them; new callers should pass ``--pdf-root``.
+        if args.layer1_root is not None:
+            pdf_root = Path(args.layer1_root).resolve()
+        elif args.pdf_root is not None:
+            pdf_root = Path(args.pdf_root).resolve()
+        else:
+            pdf_root = _default_pdf_root()
 
         trips, discovery_errors = discover(integration_root)
         if discovery_errors:
@@ -530,7 +575,7 @@ def main(argv: list[str] | None = None) -> int:
         results = run_trips(
             trips,
             extractor=extractor,
-            layer1_root=layer1_root,
+            pdf_root=pdf_root,
             route_check=not args.no_route_check,
         )
 

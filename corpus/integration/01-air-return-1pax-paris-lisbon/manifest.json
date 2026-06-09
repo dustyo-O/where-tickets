@@ -1,7 +1,0 @@
-{
-  "travelers": ["Ines Marques"],
-  "documents": [
-    {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}
-  ],
-  "notes": "Single-PDF first trip: return Paris-Lisbon-Paris via air. Exercises adapter + _LegView compact-form pairing + scoring round-trip."
-}

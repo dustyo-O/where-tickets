@@ -78,6 +78,14 @@ integration *args:
 regen-pdf-corpus:
     cd backend && PYTHONPATH=.. uv run --group corpus python -m corpus.pdf.generator --output-dir ../corpus/pdf/layer1/scenarios
 
+# Regenerate the integration trip catalogue (DUS-31 Slice 8): layer-2 PDFs
+# under corpus/pdf/layer2/<slug>/, with sibling expected-fields.json per PDF,
+# and the trip's manifest.json + expected-route.json under
+# corpus/integration/<slug>/. Mirrors `regen-pdf-corpus`'s isolated-venv
+# pattern. Use `--trip <slug>` to regenerate a single trip during iteration.
+regen-integration-corpus *args:
+    cd backend && PYTHONPATH=.. uv run --group corpus python -m corpus.integration.generator {{args}}
+
 # Regenerate the committed corpus from the deterministic generator.
 regen-corpus:
     uv run --python 3.12 python -m corpus.generator

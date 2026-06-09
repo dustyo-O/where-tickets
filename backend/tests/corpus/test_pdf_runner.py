@@ -477,8 +477,16 @@ def test_layer_2_trip_is_discovered_and_reported(corpus_tree: Path) -> None:
     assert "FAILED:" not in proc.stdout
 
 
-def test_layer_2_leak_guard_catches_tracked_pdf(tmp_path: Path) -> None:
-    """Stage a fake PDF under ``corpus/pdf/layer2/`` → validator exits non-zero."""
+def test_layer_2_leak_guard_catches_top_level_tracked_pdf(tmp_path: Path) -> None:
+    """Stage a fake PDF directly at ``corpus/pdf/layer2/`` → validator exits non-zero.
+
+    DUS-31 Slice 8: the leak guard now distinguishes between TOP-LEVEL files
+    (still forbidden — only ``.gitkeep`` is allowed) and files inside a
+    generator-emitted TRIP DIRECTORY (allowed; layer-2 trips are intentionally
+    committed). This test stages a top-level leaker and asserts the guard
+    fires; the trip-dir allowance is covered in
+    :func:`test_layer_2_leak_guard_allows_trip_directory_files`.
+    """
     # Build the minimum tree the validator needs: schema + layer1 + layer2.
     pdf_root = tmp_path / "corpus" / "pdf"
     (pdf_root / "schema").mkdir(parents=True)
@@ -490,11 +498,9 @@ def test_layer_2_leak_guard_catches_tracked_pdf(tmp_path: Path) -> None:
     # Init a fresh repo so `git ls-files` has an index to read.
     subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
 
-    # Track the .gitkeep placeholder + a fake leaked PDF (no commit needed —
-    # `git ls-files` reads the index, which is populated by `git add`).
+    # Track the .gitkeep placeholder + a fake leaked top-level PDF.
     (pdf_root / "layer2" / ".gitkeep").touch()
-    leaked_pdf = pdf_root / "layer2" / "porto-trip" / "01-hotel-booking.pdf"
-    leaked_pdf.parent.mkdir(parents=True)
+    leaked_pdf = pdf_root / "layer2" / "rogue-top-level.pdf"
     leaked_pdf.write_bytes(b"%PDF-1.4 fake bytes")
     subprocess.run(
         [
@@ -508,12 +514,6 @@ def test_layer_2_leak_guard_catches_tracked_pdf(tmp_path: Path) -> None:
         check=True,
     )
 
-    # The leak guard runs `git -C $WT_REPO_ROOT ls-files corpus/pdf/layer2/`.
-    # Schema / drift / sanity stay anchored at the real repo, which is fine —
-    # this test only cares that the leak guard fires. We shell out via
-    # ``uv run --with jsonschema`` so the validator gets the same dependency
-    # bundle ``just test-corpus`` uses (the backend's own venv lacks
-    # jsonschema by design).
     env = {**os.environ, "WT_REPO_ROOT": str(tmp_path)}
     proc = subprocess.run(
         [
@@ -536,13 +536,83 @@ def test_layer_2_leak_guard_catches_tracked_pdf(tmp_path: Path) -> None:
     assert proc.returncode == 1, f"stderr:\n{proc.stderr}\nstdout:\n{proc.stdout}"
     assert "Layer 2 leak guard failed" in proc.stdout, proc.stdout
     assert (
-        "layer2-leak: corpus/pdf/layer2/porto-trip/01-hotel-booking.pdf "
-        "is tracked under corpus/pdf/layer2/"
+        "layer2-leak: corpus/pdf/layer2/rogue-top-level.pdf "
+        "is tracked at the top of corpus/pdf/layer2/"
     ) in proc.stdout, proc.stdout
     # Remediation hint points at `git rm --cached` with the offending path.
     assert (
-        "git rm --cached corpus/pdf/layer2/porto-trip/01-hotel-booking.pdf"
+        "git rm --cached corpus/pdf/layer2/rogue-top-level.pdf"
         in proc.stdout
     ), proc.stdout
     # The allowed .gitkeep entry is NOT flagged.
     assert ".gitkeep is tracked" not in proc.stdout
+
+
+def test_layer_2_leak_guard_allows_trip_directory_files(tmp_path: Path) -> None:
+    """Files inside a generator-emitted trip directory don't trip the guard.
+
+    DUS-31 Slice 8 acceptance: integration trips ship PDFs + sibling
+    expected-fields.json files under
+    ``corpus/pdf/layer2/<trip-slug>/<NN>-<docname>.{pdf,expected-fields.json}``.
+    The leak guard recognises trip subdirectories and lets their contents
+    through; only top-level files trip the guard.
+    """
+    pdf_root = tmp_path / "corpus" / "pdf"
+    (pdf_root / "schema").mkdir(parents=True)
+    (pdf_root / "layer1" / "scenarios").mkdir(parents=True)
+    (pdf_root / "layer2").mkdir(parents=True)
+
+    shutil.copy(REAL_SCHEMA, pdf_root / "schema" / "expected-fields.schema.json")
+
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+
+    (pdf_root / "layer2" / ".gitkeep").touch()
+    trip_pdf = pdf_root / "layer2" / "demo-trip" / "01-air-leg-1.pdf"
+    trip_pdf.parent.mkdir(parents=True)
+    # Use a real (tiny) PDF byte sequence so the validator's PyMuPDF sanity
+    # check doesn't blow up — but the file's sibling expected-fields.json
+    # references the file's stem so the discovery walks it.
+    import pymupdf  # noqa: PLC0415
+
+    blank = pymupdf.open()
+    blank.new_page(width=595, height=842)
+    blank.save(str(trip_pdf))
+    blank.close()
+    subprocess.run(
+        [
+            "git",
+            "-C",
+            str(tmp_path),
+            "add",
+            "corpus/pdf/layer2/.gitkeep",
+            str(trip_pdf),
+        ],
+        check=True,
+    )
+
+    env = {**os.environ, "WT_REPO_ROOT": str(tmp_path)}
+    proc = subprocess.run(
+        [
+            "uv",
+            "run",
+            "--python",
+            "3.12",
+            "--with",
+            "jsonschema",
+            "--with",
+            "pymupdf",
+            "python",
+            str(VALIDATE_PATH),
+        ],
+        capture_output=True,
+        text=True,
+        env=env,
+        cwd=tmp_path,
+        check=False,
+    )
+
+    # The leak guard must NOT fire. The validator may still fail on the
+    # coverage band (the layer-1 tree is empty in this fixture), but the
+    # layer-2 leak block specifically must be absent.
+    assert "Layer 2 leak guard failed" not in proc.stdout, proc.stdout
+    assert "layer2-leak:" not in proc.stdout, proc.stdout

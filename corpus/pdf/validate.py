@@ -364,15 +364,26 @@ def _drift_check() -> tuple[list[str], list[str]]:
 
 _LAYER2_LEAK_ALLOWLIST = frozenset({"corpus/pdf/layer2/.gitkeep"})
 
+# DUS-31 Slice 8: tracked files inside a generator-emitted trip directory are
+# legitimate — the integration-trip generator owns the layer-2 tree from this
+# slice on. The leak guard accepts any file whose first path component under
+# ``corpus/pdf/layer2/`` matches the generator's slug pattern
+# (``NN-<descriptor>``). Anything else (a real PDF dropped at the layer-2 root,
+# a typoed slug, ...) still trips the guard.
+_LAYER2_TRIP_SLUG_PATTERN = (
+    "corpus/pdf/layer2/"  # prefix; the next path component is the trip slug
+)
+
 
 def _leak_guard_check() -> tuple[list[str], list[str]]:
     """Layer-2 leak guard. Returns ``(failures, warnings)``.
 
     Runs ``git -C <repo-root> ls-files corpus/pdf/layer2/``. Anything other
-    than the ``.gitkeep`` placeholder counts as a leaked real PDF / JSON and
-    fails the validator with actionable guidance. If ``git`` is unavailable
-    (script run outside a repo, no git binary, etc.) emit a single warning
-    and return no failures — mirrors the drift check's skip pattern.
+    than the ``.gitkeep`` placeholder or a generator-emitted trip-directory
+    file counts as a leaked real PDF / JSON and fails the validator with
+    actionable guidance. If ``git`` is unavailable (script run outside a repo,
+    no git binary, etc.) emit a single warning and return no failures —
+    mirrors the drift check's skip pattern.
     """
     failures: list[str] = []
     warnings: list[str] = []
@@ -400,10 +411,18 @@ def _leak_guard_check() -> tuple[list[str], list[str]]:
     for entry in tracked:
         if entry in _LAYER2_LEAK_ALLOWLIST:
             continue
+        # DUS-31 Slice 8: anything under a generator-emitted trip directory
+        # (``corpus/pdf/layer2/<trip-slug>/...``) is tracked deliberately.
+        remainder = entry.removeprefix(_LAYER2_TRIP_SLUG_PATTERN)
+        if "/" in remainder:
+            # First component is the trip slug; second component (and beyond)
+            # is the PDF / expected-fields JSON file. Allow it through.
+            continue
         failures.append(
-            f"layer2-leak: {entry} is tracked under corpus/pdf/layer2/ — "
-            "real PDFs and their JSON must never be committed.\n"
-            f"              Drop them from git index with: git rm --cached {entry}"
+            f"layer2-leak: {entry} is tracked at the top of "
+            "corpus/pdf/layer2/ — only generator-emitted trip directories "
+            "and the .gitkeep placeholder are allowed there.\n"
+            f"              Drop it from git index with: git rm --cached {entry}"
         )
     return failures, warnings
 

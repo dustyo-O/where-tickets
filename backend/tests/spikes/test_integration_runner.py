@@ -374,7 +374,7 @@ def test_run_trip_happy_path_paris_lisbon_return_pass(
     result = run_trip(
         trips[0],
         extractor=extractor,
-        layer1_root=layer1_root,
+        pdf_root=layer1_root,
         extraction_failed_error=_StubExtractionFailed,
     )
 
@@ -436,7 +436,7 @@ def test_run_trip_adapter_error_marks_trip_failed(
     result = run_trip(
         trips[0],
         extractor=extractor,
-        layer1_root=layer1_root,
+        pdf_root=layer1_root,
         extraction_failed_error=_StubExtractionFailed,
     )
 
@@ -473,7 +473,7 @@ def test_run_trip_extraction_failure_without_expect_unreadable_fails(
     result = run_trip(
         trips[0],
         extractor=extractor,
-        layer1_root=layer1_root,
+        pdf_root=layer1_root,
         extraction_failed_error=_StubExtractionFailed,
     )
 
@@ -518,7 +518,7 @@ def test_run_trip_extraction_failure_with_expect_unreadable_continues(
     result = run_trip(
         trips[0],
         extractor=extractor,
-        layer1_root=layer1_root,
+        pdf_root=layer1_root,
         extraction_failed_error=_StubExtractionFailed,
     )
 
@@ -743,7 +743,7 @@ def test_run_trips_returns_one_result_per_trip(
     results = run_trips(
         trips,
         extractor=extractor,
-        layer1_root=layer1_root,
+        pdf_root=layer1_root,
         extraction_failed_error=_StubExtractionFailed,
     )
 
