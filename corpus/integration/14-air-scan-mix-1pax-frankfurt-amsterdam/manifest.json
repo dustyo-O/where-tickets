@@ -1,0 +1,17 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/14-air-scan-mix-1pax-frankfurt-amsterdam/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/14-air-scan-mix-1pax-frankfurt-amsterdam/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/14-air-scan-mix-1pax-frankfurt-amsterdam/03-air-leg-2.pdf"
+    }
+  ],
+  "notes": "Air out (rasterized scan) + Amsterdam hotel + air back (text) \u2014 covers the scan-PDF mix dimension.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

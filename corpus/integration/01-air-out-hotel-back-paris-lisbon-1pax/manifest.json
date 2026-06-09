@@ -10,7 +10,7 @@
       "pdf": "layer2/01-air-out-hotel-back-paris-lisbon-1pax/03-air-leg-2.pdf"
     }
   ],
-  "notes": "Air out (Paris CDG -> Lisbon LIS), hotel in Lisbon, air back (Lisbon LIS -> Paris CDG). One traveler. Tests the integration runner against a 3-PDF chained trip.",
+  "notes": "Air out + Lisbon hotel + air back, 1 traveler.",
   "travelers": [
     "Ines Marques"
   ]

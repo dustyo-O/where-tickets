@@ -1,0 +1,53 @@
+{
+  "stops": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-04-01T09:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-04-01T10:30:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-04-05T17:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-04-05T18:30:00Z",
+      "city": "Frankfurt",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-04-01T10:30:00Z",
+      "departureAt": "2027-04-01T09:00:00Z",
+      "from": "Frankfurt",
+      "mode": "air",
+      "sourceFragmentId": "layer2/02-air-return-1pax-frankfurt-amsterdam/01-air-return-1.pdf",
+      "to": "Amsterdam",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-04-05T18:30:00Z",
+      "departureAt": "2027-04-05T17:00:00Z",
+      "from": "Amsterdam",
+      "mode": "air",
+      "sourceFragmentId": "layer2/02-air-return-1pax-frankfurt-amsterdam/01-air-return-1.pdf",
+      "to": "Frankfurt",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

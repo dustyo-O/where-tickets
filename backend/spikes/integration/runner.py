@@ -376,6 +376,15 @@ def run_trip(
                 fields, source_document_id=doc.pdf
             )
         except AdapterError as exc:
+            # When ``expect_unreadable: true``, an adapter rejection is the
+            # extractor's "I read the page but found nothing routable" signal
+            # (the production extractor sometimes returns a document_type
+            # without enough structure to build a fragment, e.g. on a blank
+            # or malformed PDF). Treat it the same way as an extraction
+            # failure: skip the document without failing the trip.
+            if doc.expect_unreadable:
+                outcome.error = f"adapter error (expected, no routable content): {exc}"
+                continue
             outcome.error = f"adapter error: {exc}"
             result.failures.append(outcome.error)
             continue

@@ -1,0 +1,39 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 298.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-06-air-straight-2pax-madrid-rome/01-air-leg-1-01",
+    "AIRTKT-06-air-straight-2pax-madrid-rome/01-air-leg-1-02"
+  ],
+  "scenario_id": "06-air-straight-2pax-madrid-rome/01-air-leg-1",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-08-01T10:00:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-08-01T12:30:00",
+      "city": "Rome",
+      "identifier": "FCO",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

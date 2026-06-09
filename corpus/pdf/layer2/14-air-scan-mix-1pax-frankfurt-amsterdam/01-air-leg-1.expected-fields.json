@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "rasterized",
+  "prices": [
+    {
+      "amount": 145.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-14-air-scan-mix-1pax-frankfurt-amsterdam/01-air-leg-1-01"
+  ],
+  "scenario_id": "14-air-scan-mix-1pax-frankfurt-amsterdam/01-air-leg-1",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2028-04-01T09:00:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-04-01T10:30:00",
+      "city": "Amsterdam",
+      "identifier": "AMS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

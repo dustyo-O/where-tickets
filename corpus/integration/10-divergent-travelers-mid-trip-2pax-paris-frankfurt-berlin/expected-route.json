@@ -1,0 +1,57 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-12-01T07:00:00Z",
+      "travelers": [
+        "Ines Marques",
+        "Marta Kowalski"
+      ]
+    },
+    {
+      "arrivalAt": "2027-12-01T08:30:00Z",
+      "city": "Frankfurt",
+      "departureAt": "2027-12-02T09:00:00Z",
+      "travelers": [
+        "Ines Marques",
+        "Marta Kowalski"
+      ]
+    },
+    {
+      "arrivalAt": "2027-12-02T10:00:00Z",
+      "city": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-12-01T08:30:00Z",
+      "departureAt": "2027-12-01T07:00:00Z",
+      "from": "Paris",
+      "mode": "air",
+      "sourceFragmentId": "layer2/10-divergent-travelers-mid-trip-2pax-paris-frankfurt-berlin/01-air-leg-1.pdf",
+      "to": "Frankfurt",
+      "travelers": [
+        "Ines Marques",
+        "Marta Kowalski"
+      ]
+    },
+    {
+      "arrivalAt": "2027-12-02T10:00:00Z",
+      "departureAt": "2027-12-02T09:00:00Z",
+      "from": "Frankfurt",
+      "mode": "air",
+      "sourceFragmentId": "layer2/10-divergent-travelers-mid-trip-2pax-paris-frankfurt-berlin/02-air-leg-2.pdf",
+      "to": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Marta Kowalski"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 315.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-15-air-with-unreadable-pdf-1pax-madrid-rome/02-air-return-1-01"
+  ],
+  "scenario_id": "15-air-with-unreadable-pdf-1pax-madrid-rome/02-air-return-1",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2028-05-01T08:30:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-05-01T11:00:00",
+      "city": "Rome",
+      "departure_datetime": "2028-05-05T17:30:00",
+      "identifier": "FCO",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-05-05T20:00:00",
+      "city": "Madrid",
+      "identifier": "MAD",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

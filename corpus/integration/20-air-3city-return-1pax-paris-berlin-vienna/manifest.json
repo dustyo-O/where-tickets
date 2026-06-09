@@ -1,0 +1,23 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/03-air-leg-2.pdf"
+    },
+    {
+      "pdf": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/04-hotel-2.pdf"
+    },
+    {
+      "pdf": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/05-air-leg-3.pdf"
+    }
+  ],
+  "notes": "Air Paris\u2192Berlin, Berlin hotel, air Berlin\u2192Vienna, Vienna hotel, air Vienna\u2192Paris.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

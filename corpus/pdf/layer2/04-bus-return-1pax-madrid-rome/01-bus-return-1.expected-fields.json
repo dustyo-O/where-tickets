@@ -1,0 +1,44 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "bus_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 78.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "BUSTKT-04-bus-return-1pax-madrid-rome/01-bus-return-1-01"
+  ],
+  "scenario_id": "04-bus-return-1pax-madrid-rome/01-bus-return-1",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2027-06-02T06:15:00",
+      "identifier": "Madrid Mendez Alvaro",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-06-02T12:45:00",
+      "city": "Rome",
+      "departure_datetime": "2027-06-06T15:45:00",
+      "identifier": "Roma Tiburtina Bus",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrival_datetime": "2027-06-06T22:15:00",
+      "city": "Madrid",
+      "identifier": "Madrid Mendez Alvaro",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

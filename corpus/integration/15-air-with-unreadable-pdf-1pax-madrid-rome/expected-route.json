@@ -1,0 +1,53 @@
+{
+  "stops": [
+    {
+      "city": "Madrid",
+      "departureAt": "2028-05-01T08:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-05-01T11:00:00Z",
+      "city": "Rome",
+      "departureAt": "2028-05-05T17:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-05-05T20:00:00Z",
+      "city": "Madrid",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-05-01T11:00:00Z",
+      "departureAt": "2028-05-01T08:30:00Z",
+      "from": "Madrid",
+      "mode": "air",
+      "sourceFragmentId": "layer2/15-air-with-unreadable-pdf-1pax-madrid-rome/02-air-return-1.pdf",
+      "to": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-05-05T20:00:00Z",
+      "departureAt": "2028-05-05T17:30:00Z",
+      "from": "Rome",
+      "mode": "air",
+      "sourceFragmentId": "layer2/15-air-with-unreadable-pdf-1pax-madrid-rome/02-air-return-1.pdf",
+      "to": "Madrid",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

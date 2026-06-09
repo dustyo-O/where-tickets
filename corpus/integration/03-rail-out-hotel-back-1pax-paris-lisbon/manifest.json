@@ -1,0 +1,17 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/03-rail-out-hotel-back-1pax-paris-lisbon/01-rail-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/03-rail-out-hotel-back-1pax-paris-lisbon/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/03-rail-out-hotel-back-1pax-paris-lisbon/03-rail-leg-2.pdf"
+    }
+  ],
+  "notes": "Rail out + Lisbon hotel + rail back, 1 traveler.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/06-air-straight-2pax-madrid-rome/01-air-leg-1.pdf"
+    }
+  ],
+  "notes": "Single air leg, 2 travelers.",
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ]
+}

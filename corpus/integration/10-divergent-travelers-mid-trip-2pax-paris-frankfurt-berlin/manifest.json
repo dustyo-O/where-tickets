@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/10-divergent-travelers-mid-trip-2pax-paris-frankfurt-berlin/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/10-divergent-travelers-mid-trip-2pax-paris-frankfurt-berlin/02-air-leg-2.pdf"
+    }
+  ],
+  "notes": "Both travelers fly Paris\u2192Frankfurt together. Marta stays; Ines continues Frankfurt\u2192Berlin alone.",
+  "travelers": [
+    "Ines Marques",
+    "Marta Kowalski"
+  ]
+}

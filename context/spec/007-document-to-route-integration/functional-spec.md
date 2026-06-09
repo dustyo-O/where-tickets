@@ -129,5 +129,5 @@ The problem is that **the engine speaks an older, narrower language than the ext
   - Routing on facts the extractor does not produce reliably today (e.g. the QR-decoded payload), since that work is tracked separately under DUS-33.
   - Automated / scheduled runs of the end-to-end set (CI gates, nightly runs) — the engineer runs the set on demand for now.
   - Performance, latency, or cost targets for the end-to-end run — measured implicitly via the existing extractor and engine spike numbers; no specific number is set for v1.
-  - Layer 2 (real, locally-collected PDFs from the team's own trips) — the end-to-end set is drawn from the existing Layer 1 corpus only, matching the extractor's grading scope.
+  - Layer 2 now holds generator-emitted multi-PDF trip bundles (`corpus/pdf/layer2/<trip-slug>/`) consumed by the integration runner. Real, locally-collected PDFs remain out of scope for v1; if added later they fit into the same Layer-2 tree.
   - Non-English PDFs and loop topologies — same scope boundary as the upstream extractor corpus.

@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-09-05T15:00:00",
+      "check_out_datetime": "2027-09-08T11:00:00",
+      "city": "Vienna",
+      "identifier": "Hotel Kensington Garden Court",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Vienna"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 510.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-07-air-out-hotel-back-2pax-london-vienna/02-hotel-1"
+  ],
+  "scenario_id": "07-air-out-hotel-back-2pax-london-vienna/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

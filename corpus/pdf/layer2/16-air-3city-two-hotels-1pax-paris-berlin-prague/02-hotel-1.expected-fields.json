@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-06-01T15:00:00",
+      "check_out_datetime": "2028-06-03T11:00:00",
+      "city": "Berlin",
+      "identifier": "Hotel Spreebogen Mitte",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 280.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-16-air-3city-two-hotels-1pax-paris-berlin-prague/02-hotel-1"
+  ],
+  "scenario_id": "16-air-3city-two-hotels-1pax-paris-berlin-prague/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

@@ -1,0 +1,49 @@
+{
+  "stops": [
+    {
+      "city": "Madrid",
+      "departureAt": "2028-02-01T08:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-02-01T11:00:00Z",
+      "city": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-02-01T11:00:00Z",
+      "departureAt": "2028-02-01T08:30:00Z",
+      "from": "Madrid",
+      "mode": "air",
+      "sourceFragmentId": "layer2/12-air-supplementary-no-location-1pax-madrid-rome/01-air-leg-1.pdf",
+      "to": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "unattachedDocuments": [
+    {
+      "documentType": "supplementary",
+      "prices": [
+        {
+          "amount": 15.0,
+          "currency": "EUR"
+        }
+      ],
+      "qrCodes": [
+        "SUPP-OTHER-layer2/12-air-supplementary-no-location-1pax-madrid-rome/02-supp-nolocation-1.pdf"
+      ],
+      "sourceDocumentId": "layer2/12-air-supplementary-no-location-1pax-madrid-rome/02-supp-nolocation-1.pdf"
+    }
+  ]
+}

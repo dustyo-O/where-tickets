@@ -1,0 +1,31 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "supplementary",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 32.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-SIGHT-13-air-hotel-venue-1pax-london-paris/03-supp-sightseeing-1"
+  ],
+  "scenario_id": "13-air-hotel-venue-1pax-london-paris/03-supp-sightseeing-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": [
+    {
+      "city": "Paris",
+      "identifier": "Atelier Lumiere Museum",
+      "kind": "sightseeing",
+      "valid_from_datetime": "2028-03-02T10:00:00",
+      "valid_to_datetime": "2028-03-02T18:00:00"
+    }
+  ]
+}

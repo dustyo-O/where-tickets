@@ -1,0 +1,67 @@
+{
+  "stops": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-10-01T09:15:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-10-01T10:30:00Z",
+      "city": "Prague",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-10-01T15:00:00Z",
+          "checkOutAt": "2027-10-04T11:00:00Z",
+          "identifier": "Charming Flat in Zizkov",
+          "kind": "airbnb"
+        }
+      ],
+      "city": "Prague",
+      "departureAt": "2027-10-04T17:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-10-04T18:15:00Z",
+      "city": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-10-01T10:30:00Z",
+      "departureAt": "2027-10-01T09:15:00Z",
+      "from": "Berlin",
+      "mode": "air",
+      "sourceFragmentId": "layer2/08-air-out-airbnb-back-1pax-berlin-prague/01-air-leg-1.pdf",
+      "to": "Prague",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-10-04T18:15:00Z",
+      "departureAt": "2027-10-04T17:00:00Z",
+      "from": "Prague",
+      "mode": "air",
+      "sourceFragmentId": "layer2/08-air-out-airbnb-back-1pax-berlin-prague/03-air-leg-2.pdf",
+      "to": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

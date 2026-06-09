@@ -1,0 +1,53 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-11-01T08:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-11-01T10:15:00Z",
+      "city": "Lisbon",
+      "departureAt": "2027-11-04T18:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-11-04T20:30:00Z",
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-11-01T10:15:00Z",
+      "departureAt": "2027-11-01T08:00:00Z",
+      "from": "Paris",
+      "mode": "air",
+      "sourceFragmentId": "layer2/09-same-city-two-airports-1pax-paris-lisbon/01-air-leg-1.pdf",
+      "to": "Lisbon",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-11-04T20:30:00Z",
+      "departureAt": "2027-11-04T18:00:00Z",
+      "from": "Lisbon",
+      "mode": "air",
+      "sourceFragmentId": "layer2/09-same-city-two-airports-1pax-paris-lisbon/02-air-leg-2.pdf",
+      "to": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

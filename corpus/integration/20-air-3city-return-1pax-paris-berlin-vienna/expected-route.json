@@ -1,0 +1,100 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2028-10-01T08:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-10-01T09:45:00Z",
+      "city": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-10-01T15:00:00Z",
+          "checkOutAt": "2028-10-03T11:00:00Z",
+          "identifier": "Hotel Kreuzberg Park",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Berlin",
+      "departureAt": "2028-10-03T13:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-10-03T14:30:00Z",
+      "city": "Vienna",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-10-03T16:00:00Z",
+          "checkOutAt": "2028-10-05T11:00:00Z",
+          "identifier": "Hotel Westend Residenz",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Vienna",
+      "departureAt": "2028-10-05T13:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-10-05T15:30:00Z",
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-10-01T09:45:00Z",
+      "departureAt": "2028-10-01T08:00:00Z",
+      "from": "Paris",
+      "mode": "air",
+      "sourceFragmentId": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/01-air-leg-1.pdf",
+      "to": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-10-03T14:30:00Z",
+      "departureAt": "2028-10-03T13:00:00Z",
+      "from": "Berlin",
+      "mode": "air",
+      "sourceFragmentId": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/03-air-leg-2.pdf",
+      "to": "Vienna",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-10-05T15:30:00Z",
+      "departureAt": "2028-10-05T13:00:00Z",
+      "from": "Vienna",
+      "mode": "air",
+      "sourceFragmentId": "layer2/20-air-3city-return-1pax-paris-berlin-vienna/05-air-leg-3.pdf",
+      "to": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

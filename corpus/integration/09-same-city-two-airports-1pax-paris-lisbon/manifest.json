@@ -1,0 +1,14 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/09-same-city-two-airports-1pax-paris-lisbon/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/09-same-city-two-airports-1pax-paris-lisbon/02-air-leg-2.pdf"
+    }
+  ],
+  "notes": "Two one-way air tickets between Paris and Lisbon, using DIFFERENT Paris airports (CDG outbound, ORY inbound). Tests the engine's same-city-different-station collapse.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

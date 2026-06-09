@@ -485,6 +485,68 @@ def test_run_trip_extraction_failure_without_expect_unreadable_fails(
     assert result.documents[0].extracted is False
 
 
+def test_run_trip_adapter_failure_with_expect_unreadable_continues(
+    integration_root: Path,
+    layer1_root: Path,
+) -> None:
+    """DUS-31 Slice 8: adapter errors on ``expect_unreadable`` docs don't fail the trip.
+
+    Some PDFs (blank, malformed, very low text density) make it through the
+    extractor without raising :class:`ExtractionFailedError` — the extractor
+    returns a payload that the adapter then rejects because the structured
+    place arrays don't meet the per-document-type minimum arity. When the
+    manifest entry flags ``expect_unreadable: true``, the runner treats this
+    case the same as an extraction failure: the document is skipped, the
+    trip is built from the rest.
+    """
+    _write_trip(
+        integration_root,
+        "01-unreadable-by-adapter",
+        manifest={
+            "travelers": ["Ines Marques"],
+            "documents": [
+                {"pdf": "blank/document.pdf", "expect_unreadable": True},
+                {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"},
+            ],
+        },
+        expected_route=_return_paris_lisbon_expected_route(),
+    )
+    trips, _ = discover(integration_root)
+    # Air ticket payload with NO stations — adapter rejects.
+    empty_payload: ExtractedFields = {
+        "document_type": "air_ticket",
+        "cities": [],
+        "stations": [],
+        "accommodations": [],
+        "venues": [],
+        "travelers": ["Ines Marques"],
+        "prices": [],
+        "qr_codes": [],
+        "pdf_kind": "text",
+    }
+    extractor = _build_extractor_stub(
+        {
+            "blank/document.pdf": empty_payload,
+            "003-air-return-1pax-paris-lisbon/document.pdf": (
+                _air_return_paris_lisbon_payload()
+            ),
+        }
+    )
+
+    result = run_trip(
+        trips[0],
+        extractor=extractor,
+        pdf_root=layer1_root,
+        extraction_failed_error=_StubExtractionFailed,
+    )
+
+    assert result.passed is True
+    assert result.failures == []
+    assert result.documents[0].error is not None
+    assert "expected" in result.documents[0].error
+    assert result.documents[1].folded is True
+
+
 def test_run_trip_extraction_failure_with_expect_unreadable_continues(
     integration_root: Path,
     layer1_root: Path,

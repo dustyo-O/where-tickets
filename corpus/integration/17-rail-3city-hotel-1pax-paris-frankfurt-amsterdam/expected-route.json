@@ -1,0 +1,67 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2028-07-01T08:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-07-01T11:30:00Z",
+      "city": "Frankfurt",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-07-01T15:00:00Z",
+          "checkOutAt": "2028-07-03T11:00:00Z",
+          "identifier": "Hotel Bockenheim Court",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Frankfurt",
+      "departureAt": "2028-07-03T13:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-07-03T17:00:00Z",
+      "city": "Amsterdam",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-07-01T11:30:00Z",
+      "departureAt": "2028-07-01T08:00:00Z",
+      "from": "Paris",
+      "mode": "rail",
+      "sourceFragmentId": "layer2/17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/01-rail-leg-1.pdf",
+      "to": "Frankfurt",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-07-03T17:00:00Z",
+      "departureAt": "2028-07-03T13:00:00Z",
+      "from": "Frankfurt",
+      "mode": "rail",
+      "sourceFragmentId": "layer2/17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/03-rail-leg-2.pdf",
+      "to": "Amsterdam",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}
