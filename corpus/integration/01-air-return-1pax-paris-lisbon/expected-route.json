@@ -1,0 +1,41 @@
+{
+  "travelers": ["Ines Marques"],
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-11T08:30:00Z",
+      "travelers": ["Ines Marques"]
+    },
+    {
+      "city": "Lisbon",
+      "arrivalAt": "2027-03-11T10:45:00Z",
+      "departureAt": "2027-03-15T18:15:00Z",
+      "travelers": ["Ines Marques"]
+    },
+    {
+      "city": "Paris",
+      "arrivalAt": "2027-03-15T20:30:00Z",
+      "travelers": ["Ines Marques"]
+    }
+  ],
+  "transits": [
+    {
+      "from": "Paris",
+      "to": "Lisbon",
+      "mode": "air",
+      "departureAt": "2027-03-11T08:30:00Z",
+      "arrivalAt": "2027-03-11T10:45:00Z",
+      "travelers": ["Ines Marques"],
+      "sourceFragmentId": "003-air-return-1pax-paris-lisbon/document.pdf"
+    },
+    {
+      "from": "Lisbon",
+      "to": "Paris",
+      "mode": "air",
+      "departureAt": "2027-03-15T18:15:00Z",
+      "arrivalAt": "2027-03-15T20:30:00Z",
+      "travelers": ["Ines Marques"],
+      "sourceFragmentId": "003-air-return-1pax-paris-lisbon/document.pdf"
+    }
+  ]
+}

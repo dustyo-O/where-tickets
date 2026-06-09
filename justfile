@@ -59,6 +59,18 @@ test-pdf-corpus:
 extract-pdf path:
     cd backend && PYTHONPATH=. uv run --isolated --group extraction python -m where_tickets.extraction {{path}}
 
+# Run the document-to-route integration runner against trips under
+# corpus/integration/. Live Bedrock — costs a few cents per PDF. Use
+# `--trip <slug>` for single-trip debugging; `--no-route-check` for
+# adapter-only sanity; `--json-report PATH` for a machine-readable summary.
+# PYTHONPATH=. + --isolated --group extraction mirror `extract-pdf` to keep
+# `anthropic` out of the persistent backend venv (see memory
+# `project_extraction_isolated_venv`).
+# Example:
+#   just integration --trip 01-air-return-1pax-paris-lisbon --json-report /tmp/report.json
+integration *args:
+    cd backend && PYTHONPATH=. uv run --isolated --group extraction python -m spikes.integration.runner {{args}}
+
 # Regenerate Layer 1 PDF scenarios from the deterministic generator (data is
 # stable across runs; noise varies). Refreshes corpus/pdf/layer1/scenarios/.
 # Uses the backend's `corpus` dep group for WeasyPrint + Jinja2; PYTHONPATH
