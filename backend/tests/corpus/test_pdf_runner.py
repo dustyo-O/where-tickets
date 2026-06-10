@@ -570,8 +570,10 @@ def test_layer_2_leak_guard_allows_trip_directory_files(tmp_path: Path) -> None:
     trip_pdf.parent.mkdir(parents=True)
     # Use a real (tiny) PDF byte sequence so the validator's PyMuPDF sanity
     # check doesn't blow up — but the file's sibling expected-fields.json
-    # references the file's stem so the discovery walks it.
-    import pymupdf  # noqa: PLC0415  # pyright: ignore[reportMissingImports]
+    # references the file's stem so the discovery walks it. PyMuPDF only ships
+    # with the optional `corpus` dep group; skip the test cleanly if absent
+    # (CI's persistent backend venv doesn't carry the group).
+    pymupdf = pytest.importorskip("pymupdf")
 
     blank = pymupdf.open()
     blank.new_page(width=595, height=842)
