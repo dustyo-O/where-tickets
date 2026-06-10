@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Amsterdam",
+    "Madrid",
+    "Vienna"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001058",
+  "sourceDocumentId": "058-straight-4p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
-      "to": "AMS",
-      "vehicleNumber": "FL100"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "AMS",
-      "to": "HEL",
-      "vehicleNumber": "FL101"
+      "city": "Madrid",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "HEL",
-      "to": "LHR",
-      "vehicleNumber": "FL102"
+      "city": "Vienna",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001058",
-  "sourceDocumentId": "058-straight-4p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

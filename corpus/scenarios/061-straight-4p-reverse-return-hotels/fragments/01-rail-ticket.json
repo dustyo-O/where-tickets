@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Madrid",
+    "Barcelona"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002061",
+  "sourceDocumentId": "061-straight-4p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

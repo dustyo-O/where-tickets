@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "New York",
+    "Athens",
+    "Berlin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001009",
+  "sourceDocumentId": "009-straight-1p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "OSL",
-      "to": "SVO",
-      "vehicleNumber": "LO100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "SVO",
-      "to": "ROM",
-      "vehicleNumber": "LO101"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ROM",
-      "to": "OSL",
-      "vehicleNumber": "LO102"
+      "city": "New York",
+      "identifier": "JFK",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001009",
-  "sourceDocumentId": "009-straight-1p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

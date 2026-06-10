@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "ZRH",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Barcelona"
+  ],
   "confirmationCode": "HTL003182",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
   "sourceDocumentId": "182-star-4p-bisect-hotels-htl-03",
   "travelers": [
     "traveler-1",

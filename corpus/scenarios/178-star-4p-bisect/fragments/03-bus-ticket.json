@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Copenhagen",
+    "London",
+    "Moscow"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001178",
+  "sourceDocumentId": "178-star-4p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
-      "to": "AMS",
-      "vehicleNumber": "FL100"
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "AMS",
-      "to": "WAW",
-      "vehicleNumber": "FL101"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "WAW",
-      "to": "AMS",
-      "vehicleNumber": "FL102"
+      "city": "London",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001178",
-  "sourceDocumentId": "178-star-4p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

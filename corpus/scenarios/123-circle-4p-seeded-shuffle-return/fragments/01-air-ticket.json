@@ -1,0 +1,37 @@
+{
+  "cities": [
+    "Barcelona",
+    "Rome",
+    "Milan"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR003123",
+  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Rome",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Milan",
+      "identifier": "MXP",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "New York",
+    "Milan",
+    "Berlin",
+    "Warsaw"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001102",
+  "sourceDocumentId": "102-circle-3p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ATH",
-      "to": "HEL",
-      "vehicleNumber": "LO100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "HEL",
-      "to": "LIS",
-      "vehicleNumber": "LO101"
+      "city": "Berlin",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
-      "to": "BER",
-      "vehicleNumber": "LO102"
+      "city": "Warsaw",
+      "identifier": "WAW",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001102",
-  "sourceDocumentId": "102-circle-3p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

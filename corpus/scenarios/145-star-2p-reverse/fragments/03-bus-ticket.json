@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Moscow",
+    "Istanbul",
+    "Frankfurt"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001145",
+  "sourceDocumentId": "145-star-2p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MAD",
-      "to": "BCN",
-      "vehicleNumber": "FL100"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "BCN",
-      "to": "CDG",
-      "vehicleNumber": "FL101"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CDG",
-      "to": "BCN",
-      "vehicleNumber": "FL102"
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001145",
-  "sourceDocumentId": "145-star-2p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,0 +1,36 @@
+{
+  "cities": [
+    "Oslo",
+    "Vienna",
+    "Moscow"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003161",
+  "sourceDocumentId": "161-star-3p-reverse-tkt-03",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Oslo Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Vienna",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

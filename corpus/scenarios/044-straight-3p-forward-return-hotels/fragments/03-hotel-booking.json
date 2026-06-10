@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "IST",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "London",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
   "confirmationCode": "HTL002044",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
   "sourceDocumentId": "044-straight-3p-forward-return-hotels-htl-02",
   "travelers": [
     "traveler-1",

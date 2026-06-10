@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "LHR",
-      "to": "OSL",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Prague",
+    "Milan"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002165",
   "sourceDocumentId": "165-star-3p-reverse-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

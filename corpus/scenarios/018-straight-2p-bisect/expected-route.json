@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ARN",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ATH",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "WAW",
+      "city": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -30,10 +30,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ARN",
+      "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "018-straight-2p-bisect-tkt-01",
-      "to": "ATH",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -42,10 +42,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ATH",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "018-straight-2p-bisect-tkt-01",
-      "to": "WAW",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"

@@ -1,0 +1,22 @@
+{
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Paris",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "confirmationCode": "HTL005167",
+  "documentType": "hotel-booking",
+  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-htl-05",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

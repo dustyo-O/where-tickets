@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "expect_unreadable": true,
+      "pdf": "layer2/15-air-with-unreadable-pdf-1pax-madrid-rome/01-receipt-blank.pdf"
+    },
+    {
+      "pdf": "layer2/15-air-with-unreadable-pdf-1pax-madrid-rome/02-air-return-1.pdf"
+    }
+  ],
+  "notes": "Air return + an unreadable PDF in the manifest. The unreadable PDF is flagged expect_unreadable; trip's expected route built from the rest. Exercises functional-spec \u00a72.6.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

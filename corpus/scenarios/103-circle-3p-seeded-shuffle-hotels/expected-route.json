@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "CDG",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -14,11 +14,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ZRH",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,11 +32,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "ARN",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,11 +50,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ATH",
+      "city": "Stockholm",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -65,11 +68,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "DUB",
+      "city": "Athens",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -79,7 +83,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "ZRH",
+      "city": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -91,10 +95,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CDG",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "ZRH",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -104,10 +108,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ZRH",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -117,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ARN",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "ATH",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -130,10 +134,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ATH",
-      "mode": "train",
+      "from": "Stockholm",
+      "mode": "air",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-02",
-      "to": "DUB",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -143,10 +147,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "DUB",
+      "from": "Athens",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-03",
-      "to": "ZRH",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",

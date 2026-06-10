@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Milan",
+    "New York"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002095",
+  "sourceDocumentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "New York",
+      "identifier": "JFK",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

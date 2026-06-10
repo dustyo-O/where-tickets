@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "MUC",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Athens",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Athens"
+  ],
   "confirmationCode": "HTL002182",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
   "sourceDocumentId": "182-star-4p-bisect-hotels-htl-02",
   "travelers": [
     "traveler-1",

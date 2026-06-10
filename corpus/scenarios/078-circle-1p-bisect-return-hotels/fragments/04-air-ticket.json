@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "LHR",
-      "to": "MAD",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "New York",
+    "Vienna"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003078",
   "sourceDocumentId": "078-circle-1p-bisect-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Vienna",
+      "identifier": "VIE",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

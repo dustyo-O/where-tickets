@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "VIE",
-      "to": "ATH",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Prague",
+    "Istanbul"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003168",
   "sourceDocumentId": "168-star-3p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Istanbul",
+      "identifier": "IST",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

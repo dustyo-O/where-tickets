@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "BCN",
-  "confirmationCode": "HTL001111",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Warsaw",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Warsaw"
+  ],
+  "confirmationCode": "HTL003111",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
-  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-htl-01",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

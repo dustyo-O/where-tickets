@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Lisbon",
+    "Athens",
+    "Moscow"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001166",
+  "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "OSL",
-      "to": "MXP",
-      "vehicleNumber": "FL100"
+      "city": "Athens",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "MXP",
-      "to": "BER",
-      "vehicleNumber": "FL101"
+      "city": "Moscow",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BER",
-      "to": "MXP",
-      "vehicleNumber": "FL102"
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001166",
-  "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

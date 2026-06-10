@@ -1,25 +1,41 @@
 {
+  "cities": [
+    "Milan",
+    "Rome",
+    "Lisbon",
+    "Dublin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001123",
+  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-01",
+  "stations": [
     {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MXP",
-      "to": "ZRH",
-      "vehicleNumber": "KL104"
+      "city": "Milan",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "ZRH",
-      "to": "OSL",
-      "vehicleNumber": "KL105"
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Rome",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "LIS",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003123",
-  "sourceDocumentId": "123-circle-4p-seeded-shuffle-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

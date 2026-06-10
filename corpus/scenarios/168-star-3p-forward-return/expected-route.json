@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ATH",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "HEL",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "MUC",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "HEL",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "VIE",
+      "city": "Prague",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "ATH",
+      "city": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ATH",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "168-star-3p-forward-return-tkt-01",
-      "to": "HEL",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "HEL",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "168-star-3p-forward-return-tkt-01",
-      "to": "MUC",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MUC",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "168-star-3p-forward-return-tkt-01",
-      "to": "HEL",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -102,10 +102,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "HEL",
-      "mode": "bus",
+      "from": "Dublin",
+      "mode": "rail",
       "sourceFragmentId": "168-star-3p-forward-return-tkt-02",
-      "to": "VIE",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "VIE",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "168-star-3p-forward-return-tkt-03",
-      "to": "ATH",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",

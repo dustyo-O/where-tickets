@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Berlin"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002090",
+  "sourceDocumentId": "090-circle-2p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

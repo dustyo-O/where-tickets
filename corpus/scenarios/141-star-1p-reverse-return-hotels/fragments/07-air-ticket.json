@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Dublin",
+    "Stockholm",
+    "Warsaw"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001141",
+  "sourceDocumentId": "141-star-1p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
-      "to": "CDG",
-      "vehicleNumber": "LO100"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "CDG",
-      "to": "LIS",
-      "vehicleNumber": "LO101"
+      "city": "Warsaw",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
-      "to": "CDG",
-      "vehicleNumber": "LO102"
+      "city": "Stockholm",
+      "identifier": "ARN",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001141",
-  "sourceDocumentId": "141-star-1p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

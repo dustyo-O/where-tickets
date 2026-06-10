@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "WAW",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "CPH",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "BCN",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "DUB",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "HEL",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "CPH",
+      "city": "Vienna",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "WAW",
+      "city": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -66,10 +66,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
-      "to": "CPH",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -78,10 +78,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "CPH",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
-      "to": "BCN",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -90,10 +90,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "BCN",
+      "from": "Helsinki",
       "mode": "bus",
       "sourceFragmentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
-      "to": "DUB",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -102,10 +102,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "DUB",
-      "mode": "train",
+      "from": "Stockholm",
+      "mode": "rail",
       "sourceFragmentId": "091-circle-2p-seeded-shuffle-return-tkt-02",
-      "to": "HEL",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -114,10 +114,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "HEL",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "091-circle-2p-seeded-shuffle-return-tkt-03",
-      "to": "CPH",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -126,10 +126,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "CPH",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "091-circle-2p-seeded-shuffle-return-tkt-03",
-      "to": "WAW",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"

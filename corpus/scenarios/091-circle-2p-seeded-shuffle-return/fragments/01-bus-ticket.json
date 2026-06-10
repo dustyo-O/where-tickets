@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Istanbul",
+    "Vienna",
+    "Helsinki",
+    "Stockholm"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001091",
+  "sourceDocumentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "to": "CPH",
-      "vehicleNumber": "FL100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "CPH",
-      "to": "BCN",
-      "vehicleNumber": "FL101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "BCN",
-      "to": "DUB",
-      "vehicleNumber": "FL102"
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001091",
-  "sourceDocumentId": "091-circle-2p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

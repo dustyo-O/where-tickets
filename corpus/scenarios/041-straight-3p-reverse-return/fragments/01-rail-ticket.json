@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Stockholm",
+    "Moscow"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003041",
+  "sourceDocumentId": "041-straight-3p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

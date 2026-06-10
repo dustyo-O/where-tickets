@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "OSL",
-  "confirmationCode": "HTL001135",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Barcelona"
+  ],
+  "confirmationCode": "HTL002135",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
-  "sourceDocumentId": "135-star-1p-seeded-shuffle-hotels-htl-01",
+  "sourceDocumentId": "135-star-1p-seeded-shuffle-hotels-htl-02",
   "travelers": [
     "traveler-1"
   ]

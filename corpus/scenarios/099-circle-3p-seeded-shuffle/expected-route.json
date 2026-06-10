@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "AMS",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "MAD",
+      "city": "London",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "CPH",
+      "city": "Prague",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "BCN",
+      "city": "Athens",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "MXP",
+      "city": "Oslo",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "MAD",
+      "city": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
+      "from": "Moscow",
       "mode": "air",
       "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-01",
-      "to": "MAD",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MAD",
+      "from": "London",
       "mode": "air",
       "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-01",
-      "to": "CPH",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CPH",
+      "from": "Prague",
       "mode": "air",
       "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-01",
-      "to": "BCN",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -102,10 +102,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "BCN",
-      "mode": "bus",
+      "from": "Athens",
+      "mode": "rail",
       "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-02",
-      "to": "MXP",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MXP",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "099-circle-3p-seeded-shuffle-tkt-03",
-      "to": "MAD",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",

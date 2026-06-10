@@ -1,0 +1,42 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Zurich",
+    "Prague",
+    "London"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001008",
+  "sourceDocumentId": "008-straight-1p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Zurich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Prague",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

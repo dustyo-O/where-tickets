@@ -1,0 +1,67 @@
+{
+  "stops": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2028-04-01T09:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-04-01T10:30:00Z",
+      "city": "Amsterdam",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-04-01T15:00:00Z",
+          "checkOutAt": "2028-04-03T11:00:00Z",
+          "identifier": "Hotel Mainufer Suites",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Amsterdam",
+      "departureAt": "2028-04-03T17:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-04-03T19:00:00Z",
+      "city": "Frankfurt",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-04-01T10:30:00Z",
+      "departureAt": "2028-04-01T09:00:00Z",
+      "from": "Frankfurt",
+      "mode": "air",
+      "sourceFragmentId": "layer2/14-air-scan-mix-1pax-frankfurt-amsterdam/01-air-leg-1.pdf",
+      "to": "Amsterdam",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-04-03T19:00:00Z",
+      "departureAt": "2028-04-03T17:30:00Z",
+      "from": "Amsterdam",
+      "mode": "air",
+      "sourceFragmentId": "layer2/14-air-scan-mix-1pax-frankfurt-amsterdam/03-air-leg-2.pdf",
+      "to": "Frankfurt",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

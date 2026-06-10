@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Frankfurt",
+    "Barcelona",
+    "Madrid"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001082",
+  "sourceDocumentId": "082-circle-2p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "HEL",
-      "to": "MXP",
-      "vehicleNumber": "FL100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MXP",
-      "to": "LIS",
-      "vehicleNumber": "FL101"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LIS",
-      "to": "CPH",
-      "vehicleNumber": "FL102"
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001082",
-  "sourceDocumentId": "082-circle-2p-bisect-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

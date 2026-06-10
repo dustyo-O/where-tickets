@@ -1,0 +1,45 @@
+{
+  "cities": [
+    "Stockholm",
+    "Istanbul",
+    "Berlin",
+    "Rome"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003191",
+  "sourceDocumentId": "191-star-4p-seeded-shuffle-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Istanbul",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-06T09:00:00Z",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

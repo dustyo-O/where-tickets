@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Moscow",
+    "Berlin",
+    "Prague"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001186",
+  "sourceDocumentId": "186-star-4p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
-      "to": "ATH",
-      "vehicleNumber": "LO100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ATH",
-      "to": "FRA",
-      "vehicleNumber": "LO101"
+      "city": "Prague",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "FRA",
-      "to": "ATH",
-      "vehicleNumber": "LO102"
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001186",
-  "sourceDocumentId": "186-star-4p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

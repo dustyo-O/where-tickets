@@ -1,0 +1,41 @@
+{
+  "cities": [
+    "Stockholm",
+    "Amsterdam",
+    "Rome"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001137",
+  "sourceDocumentId": "137-star-1p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Rome",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

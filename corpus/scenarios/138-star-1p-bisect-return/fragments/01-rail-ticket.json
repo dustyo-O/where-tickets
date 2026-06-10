@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "London",
+    "Warsaw"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002138",
+  "sourceDocumentId": "138-star-1p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

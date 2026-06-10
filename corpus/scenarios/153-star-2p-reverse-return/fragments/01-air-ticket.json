@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "IST",
-      "to": "ATH",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Paris",
+    "Milan"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003153",
   "sourceDocumentId": "153-star-2p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Milan",
+      "identifier": "MXP",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,0 +1,32 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-09-01T15:00:00",
+      "check_out_datetime": "2028-09-04T11:00:00",
+      "city": "Paris",
+      "identifier": "Solana Paris Opera",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 560.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-19-air-hotel-venue-2pax-london-paris/02-hotel-1"
+  ],
+  "scenario_id": "19-air-hotel-venue-2pax-london-paris/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

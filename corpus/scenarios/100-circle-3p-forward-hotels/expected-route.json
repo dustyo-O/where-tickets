@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "IST",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -14,11 +14,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "OSL",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,11 +32,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "LIS",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,11 +50,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ARN",
+      "city": "Rome",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -62,7 +65,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "OSL",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -74,10 +77,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
+      "from": "Athens",
       "mode": "bus",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -87,10 +90,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-01",
-      "to": "LIS",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +103,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
+      "from": "Dublin",
       "mode": "bus",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -113,10 +116,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ARN",
-      "mode": "air",
+      "from": "Rome",
+      "mode": "rail",
       "sourceFragmentId": "100-circle-3p-forward-hotels-tkt-02",
-      "to": "OSL",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",

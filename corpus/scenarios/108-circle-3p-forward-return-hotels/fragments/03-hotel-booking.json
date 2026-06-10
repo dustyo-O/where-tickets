@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "ZRH",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Vienna",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Vienna"
+  ],
   "confirmationCode": "HTL002108",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
   "sourceDocumentId": "108-circle-3p-forward-return-hotels-htl-02",
   "travelers": [
     "traveler-1",

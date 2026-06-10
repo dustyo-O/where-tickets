@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Stockholm",
+    "Helsinki",
+    "Paris",
+    "Barcelona"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001064",
+  "sourceDocumentId": "064-circle-1p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "HEL",
-      "to": "ROM",
-      "vehicleNumber": "FL100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ROM",
-      "to": "LIS",
-      "vehicleNumber": "FL101"
+      "city": "Paris",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LIS",
-      "to": "CDG",
-      "vehicleNumber": "FL102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001064",
-  "sourceDocumentId": "064-circle-1p-forward-tkt-01",
   "travelers": [
     "traveler-1"
   ]

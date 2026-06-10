@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "AMS",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ARN",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "CDG",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "PRG",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "LIS",
+      "city": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -48,10 +48,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
-      "mode": "train",
+      "from": "Berlin",
+      "mode": "rail",
       "sourceFragmentId": "017-straight-2p-reverse-tkt-01",
-      "to": "ARN",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -60,10 +60,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ARN",
-      "mode": "train",
+      "from": "Madrid",
+      "mode": "rail",
       "sourceFragmentId": "017-straight-2p-reverse-tkt-01",
-      "to": "CDG",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CDG",
-      "mode": "train",
+      "from": "Frankfurt",
+      "mode": "rail",
       "sourceFragmentId": "017-straight-2p-reverse-tkt-01",
-      "to": "PRG",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "PRG",
-      "mode": "air",
+      "from": "Amsterdam",
+      "mode": "bus",
       "sourceFragmentId": "017-straight-2p-reverse-tkt-02",
-      "to": "LIS",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2"

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "MXP",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "LHR",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "BCN",
+      "city": "Oslo",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "MUC",
+      "city": "Munich",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -49,7 +49,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "MXP",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]
@@ -59,10 +59,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "139-star-1p-seeded-shuffle-return-tkt-01",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -70,10 +70,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "bus",
       "sourceFragmentId": "139-star-1p-seeded-shuffle-return-tkt-01",
-      "to": "LHR",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -81,10 +81,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LHR",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "139-star-1p-seeded-shuffle-return-tkt-01",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "MUC",
-      "mode": "train",
+      "from": "Munich",
+      "mode": "air",
       "sourceFragmentId": "139-star-1p-seeded-shuffle-return-tkt-02",
-      "to": "BCN",
+      "to": "Oslo",
       "travelers": [
         "traveler-1"
       ]
@@ -103,10 +103,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "BCN",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "139-star-1p-seeded-shuffle-return-tkt-03",
-      "to": "MUC",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -114,10 +114,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "MUC",
+      "from": "Munich",
       "mode": "bus",
       "sourceFragmentId": "139-star-1p-seeded-shuffle-return-tkt-03",
-      "to": "MXP",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]

@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CDG",
-      "to": "ZRH",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Paris",
+    "Lisbon"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002170",
   "sourceDocumentId": "170-star-3p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

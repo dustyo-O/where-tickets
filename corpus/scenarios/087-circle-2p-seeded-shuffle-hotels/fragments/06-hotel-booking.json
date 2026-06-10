@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "ROM",
-  "confirmationCode": "HTL004087",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Athens",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Athens"
+  ],
+  "confirmationCode": "HTL003087",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
-  "sourceDocumentId": "087-circle-2p-seeded-shuffle-hotels-htl-04",
+  "sourceDocumentId": "087-circle-2p-seeded-shuffle-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

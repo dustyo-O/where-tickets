@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Athens",
+    "Copenhagen"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002162",
+  "sourceDocumentId": "162-star-3p-bisect-tkt-02",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

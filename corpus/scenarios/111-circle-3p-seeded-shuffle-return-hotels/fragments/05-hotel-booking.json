@@ -1,0 +1,22 @@
+{
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Berlin",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Berlin"
+  ],
+  "confirmationCode": "HTL002111",
+  "documentType": "hotel-booking",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-htl-02",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

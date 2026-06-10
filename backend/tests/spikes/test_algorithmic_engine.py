@@ -37,7 +37,7 @@ from spikes.route_engine_algorithmic.rules import (
     find_after_neighbor,
 )
 from spikes.route_engine_llm.models import (
-    HotelBookingFragment,
+    AccommodationFragment,
     RouteStop,
     TransitMode,
     TransitTicketFragment,
@@ -51,56 +51,90 @@ def _dt(iso: str) -> datetime:
     return datetime.fromisoformat(iso).replace(tzinfo=UTC)
 
 
+def _stations_from_legs(
+    legs: list[tuple[str, str, str, str]],
+) -> tuple[list[dict[str, object]], list[str]]:
+    """Build a compact ``stations[]`` + ``cities[]`` payload from leg tuples.
+
+    Mirrors ``corpus/generator/fragmenter._stations_from_hops`` for the test
+    fixtures: contiguous (arr at S, dep from S) collapse into one entry;
+    non-contiguous same-city events stay separate. Returns ``(stations,
+    cities)`` where ``cities`` is the deduped first-seen order.
+    """
+    events: list[tuple[str, str, str]] = []
+    for from_city, to_city, departure, arrival in legs:
+        events.append(("departure", departure, from_city))
+        events.append(("arrival", arrival, to_city))
+
+    stations: list[dict[str, object]] = []
+    i = 0
+    while i < len(events):
+        kind, time, city = events[i]
+        entry: dict[str, object] = {
+            "city": city,
+            "kind": "airport",
+            "identifier": city,  # arbitrary stable identifier per test
+        }
+        if kind == "departure":
+            entry["departureAt"] = time
+        else:
+            entry["arrivalAt"] = time
+        if (
+            kind == "arrival"
+            and i + 1 < len(events)
+            and events[i + 1][0] == "departure"
+            and events[i + 1][2] == city
+        ):
+            entry["departureAt"] = events[i + 1][1]
+            i += 2
+        else:
+            i += 1
+        stations.append(entry)
+
+    cities: list[str] = []
+    seen: set[str] = set()
+    for from_city, to_city, _dep, _arr in legs:
+        for c in (from_city, to_city):
+            if c not in seen:
+                cities.append(c)
+                seen.add(c)
+    return stations, cities
+
+
 def _single_leg_air_ticket() -> TransitTicketFragment:
     """Hand-crafted single-leg air ticket used across the happy-path tests."""
+    stations, cities = _stations_from_legs(
+        [("JFK", "FRA", "2027-03-01T00:00:00Z", "2027-03-01T08:00:00Z")]
+    )
     return TransitTicketFragment.model_validate(
         {
             "documentType": "air-ticket",
             "sourceDocumentId": "doc-alpha-01",
             "pnr": "ABC123",
             "travelers": ["traveler-1"],
-            "legs": [
-                {
-                    "from": "JFK",
-                    "to": "FRA",
-                    "departureAt": "2027-03-01T00:00:00Z",
-                    "arrivalAt": "2027-03-01T08:00:00Z",
-                    "carrier": "LO",
-                    "vehicleNumber": "LO100",
-                }
-            ],
+            "cities": cities,
+            "stations": stations,
         }
     )
 
 
 def _three_leg_air_ticket() -> TransitTicketFragment:
     """Hand-crafted three-leg air ticket: JFK -> FRA -> LIS -> MAD."""
+    stations, cities = _stations_from_legs(
+        [
+            ("JFK", "FRA", "2027-03-01T00:00:00Z", "2027-03-01T08:00:00Z"),
+            ("FRA", "LIS", "2027-03-01T10:00:00Z", "2027-03-01T13:00:00Z"),
+            ("LIS", "MAD", "2027-03-01T15:00:00Z", "2027-03-01T17:00:00Z"),
+        ]
+    )
     return TransitTicketFragment.model_validate(
         {
             "documentType": "air-ticket",
             "sourceDocumentId": "doc-beta-01",
             "pnr": "DEF456",
             "travelers": ["traveler-1"],
-            "legs": [
-                {
-                    "from": "JFK",
-                    "to": "FRA",
-                    "departureAt": "2027-03-01T00:00:00Z",
-                    "arrivalAt": "2027-03-01T08:00:00Z",
-                },
-                {
-                    "from": "FRA",
-                    "to": "LIS",
-                    "departureAt": "2027-03-01T10:00:00Z",
-                    "arrivalAt": "2027-03-01T13:00:00Z",
-                },
-                {
-                    "from": "LIS",
-                    "to": "MAD",
-                    "departureAt": "2027-03-01T15:00:00Z",
-                    "arrivalAt": "2027-03-01T17:00:00Z",
-                },
-            ],
+            "cities": cities,
+            "stations": stations,
         }
     )
 
@@ -114,36 +148,37 @@ def _ticket_one_leg(
     arrival: str,
 ) -> TransitTicketFragment:
     """Tiny factory for crafting single-leg tickets in chronological-insert tests."""
+    stations, cities = _stations_from_legs([(from_city, to_city, departure, arrival)])
     return TransitTicketFragment.model_validate(
         {
             "documentType": "air-ticket",
             "sourceDocumentId": source_id,
             "pnr": "PNR" + source_id[-3:],
             "travelers": ["traveler-1"],
-            "legs": [
-                {
-                    "from": from_city,
-                    "to": to_city,
-                    "departureAt": departure,
-                    "arrivalAt": arrival,
-                }
-            ],
+            "cities": cities,
+            "stations": stations,
         }
     )
 
 
-def _hotel_booking() -> HotelBookingFragment:
-    """Out-of-Slice-2 shape: a hotel booking (Slice 4)."""
-    return HotelBookingFragment.model_validate(
+def _hotel_booking() -> AccommodationFragment:
+    """An accommodation fragment carrying one hotel-booking entry."""
+    return AccommodationFragment.model_validate(
         {
             "documentType": "hotel-booking",
             "sourceDocumentId": "doc-gamma-01",
             "confirmationCode": "HOTEL-1",
             "travelers": ["traveler-1"],
-            "city": "LIS",
-            "checkInAt": "2027-03-01T15:00:00Z",
-            "checkOutAt": "2027-03-03T11:00:00Z",
-            "hotelName": "Hotel Lisboa",
+            "cities": ["LIS"],
+            "accommodations": [
+                {
+                    "city": "LIS",
+                    "kind": "hotel",
+                    "identifier": "Hotel Lisboa",
+                    "checkInAt": "2027-03-01T15:00:00Z",
+                    "checkOutAt": "2027-03-03T11:00:00Z",
+                }
+            ],
         }
     )
 
@@ -423,7 +458,8 @@ def test_build_ops_hotel_booking_on_empty_route_creates_hotel_only_stop() -> Non
     assert ops[1].stop_id == "n1"
     assert ops[1].check_in_at == _dt("2027-03-01T15:00:00Z")
     assert ops[1].check_out_at == _dt("2027-03-03T11:00:00Z")
-    assert ops[1].hotel_name == "Hotel Lisboa"
+    assert ops[1].kind == "hotel"
+    assert ops[1].identifier == "Hotel Lisboa"
 
     assert isinstance(ops[2], AddTravelers)
     assert ops[2].stop_id == "n1"
@@ -525,21 +561,15 @@ def _multi_leg_ticket(
     travelers: list[str] | None = None,
 ) -> TransitTicketFragment:
     """Build a multi-leg ticket from ``(from, to, departure, arrival)`` tuples."""
+    stations, cities = _stations_from_legs(legs)
     return TransitTicketFragment.model_validate(
         {
             "documentType": "air-ticket",
             "sourceDocumentId": source_id,
             "pnr": "PNR" + source_id[-3:],
             "travelers": travelers or ["traveler-1"],
-            "legs": [
-                {
-                    "from": frm,
-                    "to": to,
-                    "departureAt": dep,
-                    "arrivalAt": arr,
-                }
-                for (frm, to, dep, arr) in legs
-            ],
+            "cities": cities,
+            "stations": stations,
         }
     )
 
@@ -807,18 +837,24 @@ def _hotel_for(
     check_out: str,
     travelers: list[str] | None = None,
     hotel_name: str = "Test Hotel",
-) -> HotelBookingFragment:
-    """Tiny factory for crafting hotel-booking fragments in Slice-4 tests."""
-    return HotelBookingFragment.model_validate(
+) -> AccommodationFragment:
+    """Tiny factory for crafting accommodation fragments in Slice-4 tests."""
+    return AccommodationFragment.model_validate(
         {
             "documentType": "hotel-booking",
             "sourceDocumentId": source_id,
             "confirmationCode": "C" + source_id[-3:],
             "travelers": travelers or ["traveler-1"],
-            "city": city,
-            "checkInAt": check_in,
-            "checkOutAt": check_out,
-            "hotelName": hotel_name,
+            "cities": [city],
+            "accommodations": [
+                {
+                    "city": city,
+                    "kind": "hotel",
+                    "identifier": hotel_name,
+                    "checkInAt": check_in,
+                    "checkOutAt": check_out,
+                }
+            ],
         }
     )
 

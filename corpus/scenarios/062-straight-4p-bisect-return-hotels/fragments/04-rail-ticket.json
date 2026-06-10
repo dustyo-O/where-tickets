@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Madrid",
+    "Berlin"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003062",
+  "sourceDocumentId": "062-straight-4p-bisect-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

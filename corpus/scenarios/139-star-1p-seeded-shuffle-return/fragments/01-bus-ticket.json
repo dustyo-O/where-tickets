@@ -1,33 +1,33 @@
 {
+  "cities": [
+    "Oslo",
+    "Munich",
+    "Frankfurt"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003139",
+  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-03",
+  "stations": [
     {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
-      "to": "MUC",
-      "vehicleNumber": "FL100"
+      "city": "Oslo",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MUC",
-      "to": "LHR",
-      "vehicleNumber": "FL101"
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Munich",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LHR",
-      "to": "MUC",
-      "vehicleNumber": "FL102"
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001139",
-  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

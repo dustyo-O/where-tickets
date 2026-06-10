@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "CDG",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BCN",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "AMS",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "BCN",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "FRA",
+      "city": "Paris",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "BCN",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -49,7 +49,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "LHR",
+      "city": "Istanbul",
       "travelers": [
         "traveler-1"
       ]
@@ -59,10 +59,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CDG",
-      "mode": "train",
+      "from": "New York",
+      "mode": "rail",
       "sourceFragmentId": "131-star-1p-seeded-shuffle-tkt-01",
-      "to": "BCN",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -70,10 +70,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "BCN",
-      "mode": "train",
+      "from": "Lisbon",
+      "mode": "rail",
       "sourceFragmentId": "131-star-1p-seeded-shuffle-tkt-01",
-      "to": "AMS",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1"
       ]
@@ -81,10 +81,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "AMS",
-      "mode": "train",
+      "from": "Helsinki",
+      "mode": "rail",
       "sourceFragmentId": "131-star-1p-seeded-shuffle-tkt-01",
-      "to": "BCN",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "BCN",
-      "mode": "bus",
+      "from": "Lisbon",
+      "mode": "air",
       "sourceFragmentId": "131-star-1p-seeded-shuffle-tkt-02",
-      "to": "FRA",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -103,10 +103,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "FRA",
-      "mode": "train",
+      "from": "Paris",
+      "mode": "rail",
       "sourceFragmentId": "131-star-1p-seeded-shuffle-tkt-03",
-      "to": "BCN",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -114,10 +114,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "BCN",
-      "mode": "train",
+      "from": "Lisbon",
+      "mode": "rail",
       "sourceFragmentId": "131-star-1p-seeded-shuffle-tkt-03",
-      "to": "LHR",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1"
       ]

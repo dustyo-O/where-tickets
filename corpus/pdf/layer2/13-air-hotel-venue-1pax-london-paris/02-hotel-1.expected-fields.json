@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-03-01T15:00:00",
+      "check_out_datetime": "2028-03-04T11:00:00",
+      "city": "Paris",
+      "identifier": "Hotel Lutece Marais",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Paris"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 420.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-13-air-hotel-venue-1pax-london-paris/02-hotel-1"
+  ],
+  "scenario_id": "13-air-hotel-venue-1pax-london-paris/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

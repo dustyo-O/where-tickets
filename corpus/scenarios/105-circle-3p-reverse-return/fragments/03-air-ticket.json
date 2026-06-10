@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Dublin",
+    "Milan",
+    "Berlin",
+    "Prague"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001105",
+  "sourceDocumentId": "105-circle-3p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "BCN",
-      "to": "MXP",
-      "vehicleNumber": "LO100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MXP",
-      "to": "CPH",
-      "vehicleNumber": "LO101"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CPH",
-      "to": "DUB",
-      "vehicleNumber": "LO102"
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001105",
-  "sourceDocumentId": "105-circle-3p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

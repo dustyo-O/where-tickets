@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Stockholm",
+    "Barcelona",
+    "Dublin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR003093",
+  "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "ARN",
-      "to": "ATH",
-      "vehicleNumber": "KL104"
+      "city": "Barcelona",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "ATH",
-      "to": "AMS",
-      "vehicleNumber": "KL105"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003093",
-  "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Athens",
+    "Moscow",
+    "Dublin",
+    "Helsinki"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001022",
+  "sourceDocumentId": "022-straight-2p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
-      "to": "BCN",
-      "vehicleNumber": "FL100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BCN",
-      "to": "ARN",
-      "vehicleNumber": "FL101"
+      "city": "Dublin",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ARN",
-      "to": "ATH",
-      "vehicleNumber": "FL102"
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001022",
-  "sourceDocumentId": "022-straight-2p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

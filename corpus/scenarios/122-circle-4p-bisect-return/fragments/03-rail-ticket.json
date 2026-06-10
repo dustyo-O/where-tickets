@@ -1,0 +1,45 @@
+{
+  "cities": [
+    "Zurich",
+    "Dublin",
+    "Athens",
+    "Rome"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001122",
+  "sourceDocumentId": "122-circle-4p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Dublin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

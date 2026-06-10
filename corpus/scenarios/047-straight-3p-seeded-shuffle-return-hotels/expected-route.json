@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "VIE",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -14,11 +14,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ZRH",
+      "city": "Moscow",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,11 +32,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "BER",
+      "city": "New York",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,11 +50,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "BCN",
+      "city": "Prague",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -65,11 +68,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "HEL",
+      "city": "Milan",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -79,7 +83,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "VIE",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -91,10 +95,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
-      "mode": "train",
+      "from": "Helsinki",
+      "mode": "rail",
       "sourceFragmentId": "047-straight-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "ZRH",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -104,10 +108,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ZRH",
-      "mode": "train",
+      "from": "Moscow",
+      "mode": "rail",
       "sourceFragmentId": "047-straight-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "BER",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -117,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BER",
-      "mode": "train",
+      "from": "New York",
+      "mode": "rail",
       "sourceFragmentId": "047-straight-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "BCN",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -130,10 +134,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BCN",
+      "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "047-straight-3p-seeded-shuffle-return-hotels-tkt-02",
-      "to": "HEL",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -143,10 +147,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "HEL",
-      "mode": "train",
+      "from": "Milan",
+      "mode": "rail",
       "sourceFragmentId": "047-straight-3p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "VIE",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",

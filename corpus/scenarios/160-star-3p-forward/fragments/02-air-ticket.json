@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "JFK",
-      "to": "MUC",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Stockholm",
+    "Oslo"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002160",
   "sourceDocumentId": "160-star-3p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

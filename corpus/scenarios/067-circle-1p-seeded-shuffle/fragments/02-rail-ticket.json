@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Dublin",
+    "Istanbul"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002067",
+  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-02",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

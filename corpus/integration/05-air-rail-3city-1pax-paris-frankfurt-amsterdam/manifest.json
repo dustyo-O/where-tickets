@@ -1,0 +1,14 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/05-air-rail-3city-1pax-paris-frankfurt-amsterdam/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/05-air-rail-3city-1pax-paris-frankfurt-amsterdam/02-rail-leg-1.pdf"
+    }
+  ],
+  "notes": "3-city straight: air Paris\u2192Frankfurt, rail Frankfurt\u2192Amsterdam, 1 traveler.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

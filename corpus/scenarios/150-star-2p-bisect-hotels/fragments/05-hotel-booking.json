@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "DUB",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Helsinki"
+  ],
   "confirmationCode": "HTL001150",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
   "sourceDocumentId": "150-star-2p-bisect-hotels-htl-01",
   "travelers": [
     "traveler-1",

@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Stockholm",
+    "Athens"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002103",
+  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Athens",
+      "identifier": "ATH",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

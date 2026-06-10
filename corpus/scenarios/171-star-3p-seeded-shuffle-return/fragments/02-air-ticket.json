@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ATH",
-      "to": "LIS",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Milan",
+    "Warsaw"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003171",
   "sourceDocumentId": "171-star-3p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Warsaw",
+      "identifier": "WAW",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

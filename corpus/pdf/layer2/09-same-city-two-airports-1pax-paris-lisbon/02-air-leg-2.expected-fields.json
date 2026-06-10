@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Lisbon",
+    "Paris"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 149.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-09-same-city-two-airports-1pax-paris-lisbon/02-air-leg-2-01"
+  ],
+  "scenario_id": "09-same-city-two-airports-1pax-paris-lisbon/02-air-leg-2",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departure_datetime": "2027-11-04T18:00:00",
+      "identifier": "LIS",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-11-04T20:30:00",
+      "city": "Paris",
+      "identifier": "ORY",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

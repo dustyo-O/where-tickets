@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-07-01T15:00:00",
+      "check_out_datetime": "2028-07-03T11:00:00",
+      "city": "Frankfurt",
+      "identifier": "Hotel Bockenheim Court",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 270.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/02-hotel-1"
+  ],
+  "scenario_id": "17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "IST",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -12,11 +12,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "OSL",
+      "city": "Madrid",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -27,11 +28,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "BER",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -42,11 +44,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "OSL",
+      "city": "Madrid",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -54,7 +57,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "MUC",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]
@@ -64,10 +67,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
+      "from": "Amsterdam",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Madrid",
       "travelers": [
         "traveler-1"
       ]
@@ -75,10 +78,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "BER",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1"
       ]
@@ -86,10 +89,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BER",
+      "from": "Barcelona",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Madrid",
       "travelers": [
         "traveler-1"
       ]
@@ -97,10 +100,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "OSL",
-      "mode": "train",
+      "from": "Madrid",
+      "mode": "rail",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-02",
-      "to": "MUC",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]

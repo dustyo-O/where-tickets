@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Milan",
+    "Munich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003142",
+  "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "JFK",
-      "to": "ZRH",
-      "vehicleNumber": "EU104"
+      "city": "Milan",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "from": "ZRH",
-      "to": "SVO",
-      "vehicleNumber": "EU105"
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003142",
-  "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-03",
   "travelers": [
     "traveler-1"
   ]

@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-04T15:00:00Z",
-  "checkOutAt": "2027-03-05T09:00:00Z",
-  "city": "WAW",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Dublin",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Dublin"
+  ],
   "confirmationCode": "HTL005188",
   "documentType": "hotel-booking",
-  "hotelName": "Harbor View",
   "sourceDocumentId": "188-star-4p-forward-return-hotels-htl-05",
   "travelers": [
     "traveler-1",

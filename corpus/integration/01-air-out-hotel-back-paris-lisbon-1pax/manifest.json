@@ -1,0 +1,17 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/01-air-out-hotel-back-paris-lisbon-1pax/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/01-air-out-hotel-back-paris-lisbon-1pax/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/01-air-out-hotel-back-paris-lisbon-1pax/03-air-leg-2.pdf"
+    }
+  ],
+  "notes": "Air out + Lisbon hotel + air back, 1 traveler.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

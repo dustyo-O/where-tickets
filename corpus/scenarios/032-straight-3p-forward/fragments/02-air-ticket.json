@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "MXP",
-      "to": "MUC",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Zurich",
+    "Berlin"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002032",
   "sourceDocumentId": "032-straight-3p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "ZRH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

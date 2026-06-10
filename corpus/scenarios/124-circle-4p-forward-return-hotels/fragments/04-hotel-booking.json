@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "MUC",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Rome",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Rome"
+  ],
   "confirmationCode": "HTL003124",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
   "sourceDocumentId": "124-circle-4p-forward-return-hotels-htl-03",
   "travelers": [
     "traveler-1",

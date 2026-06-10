@@ -63,7 +63,8 @@ def test_create_enrich_transit_accommodation_happy_path() -> None:
                 "stopId": "stop-2",
                 "checkInAt": "2027-03-01T03:00:00+00:00",
                 "checkOutAt": "2027-03-01T08:00:00+00:00",
-                "hotelName": "Hotel Roma",
+                "kind": "hotel",
+                "identifier": "Hotel Roma",
             }
         ),
     ]
@@ -87,7 +88,8 @@ def test_create_enrich_transit_accommodation_happy_path() -> None:
     assert transit.source_fragment_id == "tkt-01"
 
     assert len(rom.accommodations) == 1
-    assert rom.accommodations[0].hotel_name == "Hotel Roma"
+    assert rom.accommodations[0].kind == "hotel"
+    assert rom.accommodations[0].identifier == "Hotel Roma"
 
 
 def test_create_stop_prepends_at_front_when_after_is_start() -> None:
@@ -144,7 +146,7 @@ def test_refs_build_new_stops_and_transits_on_empty_route() -> None:
             {
                 "fromStopId": "n2",
                 "toStopId": "n3",
-                "mode": "train",
+                "mode": "rail",
                 "departureAt": "2027-03-02T00:00:00+00:00",
                 "arrivalAt": "2027-03-02T03:00:00+00:00",
                 "travelers": ["traveler-1"],
@@ -636,6 +638,8 @@ def test_attach_accommodation_rejects_unknown_id() -> None:
                         "stopId": "stop-99",
                         "checkInAt": "2027-03-01T03:00:00+00:00",
                         "checkOutAt": "2027-03-01T08:00:00+00:00",
+                        "kind": "hotel",
+                        "identifier": "Hotel X",
                     }
                 )
             ],
@@ -710,7 +714,7 @@ def test_applying_ops_never_reassigns_existing_ids() -> None:
                 {
                     "fromStopId": "stop-1",
                     "toStopId": "stop-2",
-                    "mode": "train",
+                    "mode": "rail",
                     "departureAt": "2027-03-01T00:00:00+00:00",
                     "arrivalAt": "2027-03-01T03:00:00+00:00",
                     "travelers": ["traveler-1"],

@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ROM",
-      "to": "LHR",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Warsaw",
+    "Lisbon"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002149",
   "sourceDocumentId": "149-star-2p-reverse-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

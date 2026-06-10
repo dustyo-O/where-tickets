@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "BCN",
-  "confirmationCode": "HTL003047",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "New York",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "New York"
+  ],
+  "confirmationCode": "HTL002047",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
-  "sourceDocumentId": "047-straight-3p-seeded-shuffle-return-hotels-htl-03",
+  "sourceDocumentId": "047-straight-3p-seeded-shuffle-return-hotels-htl-02",
   "travelers": [
     "traveler-1",
     "traveler-2",

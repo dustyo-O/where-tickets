@@ -1,0 +1,35 @@
+{
+  "cities": [
+    "Lisbon",
+    "Vienna",
+    "Istanbul"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR003091",
+  "sourceDocumentId": "091-circle-2p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Vienna",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

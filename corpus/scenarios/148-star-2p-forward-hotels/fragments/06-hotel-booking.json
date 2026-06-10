@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "VIE",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "Vienna",
+      "identifier": "Central Lodge",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Vienna"
+  ],
   "confirmationCode": "HTL004148",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
   "sourceDocumentId": "148-star-2p-forward-hotels-htl-04",
   "travelers": [
     "traveler-1",

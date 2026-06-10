@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Prague",
+    "Berlin"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 115.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-08-air-out-airbnb-back-1pax-berlin-prague/03-air-leg-2-01"
+  ],
+  "scenario_id": "08-air-out-airbnb-back-1pax-berlin-prague/03-air-leg-2",
+  "stations": [
+    {
+      "city": "Prague",
+      "departure_datetime": "2027-10-04T17:00:00",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-10-04T18:15:00",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

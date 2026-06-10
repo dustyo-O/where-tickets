@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "BER",
-  "confirmationCode": "HTL004159",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Athens",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Athens"
+  ],
+  "confirmationCode": "HTL002159",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
-  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-htl-04",
+  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-htl-02",
   "travelers": [
     "traveler-1",
     "traveler-2"

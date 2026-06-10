@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Lisbon",
+    "Milan",
+    "Helsinki"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003154",
+  "sourceDocumentId": "154-star-2p-bisect-return-tkt-03",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ZRH",
-      "to": "CPH",
-      "vehicleNumber": "EU104"
+      "city": "Milan",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "CPH",
-      "to": "MXP",
-      "vehicleNumber": "EU105"
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003154",
-  "sourceDocumentId": "154-star-2p-bisect-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

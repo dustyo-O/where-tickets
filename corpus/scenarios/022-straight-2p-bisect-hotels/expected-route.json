@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "VIE",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -13,11 +13,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BCN",
+      "city": "Moscow",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -29,11 +30,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "ARN",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -42,7 +44,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ATH",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -53,10 +55,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
+      "from": "Athens",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "BCN",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -65,10 +67,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BCN",
+      "from": "Moscow",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -77,10 +79,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ARN",
+      "from": "Dublin",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "ATH",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"

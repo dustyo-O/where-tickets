@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "DUB",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Athens",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Athens"
+  ],
   "confirmationCode": "HTL001174",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
   "sourceDocumentId": "174-star-3p-bisect-return-hotels-htl-01",
   "travelers": [
     "traveler-1",

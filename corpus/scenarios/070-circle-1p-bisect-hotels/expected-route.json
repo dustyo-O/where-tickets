@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "AMS",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -12,11 +12,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "PRG",
+      "city": "Prague",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -27,11 +28,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "SVO",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -42,11 +44,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "BER",
+      "city": "Vienna",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -54,7 +57,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "PRG",
+      "city": "Prague",
       "travelers": [
         "traveler-1"
       ]
@@ -64,10 +67,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-01",
-      "to": "PRG",
+      "to": "Prague",
       "travelers": [
         "traveler-1"
       ]
@@ -75,10 +78,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "PRG",
+      "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-01",
-      "to": "SVO",
+      "to": "Milan",
       "travelers": [
         "traveler-1"
       ]
@@ -86,10 +89,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "SVO",
+      "from": "Milan",
       "mode": "bus",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-01",
-      "to": "BER",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -97,10 +100,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BER",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-02",
-      "to": "PRG",
+      "to": "Prague",
       "travelers": [
         "traveler-1"
       ]

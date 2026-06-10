@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "LHR",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BER",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "LIS",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "VIE",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "SVO",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "LHR",
+      "city": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LHR",
-      "mode": "train",
+      "from": "Moscow",
+      "mode": "rail",
       "sourceFragmentId": "041-straight-3p-reverse-return-tkt-01",
-      "to": "BER",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "BER",
-      "mode": "train",
+      "from": "Copenhagen",
+      "mode": "rail",
       "sourceFragmentId": "041-straight-3p-reverse-return-tkt-01",
-      "to": "LIS",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LIS",
-      "mode": "train",
+      "from": "Vienna",
+      "mode": "rail",
       "sourceFragmentId": "041-straight-3p-reverse-return-tkt-01",
-      "to": "VIE",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -102,10 +102,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "VIE",
-      "mode": "air",
+      "from": "Amsterdam",
+      "mode": "bus",
       "sourceFragmentId": "041-straight-3p-reverse-return-tkt-02",
-      "to": "SVO",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "SVO",
-      "mode": "train",
+      "from": "Stockholm",
+      "mode": "rail",
       "sourceFragmentId": "041-straight-3p-reverse-return-tkt-03",
-      "to": "LHR",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",

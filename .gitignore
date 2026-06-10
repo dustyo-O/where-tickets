@@ -66,8 +66,13 @@ htmlcov/
 backend/spikes/route_engine_llm/runs/
 backend/spikes/route_engine_algorithmic/runs/
 
-# Mock-Document Corpus — Layer 2 (real PDFs, never committed)
-# Real tickets/bookings carry personal data and must stay strictly local.
-# The .gitkeep placeholder keeps the directory in the tree.
-corpus/pdf/layer2/**
+# Mock-Document Corpus — Layer 2 default policy: keep the directory empty so
+# real, personally-identifying PDFs never accidentally land in the repo.
+# DUS-31 Slice 8 reverses the policy for GENERATOR-EMITTED trip directories —
+# every committed entry lives under a `<NN>-<descriptor>` slug carved by the
+# integration trip-bundle generator. The leak guard
+# (`corpus/pdf/validate.py::_leak_guard_check`) enforces the
+# "top-level-files-still-forbidden" half of the policy.
+corpus/pdf/layer2/*
 !corpus/pdf/layer2/.gitkeep
+!corpus/pdf/layer2/[0-9][0-9]-*/

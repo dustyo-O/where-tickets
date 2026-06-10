@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "ROM",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Moscow",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Moscow"
+  ],
   "confirmationCode": "HTL002172",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
   "sourceDocumentId": "172-star-3p-forward-return-hotels-htl-02",
   "travelers": [
     "traveler-1",

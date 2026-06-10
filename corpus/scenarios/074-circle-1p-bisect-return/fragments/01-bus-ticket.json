@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "HEL",
-      "to": "LIS",
-      "vehicleNumber": "FL103"
-    }
+  "cities": [
+    "Berlin",
+    "Istanbul"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR002074",
   "sourceDocumentId": "074-circle-1p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

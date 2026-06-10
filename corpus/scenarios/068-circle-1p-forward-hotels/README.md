@@ -1,1 +1,1 @@
-circle 4-leg, 1 traveler, primary mode train, hotels, fragments forward
+circle 4-leg, 1 traveler, primary mode rail, hotels, fragments forward

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Helsinki",
+    "Milan",
+    "New York"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001154",
+  "sourceDocumentId": "154-star-2p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
-      "to": "CPH",
-      "vehicleNumber": "FL100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "CPH",
-      "to": "MAD",
-      "vehicleNumber": "FL101"
+      "city": "New York",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MAD",
-      "to": "CPH",
-      "vehicleNumber": "FL102"
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001154",
-  "sourceDocumentId": "154-star-2p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

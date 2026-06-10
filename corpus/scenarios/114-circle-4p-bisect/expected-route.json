@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "BER",
+      "city": "Madrid",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "AMS",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "ROM",
+      "city": "Dublin",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "IST",
+      "city": "Berlin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "AMS",
+      "city": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -58,10 +58,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "BER",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "114-circle-4p-bisect-tkt-01",
-      "to": "AMS",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "AMS",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "114-circle-4p-bisect-tkt-01",
-      "to": "ROM",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ROM",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "114-circle-4p-bisect-tkt-01",
-      "to": "IST",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "IST",
+      "from": "Berlin",
       "mode": "bus",
       "sourceFragmentId": "114-circle-4p-bisect-tkt-02",
-      "to": "AMS",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",

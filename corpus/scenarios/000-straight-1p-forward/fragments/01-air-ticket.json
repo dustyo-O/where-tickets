@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Madrid",
+    "New York",
+    "Munich"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001000",
+  "sourceDocumentId": "000-straight-1p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "JFK",
-      "to": "FRA",
-      "vehicleNumber": "LO100"
+      "city": "New York",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
-      "to": "LIS",
-      "vehicleNumber": "LO101"
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001000",
-  "sourceDocumentId": "000-straight-1p-forward-tkt-01",
   "travelers": [
     "traveler-1"
   ]

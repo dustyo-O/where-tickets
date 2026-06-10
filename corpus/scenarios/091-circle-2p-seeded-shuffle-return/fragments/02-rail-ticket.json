@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Stockholm",
+    "Lisbon"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002091",
+  "sourceDocumentId": "091-circle-2p-seeded-shuffle-return-tkt-02",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Lisbon",
+      "identifier": "Lisbon Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "HEL",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "New York",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "New York"
+  ],
   "confirmationCode": "HTL001148",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
   "sourceDocumentId": "148-star-2p-forward-hotels-htl-01",
   "travelers": [
     "traveler-1",

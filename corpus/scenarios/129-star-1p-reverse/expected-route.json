@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "SVO",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "LHR",
+      "city": "Rome",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "DUB",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "LHR",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "JFK",
+      "city": "Milan",
       "travelers": [
         "traveler-1"
       ]
@@ -43,10 +43,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "SVO",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "129-star-1p-reverse-tkt-01",
-      "to": "LHR",
+      "to": "Rome",
       "travelers": [
         "traveler-1"
       ]
@@ -54,10 +54,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "LHR",
+      "from": "Rome",
       "mode": "air",
       "sourceFragmentId": "129-star-1p-reverse-tkt-01",
-      "to": "DUB",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1"
       ]
@@ -65,10 +65,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "DUB",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "129-star-1p-reverse-tkt-01",
-      "to": "LHR",
+      "to": "Rome",
       "travelers": [
         "traveler-1"
       ]
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "LHR",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "129-star-1p-reverse-tkt-02",
-      "to": "JFK",
+      "to": "Milan",
       "travelers": [
         "traveler-1"
       ]

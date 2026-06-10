@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "ATH",
-  "confirmationCode": "HTL003103",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Istanbul"
+  ],
+  "confirmationCode": "HTL002103",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
-  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-htl-03",
+  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-htl-02",
   "travelers": [
     "traveler-1",
     "traveler-2",

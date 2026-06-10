@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "ROM",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Istanbul"
+  ],
   "confirmationCode": "HTL001021",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
   "sourceDocumentId": "021-straight-2p-reverse-hotels-htl-01",
   "travelers": [
     "traveler-1",

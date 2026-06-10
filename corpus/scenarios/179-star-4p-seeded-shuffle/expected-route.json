@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ARN",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "CDG",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "ATH",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "CDG",
+      "city": "Milan",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "IST",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "CDG",
+      "city": "Milan",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -67,7 +67,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "ZRH",
+      "city": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -80,10 +80,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ARN",
-      "mode": "train",
+      "from": "Berlin",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-01",
-      "to": "CDG",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -94,10 +94,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "CDG",
-      "mode": "train",
+      "from": "Milan",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-01",
-      "to": "ATH",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ATH",
-      "mode": "train",
+      "from": "Oslo",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-01",
-      "to": "CDG",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -122,10 +122,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CDG",
-      "mode": "bus",
+      "from": "Milan",
+      "mode": "air",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-02",
-      "to": "IST",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -136,10 +136,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "IST",
-      "mode": "train",
+      "from": "Barcelona",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-03",
-      "to": "CDG",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -150,10 +150,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "CDG",
-      "mode": "train",
+      "from": "Milan",
+      "mode": "rail",
       "sourceFragmentId": "179-star-4p-seeded-shuffle-tkt-03",
-      "to": "ZRH",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",

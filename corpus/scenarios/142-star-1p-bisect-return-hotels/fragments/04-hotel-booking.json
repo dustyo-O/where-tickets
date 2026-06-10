@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-04T15:00:00Z",
-  "checkOutAt": "2027-03-05T09:00:00Z",
-  "city": "ZRH",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Milan",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Milan"
+  ],
   "confirmationCode": "HTL005142",
   "documentType": "hotel-booking",
-  "hotelName": "Harbor View",
   "sourceDocumentId": "142-star-1p-bisect-return-hotels-htl-05",
   "travelers": [
     "traveler-1"

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "DUB",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -15,11 +15,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BER",
+      "city": "Zurich",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,11 +34,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "MAD",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,11 +53,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "BER",
+      "city": "Zurich",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -66,7 +69,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "ROM",
+      "city": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +82,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "DUB",
+      "from": "Athens",
       "mode": "air",
       "sourceFragmentId": "180-star-4p-forward-hotels-tkt-01",
-      "to": "BER",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -93,10 +96,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BER",
+      "from": "Zurich",
       "mode": "air",
       "sourceFragmentId": "180-star-4p-forward-hotels-tkt-01",
-      "to": "MAD",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -107,10 +110,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "MAD",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "180-star-4p-forward-hotels-tkt-01",
-      "to": "BER",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -121,10 +124,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BER",
-      "mode": "bus",
+      "from": "Zurich",
+      "mode": "rail",
       "sourceFragmentId": "180-star-4p-forward-hotels-tkt-02",
-      "to": "ROM",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",

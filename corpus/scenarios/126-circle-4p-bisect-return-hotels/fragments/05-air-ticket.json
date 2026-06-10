@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "Copenhagen",
+    "Helsinki",
+    "Milan"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001126",
+  "sourceDocumentId": "126-circle-4p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "to": "LIS",
-      "vehicleNumber": "LO100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "LIS",
-      "to": "VIE",
-      "vehicleNumber": "LO101"
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "VIE",
-      "to": "LHR",
-      "vehicleNumber": "LO102"
+      "city": "Milan",
+      "identifier": "MXP",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001126",
-  "sourceDocumentId": "126-circle-4p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "OSL",
-  "confirmationCode": "HTL003087",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Lisbon",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Lisbon"
+  ],
+  "confirmationCode": "HTL001087",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
-  "sourceDocumentId": "087-circle-2p-seeded-shuffle-hotels-htl-03",
+  "sourceDocumentId": "087-circle-2p-seeded-shuffle-hotels-htl-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Munich",
+    "Milan",
+    "Zurich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001142",
+  "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "SVO",
-      "to": "ZRH",
-      "vehicleNumber": "FL100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ZRH",
-      "to": "BER",
-      "vehicleNumber": "FL101"
+      "city": "Zurich",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "BER",
-      "to": "ZRH",
-      "vehicleNumber": "FL102"
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001142",
-  "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

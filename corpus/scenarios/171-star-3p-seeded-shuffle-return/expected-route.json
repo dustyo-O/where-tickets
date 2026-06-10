@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "LIS",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "CDG",
+      "city": "Oslo",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "MXP",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "CDG",
+      "city": "Oslo",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ATH",
+      "city": "Milan",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "LIS",
+      "city": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LIS",
+      "from": "Warsaw",
       "mode": "air",
       "sourceFragmentId": "171-star-3p-seeded-shuffle-return-tkt-01",
-      "to": "CDG",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "CDG",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "171-star-3p-seeded-shuffle-return-tkt-01",
-      "to": "MXP",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MXP",
+      "from": "Amsterdam",
       "mode": "air",
       "sourceFragmentId": "171-star-3p-seeded-shuffle-return-tkt-01",
-      "to": "CDG",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -102,10 +102,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CDG",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "171-star-3p-seeded-shuffle-return-tkt-02",
-      "to": "ATH",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "ATH",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "171-star-3p-seeded-shuffle-return-tkt-03",
-      "to": "LIS",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2",

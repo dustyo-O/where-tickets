@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Frankfurt",
+    "Copenhagen"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002092",
+  "sourceDocumentId": "092-circle-2p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

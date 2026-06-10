@@ -1,0 +1,22 @@
+{
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Stockholm"
+  ],
+  "confirmationCode": "HTL003103",
+  "documentType": "hotel-booking",
+  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-htl-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

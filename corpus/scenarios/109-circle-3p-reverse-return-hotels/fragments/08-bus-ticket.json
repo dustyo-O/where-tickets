@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Rome",
+    "Paris",
+    "Istanbul",
+    "London"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001109",
+  "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MUC",
-      "to": "PRG",
-      "vehicleNumber": "FL100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "PRG",
-      "to": "DUB",
-      "vehicleNumber": "FL101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "DUB",
-      "to": "ZRH",
-      "vehicleNumber": "FL102"
+      "city": "London",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001109",
-  "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

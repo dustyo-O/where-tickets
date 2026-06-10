@@ -1,0 +1,23 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/03-air-leg-2.pdf"
+    },
+    {
+      "pdf": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/04-hotel-2.pdf"
+    },
+    {
+      "pdf": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/05-air-leg-3.pdf"
+    }
+  ],
+  "notes": "Real-shape: air Paris\u2192Berlin, Berlin hotel, air Berlin\u2192Prague, Prague hotel, air back to Paris.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Moscow",
+    "New York",
+    "Prague"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001048",
+  "sourceDocumentId": "048-straight-4p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
-      "to": "ROM",
-      "vehicleNumber": "LO100"
+      "city": "New York",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ROM",
-      "to": "PRG",
-      "vehicleNumber": "LO101"
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001048",
-  "sourceDocumentId": "048-straight-4p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

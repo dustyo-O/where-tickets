@@ -1,0 +1,67 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-11T08:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-11T10:45:00Z",
+      "city": "Lisbon",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-03-11T15:00:00Z",
+          "checkOutAt": "2027-03-15T11:00:00Z",
+          "identifier": "Hotel Marques de Pombal",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Lisbon",
+      "departureAt": "2027-03-15T18:15:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-15T20:30:00Z",
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-03-11T10:45:00Z",
+      "departureAt": "2027-03-11T08:30:00Z",
+      "from": "Paris",
+      "mode": "air",
+      "sourceFragmentId": "layer2/01-air-out-hotel-back-paris-lisbon-1pax/01-air-leg-1.pdf",
+      "to": "Lisbon",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-15T20:30:00Z",
+      "departureAt": "2027-03-15T18:15:00Z",
+      "from": "Lisbon",
+      "mode": "air",
+      "sourceFragmentId": "layer2/01-air-out-hotel-back-paris-lisbon-1pax/03-air-leg-2.pdf",
+      "to": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

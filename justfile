@@ -59,12 +59,32 @@ test-pdf-corpus:
 extract-pdf path:
     cd backend && PYTHONPATH=. uv run --isolated --group extraction python -m where_tickets.extraction {{path}}
 
+# Run the document-to-route integration runner against trips under
+# corpus/integration/. Live Bedrock — costs a few cents per PDF. Use
+# `--trip <slug>` for single-trip debugging; `--no-route-check` for
+# adapter-only sanity; `--json-report PATH` for a machine-readable summary.
+# PYTHONPATH=. + --isolated --group extraction mirror `extract-pdf` to keep
+# `anthropic` out of the persistent backend venv (see memory
+# `project_extraction_isolated_venv`).
+# Example:
+#   just integration --trip 01-air-return-1pax-paris-lisbon --json-report /tmp/report.json
+integration *args:
+    cd backend && PYTHONPATH=. uv run --isolated --group extraction python -m spikes.integration.runner {{args}}
+
 # Regenerate Layer 1 PDF scenarios from the deterministic generator (data is
 # stable across runs; noise varies). Refreshes corpus/pdf/layer1/scenarios/.
 # Uses the backend's `corpus` dep group for WeasyPrint + Jinja2; PYTHONPATH
 # points at the repo root so `python -m corpus.pdf.generator` resolves.
 regen-pdf-corpus:
     cd backend && PYTHONPATH=.. uv run --group corpus python -m corpus.pdf.generator --output-dir ../corpus/pdf/layer1/scenarios
+
+# Regenerate the integration trip catalogue (DUS-31 Slice 8): layer-2 PDFs
+# under corpus/pdf/layer2/<slug>/, with sibling expected-fields.json per PDF,
+# and the trip's manifest.json + expected-route.json under
+# corpus/integration/<slug>/. Mirrors `regen-pdf-corpus`'s isolated-venv
+# pattern. Use `--trip <slug>` to regenerate a single trip during iteration.
+regen-integration-corpus *args:
+    cd backend && PYTHONPATH=.. uv run --group corpus python -m corpus.integration.generator {{args}}
 
 # Regenerate the committed corpus from the deterministic generator.
 regen-corpus:

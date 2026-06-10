@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Moscow",
+    "Milan",
+    "Barcelona"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001049",
+  "sourceDocumentId": "049-straight-4p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "OSL",
-      "to": "IST",
-      "vehicleNumber": "FL100"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "IST",
-      "to": "LIS",
-      "vehicleNumber": "FL101"
+      "city": "Milan",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LIS",
-      "to": "CPH",
-      "vehicleNumber": "FL102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001049",
-  "sourceDocumentId": "049-straight-4p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

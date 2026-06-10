@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Munich",
+    "Prague",
+    "Vienna"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001165",
+  "sourceDocumentId": "165-star-3p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "to": "LHR",
-      "vehicleNumber": "LO100"
+      "city": "Prague",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "LHR",
-      "to": "ROM",
-      "vehicleNumber": "LO101"
+      "city": "Vienna",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ROM",
-      "to": "LHR",
-      "vehicleNumber": "LO102"
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001165",
-  "sourceDocumentId": "165-star-3p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

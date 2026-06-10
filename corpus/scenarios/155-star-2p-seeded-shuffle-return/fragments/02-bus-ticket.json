@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Milan",
+    "Istanbul"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002155",
+  "sourceDocumentId": "155-star-2p-seeded-shuffle-return-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

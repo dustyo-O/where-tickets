@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "WAW",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ATH",
+      "city": "Athens",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "SVO",
+      "city": "Zurich",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "CPH",
+      "city": "Paris",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "DUB",
+      "city": "Vienna",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "WAW",
+      "city": "New York",
       "travelers": [
         "traveler-1"
       ]
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "New York",
+      "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
-      "to": "ATH",
+      "to": "Athens",
       "travelers": [
         "traveler-1"
       ]
@@ -62,10 +62,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ATH",
-      "mode": "train",
+      "from": "Athens",
+      "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
-      "to": "SVO",
+      "to": "Zurich",
       "travelers": [
         "traveler-1"
       ]
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "SVO",
-      "mode": "train",
+      "from": "Zurich",
+      "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
-      "to": "CPH",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CPH",
+      "from": "Paris",
       "mode": "air",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-02",
-      "to": "DUB",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "DUB",
-      "mode": "train",
+      "from": "Vienna",
+      "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-03",
-      "to": "WAW",
+      "to": "New York",
       "travelers": [
         "traveler-1"
       ]

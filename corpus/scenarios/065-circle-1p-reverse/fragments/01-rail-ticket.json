@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Vienna"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003065",
+  "sourceDocumentId": "065-circle-1p-reverse-tkt-03",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

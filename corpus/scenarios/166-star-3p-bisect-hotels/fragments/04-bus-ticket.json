@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "DUB",
-      "to": "MXP",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Zurich",
+    "Athens"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003166",
   "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

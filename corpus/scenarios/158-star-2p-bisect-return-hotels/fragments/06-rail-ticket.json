@@ -1,0 +1,42 @@
+{
+  "cities": [
+    "Zurich",
+    "Helsinki",
+    "Milan"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001158",
+  "sourceDocumentId": "158-star-2p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Milan",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

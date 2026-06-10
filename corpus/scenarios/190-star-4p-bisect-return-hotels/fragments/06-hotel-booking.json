@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "ZRH",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Athens",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Athens"
+  ],
   "confirmationCode": "HTL001190",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
   "sourceDocumentId": "190-star-4p-bisect-return-hotels-htl-01",
   "travelers": [
     "traveler-1",

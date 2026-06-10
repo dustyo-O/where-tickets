@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Stockholm",
+    "Milan",
+    "Athens",
+    "Lisbon"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001120",
+  "sourceDocumentId": "120-circle-4p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MUC",
-      "to": "ZRH",
-      "vehicleNumber": "LO100"
+      "city": "Milan",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ZRH",
-      "to": "BER",
-      "vehicleNumber": "LO101"
+      "city": "Athens",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "BER",
-      "to": "HEL",
-      "vehicleNumber": "LO102"
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001120",
-  "sourceDocumentId": "120-circle-4p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

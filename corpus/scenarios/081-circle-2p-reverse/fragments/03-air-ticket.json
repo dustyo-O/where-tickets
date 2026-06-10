@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Istanbul",
+    "Copenhagen",
+    "Oslo",
+    "Moscow"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001081",
+  "sourceDocumentId": "081-circle-2p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ATH",
-      "to": "SVO",
-      "vehicleNumber": "LO100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "SVO",
-      "to": "FRA",
-      "vehicleNumber": "LO101"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "FRA",
-      "to": "AMS",
-      "vehicleNumber": "LO102"
+      "city": "Moscow",
+      "identifier": "SVO",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001081",
-  "sourceDocumentId": "081-circle-2p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

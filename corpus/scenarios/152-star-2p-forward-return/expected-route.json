@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "WAW",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "PRG",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "ATH",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "PRG",
+      "city": "Madrid",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "OSL",
+      "city": "Zurich",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "PRG",
+      "city": "Madrid",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "HEL",
+      "city": "Moscow",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -64,7 +64,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "WAW",
+      "city": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Vienna",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
-      "to": "PRG",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -87,10 +87,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "PRG",
-      "mode": "train",
+      "from": "Madrid",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
-      "to": "ATH",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ATH",
-      "mode": "train",
+      "from": "Berlin",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
-      "to": "PRG",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "PRG",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-02",
-      "to": "OSL",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -123,10 +123,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "OSL",
-      "mode": "train",
+      "from": "Zurich",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
-      "to": "PRG",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -135,10 +135,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "PRG",
-      "mode": "train",
+      "from": "Madrid",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
-      "to": "HEL",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "HEL",
-      "mode": "train",
+      "from": "Moscow",
+      "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
-      "to": "WAW",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"

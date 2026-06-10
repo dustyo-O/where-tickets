@@ -1,0 +1,39 @@
+{
+  "accommodations": [],
+  "cities": [
+    "London",
+    "Paris"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 315.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-19-air-hotel-venue-2pax-london-paris/01-air-leg-1-01",
+    "AIRTKT-19-air-hotel-venue-2pax-london-paris/01-air-leg-1-02"
+  ],
+  "scenario_id": "19-air-hotel-venue-2pax-london-paris/01-air-leg-1",
+  "stations": [
+    {
+      "city": "London",
+      "departure_datetime": "2028-09-01T08:00:00",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-09-01T10:15:00",
+      "city": "Paris",
+      "identifier": "CDG",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

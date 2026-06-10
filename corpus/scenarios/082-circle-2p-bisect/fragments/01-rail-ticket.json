@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Madrid",
+    "Frankfurt"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002082",
+  "sourceDocumentId": "082-circle-2p-bisect-tkt-02",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

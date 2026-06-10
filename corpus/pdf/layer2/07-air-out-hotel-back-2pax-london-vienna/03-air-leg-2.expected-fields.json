@@ -1,0 +1,39 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Vienna",
+    "London"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 305.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-07-air-out-hotel-back-2pax-london-vienna/03-air-leg-2-01",
+    "AIRTKT-07-air-out-hotel-back-2pax-london-vienna/03-air-leg-2-02"
+  ],
+  "scenario_id": "07-air-out-hotel-back-2pax-london-vienna/03-air-leg-2",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departure_datetime": "2027-09-08T16:30:00",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-09-08T18:30:00",
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ],
+  "venues": []
+}

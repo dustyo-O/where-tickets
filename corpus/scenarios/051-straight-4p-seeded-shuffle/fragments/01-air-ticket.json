@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Rome",
+    "Warsaw",
+    "Frankfurt"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001051",
+  "sourceDocumentId": "051-straight-4p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
-      "to": "VIE",
-      "vehicleNumber": "LO100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "VIE",
-      "to": "SVO",
-      "vehicleNumber": "LO101"
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001051",
-  "sourceDocumentId": "051-straight-4p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "WAW",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BCN",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "LIS",
+      "city": "Berlin",
       "travelers": [
         "traveler-1"
       ]
@@ -27,10 +27,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
+      "from": "Moscow",
       "mode": "air",
       "sourceFragmentId": "003-straight-1p-seeded-shuffle-tkt-01",
-      "to": "BCN",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -38,10 +38,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "BCN",
+      "from": "Lisbon",
       "mode": "air",
       "sourceFragmentId": "003-straight-1p-seeded-shuffle-tkt-01",
-      "to": "LIS",
+      "to": "Berlin",
       "travelers": [
         "traveler-1"
       ]

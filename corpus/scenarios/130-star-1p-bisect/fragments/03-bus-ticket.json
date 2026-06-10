@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Istanbul",
+    "Zurich",
+    "Oslo"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001130",
+  "sourceDocumentId": "130-star-1p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CPH",
-      "to": "ARN",
-      "vehicleNumber": "FL100"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ARN",
-      "to": "BER",
-      "vehicleNumber": "FL101"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "BER",
-      "to": "ARN",
-      "vehicleNumber": "FL102"
+      "city": "Zurich",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001130",
-  "sourceDocumentId": "130-star-1p-bisect-tkt-01",
   "travelers": [
     "traveler-1"
   ]

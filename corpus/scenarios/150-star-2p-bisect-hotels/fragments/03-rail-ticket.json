@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Helsinki",
+    "Vienna"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002150",
+  "sourceDocumentId": "150-star-2p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

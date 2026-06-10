@@ -29,9 +29,15 @@ Runs the following checks for each committed scenario (technical-considerations
    shapes (multi-leg, multi-traveler, return-ticket, standalone-supplementary)
    plus a Layer-1 size band (``N ∈ [135, 165]``), all six ``document_type``
    values represented, and a rasterized-share band (``M ∈ [18, 28]``,
-   ~15% target). Corpus-wide; runs after per-file checks. The cross-schema
-   sanity check (engine-fragment-schema validation) is deferred to DUS-31 and
-   ships as a documented mapping note in ``corpus/pdf/README.md``.
+   ~15% target). Corpus-wide; runs after per-file checks.
+8. **Cross-schema validation:** picks one Layer 1 ``expected-fields.json`` per
+   ``document_type`` (6 in total), maps it to the engine's ``Fragment`` shape
+   inline (snake_case → kebab-case ``documentType``, ISO-local → UTC
+   datetimes, placeholders for ``pnr``/``confirmationCode``), and runs
+   ``jsonschema.validate`` against
+   ``corpus/schema/extracted-fragment.schema.json``. Proves the two schemas
+   are still aligned after every DUS-31 sub-slice. Corpus-wide; runs after
+   coverage.
 
 Environment overrides:
 - ``WT_REPO_ROOT`` — when set, anchors discovery and the leak-guard's
@@ -83,6 +89,11 @@ _DISCOVERY_ROOT = (
 SCHEMA_PATH = _DISCOVERY_ROOT / "schema" / "expected-fields.schema.json"
 LAYER1_DIR = _DISCOVERY_ROOT / "layer1" / "scenarios"
 LAYER2_DIR = _DISCOVERY_ROOT / "layer2"
+# Engine fragment schema (under ``corpus/schema/`` — a sibling of ``corpus/pdf/``).
+# Used by the cross-schema check (§2.8 of the docstring) to prove an
+# extractor payload, after a small inline mapping, validates as an engine
+# ``Fragment``.
+FRAGMENT_SCHEMA_PATH = _DISCOVERY_ROOT.parent / "schema" / "extracted-fragment.schema.json"
 
 # Make ``corpus.pdf.generator.matrix`` importable when invoked as a script via
 # ``uv run --with jsonschema --with pymupdf python corpus/pdf/validate.py``.
@@ -125,6 +136,7 @@ CHECK_ORDER: tuple[str, ...] = (
     "drift",
     "sanity",
     "coverage",
+    "cross-schema",
 )
 
 # Functional-spec coverage bands and minima (see functional-spec §2.1 +
@@ -364,15 +376,26 @@ def _drift_check() -> tuple[list[str], list[str]]:
 
 _LAYER2_LEAK_ALLOWLIST = frozenset({"corpus/pdf/layer2/.gitkeep"})
 
+# DUS-31 Slice 8: tracked files inside a generator-emitted trip directory are
+# legitimate — the integration-trip generator owns the layer-2 tree from this
+# slice on. The leak guard accepts any file whose first path component under
+# ``corpus/pdf/layer2/`` matches the generator's slug pattern
+# (``NN-<descriptor>``). Anything else (a real PDF dropped at the layer-2 root,
+# a typoed slug, ...) still trips the guard.
+_LAYER2_TRIP_SLUG_PATTERN = (
+    "corpus/pdf/layer2/"  # prefix; the next path component is the trip slug
+)
+
 
 def _leak_guard_check() -> tuple[list[str], list[str]]:
     """Layer-2 leak guard. Returns ``(failures, warnings)``.
 
     Runs ``git -C <repo-root> ls-files corpus/pdf/layer2/``. Anything other
-    than the ``.gitkeep`` placeholder counts as a leaked real PDF / JSON and
-    fails the validator with actionable guidance. If ``git`` is unavailable
-    (script run outside a repo, no git binary, etc.) emit a single warning
-    and return no failures — mirrors the drift check's skip pattern.
+    than the ``.gitkeep`` placeholder or a generator-emitted trip-directory
+    file counts as a leaked real PDF / JSON and fails the validator with
+    actionable guidance. If ``git`` is unavailable (script run outside a repo,
+    no git binary, etc.) emit a single warning and return no failures —
+    mirrors the drift check's skip pattern.
     """
     failures: list[str] = []
     warnings: list[str] = []
@@ -400,10 +423,18 @@ def _leak_guard_check() -> tuple[list[str], list[str]]:
     for entry in tracked:
         if entry in _LAYER2_LEAK_ALLOWLIST:
             continue
+        # DUS-31 Slice 8: anything under a generator-emitted trip directory
+        # (``corpus/pdf/layer2/<trip-slug>/...``) is tracked deliberately.
+        remainder = entry.removeprefix(_LAYER2_TRIP_SLUG_PATTERN)
+        if "/" in remainder:
+            # First component is the trip slug; second component (and beyond)
+            # is the PDF / expected-fields JSON file. Allow it through.
+            continue
         failures.append(
-            f"layer2-leak: {entry} is tracked under corpus/pdf/layer2/ — "
-            "real PDFs and their JSON must never be committed.\n"
-            f"              Drop them from git index with: git rm --cached {entry}"
+            f"layer2-leak: {entry} is tracked at the top of "
+            "corpus/pdf/layer2/ — only generator-emitted trip directories "
+            "and the .gitkeep placeholder are allowed there.\n"
+            f"              Drop it from git index with: git rm --cached {entry}"
         )
     return failures, warnings
 
@@ -636,6 +667,172 @@ def _coverage_check() -> list[str]:
     return failures
 
 
+# ---------------------------------------------------------------------------
+# Cross-schema check: extractor payload → engine Fragment shape → schema-validate.
+#
+# The mapping is duplicated inline here rather than imported from
+# ``backend/spikes/integration/adapter.py`` so the corpus tree stays
+# independent of the backend tree. If the adapter has a bug, this check
+# still catches a real schema misalignment; if the adapter changes, this
+# stays a contract-level sanity check on the two SCHEMAS, not on the adapter.
+# ---------------------------------------------------------------------------
+
+
+# Snake_case `document_type` (extractor) → kebab-case `documentType` (engine).
+_DOC_TYPE_MAP: dict[str, str] = {
+    "air_ticket": "air-ticket",
+    "rail_ticket": "rail-ticket",
+    "bus_ticket": "bus-ticket",
+    "hotel_booking": "hotel-booking",
+    "airbnb_booking": "airbnb-booking",
+    "supplementary": "supplementary",
+}
+
+
+def _to_utc(iso_local: str) -> str:
+    """Stamp tz-aware UTC on an ISO-local string. Matches the adapter convention."""
+    return iso_local + "Z"
+
+
+def _station_for_engine(entry: dict[str, Any]) -> dict[str, Any]:
+    """Map one StationEntry to the engine's Station shape."""
+    out: dict[str, Any] = {
+        "city": entry["city"],
+        "kind": entry["kind"],
+        "identifier": entry["identifier"],
+    }
+    if "departure_datetime" in entry:
+        out["departureAt"] = _to_utc(entry["departure_datetime"])
+    if "arrival_datetime" in entry:
+        out["arrivalAt"] = _to_utc(entry["arrival_datetime"])
+    return out
+
+
+def _accommodation_for_engine(entry: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "city": entry["city"],
+        "kind": entry["kind"],
+        "identifier": entry["identifier"],
+        "checkInAt": _to_utc(entry["check_in_datetime"]),
+        "checkOutAt": _to_utc(entry["check_out_datetime"]),
+    }
+
+
+def _venue_for_engine(entry: dict[str, Any]) -> dict[str, Any]:
+    out: dict[str, Any] = {
+        "city": entry["city"],
+        "kind": entry["kind"],
+        "identifier": entry["identifier"],
+    }
+    if "valid_from_datetime" in entry:
+        out["validFromAt"] = _to_utc(entry["valid_from_datetime"])
+    if "valid_to_datetime" in entry:
+        out["validToAt"] = _to_utc(entry["valid_to_datetime"])
+    return out
+
+
+def _map_to_engine_fragment(payload: dict[str, Any]) -> dict[str, Any]:
+    """Map one Layer-1 expected-fields payload to an engine Fragment dict.
+
+    Uses ``scenario_id`` as the deterministic placeholder for ``sourceDocumentId``,
+    ``pnr``, and ``confirmationCode`` (none of which the extractor emits today),
+    matching the Slice-6 adapter's convention.
+    """
+    doc_type_snake = payload["document_type"]
+    source_id = payload.get("scenario_id", "cross-schema-sample")
+    doc_type_kebab = _DOC_TYPE_MAP[doc_type_snake]
+
+    if doc_type_snake in {"air_ticket", "rail_ticket", "bus_ticket"}:
+        return {
+            "documentType": doc_type_kebab,
+            "sourceDocumentId": source_id,
+            "pnr": source_id,
+            "travelers": list(payload["travelers"]),
+            "cities": list(payload["cities"]),
+            "stations": [_station_for_engine(s) for s in payload["stations"]],
+        }
+    if doc_type_snake in {"hotel_booking", "airbnb_booking"}:
+        return {
+            "documentType": doc_type_kebab,
+            "sourceDocumentId": source_id,
+            "confirmationCode": source_id,
+            "travelers": list(payload["travelers"]),
+            "cities": list(payload["cities"]),
+            "accommodations": [
+                _accommodation_for_engine(a) for a in payload["accommodations"]
+            ],
+        }
+    # supplementary — emit everything routable; engine accepts empty arrays.
+    return {
+        "documentType": "supplementary",
+        "sourceDocumentId": source_id,
+        "travelers": list(payload["travelers"]),
+        "cities": list(payload["cities"]),
+        "stations": [_station_for_engine(s) for s in payload["stations"]],
+        "accommodations": [
+            _accommodation_for_engine(a) for a in payload["accommodations"]
+        ],
+        "venues": [_venue_for_engine(v) for v in payload["venues"]],
+        "prices": list(payload["prices"]),
+        "qrCodes": list(payload["qr_codes"]),
+    }
+
+
+def _cross_schema_check() -> list[str]:
+    """Pick one payload per document_type, map to a Fragment, validate.
+
+    Skipped (with a warning) if the engine fragment schema is unreachable;
+    otherwise every doc_type that has a layer-1 representative contributes
+    one validation. Missing schema files surface as a failure rather than a
+    silent skip — that would be a real source-of-truth divergence.
+    """
+    if not FRAGMENT_SCHEMA_PATH.exists():
+        return [
+            f"cross-schema: engine fragment schema not found at "
+            f"{FRAGMENT_SCHEMA_PATH} (DUS-31 source-of-truth divergence)"
+        ]
+
+    fragment_validator = _load_validator(FRAGMENT_SCHEMA_PATH)
+
+    if not LAYER1_DIR.exists():
+        return []
+
+    samples_by_type: dict[str, dict[str, Any]] = {}
+    for path in sorted(LAYER1_DIR.glob("*/expected-fields.json")):
+        try:
+            payload = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(payload, dict):
+            continue
+        doc_type = payload.get("document_type")
+        if isinstance(doc_type, str) and doc_type not in samples_by_type:
+            samples_by_type[doc_type] = payload
+
+    failures: list[str] = []
+    for doc_type in ALL_DOCUMENT_TYPES:
+        sample = samples_by_type.get(doc_type)
+        if sample is None:
+            # Coverage check already flags missing doc_types; don't double-up.
+            continue
+        try:
+            fragment = _map_to_engine_fragment(sample)
+        except (KeyError, TypeError) as exc:
+            failures.append(
+                f"cross-schema [{doc_type}]: mapping raised "
+                f"{type(exc).__name__}: {exc} on scenario "
+                f"{sample.get('scenario_id', '?')!r}"
+            )
+            continue
+        errors = _schema_errors(fragment_validator, fragment)
+        scenario_id = sample.get("scenario_id", "?")
+        for error in errors:
+            failures.append(
+                f"cross-schema [{doc_type}] (scenario {scenario_id}): {error}"
+            )
+    return failures
+
+
 def _load_pymupdf() -> tuple[Any | None, str | None]:
     """Try to import PyMuPDF. Returns ``(module, warning_or_none)``."""
     try:
@@ -730,10 +927,24 @@ def main() -> int:
     else:
         print("Coverage check passed")
 
+    cross_schema_failures = _cross_schema_check()
+    if cross_schema_failures:
+        print(
+            f"Cross-schema check failed ({len(cross_schema_failures)} issues):"
+        )
+        for failure in cross_schema_failures:
+            _print_indented("  - ", failure, "    ")
+    else:
+        print("Cross-schema check passed")
+
     total = passed + failed
     print(f"Validated {total} files: {passed} passed, {failed} failed")
     return 1 if (
-        failed or drift_failures or leak_failures or coverage_failures
+        failed
+        or drift_failures
+        or leak_failures
+        or coverage_failures
+        or cross_schema_failures
     ) else 0
 
 

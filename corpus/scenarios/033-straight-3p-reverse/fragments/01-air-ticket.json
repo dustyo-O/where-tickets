@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Stockholm",
+    "Madrid",
+    "Paris"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001033",
+  "sourceDocumentId": "033-straight-3p-reverse-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "to": "PRG",
-      "vehicleNumber": "LO100"
+      "city": "Madrid",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "PRG",
-      "to": "MXP",
-      "vehicleNumber": "LO101"
+      "city": "Paris",
+      "identifier": "CDG",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001033",
-  "sourceDocumentId": "033-straight-3p-reverse-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

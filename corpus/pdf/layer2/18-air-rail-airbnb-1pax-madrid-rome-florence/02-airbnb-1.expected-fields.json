@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-08-01T15:00:00",
+      "check_out_datetime": "2028-08-04T11:00:00",
+      "city": "Rome",
+      "identifier": "Bright Flat in Malasana",
+      "kind": "airbnb"
+    }
+  ],
+  "cities": [
+    "Rome"
+  ],
+  "document_type": "airbnb_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 290.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "ABNB-18-air-rail-airbnb-1pax-madrid-rome-florence/02-airbnb-1"
+  ],
+  "scenario_id": "18-air-rail-airbnb-1pax-madrid-rome-florence/02-airbnb-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

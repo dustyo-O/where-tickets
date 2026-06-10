@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Copenhagen",
+    "Prague",
+    "Milan",
+    "Vienna"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001070",
+  "sourceDocumentId": "070-circle-1p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
-      "to": "PRG",
-      "vehicleNumber": "FL100"
+      "city": "Prague",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "PRG",
-      "to": "SVO",
-      "vehicleNumber": "FL101"
+      "city": "Milan",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "SVO",
-      "to": "BER",
-      "vehicleNumber": "FL102"
+      "city": "Vienna",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001070",
-  "sourceDocumentId": "070-circle-1p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

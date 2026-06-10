@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "HEL",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "MUC",
+      "city": "Athens",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "WAW",
+      "city": "New York",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "DUB",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "LHR",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "MUC",
+      "city": "Athens",
       "travelers": [
         "traveler-1"
       ]
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "HEL",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "067-circle-1p-seeded-shuffle-tkt-01",
-      "to": "MUC",
+      "to": "Athens",
       "travelers": [
         "traveler-1"
       ]
@@ -62,10 +62,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MUC",
+      "from": "Athens",
       "mode": "bus",
       "sourceFragmentId": "067-circle-1p-seeded-shuffle-tkt-01",
-      "to": "WAW",
+      "to": "New York",
       "travelers": [
         "traveler-1"
       ]
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "WAW",
+      "from": "New York",
       "mode": "bus",
       "sourceFragmentId": "067-circle-1p-seeded-shuffle-tkt-01",
-      "to": "DUB",
+      "to": "Dublin",
       "travelers": [
         "traveler-1"
       ]
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "DUB",
-      "mode": "train",
+      "from": "Dublin",
+      "mode": "rail",
       "sourceFragmentId": "067-circle-1p-seeded-shuffle-tkt-02",
-      "to": "LHR",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1"
       ]
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "LHR",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "067-circle-1p-seeded-shuffle-tkt-03",
-      "to": "MUC",
+      "to": "Athens",
       "travelers": [
         "traveler-1"
       ]

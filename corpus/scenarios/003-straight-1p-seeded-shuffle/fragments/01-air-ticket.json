@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Moscow",
+    "Lisbon",
+    "Berlin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001003",
+  "sourceDocumentId": "003-straight-1p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "to": "BCN",
-      "vehicleNumber": "LO100"
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "LIS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "BCN",
-      "to": "LIS",
-      "vehicleNumber": "LO101"
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001003",
-  "sourceDocumentId": "003-straight-1p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1"
   ]

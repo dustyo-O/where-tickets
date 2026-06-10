@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "New York",
+    "Copenhagen"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003008",
+  "sourceDocumentId": "008-straight-1p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "New York",
+    "Stockholm",
+    "Dublin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001078",
+  "sourceDocumentId": "078-circle-1p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MAD",
-      "to": "LHR",
-      "vehicleNumber": "LO100"
+      "city": "New York",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "LHR",
-      "to": "CPH",
-      "vehicleNumber": "LO101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "CPH",
-      "to": "DUB",
-      "vehicleNumber": "LO102"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001078",
-  "sourceDocumentId": "078-circle-1p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

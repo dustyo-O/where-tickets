@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Barcelona",
+    "Vienna",
+    "Rome",
+    "Madrid"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001061",
+  "sourceDocumentId": "061-straight-4p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "DUB",
-      "to": "BER",
-      "vehicleNumber": "FL100"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BER",
-      "to": "MUC",
-      "vehicleNumber": "FL101"
+      "city": "Rome",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "MUC",
-      "to": "ARN",
-      "vehicleNumber": "FL102"
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001061",
-  "sourceDocumentId": "061-straight-4p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Frankfurt",
+    "New York",
+    "Zurich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001148",
+  "sourceDocumentId": "148-star-2p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "BER",
-      "to": "HEL",
-      "vehicleNumber": "FL100"
+      "city": "New York",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "HEL",
-      "to": "LHR",
-      "vehicleNumber": "FL101"
+      "city": "Zurich",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LHR",
-      "to": "HEL",
-      "vehicleNumber": "FL102"
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001148",
-  "sourceDocumentId": "148-star-2p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

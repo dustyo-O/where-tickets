@@ -1,0 +1,37 @@
+{
+  "cities": [
+    "Barcelona",
+    "Milan",
+    "Dublin"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003179",
+  "sourceDocumentId": "179-star-4p-seeded-shuffle-tkt-03",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Milan",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Lisbon",
+    "Paris"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 159.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-01-air-out-hotel-back-paris-lisbon-1pax/03-air-leg-2-01"
+  ],
+  "scenario_id": "01-air-out-hotel-back-paris-lisbon-1pax/03-air-leg-2",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departure_datetime": "2027-03-15T18:15:00",
+      "identifier": "LIS",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-03-15T20:30:00",
+      "city": "Paris",
+      "identifier": "CDG",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

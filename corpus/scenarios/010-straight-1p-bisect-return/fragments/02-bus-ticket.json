@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Prague",
+    "Zurich",
+    "New York",
+    "Milan"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001010",
+  "sourceDocumentId": "010-straight-1p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "JFK",
-      "to": "OSL",
-      "vehicleNumber": "FL100"
+      "city": "Zurich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "OSL",
-      "to": "CPH",
-      "vehicleNumber": "FL101"
+      "city": "New York",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CPH",
-      "to": "PRG",
-      "vehicleNumber": "FL102"
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001010",
-  "sourceDocumentId": "010-straight-1p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Milan",
+    "Copenhagen"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002126",
+  "sourceDocumentId": "126-circle-4p-bisect-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

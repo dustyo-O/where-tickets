@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "DUB",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "Zurich",
+      "identifier": "Central Lodge",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Zurich"
+  ],
   "confirmationCode": "HTL004166",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
   "sourceDocumentId": "166-star-3p-bisect-hotels-htl-04",
   "travelers": [
     "traveler-1",

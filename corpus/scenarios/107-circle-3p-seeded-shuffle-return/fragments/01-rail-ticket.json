@@ -1,0 +1,36 @@
+{
+  "cities": [
+    "Amsterdam",
+    "Berlin",
+    "Athens"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003107",
+  "sourceDocumentId": "107-circle-3p-seeded-shuffle-return-tkt-03",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Athens",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

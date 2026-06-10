@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "London",
+    "Munich"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002109",
+  "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

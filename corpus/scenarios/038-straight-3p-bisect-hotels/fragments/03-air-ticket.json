@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "JFK",
-      "to": "ATH",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Copenhagen",
+    "Dublin"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002038",
   "sourceDocumentId": "038-straight-3p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

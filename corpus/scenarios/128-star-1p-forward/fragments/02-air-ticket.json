@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "FRA",
-      "to": "OSL",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Athens",
+    "Prague"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002128",
   "sourceDocumentId": "128-star-1p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "ATH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

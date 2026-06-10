@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "London",
+    "Milan"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002119",
+  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

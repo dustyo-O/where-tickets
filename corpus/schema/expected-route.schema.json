@@ -21,19 +21,78 @@
       "type": "array",
       "items": { "$ref": "#/$defs/transit" }
     },
+    "unattachedDocuments": {
+      "type": "array",
+      "description": "Supplementary documents that carry no routable place. DUS-31 Slice 5: optional / defaulted so the existing 192-corpus expected-routes continue to validate.",
+      "items": { "$ref": "#/$defs/unattachedDocument" }
+    },
     "notes": { "type": "string" }
   },
   "$defs": {
     "isoDateTime": { "type": "string", "format": "date-time" },
-    "cityCode": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "cityName": { "type": "string", "minLength": 1 },
     "accommodation": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["checkInAt", "checkOutAt"],
+      "required": ["checkInAt", "checkOutAt", "kind", "identifier"],
       "properties": {
         "checkInAt": { "$ref": "#/$defs/isoDateTime" },
         "checkOutAt": { "$ref": "#/$defs/isoDateTime" },
-        "hotelName": { "type": "string", "minLength": 1 }
+        "kind": {
+          "type": "string",
+          "description": "Accommodation subtype. DUS-31 Slice 5 widens to include `airbnb`.",
+          "enum": ["hotel", "airbnb"]
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Printed property name as it appears on the document.",
+          "minLength": 1
+        }
+      }
+    },
+    "venue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "identifier"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Venue subtype.",
+          "enum": ["sightseeing", "parking", "other"]
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Printed venue identifier.",
+          "minLength": 1
+        },
+        "validFromAt": { "$ref": "#/$defs/isoDateTime" },
+        "validToAt": { "$ref": "#/$defs/isoDateTime" }
+      }
+    },
+    "priceEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": { "type": "number", "minimum": 0 },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" }
+      }
+    },
+    "unattachedDocument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceDocumentId", "documentType"],
+      "properties": {
+        "sourceDocumentId": { "type": "string", "minLength": 1 },
+        "documentType": { "const": "supplementary" },
+        "prices": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/priceEntry" }
+        },
+        "qrCodes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
       }
     },
     "stop": {
@@ -41,7 +100,7 @@
       "additionalProperties": false,
       "required": ["city", "travelers"],
       "properties": {
-        "city": { "$ref": "#/$defs/cityCode" },
+        "city": { "$ref": "#/$defs/cityName" },
         "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
         "departureAt": { "$ref": "#/$defs/isoDateTime" },
         "travelers": {
@@ -53,6 +112,11 @@
         "accommodations": {
           "type": "array",
           "items": { "$ref": "#/$defs/accommodation" }
+        },
+        "venues": {
+          "type": "array",
+          "description": "Venues attached to this stop. DUS-31 Slice 5: optional / defaulted so the existing 192-corpus expected-routes continue to validate.",
+          "items": { "$ref": "#/$defs/venue" }
         }
       }
     },
@@ -61,11 +125,11 @@
       "additionalProperties": false,
       "required": ["from", "to", "mode", "departureAt", "arrivalAt", "travelers", "sourceFragmentId"],
       "properties": {
-        "from": { "$ref": "#/$defs/cityCode" },
-        "to": { "$ref": "#/$defs/cityCode" },
+        "from": { "$ref": "#/$defs/cityName" },
+        "to": { "$ref": "#/$defs/cityName" },
         "mode": {
           "type": "string",
-          "enum": ["air", "bus", "train"]
+          "enum": ["air", "bus", "rail"]
         },
         "departureAt": { "$ref": "#/$defs/isoDateTime" },
         "arrivalAt": { "$ref": "#/$defs/isoDateTime" },

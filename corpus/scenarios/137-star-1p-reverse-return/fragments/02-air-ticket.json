@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "DUB",
-      "to": "ARN",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Amsterdam",
+    "Zurich"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002137",
   "sourceDocumentId": "137-star-1p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Zurich",
+      "identifier": "ZRH",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

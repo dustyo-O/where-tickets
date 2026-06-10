@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "BCN",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Frankfurt"
+  ],
   "confirmationCode": "HTL003028",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
   "sourceDocumentId": "028-straight-2p-forward-return-hotels-htl-03",
   "travelers": [
     "traveler-1",

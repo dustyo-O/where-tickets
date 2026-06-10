@@ -1,1 +1,1 @@
-star 6-leg, 1 traveler, primary mode train, fragments seeded-shuffle
+star 6-leg, 1 traveler, primary mode rail, fragments seeded-shuffle

@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2027-05-03T15:00:00",
+      "check_out_datetime": "2027-05-06T11:00:00",
+      "city": "Lisbon",
+      "identifier": "Hotel Saint-Cloud Rive Gauche",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Lisbon"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 380.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-03-rail-out-hotel-back-1pax-paris-lisbon/02-hotel-1"
+  ],
+  "scenario_id": "03-rail-out-hotel-back-1pax-paris-lisbon/02-hotel-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

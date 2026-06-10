@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "HEL",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ROM",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "LIS",
+      "city": "Paris",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "CDG",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ROM",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1"
       ]
@@ -43,10 +43,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "HEL",
+      "from": "Stockholm",
       "mode": "bus",
       "sourceFragmentId": "064-circle-1p-forward-tkt-01",
-      "to": "ROM",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1"
       ]
@@ -54,10 +54,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ROM",
+      "from": "Helsinki",
       "mode": "bus",
       "sourceFragmentId": "064-circle-1p-forward-tkt-01",
-      "to": "LIS",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -65,10 +65,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LIS",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "064-circle-1p-forward-tkt-01",
-      "to": "CDG",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1"
       ]
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CDG",
+      "from": "Barcelona",
       "mode": "air",
       "sourceFragmentId": "064-circle-1p-forward-tkt-02",
-      "to": "ROM",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1"
       ]

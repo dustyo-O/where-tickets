@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ZRH",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -12,11 +12,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "BER",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -27,11 +28,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "FRA",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -42,11 +44,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "BER",
+      "city": "London",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -57,11 +60,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "DUB",
+      "city": "Madrid",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1"
@@ -72,11 +76,12 @@
         {
           "checkInAt": "2027-03-04T15:00:00Z",
           "checkOutAt": "2027-03-05T09:00:00Z",
-          "hotelName": "Harbor View"
+          "identifier": "Harbor View",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "BER",
+      "city": "London",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1"
@@ -84,7 +89,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "LIS",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1"
       ]
@@ -94,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
-      "mode": "train",
+      "from": "Prague",
+      "mode": "rail",
       "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-01",
-      "to": "BER",
+      "to": "London",
       "travelers": [
         "traveler-1"
       ]
@@ -105,10 +110,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "BER",
-      "mode": "train",
+      "from": "London",
+      "mode": "rail",
       "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-01",
-      "to": "FRA",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1"
       ]
@@ -116,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "FRA",
-      "mode": "train",
+      "from": "Istanbul",
+      "mode": "rail",
       "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-01",
-      "to": "BER",
+      "to": "London",
       "travelers": [
         "traveler-1"
       ]
@@ -127,10 +132,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BER",
-      "mode": "bus",
+      "from": "London",
+      "mode": "air",
       "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-02",
-      "to": "DUB",
+      "to": "Madrid",
       "travelers": [
         "traveler-1"
       ]
@@ -138,10 +143,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "DUB",
-      "mode": "train",
+      "from": "Madrid",
+      "mode": "rail",
       "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-03",
-      "to": "BER",
+      "to": "London",
       "travelers": [
         "traveler-1"
       ]
@@ -149,10 +154,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "BER",
-      "mode": "train",
+      "from": "London",
+      "mode": "rail",
       "sourceFragmentId": "134-star-1p-bisect-hotels-tkt-03",
-      "to": "LIS",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1"
       ]

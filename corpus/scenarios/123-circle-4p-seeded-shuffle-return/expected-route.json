@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "OSL",
+      "city": "Milan",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ZRH",
+      "city": "Rome",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "SVO",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "VIE",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "MXP",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "ZRH",
+      "city": "Rome",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -67,7 +67,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "OSL",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -80,10 +80,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "OSL",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "123-circle-4p-seeded-shuffle-return-tkt-01",
-      "to": "ZRH",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -94,10 +94,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ZRH",
+      "from": "Rome",
       "mode": "air",
       "sourceFragmentId": "123-circle-4p-seeded-shuffle-return-tkt-01",
-      "to": "SVO",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "SVO",
+      "from": "Lisbon",
       "mode": "air",
       "sourceFragmentId": "123-circle-4p-seeded-shuffle-return-tkt-01",
-      "to": "VIE",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -122,10 +122,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "VIE",
-      "mode": "train",
+      "from": "Dublin",
+      "mode": "bus",
       "sourceFragmentId": "123-circle-4p-seeded-shuffle-return-tkt-02",
-      "to": "MXP",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -136,10 +136,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MXP",
+      "from": "Barcelona",
       "mode": "air",
       "sourceFragmentId": "123-circle-4p-seeded-shuffle-return-tkt-03",
-      "to": "ZRH",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -150,10 +150,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "ZRH",
+      "from": "Rome",
       "mode": "air",
       "sourceFragmentId": "123-circle-4p-seeded-shuffle-return-tkt-03",
-      "to": "OSL",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",

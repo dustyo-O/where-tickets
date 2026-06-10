@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "HEL",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "MXP",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "LIS",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "CPH",
+      "city": "Madrid",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "MXP",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -48,10 +48,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "HEL",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "082-circle-2p-bisect-tkt-01",
-      "to": "MXP",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -60,10 +60,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MXP",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "082-circle-2p-bisect-tkt-01",
-      "to": "LIS",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "LIS",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "082-circle-2p-bisect-tkt-01",
-      "to": "CPH",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CPH",
-      "mode": "train",
+      "from": "Madrid",
+      "mode": "rail",
       "sourceFragmentId": "082-circle-2p-bisect-tkt-02",
-      "to": "MXP",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"

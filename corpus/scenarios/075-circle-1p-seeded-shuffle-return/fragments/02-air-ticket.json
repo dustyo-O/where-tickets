@@ -1,25 +1,41 @@
 {
+  "cities": [
+    "Munich",
+    "Helsinki",
+    "Vienna",
+    "Rome"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001075",
+  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
+  "stations": [
     {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "LHR",
-      "to": "HEL",
-      "vehicleNumber": "KL104"
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "HEL",
-      "to": "AMS",
-      "vehicleNumber": "KL105"
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Vienna",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Rome",
+      "identifier": "ROM",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003075",
-  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
   "travelers": [
     "traveler-1"
   ]

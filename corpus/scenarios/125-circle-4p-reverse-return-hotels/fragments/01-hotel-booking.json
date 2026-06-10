@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-04T15:00:00Z",
-  "checkOutAt": "2027-03-05T09:00:00Z",
-  "city": "VIE",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Rome",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Rome"
+  ],
   "confirmationCode": "HTL005125",
   "documentType": "hotel-booking",
-  "hotelName": "Harbor View",
   "sourceDocumentId": "125-circle-4p-reverse-return-hotels-htl-05",
   "travelers": [
     "traveler-1",

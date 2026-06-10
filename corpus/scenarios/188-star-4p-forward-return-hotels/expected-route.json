@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "LIS",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -15,11 +15,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "WAW",
+      "city": "Dublin",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,11 +34,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "MAD",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,11 +53,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "WAW",
+      "city": "Dublin",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,11 +72,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "FRA",
+      "city": "Vienna",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -87,11 +91,12 @@
         {
           "checkInAt": "2027-03-04T15:00:00Z",
           "checkOutAt": "2027-03-05T09:00:00Z",
-          "hotelName": "Harbor View"
+          "identifier": "Harbor View",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "WAW",
+      "city": "Dublin",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -105,11 +110,12 @@
         {
           "checkInAt": "2027-03-05T12:00:00Z",
           "checkOutAt": "2027-03-06T06:00:00Z",
-          "hotelName": "City Garden"
+          "identifier": "City Garden",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "ROM",
+      "city": "London",
       "departureAt": "2027-03-06T06:00:00Z",
       "travelers": [
         "traveler-1",
@@ -120,7 +126,7 @@
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "LIS",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -133,10 +139,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LIS",
-      "mode": "train",
+      "from": "Helsinki",
+      "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
-      "to": "WAW",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -147,10 +153,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Dublin",
+      "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
-      "to": "MAD",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -161,10 +167,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "MAD",
-      "mode": "train",
+      "from": "Paris",
+      "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
-      "to": "WAW",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -175,10 +181,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "WAW",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-02",
-      "to": "FRA",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -189,10 +195,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "FRA",
-      "mode": "train",
+      "from": "Vienna",
+      "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
-      "to": "WAW",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -203,10 +209,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Dublin",
+      "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
-      "to": "ROM",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -217,10 +223,10 @@
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
       "departureAt": "2027-03-06T06:00:00Z",
-      "from": "ROM",
-      "mode": "train",
+      "from": "London",
+      "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
-      "to": "LIS",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",

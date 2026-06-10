@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Barcelona",
+    "Copenhagen"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002172",
+  "sourceDocumentId": "172-star-3p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

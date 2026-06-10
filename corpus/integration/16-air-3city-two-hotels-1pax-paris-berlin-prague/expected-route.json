@@ -1,0 +1,100 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2028-06-01T08:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-06-01T10:30:00Z",
+      "city": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-06-01T15:00:00Z",
+          "checkOutAt": "2028-06-03T11:00:00Z",
+          "identifier": "Hotel Spreebogen Mitte",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Berlin",
+      "departureAt": "2028-06-03T13:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-06-03T14:15:00Z",
+      "city": "Prague",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-06-03T16:00:00Z",
+          "checkOutAt": "2028-06-05T11:00:00Z",
+          "identifier": "Hotel Vltava Riverside",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Prague",
+      "departureAt": "2028-06-05T17:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-06-05T19:30:00Z",
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-06-01T10:30:00Z",
+      "departureAt": "2028-06-01T08:30:00Z",
+      "from": "Paris",
+      "mode": "air",
+      "sourceFragmentId": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/01-air-leg-1.pdf",
+      "to": "Berlin",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-06-03T14:15:00Z",
+      "departureAt": "2028-06-03T13:00:00Z",
+      "from": "Berlin",
+      "mode": "air",
+      "sourceFragmentId": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/03-air-leg-2.pdf",
+      "to": "Prague",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-06-05T19:30:00Z",
+      "departureAt": "2028-06-05T17:00:00Z",
+      "from": "Prague",
+      "mode": "air",
+      "sourceFragmentId": "layer2/16-air-3city-two-hotels-1pax-paris-berlin-prague/05-air-leg-3.pdf",
+      "to": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

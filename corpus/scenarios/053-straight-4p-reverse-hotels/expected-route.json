@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "MAD",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -15,11 +15,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ARN",
+      "city": "Athens",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,11 +34,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "FRA",
+      "city": "Rome",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,11 +53,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "VIE",
+      "city": "Paris",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -66,7 +69,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "AMS",
+      "city": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +82,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MAD",
-      "mode": "train",
+      "from": "Berlin",
+      "mode": "rail",
       "sourceFragmentId": "053-straight-4p-reverse-hotels-tkt-01",
-      "to": "ARN",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -93,10 +96,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ARN",
-      "mode": "train",
+      "from": "Athens",
+      "mode": "rail",
       "sourceFragmentId": "053-straight-4p-reverse-hotels-tkt-01",
-      "to": "FRA",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -107,10 +110,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "FRA",
-      "mode": "train",
+      "from": "Rome",
+      "mode": "rail",
       "sourceFragmentId": "053-straight-4p-reverse-hotels-tkt-01",
-      "to": "VIE",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -121,10 +124,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "VIE",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "053-straight-4p-reverse-hotels-tkt-02",
-      "to": "AMS",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",

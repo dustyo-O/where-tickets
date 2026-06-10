@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Madrid",
+    "Milan",
+    "Dublin"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR003105",
+  "sourceDocumentId": "105-circle-3p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MUC",
-      "to": "MXP",
-      "vehicleNumber": "KL104"
+      "city": "Milan",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "MXP",
-      "to": "BCN",
-      "vehicleNumber": "KL105"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR003105",
-  "sourceDocumentId": "105-circle-3p-reverse-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

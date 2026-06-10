@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ARN",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "WAW",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "ZRH",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "BCN",
+      "city": "Frankfurt",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "ARN",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ARN",
+      "from": "Helsinki",
       "mode": "bus",
       "sourceFragmentId": "043-straight-3p-seeded-shuffle-return-tkt-01",
-      "to": "WAW",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -66,10 +66,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "WAW",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "043-straight-3p-seeded-shuffle-return-tkt-01",
-      "to": "ZRH",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ZRH",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "043-straight-3p-seeded-shuffle-return-tkt-01",
-      "to": "BCN",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "BCN",
-      "mode": "train",
+      "from": "Frankfurt",
+      "mode": "air",
       "sourceFragmentId": "043-straight-3p-seeded-shuffle-return-tkt-02",
-      "to": "ARN",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",

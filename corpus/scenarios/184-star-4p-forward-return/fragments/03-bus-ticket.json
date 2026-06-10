@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Prague",
+    "Copenhagen",
+    "Berlin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR003184",
+  "sourceDocumentId": "184-star-4p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "MXP",
-      "to": "BCN",
-      "vehicleNumber": "EU104"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "from": "BCN",
-      "to": "LIS",
-      "vehicleNumber": "EU105"
+      "city": "Berlin",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR003184",
-  "sourceDocumentId": "184-star-4p-forward-return-tkt-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "AMS",
-  "confirmationCode": "HTL002111",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Oslo",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Oslo"
+  ],
+  "confirmationCode": "HTL005111",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
-  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-htl-02",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-htl-05",
   "travelers": [
     "traveler-1",
     "traveler-2",

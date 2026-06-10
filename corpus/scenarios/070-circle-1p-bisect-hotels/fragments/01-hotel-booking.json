@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "SVO",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Milan",
+      "identifier": "Old Town Hostel",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Milan"
+  ],
   "confirmationCode": "HTL002070",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
   "sourceDocumentId": "070-circle-1p-bisect-hotels-htl-02",
   "travelers": [
     "traveler-1"

@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Barcelona",
+    "Rome"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002177",
+  "sourceDocumentId": "177-star-4p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

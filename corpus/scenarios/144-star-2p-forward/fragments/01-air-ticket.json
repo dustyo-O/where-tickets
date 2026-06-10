@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Moscow",
+    "Frankfurt",
+    "Stockholm"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001144",
+  "sourceDocumentId": "144-star-2p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ROM",
-      "to": "FRA",
-      "vehicleNumber": "LO100"
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
-      "to": "WAW",
-      "vehicleNumber": "LO101"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "WAW",
-      "to": "FRA",
-      "vehicleNumber": "LO102"
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001144",
-  "sourceDocumentId": "144-star-2p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

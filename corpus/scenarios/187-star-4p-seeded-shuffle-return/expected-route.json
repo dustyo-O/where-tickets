@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "AMS",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "VIE",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "CPH",
+      "city": "Milan",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "VIE",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "WAW",
+      "city": "Rome",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "VIE",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -67,7 +67,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "AMS",
+      "city": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -80,10 +80,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
-      "to": "VIE",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -94,10 +94,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "VIE",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
-      "to": "CPH",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CPH",
+      "from": "Milan",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
-      "to": "VIE",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -122,10 +122,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "VIE",
-      "mode": "train",
+      "from": "Copenhagen",
+      "mode": "rail",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-02",
-      "to": "WAW",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -136,10 +136,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "WAW",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-03",
-      "to": "VIE",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -150,10 +150,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "VIE",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-03",
-      "to": "AMS",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",

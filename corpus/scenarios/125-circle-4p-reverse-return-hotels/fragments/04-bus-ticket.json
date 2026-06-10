@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Zurich",
+    "Madrid"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002125",
+  "sourceDocumentId": "125-circle-4p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

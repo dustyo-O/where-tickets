@@ -1,0 +1,37 @@
+{
+  "cities": [
+    "Warsaw",
+    "Stockholm",
+    "Istanbul"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003176",
+  "sourceDocumentId": "176-star-4p-forward-tkt-03",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

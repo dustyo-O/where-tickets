@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "from": "DUB",
-      "to": "SVO",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Lisbon",
+    "Copenhagen"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003081",
   "sourceDocumentId": "081-circle-2p-reverse-tkt-03",
+  "stations": [
+    {
+      "city": "Lisbon",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "LIS",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

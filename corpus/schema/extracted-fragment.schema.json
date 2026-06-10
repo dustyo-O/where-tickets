@@ -6,42 +6,85 @@
   "type": "object",
   "oneOf": [
     { "$ref": "#/$defs/transitTicket" },
-    { "$ref": "#/$defs/hotelBooking" }
+    { "$ref": "#/$defs/hotelBooking" },
+    { "$ref": "#/$defs/supplementary" }
   ],
   "$defs": {
     "isoDateTime": {
       "type": "string",
       "format": "date-time"
     },
-    "cityCode": {
+    "cityName": {
       "type": "string",
-      "pattern": "^[A-Z]{3}$"
+      "minLength": 1
     },
     "traveler": {
       "type": "string",
       "minLength": 1
     },
-    "leg": {
+    "placeEntry": {
+      "type": "object",
+      "description": "Shared core shape for structured place arrays (currently `stations` on transit tickets; mirrors the PDF corpus's `placeEntry` def). Each concrete array composes this with a bucket-specific datetime fragment via `allOf` + `unevaluatedProperties: false` and narrows `kind` via its own enum.",
+      "required": ["city", "kind", "identifier"],
+      "properties": {
+        "city": { "$ref": "#/$defs/cityName" },
+        "kind": {
+          "type": "string",
+          "description": "Subtype of the place. Each array narrows this to its own enum (see the concrete array's `items.properties.kind`)."
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Stable identifier as printed on the document - IATA code for airports, printed name otherwise.",
+          "minLength": 1
+        }
+      }
+    },
+    "stationDatetimes": {
+      "type": "object",
+      "description": "Optional departure / arrival datetimes for a transit station. An origin has departure only; a terminus has arrival only; a layover or return-leg turnaround has both. Either or both may be absent; per-document-type presence rules are enforced by the rules engine, not by this schema.",
+      "properties": {
+        "departureAt": { "$ref": "#/$defs/isoDateTime" },
+        "arrivalAt": { "$ref": "#/$defs/isoDateTime" }
+      }
+    },
+    "accommodationDatetimes": {
+      "type": "object",
+      "description": "Required check-in / check-out datetimes for an accommodation entry. Mirrors the PDF corpus's accommodationDatetimes def — both endpoints are required.",
+      "required": ["checkInAt", "checkOutAt"],
+      "properties": {
+        "checkInAt": { "$ref": "#/$defs/isoDateTime" },
+        "checkOutAt": { "$ref": "#/$defs/isoDateTime" }
+      }
+    },
+    "venueDatetimes": {
+      "type": "object",
+      "description": "Optional validity window for a venue entry. Either or both may be absent (e.g. an open-dated sightseeing pass). When both are absent the rules engine attaches the venue without a chronological anchor.",
+      "properties": {
+        "validFromAt": { "$ref": "#/$defs/isoDateTime" },
+        "validToAt": { "$ref": "#/$defs/isoDateTime" }
+      }
+    },
+    "priceEntry": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["from", "to", "departureAt", "arrivalAt"],
+      "required": ["amount", "currency"],
       "properties": {
-        "from": { "$ref": "#/$defs/cityCode" },
-        "to": { "$ref": "#/$defs/cityCode" },
-        "departureAt": { "$ref": "#/$defs/isoDateTime" },
-        "arrivalAt": { "$ref": "#/$defs/isoDateTime" },
-        "carrier": { "type": "string", "minLength": 1 },
-        "vehicleNumber": { "type": "string", "minLength": 1 }
+        "amount": { "type": "number", "minimum": 0 },
+        "currency": {
+          "type": "string",
+          "description": "ISO 4217 currency code (3 uppercase letters).",
+          "pattern": "^[A-Z]{3}$"
+        }
       }
     },
     "transitTicket": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["documentType", "sourceDocumentId", "pnr", "travelers", "legs"],
+      "required": ["documentType", "sourceDocumentId", "pnr", "travelers", "cities", "stations"],
       "properties": {
         "documentType": {
           "type": "string",
-          "enum": ["air-ticket", "bus-ticket", "train-ticket"]
+          "enum": ["air-ticket", "bus-ticket", "rail-ticket"]
         },
         "sourceDocumentId": { "type": "string", "minLength": 1 },
         "pnr": { "type": "string", "minLength": 1 },
@@ -51,19 +94,48 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/traveler" }
         },
-        "legs": {
+        "cities": {
           "type": "array",
+          "description": "City names exactly as printed on the document, in first-seen order. Distinct from `stations[].city`, which is the per-endpoint printed city — `cities[]` is the deduplicated top-level set used by the engine when classifying same-city collapses.",
           "minItems": 1,
-          "items": { "$ref": "#/$defs/leg" }
+          "items": { "$ref": "#/$defs/cityName" }
+        },
+        "stations": {
+          "type": "array",
+          "description": "Transit endpoints printed on the document (airports, rail stations, bus terminals) in compact form: one entry per visit to a station. An origin has departureAt only, a terminus has arrivalAt only, a layover or return-leg turnaround has both. Every transit ticket has at least one origin and one terminus.",
+          "minItems": 2,
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/stationDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Station subtype.",
+                "enum": ["airport", "rail_station", "bus_terminal"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "IATA code for `airport`; printed station name for `rail_station` / `bus_terminal`.",
+                "minLength": 1
+              }
+            }
+          }
         }
       }
     },
     "hotelBooking": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["documentType", "sourceDocumentId", "confirmationCode", "travelers", "city", "checkInAt", "checkOutAt"],
+      "required": ["documentType", "sourceDocumentId", "confirmationCode", "travelers", "cities", "accommodations"],
       "properties": {
-        "documentType": { "const": "hotel-booking" },
+        "documentType": {
+          "type": "string",
+          "description": "Lodging document subtype. Airbnb routes identically to hotel — DUS-31 Slice 5 widens the enum so the engine accepts both.",
+          "enum": ["hotel-booking", "airbnb-booking"]
+        },
         "sourceDocumentId": { "type": "string", "minLength": 1 },
         "confirmationCode": { "type": "string", "minLength": 1 },
         "travelers": {
@@ -72,10 +144,136 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/traveler" }
         },
-        "city": { "$ref": "#/$defs/cityCode" },
-        "checkInAt": { "$ref": "#/$defs/isoDateTime" },
-        "checkOutAt": { "$ref": "#/$defs/isoDateTime" },
-        "hotelName": { "type": "string", "minLength": 1 }
+        "cities": {
+          "type": "array",
+          "description": "City names exactly as printed on the document, in first-seen order. Distinct from `accommodations[].city`, which is the per-entry printed city — `cities[]` is the deduplicated top-level set used by the engine when classifying same-city collapses.",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/cityName" }
+        },
+        "accommodations": {
+          "type": "array",
+          "description": "Lodging entries printed on the document. Each entry carries its own city, kind (`hotel` or `airbnb`), printed identifier (property name), and required check-in / check-out datetimes.",
+          "minItems": 1,
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/accommodationDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Accommodation subtype.",
+                "enum": ["hotel", "airbnb"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "Printed property name (e.g. \"Hotel Lutetia\").",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "supplementary": {
+      "type": "object",
+      "description": "A supplementary travel document (voucher, sightseeing ticket, parking permit, etc.). DUS-31 Slice 5: routable lists (`stations`, `accommodations`, `venues`) are all optional — a supplementary doc may carry any combination of routable places, or none at all. The rules engine routes whatever is present and, if every routable list is empty, attaches the document to the trip as a no-location entry via `unattachedDocuments`.",
+      "additionalProperties": false,
+      "required": ["documentType", "sourceDocumentId", "travelers"],
+      "properties": {
+        "documentType": { "const": "supplementary" },
+        "sourceDocumentId": { "type": "string", "minLength": 1 },
+        "travelers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/traveler" }
+        },
+        "cities": {
+          "type": "array",
+          "description": "City names exactly as printed on the document, in first-seen order. May be empty for placeless supplementary documents.",
+          "items": { "$ref": "#/$defs/cityName" }
+        },
+        "stations": {
+          "type": "array",
+          "description": "Transit endpoints printed on the document. Treated by the rules engine as independent station events (no leg pairing); pairing is transit-ticket-only.",
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/stationDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Station subtype.",
+                "enum": ["airport", "rail_station", "bus_terminal"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "IATA code for `airport`; printed station name for `rail_station` / `bus_terminal`.",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "accommodations": {
+          "type": "array",
+          "description": "Lodging entries (rare on a supplementary doc but allowed). Routed identically to a hotel-booking accommodation entry.",
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/accommodationDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Accommodation subtype.",
+                "enum": ["hotel", "airbnb"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "Printed property name.",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "venues": {
+          "type": "array",
+          "description": "Venues (sightseeing / parking / other) printed on the document. Each entry carries its own city, kind, printed identifier, and optional validity window. Only `supplementary` fragments carry venues.",
+          "items": {
+            "allOf": [
+              { "$ref": "#/$defs/placeEntry" },
+              { "$ref": "#/$defs/venueDatetimes" }
+            ],
+            "unevaluatedProperties": false,
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "Venue subtype.",
+                "enum": ["sightseeing", "parking", "other"]
+              },
+              "identifier": {
+                "type": "string",
+                "description": "Printed venue identifier (e.g. \"Sagrada Familia\").",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "prices": {
+          "type": "array",
+          "description": "Prices printed on the document. Preserved through to the trip's UI but not consumed by routing.",
+          "items": { "$ref": "#/$defs/priceEntry" }
+        },
+        "qrCodes": {
+          "type": "array",
+          "description": "QR code payloads captured on the document. Preserved through to the trip's UI but not consumed by routing.",
+          "items": { "type": "string", "minLength": 1 }
+        }
       }
     }
   }

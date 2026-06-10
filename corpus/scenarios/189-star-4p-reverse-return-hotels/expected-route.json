@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "CDG",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -15,11 +15,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "IST",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -33,11 +34,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "OSL",
+      "city": "Madrid",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,11 +53,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "IST",
+      "city": "New York",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,11 +72,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "SVO",
+      "city": "Copenhagen",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -84,7 +88,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "CDG",
+      "city": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -97,10 +101,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CDG",
+      "from": "Athens",
       "mode": "air",
       "sourceFragmentId": "189-star-4p-reverse-return-hotels-tkt-01",
-      "to": "IST",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -111,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "IST",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "189-star-4p-reverse-return-hotels-tkt-01",
-      "to": "OSL",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,10 +129,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "OSL",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "189-star-4p-reverse-return-hotels-tkt-01",
-      "to": "IST",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -139,10 +143,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "IST",
-      "mode": "train",
+      "from": "New York",
+      "mode": "bus",
       "sourceFragmentId": "189-star-4p-reverse-return-hotels-tkt-02",
-      "to": "SVO",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -153,10 +157,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "SVO",
+      "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "189-star-4p-reverse-return-hotels-tkt-03",
-      "to": "CDG",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",

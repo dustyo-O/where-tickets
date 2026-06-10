@@ -1,0 +1,45 @@
+{
+  "cities": [
+    "Prague",
+    "London",
+    "Dublin",
+    "Warsaw"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001056",
+  "sourceDocumentId": "056-straight-4p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Dublin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

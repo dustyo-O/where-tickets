@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "BCN",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -14,11 +14,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "DUB",
+      "city": "Athens",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,11 +32,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "LHR",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,11 +50,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "DUB",
+      "city": "Athens",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -65,11 +68,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "CPH",
+      "city": "Lisbon",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -79,7 +83,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "BCN",
+      "city": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -91,10 +95,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "BCN",
+      "from": "Moscow",
       "mode": "air",
       "sourceFragmentId": "174-star-3p-bisect-return-hotels-tkt-01",
-      "to": "DUB",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -104,10 +108,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "DUB",
+      "from": "Athens",
       "mode": "air",
       "sourceFragmentId": "174-star-3p-bisect-return-hotels-tkt-01",
-      "to": "LHR",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -117,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LHR",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "174-star-3p-bisect-return-hotels-tkt-01",
-      "to": "DUB",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -130,10 +134,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "DUB",
-      "mode": "train",
+      "from": "Athens",
+      "mode": "rail",
       "sourceFragmentId": "174-star-3p-bisect-return-hotels-tkt-02",
-      "to": "CPH",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -143,10 +147,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "CPH",
+      "from": "Lisbon",
       "mode": "air",
       "sourceFragmentId": "174-star-3p-bisect-return-hotels-tkt-03",
-      "to": "BCN",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",

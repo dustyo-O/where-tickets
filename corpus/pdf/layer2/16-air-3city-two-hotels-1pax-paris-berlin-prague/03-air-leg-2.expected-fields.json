@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Prague"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 125.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-16-air-3city-two-hotels-1pax-paris-berlin-prague/03-air-leg-2-01"
+  ],
+  "scenario_id": "16-air-3city-two-hotels-1pax-paris-berlin-prague/03-air-leg-2",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2028-06-03T13:00:00",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-06-03T14:15:00",
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

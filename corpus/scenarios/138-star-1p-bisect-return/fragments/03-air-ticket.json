@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Stockholm",
+    "London",
+    "Moscow"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001138",
+  "sourceDocumentId": "138-star-1p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "IST",
-      "to": "VIE",
-      "vehicleNumber": "LO100"
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "VIE",
-      "to": "MXP",
-      "vehicleNumber": "LO101"
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "SVO",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MXP",
-      "to": "VIE",
-      "vehicleNumber": "LO102"
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001138",
-  "sourceDocumentId": "138-star-1p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

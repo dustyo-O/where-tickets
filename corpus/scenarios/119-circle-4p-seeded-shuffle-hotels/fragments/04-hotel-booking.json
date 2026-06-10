@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-01T03:00:00Z",
-  "checkOutAt": "2027-03-01T21:00:00Z",
-  "city": "CDG",
-  "confirmationCode": "HTL001119",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "London",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "London"
+  ],
+  "confirmationCode": "HTL003119",
   "documentType": "hotel-booking",
-  "hotelName": "Riverside Inn",
-  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-htl-01",
+  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

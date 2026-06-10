@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Rome",
+    "London"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002072",
+  "sourceDocumentId": "072-circle-1p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

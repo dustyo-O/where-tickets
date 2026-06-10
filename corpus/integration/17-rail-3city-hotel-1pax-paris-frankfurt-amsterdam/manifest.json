@@ -1,0 +1,17 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/01-rail-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/03-rail-leg-2.pdf"
+    }
+  ],
+  "notes": "Real-shape: rail Paris\u2192Frankfurt, Frankfurt hotel, rail Frankfurt\u2192Amsterdam.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "cities": [
+    "Vienna",
+    "Athens",
+    "New York",
+    "Dublin"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR001067",
+  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "New York",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

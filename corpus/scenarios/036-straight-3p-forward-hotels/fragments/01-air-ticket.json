@@ -1,25 +1,33 @@
 {
+  "cities": [
+    "Istanbul",
+    "Berlin",
+    "Zurich"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001036",
+  "sourceDocumentId": "036-straight-3p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
-      "to": "ZRH",
-      "vehicleNumber": "LO100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ZRH",
-      "to": "CDG",
-      "vehicleNumber": "LO101"
+      "city": "Zurich",
+      "identifier": "ZRH",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001036",
-  "sourceDocumentId": "036-straight-3p-forward-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

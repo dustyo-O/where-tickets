@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Warsaw",
+    "Munich"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002046",
+  "sourceDocumentId": "046-straight-3p-bisect-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

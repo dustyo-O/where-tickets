@@ -1,0 +1,23 @@
+{
+  "accommodations": [],
+  "cities": [
+    "General"
+  ],
+  "document_type": "supplementary",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 15.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "SUPP-OTHER-12-air-supplementary-no-location-1pax-madrid-rome/02-supp-nolocation-1"
+  ],
+  "scenario_id": "12-air-supplementary-no-location-1pax-madrid-rome/02-supp-nolocation-1",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

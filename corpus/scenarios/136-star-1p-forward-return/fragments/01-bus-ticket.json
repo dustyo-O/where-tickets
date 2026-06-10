@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Barcelona",
+    "Berlin",
+    "Vienna"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001136",
+  "sourceDocumentId": "136-star-1p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "BCN",
-      "to": "MUC",
-      "vehicleNumber": "FL100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MUC",
-      "to": "ATH",
-      "vehicleNumber": "FL101"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ATH",
-      "to": "MUC",
-      "vehicleNumber": "FL102"
+      "city": "Berlin",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001136",
-  "sourceDocumentId": "136-star-1p-forward-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

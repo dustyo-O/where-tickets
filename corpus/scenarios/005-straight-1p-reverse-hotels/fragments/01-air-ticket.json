@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Milan"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002005",
+  "sourceDocumentId": "005-straight-1p-reverse-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Milan",
+      "identifier": "MXP",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

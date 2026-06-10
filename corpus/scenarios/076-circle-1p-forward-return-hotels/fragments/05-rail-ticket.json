@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Barcelona",
+    "Warsaw"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002076",
+  "sourceDocumentId": "076-circle-1p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Barcelona",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

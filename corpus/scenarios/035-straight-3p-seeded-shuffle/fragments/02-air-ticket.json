@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "ARN",
-      "to": "SVO",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Warsaw",
+    "Copenhagen"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002035",
   "sourceDocumentId": "035-straight-3p-seeded-shuffle-tkt-02",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "CPH",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "VIE",
-  "confirmationCode": "HTL002095",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Milan",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Milan"
+  ],
+  "confirmationCode": "HTL003095",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
-  "sourceDocumentId": "095-circle-2p-seeded-shuffle-return-hotels-htl-02",
+  "sourceDocumentId": "095-circle-2p-seeded-shuffle-return-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

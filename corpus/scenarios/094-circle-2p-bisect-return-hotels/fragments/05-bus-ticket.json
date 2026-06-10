@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Vienna",
+    "Paris",
+    "Milan",
+    "New York"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001094",
+  "sourceDocumentId": "094-circle-2p-bisect-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
-      "to": "SVO",
-      "vehicleNumber": "FL100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "SVO",
-      "to": "ARN",
-      "vehicleNumber": "FL101"
+      "city": "Milan",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ARN",
-      "to": "MAD",
-      "vehicleNumber": "FL102"
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001094",
-  "sourceDocumentId": "094-circle-2p-bisect-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

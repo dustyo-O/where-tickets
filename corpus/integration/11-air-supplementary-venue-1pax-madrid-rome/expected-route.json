@@ -1,0 +1,42 @@
+{
+  "stops": [
+    {
+      "city": "Madrid",
+      "departureAt": "2028-01-05T08:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-01-05T11:00:00Z",
+      "city": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ],
+      "venues": [
+        {
+          "identifier": "Retiro Botanical Pavilion",
+          "kind": "sightseeing",
+          "validFromAt": "2028-01-06T09:00:00Z",
+          "validToAt": "2028-01-06T18:00:00Z"
+        }
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-01-05T11:00:00Z",
+      "departureAt": "2028-01-05T08:30:00Z",
+      "from": "Madrid",
+      "mode": "air",
+      "sourceFragmentId": "layer2/11-air-supplementary-venue-1pax-madrid-rome/01-air-leg-1.pdf",
+      "to": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

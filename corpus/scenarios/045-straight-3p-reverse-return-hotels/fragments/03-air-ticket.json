@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "New York",
+    "Istanbul",
+    "Copenhagen"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001045",
+  "sourceDocumentId": "045-straight-3p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MAD",
-      "to": "HEL",
-      "vehicleNumber": "LO100"
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "HEL",
-      "to": "ROM",
-      "vehicleNumber": "LO101"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ROM",
-      "to": "MAD",
-      "vehicleNumber": "LO102"
+      "city": "New York",
+      "identifier": "JFK",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001045",
-  "sourceDocumentId": "045-straight-3p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

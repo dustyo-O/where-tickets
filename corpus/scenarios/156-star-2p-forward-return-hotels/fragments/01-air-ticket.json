@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Istanbul",
+    "London",
+    "Amsterdam"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001156",
+  "sourceDocumentId": "156-star-2p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "IST",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ZRH",
-      "to": "CPH",
-      "vehicleNumber": "LO100"
+      "city": "London",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "CPH",
-      "to": "ARN",
-      "vehicleNumber": "LO101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ARN",
-      "to": "CPH",
-      "vehicleNumber": "LO102"
+      "city": "London",
+      "identifier": "LHR",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001156",
-  "sourceDocumentId": "156-star-2p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

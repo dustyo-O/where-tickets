@@ -1,0 +1,17 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/18-air-rail-airbnb-1pax-madrid-rome-florence/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/18-air-rail-airbnb-1pax-madrid-rome-florence/02-airbnb-1.pdf"
+    },
+    {
+      "pdf": "layer2/18-air-rail-airbnb-1pax-madrid-rome-florence/03-rail-leg-1.pdf"
+    }
+  ],
+  "notes": "Air Madrid\u2192Rome, Rome Airbnb, rail Rome\u2192Florence.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

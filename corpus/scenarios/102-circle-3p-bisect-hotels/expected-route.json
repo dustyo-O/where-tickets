@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "ATH",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -14,11 +14,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "HEL",
+      "city": "Milan",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,11 +32,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "LIS",
+      "city": "Berlin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -48,11 +50,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "BER",
+      "city": "Warsaw",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -62,7 +65,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "HEL",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -74,10 +77,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ATH",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
-      "to": "HEL",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -87,10 +90,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "HEL",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
-      "to": "LIS",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +103,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
-      "to": "BER",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -113,10 +116,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BER",
+      "from": "Warsaw",
       "mode": "bus",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-02",
-      "to": "HEL",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",

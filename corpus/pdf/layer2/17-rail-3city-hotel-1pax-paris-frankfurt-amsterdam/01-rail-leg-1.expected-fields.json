@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Frankfurt"
+  ],
+  "document_type": "rail_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 109.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/01-rail-leg-1-01"
+  ],
+  "scenario_id": "17-rail-3city-hotel-1pax-paris-frankfurt-amsterdam/01-rail-leg-1",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2028-07-01T08:00:00",
+      "identifier": "Paris Gare du Nord",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2028-07-01T11:30:00",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

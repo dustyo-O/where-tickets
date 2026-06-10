@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BER",
-      "to": "PRG",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Vienna",
+    "Prague"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002070",
   "sourceDocumentId": "070-circle-1p-bisect-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Prague",
+      "identifier": "PRG",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1"
   ]

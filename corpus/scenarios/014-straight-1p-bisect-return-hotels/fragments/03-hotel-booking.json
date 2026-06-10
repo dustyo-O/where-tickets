@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-03T18:00:00Z",
-  "checkOutAt": "2027-03-04T12:00:00Z",
-  "city": "FRA",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "Amsterdam",
+      "identifier": "Central Lodge",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Amsterdam"
+  ],
   "confirmationCode": "HTL004014",
   "documentType": "hotel-booking",
-  "hotelName": "Central Lodge",
   "sourceDocumentId": "014-straight-1p-bisect-return-hotels-htl-04",
   "travelers": [
     "traveler-1"

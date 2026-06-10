@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Paris",
+    "Lisbon",
+    "Istanbul"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001133",
+  "sourceDocumentId": "133-star-1p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "VIE",
-      "to": "OSL",
-      "vehicleNumber": "FL100"
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "OSL",
-      "to": "MXP",
-      "vehicleNumber": "FL101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "MXP",
-      "to": "OSL",
-      "vehicleNumber": "FL102"
+      "city": "Lisbon",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001133",
-  "sourceDocumentId": "133-star-1p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

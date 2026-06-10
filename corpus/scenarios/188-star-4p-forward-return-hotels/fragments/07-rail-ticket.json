@@ -1,0 +1,45 @@
+{
+  "cities": [
+    "Vienna",
+    "Dublin",
+    "London",
+    "Helsinki"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003188",
+  "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Dublin",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "London",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-06T09:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

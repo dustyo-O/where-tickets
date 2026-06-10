@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "DUB",
-  "confirmationCode": "HTL002031",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Helsinki"
+  ],
+  "confirmationCode": "HTL003031",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
-  "sourceDocumentId": "031-straight-2p-seeded-shuffle-return-hotels-htl-02",
+  "sourceDocumentId": "031-straight-2p-seeded-shuffle-return-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2"

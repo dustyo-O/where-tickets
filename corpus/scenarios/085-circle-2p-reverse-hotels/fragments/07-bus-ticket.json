@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Rome",
+    "Barcelona",
+    "Paris",
+    "Stockholm"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001085",
+  "sourceDocumentId": "085-circle-2p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "CPH",
-      "to": "FRA",
-      "vehicleNumber": "FL100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "FRA",
-      "to": "JFK",
-      "vehicleNumber": "FL101"
+      "city": "Paris",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "JFK",
-      "to": "IST",
-      "vehicleNumber": "FL102"
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001085",
-  "sourceDocumentId": "085-circle-2p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

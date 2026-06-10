@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Rome",
+    "Oslo",
+    "Milan"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001042",
+  "sourceDocumentId": "042-straight-3p-bisect-return-tkt-01",
+  "stations": [
+    {
+      "city": "Rome",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MAD",
-      "to": "MUC",
-      "vehicleNumber": "LO100"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MUC",
-      "to": "AMS",
-      "vehicleNumber": "LO101"
+      "city": "Milan",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "AMS",
-      "to": "MAD",
-      "vehicleNumber": "LO102"
+      "city": "Rome",
+      "identifier": "ROM",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001042",
-  "sourceDocumentId": "042-straight-3p-bisect-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "CDG",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Stockholm"
+  ],
   "confirmationCode": "HTL003141",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
   "sourceDocumentId": "141-star-1p-reverse-return-hotels-htl-03",
   "travelers": [
     "traveler-1"

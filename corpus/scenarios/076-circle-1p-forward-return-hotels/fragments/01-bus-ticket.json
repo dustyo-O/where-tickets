@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Oslo",
+    "Warsaw",
+    "Athens",
+    "Barcelona"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001076",
+  "sourceDocumentId": "076-circle-1p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Oslo",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MUC",
-      "to": "JFK",
-      "vehicleNumber": "FL100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "JFK",
-      "to": "LHR",
-      "vehicleNumber": "FL101"
+      "city": "Athens",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LHR",
-      "to": "BER",
-      "vehicleNumber": "FL102"
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001076",
-  "sourceDocumentId": "076-circle-1p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1"
   ]

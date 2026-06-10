@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-03T18:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-03T15:00:00Z",
-      "from": "BCN",
-      "to": "JFK",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Frankfurt",
+    "Helsinki"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002028",
   "sourceDocumentId": "028-straight-2p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Helsinki",
+      "identifier": "HEL",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2"

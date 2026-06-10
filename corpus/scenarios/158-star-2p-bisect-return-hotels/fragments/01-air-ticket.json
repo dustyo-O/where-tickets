@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Helsinki",
+    "Athens"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002158",
+  "sourceDocumentId": "158-star-2p-bisect-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Athens",
+      "identifier": "ATH",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

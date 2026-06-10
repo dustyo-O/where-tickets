@@ -1,0 +1,18 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/07-air-out-hotel-back-2pax-london-vienna/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/07-air-out-hotel-back-2pax-london-vienna/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/07-air-out-hotel-back-2pax-london-vienna/03-air-leg-2.pdf"
+    }
+  ],
+  "notes": "Air out + Vienna hotel + air back, 2 travelers.",
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ]
+}

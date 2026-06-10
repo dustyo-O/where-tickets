@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Berlin",
+    "Copenhagen",
+    "Oslo"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001184",
+  "sourceDocumentId": "184-star-4p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LIS",
-      "to": "BCN",
-      "vehicleNumber": "FL100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "BCN",
-      "to": "IST",
-      "vehicleNumber": "FL101"
+      "city": "Oslo",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Oslo Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "IST",
-      "to": "BCN",
-      "vehicleNumber": "FL102"
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001184",
-  "sourceDocumentId": "184-star-4p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Paris",
+    "Frankfurt"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 139.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-05-air-rail-3city-1pax-paris-frankfurt-amsterdam/01-air-leg-1-01"
+  ],
+  "scenario_id": "05-air-rail-3city-1pax-paris-frankfurt-amsterdam/01-air-leg-1",
+  "stations": [
+    {
+      "city": "Paris",
+      "departure_datetime": "2027-07-01T07:30:00",
+      "identifier": "CDG",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-07-01T09:00:00",
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

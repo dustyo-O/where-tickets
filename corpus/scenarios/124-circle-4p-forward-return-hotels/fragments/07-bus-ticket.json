@@ -1,17 +1,25 @@
 {
-  "documentType": "bus-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "Eurolines",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "MXP",
-      "to": "ARN",
-      "vehicleNumber": "EU104"
-    }
+  "cities": [
+    "Munich",
+    "London"
   ],
+  "documentType": "bus-ticket",
   "pnr": "PNR003124",
   "sourceDocumentId": "124-circle-4p-forward-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "London",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

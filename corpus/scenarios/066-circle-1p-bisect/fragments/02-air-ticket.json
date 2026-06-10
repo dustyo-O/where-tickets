@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Stockholm",
+    "Barcelona",
+    "Amsterdam",
+    "New York"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001066",
+  "sourceDocumentId": "066-circle-1p-bisect-tkt-01",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "ARN",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
-      "to": "LHR",
-      "vehicleNumber": "LO100"
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "BCN",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "LHR",
-      "to": "BER",
-      "vehicleNumber": "LO101"
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "BER",
-      "to": "DUB",
-      "vehicleNumber": "LO102"
+      "city": "New York",
+      "identifier": "JFK",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001066",
-  "sourceDocumentId": "066-circle-1p-bisect-tkt-01",
   "travelers": [
     "traveler-1"
   ]

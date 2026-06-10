@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-04T15:00:00Z",
-      "carrier": "KL",
-      "departureAt": "2027-03-04T12:00:00Z",
-      "from": "ARN",
-      "to": "SVO",
-      "vehicleNumber": "KL104"
-    }
+  "cities": [
+    "Munich",
+    "Frankfurt"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR003108",
   "sourceDocumentId": "108-circle-3p-forward-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

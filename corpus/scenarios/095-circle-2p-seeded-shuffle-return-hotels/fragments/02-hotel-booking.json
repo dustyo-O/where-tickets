@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T21:00:00Z",
-  "checkOutAt": "2027-03-03T15:00:00Z",
-  "city": "ROM",
-  "confirmationCode": "HTL003095",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Amsterdam",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Amsterdam"
+  ],
+  "confirmationCode": "HTL005095",
   "documentType": "hotel-booking",
-  "hotelName": "Plaza Suites",
-  "sourceDocumentId": "095-circle-2p-seeded-shuffle-return-hotels-htl-03",
+  "sourceDocumentId": "095-circle-2p-seeded-shuffle-return-hotels-htl-05",
   "travelers": [
     "traveler-1",
     "traveler-2"

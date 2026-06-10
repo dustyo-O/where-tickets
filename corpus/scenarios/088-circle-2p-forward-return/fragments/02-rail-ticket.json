@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Amsterdam",
+    "New York"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002088",
+  "sourceDocumentId": "088-circle-2p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

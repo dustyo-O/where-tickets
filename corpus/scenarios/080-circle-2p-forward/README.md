@@ -1,1 +1,1 @@
-circle 4-leg, 2 travelers, primary mode train, fragments forward
+circle 4-leg, 2 travelers, primary mode rail, fragments forward

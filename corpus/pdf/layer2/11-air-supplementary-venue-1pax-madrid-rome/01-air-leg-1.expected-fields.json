@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Madrid",
+    "Rome"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 178.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-11-air-supplementary-venue-1pax-madrid-rome/01-air-leg-1-01"
+  ],
+  "scenario_id": "11-air-supplementary-venue-1pax-madrid-rome/01-air-leg-1",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departure_datetime": "2028-01-05T08:30:00",
+      "identifier": "MAD",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-01-05T11:00:00",
+      "city": "Rome",
+      "identifier": "FCO",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

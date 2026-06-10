@@ -1,10 +1,18 @@
 {
-  "checkInAt": "2027-03-04T15:00:00Z",
-  "checkOutAt": "2027-03-05T09:00:00Z",
-  "city": "ARN",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-04T15:00:00Z",
+      "checkOutAt": "2027-03-05T09:00:00Z",
+      "city": "Prague",
+      "identifier": "Harbor View",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
   "confirmationCode": "HTL005157",
   "documentType": "hotel-booking",
-  "hotelName": "Harbor View",
   "sourceDocumentId": "157-star-2p-reverse-return-hotels-htl-05",
   "travelers": [
     "traveler-1",

@@ -1,0 +1,42 @@
+{
+  "cities": [
+    "Vienna",
+    "Madrid",
+    "Berlin"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001152",
+  "sourceDocumentId": "152-star-2p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Madrid",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Madrid",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

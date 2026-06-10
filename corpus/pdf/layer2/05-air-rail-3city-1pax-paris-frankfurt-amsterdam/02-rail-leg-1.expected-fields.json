@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "rail_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 89.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "RAILTKT-05-air-rail-3city-1pax-paris-frankfurt-amsterdam/02-rail-leg-1-01"
+  ],
+  "scenario_id": "05-air-rail-3city-1pax-paris-frankfurt-amsterdam/02-rail-leg-1",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-07-02T08:15:00",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrival_datetime": "2027-07-02T12:25:00",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Centraal",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

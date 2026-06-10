@@ -1,0 +1,41 @@
+{
+  "cities": [
+    "Moscow",
+    "Berlin",
+    "London"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001140",
+  "sourceDocumentId": "140-star-1p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "London",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

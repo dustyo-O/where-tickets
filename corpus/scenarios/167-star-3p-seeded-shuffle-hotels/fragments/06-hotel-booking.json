@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-04T15:00:00Z",
-  "checkOutAt": "2027-03-05T09:00:00Z",
-  "city": "VIE",
-  "confirmationCode": "HTL005167",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "Prague",
+      "identifier": "Central Lodge",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "confirmationCode": "HTL004167",
   "documentType": "hotel-booking",
-  "hotelName": "Harbor View",
-  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-htl-05",
+  "sourceDocumentId": "167-star-3p-seeded-shuffle-hotels-htl-04",
   "travelers": [
     "traveler-1",
     "traveler-2",

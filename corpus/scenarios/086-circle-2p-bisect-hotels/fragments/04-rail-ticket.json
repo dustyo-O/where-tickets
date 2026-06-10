@@ -1,0 +1,43 @@
+{
+  "cities": [
+    "Munich",
+    "Milan",
+    "Stockholm",
+    "Frankfurt"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001086",
+  "sourceDocumentId": "086-circle-2p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Milan",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Stockholm",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

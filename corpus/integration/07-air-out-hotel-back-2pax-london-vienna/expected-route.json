@@ -1,0 +1,74 @@
+{
+  "stops": [
+    {
+      "city": "London",
+      "departureAt": "2027-09-05T08:00:00Z",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    },
+    {
+      "arrivalAt": "2027-09-05T11:30:00Z",
+      "city": "Vienna",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-09-05T15:00:00Z",
+          "checkOutAt": "2027-09-08T11:00:00Z",
+          "identifier": "Hotel Kensington Garden Court",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Vienna",
+      "departureAt": "2027-09-08T16:30:00Z",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    },
+    {
+      "arrivalAt": "2027-09-08T18:30:00Z",
+      "city": "London",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-09-05T11:30:00Z",
+      "departureAt": "2027-09-05T08:00:00Z",
+      "from": "London",
+      "mode": "air",
+      "sourceFragmentId": "layer2/07-air-out-hotel-back-2pax-london-vienna/01-air-leg-1.pdf",
+      "to": "Vienna",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    },
+    {
+      "arrivalAt": "2027-09-08T18:30:00Z",
+      "departureAt": "2027-09-08T16:30:00Z",
+      "from": "Vienna",
+      "mode": "air",
+      "sourceFragmentId": "layer2/07-air-out-hotel-back-2pax-london-vienna/03-air-leg-2.pdf",
+      "to": "London",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ]
+}

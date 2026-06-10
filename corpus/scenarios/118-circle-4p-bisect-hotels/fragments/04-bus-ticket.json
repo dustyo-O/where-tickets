@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Amsterdam",
+    "Prague",
+    "Lisbon",
+    "Dublin"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001118",
+  "sourceDocumentId": "118-circle-4p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ATH",
-      "to": "ARN",
-      "vehicleNumber": "FL100"
+      "city": "Prague",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ARN",
-      "to": "IST",
-      "vehicleNumber": "FL101"
+      "city": "Lisbon",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "IST",
-      "to": "ZRH",
-      "vehicleNumber": "FL102"
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001118",
-  "sourceDocumentId": "118-circle-4p-bisect-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

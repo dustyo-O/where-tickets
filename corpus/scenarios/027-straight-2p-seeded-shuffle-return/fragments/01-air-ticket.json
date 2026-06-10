@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Dublin",
+    "Helsinki",
+    "Rome"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001027",
+  "sourceDocumentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "WAW",
-      "to": "ROM",
-      "vehicleNumber": "LO100"
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ROM",
-      "to": "OSL",
-      "vehicleNumber": "LO101"
+      "city": "Rome",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "ROM",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "OSL",
-      "to": "WAW",
-      "vehicleNumber": "LO102"
+      "city": "Dublin",
+      "identifier": "DUB",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001027",
-  "sourceDocumentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

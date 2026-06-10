@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Berlin",
+    "Vienna"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 140.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-20-air-3city-return-1pax-paris-berlin-vienna/03-air-leg-2-01"
+  ],
+  "scenario_id": "20-air-3city-return-1pax-paris-berlin-vienna/03-air-leg-2",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departure_datetime": "2028-10-03T13:00:00",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2028-10-03T14:30:00",
+      "city": "Vienna",
+      "identifier": "VIE",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

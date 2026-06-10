@@ -1,0 +1,22 @@
+{
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Moscow",
+      "identifier": "Plaza Suites",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Moscow"
+  ],
+  "confirmationCode": "HTL003175",
+  "documentType": "hotel-booking",
+  "sourceDocumentId": "175-star-3p-seeded-shuffle-return-hotels-htl-03",
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

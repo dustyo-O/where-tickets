@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Warsaw",
+    "Moscow"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002020",
+  "sourceDocumentId": "020-straight-2p-forward-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Moscow",
+      "identifier": "Moscow Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

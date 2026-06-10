@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Frankfurt",
+    "Moscow"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002143",
+  "sourceDocumentId": "143-star-1p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Moscow",
+      "identifier": "SVO",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

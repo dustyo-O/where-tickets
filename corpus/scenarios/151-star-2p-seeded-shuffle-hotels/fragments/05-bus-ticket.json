@@ -1,0 +1,42 @@
+{
+  "cities": [
+    "Madrid",
+    "Athens",
+    "Rome"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR001151",
+  "sourceDocumentId": "151-star-2p-seeded-shuffle-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Madrid Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Athens",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Rome",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

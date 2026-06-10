@@ -1,0 +1,67 @@
+{
+  "stops": [
+    {
+      "city": "Madrid",
+      "departureAt": "2028-08-01T08:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-08-01T11:00:00Z",
+      "city": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-08-01T15:00:00Z",
+          "checkOutAt": "2028-08-04T11:00:00Z",
+          "identifier": "Bright Flat in Malasana",
+          "kind": "airbnb"
+        }
+      ],
+      "city": "Rome",
+      "departureAt": "2028-08-04T13:30:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-08-04T15:15:00Z",
+      "city": "Florence",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-08-01T11:00:00Z",
+      "departureAt": "2028-08-01T08:30:00Z",
+      "from": "Madrid",
+      "mode": "air",
+      "sourceFragmentId": "layer2/18-air-rail-airbnb-1pax-madrid-rome-florence/01-air-leg-1.pdf",
+      "to": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-08-04T15:15:00Z",
+      "departureAt": "2028-08-04T13:30:00Z",
+      "from": "Rome",
+      "mode": "rail",
+      "sourceFragmentId": "layer2/18-air-rail-airbnb-1pax-madrid-rome-florence/03-rail-leg-1.pdf",
+      "to": "Florence",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

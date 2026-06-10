@@ -1,0 +1,35 @@
+{
+  "cities": [
+    "Munich",
+    "Berlin",
+    "Milan"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003089",
+  "sourceDocumentId": "089-circle-2p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Prague",
+    "Berlin",
+    "Rome",
+    "New York"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001112",
+  "sourceDocumentId": "112-circle-4p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LIS",
-      "to": "PRG",
-      "vehicleNumber": "FL100"
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "PRG",
-      "to": "CDG",
-      "vehicleNumber": "FL101"
+      "city": "Rome",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CDG",
-      "to": "MAD",
-      "vehicleNumber": "FL102"
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001112",
-  "sourceDocumentId": "112-circle-4p-forward-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

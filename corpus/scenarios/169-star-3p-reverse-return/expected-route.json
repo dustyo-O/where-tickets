@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "LIS",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "MUC",
+      "city": "Rome",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "CDG",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "MUC",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "BER",
+      "city": "Berlin",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "MUC",
+      "city": "Rome",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,7 +61,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "LIS",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LIS",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "169-star-3p-reverse-return-tkt-01",
-      "to": "MUC",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "MUC",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "169-star-3p-reverse-return-tkt-01",
-      "to": "CDG",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "CDG",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "169-star-3p-reverse-return-tkt-01",
-      "to": "MUC",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -112,10 +112,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "MUC",
-      "mode": "air",
+      "from": "Rome",
+      "mode": "rail",
       "sourceFragmentId": "169-star-3p-reverse-return-tkt-02",
-      "to": "BER",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "BER",
+      "from": "Berlin",
       "mode": "bus",
       "sourceFragmentId": "169-star-3p-reverse-return-tkt-03",
-      "to": "MUC",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -138,10 +138,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "MUC",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "169-star-3p-reverse-return-tkt-03",
-      "to": "LIS",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",

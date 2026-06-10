@@ -1,0 +1,18 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/19-air-hotel-venue-2pax-london-paris/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/19-air-hotel-venue-2pax-london-paris/02-hotel-1.pdf"
+    },
+    {
+      "pdf": "layer2/19-air-hotel-venue-2pax-london-paris/03-supp-sightseeing-1.pdf"
+    }
+  ],
+  "notes": "2pax: air London\u2192Paris + Paris hotel + Paris sightseeing.",
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ]
+}

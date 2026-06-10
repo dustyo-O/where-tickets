@@ -1,0 +1,45 @@
+{
+  "cities": [
+    "London",
+    "Athens",
+    "Helsinki",
+    "Prague"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001116",
+  "sourceDocumentId": "116-circle-4p-forward-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Athens",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Prague",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

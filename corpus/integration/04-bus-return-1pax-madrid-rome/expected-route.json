@@ -1,0 +1,53 @@
+{
+  "stops": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-06-02T06:15:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-06-02T12:45:00Z",
+      "city": "Rome",
+      "departureAt": "2027-06-06T15:45:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-06-06T22:15:00Z",
+      "city": "Madrid",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-06-02T12:45:00Z",
+      "departureAt": "2027-06-02T06:15:00Z",
+      "from": "Madrid",
+      "mode": "bus",
+      "sourceFragmentId": "layer2/04-bus-return-1pax-madrid-rome/01-bus-return-1.pdf",
+      "to": "Rome",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-06-06T22:15:00Z",
+      "departureAt": "2027-06-06T15:45:00Z",
+      "from": "Rome",
+      "mode": "bus",
+      "sourceFragmentId": "layer2/04-bus-return-1pax-madrid-rome/01-bus-return-1.pdf",
+      "to": "Madrid",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

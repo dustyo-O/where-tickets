@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Warsaw",
+    "Stockholm",
+    "Lisbon",
+    "Frankfurt"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001040",
+  "sourceDocumentId": "040-straight-3p-forward-return-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "BER",
-      "to": "SVO",
-      "vehicleNumber": "FL100"
+      "city": "Stockholm",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "SVO",
-      "to": "DUB",
-      "vehicleNumber": "FL101"
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "DUB",
-      "to": "AMS",
-      "vehicleNumber": "FL102"
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001040",
-  "sourceDocumentId": "040-straight-3p-forward-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

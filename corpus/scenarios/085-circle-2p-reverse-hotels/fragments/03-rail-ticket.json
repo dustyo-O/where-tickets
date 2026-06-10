@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Stockholm",
+    "Copenhagen"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002085",
+  "sourceDocumentId": "085-circle-2p-reverse-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

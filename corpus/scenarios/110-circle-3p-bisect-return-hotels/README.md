@@ -1,1 +1,1 @@
-circle 4-leg, 3 travelers, primary mode train, return trip, hotels, fragments bisect
+circle 4-leg, 3 travelers, primary mode rail, return trip, hotels, fragments bisect

@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "CPH",
-      "to": "WAW",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Dublin",
+    "Helsinki"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002185",
   "sourceDocumentId": "185-star-4p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "DUB",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Helsinki",
+      "identifier": "HEL",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

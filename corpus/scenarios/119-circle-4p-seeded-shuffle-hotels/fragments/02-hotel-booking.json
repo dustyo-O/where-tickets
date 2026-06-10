@@ -1,11 +1,19 @@
 {
-  "checkInAt": "2027-03-02T00:00:00Z",
-  "checkOutAt": "2027-03-02T18:00:00Z",
-  "city": "SVO",
-  "confirmationCode": "HTL002119",
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Vienna",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Vienna"
+  ],
+  "confirmationCode": "HTL001119",
   "documentType": "hotel-booking",
-  "hotelName": "Old Town Hostel",
-  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-htl-02",
+  "sourceDocumentId": "119-circle-4p-seeded-shuffle-hotels-htl-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

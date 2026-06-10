@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Amsterdam",
+    "Copenhagen"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002017",
+  "sourceDocumentId": "017-straight-2p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Paris",
+    "London",
+    "Munich"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001037",
+  "sourceDocumentId": "037-straight-3p-reverse-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MUC",
-      "to": "WAW",
-      "vehicleNumber": "FL100"
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "WAW",
-      "to": "SVO",
-      "vehicleNumber": "FL101"
+      "city": "London",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "SVO",
-      "to": "ROM",
-      "vehicleNumber": "FL102"
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001037",
-  "sourceDocumentId": "037-straight-3p-reverse-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

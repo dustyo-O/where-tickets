@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "MXP",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -13,11 +13,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "WAW",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -29,11 +30,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "LIS",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,11 +47,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "WAW",
+      "city": "Helsinki",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,11 +64,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "ROM",
+      "city": "Athens",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -77,11 +81,12 @@
         {
           "checkInAt": "2027-03-04T15:00:00Z",
           "checkOutAt": "2027-03-05T09:00:00Z",
-          "hotelName": "Harbor View"
+          "identifier": "Harbor View",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "WAW",
+      "city": "Helsinki",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -93,11 +98,12 @@
         {
           "checkInAt": "2027-03-05T12:00:00Z",
           "checkOutAt": "2027-03-06T06:00:00Z",
-          "hotelName": "City Garden"
+          "identifier": "City Garden",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "HEL",
+      "city": "Vienna",
       "departureAt": "2027-03-06T06:00:00Z",
       "travelers": [
         "traveler-1",
@@ -106,7 +112,7 @@
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "MXP",
+      "city": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -117,10 +123,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
-      "mode": "train",
+      "from": "Zurich",
+      "mode": "rail",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-01",
-      "to": "WAW",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -129,10 +135,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Helsinki",
+      "mode": "rail",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-01",
-      "to": "LIS",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -141,10 +147,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "LIS",
-      "mode": "train",
+      "from": "Milan",
+      "mode": "rail",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-01",
-      "to": "WAW",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -153,10 +159,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "WAW",
-      "mode": "bus",
+      "from": "Helsinki",
+      "mode": "air",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-02",
-      "to": "ROM",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -165,10 +171,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "ROM",
-      "mode": "train",
+      "from": "Athens",
+      "mode": "rail",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-03",
-      "to": "WAW",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -177,10 +183,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Helsinki",
+      "mode": "rail",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-03",
-      "to": "HEL",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -189,10 +195,10 @@
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
       "departureAt": "2027-03-06T06:00:00Z",
-      "from": "HEL",
-      "mode": "train",
+      "from": "Vienna",
+      "mode": "rail",
       "sourceFragmentId": "158-star-2p-bisect-return-hotels-tkt-03",
-      "to": "MXP",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2"

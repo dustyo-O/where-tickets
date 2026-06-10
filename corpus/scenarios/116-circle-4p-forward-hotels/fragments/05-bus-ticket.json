@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Prague",
+    "Athens"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002116",
+  "sourceDocumentId": "116-circle-4p-forward-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

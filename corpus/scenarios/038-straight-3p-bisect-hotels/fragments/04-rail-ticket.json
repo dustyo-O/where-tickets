@@ -1,0 +1,44 @@
+{
+  "cities": [
+    "Munich",
+    "New York",
+    "Zurich",
+    "Copenhagen"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001038",
+  "sourceDocumentId": "038-straight-3p-bisect-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "New York",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Zurich",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

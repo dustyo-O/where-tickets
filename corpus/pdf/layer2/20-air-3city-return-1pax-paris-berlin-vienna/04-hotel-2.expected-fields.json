@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-10-03T16:00:00",
+      "check_out_datetime": "2028-10-05T11:00:00",
+      "city": "Vienna",
+      "identifier": "Hotel Westend Residenz",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Vienna"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 290.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-20-air-3city-return-1pax-paris-berlin-vienna/04-hotel-2"
+  ],
+  "scenario_id": "20-air-3city-return-1pax-paris-berlin-vienna/04-hotel-2",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

@@ -1,0 +1,67 @@
+{
+  "stops": [
+    {
+      "city": "Paris",
+      "departureAt": "2027-05-03T07:45:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-05-03T10:55:00Z",
+      "city": "Lisbon",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2027-05-03T15:00:00Z",
+          "checkOutAt": "2027-05-06T11:00:00Z",
+          "identifier": "Hotel Saint-Cloud Rive Gauche",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Lisbon",
+      "departureAt": "2027-05-06T17:20:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-05-06T20:30:00Z",
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-05-03T10:55:00Z",
+      "departureAt": "2027-05-03T07:45:00Z",
+      "from": "Paris",
+      "mode": "rail",
+      "sourceFragmentId": "layer2/03-rail-out-hotel-back-1pax-paris-lisbon/01-rail-leg-1.pdf",
+      "to": "Lisbon",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2027-05-06T20:30:00Z",
+      "departureAt": "2027-05-06T17:20:00Z",
+      "from": "Lisbon",
+      "mode": "rail",
+      "sourceFragmentId": "layer2/03-rail-out-hotel-back-1pax-paris-lisbon/03-rail-leg-2.pdf",
+      "to": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

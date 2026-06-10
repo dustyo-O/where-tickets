@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "MXP",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -14,11 +14,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "ZRH",
+      "city": "Berlin",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +29,7 @@
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "CDG",
+      "city": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -40,10 +41,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "MXP",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "036-straight-3p-forward-hotels-tkt-01",
-      "to": "ZRH",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -53,10 +54,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ZRH",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "036-straight-3p-forward-hotels-tkt-01",
-      "to": "CDG",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",

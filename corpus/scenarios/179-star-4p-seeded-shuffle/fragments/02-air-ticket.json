@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Milan",
+    "Barcelona"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002179",
+  "sourceDocumentId": "179-star-4p-seeded-shuffle-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Barcelona",
+      "identifier": "BCN",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

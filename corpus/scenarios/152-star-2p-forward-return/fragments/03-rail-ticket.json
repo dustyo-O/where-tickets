@@ -1,0 +1,43 @@
+{
+  "cities": [
+    "Zurich",
+    "Madrid",
+    "Moscow",
+    "Vienna"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003152",
+  "sourceDocumentId": "152-star-2p-forward-return-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Madrid",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Madrid Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Moscow",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T03:00:00Z",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

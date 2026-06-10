@@ -1,0 +1,42 @@
+{
+  "cities": [
+    "Zurich",
+    "Amsterdam",
+    "Milan",
+    "Stockholm"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR003137",
+  "sourceDocumentId": "137-star-1p-reverse-return-tkt-03",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Milan",
+      "departureAt": "2027-03-03T00:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T03:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

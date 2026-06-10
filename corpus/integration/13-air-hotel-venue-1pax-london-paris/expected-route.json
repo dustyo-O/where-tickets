@@ -1,0 +1,56 @@
+{
+  "stops": [
+    {
+      "city": "London",
+      "departureAt": "2028-03-01T08:00:00Z",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "arrivalAt": "2028-03-01T10:15:00Z",
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    },
+    {
+      "accommodations": [
+        {
+          "checkInAt": "2028-03-01T15:00:00Z",
+          "checkOutAt": "2028-03-04T11:00:00Z",
+          "identifier": "Hotel Lutece Marais",
+          "kind": "hotel"
+        }
+      ],
+      "city": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ],
+      "venues": [
+        {
+          "identifier": "Atelier Lumiere Museum",
+          "kind": "sightseeing",
+          "validFromAt": "2028-03-02T10:00:00Z",
+          "validToAt": "2028-03-02T18:00:00Z"
+        }
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2028-03-01T10:15:00Z",
+      "departureAt": "2028-03-01T08:00:00Z",
+      "from": "London",
+      "mode": "air",
+      "sourceFragmentId": "layer2/13-air-hotel-venue-1pax-london-paris/01-air-leg-1.pdf",
+      "to": "Paris",
+      "travelers": [
+        "Ines Marques"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ]
+}

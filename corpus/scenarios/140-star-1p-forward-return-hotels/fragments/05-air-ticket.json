@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Berlin",
+    "Lisbon"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002140",
+  "sourceDocumentId": "140-star-1p-forward-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Berlin",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

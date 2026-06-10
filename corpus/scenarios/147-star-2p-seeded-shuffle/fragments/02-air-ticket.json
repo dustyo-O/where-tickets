@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Warsaw",
+    "Madrid"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001147",
+  "sourceDocumentId": "147-star-2p-seeded-shuffle-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "LIS",
-      "to": "ATH",
-      "vehicleNumber": "LO100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "ATH",
-      "to": "PRG",
-      "vehicleNumber": "LO101"
+      "city": "Madrid",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "MAD",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "PRG",
-      "to": "ATH",
-      "vehicleNumber": "LO102"
+      "city": "Warsaw",
+      "identifier": "WAW",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001147",
-  "sourceDocumentId": "147-star-2p-seeded-shuffle-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

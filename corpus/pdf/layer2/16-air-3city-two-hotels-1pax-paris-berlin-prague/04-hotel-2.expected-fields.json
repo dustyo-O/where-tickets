@@ -1,0 +1,31 @@
+{
+  "accommodations": [
+    {
+      "check_in_datetime": "2028-06-03T16:00:00",
+      "check_out_datetime": "2028-06-05T11:00:00",
+      "city": "Prague",
+      "identifier": "Hotel Vltava Riverside",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Prague"
+  ],
+  "document_type": "hotel_booking",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 240.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "HOTBKG-16-air-3city-two-hotels-1pax-paris-berlin-prague/04-hotel-2"
+  ],
+  "scenario_id": "16-air-3city-two-hotels-1pax-paris-berlin-prague/04-hotel-2",
+  "stations": [],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

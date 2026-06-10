@@ -1,0 +1,44 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Amsterdam"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 224.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-02-air-return-1pax-frankfurt-amsterdam/01-air-return-1-01"
+  ],
+  "scenario_id": "02-air-return-1pax-frankfurt-amsterdam/01-air-return-1",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-04-01T09:00:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-04-01T10:30:00",
+      "city": "Amsterdam",
+      "departure_datetime": "2027-04-05T17:00:00",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-04-05T18:30:00",
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "Frankfurt",
+    "Munich",
+    "Vienna",
+    "Helsinki"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR001108",
+  "sourceDocumentId": "108-circle-3p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "SVO",
-      "to": "ARN",
-      "vehicleNumber": "LO100"
+      "city": "Munich",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ARN",
-      "to": "ZRH",
-      "vehicleNumber": "LO101"
+      "city": "Vienna",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "ZRH",
-      "to": "MAD",
-      "vehicleNumber": "LO102"
+      "city": "Helsinki",
+      "identifier": "HEL",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001108",
-  "sourceDocumentId": "108-circle-3p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

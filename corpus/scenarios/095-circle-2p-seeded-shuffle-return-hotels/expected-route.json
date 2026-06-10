@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "PRG",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -13,11 +13,12 @@
         {
           "checkInAt": "2027-03-01T03:00:00Z",
           "checkOutAt": "2027-03-01T21:00:00Z",
-          "hotelName": "Riverside Inn"
+          "identifier": "Riverside Inn",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "WAW",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -29,11 +30,12 @@
         {
           "checkInAt": "2027-03-02T00:00:00Z",
           "checkOutAt": "2027-03-02T18:00:00Z",
-          "hotelName": "Old Town Hostel"
+          "identifier": "Old Town Hostel",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "VIE",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,11 +47,12 @@
         {
           "checkInAt": "2027-03-02T21:00:00Z",
           "checkOutAt": "2027-03-03T15:00:00Z",
-          "hotelName": "Plaza Suites"
+          "identifier": "Plaza Suites",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "ROM",
+      "city": "Milan",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,11 +64,12 @@
         {
           "checkInAt": "2027-03-03T18:00:00Z",
           "checkOutAt": "2027-03-04T12:00:00Z",
-          "hotelName": "Central Lodge"
+          "identifier": "Central Lodge",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "LIS",
+      "city": "New York",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -77,11 +81,12 @@
         {
           "checkInAt": "2027-03-04T15:00:00Z",
           "checkOutAt": "2027-03-05T09:00:00Z",
-          "hotelName": "Harbor View"
+          "identifier": "Harbor View",
+          "kind": "hotel"
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "WAW",
+      "city": "Amsterdam",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -90,7 +95,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "PRG",
+      "city": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -101,10 +106,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "PRG",
-      "mode": "train",
+      "from": "Rome",
+      "mode": "rail",
       "sourceFragmentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "WAW",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -113,10 +118,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Amsterdam",
+      "mode": "rail",
       "sourceFragmentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "VIE",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -125,10 +130,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "VIE",
-      "mode": "train",
+      "from": "Barcelona",
+      "mode": "rail",
       "sourceFragmentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "ROM",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -137,10 +142,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "ROM",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-02",
-      "to": "LIS",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -149,10 +154,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "LIS",
-      "mode": "train",
+      "from": "New York",
+      "mode": "rail",
       "sourceFragmentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "WAW",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -161,10 +166,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "WAW",
-      "mode": "train",
+      "from": "Amsterdam",
+      "mode": "rail",
       "sourceFragmentId": "095-circle-2p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "PRG",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2"

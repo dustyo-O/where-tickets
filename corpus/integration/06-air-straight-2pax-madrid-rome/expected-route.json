@@ -1,0 +1,38 @@
+{
+  "stops": [
+    {
+      "city": "Madrid",
+      "departureAt": "2027-08-01T10:00:00Z",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    },
+    {
+      "arrivalAt": "2027-08-01T12:30:00Z",
+      "city": "Rome",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    }
+  ],
+  "transits": [
+    {
+      "arrivalAt": "2027-08-01T12:30:00Z",
+      "departureAt": "2027-08-01T10:00:00Z",
+      "from": "Madrid",
+      "mode": "air",
+      "sourceFragmentId": "layer2/06-air-straight-2pax-madrid-rome/01-air-leg-1.pdf",
+      "to": "Rome",
+      "travelers": [
+        "Ines Marques",
+        "Lucas Costa"
+      ]
+    }
+  ],
+  "travelers": [
+    "Ines Marques",
+    "Lucas Costa"
+  ]
+}

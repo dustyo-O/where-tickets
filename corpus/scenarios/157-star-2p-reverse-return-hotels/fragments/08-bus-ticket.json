@@ -1,33 +1,40 @@
 {
+  "cities": [
+    "Munich",
+    "Prague",
+    "Istanbul"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001157",
+  "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "JFK",
-      "to": "ARN",
-      "vehicleNumber": "FL100"
+      "city": "Prague",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "ARN",
-      "to": "AMS",
-      "vehicleNumber": "FL101"
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "AMS",
-      "to": "ARN",
-      "vehicleNumber": "FL102"
+      "city": "Prague",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001157",
-  "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2"

@@ -1,0 +1,37 @@
+{
+  "accommodations": [],
+  "cities": [
+    "Frankfurt",
+    "Berlin"
+  ],
+  "document_type": "air_ticket",
+  "pdf_kind": "text",
+  "prices": [
+    {
+      "amount": 125.0,
+      "currency": "EUR"
+    }
+  ],
+  "qr_codes": [
+    "AIRTKT-10-divergent-travelers-mid-trip-2pax-paris-frankfurt-berlin/02-air-leg-2-01"
+  ],
+  "scenario_id": "10-divergent-travelers-mid-trip-2pax-paris-frankfurt-berlin/02-air-leg-2",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departure_datetime": "2027-12-02T09:00:00",
+      "identifier": "FRA",
+      "kind": "airport"
+    },
+    {
+      "arrival_datetime": "2027-12-02T10:00:00",
+      "city": "Berlin",
+      "identifier": "BER",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "Ines Marques"
+  ],
+  "venues": []
+}

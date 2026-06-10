@@ -1,33 +1,33 @@
 {
+  "cities": [
+    "Copenhagen",
+    "Helsinki",
+    "Munich"
+  ],
   "documentType": "air-ticket",
-  "legs": [
+  "pnr": "PNR003075",
+  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
+  "stations": [
     {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "AMS",
-      "to": "HEL",
-      "vehicleNumber": "LO100"
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "CPH",
+      "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "HEL",
-      "to": "ZRH",
-      "vehicleNumber": "LO101"
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Helsinki",
+      "departureAt": "2027-03-02T16:00:00Z",
+      "identifier": "HEL",
+      "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "LO",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "ZRH",
-      "to": "CDG",
-      "vehicleNumber": "LO102"
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
+      "kind": "airport"
     }
   ],
-  "pnr": "PNR001075",
-  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
   "travelers": [
     "traveler-1"
   ]

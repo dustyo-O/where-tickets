@@ -1,0 +1,14 @@
+{
+  "documents": [
+    {
+      "pdf": "layer2/12-air-supplementary-no-location-1pax-madrid-rome/01-air-leg-1.pdf"
+    },
+    {
+      "pdf": "layer2/12-air-supplementary-no-location-1pax-madrid-rome/02-supp-nolocation-1.pdf"
+    }
+  ],
+  "notes": "Single air leg Madrid\u2192Rome + a supplementary doc with NO venue / no station / no accommodation. Lands as an unattachedDocument.",
+  "travelers": [
+    "Ines Marques"
+  ]
+}

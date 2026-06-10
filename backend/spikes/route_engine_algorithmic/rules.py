@@ -3,12 +3,13 @@
 ``build_ops(route, fragment)`` translates a single fragment into an ordered op
 list ready for :func:`spikes.route_engine_llm.operations.apply`.
 
-Slice 4 scope: transit-ticket fragments (any leg count) AND hotel-booking
-fragments folded into empty OR non-empty routes, with the per-traveler-per-slot
-identity classifier (:func:`classify_event`) deciding CREATE-vs-ENRICH for
-every event regardless of role. The classifier is a faithful code translation
-of the LLM prompt's three explicit conditions + the arrival-after-departure
-sanity check (see ``spikes.route_engine_llm.prompts.SYSTEM_PROMPT``).
+Slice 4 scope: transit-ticket fragments (any leg count) AND accommodation
+fragments (one or more ``accommodations[]`` entries per fragment) folded into
+empty OR non-empty routes, with the per-traveler-per-slot identity classifier
+(:func:`classify_event`) deciding CREATE-vs-ENRICH for every event regardless
+of role. The classifier is a faithful code translation of the LLM prompt's
+three explicit conditions + the arrival-after-departure sanity check (see
+``spikes.route_engine_llm.prompts.SYSTEM_PROMPT``).
 
 Hotel events ride exactly the same classifier as transit arrivals/departures,
 with two role-specific knobs:
@@ -50,18 +51,28 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import StrEnum
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Literal
 
 from spikes.route_engine_llm.models import (
+    AccommodationFragment,
     Fragment,
-    HotelBookingFragment,
+    FragmentAccommodation,
+    FragmentVenue,
+    Station,
+    SupplementaryFragment,
     TransitTicketFragment,
+    UnattachedDocument,
+    Venue,
     WorkingRoute,
+    city_identity,
 )
 from spikes.route_engine_llm.operations import (
+    AddStations,
     AddTransit,
     AddTravelers,
+    AddUnattachedDocument,
     AttachAccommodation,
+    AttachVenue,
     CreateStop,
     Op,
 )
@@ -81,13 +92,120 @@ __all__ = [
 ]
 
 
+@dataclass(frozen=True, slots=True)
+class _LegView:
+    """Internal view of one ``(departure, arrival)`` pair derived from stations[].
+
+    Replaces the public ``Leg`` model that vanished in DUS-31 Slice 3.
+    Carries both the city strings AND the originating Station objects so the
+    rules can wire ``CreateStop.stations`` and ``AddTransit.origin_station``
+    / ``destination_station`` without re-walking the station list.
+    """
+
+    from_city: str
+    to_city: str
+    from_station: Station
+    to_station: Station
+    departure_at: datetime
+    arrival_at: datetime
+
+
+@dataclass(frozen=True, slots=True)
+class _StationEdge:
+    """One ``(dep|arr, time, station)`` flattening of a single station entry.
+
+    A station with only ``departure_at`` produces one departure edge; with only
+    ``arrival_at`` one arrival edge; with both, two edges (arrival first by
+    sort, then departure). Used by ``_legs_from_stations``.
+    """
+
+    kind: Literal["departure", "arrival"]
+    time: datetime
+    station: Station
+
+
+def _legs_from_stations(stations: list[Station]) -> list[_LegView]:
+    """Derive chronological ``_LegView`` pairs from a compact ``stations[]`` list.
+
+    Each station contributes 0–2 edges. The full edge list is sorted by time
+    and must strictly alternate ``departure -> arrival -> departure -> ...``
+    starting with a departure and ending with an arrival. Consecutive
+    ``(dep_i, arr_i)`` pairs become one ``_LegView``.
+
+    Raises :class:`RuleNotImplementedError` if the input is empty, doesn't
+    alternate, or ends on a departure — the engine surfaces it as
+    :class:`EngineError` so the scenario buckets cleanly.
+    """
+    edges: list[_StationEdge] = []
+    for station in stations:
+        if station.departure_at is not None:
+            edges.append(
+                _StationEdge(
+                    kind="departure", time=station.departure_at, station=station
+                )
+            )
+        if station.arrival_at is not None:
+            edges.append(
+                _StationEdge(kind="arrival", time=station.arrival_at, station=station)
+            )
+
+    if not edges:
+        msg = "transit ticket has no station datetimes (cannot derive any leg)"
+        raise RuleNotImplementedError(msg)
+
+    # Sort by time. For a station with both arrival and departure (layover /
+    # return turnaround), arrival precedes departure as a tiebreak — but the
+    # alternation check below will refuse any pathological input where two
+    # consecutive edges are the same kind.
+    edges.sort(key=lambda e: (e.time, 0 if e.kind == "arrival" else 1))
+
+    if len(edges) % 2 != 0:
+        msg = (
+            f"transit ticket has an odd number of station events ({len(edges)}); "
+            "cannot pair into (departure, arrival) legs"
+        )
+        raise RuleNotImplementedError(msg)
+
+    legs: list[_LegView] = []
+    expected: Literal["departure", "arrival"] = "departure"
+    pending_dep: _StationEdge | None = None
+    for edge in edges:
+        if edge.kind != expected:
+            msg = (
+                "transit ticket station events do not strictly alternate "
+                f"departure -> arrival (saw {edge.kind!r} when expecting "
+                f"{expected!r})"
+            )
+            raise RuleNotImplementedError(msg)
+        if expected == "departure":
+            pending_dep = edge
+            expected = "arrival"
+        else:
+            assert pending_dep is not None  # noqa: S101 (alternation guarantee)
+            legs.append(
+                _LegView(
+                    from_city=pending_dep.station.city,
+                    to_city=edge.station.city,
+                    from_station=pending_dep.station,
+                    to_station=edge.station,
+                    departure_at=pending_dep.time,
+                    arrival_at=edge.time,
+                )
+            )
+            pending_dep = None
+            expected = "departure"
+
+    return legs
+
+
 class RuleNotImplementedError(Exception):
     """A fragment shape the current slice does not yet handle.
 
-    Slice 4 covers transit tickets and hotel-booking fragments. The error
-    survives as a safety net for any new fragment shape introduced later —
-    the engine wraps it as an :class:`EngineError` so the scenario buckets
-    cleanly instead of crashing the sweep.
+    Slice 4 covers transit tickets and accommodation fragments (one or more
+    ``accommodations[]`` entries). The error survives as a safety net for any
+    new fragment shape introduced later — the engine wraps it as an
+    :class:`EngineError` so the scenario buckets cleanly instead of crashing
+    the sweep.
     """
 
 
@@ -97,25 +215,35 @@ class EventRole(StrEnum):
     ARRIVAL = "arrival"
     DEPARTURE = "departure"
     ACCOMMODATION = "accommodation"
+    VENUE = "venue"
 
 
 @dataclass(frozen=True, slots=True)
 class Event:
-    """One per-city occurrence implied by a fragment leg or accommodation.
+    """One per-city occurrence implied by a fragment leg, accommodation, or venue.
 
     ``time`` is the chronological anchor used by the classifier. For arrivals
     and departures it's the leg's arrival/departure timestamp; for
-    accommodation it's ``checkInAt``. ``time_end`` is set only for
-    accommodation events (``checkOutAt``); the sanity check uses it to
-    detect a booking whose window is entirely disjoint from the candidate
-    stop's transit-known timing.
+    accommodation it's ``checkInAt``; for a venue it's ``validFromAt`` (or
+    ``validToAt`` as fallback), and may be ``None`` when the venue carries
+    neither timestamp — in that case the venue is attached without a
+    chronological anchor and the classifier short-circuits straight to a
+    same-city ENRICH (or CREATE if no same-city stop exists).
+
+    ``time_end`` is set only for accommodation events (``checkOutAt``); the
+    sanity check uses it to detect a booking whose window is entirely
+    disjoint from the candidate stop's transit-known timing.
+
+    ``venue_identity`` is set only for venue events; the per-stop dedupe key
+    is ``(kind, identifier)``.
     """
 
     city: str
-    time: datetime
+    time: datetime | None
     role: EventRole
     travelers: tuple[str, ...]
     time_end: datetime | None = None
+    venue_identity: tuple[str, str] | None = None
 
 
 class DecisionKind(StrEnum):
@@ -150,16 +278,27 @@ class Decision:
 def build_ops(route: WorkingRoute, fragment: Fragment) -> list[Op]:
     """Translate ``fragment`` into the ordered op list for ``route``.
 
-    Both transit-ticket and hotel-booking fragments are supported. Each event
-    (leg-departure, leg-arrival, accommodation check-in) is routed through
-    :func:`classify_event` to decide CREATE-new vs ENRICH-existing — a single
-    classifier shared across roles.
+    Transit-ticket, accommodation, and supplementary fragments are all
+    supported. Each event (leg-departure, leg-arrival, accommodation check-in,
+    venue) is routed through :func:`classify_event` (or, for venues without a
+    chronological anchor, a venue-specific resolver) to decide CREATE-new vs
+    ENRICH-existing — a single classifier framework shared across roles.
+
+    DUS-31 Slice 5: airbnb fragments arrive as ``AccommodationFragment`` with
+    ``document_type == "airbnb-booking"`` and ride the accommodation path —
+    the ``kind`` discriminator flows through to the attached accommodation
+    unchanged. Supplementary fragments route any routable lists they carry
+    via the existing helpers; if every routable list is empty, the fragment
+    becomes one :class:`UnattachedDocument` on the working route.
     """
     if isinstance(fragment, TransitTicketFragment):
         return _build_ops_transit(route, fragment)
 
-    if isinstance(fragment, HotelBookingFragment):
-        return _build_ops_hotel(route, fragment)
+    if isinstance(fragment, AccommodationFragment):
+        return _build_ops_accommodation(route, fragment)
+
+    if isinstance(fragment, SupplementaryFragment):
+        return _build_ops_supplementary(route, fragment)
 
     # pragma: no cover - Fragment is a closed union; this is defensive.
     msg = f"unknown fragment type: {type(fragment).__name__}"
@@ -169,10 +308,13 @@ def build_ops(route: WorkingRoute, fragment: Fragment) -> list[Op]:
 def _build_ops_transit(
     route: WorkingRoute, fragment: TransitTicketFragment
 ) -> list[Op]:
-    """Translate a transit-ticket fragment into ops (per-leg arrival/departure)."""
-    if not fragment.legs:  # pragma: no cover - schema forbids empty legs
-        msg = "transit ticket has no legs"
-        raise RuleNotImplementedError(msg)
+    """Translate a transit-ticket fragment into ops (per-leg arrival/departure).
+
+    The fragment carries ``stations[]`` in compact form; ``_legs_from_stations``
+    expands it into chronological ``_LegView`` pairs that the classifier then
+    consumes exactly the way the pre-Slice-3 ``Leg`` objects did.
+    """
+    legs = _legs_from_stations(fragment.stations)
 
     mode = _ticket_mode(fragment.document_type)
     travelers = list(fragment.travelers)
@@ -187,36 +329,39 @@ def _build_ops_transit(
     # Example B reasoning, where the fragment's OWN cities count as the
     # intervening different-city stops between an event and an existing
     # same-city stop.
-    fragment_events = _fragment_events_transit(fragment)
+    fragment_events = _fragment_events_transit(legs)
     state = _BatchState()
 
-    def _resolve_event(event: Event) -> str:
+    def _resolve_event(event: Event, station: Station) -> str:
         return _resolve_or_create(
             route=route,
             event=event,
+            station=station,
             pending=pending,
             fragment_events=fragment_events,
             state=state,
             ops=ops,
         )
 
-    # Walk legs in fragment order. Each leg = (from-departure event, to-arrival event).
-    for leg in fragment.legs:
+    # Walk legs in chronological order. Each leg = (from-departure event,
+    # to-arrival event); each event carries the originating Station so the
+    # applier can stamp it onto the resulting stop / transit.
+    for leg in legs:
         from_event = Event(
-            city=leg.from_,
+            city=leg.from_city,
             time=leg.departure_at,
             role=EventRole.DEPARTURE,
             travelers=travelers_t,
         )
         to_event = Event(
-            city=leg.to,
+            city=leg.to_city,
             time=leg.arrival_at,
             role=EventRole.ARRIVAL,
             travelers=travelers_t,
         )
 
-        from_handle = _resolve_event(from_event)
-        to_handle = _resolve_event(to_event)
+        from_handle = _resolve_event(from_event, leg.from_station)
+        to_handle = _resolve_event(to_event, leg.to_station)
 
         ops.append(
             AddTransit.model_validate(
@@ -228,6 +373,8 @@ def _build_ops_transit(
                     "arrivalAt": leg.arrival_at,
                     "travelers": list(travelers),
                     "sourceFragmentId": source_id,
+                    "originStation": leg.from_station.model_dump(by_alias=True),
+                    "destinationStation": leg.to_station.model_dump(by_alias=True),
                 }
             )
         )
@@ -235,40 +382,306 @@ def _build_ops_transit(
     return ops
 
 
-def _build_ops_hotel(route: WorkingRoute, fragment: HotelBookingFragment) -> list[Op]:
-    """Translate a hotel-booking fragment into ops.
+def _build_ops_accommodation(
+    route: WorkingRoute, fragment: AccommodationFragment
+) -> list[Op]:
+    """Translate an accommodation-bearing fragment into ops.
 
-    One accommodation event ``(city, check_in_at, check_out_at, travelers)``
-    is routed through the same :func:`classify_event` used for transit events.
+    DUS-31 Slice 4: the fragment carries a list of ``accommodations[]``;
+    each entry is treated as one independent accommodation event
+    ``(city, check_in_at, check_out_at, travelers, kind, identifier)`` and
+    routed through the same :func:`classify_event` used for transit events.
 
-    Decision mapping:
+    Multi-entry semantics: the per-batch ledger persists across the loop, so
+    a second accommodation at the same city sees the first one's effects
+    (the classifier's condition (c) treats a freshly-pending booking with a
+    different check-in time as a filled slot and forces CREATE).
+
+    Decision mapping (per entry):
     - CREATE → emit ``create_stop`` (chronologically positioned), then
       ``attach_accommodation`` to that ref. If the booking has any travelers
       AND the new stop is hotel-only (no transit will land on it from this
-      fragment — always true for hotel-booking fragments) emit a final
+      fragment — always true for accommodation fragments) emit a final
       ``add_travelers`` so the projector finds them — incident transits would
       otherwise be the only source of travelers on a stop.
     - ENRICH(target_stop_id) → emit just ``attach_accommodation`` on the
       target. The target's travelers are already populated (either from its
       incident transits via projection, or via a prior ``add_travelers`` on a
-      hotel-only stop), so we don't re-emit them.
+      hotel-only stop), so we re-emit only the names the target hasn't seen.
     """
     travelers = list(fragment.travelers)
     travelers_t = tuple(travelers)
 
     pending = _PendingLedger.from_route(route)
-    fragment_events: dict[str, list[datetime]] = {fragment.city: [fragment.check_in_at]}
+    fragment_events = _fragment_events_accommodations(fragment.accommodations)
     state = _BatchState()
 
-    event = Event(
-        city=fragment.city,
-        time=fragment.check_in_at,
-        role=EventRole.ACCOMMODATION,
-        travelers=travelers_t,
-        time_end=fragment.check_out_at,
-    )
+    ops: list[Op] = []
+    for accom in fragment.accommodations:
+        event = Event(
+            city=accom.city,
+            time=accom.check_in_at,
+            role=EventRole.ACCOMMODATION,
+            travelers=travelers_t,
+            time_end=accom.check_out_at,
+        )
+
+        handle = _resolve_or_create(
+            route=route,
+            event=event,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        )
+
+        # Whether the resolved handle refers to a brand-new batch-created stop
+        # (vs an existing route stop or an in-batch ref already created earlier).
+        is_new_batch_stop = handle in state.batch_refs
+
+        ops.append(
+            AttachAccommodation.model_validate(
+                {
+                    "stopId": handle,
+                    "checkInAt": accom.check_in_at,
+                    "checkOutAt": accom.check_out_at,
+                    "kind": accom.kind,
+                    "identifier": accom.identifier,
+                }
+            )
+        )
+
+        # Travelers wiring (per-entry):
+        # - On a freshly-minted hotel-only stop the projector has no incident
+        #   transits to derive travelers from, so we wire ALL of them explicitly.
+        # - When ENRICHing an existing stop, the prior travelers are already
+        #   visible via incident transits (or an earlier add_travelers). But a
+        #   booking may bring NEW travelers the stop hasn't seen — those would
+        #   never surface through projection because the accommodation model
+        #   doesn't carry travelers. Emit an add_travelers for only the novel
+        #   names so multi-pax hotels enrich correctly.
+        if travelers:
+            if is_new_batch_stop:
+                ops.append(
+                    AddTravelers.model_validate(
+                        {"stopId": handle, "travelers": list(travelers)}
+                    )
+                )
+            else:
+                existing_travelers = _resolved_stop_travelers(route, handle)
+                novel = [t for t in travelers if t not in existing_travelers]
+                if novel:
+                    ops.append(
+                        AddTravelers.model_validate(
+                            {"stopId": handle, "travelers": novel}
+                        )
+                    )
+
+    return ops
+
+
+def _build_ops_supplementary(
+    route: WorkingRoute, fragment: SupplementaryFragment
+) -> list[Op]:
+    """Translate a supplementary fragment into ops.
+
+    DUS-31 Slice 5. Three nested decisions:
+
+    1. **Stations** on a supplementary doc are NOT paired into legs (pairing
+       is transit-ticket-only). Each station entry contributes one event with
+       whatever timestamps it carries — an origin-only station produces a
+       single DEPARTURE event; a terminus-only one a single ARRIVAL; a
+       layover both. With no time the station event is skipped (no signal
+       to route on).
+    2. **Accommodations** route via the same per-entry path as
+       :class:`AccommodationFragment` — including widened ``kind`` and
+       per-entry ``add_travelers`` for hotel-only stops.
+    3. **Venues** route via the venue resolver below — time anchor is
+       ``validFromAt`` (or ``validToAt`` as fallback), or ``None`` for an
+       unanchored venue. Per-stop dedupe by ``(kind, identifier)``.
+
+    If every routable list is empty (no stations, no accommodations, no
+    venues), the fragment becomes one :class:`UnattachedDocument` on the
+    working route. A supplementary doc with at least one routable place is
+    NEVER also unattached (per functional spec §2.4: "stays attached to the
+    trip as a 'no-location document'" applies only when there's nothing
+    routable).
+    """
+    travelers = list(fragment.travelers)
+    travelers_t = tuple(travelers)
+
+    pending = _PendingLedger.from_route(route)
+    # Pre-collect every event the fragment will emit so condition (b) sees
+    # the fragment's OWN other cities as intervening time anchors when
+    # classifying earlier-in-the-batch events. Mirrors the transit /
+    # accommodation pipelines.
+    fragment_events = _supplementary_fragment_events(fragment)
+    state = _BatchState()
 
     ops: list[Op] = []
+    routed_any = False
+
+    # 1. Stations — independent events, no leg pairing.
+    for station in fragment.stations:
+        if _build_ops_supplementary_station(
+            route=route,
+            station=station,
+            travelers_t=travelers_t,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        ):
+            routed_any = True
+
+    # 2. Accommodations — reuse the per-entry accommodation pipeline.
+    for accom in fragment.accommodations:
+        _build_ops_supplementary_accommodation(
+            route=route,
+            accom=accom,
+            travelers=travelers,
+            travelers_t=travelers_t,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        )
+        routed_any = True
+
+    # 3. Venues — venue resolver.
+    for venue in fragment.venues:
+        _build_ops_supplementary_venue(
+            route=route,
+            venue=venue,
+            travelers_t=travelers_t,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        )
+        routed_any = True
+
+    if routed_any:
+        return ops
+
+    # No routable place — attach the fragment as a no-location document.
+    ops.append(
+        AddUnattachedDocument(
+            document=UnattachedDocument.model_validate(
+                {
+                    "sourceDocumentId": fragment.source_document_id,
+                    "documentType": "supplementary",
+                    "prices": [p.model_dump() for p in fragment.prices],
+                    "qrCodes": list(fragment.qr_codes),
+                }
+            )
+        )
+    )
+    return ops
+
+
+def _supplementary_fragment_events(
+    fragment: SupplementaryFragment,
+) -> dict[str, list[datetime]]:
+    """Union of every (city -> [times]) the supplementary fragment will emit.
+
+    Used by :func:`classify_event` for condition (b)'s intervening-different-
+    city anchor scan. Mirrors the transit/accommodation helpers but unions
+    across stations + accommodations + venues so the fragment's own cities
+    are all visible regardless of which routable list they came from.
+    """
+    by_city: dict[str, list[datetime]] = {}
+    for station in fragment.stations:
+        for anchor in (station.departure_at, station.arrival_at):
+            if anchor is not None:
+                by_city.setdefault(city_identity(station.city), []).append(anchor)
+    for accom in fragment.accommodations:
+        by_city.setdefault(city_identity(accom.city), []).append(accom.check_in_at)
+    for venue in fragment.venues:
+        anchor = venue.valid_from_at or venue.valid_to_at
+        if anchor is None:
+            continue
+        by_city.setdefault(city_identity(venue.city), []).append(anchor)
+    return by_city
+
+
+def _build_ops_supplementary_station(
+    *,
+    route: WorkingRoute,
+    station: Station,
+    travelers_t: tuple[str, ...],
+    pending: _PendingLedger,
+    fragment_events: dict[str, list[datetime]],
+    state: _BatchState,
+    ops: list[Op],
+) -> bool:
+    """Route one supplementary-doc station entry; return True if any op emitted.
+
+    Each station contributes 0–2 events: a DEPARTURE event when
+    ``departure_at`` is set, an ARRIVAL event when ``arrival_at`` is set.
+    Stations with neither time contribute no event (they have no signal to
+    route on and supplementary docs are not transit tickets, so we don't
+    invent a synthetic anchor).
+    """
+    emitted = False
+    if station.departure_at is not None:
+        event = Event(
+            city=station.city,
+            time=station.departure_at,
+            role=EventRole.DEPARTURE,
+            travelers=travelers_t,
+        )
+        _resolve_or_create(
+            route=route,
+            event=event,
+            station=station,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        )
+        emitted = True
+    if station.arrival_at is not None:
+        event = Event(
+            city=station.city,
+            time=station.arrival_at,
+            role=EventRole.ARRIVAL,
+            travelers=travelers_t,
+        )
+        _resolve_or_create(
+            route=route,
+            event=event,
+            station=station,
+            pending=pending,
+            fragment_events=fragment_events,
+            state=state,
+            ops=ops,
+        )
+        emitted = True
+    return emitted
+
+
+def _build_ops_supplementary_accommodation(
+    *,
+    route: WorkingRoute,
+    accom: FragmentAccommodation,
+    travelers: list[str],
+    travelers_t: tuple[str, ...],
+    pending: _PendingLedger,
+    fragment_events: dict[str, list[datetime]],
+    state: _BatchState,
+    ops: list[Op],
+) -> None:
+    """Route one supplementary-doc accommodation entry (delegates to the
+    same emit-pattern as :func:`_build_ops_accommodation`).
+    """
+    event = Event(
+        city=accom.city,
+        time=accom.check_in_at,
+        role=EventRole.ACCOMMODATION,
+        travelers=travelers_t,
+        time_end=accom.check_out_at,
+    )
     handle = _resolve_or_create(
         route=route,
         event=event,
@@ -277,31 +690,20 @@ def _build_ops_hotel(route: WorkingRoute, fragment: HotelBookingFragment) -> lis
         state=state,
         ops=ops,
     )
-
-    # Whether the resolved handle refers to a brand-new batch-created stop
-    # (vs an existing route stop or an in-batch ref already created earlier).
     is_new_batch_stop = handle in state.batch_refs
 
     ops.append(
         AttachAccommodation.model_validate(
             {
                 "stopId": handle,
-                "checkInAt": fragment.check_in_at,
-                "checkOutAt": fragment.check_out_at,
-                "hotelName": fragment.hotel_name,
+                "checkInAt": accom.check_in_at,
+                "checkOutAt": accom.check_out_at,
+                "kind": accom.kind,
+                "identifier": accom.identifier,
             }
         )
     )
 
-    # Travelers wiring:
-    # - On a freshly-minted hotel-only stop the projector has no incident
-    #   transits to derive travelers from, so we wire ALL of them explicitly.
-    # - When ENRICHing an existing stop, the prior travelers are already
-    #   visible via incident transits (or an earlier add_travelers). But a
-    #   booking may bring NEW travelers the stop hasn't seen — those would
-    #   never surface through projection because the accommodation model
-    #   doesn't carry travelers. Emit an add_travelers for only the novel
-    #   names so multi-pax hotels enrich correctly.
     if travelers:
         if is_new_batch_stop:
             ops.append(
@@ -317,7 +719,141 @@ def _build_ops_hotel(route: WorkingRoute, fragment: HotelBookingFragment) -> lis
                     AddTravelers.model_validate({"stopId": handle, "travelers": novel})
                 )
 
-    return ops
+
+def _build_ops_supplementary_venue(
+    *,
+    route: WorkingRoute,
+    venue: FragmentVenue,
+    travelers_t: tuple[str, ...],
+    pending: _PendingLedger,
+    fragment_events: dict[str, list[datetime]],
+    state: _BatchState,
+    ops: list[Op],
+) -> None:
+    """Route one supplementary-doc venue entry.
+
+    Time anchor: ``valid_from_at`` (preferred) or ``valid_to_at`` as
+    fallback, else ``None`` (unanchored). Routing uses the shared
+    :func:`classify_event` / :func:`_resolve_or_create` pipeline; the only
+    venue-specific step is the per-stop ``(kind, identifier)`` dedupe at
+    op-emission time.
+
+    Behaviour matrix:
+
+    - Same-city stop exists, venue identity NOT yet on it → ENRICH +
+      emit :class:`AttachVenue`.
+    - Same-city stop exists, venue identity ALREADY on it (malformed
+      fragment repeats it OR the venue was attached by a prior fragment) →
+      ENRICH (no new stop), skip the redundant :class:`AttachVenue`.
+    - No same-city stop → CREATE a new stop (carrying no chronological
+      anchor if the venue is unanchored) + emit :class:`AttachVenue`.
+    """
+    venue_identity = (venue.kind, venue.identifier)
+    anchor = venue.valid_from_at or venue.valid_to_at
+    event = Event(
+        city=venue.city,
+        time=anchor,
+        role=EventRole.VENUE,
+        travelers=travelers_t,
+        venue_identity=venue_identity,
+    )
+    handle = _resolve_or_create(
+        route=route,
+        event=event,
+        pending=pending,
+        fragment_events=fragment_events,
+        state=state,
+        ops=ops,
+    )
+
+    # In-batch + cross-fragment dedupe: if the same (kind, identifier) is
+    # already credited to this handle, skip emitting AttachVenue. The
+    # applier de-dupes on the stop side too, but suppressing the op here
+    # keeps the ops list tight and avoids a no-op event flowing through.
+    entry = pending.pending.get(handle)
+    if entry is not None and _has_prior_venue(
+        entry, venue_identity, current_event=event
+    ):
+        return
+
+    ops.append(AttachVenue(target=handle, venue=_routed_venue(venue)))
+
+
+def _has_prior_venue(
+    entry: _Pending,
+    venue_identity: tuple[str, str],
+    *,
+    current_event: Event,
+) -> bool:
+    """Whether ``entry`` already carries the same venue (excluding the just-added contribution).
+
+    ``_resolve_or_create`` credits the event to the pending ledger before
+    returning, so we count occurrences of this venue identity and treat
+    "one occurrence (the current event itself)" as not-yet-attached.
+    """
+    matches = [
+        c
+        for c in entry.contributions
+        if c.role is EventRole.VENUE and c.venue_identity == venue_identity
+    ]
+    if not matches:
+        return False
+    # If the only match is the contribution `_resolve_or_create` just added
+    # for this event, the venue is brand-new to this stop.
+    if len(matches) == 1 and matches[0].time == current_event.time:
+        return False
+    return True
+
+
+def _routed_venue(venue: FragmentVenue) -> Venue:
+    """Project a :class:`FragmentVenue` to a working-route :class:`Venue`.
+
+    The routed venue drops the ``city`` (the enclosing stop names it) and
+    preserves ``kind`` / ``identifier`` / ``valid_from_at`` / ``valid_to_at``.
+    """
+    payload: dict[str, object] = {
+        "kind": venue.kind,
+        "identifier": venue.identifier,
+    }
+    if venue.valid_from_at is not None:
+        payload["validFromAt"] = venue.valid_from_at
+    if venue.valid_to_at is not None:
+        payload["validToAt"] = venue.valid_to_at
+    return Venue.model_validate(payload)
+
+
+def _fragment_events_accommodations(
+    accommodations: list[FragmentAccommodation],
+) -> dict[str, list[datetime]]:
+    """Pre-collect every ``(city -> [check_in_at])`` for an accommodation fragment.
+
+    Mirrors :func:`_fragment_events_transit`: gives condition (b)'s
+    intervening-different-city scan a view of the fragment's OWN cities
+    before any of them have been classified.
+    """
+    by_city: dict[str, list[datetime]] = {}
+    for accom in accommodations:
+        by_city.setdefault(city_identity(accom.city), []).append(accom.check_in_at)
+    return by_city
+
+
+def _fragment_events_venues(
+    venues: list[FragmentVenue],
+) -> dict[str, list[datetime]]:
+    """Pre-collect every ``(city -> [valid_from_or_to_at])`` for a venue fragment.
+
+    Mirrors :func:`_fragment_events_accommodations` for the venue role. The
+    anchor is ``valid_from_at`` (or ``valid_to_at`` as fallback); venues
+    that carry neither are omitted because they contribute no time signal
+    to condition (b)'s intervening-different-city scan.
+    """
+    by_city: dict[str, list[datetime]] = {}
+    for venue in venues:
+        anchor = venue.valid_from_at or venue.valid_to_at
+        if anchor is None:
+            continue
+        by_city.setdefault(city_identity(venue.city), []).append(anchor)
+    return by_city
 
 
 def _resolved_stop_travelers(route: WorkingRoute, stop_id: str) -> set[str]:
@@ -351,6 +887,7 @@ def _resolve_or_create(
     *,
     route: WorkingRoute,
     event: Event,
+    station: Station | None = None,
     pending: _PendingLedger,
     fragment_events: dict[str, list[datetime]],
     state: _BatchState,
@@ -370,6 +907,10 @@ def _resolve_or_create(
     fragment) sits later in time than an event being minted in the current
     batch. Anchoring by chronology fixes both forward-ordering chaining and
     non-forward / hotel-seeded routes with one code path.
+
+    When ``station`` is provided (transit events), the resulting CREATE stamps
+    it onto the minted stop, and ENRICH emits an :class:`AddStations` op so
+    the applier appends the station to the existing stop's ``stations[]``.
     """
     decision = classify_event(
         route,
@@ -381,6 +922,15 @@ def _resolve_or_create(
         assert decision.target_stop_id is not None  # noqa: S101 (sanity)
         token = decision.target_stop_id
         pending.add_contribution(token, event)
+        if station is not None:
+            ops.append(
+                AddStations.model_validate(
+                    {
+                        "target": token,
+                        "stations": [station.model_dump(by_alias=True)],
+                    }
+                )
+            )
         return token
 
     # CREATE: mint a fresh batch ref. Chronological anchoring considers BOTH
@@ -390,7 +940,19 @@ def _resolve_or_create(
     ref = f"n{state.next_ref_index}"
     state.next_ref_index += 1
     after = _find_after_neighbor_with_pending(route, pending, event.time)
-    ops.append(CreateStop(city=event.city, after=after, ref=ref))
+    stations_payload = (
+        [station.model_dump(by_alias=True)] if station is not None else []
+    )
+    ops.append(
+        CreateStop.model_validate(
+            {
+                "city": event.city,
+                "after": after,
+                "ref": ref,
+                "stations": stations_payload,
+            }
+        )
+    )
     pending.register_batch_stop(ref, event.city)
     pending.add_contribution(ref, event)
     state.batch_refs.add(ref)
@@ -400,7 +962,7 @@ def _resolve_or_create(
 def _find_after_neighbor_with_pending(
     route: WorkingRoute,
     pending: _PendingLedger,
-    new_stop_time: datetime,
+    new_stop_time: datetime | None,
 ) -> str | None:
     """Pick the chronological ``after`` neighbor across real stops + in-batch refs.
 
@@ -412,10 +974,17 @@ def _find_after_neighbor_with_pending(
     contributions into a real stop's seeded transit times, and giving each
     batch ref its own projected time as we accumulate contributions on it).
 
+    ``new_stop_time`` may be ``None`` only for an unanchored venue event;
+    in that case there is no chronological signal to thread on, so the new
+    stop appends to the last existing stop (or prepends on an empty route),
+    mirroring :func:`find_after_neighbor`'s untimed fallback.
+
     The returned token is either an existing ``stop-N`` id or a batch-local
     ref. The applier's :func:`_resolve_stop` accepts both, so callers can pass
     it straight into a ``CreateStop(after=...)`` op.
     """
+    if new_stop_time is None:
+        return route.stops[-1].id if route.stops else None
     timed: list[tuple[datetime, str]] = []
     # Existing route stops — use the pending overlay so in-batch contributions
     # to a real stop refresh its projected time before the next create-anchor
@@ -505,9 +1074,12 @@ def classify_event(
     # All stops (any city) with a projected time — needed for condition (b)
     # "intervening different-city stop in time". Includes the fragment's OWN
     # other-city events because they too will land as stops in this batch.
+    # `fragment_events` is keyed by the normalized city identity so callers
+    # don't need to know the comparison rule.
     other_city_times = _other_city_times(route, pending, event.city)
-    for other_city, times in fragment_events.items():
-        if other_city == event.city:
+    event_city_id = city_identity(event.city)
+    for other_city_id, times in fragment_events.items():
+        if other_city_id == event_city_id:
             continue
         other_city_times.extend(times)
 
@@ -544,12 +1116,21 @@ class _Contribution:
     today only the sanity check reads it (to spot windows disjoint from a
     candidate stop's transit-known timing) but the field is also a useful
     audit trail for future per-traveler rule iterations.
+
+    ``time`` is optional only for venue contributions — a venue with no
+    ``validFromAt`` / ``validToAt`` carries no chronological signal. Every
+    other role always has a concrete time.
+
+    ``venue_identity`` is set only for venue contributions; the per-stop
+    dedupe key is ``(kind, identifier)`` — venues are stop-attached
+    regardless of traveler.
     """
 
     role: EventRole
-    time: datetime
+    time: datetime | None
     travelers: tuple[str, ...]
     time_end: datetime | None = None
+    venue_identity: tuple[str, str] | None = None
 
 
 @dataclass(slots=True)
@@ -574,16 +1155,31 @@ class _Pending:
                 time=event.time,
                 travelers=event.travelers,
                 time_end=event.time_end,
+                venue_identity=event.venue_identity,
             )
         )
 
     def projected_time(self) -> datetime | None:
-        """Chronological position: earliest arrival, else departure, else accommodation."""
-        arrivals = [c.time for c in self.contributions if c.role is EventRole.ARRIVAL]
+        """Chronological position: earliest arrival, else departure, else accommodation.
+
+        Venue contributions deliberately do NOT seed the projected time —
+        a venue without a transit / accommodation anchor is attached "at the
+        stop" with no chronological position of its own; using its
+        ``validFromAt`` would let an unanchored venue shift the stop's
+        position in time, which is the opposite of what supplementary docs
+        should do.
+        """
+        arrivals = [
+            c.time
+            for c in self.contributions
+            if c.role is EventRole.ARRIVAL and c.time is not None
+        ]
         if arrivals:
             return min(arrivals)
         departures = [
-            c.time for c in self.contributions if c.role is EventRole.DEPARTURE
+            c.time
+            for c in self.contributions
+            if c.role is EventRole.DEPARTURE and c.time is not None
         ]
         if departures:
             return min(departures)
@@ -591,7 +1187,9 @@ class _Pending:
         # so condition (b)'s "intervening different-city stop" scan still
         # has a temporal signal for stops that carry no transit.
         accoms = [
-            c.time for c in self.contributions if c.role is EventRole.ACCOMMODATION
+            c.time
+            for c in self.contributions
+            if c.role is EventRole.ACCOMMODATION and c.time is not None
         ]
         if accoms:
             return min(accoms)
@@ -599,15 +1197,28 @@ class _Pending:
 
     def arrival_at(self) -> datetime | None:
         """Effective arrival projection (earliest arrival contribution, if any)."""
-        arrivals = [c.time for c in self.contributions if c.role is EventRole.ARRIVAL]
+        arrivals = [
+            c.time
+            for c in self.contributions
+            if c.role is EventRole.ARRIVAL and c.time is not None
+        ]
         return min(arrivals) if arrivals else None
 
     def departure_at(self) -> datetime | None:
         """Effective departure projection (earliest departure contribution, if any)."""
         departures = [
-            c.time for c in self.contributions if c.role is EventRole.DEPARTURE
+            c.time
+            for c in self.contributions
+            if c.role is EventRole.DEPARTURE and c.time is not None
         ]
         return min(departures) if departures else None
+
+    def has_venue(self, identity: tuple[str, str]) -> bool:
+        """Whether a venue with ``(kind, identifier)`` is already credited here."""
+        return any(
+            c.role is EventRole.VENUE and c.venue_identity == identity
+            for c in self.contributions
+        )
 
 
 @dataclass(slots=True)
@@ -664,6 +1275,19 @@ class _PendingLedger:
                         time_end=accom.check_out_at,
                     )
                 )
+            # Seed venues so a follow-up fragment re-attaching the same
+            # (kind, identifier) is skipped by the in-batch dedupe path.
+            # Venue contributions carry no chronological signal (see
+            # ``_Pending.projected_time``).
+            for venue in stop.venues:
+                entry.contributions.append(
+                    _Contribution(
+                        role=EventRole.VENUE,
+                        time=venue.valid_from_at or venue.valid_to_at,
+                        travelers=stop_travelers,
+                        venue_identity=(venue.kind, venue.identifier),
+                    )
+                )
             ledger.pending[stop.id] = entry
         return ledger
 
@@ -683,18 +1307,24 @@ class _PendingLedger:
         entry.add(event)
 
     def iter_same_city(self, city: str) -> list[tuple[str, _Pending]]:
-        """All `(token, entry)` pairs whose city matches `city`."""
+        """All `(token, entry)` pairs whose city matches `city`.
+
+        Comparison is by :func:`city_identity` so a fragment naming a city as
+        ``"PARIS"`` matches an in-batch entry already registered as ``"Paris"``.
+        """
+        target = city_identity(city)
         return [
             (token, entry)
             for token, entry in self.pending.items()
-            if entry.city == city
+            if city_identity(entry.city) == target
         ]
 
     def iter_other_city_times(self, city: str) -> list[datetime]:
         """Projected times of every DIFFERENT-city token currently known."""
+        target = city_identity(city)
         times: list[datetime] = []
         for entry in self.pending.values():
-            if entry.city == city:
+            if city_identity(entry.city) == target:
                 continue
             proj = entry.projected_time()
             if proj is not None:
@@ -727,8 +1357,9 @@ def _same_city_candidates(
     timing for the next event in the batch.
     """
     out: list[_SameCityCandidate] = []
+    target = city_identity(city)
     for stop in route.stops:
-        if stop.city != city:
+        if city_identity(stop.city) != target:
             continue
         entry = pending.pending.get(stop.id)
         arrival, departure, projected = _combine_real_and_pending(stop, entry)
@@ -788,17 +1419,18 @@ def _other_city_times(
     Combines explicit stop timing on the route with the pending ledger so
     that an in-batch enrichment is visible as a between-time anchor.
     """
+    target = city_identity(city)
     times: list[datetime] = []
     for stop in route.stops:
-        if stop.city == city:
+        if city_identity(stop.city) == target:
             continue
         entry = pending.pending.get(stop.id)
         _arr, _dep, proj = _combine_real_and_pending(stop, entry)
         if proj is not None:
             times.append(proj)
     # Batch-only tokens (not backed by a real route stop yet).
-    for token, entry in pending.pending.items():
-        if entry.city == city or not entry.is_batch:
+    for entry in pending.pending.values():
+        if city_identity(entry.city) == target or not entry.is_batch:
             continue
         proj = entry.projected_time()
         if proj is not None:
@@ -815,11 +1447,15 @@ def _condition_b_triggers(
 
     Bidirectional: triggers whether the event is strictly later than `cand`
     or strictly earlier — provided some different-city stop's projected time
-    sits strictly between the two.
+    sits strictly between the two. An event with no chronological anchor
+    (currently only an unanchored venue) skips this check — it carries no
+    "later or earlier" signal so it cannot be disjoint from anything.
     """
     cand_time = cand.projected_time
     if cand_time is None:
         return False  # no temporal signal — fall through to (c)/enrich
+    if event.time is None:
+        return False  # unanchored event — no temporal signal to disjoin from
 
     if cand_time == event.time:
         return False
@@ -854,7 +1490,13 @@ def _condition_c_triggers(
       check-in as a slot conflict is the conservative pick that matches
       every scenario in the corpus (no expected stop carries more than one
       accommodation).
+    - ``venue``: venues are stop-attached regardless of traveler, so this
+      check is never invoked for venue events — the venue-resolver
+      short-circuits same-(kind, identifier) dedupe at op-emission time and
+      never relies on condition (c). Defensive False here.
     """
+    if event.role is EventRole.VENUE:
+        return False
     entry = pending.pending.get(cand.token)
     if entry is None:
         return False
@@ -891,6 +1533,10 @@ def _sanity_check_would_invert(cand: _SameCityCandidate, event: Event) -> bool:
     final route shape — the seeded-shuffle + hotels failure mode in star
     itineraries.
     """
+    if event.role is EventRole.VENUE:
+        return False  # venues have no per-stop ordering constraint
+    if event.time is None:  # pragma: no cover - non-venue roles always carry a time
+        return False
     if event.role is EventRole.ARRIVAL:
         new_arrival = event.time
         existing_departure = cand.departure_at
@@ -923,15 +1569,15 @@ def _sanity_check_would_invert(cand: _SameCityCandidate, event: Event) -> bool:
     return False
 
 
-def _time_distance(a: datetime | None, b: datetime) -> float:
+def _time_distance(a: datetime | None, b: datetime | None) -> float:
     """Distance for the nearest-candidate tiebreak; untimed sort to the end."""
-    if a is None:
+    if a is None or b is None:
         return float("inf")
     return abs((a - b).total_seconds())
 
 
 def _fragment_events_transit(
-    fragment: TransitTicketFragment,
+    legs: list[_LegView],
 ) -> dict[str, list[datetime]]:
     """Pre-collect every (city -> [times]) a transit fragment will emit.
 
@@ -941,11 +1587,15 @@ def _fragment_events_transit(
     fragment like SVO -> LHR -> DUB -> LHR see DUB (its own different-city
     leg, not yet in the route) as proof that the two LHR events are distinct
     visits — matching the LLM prompt's Example A reasoning within one ticket.
+
+    Keys are :func:`city_identity` of the printed city name so the
+    self-vs-other lookup in :func:`classify_event` is comparison-safe across
+    case / whitespace variants.
     """
     by_city: dict[str, list[datetime]] = {}
-    for leg in fragment.legs:
-        by_city.setdefault(leg.from_, []).append(leg.departure_at)
-        by_city.setdefault(leg.to, []).append(leg.arrival_at)
+    for leg in legs:
+        by_city.setdefault(city_identity(leg.from_city), []).append(leg.departure_at)
+        by_city.setdefault(city_identity(leg.to_city), []).append(leg.arrival_at)
     return by_city
 
 
@@ -1011,8 +1661,8 @@ def _ticket_mode(document_type: str) -> str:
             return "air"
         case "bus-ticket":
             return "bus"
-        case "train-ticket":
-            return "train"
+        case "rail-ticket":
+            return "rail"
         case _:  # pragma: no cover - Fragment union forbids other values
             msg = f"unknown transit ticket document type: {document_type!r}"
             raise RuleNotImplementedError(msg)

@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "London",
+    "Munich",
+    "Paris",
+    "Rome"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001124",
+  "sourceDocumentId": "124-circle-4p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "ARN",
-      "to": "MXP",
-      "vehicleNumber": "FL100"
+      "city": "Munich",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "MXP",
-      "to": "MAD",
-      "vehicleNumber": "FL101"
+      "city": "Paris",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "MAD",
-      "to": "MUC",
-      "vehicleNumber": "FL102"
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001124",
-  "sourceDocumentId": "124-circle-4p-forward-return-hotels-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

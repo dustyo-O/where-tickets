@@ -63,8 +63,11 @@ from pydantic import BaseModel, ConfigDict, Field
 from spikes.route_engine_llm.models import (
     Accommodation,
     RouteStop,
+    Station,
     Transit,
     TransitMode,
+    UnattachedDocument,
+    Venue,
     WorkingRoute,
 )
 
@@ -75,6 +78,9 @@ __all__ = [
     "AddTransit",
     "AttachAccommodation",
     "AddTravelers",
+    "AddStations",
+    "AttachVenue",
+    "AddUnattachedDocument",
     "Op",
     "apply",
 ]
@@ -102,14 +108,20 @@ class CreateStop(BaseModel):
     unique within the batch. Later ops in the same batch may reference this stop
     by that `ref` exactly as they would reference an existing stop by its id.
     The handle is batch-local and never persisted.
+
+    `stations` is an optional set of station entries to seed onto the new stop
+    (typically one entry for transit ticket events — the station the rules
+    classified as either the leg origin or destination). Duplicates by
+    ``(city, kind, identifier)`` are suppressed at apply time.
     """
 
     model_config = ConfigDict(extra="forbid")
 
     op: Literal["create_stop"] = "create_stop"
-    city: str = Field(pattern=r"^[A-Z]{3}$")
+    city: str
     after: str | None = None
     ref: str | None = None
+    stations: list[Station] = Field(default_factory=list)
 
 
 class EnrichStop(BaseModel):
@@ -126,7 +138,7 @@ class EnrichStop(BaseModel):
 class AddTransit(BaseModel):
     """Add a transit between two referenced stops (existing ids or same-batch refs)."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
 
     op: Literal["add_transit"] = "add_transit"
     from_stop_id: str = Field(alias="fromStopId")
@@ -136,10 +148,21 @@ class AddTransit(BaseModel):
     arrival_at: datetime = Field(alias="arrivalAt")
     travelers: list[str] = Field(default_factory=list)
     source_fragment_id: str = Field(alias="sourceFragmentId")
+    # Which station within the from/to city the transit actually leaves /
+    # arrives at; copied onto the minted Transit. Optional so callers that
+    # don't yet carry station detail (e.g. LLM spike fixtures) keep working.
+    origin_station: Station | None = Field(default=None, alias="originStation")
+    destination_station: Station | None = Field(
+        default=None, alias="destinationStation"
+    )
 
 
 class AttachAccommodation(BaseModel):
-    """Attach a hotel stay to a referenced stop (existing id or same-batch ref)."""
+    """Attach an accommodation stay to a referenced stop.
+
+    DUS-31 Slice 5: ``kind`` widens to ``{"hotel", "airbnb"}``; airbnb rides
+    the existing accommodation path.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
@@ -147,7 +170,8 @@ class AttachAccommodation(BaseModel):
     stop_id: str = Field(alias="stopId")
     check_in_at: datetime = Field(alias="checkInAt")
     check_out_at: datetime = Field(alias="checkOutAt")
-    hotel_name: str | None = Field(default=None, alias="hotelName")
+    kind: Literal["hotel", "airbnb"]
+    identifier: str
 
 
 class AddTravelers(BaseModel):
@@ -160,8 +184,67 @@ class AddTravelers(BaseModel):
     travelers: list[str]
 
 
+class AddStations(BaseModel):
+    """Union stations onto a referenced stop (existing id or same-batch ref).
+
+    Mirrors :class:`AddTravelers`'s shape — ``target`` is a stop reference (an
+    existing ``stop-N`` id OR a same-batch ``ref``), and ``stations`` is the
+    list to append. The applier de-duplicates against existing entries on the
+    target stop by ``(city, kind, identifier)`` so two same-fragment legs
+    touching the same station never double-attach it.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    op: Literal["add_stations"] = "add_stations"
+    target: str
+    stations: list[Station]
+
+
+class AttachVenue(BaseModel):
+    """Attach a venue to a referenced stop (existing id or same-batch ref).
+
+    DUS-31 Slice 5. Mirrors :class:`AttachAccommodation`'s shape on the
+    venue side. ``target`` is a stop reference; ``venue`` is the
+    :class:`Venue` to append. The applier de-duplicates against existing
+    entries on the stop by ``(kind, identifier)`` — venues are
+    stop-attached regardless of traveler, so the dedupe key does NOT include
+    travelers.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    op: Literal["attach_venue"] = "attach_venue"
+    target: str
+    venue: Venue
+
+
+class AddUnattachedDocument(BaseModel):
+    """Append an unattached supplementary document to the working route.
+
+    DUS-31 Slice 5. Intentionally identity-clean: the applier does NOT touch
+    ``stops[]``, ``transits[]``, ``next_stop_seq``, or ``next_transit_seq`` —
+    it just appends ``document`` to ``WorkingRoute.unattached_documents``.
+    The unattached list is strictly invisible to ``scoring.final_route_match``
+    / ``identity_preserved`` / ``ordering_consistent`` so this op cannot
+    affect any of the engine's scoring gates.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    op: Literal["add_unattached_document"] = "add_unattached_document"
+    document: UnattachedDocument
+
+
 type Op = Annotated[
-    CreateStop | EnrichStop | AddTransit | AttachAccommodation | AddTravelers,
+    CreateStop
+    | EnrichStop
+    | AddTransit
+    | AttachAccommodation
+    | AddTravelers
+    | AddStations
+    | AttachVenue
+    | AddUnattachedDocument,
     Field(discriminator="op"),
 ]
 
@@ -193,6 +276,12 @@ def apply(route: WorkingRoute, ops: list[Op]) -> WorkingRoute:
                 _apply_attach_accommodation(route, op, refs)
             case AddTravelers():
                 _apply_add_travelers(route, op, refs)
+            case AddStations():
+                _apply_add_stations(route, op, refs)
+            case AttachVenue():
+                _apply_attach_venue(route, op, refs)
+            case AddUnattachedDocument():
+                _apply_add_unattached_document(route, op)
     _project_stops(route)
     return route
 
@@ -253,6 +342,10 @@ def _apply_create_stop(
     else:
         after_id = _resolve_stop(route, op.after, refs).id
     stop = RouteStop(id=route.mint_stop_id(), city=op.city)
+    # Seed stations carried by the op (deduped within the seed payload itself
+    # by (city, kind, identifier); the union helper below is a no-op for an
+    # empty stop but keeps the dedupe rule in one place).
+    _extend_stations_uniq(stop.stations, op.stations)
     route.insert_stop(stop, after_id)
     if op.ref is not None:
         refs[op.ref] = stop.id
@@ -311,6 +404,8 @@ def _apply_add_transit(
             arrivalAt=op.arrival_at,
             travelers=list(op.travelers),
             sourceFragmentId=op.source_fragment_id,
+            originStation=op.origin_station,
+            destinationStation=op.destination_station,
         )
     )
 
@@ -323,7 +418,8 @@ def _apply_attach_accommodation(
         Accommodation(
             checkInAt=op.check_in_at,
             checkOutAt=op.check_out_at,
-            hotelName=op.hotel_name,
+            kind=op.kind,
+            identifier=op.identifier,
         )
     )
 
@@ -337,3 +433,58 @@ def _apply_add_travelers(
         if traveler not in existing:
             stop.travelers.append(traveler)
             existing.add(traveler)
+
+
+def _apply_add_stations(
+    route: WorkingRoute, op: AddStations, refs: dict[str, str]
+) -> None:
+    stop = _resolve_stop(route, op.target, refs)
+    _extend_stations_uniq(stop.stations, op.stations)
+
+
+def _apply_attach_venue(
+    route: WorkingRoute, op: AttachVenue, refs: dict[str, str]
+) -> None:
+    """Append ``op.venue`` to the resolved stop, deduped by ``(kind, identifier)``.
+
+    Travelers are intentionally NOT part of the dedupe key — a venue is
+    attached to the stop as a whole, not to a per-traveler slot.
+    """
+    stop = _resolve_stop(route, op.target, refs)
+    seen = {(v.kind, v.identifier) for v in stop.venues}
+    key = (op.venue.kind, op.venue.identifier)
+    if key in seen:
+        return
+    stop.venues.append(op.venue)
+
+
+def _apply_add_unattached_document(
+    route: WorkingRoute, op: AddUnattachedDocument
+) -> None:
+    """Append ``op.document`` to ``route.unattached_documents`` — nothing else.
+
+    Identity-clean by design: stops, transits, and the two id counters are
+    untouched, so this op cannot affect any of the scoring gates (which
+    ignore ``unattached_documents`` entirely).
+    """
+    route.unattached_documents.append(op.document)
+
+
+def _station_identity(station: Station) -> tuple[str, str, str]:
+    """Comparison key used to suppress duplicates within a stop's stations[]."""
+    return (station.city, station.kind, station.identifier)
+
+
+def _extend_stations_uniq(target: list[Station], incoming: list[Station]) -> None:
+    """Append ``incoming`` to ``target`` deduped by (city, kind, identifier).
+
+    Preserves insertion order and skips entries already present on ``target``
+    OR repeated within ``incoming`` itself.
+    """
+    seen: set[tuple[str, str, str]] = {_station_identity(s) for s in target}
+    for station in incoming:
+        key = _station_identity(station)
+        if key in seen:
+            continue
+        target.append(station)
+        seen.add(key)

@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Munich",
+    "New York"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002084",
+  "sourceDocumentId": "084-circle-2p-forward-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

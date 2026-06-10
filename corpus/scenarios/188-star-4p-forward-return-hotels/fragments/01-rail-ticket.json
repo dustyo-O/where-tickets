@@ -1,0 +1,44 @@
+{
+  "cities": [
+    "Helsinki",
+    "Dublin",
+    "Paris"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001188",
+  "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Dublin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Paris",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Paris Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Dublin",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

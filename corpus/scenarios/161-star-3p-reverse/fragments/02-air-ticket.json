@@ -1,17 +1,25 @@
 {
-  "documentType": "air-ticket",
-  "legs": [
-    {
-      "arrivalAt": "2027-03-02T03:00:00Z",
-      "carrier": "AF",
-      "departureAt": "2027-03-02T00:00:00Z",
-      "from": "LHR",
-      "to": "CPH",
-      "vehicleNumber": "AF103"
-    }
+  "cities": [
+    "Vienna",
+    "Oslo"
   ],
+  "documentType": "air-ticket",
   "pnr": "PNR002161",
   "sourceDocumentId": "161-star-3p-reverse-tkt-02",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
+    }
+  ],
   "travelers": [
     "traveler-1",
     "traveler-2",

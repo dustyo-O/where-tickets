@@ -1,33 +1,41 @@
 {
+  "cities": [
+    "London",
+    "Warsaw",
+    "Vienna",
+    "Rome"
+  ],
   "documentType": "bus-ticket",
-  "legs": [
+  "pnr": "PNR001121",
+  "sourceDocumentId": "121-circle-4p-reverse-return-tkt-01",
+  "stations": [
+    {
+      "city": "London",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "from": "OSL",
-      "to": "FRA",
-      "vehicleNumber": "FL100"
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Warsaw Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "FRA",
-      "to": "MUC",
-      "vehicleNumber": "FL101"
+      "city": "Vienna",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "carrier": "FlixBus",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "MUC",
-      "to": "LIS",
-      "vehicleNumber": "FL102"
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
     }
   ],
-  "pnr": "PNR001121",
-  "sourceDocumentId": "121-circle-4p-reverse-return-tkt-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

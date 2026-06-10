@@ -1,0 +1,41 @@
+{
+  "cities": [
+    "Milan",
+    "Athens",
+    "Moscow"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR001128",
+  "sourceDocumentId": "128-star-1p-forward-tkt-01",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Athens",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Athens",
+      "identifier": "Athens Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}
