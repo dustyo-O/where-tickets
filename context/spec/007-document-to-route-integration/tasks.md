@@ -79,9 +79,9 @@
   - [x] Finalise the README coverage matrix. **[Agent: python-backend]** _(absorbed into Slice 8.)_
   - [x] **Verify:** `just integration` reaches 20–30/20–30 PASS — the spec's 100% hard gate. JSON report includes per-trip extraction path mix and per-PDF token cost; `just lint` clean. **[Agent: bedrock-llm]** _(20/20 PASS on a single live run; see Phase-2 commit below.)_
 
-- [ ] **Slice 10: Cross-schema validation upgrade (DUS-31 done-when)**
-  - [ ] In `corpus/pdf/validate.py`, replace the documented mapping between `expected-fields.schema.json` and `extracted-fragment.schema.json` with a real `jsonschema.validate(sample_fragment, fragment_schema)` step over a fixture fragment derived from one layer-1 extracted-fields payload. **[Agent: python-backend]**
-  - [ ] **Verify:** `just test-corpus` runs the new cross-schema validation step and is green; `just lint` clean. **[Agent: python-backend]**
+- [x] **Slice 10: Cross-schema validation upgrade (DUS-31 done-when)**
+  - [x] In `corpus/pdf/validate.py`, replace the documented mapping between `expected-fields.schema.json` and `extracted-fragment.schema.json` with a real `jsonschema.validate(sample_fragment, fragment_schema)` step over a fixture fragment derived from one layer-1 extracted-fields payload. **[Agent: python-backend]** _(new `_cross_schema_check()`: picks one payload per `document_type` (6 total), maps inline to engine `Fragment` shape (mirrors Slice-6 adapter — no cross-tree import; corpus stays independent of backend), validates against `corpus/schema/extracted-fragment.schema.json`. Stale README "Intended mapping" block replaced with active-check description.)_
+  - [x] **Verify:** `just test-corpus` runs the new cross-schema validation step and is green; `just lint` clean. **[Agent: python-backend]** _("Cross-schema check passed" in test-corpus output; 2229 pytest passed (test_pdf_validator's `_clone_corpus` fixture extended to also copy `corpus/schema/extracted-fragment.schema.json`); 192/192 spike; lint clean._
 
 - [ ] **Slice 11: Retire `_SEED_MODE_ALIAS` (DUS-31 self-cleanup)**
 
