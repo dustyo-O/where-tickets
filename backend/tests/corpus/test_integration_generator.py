@@ -38,7 +38,7 @@ ROUTE_SCHEMA_PATH = REPO_ROOT / "corpus" / "schema" / "expected-route.schema.jso
 
 def _has_jsonschema() -> bool:
     try:
-        import jsonschema  # noqa: F401, PLC0415
+        import jsonschema  # noqa: F401, PLC0415  # pyright: ignore[reportMissingModuleSource]
     except ImportError:
         return False
     return True
@@ -58,7 +58,9 @@ def _validate(payload: dict[str, Any], schema: dict[str, Any]) -> None:
     """Validate ``payload`` against ``schema``; skip if jsonschema missing."""
     if not _has_jsonschema():
         pytest.skip("jsonschema not installed in this venv; schema check skipped")
-    from jsonschema import Draft202012Validator  # noqa: PLC0415
+    from jsonschema import (  # noqa: PLC0415  # pyright: ignore[reportMissingModuleSource]
+        Draft202012Validator,
+    )
 
     Draft202012Validator(schema).validate(payload)
 

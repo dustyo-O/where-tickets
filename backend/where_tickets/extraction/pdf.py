@@ -55,7 +55,11 @@ def extract_text(pdf_path: Path) -> str:
 
     doc = pymupdf.open(str(pdf_path))
     try:
-        text = "\n".join(page.get_text("text") for page in doc)
+        # `page.get_text("text")` returns str at runtime, but pymupdf's
+        # stubs widen the return to `str | list | dict` across overloads
+        # (the same function handles "dict", "blocks", etc.). `str(...)`
+        # is a no-op on the actual str result and silences pyright.
+        text = "\n".join(str(page.get_text("text")) for page in doc)
     finally:
         doc.close()
     if len(text.strip()) < _PYMUPDF_NULL_TEXT_FLOOR:
