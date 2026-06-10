@@ -475,9 +475,7 @@ def _station_identity(station: Station) -> tuple[str, str, str]:
     return (station.city, station.kind, station.identifier)
 
 
-def _extend_stations_uniq(
-    target: list[Station], incoming: list[Station]
-) -> None:
+def _extend_stations_uniq(target: list[Station], incoming: list[Station]) -> None:
     """Append ``incoming`` to ``target`` deduped by (city, kind, identifier).
 
     Preserves insertion order and skips entries already present on ``target``

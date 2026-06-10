@@ -146,9 +146,7 @@ def _legs_from_stations(stations: list[Station]) -> list[_LegView]:
             )
         if station.arrival_at is not None:
             edges.append(
-                _StationEdge(
-                    kind="arrival", time=station.arrival_at, station=station
-                )
+                _StationEdge(kind="arrival", time=station.arrival_at, station=station)
             )
 
     if not edges:
@@ -718,9 +716,7 @@ def _build_ops_supplementary_accommodation(
             novel = [t for t in travelers if t not in existing_travelers]
             if novel:
                 ops.append(
-                    AddTravelers.model_validate(
-                        {"stopId": handle, "travelers": novel}
-                    )
+                    AddTravelers.model_validate({"stopId": handle, "travelers": novel})
                 )
 
 
@@ -775,7 +771,9 @@ def _build_ops_supplementary_venue(
     # applier de-dupes on the stop side too, but suppressing the op here
     # keeps the ops list tight and avoids a no-op event flowing through.
     entry = pending.pending.get(handle)
-    if entry is not None and _has_prior_venue(entry, venue_identity, current_event=event):
+    if entry is not None and _has_prior_venue(
+        entry, venue_identity, current_event=event
+    ):
         return
 
     ops.append(AttachVenue(target=handle, venue=_routed_venue(venue)))
@@ -794,7 +792,8 @@ def _has_prior_venue(
     "one occurrence (the current event itself)" as not-yet-attached.
     """
     matches = [
-        c for c in entry.contributions
+        c
+        for c in entry.contributions
         if c.role is EventRole.VENUE and c.venue_identity == venue_identity
     ]
     if not matches:
@@ -941,7 +940,9 @@ def _resolve_or_create(
     ref = f"n{state.next_ref_index}"
     state.next_ref_index += 1
     after = _find_after_neighbor_with_pending(route, pending, event.time)
-    stations_payload = [station.model_dump(by_alias=True)] if station is not None else []
+    stations_payload = (
+        [station.model_dump(by_alias=True)] if station is not None else []
+    )
     ops.append(
         CreateStop.model_validate(
             {
@@ -1169,13 +1170,15 @@ class _Pending:
         should do.
         """
         arrivals = [
-            c.time for c in self.contributions
+            c.time
+            for c in self.contributions
             if c.role is EventRole.ARRIVAL and c.time is not None
         ]
         if arrivals:
             return min(arrivals)
         departures = [
-            c.time for c in self.contributions
+            c.time
+            for c in self.contributions
             if c.role is EventRole.DEPARTURE and c.time is not None
         ]
         if departures:
@@ -1184,7 +1187,8 @@ class _Pending:
         # so condition (b)'s "intervening different-city stop" scan still
         # has a temporal signal for stops that carry no transit.
         accoms = [
-            c.time for c in self.contributions
+            c.time
+            for c in self.contributions
             if c.role is EventRole.ACCOMMODATION and c.time is not None
         ]
         if accoms:
@@ -1194,7 +1198,8 @@ class _Pending:
     def arrival_at(self) -> datetime | None:
         """Effective arrival projection (earliest arrival contribution, if any)."""
         arrivals = [
-            c.time for c in self.contributions
+            c.time
+            for c in self.contributions
             if c.role is EventRole.ARRIVAL and c.time is not None
         ]
         return min(arrivals) if arrivals else None
@@ -1202,7 +1207,8 @@ class _Pending:
     def departure_at(self) -> datetime | None:
         """Effective departure projection (earliest departure contribution, if any)."""
         departures = [
-            c.time for c in self.contributions
+            c.time
+            for c in self.contributions
             if c.role is EventRole.DEPARTURE and c.time is not None
         ]
         return min(departures) if departures else None

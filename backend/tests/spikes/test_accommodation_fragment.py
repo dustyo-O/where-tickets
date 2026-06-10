@@ -204,9 +204,7 @@ def test_multi_accommodation_same_city_nonoverlapping_dates_create_create() -> N
         f"got {[s.id for s in bcn_stops]!r}"
     )
 
-    first, second = sorted(
-        bcn_stops, key=lambda s: s.accommodations[0].check_in_at
-    )
+    first, second = sorted(bcn_stops, key=lambda s: s.accommodations[0].check_in_at)
     assert len(first.accommodations) == 1
     assert first.accommodations[0].identifier == "Riverside Inn"
     assert len(second.accommodations) == 1

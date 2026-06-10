@@ -280,9 +280,7 @@ def test_discover_returns_trip_records_for_well_formed_directories(
         "01-air-return-1pax-paris-lisbon",
         manifest={
             "travelers": ["Ines Marques"],
-            "documents": [
-                {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}
-            ],
+            "documents": [{"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}],
         },
         expected_route=_return_paris_lisbon_expected_route(),
     )
@@ -291,9 +289,7 @@ def test_discover_returns_trip_records_for_well_formed_directories(
         "02-air-oneway-1pax",
         manifest={
             "travelers": ["Ines Marques"],
-            "documents": [
-                {"pdf": "001-air-1leg-1pax-paris-lisbon/document.pdf"}
-            ],
+            "documents": [{"pdf": "001-air-1leg-1pax-paris-lisbon/document.pdf"}],
         },
         expected_route=_return_paris_lisbon_expected_route(),
     )
@@ -356,9 +352,7 @@ def test_run_trip_happy_path_paris_lisbon_return_pass(
         "01-air-return-1pax-paris-lisbon",
         manifest={
             "travelers": ["Ines Marques"],
-            "documents": [
-                {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}
-            ],
+            "documents": [{"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}],
         },
         expected_route=_return_paris_lisbon_expected_route(),
     )
@@ -429,9 +423,7 @@ def test_run_trip_adapter_error_marks_trip_failed(
         "qr_codes": [],
         "pdf_kind": "text",
     }
-    extractor = _build_extractor_stub(
-        {"fake/document.pdf": bad_payload}
-    )
+    extractor = _build_extractor_stub({"fake/document.pdf": bad_payload})
 
     result = run_trip(
         trips[0],
@@ -572,9 +564,7 @@ def test_run_trip_extraction_failure_with_expect_unreadable_continues(
                 _air_return_paris_lisbon_payload()
             )
         },
-        raises={
-            "unreadable/document.pdf": _StubExtractionFailed("scan unreadable")
-        },
+        raises={"unreadable/document.pdf": _StubExtractionFailed("scan unreadable")},
     )
 
     result = run_trip(
@@ -608,9 +598,7 @@ def test_cli_trip_filter_runs_only_matching_trip(
         "01-good",
         manifest={
             "travelers": ["Ines Marques"],
-            "documents": [
-                {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}
-            ],
+            "documents": [{"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}],
         },
         expected_route=_return_paris_lisbon_expected_route(),
     )
@@ -635,9 +623,7 @@ def test_cli_trip_filter_runs_only_matching_trip(
     # the CLI seam without needing a real importable extractor module.
     import spikes.integration.runner as runner_module  # noqa: PLC0415
 
-    monkeypatch.setattr(
-        runner_module, "_load_extractor", lambda _dotted: extractor
-    )
+    monkeypatch.setattr(runner_module, "_load_extractor", lambda _dotted: extractor)
     monkeypatch.setattr(
         runner_module,
         "_load_extraction_failed_error",
@@ -693,9 +679,7 @@ def test_cli_no_route_check_passes_when_pipeline_succeeds(
         "01-skip-scoring",
         manifest={
             "travelers": ["Ines Marques"],
-            "documents": [
-                {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}
-            ],
+            "documents": [{"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}],
         },
         expected_route=wrong_expected,
     )
@@ -709,9 +693,7 @@ def test_cli_no_route_check_passes_when_pipeline_succeeds(
 
     import spikes.integration.runner as runner_module  # noqa: PLC0415
 
-    monkeypatch.setattr(
-        runner_module, "_load_extractor", lambda _dotted: extractor
-    )
+    monkeypatch.setattr(runner_module, "_load_extractor", lambda _dotted: extractor)
     monkeypatch.setattr(
         runner_module,
         "_load_extraction_failed_error",
@@ -775,9 +757,7 @@ def test_run_trips_returns_one_result_per_trip(
         "01-good",
         manifest={
             "travelers": ["Ines Marques"],
-            "documents": [
-                {"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}
-            ],
+            "documents": [{"pdf": "003-air-return-1pax-paris-lisbon/document.pdf"}],
         },
         expected_route=_return_paris_lisbon_expected_route(),
     )

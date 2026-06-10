@@ -372,9 +372,7 @@ def run_trip(
 
         # --- 2. Adapt ---------------------------------------------------- #
         try:
-            fragment = extracted_fields_to_fragment(
-                fields, source_document_id=doc.pdf
-            )
+            fragment = extracted_fields_to_fragment(fields, source_document_id=doc.pdf)
         except AdapterError as exc:
             # When ``expect_unreadable: true``, an adapter rejection is the
             # extractor's "I read the page but found nothing routable" signal
@@ -487,9 +485,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--json-report",
         default=None,
-        help=(
-            "If set, also write a machine-readable JSON report at this path."
-        ),
+        help=("If set, also write a machine-readable JSON report at this path."),
     )
     parser.add_argument(
         "--extractor-import-path",
@@ -503,8 +499,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--integration-root",
         default=None,
         help=(
-            "Override the corpus/integration root (default: "
-            "<repo>/corpus/integration)."
+            "Override the corpus/integration root (default: <repo>/corpus/integration)."
         ),
     )
     parser.add_argument(

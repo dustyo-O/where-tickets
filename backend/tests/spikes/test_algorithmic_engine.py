@@ -148,9 +148,7 @@ def _ticket_one_leg(
     arrival: str,
 ) -> TransitTicketFragment:
     """Tiny factory for crafting single-leg tickets in chronological-insert tests."""
-    stations, cities = _stations_from_legs(
-        [(from_city, to_city, departure, arrival)]
-    )
+    stations, cities = _stations_from_legs([(from_city, to_city, departure, arrival)])
     return TransitTicketFragment.model_validate(
         {
             "documentType": "air-ticket",

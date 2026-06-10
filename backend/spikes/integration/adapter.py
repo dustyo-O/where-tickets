@@ -321,10 +321,7 @@ def _build_supplementary_fragment(
     contract gap, keeping the adapter→fragment boundary crisp.
     """
     if len(fields["travelers"]) < 1:
-        msg = (
-            f"supplementary document {source_document_id!r} needs >=1 "
-            f"traveler, got 0"
-        )
+        msg = f"supplementary document {source_document_id!r} needs >=1 traveler, got 0"
         raise AdapterError(msg)
     return SupplementaryFragment.model_validate(
         {
@@ -368,9 +365,7 @@ def extracted_fields_to_fragment(
     """
     doc_type = fields["document_type"]
     if doc_type in _TRANSIT_TYPES:
-        return _build_transit_fragment(
-            fields, source_document_id=source_document_id
-        )
+        return _build_transit_fragment(fields, source_document_id=source_document_id)
     if doc_type in _ACCOMMODATION_TYPES:
         return _build_accommodation_fragment(
             fields, source_document_id=source_document_id

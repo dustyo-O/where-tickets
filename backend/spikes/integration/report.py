@@ -152,7 +152,9 @@ def render_route_diff(expected: ExpectedRoute, actual: WorkingRoute) -> str:
     for index, transit in enumerate(actual.transits):
         from_stop = actual.stop_by_id(transit.from_stop_id)
         to_stop = actual.stop_by_id(transit.to_stop_id)
-        from_city = from_stop.city if from_stop is not None else f"?{transit.from_stop_id}"
+        from_city = (
+            from_stop.city if from_stop is not None else f"?{transit.from_stop_id}"
+        )
         to_city = to_stop.city if to_stop is not None else f"?{transit.to_stop_id}"
         lines.append(
             f"  transit[{index}] {from_city} -> {to_city}  "

@@ -540,10 +540,9 @@ def test_layer_2_leak_guard_catches_top_level_tracked_pdf(tmp_path: Path) -> Non
         "is tracked at the top of corpus/pdf/layer2/"
     ) in proc.stdout, proc.stdout
     # Remediation hint points at `git rm --cached` with the offending path.
-    assert (
-        "git rm --cached corpus/pdf/layer2/rogue-top-level.pdf"
-        in proc.stdout
-    ), proc.stdout
+    assert "git rm --cached corpus/pdf/layer2/rogue-top-level.pdf" in proc.stdout, (
+        proc.stdout
+    )
     # The allowed .gitkeep entry is NOT flagged.
     assert ".gitkeep is tracked" not in proc.stdout
 

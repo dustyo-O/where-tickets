@@ -33,7 +33,9 @@ REAL_LAYER1 = REPO_ROOT / "corpus" / "pdf" / "layer1" / "scenarios"
 # Slice 10: the cross-schema check loads the engine fragment schema from
 # ``corpus/schema/`` (sibling of ``corpus/pdf/``). Clones need it copied in
 # too, or the check fails with a source-of-truth-divergence error.
-REAL_FRAGMENT_SCHEMA = REPO_ROOT / "corpus" / "schema" / "extracted-fragment.schema.json"
+REAL_FRAGMENT_SCHEMA = (
+    REPO_ROOT / "corpus" / "schema" / "extracted-fragment.schema.json"
+)
 
 
 # --------------------------------------------------------------------------- #

@@ -27,7 +27,9 @@ import pytest
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-PDF_SCHEMA_PATH = REPO_ROOT / "corpus" / "pdf" / "schema" / "expected-fields.schema.json"
+PDF_SCHEMA_PATH = (
+    REPO_ROOT / "corpus" / "pdf" / "schema" / "expected-fields.schema.json"
+)
 ROUTE_SCHEMA_PATH = REPO_ROOT / "corpus" / "schema" / "expected-route.schema.json"
 
 

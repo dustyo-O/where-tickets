@@ -191,14 +191,10 @@ def test_air_ticket_single_leg_single_traveler() -> None:
     assert len(fragment.stations) == 2
     assert fragment.stations[0].city == "Paris"
     assert fragment.stations[0].kind == "airport"
-    assert fragment.stations[0].departure_at == datetime(
-        2027, 3, 11, 8, 30, tzinfo=UTC
-    )
+    assert fragment.stations[0].departure_at == datetime(2027, 3, 11, 8, 30, tzinfo=UTC)
     assert fragment.stations[0].arrival_at is None
     assert fragment.stations[1].departure_at is None
-    assert fragment.stations[1].arrival_at == datetime(
-        2027, 3, 11, 10, 45, tzinfo=UTC
-    )
+    assert fragment.stations[1].arrival_at == datetime(2027, 3, 11, 10, 45, tzinfo=UTC)
 
 
 def test_air_ticket_return_single_traveler() -> None:
@@ -363,9 +359,7 @@ def test_airbnb_booking_single_accommodation() -> None:
         ],
     )
 
-    fragment = extracted_fields_to_fragment(
-        fields, source_document_id="doc-airbnb-01"
-    )
+    fragment = extracted_fields_to_fragment(fields, source_document_id="doc-airbnb-01")
 
     assert isinstance(fragment, AccommodationFragment)
     assert fragment.document_type == "airbnb-booking"
