@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Berlin",
-    "Frankfurt"
+    "London",
+    "Amsterdam"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002014",
   "sourceDocumentId": "014-straight-1p-bisect-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "London",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Frankfurt",
-      "identifier": "Frankfurt Bus Terminal",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

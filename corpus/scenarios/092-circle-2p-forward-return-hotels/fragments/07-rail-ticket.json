@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Helsinki",
-    "Munich"
+    "Copenhagen",
+    "Helsinki"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003092",
   "sourceDocumentId": "092-circle-2p-forward-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Helsinki",
+      "city": "Copenhagen",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Hauptbahnhof",
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

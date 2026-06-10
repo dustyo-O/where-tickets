@@ -1,37 +1,37 @@
 {
   "cities": [
-    "New York",
-    "Stockholm",
-    "Amsterdam"
+    "Munich",
+    "Prague",
+    "Istanbul"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001157",
   "sourceDocumentId": "157-star-2p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "New York",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "New York Bus Terminal",
+      "identifier": "Munich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Prague",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Stockholm Bus Terminal",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Amsterdam",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Stockholm",
-      "identifier": "Stockholm Bus Terminal",
+      "city": "Prague",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

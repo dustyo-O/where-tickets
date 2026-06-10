@@ -1,38 +1,38 @@
 {
   "cities": [
-    "New York",
-    "Munich",
-    "Warsaw",
-    "Rome"
+    "Moscow",
+    "Vienna",
+    "Dublin",
+    "Milan"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001065",
   "sourceDocumentId": "065-circle-1p-reverse-tkt-01",
   "stations": [
     {
-      "city": "New York",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "New York Hauptbahnhof",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Munich Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Rome",
-      "identifier": "Rome Hauptbahnhof",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

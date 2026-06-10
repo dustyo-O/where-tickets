@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Copenhagen",
-    "Warsaw"
+    "Dublin",
+    "Helsinki"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002185",
   "sourceDocumentId": "185-star-4p-reverse-return-tkt-02",
   "stations": [
     {
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "CPH",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Warsaw",
-      "identifier": "WAW",
+      "city": "Helsinki",
+      "identifier": "HEL",
       "kind": "airport"
     }
   ],

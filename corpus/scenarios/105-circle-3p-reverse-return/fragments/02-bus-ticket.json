@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "Munich"
+    "Prague",
+    "Madrid"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002105",
   "sourceDocumentId": "105-circle-3p-reverse-return-tkt-02",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Prague",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Dublin Bus Terminal",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Bus Terminal",
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

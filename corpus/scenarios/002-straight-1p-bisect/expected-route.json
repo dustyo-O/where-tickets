@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "London",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Oslo",
+      "city": "Prague",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Vienna",
+      "city": "Oslo",
       "travelers": [
         "traveler-1"
       ]
@@ -43,10 +43,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "London",
+      "from": "Copenhagen",
       "mode": "rail",
       "sourceFragmentId": "002-straight-1p-bisect-tkt-01",
-      "to": "Warsaw",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1"
       ]
@@ -54,10 +54,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Warsaw",
+      "from": "Lisbon",
       "mode": "rail",
       "sourceFragmentId": "002-straight-1p-bisect-tkt-01",
-      "to": "Berlin",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1"
       ]
@@ -65,10 +65,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
+      "from": "Barcelona",
       "mode": "rail",
       "sourceFragmentId": "002-straight-1p-bisect-tkt-01",
-      "to": "Oslo",
+      "to": "Prague",
       "travelers": [
         "traveler-1"
       ]
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Oslo",
+      "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "002-straight-1p-bisect-tkt-02",
-      "to": "Vienna",
+      "to": "Oslo",
       "travelers": [
         "traveler-1"
       ]

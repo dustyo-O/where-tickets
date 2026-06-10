@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Barcelona",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Berlin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Vienna",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Madrid",
+      "city": "Moscow",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Berlin",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Athens",
+      "city": "Berlin",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,7 +61,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Barcelona",
+      "city": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Barcelona",
+      "from": "Athens",
       "mode": "rail",
       "sourceFragmentId": "107-circle-3p-seeded-shuffle-return-tkt-01",
-      "to": "Athens",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "107-circle-3p-seeded-shuffle-return-tkt-01",
-      "to": "Vienna",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Vienna",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "107-circle-3p-seeded-shuffle-return-tkt-01",
-      "to": "Madrid",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -112,10 +112,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Madrid",
-      "mode": "air",
+      "from": "Moscow",
+      "mode": "bus",
       "sourceFragmentId": "107-circle-3p-seeded-shuffle-return-tkt-02",
-      "to": "Berlin",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Berlin",
+      "from": "Amsterdam",
       "mode": "rail",
       "sourceFragmentId": "107-circle-3p-seeded-shuffle-return-tkt-03",
-      "to": "Athens",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -138,10 +138,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Athens",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "107-circle-3p-seeded-shuffle-return-tkt-03",
-      "to": "Barcelona",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",

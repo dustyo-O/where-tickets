@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Copenhagen",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "New York",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Istanbul",
+      "city": "Stockholm",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,7 +69,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Berlin",
+      "city": "Copenhagen",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -78,7 +78,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Frankfurt",
+      "city": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Copenhagen",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "085-circle-2p-reverse-hotels-tkt-01",
-      "to": "Frankfurt",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -101,10 +101,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Frankfurt",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "085-circle-2p-reverse-hotels-tkt-01",
-      "to": "New York",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "New York",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "085-circle-2p-reverse-hotels-tkt-01",
-      "to": "Istanbul",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Istanbul",
-      "mode": "air",
+      "from": "Stockholm",
+      "mode": "rail",
       "sourceFragmentId": "085-circle-2p-reverse-hotels-tkt-02",
-      "to": "Berlin",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -137,10 +137,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Berlin",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "085-circle-2p-reverse-hotels-tkt-03",
-      "to": "Frankfurt",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"

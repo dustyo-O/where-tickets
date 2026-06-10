@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Copenhagen",
+      "city": "London",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Copenhagen"
+    "London"
   ],
   "confirmationCode": "HTL003156",
   "documentType": "hotel-booking",

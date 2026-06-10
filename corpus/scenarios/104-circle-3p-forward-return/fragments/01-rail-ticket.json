@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Zurich",
-    "Dublin",
-    "Frankfurt",
-    "Munich"
+    "Warsaw",
+    "Helsinki",
+    "Vienna",
+    "Oslo"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001104",
   "sourceDocumentId": "104-circle-3p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Zurich Hauptbahnhof",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Dublin",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Frankfurt",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Hauptbahnhof",
+      "city": "Oslo",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

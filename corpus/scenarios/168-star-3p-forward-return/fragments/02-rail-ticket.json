@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Dublin",
+    "Prague"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002168",
+  "sourceDocumentId": "168-star-3p-forward-return-tkt-02",
+  "stations": [
+    {
+      "city": "Dublin",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Dublin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Prague",
+      "identifier": "Prague Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

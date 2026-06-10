@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Warsaw",
-    "Copenhagen",
-    "Frankfurt",
-    "Paris"
+    "Helsinki",
+    "Dublin",
+    "New York",
+    "Rome"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003185",
   "sourceDocumentId": "185-star-4p-reverse-return-tkt-03",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Helsinki",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Copenhagen Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Frankfurt",
+      "city": "New York",
       "departureAt": "2027-03-03T00:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "Paris",
-      "identifier": "Paris Hauptbahnhof",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

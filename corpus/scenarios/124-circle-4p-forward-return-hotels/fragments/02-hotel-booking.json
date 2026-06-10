@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Milan",
+      "city": "Munich",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Milan"
+    "Munich"
   ],
   "confirmationCode": "HTL001124",
   "documentType": "hotel-booking",

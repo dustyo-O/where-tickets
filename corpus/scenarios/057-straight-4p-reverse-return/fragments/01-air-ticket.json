@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Munich",
-    "Dublin",
-    "Lisbon"
+    "Amsterdam",
+    "Istanbul",
+    "Barcelona"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001057",
   "sourceDocumentId": "057-straight-4p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MUC",
+      "identifier": "AMS",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Dublin",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "DUB",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Lisbon",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "LIS",
+      "identifier": "BCN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Munich",
-      "identifier": "MUC",
+      "city": "Amsterdam",
+      "identifier": "AMS",
       "kind": "airport"
     }
   ],

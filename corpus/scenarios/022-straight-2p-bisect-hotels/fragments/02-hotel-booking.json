@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Stockholm",
+      "city": "Dublin",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Stockholm"
+    "Dublin"
   ],
   "confirmationCode": "HTL002022",
   "documentType": "hotel-booking",

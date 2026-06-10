@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Lisbon",
-    "Munich",
-    "Paris"
+    "Frankfurt",
+    "Rome",
+    "Amsterdam"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001169",
   "sourceDocumentId": "169-star-3p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Lisbon",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Rome",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Paris Bus Terminal",
+      "identifier": "Amsterdam Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Bus Terminal",
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

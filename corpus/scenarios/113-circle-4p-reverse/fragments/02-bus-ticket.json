@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Oslo",
-    "Berlin"
+    "Barcelona",
+    "Prague"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002113",
   "sourceDocumentId": "113-circle-4p-reverse-tkt-02",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Berlin",
-      "identifier": "Berlin Bus Terminal",
+      "city": "Prague",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

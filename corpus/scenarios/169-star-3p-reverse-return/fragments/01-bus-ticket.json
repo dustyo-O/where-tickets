@@ -1,8 +1,8 @@
 {
   "cities": [
     "Berlin",
-    "Munich",
-    "Lisbon"
+    "Rome",
+    "Frankfurt"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003169",
@@ -16,15 +16,15 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
+      "city": "Rome",
       "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Lisbon",
-      "identifier": "Lisbon Bus Terminal",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

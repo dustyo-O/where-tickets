@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Berlin"
+    "Frankfurt",
+    "Warsaw"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002040",
   "sourceDocumentId": "040-straight-3p-forward-return-tkt-02",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Frankfurt",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "AMS",
+      "identifier": "FRA",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Berlin",
-      "identifier": "BER",
+      "city": "Warsaw",
+      "identifier": "WAW",
       "kind": "airport"
     }
   ],

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Oslo",
-    "Vienna"
+    "Prague",
+    "Oslo"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002002",
   "sourceDocumentId": "002-straight-1p-bisect-tkt-02",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Prague",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Vienna",
-      "identifier": "Vienna Bus Terminal",
+      "city": "Oslo",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

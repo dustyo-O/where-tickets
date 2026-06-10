@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Lisbon",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Athens",
+      "city": "Warsaw",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -48,10 +48,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Lisbon",
+      "from": "Frankfurt",
       "mode": "air",
       "sourceFragmentId": "147-star-2p-seeded-shuffle-tkt-01",
-      "to": "Athens",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -60,10 +60,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
+      "from": "Warsaw",
       "mode": "air",
       "sourceFragmentId": "147-star-2p-seeded-shuffle-tkt-01",
-      "to": "Prague",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Prague",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "147-star-2p-seeded-shuffle-tkt-01",
-      "to": "Athens",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Athens",
-      "mode": "bus",
+      "from": "Warsaw",
+      "mode": "rail",
       "sourceFragmentId": "147-star-2p-seeded-shuffle-tkt-02",
-      "to": "Frankfurt",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"

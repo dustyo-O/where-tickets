@@ -1,25 +1,25 @@
 {
   "cities": [
-    "Amsterdam",
-    "London",
+    "Zurich",
+    "Dublin",
     "Athens",
-    "Helsinki"
+    "Rome"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001122",
   "sourceDocumentId": "122-circle-4p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
@@ -31,8 +31,8 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Hauptbahnhof",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,8 +1,8 @@
 {
   "cities": [
     "Barcelona",
-    "Munich",
-    "Athens"
+    "Berlin",
+    "Vienna"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001136",
@@ -16,22 +16,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Berlin",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Athens Bus Terminal",
+      "identifier": "Vienna Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Bus Terminal",
+      "city": "Berlin",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

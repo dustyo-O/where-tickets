@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Prague",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Copenhagen",
+      "city": "Amsterdam",
       "travelers": [
         "traveler-1"
       ]
@@ -35,10 +35,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "006-straight-1p-bisect-hotels-tkt-01",
-      "to": "Munich",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]
@@ -46,10 +46,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Munich",
+      "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "006-straight-1p-bisect-hotels-tkt-01",
-      "to": "Copenhagen",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1"
       ]

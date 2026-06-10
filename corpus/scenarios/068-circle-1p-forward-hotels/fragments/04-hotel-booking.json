@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Rome",
+      "city": "Dublin",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Rome"
+    "Dublin"
   ],
   "confirmationCode": "HTL003068",
   "documentType": "hotel-booking",

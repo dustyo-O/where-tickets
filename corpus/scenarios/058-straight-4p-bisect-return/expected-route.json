@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Zurich",
+      "city": "Oslo",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "London",
+      "city": "Vienna",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Zurich",
+      "city": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -58,7 +58,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-01",
       "to": "Amsterdam",
@@ -75,7 +75,7 @@
       "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-01",
-      "to": "Helsinki",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Helsinki",
+      "from": "Madrid",
       "mode": "bus",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-01",
-      "to": "London",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "London",
-      "mode": "rail",
+      "from": "Vienna",
+      "mode": "air",
       "sourceFragmentId": "058-straight-4p-bisect-return-tkt-02",
-      "to": "Zurich",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",

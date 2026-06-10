@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Prague",
+    "Milan"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002047",
+  "sourceDocumentId": "047-straight-3p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Prague",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

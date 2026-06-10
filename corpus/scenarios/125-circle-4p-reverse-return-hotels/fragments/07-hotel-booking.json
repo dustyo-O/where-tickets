@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Vienna",
+      "city": "Rome",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Vienna"
+    "Rome"
   ],
   "confirmationCode": "HTL001125",
   "documentType": "hotel-booking",

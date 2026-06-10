@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Barcelona",
+      "city": "Copenhagen",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Barcelona"
+    "Copenhagen"
   ],
   "confirmationCode": "HTL002004",
   "documentType": "hotel-booking",

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Moscow",
+      "city": "Madrid",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "Moscow",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Paris",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Zurich",
+      "city": "Moscow",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -73,7 +73,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Istanbul",
+      "city": "Dublin",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -91,7 +91,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Zurich",
+      "city": "Moscow",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -101,7 +101,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Moscow",
+      "city": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Moscow",
+      "from": "Madrid",
       "mode": "bus",
       "sourceFragmentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -126,10 +126,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Zurich",
+      "from": "Moscow",
       "mode": "bus",
       "sourceFragmentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Paris",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -139,10 +139,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Paris",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -152,10 +152,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Zurich",
+      "from": "Moscow",
       "mode": "rail",
       "sourceFragmentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-02",
-      "to": "Istanbul",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -165,10 +165,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Istanbul",
+      "from": "Dublin",
       "mode": "bus",
       "sourceFragmentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "Zurich",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -178,10 +178,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Zurich",
+      "from": "Moscow",
       "mode": "bus",
       "sourceFragmentId": "175-star-3p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "Moscow",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",

@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-02T00:00:00Z",
-      "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Zurich",
-      "identifier": "Old Town Hostel",
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Berlin",
+      "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Zurich"
+    "Berlin"
   ],
-  "confirmationCode": "HTL002071",
+  "confirmationCode": "HTL001071",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-htl-02",
+  "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-htl-01",
   "travelers": [
     "traveler-1"
   ]

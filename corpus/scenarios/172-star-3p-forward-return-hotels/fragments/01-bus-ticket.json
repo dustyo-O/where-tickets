@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Vienna",
-    "Istanbul",
-    "Rome"
+    "Stockholm",
+    "Barcelona",
+    "Moscow"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001172",
   "sourceDocumentId": "172-star-3p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Istanbul Bus Terminal",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Rome",
+      "city": "Moscow",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Rome Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Istanbul",
-      "identifier": "Istanbul Bus Terminal",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

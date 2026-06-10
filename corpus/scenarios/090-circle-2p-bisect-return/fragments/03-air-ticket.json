@@ -1,18 +1,18 @@
 {
   "cities": [
-    "Oslo",
+    "Vienna",
     "Berlin",
-    "Athens",
-    "Lisbon"
+    "Lisbon",
+    "Copenhagen"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001090",
   "sourceDocumentId": "090-circle-2p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "OSL",
+      "identifier": "VIE",
       "kind": "airport"
     },
     {
@@ -24,15 +24,15 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "ATH",
+      "identifier": "LIS",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Lisbon",
-      "identifier": "LIS",
+      "city": "Copenhagen",
+      "identifier": "CPH",
       "kind": "airport"
     }
   ],

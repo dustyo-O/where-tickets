@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Amsterdam",
-    "Stockholm",
-    "Paris",
-    "Prague"
+    "Berlin",
+    "Madrid",
+    "Frankfurt",
+    "Amsterdam"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001017",
   "sourceDocumentId": "017-straight-2p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Stockholm Hauptbahnhof",
+      "identifier": "Madrid Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Paris Hauptbahnhof",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Prague",
-      "identifier": "Prague Hauptbahnhof",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-03T18:00:00Z",
       "checkOutAt": "2027-03-04T12:00:00Z",
-      "city": "Istanbul",
+      "city": "Moscow",
       "identifier": "Central Lodge",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Istanbul"
+    "Moscow"
   ],
   "confirmationCode": "HTL004143",
   "documentType": "hotel-booking",

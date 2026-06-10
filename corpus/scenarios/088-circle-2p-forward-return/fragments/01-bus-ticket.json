@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Rome",
-    "Madrid",
-    "Lisbon",
-    "Istanbul"
+    "Zurich",
+    "New York",
+    "Dublin",
+    "Amsterdam"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001088",
   "sourceDocumentId": "088-circle-2p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Rome",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Rome Bus Terminal",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Madrid Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Lisbon",
+      "city": "Dublin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
+      "identifier": "Dublin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Istanbul",
-      "identifier": "Istanbul Bus Terminal",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

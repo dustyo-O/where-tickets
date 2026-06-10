@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Madrid",
+      "city": "Paris",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Madrid"
+    "Paris"
   ],
   "confirmationCode": "HTL002124",
   "documentType": "hotel-booking",

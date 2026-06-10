@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Berlin",
-    "London",
-    "Madrid"
+    "Athens",
+    "Vienna",
+    "London"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001161",
   "sourceDocumentId": "161-star-3p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "Athens Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Madrid",
+      "city": "London",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

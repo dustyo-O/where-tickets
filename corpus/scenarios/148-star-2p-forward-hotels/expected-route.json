@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Berlin",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Helsinki",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Zurich",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Helsinki",
+      "city": "New York",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -78,7 +78,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Helsinki",
+      "city": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Berlin",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "148-star-2p-forward-hotels-tkt-01",
-      "to": "Helsinki",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -101,10 +101,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Helsinki",
+      "from": "New York",
       "mode": "bus",
       "sourceFragmentId": "148-star-2p-forward-hotels-tkt-01",
-      "to": "London",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
+      "from": "Zurich",
       "mode": "bus",
       "sourceFragmentId": "148-star-2p-forward-hotels-tkt-01",
-      "to": "Helsinki",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -125,8 +125,8 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Helsinki",
-      "mode": "rail",
+      "from": "New York",
+      "mode": "air",
       "sourceFragmentId": "148-star-2p-forward-hotels-tkt-02",
       "to": "Vienna",
       "travelers": [
@@ -140,7 +140,7 @@
       "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "148-star-2p-forward-hotels-tkt-03",
-      "to": "Helsinki",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"

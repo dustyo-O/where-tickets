@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Copenhagen",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Zurich",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Stockholm",
+      "city": "Zurich",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Stockholm",
+      "city": "Zurich",
       "travelers": [
         "traveler-1"
       ]
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Copenhagen",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "130-star-1p-bisect-tkt-01",
-      "to": "Stockholm",
+      "to": "Zurich",
       "travelers": [
         "traveler-1"
       ]
@@ -62,10 +62,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Stockholm",
+      "from": "Zurich",
       "mode": "bus",
       "sourceFragmentId": "130-star-1p-bisect-tkt-01",
-      "to": "Berlin",
+      "to": "Oslo",
       "travelers": [
         "traveler-1"
       ]
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "130-star-1p-bisect-tkt-01",
-      "to": "Stockholm",
+      "to": "Zurich",
       "travelers": [
         "traveler-1"
       ]
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Stockholm",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "130-star-1p-bisect-tkt-02",
-      "to": "Amsterdam",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Amsterdam",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "130-star-1p-bisect-tkt-03",
-      "to": "Stockholm",
+      "to": "Zurich",
       "travelers": [
         "traveler-1"
       ]

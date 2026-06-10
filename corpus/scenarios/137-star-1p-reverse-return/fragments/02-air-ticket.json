@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "Stockholm"
+    "Amsterdam",
+    "Zurich"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002137",
   "sourceDocumentId": "137-star-1p-reverse-return-tkt-02",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "DUB",
+      "identifier": "AMS",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Stockholm",
-      "identifier": "ARN",
+      "city": "Zurich",
+      "identifier": "ZRH",
       "kind": "airport"
     }
   ],

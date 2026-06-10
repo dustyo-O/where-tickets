@@ -1,17 +1,17 @@
 {
   "cities": [
-    "Copenhagen",
+    "Frankfurt",
     "Paris",
-    "Helsinki"
+    "Rome"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001170",
   "sourceDocumentId": "170-star-3p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Copenhagen",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Copenhagen Hauptbahnhof",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     },
     {
@@ -23,9 +23,9 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {

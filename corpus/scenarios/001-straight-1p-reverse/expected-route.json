@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Zurich",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Prague",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Stockholm",
+      "city": "Paris",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
+      "city": "Berlin",
       "travelers": [
         "traveler-1"
       ]
@@ -35,10 +35,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
+      "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "001-straight-1p-reverse-tkt-01",
-      "to": "Athens",
+      "to": "Prague",
       "travelers": [
         "traveler-1"
       ]
@@ -46,10 +46,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Athens",
+      "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "001-straight-1p-reverse-tkt-01",
-      "to": "Stockholm",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -57,10 +57,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Stockholm",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "001-straight-1p-reverse-tkt-01",
-      "to": "Moscow",
+      "to": "Berlin",
       "travelers": [
         "traveler-1"
       ]

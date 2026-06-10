@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Milan",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "Berlin",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -29,7 +29,7 @@
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Paris",
+      "city": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -41,10 +41,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Milan",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "036-straight-3p-forward-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -54,10 +54,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Zurich",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "036-straight-3p-forward-hotels-tkt-01",
-      "to": "Paris",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",

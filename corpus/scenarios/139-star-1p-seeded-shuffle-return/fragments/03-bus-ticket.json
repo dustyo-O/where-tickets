@@ -1,0 +1,41 @@
+{
+  "cities": [
+    "Frankfurt",
+    "Munich",
+    "Lisbon"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR001139",
+  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Frankfurt",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Munich",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Lisbon Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

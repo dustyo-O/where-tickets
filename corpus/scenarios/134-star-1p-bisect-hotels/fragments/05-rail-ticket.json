@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Zurich",
-    "Berlin",
-    "Frankfurt"
+    "Prague",
+    "London",
+    "Istanbul"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001134",
   "sourceDocumentId": "134-star-1p-bisect-hotels-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Zurich Hauptbahnhof",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Frankfurt",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "identifier": "Istanbul Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Berlin",
-      "identifier": "Berlin Hauptbahnhof",
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Rome",
-    "Warsaw",
+    "Athens",
     "Helsinki",
-    "Milan"
+    "Vienna",
+    "Zurich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003158",
   "sourceDocumentId": "158-star-2p-bisect-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Rome",
+      "city": "Athens",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Rome Hauptbahnhof",
+      "identifier": "Athens Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Warsaw",
-      "departureAt": "2027-03-05T09:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-05T12:00:00Z",
       "city": "Helsinki",
-      "departureAt": "2027-03-06T06:00:00Z",
+      "departureAt": "2027-03-05T09:00:00Z",
       "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     },
     {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "Vienna",
+      "departureAt": "2027-03-06T06:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "Milan",
-      "identifier": "Milan Hauptbahnhof",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

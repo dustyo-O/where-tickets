@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Moscow",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -49,7 +49,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Berlin",
+      "city": "Vienna",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -67,7 +67,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-01",
       "to": "Prague",
@@ -81,7 +81,7 @@
       "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-01",
-      "to": "Moscow",
+      "to": "Milan",
       "travelers": [
         "traveler-1"
       ]
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Moscow",
+      "from": "Milan",
       "mode": "bus",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-01",
-      "to": "Berlin",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -100,7 +100,7 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Berlin",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "070-circle-1p-bisect-hotels-tkt-02",
       "to": "Prague",

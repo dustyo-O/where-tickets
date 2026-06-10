@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-04T15:00:00Z",
       "checkOutAt": "2027-03-05T09:00:00Z",
-      "city": "Prague",
+      "city": "Warsaw",
       "identifier": "Harbor View",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Prague"
+    "Warsaw"
   ],
   "confirmationCode": "HTL005164",
   "documentType": "hotel-booking",

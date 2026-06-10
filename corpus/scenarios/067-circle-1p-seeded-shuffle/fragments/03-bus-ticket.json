@@ -1,38 +1,22 @@
 {
   "cities": [
-    "Helsinki",
-    "Munich",
-    "Warsaw",
-    "Dublin"
+    "Istanbul",
+    "Athens"
   ],
   "documentType": "bus-ticket",
-  "pnr": "PNR001067",
-  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-01",
+  "pnr": "PNR003067",
+  "sourceDocumentId": "067-circle-1p-seeded-shuffle-tkt-03",
   "stations": [
     {
-      "city": "Helsinki",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Helsinki Bus Terminal",
+      "city": "Istanbul",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     },
     {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Munich Bus Terminal",
-      "kind": "bus_terminal"
-    },
-    {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Warsaw",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Warsaw Bus Terminal",
-      "kind": "bus_terminal"
-    },
-    {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Dublin",
-      "identifier": "Dublin Bus Terminal",
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

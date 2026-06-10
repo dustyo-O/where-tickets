@@ -1,9 +1,9 @@
 {
   "cities": [
     "Vienna",
-    "Moscow",
-    "Stockholm",
-    "Madrid"
+    "Paris",
+    "Milan",
+    "New York"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001094",
@@ -17,22 +17,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Moscow",
+      "city": "Paris",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Stockholm Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
-      "identifier": "Madrid Bus Terminal",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

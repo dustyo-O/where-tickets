@@ -1,7 +1,7 @@
 {
   "cities": [
     "Dublin",
-    "London"
+    "New York"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002078",
@@ -15,8 +15,8 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

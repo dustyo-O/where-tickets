@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Stockholm",
+      "city": "Milan",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Oslo",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Amsterdam",
+      "city": "Berlin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Copenhagen",
+      "city": "Warsaw",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -73,7 +73,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Dublin",
+      "city": "London",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -91,7 +91,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Barcelona",
+      "city": "Oslo",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -101,7 +101,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Stockholm",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Stockholm",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Barcelona",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -126,10 +126,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Barcelona",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Amsterdam",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -139,10 +139,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Amsterdam",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Copenhagen",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -152,10 +152,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Copenhagen",
-      "mode": "rail",
+      "from": "Warsaw",
+      "mode": "bus",
       "sourceFragmentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-02",
-      "to": "Dublin",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -165,10 +165,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Dublin",
+      "from": "London",
       "mode": "air",
       "sourceFragmentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "Barcelona",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -178,10 +178,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Barcelona",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "Stockholm",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",

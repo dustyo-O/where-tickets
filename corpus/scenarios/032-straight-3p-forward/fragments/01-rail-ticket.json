@@ -1,38 +1,38 @@
 {
   "cities": [
+    "Barcelona",
     "Warsaw",
-    "New York",
-    "Helsinki",
-    "Milan"
+    "Madrid",
+    "Zurich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001032",
   "sourceDocumentId": "032-straight-3p-forward-tkt-01",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "New York Hauptbahnhof",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Madrid Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Milan",
-      "identifier": "Milan Hauptbahnhof",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

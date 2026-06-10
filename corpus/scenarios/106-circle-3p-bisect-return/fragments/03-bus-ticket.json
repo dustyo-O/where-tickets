@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Warsaw",
-    "Istanbul",
+    "Moscow",
     "New York",
-    "Prague"
+    "Prague",
+    "Istanbul"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001106",
   "sourceDocumentId": "106-circle-3p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Warsaw Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Istanbul Bus Terminal",
-      "kind": "bus_terminal"
-    },
-    {
-      "arrivalAt": "2027-03-01T11:00:00Z",
       "city": "New York",
-      "departureAt": "2027-03-01T16:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
       "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
-      "arrivalAt": "2027-03-01T19:00:00Z",
+      "arrivalAt": "2027-03-01T11:00:00Z",
       "city": "Prague",
+      "departureAt": "2027-03-01T16:00:00Z",
       "identifier": "Prague Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

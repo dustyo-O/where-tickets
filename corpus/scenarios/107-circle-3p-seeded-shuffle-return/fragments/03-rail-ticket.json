@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Barcelona",
     "Athens",
-    "Vienna",
-    "Madrid"
+    "Berlin",
+    "Rome",
+    "Moscow"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001107",
   "sourceDocumentId": "107-circle-3p-seeded-shuffle-return-tkt-01",
   "stations": [
     {
-      "city": "Barcelona",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Barcelona Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-01T03:00:00Z",
       "city": "Athens",
-      "departureAt": "2027-03-01T08:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
       "identifier": "Athens Hauptbahnhof",
       "kind": "rail_station"
     },
     {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Vienna",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Madrid",
-      "identifier": "Madrid Hauptbahnhof",
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

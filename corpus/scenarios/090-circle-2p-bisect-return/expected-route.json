@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Oslo",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Lisbon",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Oslo",
+      "city": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -57,7 +57,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "090-circle-2p-bisect-return-tkt-01",
       "to": "Berlin",
@@ -72,7 +72,7 @@
       "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "090-circle-2p-bisect-return-tkt-01",
-      "to": "Athens",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -81,10 +81,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
+      "from": "Lisbon",
       "mode": "air",
       "sourceFragmentId": "090-circle-2p-bisect-return-tkt-01",
-      "to": "Lisbon",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -93,8 +93,8 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Lisbon",
-      "mode": "bus",
+      "from": "Copenhagen",
+      "mode": "rail",
       "sourceFragmentId": "090-circle-2p-bisect-return-tkt-02",
       "to": "Berlin",
       "travelers": [
@@ -108,7 +108,7 @@
       "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "090-circle-2p-bisect-return-tkt-03",
-      "to": "Oslo",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"

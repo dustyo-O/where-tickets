@@ -1,0 +1,34 @@
+{
+  "cities": [
+    "Milan",
+    "Berlin",
+    "London"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR003079",
+  "sourceDocumentId": "079-circle-1p-seeded-shuffle-return-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Milan Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-05T09:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-05T12:00:00Z",
+      "city": "London",
+      "identifier": "London Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

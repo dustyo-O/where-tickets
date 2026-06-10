@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Istanbul",
+      "city": "Oslo",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Istanbul"
+    "Oslo"
   ],
   "confirmationCode": "HTL001028",
   "documentType": "hotel-booking",

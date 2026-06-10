@@ -1,9 +1,9 @@
 {
   "cities": [
     "Warsaw",
-    "Lisbon",
-    "Vienna",
-    "London"
+    "Copenhagen",
+    "Helsinki",
+    "Milan"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001126",
@@ -17,22 +17,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "LIS",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Vienna",
+      "city": "Helsinki",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "VIE",
+      "identifier": "HEL",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "London",
-      "identifier": "LHR",
+      "city": "Milan",
+      "identifier": "MXP",
       "kind": "airport"
     }
   ],

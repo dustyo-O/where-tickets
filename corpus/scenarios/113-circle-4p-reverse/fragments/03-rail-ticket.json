@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Dublin",
-    "New York",
-    "Istanbul",
-    "Oslo"
+    "Berlin",
+    "Milan",
+    "Rome",
+    "Barcelona"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001113",
   "sourceDocumentId": "113-circle-4p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "New York Hauptbahnhof",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Istanbul",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Oslo",
-      "identifier": "Oslo Hauptbahnhof",
+      "city": "Barcelona",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

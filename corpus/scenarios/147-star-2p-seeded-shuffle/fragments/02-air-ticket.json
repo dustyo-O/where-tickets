@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Lisbon",
-    "Athens",
-    "Prague"
+    "Frankfurt",
+    "Warsaw",
+    "Madrid"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001147",
   "sourceDocumentId": "147-star-2p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Lisbon",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "LIS",
+      "identifier": "FRA",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "ATH",
+      "identifier": "WAW",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "PRG",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Athens",
-      "identifier": "ATH",
+      "city": "Warsaw",
+      "identifier": "WAW",
       "kind": "airport"
     }
   ],

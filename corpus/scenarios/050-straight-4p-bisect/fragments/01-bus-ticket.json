@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "Lisbon"
+    "Berlin",
+    "Barcelona"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002050",
   "sourceDocumentId": "050-straight-4p-bisect-tkt-02",
   "stations": [
     {
-      "city": "London",
+      "city": "Berlin",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "London Bus Terminal",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Lisbon",
-      "identifier": "Lisbon Bus Terminal",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

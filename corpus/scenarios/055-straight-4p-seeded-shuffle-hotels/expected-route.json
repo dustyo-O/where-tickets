@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Vienna",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -50,7 +50,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Zurich",
+      "city": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
+      "from": "New York",
       "mode": "bus",
       "sourceFragmentId": "055-straight-4p-seeded-shuffle-hotels-tkt-01",
-      "to": "Oslo",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -77,7 +77,7 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Oslo",
+      "from": "London",
       "mode": "bus",
       "sourceFragmentId": "055-straight-4p-seeded-shuffle-hotels-tkt-01",
       "to": "Stockholm",
@@ -94,7 +94,7 @@
       "from": "Stockholm",
       "mode": "bus",
       "sourceFragmentId": "055-straight-4p-seeded-shuffle-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",

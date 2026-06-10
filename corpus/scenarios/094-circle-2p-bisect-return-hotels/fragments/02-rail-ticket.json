@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Madrid",
-    "Moscow"
+    "New York",
+    "Paris"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002094",
   "sourceDocumentId": "094-circle-2p-bisect-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Moscow",
-      "identifier": "Moscow Hauptbahnhof",
+      "city": "Paris",
+      "identifier": "Paris Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

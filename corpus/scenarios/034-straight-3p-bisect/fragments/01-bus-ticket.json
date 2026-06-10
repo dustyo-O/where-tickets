@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Vienna",
-    "Milan",
-    "Berlin",
-    "Moscow"
+    "New York",
+    "Paris",
+    "Helsinki",
+    "Athens"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001034",
   "sourceDocumentId": "034-straight-3p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Milan",
+      "city": "Paris",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Milan Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "Helsinki Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
-      "identifier": "Moscow Bus Terminal",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

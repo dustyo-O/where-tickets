@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Frankfurt",
-    "Vienna",
-    "Rome",
-    "Barcelona"
+    "Prague",
+    "London",
+    "Dublin",
+    "Warsaw"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001056",
   "sourceDocumentId": "056-straight-4p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Frankfurt",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "London",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Rome",
+      "city": "Dublin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Rome Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Barcelona",
-      "identifier": "Barcelona Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

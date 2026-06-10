@@ -1,38 +1,38 @@
 {
   "cities": [
-    "London",
-    "Warsaw",
-    "Berlin",
-    "Oslo"
+    "Copenhagen",
+    "Lisbon",
+    "Barcelona",
+    "Prague"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001002",
   "sourceDocumentId": "002-straight-1p-bisect-tkt-01",
   "stations": [
     {
-      "city": "London",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Oslo",
-      "identifier": "Oslo Hauptbahnhof",
+      "city": "Prague",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

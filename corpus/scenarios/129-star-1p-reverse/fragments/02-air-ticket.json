@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Moscow",
-    "London",
-    "Dublin"
+    "New York",
+    "Rome",
+    "Istanbul"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001129",
   "sourceDocumentId": "129-star-1p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "SVO",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Rome",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "LHR",
+      "identifier": "ROM",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Dublin",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "DUB",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "London",
-      "identifier": "LHR",
+      "city": "Rome",
+      "identifier": "ROM",
       "kind": "airport"
     }
   ],

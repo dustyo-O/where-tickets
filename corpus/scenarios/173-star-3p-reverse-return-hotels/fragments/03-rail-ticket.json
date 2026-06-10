@@ -1,38 +1,38 @@
 {
   "cities": [
-    "London",
-    "Amsterdam",
-    "Munich",
-    "Istanbul"
+    "Barcelona",
+    "Copenhagen",
+    "Stockholm",
+    "Oslo"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003173",
   "sourceDocumentId": "173-star-3p-reverse-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "London",
+      "city": "Barcelona",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-05T09:00:00Z",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Munich",
+      "city": "Stockholm",
       "departureAt": "2027-03-06T06:00:00Z",
-      "identifier": "Munich Hauptbahnhof",
+      "identifier": "Stockholm Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "Istanbul",
-      "identifier": "Istanbul Hauptbahnhof",
+      "city": "Oslo",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

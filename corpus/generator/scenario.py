@@ -8,20 +8,17 @@ from dataclasses import dataclass
 from typing import Any
 
 from .fragmenter import build_fragments_and_route
-from .matrix import ScenarioSpec
+from .matrix import MODES, ScenarioSpec
 from .orderings import apply_ordering
 from .shapes import build_city_sequence
 
 
-# Map the public mode name onto its seed-payload alias. This keeps the per-
-# scenario seed byte-stable across the DUS-31 ``train`` → ``rail`` rename so the
-# regenerated corpus only relabels mode strings without re-rolling cities /
-# hotels / shuffle orders. The alias is purely a generator-internal detail; the
-# emitted fragments and expected-routes use the public mode name throughout.
-_SEED_MODE_ALIAS: dict[str, str] = {"rail": "train"}
-
-
 def _seed_for(spec: ScenarioSpec) -> int:
+    # Mode contributes its index in ``MODES``, not the string itself, so
+    # future renames (e.g. ``rail`` → ``train``) leave the seed payload
+    # byte-stable. The pre-DUS-31 generator hashed ``spec.primary_mode``
+    # directly, which forced a `_SEED_MODE_ALIAS` shim through Slices 1-10
+    # to avoid a one-shot corpus reshuffle.
     payload = "|".join(
         [
             str(spec.index),
@@ -31,7 +28,7 @@ def _seed_for(spec: ScenarioSpec) -> int:
             str(spec.hotels),
             spec.ordering,
             str(spec.leg_count),
-            _SEED_MODE_ALIAS.get(spec.primary_mode, spec.primary_mode),
+            str(MODES.index(spec.primary_mode)),
         ]
     )
     digest = hashlib.sha256(payload.encode("utf-8")).digest()

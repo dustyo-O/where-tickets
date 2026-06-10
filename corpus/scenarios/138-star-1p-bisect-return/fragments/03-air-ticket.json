@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Istanbul",
-    "Vienna",
-    "Milan"
+    "Stockholm",
+    "London",
+    "Moscow"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001138",
   "sourceDocumentId": "138-star-1p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "IST",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "London",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "VIE",
+      "identifier": "LHR",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Milan",
+      "city": "Moscow",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "MXP",
+      "identifier": "SVO",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Vienna",
-      "identifier": "VIE",
+      "city": "London",
+      "identifier": "LHR",
       "kind": "airport"
     }
   ],

@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Zurich",
+    "Munich"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002089",
+  "sourceDocumentId": "089-circle-2p-reverse-return-tkt-02",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Zurich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

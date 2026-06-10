@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Lisbon",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Berlin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Prague",
+      "city": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -58,10 +58,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Lisbon",
+      "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "112-circle-4p-forward-tkt-01",
-      "to": "Prague",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Prague",
+      "from": "Berlin",
       "mode": "bus",
       "sourceFragmentId": "112-circle-4p-forward-tkt-01",
-      "to": "Paris",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -86,10 +86,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Paris",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "112-circle-4p-forward-tkt-01",
-      "to": "Madrid",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Madrid",
-      "mode": "air",
+      "from": "New York",
+      "mode": "rail",
       "sourceFragmentId": "112-circle-4p-forward-tkt-02",
-      "to": "Prague",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",

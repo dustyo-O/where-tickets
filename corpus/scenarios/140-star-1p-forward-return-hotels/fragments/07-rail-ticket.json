@@ -1,38 +1,38 @@
 {
   "cities": [
+    "Lisbon",
     "Berlin",
-    "Oslo",
-    "Madrid",
-    "Zurich"
+    "Prague",
+    "Moscow"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003140",
   "sourceDocumentId": "140-star-1p-forward-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "Lisbon",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Oslo",
+      "city": "Berlin",
       "departureAt": "2027-03-05T09:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Madrid",
+      "city": "Prague",
       "departureAt": "2027-03-06T06:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Hauptbahnhof",
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

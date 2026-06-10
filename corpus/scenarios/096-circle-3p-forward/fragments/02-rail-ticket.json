@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Zurich",
+    "Stockholm"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002096",
+  "sourceDocumentId": "096-circle-3p-forward-tkt-02",
+  "stations": [
+    {
+      "city": "Zurich",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Zurich Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

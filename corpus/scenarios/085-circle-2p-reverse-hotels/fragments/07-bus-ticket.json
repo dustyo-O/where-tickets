@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Copenhagen",
-    "Frankfurt",
-    "New York",
-    "Istanbul"
+    "Rome",
+    "Barcelona",
+    "Paris",
+    "Stockholm"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001085",
   "sourceDocumentId": "085-circle-2p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Copenhagen",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Copenhagen Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Frankfurt Bus Terminal",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "New York",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "New York Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Istanbul",
-      "identifier": "Istanbul Bus Terminal",
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

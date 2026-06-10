@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Athens",
-    "Oslo",
-    "Barcelona"
+    "Milan",
+    "Frankfurt",
+    "Rome"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001153",
   "sourceDocumentId": "153-star-2p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Athens",
+      "city": "Milan",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ATH",
+      "identifier": "MXP",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "OSL",
+      "identifier": "FRA",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Barcelona",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "BCN",
+      "identifier": "ROM",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Oslo",
-      "identifier": "OSL",
+      "city": "Frankfurt",
+      "identifier": "FRA",
       "kind": "airport"
     }
   ],

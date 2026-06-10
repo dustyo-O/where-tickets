@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "London",
+      "city": "Istanbul",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "London"
+    "Istanbul"
   ],
   "confirmationCode": "HTL001181",
   "documentType": "hotel-booking",

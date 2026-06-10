@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Madrid",
-    "Barcelona",
-    "Oslo",
-    "Frankfurt"
+    "Zurich",
+    "Amsterdam",
+    "Lisbon",
+    "Moscow"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001098",
   "sourceDocumentId": "098-circle-3p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Barcelona Hauptbahnhof",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Oslo",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Frankfurt",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

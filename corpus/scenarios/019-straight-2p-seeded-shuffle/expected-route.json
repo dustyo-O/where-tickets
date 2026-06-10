@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Rome",
+      "city": "London",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "Oslo",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "New York",
+      "city": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -39,10 +39,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Rome",
+      "from": "London",
       "mode": "bus",
       "sourceFragmentId": "019-straight-2p-seeded-shuffle-tkt-01",
-      "to": "Vienna",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Vienna",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "019-straight-2p-seeded-shuffle-tkt-01",
-      "to": "Paris",
+      "to": "Amsterdam",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Paris",
+      "from": "Amsterdam",
       "mode": "bus",
       "sourceFragmentId": "019-straight-2p-seeded-shuffle-tkt-01",
-      "to": "New York",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"

@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Warsaw",
-    "Prague",
-    "Athens"
+    "Vienna",
+    "Madrid",
+    "Berlin"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001152",
   "sourceDocumentId": "152-star-2p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Prague Hauptbahnhof",
+      "identifier": "Madrid Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Athens Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Prague",
-      "identifier": "Prague Hauptbahnhof",
+      "city": "Madrid",
+      "identifier": "Madrid Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

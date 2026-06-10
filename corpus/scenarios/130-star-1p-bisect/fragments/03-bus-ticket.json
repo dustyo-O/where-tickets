@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Copenhagen",
-    "Stockholm",
-    "Berlin"
+    "Istanbul",
+    "Zurich",
+    "Oslo"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001130",
   "sourceDocumentId": "130-star-1p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Copenhagen",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Copenhagen Bus Terminal",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Zurich",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Stockholm Bus Terminal",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Stockholm",
-      "identifier": "Stockholm Bus Terminal",
+      "city": "Zurich",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

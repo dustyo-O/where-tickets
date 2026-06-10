@@ -1,6 +1,6 @@
 {
   "cities": [
-    "Berlin",
+    "Vienna",
     "Prague"
   ],
   "documentType": "air-ticket",
@@ -8,9 +8,9 @@
   "sourceDocumentId": "070-circle-1p-bisect-hotels-tkt-02",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "Vienna",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "BER",
+      "identifier": "VIE",
       "kind": "airport"
     },
     {

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Moscow",
-    "Paris"
+    "Copenhagen",
+    "Athens"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003189",
   "sourceDocumentId": "189-star-4p-reverse-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Copenhagen",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "SVO",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Paris",
-      "identifier": "CDG",
+      "city": "Athens",
+      "identifier": "ATH",
       "kind": "airport"
     }
   ],

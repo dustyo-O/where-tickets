@@ -1,18 +1,18 @@
 {
   "cities": [
-    "London",
+    "New York",
     "Berlin",
-    "Zurich",
-    "Moscow"
+    "Barcelona",
+    "London"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001071",
   "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-tkt-01",
   "stations": [
     {
-      "city": "London",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     },
     {
@@ -24,15 +24,15 @@
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Zurich",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Zurich Hauptbahnhof",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Moscow",
-      "identifier": "Moscow Hauptbahnhof",
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

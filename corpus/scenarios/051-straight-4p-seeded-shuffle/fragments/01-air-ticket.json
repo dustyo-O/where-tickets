@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Prague",
-    "Vienna",
-    "Moscow"
+    "Rome",
+    "Warsaw",
+    "Frankfurt"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001051",
   "sourceDocumentId": "051-straight-4p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "PRG",
+      "identifier": "ROM",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "VIE",
+      "identifier": "WAW",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Moscow",
-      "identifier": "SVO",
+      "city": "Frankfurt",
+      "identifier": "FRA",
       "kind": "airport"
     }
   ],

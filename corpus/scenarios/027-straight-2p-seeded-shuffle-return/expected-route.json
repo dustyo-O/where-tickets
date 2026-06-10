@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Oslo",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -39,7 +39,19 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
+      "from": "Dublin",
+      "mode": "air",
+      "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
+      "to": "Helsinki",
+      "travelers": [
+        "traveler-1",
+        "traveler-2"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
       "to": "Rome",
@@ -49,24 +61,12 @@
       ]
     },
     {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "departureAt": "2027-03-01T08:00:00Z",
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
       "from": "Rome",
       "mode": "air",
       "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
-      "to": "Oslo",
-      "travelers": [
-        "traveler-1",
-        "traveler-2"
-      ]
-    },
-    {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Oslo",
-      "mode": "air",
-      "sourceFragmentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
-      "to": "Warsaw",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"

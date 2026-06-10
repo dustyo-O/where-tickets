@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Zurich",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Athens",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "London",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Frankfurt",
+      "city": "Athens",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Zurich",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "162-star-3p-bisect-tkt-01",
-      "to": "Frankfurt",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -66,10 +66,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Frankfurt",
+      "from": "Athens",
       "mode": "air",
       "sourceFragmentId": "162-star-3p-bisect-tkt-01",
-      "to": "London",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "London",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "162-star-3p-bisect-tkt-01",
-      "to": "Frankfurt",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Frankfurt",
-      "mode": "bus",
+      "from": "Athens",
+      "mode": "rail",
       "sourceFragmentId": "162-star-3p-bisect-tkt-02",
-      "to": "Barcelona",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "New York"
+    "Rome",
+    "Milan"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002129",
   "sourceDocumentId": "129-star-1p-reverse-tkt-02",
   "stations": [
     {
-      "city": "London",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "London Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "New York",
-      "identifier": "New York Bus Terminal",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

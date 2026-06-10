@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -39,7 +39,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Vienna",
+      "city": "Helsinki",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -58,7 +58,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "London",
+      "city": "Milan",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -77,7 +77,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Lisbon",
+      "city": "Copenhagen",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -104,7 +104,7 @@
       "from": "Warsaw",
       "mode": "air",
       "sourceFragmentId": "126-circle-4p-bisect-return-hotels-tkt-01",
-      "to": "Lisbon",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Lisbon",
+      "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "126-circle-4p-bisect-return-hotels-tkt-01",
-      "to": "Vienna",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -129,10 +129,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Vienna",
+      "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "126-circle-4p-bisect-return-hotels-tkt-01",
-      "to": "London",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -143,10 +143,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "London",
-      "mode": "bus",
+      "from": "Milan",
+      "mode": "rail",
       "sourceFragmentId": "126-circle-4p-bisect-return-hotels-tkt-02",
-      "to": "Lisbon",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -157,7 +157,7 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Lisbon",
+      "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "126-circle-4p-bisect-return-hotels-tkt-03",
       "to": "Warsaw",

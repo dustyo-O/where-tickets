@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Vienna",
-    "Barcelona",
-    "Stockholm",
-    "Athens"
+    "Athens",
+    "Moscow",
+    "Dublin",
+    "Helsinki"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001022",
   "sourceDocumentId": "022-straight-2p-bisect-hotels-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Moscow",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Barcelona Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Stockholm Bus Terminal",
+      "identifier": "Dublin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Athens",
-      "identifier": "Athens Bus Terminal",
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Lisbon",
-    "Prague"
+    "Istanbul",
+    "Frankfurt"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003074",
   "sourceDocumentId": "074-circle-1p-bisect-return-tkt-03",
   "stations": [
     {
-      "city": "Lisbon",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Lisbon Hauptbahnhof",
+      "identifier": "Istanbul Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Prague",
-      "identifier": "Prague Hauptbahnhof",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

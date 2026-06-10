@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Lisbon",
     "Prague",
-    "Paris",
-    "Madrid"
+    "Berlin",
+    "Rome",
+    "New York"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001112",
   "sourceDocumentId": "112-circle-4p-forward-tkt-01",
   "stations": [
     {
-      "city": "Lisbon",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
-      "kind": "bus_terminal"
-    },
-    {
-      "arrivalAt": "2027-03-01T03:00:00Z",
       "city": "Prague",
-      "departureAt": "2027-03-01T08:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
       "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     },
     {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Berlin Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Paris Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Madrid",
-      "identifier": "Madrid Bus Terminal",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

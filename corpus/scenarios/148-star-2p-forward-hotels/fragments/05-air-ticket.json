@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "New York",
+    "Vienna"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002148",
+  "sourceDocumentId": "148-star-2p-forward-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "New York",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "JFK",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Vienna",
+      "identifier": "VIE",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

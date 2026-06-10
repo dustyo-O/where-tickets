@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "Warsaw"
+    "Frankfurt",
+    "Milan"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002086",
   "sourceDocumentId": "086-circle-2p-bisect-hotels-tkt-02",
   "stations": [
     {
-      "city": "London",
+      "city": "Frankfurt",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "LHR",
+      "identifier": "FRA",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Warsaw",
-      "identifier": "WAW",
+      "city": "Milan",
+      "identifier": "MXP",
       "kind": "airport"
     }
   ],

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Moscow",
-    "Helsinki"
+    "Barcelona",
+    "Rome"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002177",
   "sourceDocumentId": "177-star-4p-reverse-tkt-02",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Moscow Hauptbahnhof",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Hauptbahnhof",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

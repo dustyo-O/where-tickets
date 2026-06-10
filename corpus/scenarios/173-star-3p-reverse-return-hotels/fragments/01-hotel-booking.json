@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-05T12:00:00Z",
       "checkOutAt": "2027-03-06T06:00:00Z",
-      "city": "Munich",
+      "city": "Stockholm",
       "identifier": "City Garden",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Munich"
+    "Stockholm"
   ],
   "confirmationCode": "HTL006173",
   "documentType": "hotel-booking",

@@ -1,17 +1,17 @@
 {
   "cities": [
-    "Rome",
+    "Moscow",
     "Frankfurt",
-    "Warsaw"
+    "Stockholm"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001144",
   "sourceDocumentId": "144-star-2p-forward-tkt-01",
   "stations": [
     {
-      "city": "Rome",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ROM",
+      "identifier": "SVO",
       "kind": "airport"
     },
     {
@@ -23,9 +23,9 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Warsaw",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "WAW",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {

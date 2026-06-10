@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Milan",
+    "Frankfurt"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002142",
+  "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "FRA",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "New York",
-    "Oslo"
+    "Moscow",
+    "Prague"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002026",
   "sourceDocumentId": "026-straight-2p-bisect-return-tkt-02",
   "stations": [
     {
-      "city": "New York",
+      "city": "Moscow",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "New York Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Oslo",
-      "identifier": "Oslo Bus Terminal",
+      "city": "Prague",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

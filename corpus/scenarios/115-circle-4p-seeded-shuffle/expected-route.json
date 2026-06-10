@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Stockholm",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Moscow",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Vienna",
+      "city": "Munich",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Munich",
+      "city": "Oslo",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Istanbul",
+      "city": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -69,10 +69,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Stockholm",
+      "from": "Warsaw",
       "mode": "bus",
       "sourceFragmentId": "115-circle-4p-seeded-shuffle-tkt-01",
-      "to": "Istanbul",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -83,10 +83,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Istanbul",
+      "from": "Madrid",
       "mode": "bus",
       "sourceFragmentId": "115-circle-4p-seeded-shuffle-tkt-01",
-      "to": "Moscow",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -97,10 +97,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Moscow",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "115-circle-4p-seeded-shuffle-tkt-01",
-      "to": "Vienna",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Vienna",
-      "mode": "rail",
+      "from": "Munich",
+      "mode": "air",
       "sourceFragmentId": "115-circle-4p-seeded-shuffle-tkt-02",
-      "to": "Munich",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Munich",
+      "from": "Oslo",
       "mode": "bus",
       "sourceFragmentId": "115-circle-4p-seeded-shuffle-tkt-03",
-      "to": "Istanbul",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",

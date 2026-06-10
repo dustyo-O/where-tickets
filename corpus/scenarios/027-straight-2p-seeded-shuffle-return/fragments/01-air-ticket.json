@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Warsaw",
-    "Rome",
-    "Oslo"
+    "Dublin",
+    "Helsinki",
+    "Rome"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001027",
   "sourceDocumentId": "027-straight-2p-seeded-shuffle-return-tkt-01",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "WAW",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "ROM",
+      "identifier": "HEL",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Oslo",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "OSL",
+      "identifier": "ROM",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Warsaw",
-      "identifier": "WAW",
+      "city": "Dublin",
+      "identifier": "DUB",
       "kind": "airport"
     }
   ],

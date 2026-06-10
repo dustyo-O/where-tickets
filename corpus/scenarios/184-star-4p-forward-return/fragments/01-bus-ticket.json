@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Lisbon",
-    "Barcelona",
-    "Istanbul"
+    "Berlin",
+    "Copenhagen",
+    "Oslo"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001184",
   "sourceDocumentId": "184-star-4p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Lisbon",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Barcelona Bus Terminal",
+      "identifier": "Copenhagen Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Istanbul",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Istanbul Bus Terminal",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Barcelona",
-      "identifier": "Barcelona Bus Terminal",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

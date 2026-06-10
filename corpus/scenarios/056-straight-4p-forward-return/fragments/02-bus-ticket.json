@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Barcelona",
-    "Madrid"
+    "Warsaw",
+    "New York"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002056",
   "sourceDocumentId": "056-straight-4p-forward-return-tkt-02",
   "stations": [
     {
-      "city": "Barcelona",
+      "city": "Warsaw",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Barcelona Bus Terminal",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Madrid",
-      "identifier": "Madrid Bus Terminal",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Istanbul",
-    "Amsterdam",
-    "Moscow"
+    "Oslo",
+    "Copenhagen",
+    "London"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001173",
   "sourceDocumentId": "173-star-3p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Oslo",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Moscow",
+      "city": "London",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Moscow Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Madrid",
+      "city": "Rome",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Madrid"
+    "Rome"
   ],
   "confirmationCode": "HTL002149",
   "documentType": "hotel-booking",

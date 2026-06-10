@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Stockholm"
+    "Copenhagen",
+    "Zurich"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003130",
   "sourceDocumentId": "130-star-1p-bisect-tkt-03",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "Copenhagen Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Stockholm",
-      "identifier": "Stockholm Bus Terminal",
+      "city": "Zurich",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

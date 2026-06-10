@@ -1,0 +1,21 @@
+{
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Rome",
+      "identifier": "Riverside Inn",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Rome"
+  ],
+  "confirmationCode": "HTL001023",
+  "documentType": "hotel-booking",
+  "sourceDocumentId": "023-straight-2p-seeded-shuffle-hotels-htl-01",
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

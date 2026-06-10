@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Zurich",
+      "city": "Copenhagen",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Zurich"
+    "Copenhagen"
   ],
   "confirmationCode": "HTL003132",
   "documentType": "hotel-booking",

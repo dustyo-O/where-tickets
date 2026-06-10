@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "Madrid"
+    "New York",
+    "Vienna"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003078",
   "sourceDocumentId": "078-circle-1p-bisect-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "London",
+      "city": "New York",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "LHR",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "city": "Vienna",
+      "identifier": "VIE",
       "kind": "airport"
     }
   ],

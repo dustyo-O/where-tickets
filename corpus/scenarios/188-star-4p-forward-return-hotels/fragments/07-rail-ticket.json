@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Frankfurt",
-    "Warsaw",
-    "Rome",
-    "Lisbon"
+    "Vienna",
+    "Dublin",
+    "London",
+    "Helsinki"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003188",
   "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Frankfurt",
+      "city": "Vienna",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-05T09:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Rome",
+      "city": "London",
       "departureAt": "2027-03-06T06:00:00Z",
-      "identifier": "Rome Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "Lisbon",
-      "identifier": "Lisbon Hauptbahnhof",
+      "city": "Helsinki",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Zurich",
-    "Paris",
-    "Lisbon"
+    "Dublin",
+    "Stockholm",
+    "Warsaw"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001141",
   "sourceDocumentId": "141-star-1p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Dublin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Paris",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "CDG",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Lisbon",
+      "city": "Warsaw",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "LIS",
+      "identifier": "WAW",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Paris",
-      "identifier": "CDG",
+      "city": "Stockholm",
+      "identifier": "ARN",
       "kind": "airport"
     }
   ],

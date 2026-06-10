@@ -1,25 +1,25 @@
 {
   "cities": [
-    "Vienna",
-    "Oslo",
+    "New York",
+    "London",
     "Stockholm",
-    "Zurich"
+    "Munich"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001055",
   "sourceDocumentId": "055-straight-4p-seeded-shuffle-hotels-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
@@ -31,8 +31,8 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Bus Terminal",
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

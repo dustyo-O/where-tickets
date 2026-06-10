@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Istanbul",
-    "New York",
-    "London",
-    "Amsterdam"
+    "Berlin",
+    "Moscow",
+    "Oslo",
+    "New York"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001062",
   "sourceDocumentId": "062-straight-4p-bisect-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
+      "city": "Moscow",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "New York Hauptbahnhof",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Oslo",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

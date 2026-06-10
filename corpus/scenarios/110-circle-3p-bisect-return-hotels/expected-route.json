@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Oslo",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Berlin",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Warsaw",
+      "city": "Zurich",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -73,7 +73,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Athens",
+      "city": "Berlin",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -83,7 +83,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Oslo",
+      "city": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Oslo",
+      "from": "Athens",
       "mode": "rail",
       "sourceFragmentId": "110-circle-3p-bisect-return-hotels-tkt-01",
-      "to": "Athens",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Athens",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "110-circle-3p-bisect-return-hotels-tkt-01",
-      "to": "Copenhagen",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -121,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Copenhagen",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "110-circle-3p-bisect-return-hotels-tkt-01",
-      "to": "Warsaw",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -134,10 +134,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Warsaw",
+      "from": "Zurich",
       "mode": "air",
       "sourceFragmentId": "110-circle-3p-bisect-return-hotels-tkt-02",
-      "to": "Athens",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Athens",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "110-circle-3p-bisect-return-hotels-tkt-03",
-      "to": "Oslo",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",

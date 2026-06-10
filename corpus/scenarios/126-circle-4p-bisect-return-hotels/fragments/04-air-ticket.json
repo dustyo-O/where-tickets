@@ -1,6 +1,6 @@
 {
   "cities": [
-    "Lisbon",
+    "Copenhagen",
     "Warsaw"
   ],
   "documentType": "air-ticket",
@@ -8,9 +8,9 @@
   "sourceDocumentId": "126-circle-4p-bisect-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Lisbon",
+      "city": "Copenhagen",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "LIS",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Rome",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Amsterdam",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Athens",
+      "city": "Frankfurt",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Warsaw",
+      "city": "Helsinki",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,7 +61,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Prague",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Rome",
+      "from": "Stockholm",
       "mode": "rail",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
-      "to": "Amsterdam",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Amsterdam",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
-      "to": "Athens",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -96,10 +96,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Athens",
+      "from": "Frankfurt",
       "mode": "rail",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-01",
-      "to": "Warsaw",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Warsaw",
-      "mode": "bus",
+      "from": "Helsinki",
+      "mode": "air",
       "sourceFragmentId": "023-straight-2p-seeded-shuffle-hotels-tkt-02",
-      "to": "Prague",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"

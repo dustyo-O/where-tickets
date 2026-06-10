@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Copenhagen",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
+      "city": "Rome",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Zurich",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,7 +61,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Munich",
+      "city": "Oslo",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -71,7 +71,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "Copenhagen",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -83,7 +83,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Copenhagen",
+      "from": "Frankfurt",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-01",
       "to": "Paris",
@@ -99,7 +99,7 @@
       "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-01",
-      "to": "Helsinki",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -109,7 +109,7 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Helsinki",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-01",
       "to": "Paris",
@@ -125,7 +125,7 @@
       "from": "Paris",
       "mode": "air",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-02",
-      "to": "Zurich",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -135,7 +135,7 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
+      "from": "Lisbon",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-03",
       "to": "Paris",
@@ -151,7 +151,7 @@
       "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-03",
-      "to": "Munich",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -161,10 +161,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Munich",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "170-star-3p-bisect-return-tkt-03",
-      "to": "Copenhagen",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",

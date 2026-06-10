@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Vienna",
-    "Istanbul",
-    "Barcelona"
+    "Stockholm",
+    "Madrid",
+    "Warsaw"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001024",
   "sourceDocumentId": "024-straight-2p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "VIE",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "IST",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Barcelona",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "BCN",
+      "identifier": "WAW",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Vienna",
-      "identifier": "VIE",
+      "city": "Stockholm",
+      "identifier": "ARN",
       "kind": "airport"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Warsaw",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Milan",
+      "city": "Zurich",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Munich",
+      "city": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -53,10 +53,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
+      "from": "Barcelona",
       "mode": "rail",
       "sourceFragmentId": "032-straight-3p-forward-tkt-01",
-      "to": "New York",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -66,10 +66,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "New York",
+      "from": "Warsaw",
       "mode": "rail",
       "sourceFragmentId": "032-straight-3p-forward-tkt-01",
-      "to": "Helsinki",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Helsinki",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "032-straight-3p-forward-tkt-01",
-      "to": "Milan",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Milan",
+      "from": "Zurich",
       "mode": "air",
       "sourceFragmentId": "032-straight-3p-forward-tkt-02",
-      "to": "Munich",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",

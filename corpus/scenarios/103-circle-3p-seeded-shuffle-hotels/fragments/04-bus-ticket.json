@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Athens",
+    "Rome"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR003103",
+  "sourceDocumentId": "103-circle-3p-seeded-shuffle-hotels-tkt-03",
+  "stations": [
+    {
+      "city": "Athens",
+      "departureAt": "2027-03-04T12:00:00Z",
+      "identifier": "Athens Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-04T15:00:00Z",
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

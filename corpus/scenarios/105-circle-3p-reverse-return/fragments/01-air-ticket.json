@@ -1,17 +1,17 @@
 {
   "cities": [
-    "Munich",
+    "Madrid",
     "Milan",
-    "Barcelona"
+    "Dublin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003105",
   "sourceDocumentId": "105-circle-3p-reverse-return-tkt-03",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Madrid",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "MUC",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
@@ -23,8 +23,8 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Barcelona",
-      "identifier": "BCN",
+      "city": "Dublin",
+      "identifier": "DUB",
       "kind": "airport"
     }
   ],

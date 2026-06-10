@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Dublin",
+      "city": "Helsinki",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Dublin"
+    "Helsinki"
   ],
   "confirmationCode": "HTL001150",
   "documentType": "hotel-booking",

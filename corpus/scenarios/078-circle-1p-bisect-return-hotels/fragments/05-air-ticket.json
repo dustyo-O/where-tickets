@@ -1,8 +1,8 @@
 {
   "cities": [
-    "Madrid",
-    "London",
-    "Copenhagen",
+    "Vienna",
+    "New York",
+    "Stockholm",
     "Dublin"
   ],
   "documentType": "air-ticket",
@@ -10,23 +10,23 @@
   "sourceDocumentId": "078-circle-1p-bisect-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MAD",
+      "identifier": "VIE",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "LHR",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Copenhagen",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "CPH",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {

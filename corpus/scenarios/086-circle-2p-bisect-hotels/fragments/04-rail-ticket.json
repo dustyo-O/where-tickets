@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Paris",
-    "Warsaw",
-    "Vienna",
-    "London"
+    "Munich",
+    "Milan",
+    "Stockholm",
+    "Frankfurt"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001086",
   "sourceDocumentId": "086-circle-2p-bisect-hotels-tkt-01",
   "stations": [
     {
-      "city": "Paris",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Paris Hauptbahnhof",
+      "identifier": "Munich Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Milan",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Warsaw Hauptbahnhof",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Vienna",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "identifier": "Stockholm Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

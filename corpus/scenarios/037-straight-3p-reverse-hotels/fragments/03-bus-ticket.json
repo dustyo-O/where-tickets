@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Munich",
-    "Warsaw",
-    "Moscow",
-    "Rome"
+    "Frankfurt",
+    "Paris",
+    "London",
+    "Munich"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001037",
   "sourceDocumentId": "037-straight-3p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Paris",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Warsaw Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Moscow",
+      "city": "London",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Rome",
-      "identifier": "Rome Bus Terminal",
+      "city": "Munich",
+      "identifier": "Munich Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

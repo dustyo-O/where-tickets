@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Oslo",
-    "London"
+    "Amsterdam",
+    "Zurich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003059",
   "sourceDocumentId": "059-straight-4p-seeded-shuffle-return-tkt-03",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

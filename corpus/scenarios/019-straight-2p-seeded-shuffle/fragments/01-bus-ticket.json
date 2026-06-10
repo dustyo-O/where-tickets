@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Rome",
-    "Vienna",
-    "Paris",
-    "New York"
+    "London",
+    "Oslo",
+    "Amsterdam",
+    "Dublin"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001019",
   "sourceDocumentId": "019-straight-2p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Rome",
+      "city": "London",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Rome Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "Oslo",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Paris Bus Terminal",
+      "identifier": "Amsterdam Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "New York",
-      "identifier": "New York Bus Terminal",
+      "city": "Dublin",
+      "identifier": "Dublin Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

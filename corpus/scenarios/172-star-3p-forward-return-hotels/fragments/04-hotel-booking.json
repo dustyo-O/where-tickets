@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Istanbul",
+      "city": "Barcelona",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Istanbul"
+    "Barcelona"
   ],
   "confirmationCode": "HTL003172",
   "documentType": "hotel-booking",

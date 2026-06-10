@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "Rome"
+    "Istanbul",
+    "Warsaw"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002181",
   "sourceDocumentId": "181-star-4p-reverse-hotels-tkt-02",
   "stations": [
     {
-      "city": "London",
+      "city": "Istanbul",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Istanbul Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Rome",
-      "identifier": "Rome Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

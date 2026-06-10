@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Stockholm"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002159",
+  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

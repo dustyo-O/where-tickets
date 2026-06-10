@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Paris",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Athens",
+      "city": "Stockholm",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -73,7 +73,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Dublin",
+      "city": "Athens",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -83,7 +83,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Zurich",
+      "city": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Paris",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,7 +108,20 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Zurich",
+      "from": "Rome",
+      "mode": "bus",
+      "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
+      "to": "Istanbul",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
       "to": "Stockholm",
@@ -119,25 +132,12 @@
       ]
     },
     {
-      "arrivalAt": "2027-03-02T21:00:00Z",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
-      "mode": "bus",
-      "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-01",
-      "to": "Athens",
-      "travelers": [
-        "traveler-1",
-        "traveler-2",
-        "traveler-3"
-      ]
-    },
-    {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Athens",
-      "mode": "rail",
+      "from": "Stockholm",
+      "mode": "air",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-02",
-      "to": "Dublin",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Dublin",
+      "from": "Athens",
       "mode": "bus",
       "sourceFragmentId": "103-circle-3p-seeded-shuffle-hotels-tkt-03",
-      "to": "Zurich",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",

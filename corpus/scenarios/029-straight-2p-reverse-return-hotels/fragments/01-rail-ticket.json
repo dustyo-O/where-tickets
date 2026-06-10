@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Vienna",
-    "Berlin"
+    "Oslo",
+    "New York"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003029",
   "sourceDocumentId": "029-straight-2p-reverse-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "Oslo",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Berlin",
-      "identifier": "Berlin Hauptbahnhof",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

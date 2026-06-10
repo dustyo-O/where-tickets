@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Munich"
+    "London",
+    "Dublin"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002178",
   "sourceDocumentId": "178-star-4p-bisect-tkt-02",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "London",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Hauptbahnhof",
+      "city": "Dublin",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

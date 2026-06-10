@@ -1,6 +1,6 @@
 {
   "cities": [
-    "Milan",
+    "Warsaw",
     "Stockholm"
   ],
   "documentType": "bus-ticket",
@@ -8,9 +8,9 @@
   "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Milan",
+      "city": "Warsaw",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Milan Bus Terminal",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     },
     {

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Helsinki",
-    "Frankfurt",
-    "Moscow",
-    "London"
+    "Paris",
+    "Vienna",
+    "London",
+    "Berlin"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001050",
   "sourceDocumentId": "050-straight-4p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Helsinki",
+      "city": "Paris",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Paris Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Moscow",
+      "city": "London",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Moscow Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Amsterdam",
+      "city": "Zurich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Helsinki",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "London",
+      "city": "Dublin",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Amsterdam",
+      "city": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -69,10 +69,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "122-circle-4p-bisect-return-tkt-01",
-      "to": "London",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -83,7 +83,7 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "London",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "122-circle-4p-bisect-return-tkt-01",
       "to": "Athens",
@@ -100,7 +100,7 @@
       "from": "Athens",
       "mode": "rail",
       "sourceFragmentId": "122-circle-4p-bisect-return-tkt-01",
-      "to": "Helsinki",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Helsinki",
-      "mode": "bus",
+      "from": "Rome",
+      "mode": "air",
       "sourceFragmentId": "122-circle-4p-bisect-return-tkt-02",
-      "to": "London",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "London",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "122-circle-4p-bisect-return-tkt-03",
-      "to": "Amsterdam",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Stockholm",
-    "Moscow"
+    "Munich",
+    "Frankfurt"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003108",
   "sourceDocumentId": "108-circle-3p-forward-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Stockholm",
+      "city": "Munich",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "ARN",
+      "identifier": "MUC",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Moscow",
-      "identifier": "SVO",
+      "city": "Frankfurt",
+      "identifier": "FRA",
       "kind": "airport"
     }
   ],

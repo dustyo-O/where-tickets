@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-01T03:00:00Z",
-      "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Rome",
-      "identifier": "Riverside Inn",
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Rome"
+    "Istanbul"
   ],
-  "confirmationCode": "HTL001191",
+  "confirmationCode": "HTL003191",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "191-star-4p-seeded-shuffle-return-hotels-htl-01",
+  "sourceDocumentId": "191-star-4p-seeded-shuffle-return-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-01T03:00:00Z",
-      "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Zurich",
-      "identifier": "Riverside Inn",
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Zurich"
+    "Istanbul"
   ],
-  "confirmationCode": "HTL001175",
+  "confirmationCode": "HTL002175",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "175-star-3p-seeded-shuffle-return-hotels-htl-01",
+  "sourceDocumentId": "175-star-3p-seeded-shuffle-return-hotels-htl-02",
   "travelers": [
     "traveler-1",
     "traveler-2",

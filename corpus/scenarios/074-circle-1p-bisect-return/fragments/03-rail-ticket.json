@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Prague",
-    "Lisbon",
-    "Zurich",
-    "Helsinki"
+    "Frankfurt",
+    "Istanbul",
+    "Copenhagen",
+    "Berlin"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001074",
   "sourceDocumentId": "074-circle-1p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Prague Hauptbahnhof",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Lisbon Hauptbahnhof",
+      "identifier": "Istanbul Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Zurich",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Zurich Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Hauptbahnhof",
+      "city": "Berlin",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

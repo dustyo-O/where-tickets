@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Prague",
-    "London",
-    "Zurich"
+    "Paris",
+    "Istanbul",
+    "Lisbon"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001181",
   "sourceDocumentId": "181-star-4p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Paris",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Prague Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "London Bus Terminal",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Zurich",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "London",
-      "identifier": "London Bus Terminal",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

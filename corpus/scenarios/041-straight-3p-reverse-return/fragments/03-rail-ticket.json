@@ -1,38 +1,38 @@
 {
   "cities": [
-    "London",
-    "Berlin",
-    "Lisbon",
-    "Vienna"
+    "Moscow",
+    "Copenhagen",
+    "Vienna",
+    "Amsterdam"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001041",
   "sourceDocumentId": "041-straight-3p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "London",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Lisbon",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Lisbon Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Vienna",
-      "identifier": "Vienna Hauptbahnhof",
+      "city": "Amsterdam",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

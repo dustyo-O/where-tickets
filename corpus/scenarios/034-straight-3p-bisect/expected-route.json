@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Vienna",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Milan",
+      "city": "Paris",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
+      "city": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -43,10 +43,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
+      "from": "New York",
       "mode": "bus",
       "sourceFragmentId": "034-straight-3p-bisect-tkt-01",
-      "to": "Milan",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -56,10 +56,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Milan",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "034-straight-3p-bisect-tkt-01",
-      "to": "Berlin",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -69,10 +69,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Berlin",
+      "from": "Helsinki",
       "mode": "bus",
       "sourceFragmentId": "034-straight-3p-bisect-tkt-01",
-      "to": "Moscow",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2",

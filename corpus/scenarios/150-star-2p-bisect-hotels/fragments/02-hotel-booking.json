@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Dublin",
+      "city": "Helsinki",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Dublin"
+    "Helsinki"
   ],
   "confirmationCode": "HTL003150",
   "documentType": "hotel-booking",

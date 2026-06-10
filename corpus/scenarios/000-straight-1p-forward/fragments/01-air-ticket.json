@@ -1,30 +1,30 @@
 {
   "cities": [
+    "Madrid",
     "New York",
-    "Frankfurt",
-    "Lisbon"
+    "Munich"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001000",
   "sourceDocumentId": "000-straight-1p-forward-tkt-01",
   "stations": [
     {
-      "city": "New York",
+      "city": "Madrid",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "JFK",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "New York",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "FRA",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Lisbon",
-      "identifier": "LIS",
+      "city": "Munich",
+      "identifier": "MUC",
       "kind": "airport"
     }
   ],

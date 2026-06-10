@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Lisbon",
-    "Vienna"
+    "Rome",
+    "Munich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002121",
   "sourceDocumentId": "121-circle-4p-reverse-return-tkt-02",
   "stations": [
     {
-      "city": "Lisbon",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Lisbon Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Vienna",
-      "identifier": "Vienna Hauptbahnhof",
+      "city": "Munich",
+      "identifier": "Munich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

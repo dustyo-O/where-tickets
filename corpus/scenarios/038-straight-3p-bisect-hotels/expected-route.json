@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Lisbon",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Amsterdam",
+      "city": "Zurich",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "New York",
+      "city": "Copenhagen",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -65,7 +65,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Athens",
+      "city": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -77,33 +77,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Lisbon",
-      "mode": "rail",
-      "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
-      "to": "Barcelona",
-      "travelers": [
-        "traveler-1",
-        "traveler-2",
-        "traveler-3"
-      ]
-    },
-    {
-      "arrivalAt": "2027-03-02T00:00:00Z",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Barcelona",
-      "mode": "rail",
-      "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
-      "to": "Amsterdam",
-      "travelers": [
-        "traveler-1",
-        "traveler-2",
-        "traveler-3"
-      ]
-    },
-    {
-      "arrivalAt": "2027-03-02T21:00:00Z",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Amsterdam",
+      "from": "Munich",
       "mode": "rail",
       "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
       "to": "New York",
@@ -114,12 +88,38 @@
       ]
     },
     {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "from": "New York",
+      "mode": "rail",
+      "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
+      "to": "Zurich",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "Zurich",
+      "mode": "rail",
+      "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-01",
+      "to": "Copenhagen",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "New York",
+      "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "038-straight-3p-bisect-hotels-tkt-02",
-      "to": "Athens",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",

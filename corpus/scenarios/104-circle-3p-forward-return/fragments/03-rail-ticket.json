@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "Zurich"
+    "Helsinki",
+    "Warsaw"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003104",
   "sourceDocumentId": "104-circle-3p-forward-return-tkt-03",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Helsinki",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

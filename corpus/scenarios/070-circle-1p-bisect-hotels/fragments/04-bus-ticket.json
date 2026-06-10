@@ -1,18 +1,18 @@
 {
   "cities": [
-    "Amsterdam",
+    "Copenhagen",
     "Prague",
-    "Moscow",
-    "Berlin"
+    "Milan",
+    "Vienna"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001070",
   "sourceDocumentId": "070-circle-1p-bisect-hotels-tkt-01",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "Copenhagen Bus Terminal",
       "kind": "bus_terminal"
     },
     {
@@ -24,15 +24,15 @@
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Moscow",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Berlin",
-      "identifier": "Berlin Bus Terminal",
+      "city": "Vienna",
+      "identifier": "Vienna Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

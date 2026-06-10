@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Munich",
-    "Dublin"
+    "Oslo",
+    "Helsinki"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002104",
   "sourceDocumentId": "104-circle-3p-forward-return-tkt-02",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Oslo",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Dublin",
-      "identifier": "Dublin Bus Terminal",
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

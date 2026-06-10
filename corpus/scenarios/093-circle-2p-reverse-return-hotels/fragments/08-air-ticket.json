@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Amsterdam",
-    "Athens",
-    "Berlin",
-    "Milan"
+    "Dublin",
+    "Barcelona",
+    "Copenhagen",
+    "Warsaw"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001093",
   "sourceDocumentId": "093-circle-2p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Dublin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "AMS",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "ATH",
+      "identifier": "BCN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Berlin",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "BER",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Milan",
-      "identifier": "MXP",
+      "city": "Warsaw",
+      "identifier": "WAW",
       "kind": "airport"
     }
   ],

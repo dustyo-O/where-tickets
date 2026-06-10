@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Milan",
+      "city": "Athens",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Milan"
+    "Athens"
   ],
   "confirmationCode": "HTL001166",
   "documentType": "hotel-booking",

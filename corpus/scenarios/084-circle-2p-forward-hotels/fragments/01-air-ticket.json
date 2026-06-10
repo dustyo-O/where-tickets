@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Moscow",
-    "Berlin",
-    "Vienna",
-    "Amsterdam"
+    "Stockholm",
+    "New York",
+    "Copenhagen",
+    "Munich"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001084",
   "sourceDocumentId": "084-circle-2p-forward-hotels-tkt-01",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "SVO",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "BER",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Vienna",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "VIE",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "AMS",
+      "city": "Munich",
+      "identifier": "MUC",
       "kind": "airport"
     }
   ],

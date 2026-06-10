@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Madrid",
-    "Barcelona",
-    "Paris"
+    "Moscow",
+    "Istanbul",
+    "Frankfurt"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001145",
   "sourceDocumentId": "145-star-2p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Madrid Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Barcelona Bus Terminal",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Paris",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Paris Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Barcelona",
-      "identifier": "Barcelona Bus Terminal",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,30 +1,37 @@
 {
   "cities": [
-    "Frankfurt",
-    "Barcelona",
-    "London"
+    "New York",
+    "Lisbon",
+    "Helsinki"
   ],
   "documentType": "rail-ticket",
-  "pnr": "PNR003131",
-  "sourceDocumentId": "131-star-1p-seeded-shuffle-tkt-03",
+  "pnr": "PNR001131",
+  "sourceDocumentId": "131-star-1p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Frankfurt",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Frankfurt Hauptbahnhof",
+      "city": "New York",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     },
     {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Barcelona",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Barcelona Hauptbahnhof",
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Lisbon",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     },
     {
-      "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Helsinki Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Lisbon",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

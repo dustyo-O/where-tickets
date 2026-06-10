@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Vienna",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
+      "city": "Paris",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Prague",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Berlin",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -57,10 +57,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "083-circle-2p-seeded-shuffle-tkt-01",
-      "to": "Berlin",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -69,7 +69,7 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Berlin",
+      "from": "Frankfurt",
       "mode": "rail",
       "sourceFragmentId": "083-circle-2p-seeded-shuffle-tkt-01",
       "to": "Helsinki",
@@ -84,7 +84,7 @@
       "from": "Helsinki",
       "mode": "rail",
       "sourceFragmentId": "083-circle-2p-seeded-shuffle-tkt-01",
-      "to": "Moscow",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -93,10 +93,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Moscow",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "083-circle-2p-seeded-shuffle-tkt-02",
-      "to": "Stockholm",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -105,10 +105,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Stockholm",
+      "from": "Prague",
       "mode": "rail",
       "sourceFragmentId": "083-circle-2p-seeded-shuffle-tkt-03",
-      "to": "Berlin",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"

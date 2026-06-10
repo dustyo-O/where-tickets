@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Rome",
-    "Helsinki"
+    "Dublin",
+    "Athens"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002068",
   "sourceDocumentId": "068-circle-1p-forward-hotels-tkt-02",
   "stations": [
     {
-      "city": "Rome",
+      "city": "Dublin",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Rome Bus Terminal",
+      "identifier": "Dublin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Bus Terminal",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

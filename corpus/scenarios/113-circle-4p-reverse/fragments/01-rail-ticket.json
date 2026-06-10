@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Berlin",
-    "New York"
+    "Prague",
+    "Milan"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003113",
   "sourceDocumentId": "113-circle-4p-reverse-tkt-03",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "Prague",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "New York",
-      "identifier": "New York Hauptbahnhof",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

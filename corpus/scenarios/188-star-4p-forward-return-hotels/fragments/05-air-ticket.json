@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Warsaw",
-    "Frankfurt"
+    "Dublin",
+    "Vienna"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002188",
   "sourceDocumentId": "188-star-4p-forward-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "WAW",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Frankfurt",
-      "identifier": "FRA",
+      "city": "Vienna",
+      "identifier": "VIE",
       "kind": "airport"
     }
   ],

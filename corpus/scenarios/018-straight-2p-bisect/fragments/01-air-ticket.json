@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Stockholm",
-    "Athens",
-    "Warsaw"
+    "Helsinki",
+    "Dublin",
+    "Stockholm"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001018",
   "sourceDocumentId": "018-straight-2p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Stockholm",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ARN",
+      "identifier": "HEL",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "ATH",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Warsaw",
-      "identifier": "WAW",
+      "city": "Stockholm",
+      "identifier": "ARN",
       "kind": "airport"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Istanbul",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -39,7 +39,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Oslo",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -58,7 +58,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Copenhagen",
+      "city": "Zurich",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -77,7 +77,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Amsterdam",
+      "city": "Madrid",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -96,7 +96,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Vienna",
+      "city": "Rome",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -107,7 +107,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Istanbul",
+      "city": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -120,10 +120,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "125-circle-4p-reverse-return-hotels-tkt-01",
-      "to": "Vienna",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -134,10 +134,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Vienna",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "125-circle-4p-reverse-return-hotels-tkt-01",
-      "to": "London",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -148,10 +148,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "125-circle-4p-reverse-return-hotels-tkt-01",
-      "to": "Copenhagen",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -162,10 +162,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Copenhagen",
-      "mode": "air",
+      "from": "Zurich",
+      "mode": "bus",
       "sourceFragmentId": "125-circle-4p-reverse-return-hotels-tkt-02",
-      "to": "Amsterdam",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -176,10 +176,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Amsterdam",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "125-circle-4p-reverse-return-hotels-tkt-03",
-      "to": "Vienna",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -190,10 +190,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Vienna",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "125-circle-4p-reverse-return-hotels-tkt-03",
-      "to": "Istanbul",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",

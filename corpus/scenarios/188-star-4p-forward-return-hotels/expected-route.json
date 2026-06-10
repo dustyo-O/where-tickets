@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Lisbon",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -39,7 +39,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Madrid",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -58,7 +58,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -77,7 +77,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Frankfurt",
+      "city": "Vienna",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -96,7 +96,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -115,7 +115,7 @@
         }
       ],
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Rome",
+      "city": "London",
       "departureAt": "2027-03-06T06:00:00Z",
       "travelers": [
         "traveler-1",
@@ -126,7 +126,7 @@
     },
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
-      "city": "Lisbon",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -139,10 +139,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Lisbon",
+      "from": "Helsinki",
       "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
-      "to": "Warsaw",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -153,10 +153,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Warsaw",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
-      "to": "Madrid",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -167,10 +167,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
+      "from": "Paris",
       "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-01",
-      "to": "Warsaw",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -181,10 +181,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Warsaw",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-02",
-      "to": "Frankfurt",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -195,10 +195,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Frankfurt",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
-      "to": "Warsaw",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -209,10 +209,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Warsaw",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
-      "to": "Rome",
+      "to": "London",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -223,10 +223,10 @@
     {
       "arrivalAt": "2027-03-06T09:00:00Z",
       "departureAt": "2027-03-06T06:00:00Z",
-      "from": "Rome",
+      "from": "London",
       "mode": "rail",
       "sourceFragmentId": "188-star-4p-forward-return-hotels-tkt-03",
-      "to": "Lisbon",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",

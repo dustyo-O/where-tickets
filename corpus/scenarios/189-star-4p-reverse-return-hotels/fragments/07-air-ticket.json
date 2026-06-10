@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Paris",
-    "Istanbul",
-    "Oslo"
+    "Athens",
+    "New York",
+    "Madrid"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001189",
   "sourceDocumentId": "189-star-4p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Paris",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "CDG",
+      "identifier": "ATH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "IST",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Oslo",
+      "city": "Madrid",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "OSL",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Istanbul",
-      "identifier": "IST",
+      "city": "New York",
+      "identifier": "JFK",
       "kind": "airport"
     }
   ],

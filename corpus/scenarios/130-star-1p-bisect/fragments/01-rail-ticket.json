@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Stockholm",
-    "Amsterdam"
+    "Zurich",
+    "Copenhagen"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002130",
   "sourceDocumentId": "130-star-1p-bisect-tkt-02",
   "stations": [
     {
-      "city": "Stockholm",
+      "city": "Zurich",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Stockholm Hauptbahnhof",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-05T12:00:00Z",
       "checkOutAt": "2027-03-06T06:00:00Z",
-      "city": "Madrid",
+      "city": "Prague",
       "identifier": "City Garden",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Madrid"
+    "Prague"
   ],
   "confirmationCode": "HTL006140",
   "documentType": "hotel-booking",

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Vienna",
-    "Oslo",
     "Barcelona",
-    "Lisbon"
+    "Amsterdam",
+    "Vienna",
+    "Copenhagen"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001005",
   "sourceDocumentId": "005-straight-1p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-02T00:00:00Z",
       "city": "Barcelona",
-      "departureAt": "2027-03-02T18:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
       "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Amsterdam Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Vienna",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Vienna Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Lisbon",
-      "identifier": "Lisbon Hauptbahnhof",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Athens",
-    "Moscow",
-    "Frankfurt",
-    "Amsterdam"
+    "Istanbul",
+    "Copenhagen",
+    "Oslo",
+    "Moscow"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001081",
   "sourceDocumentId": "081-circle-2p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Athens",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ATH",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Moscow",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "SVO",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Frankfurt",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "FRA",
+      "identifier": "OSL",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "AMS",
+      "city": "Moscow",
+      "identifier": "SVO",
       "kind": "airport"
     }
   ],

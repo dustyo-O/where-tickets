@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Zurich",
-    "Athens",
-    "Stockholm",
-    "Moscow"
+    "Frankfurt",
+    "Prague",
+    "Paris",
+    "Berlin"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001001",
   "sourceDocumentId": "001-straight-1p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Athens",
+      "city": "Prague",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Athens Bus Terminal",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Stockholm",
+      "city": "Paris",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Stockholm Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
-      "identifier": "Moscow Bus Terminal",
+      "city": "Berlin",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Dublin"
+    "Moscow",
+    "Lisbon"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002081",
   "sourceDocumentId": "081-circle-2p-reverse-tkt-02",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Moscow",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Dublin",
-      "identifier": "Dublin Bus Terminal",
+      "city": "Lisbon",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

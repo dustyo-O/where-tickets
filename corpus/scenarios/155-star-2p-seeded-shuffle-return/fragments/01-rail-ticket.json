@@ -1,38 +1,37 @@
 {
   "cities": [
-    "Zurich",
-    "Dublin",
-    "Lisbon",
-    "Istanbul"
+    "Barcelona",
+    "Milan",
+    "Moscow"
   ],
   "documentType": "rail-ticket",
-  "pnr": "PNR003155",
-  "sourceDocumentId": "155-star-2p-seeded-shuffle-return-tkt-03",
+  "pnr": "PNR001155",
+  "sourceDocumentId": "155-star-2p-seeded-shuffle-return-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Zurich Hauptbahnhof",
+      "city": "Barcelona",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     },
     {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Dublin",
-      "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Milan",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     },
     {
-      "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Lisbon",
-      "departureAt": "2027-03-03T00:00:00Z",
-      "identifier": "Lisbon Hauptbahnhof",
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Moscow",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     },
     {
-      "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "Istanbul",
-      "identifier": "Istanbul Hauptbahnhof",
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

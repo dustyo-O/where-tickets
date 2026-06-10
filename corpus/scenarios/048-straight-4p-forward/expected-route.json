@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Istanbul",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "New York",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -36,10 +36,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
+      "from": "Moscow",
       "mode": "air",
       "sourceFragmentId": "048-straight-4p-forward-tkt-01",
-      "to": "Rome",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -50,7 +50,7 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Rome",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "048-straight-4p-forward-tkt-01",
       "to": "Prague",

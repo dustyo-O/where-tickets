@@ -1,18 +1,18 @@
 {
   "cities": [
-    "Barcelona",
+    "Dublin",
     "Milan",
-    "Copenhagen",
-    "Dublin"
+    "Berlin",
+    "Prague"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001105",
   "sourceDocumentId": "105-circle-3p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Barcelona",
+      "city": "Dublin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "BCN",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
@@ -24,15 +24,15 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "CPH",
+      "identifier": "BER",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Dublin",
-      "identifier": "DUB",
+      "city": "Prague",
+      "identifier": "PRG",
       "kind": "airport"
     }
   ],

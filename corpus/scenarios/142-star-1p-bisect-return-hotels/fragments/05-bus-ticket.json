@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Moscow",
-    "Zurich",
-    "Berlin"
+    "Munich",
+    "Milan",
+    "Zurich"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001142",
   "sourceDocumentId": "142-star-1p-bisect-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Munich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "Milan",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Berlin",
+      "city": "Zurich",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Bus Terminal",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

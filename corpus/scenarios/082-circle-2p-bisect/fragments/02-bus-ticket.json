@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Helsinki",
-    "Milan",
-    "Lisbon",
-    "Copenhagen"
+    "Vienna",
+    "Frankfurt",
+    "Barcelona",
+    "Madrid"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001082",
   "sourceDocumentId": "082-circle-2p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Helsinki",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Helsinki Bus Terminal",
+      "identifier": "Vienna Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Milan",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Milan Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Lisbon",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Copenhagen",
-      "identifier": "Copenhagen Bus Terminal",
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

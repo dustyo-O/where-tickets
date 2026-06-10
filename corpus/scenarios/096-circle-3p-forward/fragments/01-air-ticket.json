@@ -1,9 +1,9 @@
 {
   "cities": [
     "Prague",
+    "Stockholm",
     "London",
-    "Oslo",
-    "Amsterdam"
+    "Zurich"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001096",
@@ -17,22 +17,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "LHR",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Oslo",
+      "city": "London",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "OSL",
+      "identifier": "LHR",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "AMS",
+      "city": "Zurich",
+      "identifier": "ZRH",
       "kind": "airport"
     }
   ],

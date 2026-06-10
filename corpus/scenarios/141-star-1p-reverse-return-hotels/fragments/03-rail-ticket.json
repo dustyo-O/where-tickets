@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Stockholm",
+    "Barcelona"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002141",
+  "sourceDocumentId": "141-star-1p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Stockholm",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Stockholm Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Barcelona Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Munich",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Vienna",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Rome",
+      "city": "Milan",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Milan",
+      "city": "Munich",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Rome",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "163-star-3p-seeded-shuffle-tkt-01",
-      "to": "Rome",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Rome",
+      "from": "Milan",
       "mode": "bus",
       "sourceFragmentId": "163-star-3p-seeded-shuffle-tkt-01",
-      "to": "Vienna",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Vienna",
+      "from": "Helsinki",
       "mode": "bus",
       "sourceFragmentId": "163-star-3p-seeded-shuffle-tkt-01",
-      "to": "Rome",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -102,10 +102,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Rome",
+      "from": "Milan",
       "mode": "rail",
       "sourceFragmentId": "163-star-3p-seeded-shuffle-tkt-02",
-      "to": "Milan",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Milan",
+      "from": "Munich",
       "mode": "bus",
       "sourceFragmentId": "163-star-3p-seeded-shuffle-tkt-03",
-      "to": "Rome",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",

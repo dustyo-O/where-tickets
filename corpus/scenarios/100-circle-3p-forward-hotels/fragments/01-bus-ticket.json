@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Istanbul",
-    "Oslo",
-    "Lisbon",
-    "Stockholm"
+    "Athens",
+    "Frankfurt",
+    "Dublin",
+    "Rome"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001100",
   "sourceDocumentId": "100-circle-3p-forward-hotels-tkt-01",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Istanbul Bus Terminal",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Lisbon",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
+      "identifier": "Dublin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Stockholm",
-      "identifier": "Stockholm Bus Terminal",
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

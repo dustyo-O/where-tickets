@@ -1,18 +1,18 @@
 {
   "cities": [
-    "Zurich",
+    "Oslo",
     "Amsterdam",
-    "Helsinki",
-    "London"
+    "Madrid",
+    "Vienna"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001058",
   "sourceDocumentId": "058-straight-4p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Oslo",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     },
     {
@@ -24,15 +24,15 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Helsinki Bus Terminal",
+      "identifier": "Madrid Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "London",
-      "identifier": "London Bus Terminal",
+      "city": "Vienna",
+      "identifier": "Vienna Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

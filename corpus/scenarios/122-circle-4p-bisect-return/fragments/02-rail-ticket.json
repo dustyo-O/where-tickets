@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "Amsterdam"
+    "Dublin",
+    "Zurich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003122",
   "sourceDocumentId": "122-circle-4p-bisect-return-tkt-03",
   "stations": [
     {
-      "city": "London",
+      "city": "Dublin",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

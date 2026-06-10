@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-03T18:00:00Z",
       "checkOutAt": "2027-03-04T12:00:00Z",
-      "city": "Dublin",
+      "city": "Rome",
       "identifier": "Central Lodge",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Dublin"
+    "Rome"
   ],
   "confirmationCode": "HTL004101",
   "documentType": "hotel-booking",

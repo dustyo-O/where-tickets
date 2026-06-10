@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Milan",
-    "London",
-    "Helsinki",
-    "Madrid"
+    "Barcelona",
+    "Copenhagen",
+    "Madrid",
+    "New York"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001069",
   "sourceDocumentId": "069-circle-1p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Milan",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MXP",
+      "identifier": "BCN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "LHR",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Helsinki",
+      "city": "Madrid",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "HEL",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "city": "New York",
+      "identifier": "JFK",
       "kind": "airport"
     }
   ],

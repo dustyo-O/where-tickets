@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "Warsaw"
+    "Vienna",
+    "New York"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003011",
   "sourceDocumentId": "011-straight-1p-seeded-shuffle-return-tkt-03",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Vienna",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Warsaw",
-      "identifier": "Warsaw Hauptbahnhof",
+      "city": "New York",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

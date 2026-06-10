@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Barcelona"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR002173",
+  "sourceDocumentId": "173-star-3p-reverse-return-hotels-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-03T15:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-03T18:00:00Z",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Istanbul",
+      "city": "Lisbon",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Istanbul"
+    "Lisbon"
   ],
   "confirmationCode": "HTL002118",
   "documentType": "hotel-booking",

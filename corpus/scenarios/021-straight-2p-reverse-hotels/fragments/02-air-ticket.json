@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Berlin",
-    "Rome",
-    "Stockholm"
+    "New York",
+    "Istanbul",
+    "Paris"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001021",
   "sourceDocumentId": "021-straight-2p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "BER",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "ROM",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
-      "identifier": "ARN",
+      "city": "Paris",
+      "identifier": "CDG",
       "kind": "airport"
     }
   ],

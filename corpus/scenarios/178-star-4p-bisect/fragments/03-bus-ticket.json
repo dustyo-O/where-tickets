@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Zurich",
-    "Amsterdam",
-    "Warsaw"
+    "Copenhagen",
+    "London",
+    "Moscow"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001178",
   "sourceDocumentId": "178-star-4p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Copenhagen Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Amsterdam",
+      "city": "London",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Warsaw",
+      "city": "Moscow",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Warsaw Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Bus Terminal",
+      "city": "London",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

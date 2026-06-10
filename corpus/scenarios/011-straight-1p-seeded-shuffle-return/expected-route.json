@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Warsaw",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Moscow",
+      "city": "Zurich",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Copenhagen",
+      "city": "Paris",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Dublin",
+      "city": "Vienna",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Warsaw",
+      "city": "New York",
       "travelers": [
         "traveler-1"
       ]
@@ -51,7 +51,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
+      "from": "New York",
       "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
       "to": "Athens",
@@ -65,7 +65,7 @@
       "from": "Athens",
       "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
-      "to": "Moscow",
+      "to": "Zurich",
       "travelers": [
         "traveler-1"
       ]
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Moscow",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-01",
-      "to": "Copenhagen",
+      "to": "Paris",
       "travelers": [
         "traveler-1"
       ]
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Copenhagen",
+      "from": "Paris",
       "mode": "air",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-02",
-      "to": "Dublin",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Dublin",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "011-straight-1p-seeded-shuffle-return-tkt-03",
-      "to": "Warsaw",
+      "to": "New York",
       "travelers": [
         "traveler-1"
       ]

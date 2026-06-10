@@ -1,22 +1,38 @@
 {
   "cities": [
-    "Milan",
-    "Madrid"
+    "Moscow",
+    "London",
+    "Prague",
+    "Athens"
   ],
   "documentType": "air-ticket",
-  "pnr": "PNR003099",
-  "sourceDocumentId": "099-circle-3p-seeded-shuffle-tkt-03",
+  "pnr": "PNR001099",
+  "sourceDocumentId": "099-circle-3p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Milan",
-      "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "MXP",
+      "city": "Moscow",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "SVO",
       "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "London",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "LHR",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Prague",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "PRG",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Athens",
+      "identifier": "ATH",
       "kind": "airport"
     }
   ],

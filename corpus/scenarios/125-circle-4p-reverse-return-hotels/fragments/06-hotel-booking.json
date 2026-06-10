@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "London",
+      "city": "Oslo",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "London"
+    "Oslo"
   ],
   "confirmationCode": "HTL002125",
   "documentType": "hotel-booking",

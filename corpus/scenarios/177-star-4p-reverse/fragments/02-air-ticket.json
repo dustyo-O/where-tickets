@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Warsaw",
-    "Moscow",
-    "New York"
+    "Milan",
+    "Barcelona",
+    "Berlin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001177",
   "sourceDocumentId": "177-star-4p-reverse-tkt-01",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Milan",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "WAW",
+      "identifier": "MXP",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Moscow",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "SVO",
+      "identifier": "BCN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "New York",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "JFK",
+      "identifier": "BER",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
-      "identifier": "SVO",
+      "city": "Barcelona",
+      "identifier": "BCN",
       "kind": "airport"
     }
   ],

@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Copenhagen",
-    "Oslo",
-    "Helsinki"
+    "Madrid",
+    "Paris",
+    "Frankfurt"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003146",
   "sourceDocumentId": "146-star-2p-bisect-tkt-03",
   "stations": [
     {
-      "city": "Copenhagen",
+      "city": "Madrid",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Copenhagen Hauptbahnhof",
+      "identifier": "Madrid Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Oslo",
+      "city": "Paris",
       "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
+      "identifier": "Paris Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Hauptbahnhof",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

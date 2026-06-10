@@ -1,22 +1,22 @@
 {
   "cities": [
-    "New York",
-    "Athens"
+    "Copenhagen",
+    "Dublin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002038",
   "sourceDocumentId": "038-straight-3p-bisect-hotels-tkt-02",
   "stations": [
     {
-      "city": "New York",
+      "city": "Copenhagen",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "JFK",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Athens",
-      "identifier": "ATH",
+      "city": "Dublin",
+      "identifier": "DUB",
       "kind": "airport"
     }
   ],

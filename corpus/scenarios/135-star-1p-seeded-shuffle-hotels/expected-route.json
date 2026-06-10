@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Istanbul",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "Madrid",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Berlin",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -49,7 +49,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Oslo",
+      "city": "Madrid",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1"
@@ -57,7 +57,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Munich",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]
@@ -67,10 +67,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
+      "from": "Amsterdam",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "Oslo",
+      "to": "Madrid",
       "travelers": [
         "traveler-1"
       ]
@@ -78,10 +78,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Oslo",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "Berlin",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1"
       ]
@@ -89,10 +89,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Berlin",
+      "from": "Barcelona",
       "mode": "air",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-01",
-      "to": "Oslo",
+      "to": "Madrid",
       "travelers": [
         "traveler-1"
       ]
@@ -100,10 +100,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Oslo",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "135-star-1p-seeded-shuffle-hotels-tkt-02",
-      "to": "Munich",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]

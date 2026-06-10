@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Istanbul",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Dublin",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Vienna",
+      "city": "Moscow",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Dublin",
+      "city": "Milan",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Zurich",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Dublin",
+      "city": "Milan",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Lisbon",
+      "city": "Oslo",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -64,7 +64,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "Istanbul",
+      "city": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Istanbul",
+      "from": "Barcelona",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
-      "to": "Dublin",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -87,10 +87,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Dublin",
+      "from": "Milan",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
-      "to": "Vienna",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Vienna",
+      "from": "Moscow",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-01",
-      "to": "Dublin",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Dublin",
-      "mode": "air",
+      "from": "Milan",
+      "mode": "bus",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-02",
-      "to": "Zurich",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -123,10 +123,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Zurich",
+      "from": "Istanbul",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
-      "to": "Dublin",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -135,10 +135,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Dublin",
+      "from": "Milan",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
-      "to": "Lisbon",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Lisbon",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "155-star-2p-seeded-shuffle-return-tkt-03",
-      "to": "Istanbul",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"

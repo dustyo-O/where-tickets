@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Oslo",
-    "Milan",
-    "Berlin"
+    "Lisbon",
+    "Athens",
+    "Moscow"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001166",
   "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-01",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Milan",
+      "city": "Athens",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Milan Bus Terminal",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Berlin",
+      "city": "Moscow",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Milan",
-      "identifier": "Milan Bus Terminal",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

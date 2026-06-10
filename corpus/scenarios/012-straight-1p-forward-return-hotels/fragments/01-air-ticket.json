@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Moscow",
-    "Oslo",
-    "Barcelona"
+    "Warsaw",
+    "Dublin",
+    "Berlin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001012",
   "sourceDocumentId": "012-straight-1p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "SVO",
+      "identifier": "WAW",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "Dublin",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "OSL",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Barcelona",
+      "city": "Berlin",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "BCN",
+      "identifier": "BER",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Moscow",
-      "identifier": "SVO",
+      "city": "Warsaw",
+      "identifier": "WAW",
       "kind": "airport"
     }
   ],

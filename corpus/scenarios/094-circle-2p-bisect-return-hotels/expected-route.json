@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Moscow",
+      "city": "Paris",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,7 +69,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Moscow",
+      "city": "Paris",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -92,7 +92,7 @@
       "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "094-circle-2p-bisect-return-hotels-tkt-01",
-      "to": "Moscow",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -101,10 +101,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Moscow",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "094-circle-2p-bisect-return-hotels-tkt-01",
-      "to": "Stockholm",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -113,10 +113,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
+      "from": "Milan",
       "mode": "bus",
       "sourceFragmentId": "094-circle-2p-bisect-return-hotels-tkt-01",
-      "to": "Madrid",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -125,10 +125,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Madrid",
+      "from": "New York",
       "mode": "rail",
       "sourceFragmentId": "094-circle-2p-bisect-return-hotels-tkt-02",
-      "to": "Moscow",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -137,7 +137,7 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Moscow",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "094-circle-2p-bisect-return-hotels-tkt-03",
       "to": "Vienna",

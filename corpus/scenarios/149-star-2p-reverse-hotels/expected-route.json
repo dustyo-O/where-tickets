@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Dublin",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Madrid",
+      "city": "Rome",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -52,7 +52,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Rome",
+      "city": "Warsaw",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,7 +69,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "London",
+      "city": "Lisbon",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -86,7 +86,7 @@
         }
       ],
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Rome",
+      "city": "Warsaw",
       "departureAt": "2027-03-05T09:00:00Z",
       "travelers": [
         "traveler-1",
@@ -95,7 +95,7 @@
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Berlin",
+      "city": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -106,10 +106,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Dublin",
+      "from": "Amsterdam",
       "mode": "rail",
       "sourceFragmentId": "149-star-2p-reverse-hotels-tkt-01",
-      "to": "Rome",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -118,10 +118,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
+      "from": "Warsaw",
       "mode": "rail",
       "sourceFragmentId": "149-star-2p-reverse-hotels-tkt-01",
-      "to": "Madrid",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -130,10 +130,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Madrid",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "149-star-2p-reverse-hotels-tkt-01",
-      "to": "Rome",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -142,10 +142,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Rome",
+      "from": "Warsaw",
       "mode": "air",
       "sourceFragmentId": "149-star-2p-reverse-hotels-tkt-02",
-      "to": "London",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -154,10 +154,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "London",
+      "from": "Lisbon",
       "mode": "rail",
       "sourceFragmentId": "149-star-2p-reverse-hotels-tkt-03",
-      "to": "Rome",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -166,10 +166,10 @@
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
       "departureAt": "2027-03-05T09:00:00Z",
-      "from": "Rome",
+      "from": "Warsaw",
       "mode": "rail",
       "sourceFragmentId": "149-star-2p-reverse-hotels-tkt-03",
-      "to": "Berlin",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2"

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Moscow",
-    "Stockholm",
-    "Zurich",
-    "Madrid"
+    "Frankfurt",
+    "Munich",
+    "Vienna",
+    "Helsinki"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001108",
   "sourceDocumentId": "108-circle-3p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "SVO",
+      "identifier": "FRA",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Munich",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "ARN",
+      "identifier": "MUC",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Zurich",
+      "city": "Vienna",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "VIE",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "city": "Helsinki",
+      "identifier": "HEL",
       "kind": "airport"
     }
   ],

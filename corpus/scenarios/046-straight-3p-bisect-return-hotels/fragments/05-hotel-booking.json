@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "London",
+      "city": "Rome",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "London"
+    "Rome"
   ],
   "confirmationCode": "HTL001046",
   "documentType": "hotel-booking",

@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Milan",
-    "Warsaw",
-    "Moscow"
+    "Amsterdam",
+    "Zurich",
+    "Prague"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001054",
   "sourceDocumentId": "054-straight-4p-bisect-hotels-tkt-01",
   "stations": [
     {
-      "city": "Milan",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MXP",
+      "identifier": "AMS",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Zurich",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "WAW",
+      "identifier": "ZRH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Moscow",
-      "identifier": "SVO",
+      "city": "Prague",
+      "identifier": "PRG",
       "kind": "airport"
     }
   ],

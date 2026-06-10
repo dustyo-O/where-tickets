@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Munich",
-    "Madrid"
+    "Madrid",
+    "Dublin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002013",
   "sourceDocumentId": "013-straight-1p-reverse-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Madrid",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "MUC",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "city": "Dublin",
+      "identifier": "DUB",
       "kind": "airport"
     }
   ],

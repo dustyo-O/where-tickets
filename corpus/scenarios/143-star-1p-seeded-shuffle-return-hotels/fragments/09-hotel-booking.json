@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Vienna",
+      "city": "Warsaw",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Vienna"
+    "Warsaw"
   ],
   "confirmationCode": "HTL002143",
   "documentType": "hotel-booking",

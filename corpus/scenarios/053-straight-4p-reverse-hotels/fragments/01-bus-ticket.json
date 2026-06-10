@@ -1,6 +1,6 @@
 {
   "cities": [
-    "Vienna",
+    "Paris",
     "Amsterdam"
   ],
   "documentType": "bus-ticket",
@@ -8,9 +8,9 @@
   "sourceDocumentId": "053-straight-4p-reverse-hotels-tkt-02",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "Paris",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {

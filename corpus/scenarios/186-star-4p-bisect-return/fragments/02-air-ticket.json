@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Istanbul",
-    "Amsterdam"
+    "Warsaw",
+    "Moscow"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003186",
   "sourceDocumentId": "186-star-4p-bisect-return-tkt-03",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Warsaw",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "IST",
+      "identifier": "WAW",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "AMS",
+      "city": "Moscow",
+      "identifier": "SVO",
       "kind": "airport"
     }
   ],

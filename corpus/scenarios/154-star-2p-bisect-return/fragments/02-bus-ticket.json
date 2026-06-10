@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Zurich",
-    "Copenhagen",
-    "Milan"
+    "Lisbon",
+    "Milan",
+    "Helsinki"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003154",
   "sourceDocumentId": "154-star-2p-bisect-return-tkt-03",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "Milan",
       "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Copenhagen Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Milan",
-      "identifier": "Milan Bus Terminal",
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "cities": [
-    "Munich",
     "Helsinki",
+    "Copenhagen",
     "Prague",
     "Frankfurt"
   ],
@@ -10,16 +10,16 @@
   "sourceDocumentId": "092-circle-2p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Munich Hauptbahnhof",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Helsinki",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {

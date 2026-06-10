@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "Milan"
+    "Zurich",
+    "Athens"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003166",
   "sourceDocumentId": "166-star-3p-bisect-hotels-tkt-03",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Zurich",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Dublin Bus Terminal",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Milan",
-      "identifier": "Milan Bus Terminal",
+      "city": "Athens",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

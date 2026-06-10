@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Munich",
-    "Amsterdam"
+    "Dublin",
+    "London"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003178",
   "sourceDocumentId": "178-star-4p-bisect-tkt-03",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Dublin",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Dublin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Bus Terminal",
+      "city": "London",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Madrid",
-    "Helsinki",
-    "Rome"
+    "New York",
+    "Istanbul",
+    "Copenhagen"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001045",
   "sourceDocumentId": "045-straight-3p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MAD",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Helsinki",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "HEL",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Rome",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "ROM",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "city": "New York",
+      "identifier": "JFK",
       "kind": "airport"
     }
   ],

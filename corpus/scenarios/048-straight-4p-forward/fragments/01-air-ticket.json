@@ -1,7 +1,7 @@
 {
   "cities": [
-    "Istanbul",
-    "Rome",
+    "Moscow",
+    "New York",
     "Prague"
   ],
   "documentType": "air-ticket",
@@ -9,16 +9,16 @@
   "sourceDocumentId": "048-straight-4p-forward-tkt-01",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "IST",
+      "identifier": "SVO",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "New York",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "ROM",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {

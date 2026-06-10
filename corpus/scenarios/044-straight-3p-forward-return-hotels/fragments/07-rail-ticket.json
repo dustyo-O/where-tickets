@@ -1,22 +1,22 @@
 {
   "cities": [
-    "London",
-    "Munich"
+    "Madrid",
+    "Vienna"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003044",
   "sourceDocumentId": "044-straight-3p-forward-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "London",
+      "city": "Madrid",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Madrid Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Hauptbahnhof",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

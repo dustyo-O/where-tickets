@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Oslo",
-    "Istanbul"
+    "Frankfurt",
+    "Paris"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002153",
   "sourceDocumentId": "153-star-2p-reverse-return-tkt-02",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Frankfurt",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Istanbul",
-      "identifier": "Istanbul Bus Terminal",
+      "city": "Paris",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Oslo",
-    "Frankfurt",
-    "Munich",
-    "Lisbon"
+    "London",
+    "Warsaw",
+    "Vienna",
+    "Rome"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001121",
   "sourceDocumentId": "121-circle-4p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "London",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Frankfurt Bus Terminal",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Munich",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Vienna Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Lisbon",
-      "identifier": "Lisbon Bus Terminal",
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Prague",
+      "city": "Paris",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -39,7 +39,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Zurich",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -58,7 +58,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "London",
+      "city": "Istanbul",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -77,7 +77,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Rome",
+      "city": "Warsaw",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -88,7 +88,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "London",
+      "city": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -101,10 +101,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
+      "from": "Paris",
       "mode": "bus",
       "sourceFragmentId": "181-star-4p-reverse-hotels-tkt-01",
-      "to": "London",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -115,10 +115,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "London",
+      "from": "Istanbul",
       "mode": "bus",
       "sourceFragmentId": "181-star-4p-reverse-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -129,10 +129,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Zurich",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "181-star-4p-reverse-hotels-tkt-01",
-      "to": "London",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -143,10 +143,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "London",
+      "from": "Istanbul",
       "mode": "rail",
       "sourceFragmentId": "181-star-4p-reverse-hotels-tkt-02",
-      "to": "Rome",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -157,10 +157,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Rome",
+      "from": "Warsaw",
       "mode": "bus",
       "sourceFragmentId": "181-star-4p-reverse-hotels-tkt-03",
-      "to": "London",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2",

@@ -1,0 +1,20 @@
+{
+  "accommodations": [
+    {
+      "checkInAt": "2027-03-05T12:00:00Z",
+      "checkOutAt": "2027-03-06T06:00:00Z",
+      "city": "Milan",
+      "identifier": "City Garden",
+      "kind": "hotel"
+    }
+  ],
+  "cities": [
+    "Milan"
+  ],
+  "confirmationCode": "HTL006143",
+  "documentType": "hotel-booking",
+  "sourceDocumentId": "143-star-1p-seeded-shuffle-return-hotels-htl-06",
+  "travelers": [
+    "traveler-1"
+  ]
+}

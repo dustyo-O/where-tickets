@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Frankfurt",
+      "city": "Rome",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Frankfurt"
+    "Rome"
   ],
   "confirmationCode": "HTL002053",
   "documentType": "hotel-booking",

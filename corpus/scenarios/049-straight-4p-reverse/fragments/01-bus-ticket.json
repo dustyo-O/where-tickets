@@ -1,9 +1,9 @@
 {
   "cities": [
     "Oslo",
-    "Istanbul",
-    "Lisbon",
-    "Copenhagen"
+    "Moscow",
+    "Milan",
+    "Barcelona"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001049",
@@ -17,22 +17,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
+      "city": "Moscow",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Istanbul Bus Terminal",
+      "identifier": "Moscow Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Lisbon",
+      "city": "Milan",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Lisbon Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Copenhagen",
-      "identifier": "Copenhagen Bus Terminal",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

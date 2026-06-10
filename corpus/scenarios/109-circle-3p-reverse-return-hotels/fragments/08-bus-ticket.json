@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Munich",
-    "Prague",
-    "Dublin",
-    "Zurich"
+    "Rome",
+    "Paris",
+    "Istanbul",
+    "London"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001109",
   "sourceDocumentId": "109-circle-3p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Paris",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Prague Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Dublin",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Dublin Bus Terminal",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Bus Terminal",
+      "city": "London",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

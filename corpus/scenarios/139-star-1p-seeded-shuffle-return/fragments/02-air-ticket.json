@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "Munich",
+    "Oslo"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002139",
+  "sourceDocumentId": "139-star-1p-seeded-shuffle-return-tkt-02",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "MUC",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1"
+  ]
+}

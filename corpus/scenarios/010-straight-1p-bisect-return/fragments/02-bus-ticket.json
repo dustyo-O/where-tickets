@@ -1,38 +1,38 @@
 {
   "cities": [
+    "Prague",
+    "Zurich",
     "New York",
-    "Oslo",
-    "Copenhagen",
-    "Prague"
+    "Milan"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001010",
   "sourceDocumentId": "010-straight-1p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "New York",
+      "city": "Prague",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "New York Bus Terminal",
+      "identifier": "Prague Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Oslo",
+      "city": "Zurich",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Oslo Bus Terminal",
+      "identifier": "Zurich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "New York",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Copenhagen Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Prague",
-      "identifier": "Prague Bus Terminal",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

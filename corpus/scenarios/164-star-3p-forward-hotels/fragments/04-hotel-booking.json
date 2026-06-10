@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Prague",
+      "city": "Warsaw",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Prague"
+    "Warsaw"
   ],
   "confirmationCode": "HTL003164",
   "documentType": "hotel-booking",

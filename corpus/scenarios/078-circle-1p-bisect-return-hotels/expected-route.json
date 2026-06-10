@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Madrid",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "New York",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Copenhagen",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1"
@@ -65,7 +65,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "London",
+      "city": "New York",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1"
@@ -73,7 +73,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Madrid",
+      "city": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -83,10 +83,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "078-circle-1p-bisect-return-hotels-tkt-01",
-      "to": "London",
+      "to": "New York",
       "travelers": [
         "traveler-1"
       ]
@@ -94,10 +94,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "London",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "078-circle-1p-bisect-return-hotels-tkt-01",
-      "to": "Copenhagen",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1"
       ]
@@ -105,7 +105,7 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Copenhagen",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "078-circle-1p-bisect-return-hotels-tkt-01",
       "to": "Dublin",
@@ -119,7 +119,7 @@
       "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "078-circle-1p-bisect-return-hotels-tkt-02",
-      "to": "London",
+      "to": "New York",
       "travelers": [
         "traveler-1"
       ]
@@ -127,10 +127,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "London",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "078-circle-1p-bisect-return-hotels-tkt-03",
-      "to": "Madrid",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]

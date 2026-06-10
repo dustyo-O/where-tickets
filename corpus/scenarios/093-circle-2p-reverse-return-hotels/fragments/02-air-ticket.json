@@ -1,8 +1,8 @@
 {
   "cities": [
     "Stockholm",
-    "Athens",
-    "Amsterdam"
+    "Barcelona",
+    "Dublin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003093",
@@ -16,15 +16,15 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Athens",
+      "city": "Barcelona",
       "departureAt": "2027-03-05T09:00:00Z",
-      "identifier": "ATH",
+      "identifier": "BCN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-05T12:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "AMS",
+      "city": "Dublin",
+      "identifier": "DUB",
       "kind": "airport"
     }
   ],

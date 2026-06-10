@@ -1,6 +1,6 @@
 {
   "cities": [
-    "Moscow",
+    "Paris",
     "Vienna"
   ],
   "documentType": "bus-ticket",
@@ -8,9 +8,9 @@
   "sourceDocumentId": "094-circle-2p-bisect-return-hotels-tkt-03",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Paris",
       "departureAt": "2027-03-04T12:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {

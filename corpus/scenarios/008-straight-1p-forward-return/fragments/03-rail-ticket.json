@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Madrid",
-    "New York"
+    "New York",
+    "Copenhagen"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003008",
   "sourceDocumentId": "008-straight-1p-forward-return-tkt-03",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "New York",
-      "identifier": "New York Hauptbahnhof",
+      "city": "Copenhagen",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

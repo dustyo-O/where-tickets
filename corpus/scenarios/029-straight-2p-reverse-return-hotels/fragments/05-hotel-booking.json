@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Madrid",
+      "city": "Amsterdam",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Madrid"
+    "Amsterdam"
   ],
   "confirmationCode": "HTL002029",
   "documentType": "hotel-booking",

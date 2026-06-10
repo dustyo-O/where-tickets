@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Madrid",
-    "Munich",
-    "Amsterdam"
+    "Rome",
+    "Oslo",
+    "Milan"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001042",
   "sourceDocumentId": "042-straight-3p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Madrid",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MAD",
+      "identifier": "ROM",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Oslo",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "MUC",
+      "identifier": "OSL",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Amsterdam",
+      "city": "Milan",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "AMS",
+      "identifier": "MXP",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Madrid",
-      "identifier": "MAD",
+      "city": "Rome",
+      "identifier": "ROM",
       "kind": "airport"
     }
   ],

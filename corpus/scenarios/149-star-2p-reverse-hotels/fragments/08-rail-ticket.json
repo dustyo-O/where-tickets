@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Dublin",
-    "Rome",
-    "Madrid"
+    "Amsterdam",
+    "Warsaw",
+    "Rome"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001149",
   "sourceDocumentId": "149-star-2p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Rome Hauptbahnhof",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Madrid",
+      "city": "Rome",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Rome",
-      "identifier": "Rome Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

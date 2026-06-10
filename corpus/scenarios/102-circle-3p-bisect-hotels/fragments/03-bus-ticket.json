@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Berlin",
-    "Helsinki"
+    "Warsaw",
+    "Milan"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002102",
   "sourceDocumentId": "102-circle-3p-bisect-hotels-tkt-02",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "Warsaw",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Bus Terminal",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

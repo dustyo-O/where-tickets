@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-05T12:00:00Z",
       "checkOutAt": "2027-03-06T06:00:00Z",
-      "city": "Helsinki",
+      "city": "Vienna",
       "identifier": "City Garden",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Helsinki"
+    "Vienna"
   ],
   "confirmationCode": "HTL006158",
   "documentType": "hotel-booking",

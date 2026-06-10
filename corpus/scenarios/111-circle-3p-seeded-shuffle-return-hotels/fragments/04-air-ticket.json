@@ -1,0 +1,44 @@
+{
+  "cities": [
+    "Milan",
+    "Oslo",
+    "Berlin",
+    "Warsaw"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR001111",
+  "sourceDocumentId": "111-circle-3p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Oslo",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "BER",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Warsaw",
+      "identifier": "WAW",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

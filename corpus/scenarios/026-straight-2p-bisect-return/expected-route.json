@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Munich",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Istanbul",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "New York",
+      "city": "Moscow",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Oslo",
+      "city": "Prague",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
+      "city": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -57,10 +57,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Munich",
+      "from": "Warsaw",
       "mode": "rail",
       "sourceFragmentId": "026-straight-2p-bisect-return-tkt-01",
-      "to": "Lisbon",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -69,10 +69,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Lisbon",
+      "from": "Frankfurt",
       "mode": "rail",
       "sourceFragmentId": "026-straight-2p-bisect-return-tkt-01",
-      "to": "Istanbul",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -81,10 +81,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Istanbul",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "026-straight-2p-bisect-return-tkt-01",
-      "to": "New York",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -93,10 +93,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "New York",
+      "from": "Moscow",
       "mode": "bus",
       "sourceFragmentId": "026-straight-2p-bisect-return-tkt-02",
-      "to": "Oslo",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -105,10 +105,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Oslo",
+      "from": "Prague",
       "mode": "rail",
       "sourceFragmentId": "026-straight-2p-bisect-return-tkt-03",
-      "to": "Munich",
+      "to": "Warsaw",
       "travelers": [
         "traveler-1",
         "traveler-2"

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Istanbul",
-    "New York"
+    "Rome",
+    "London"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002072",
   "sourceDocumentId": "072-circle-1p-forward-return-tkt-02",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "New York",
-      "identifier": "New York Hauptbahnhof",
+      "city": "London",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-03T18:00:00Z",
-      "checkOutAt": "2027-03-04T12:00:00Z",
-      "city": "Oslo",
-      "identifier": "Central Lodge",
+      "checkInAt": "2027-03-01T03:00:00Z",
+      "checkOutAt": "2027-03-01T21:00:00Z",
+      "city": "Istanbul",
+      "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Oslo"
+    "Istanbul"
   ],
-  "confirmationCode": "HTL004191",
+  "confirmationCode": "HTL001191",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "191-star-4p-seeded-shuffle-return-hotels-htl-04",
+  "sourceDocumentId": "191-star-4p-seeded-shuffle-return-hotels-htl-01",
   "travelers": [
     "traveler-1",
     "traveler-2",

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Amsterdam",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "Milan",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Vienna",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Rome",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Vienna",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -67,7 +67,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Amsterdam",
+      "city": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -80,21 +80,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
-      "mode": "bus",
-      "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
-      "to": "Vienna",
-      "travelers": [
-        "traveler-1",
-        "traveler-2",
-        "traveler-3",
-        "traveler-4"
-      ]
-    },
-    {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Vienna",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
       "to": "Copenhagen",
@@ -106,12 +92,26 @@
       ]
     },
     {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "departureAt": "2027-03-01T16:00:00Z",
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "departureAt": "2027-03-01T08:00:00Z",
       "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
-      "to": "Vienna",
+      "to": "Milan",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3",
+        "traveler-4"
+      ]
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "from": "Milan",
+      "mode": "bus",
+      "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-01",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -122,10 +122,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Vienna",
+      "from": "Copenhagen",
       "mode": "rail",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-02",
-      "to": "Warsaw",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -136,10 +136,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Warsaw",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-03",
-      "to": "Vienna",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -150,10 +150,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Vienna",
+      "from": "Copenhagen",
       "mode": "bus",
       "sourceFragmentId": "187-star-4p-seeded-shuffle-return-tkt-03",
-      "to": "Amsterdam",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",

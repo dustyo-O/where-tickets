@@ -1,0 +1,27 @@
+{
+  "cities": [
+    "Milan",
+    "Lisbon"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002154",
+  "sourceDocumentId": "154-star-2p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "MXP",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Lisbon",
+      "identifier": "LIS",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

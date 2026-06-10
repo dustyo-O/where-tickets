@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Paris",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -12,7 +12,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -23,7 +23,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -34,7 +34,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -45,7 +45,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Helsinki",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -56,7 +56,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -67,7 +67,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Frankfurt",
+      "city": "New York",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -78,7 +78,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "Paris",
+      "city": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -91,10 +91,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Paris",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-01",
-      "to": "Copenhagen",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -105,10 +105,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Copenhagen",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-01",
-      "to": "Athens",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -119,10 +119,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
+      "from": "Oslo",
       "mode": "rail",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-01",
-      "to": "Copenhagen",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -133,10 +133,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Copenhagen",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-02",
-      "to": "Warsaw",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Warsaw",
+      "from": "Helsinki",
       "mode": "rail",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-03",
-      "to": "Copenhagen",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -161,10 +161,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Copenhagen",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-03",
-      "to": "Frankfurt",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -175,10 +175,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Frankfurt",
+      "from": "New York",
       "mode": "rail",
       "sourceFragmentId": "185-star-4p-reverse-return-tkt-03",
-      "to": "Paris",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",

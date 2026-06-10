@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Prague",
-    "Oslo"
+    "Madrid",
+    "Zurich"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002152",
   "sourceDocumentId": "152-star-2p-forward-return-tkt-02",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "PRG",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Oslo",
-      "identifier": "OSL",
+      "city": "Zurich",
+      "identifier": "ZRH",
       "kind": "airport"
     }
   ],

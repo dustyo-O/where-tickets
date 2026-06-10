@@ -1,7 +1,7 @@
 {
   "cities": [
-    "Prague",
-    "Berlin",
+    "Lisbon",
+    "Stockholm",
     "Athens"
   ],
   "documentType": "rail-ticket",
@@ -9,16 +9,16 @@
   "sourceDocumentId": "176-star-4p-forward-tkt-01",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Prague Hauptbahnhof",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "Stockholm Hauptbahnhof",
       "kind": "rail_station"
     },
     {
@@ -30,8 +30,8 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Berlin",
-      "identifier": "Berlin Hauptbahnhof",
+      "city": "Stockholm",
+      "identifier": "Stockholm Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

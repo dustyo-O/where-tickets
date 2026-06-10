@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-03T18:00:00Z",
-      "checkOutAt": "2027-03-04T12:00:00Z",
-      "city": "Berlin",
-      "identifier": "Central Lodge",
+      "checkInAt": "2027-03-02T00:00:00Z",
+      "checkOutAt": "2027-03-02T18:00:00Z",
+      "city": "Athens",
+      "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Berlin"
+    "Athens"
   ],
-  "confirmationCode": "HTL004159",
+  "confirmationCode": "HTL002159",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-htl-04",
+  "sourceDocumentId": "159-star-2p-seeded-shuffle-return-hotels-htl-02",
   "travelers": [
     "traveler-1",
     "traveler-2"

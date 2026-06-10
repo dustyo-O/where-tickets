@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Paris",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Prague",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -44,7 +44,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Paris",
+      "city": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -55,10 +55,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Paris",
+      "from": "Istanbul",
       "mode": "air",
       "sourceFragmentId": "030-straight-2p-bisect-return-hotels-tkt-01",
-      "to": "London",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -67,10 +67,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "London",
+      "from": "Frankfurt",
       "mode": "air",
       "sourceFragmentId": "030-straight-2p-bisect-return-hotels-tkt-01",
-      "to": "Prague",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Prague",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "030-straight-2p-bisect-return-hotels-tkt-01",
-      "to": "Paris",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1",
         "traveler-2"

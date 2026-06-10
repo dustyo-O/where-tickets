@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "New York",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Athens",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,7 +69,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Berlin",
+      "city": "Stockholm",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -78,7 +78,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "New York",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -89,7 +89,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
+      "from": "Frankfurt",
       "mode": "air",
       "sourceFragmentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-01",
       "to": "Copenhagen",
@@ -104,7 +104,7 @@
       "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "London",
+      "to": "Athens",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -113,7 +113,7 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
+      "from": "Athens",
       "mode": "air",
       "sourceFragmentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-01",
       "to": "Copenhagen",
@@ -126,9 +126,9 @@
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
       "from": "Copenhagen",
-      "mode": "rail",
+      "mode": "bus",
       "sourceFragmentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-02",
-      "to": "Berlin",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -137,10 +137,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Berlin",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "159-star-2p-seeded-shuffle-return-hotels-tkt-03",
-      "to": "New York",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2"

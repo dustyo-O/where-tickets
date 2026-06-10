@@ -1,0 +1,43 @@
+{
+  "cities": [
+    "Warsaw",
+    "Oslo",
+    "Amsterdam"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR001171",
+  "sourceDocumentId": "171-star-3p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Warsaw",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "WAW",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Oslo",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "OSL",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "AMS",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

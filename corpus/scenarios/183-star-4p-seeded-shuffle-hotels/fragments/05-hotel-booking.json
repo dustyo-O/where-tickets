@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-01T03:00:00Z",
-      "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Rome",
-      "identifier": "Riverside Inn",
+      "checkInAt": "2027-03-02T21:00:00Z",
+      "checkOutAt": "2027-03-03T15:00:00Z",
+      "city": "Vienna",
+      "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Rome"
+    "Vienna"
   ],
-  "confirmationCode": "HTL001183",
+  "confirmationCode": "HTL003183",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "183-star-4p-seeded-shuffle-hotels-htl-01",
+  "sourceDocumentId": "183-star-4p-seeded-shuffle-hotels-htl-03",
   "travelers": [
     "traveler-1",
     "traveler-2",

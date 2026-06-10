@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Barcelona",
+      "city": "Dublin",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Copenhagen",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -31,7 +31,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Dublin",
+      "city": "Prague",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Munich",
+      "city": "Madrid",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -61,7 +61,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Barcelona",
+      "city": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -73,7 +73,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Barcelona",
+      "from": "Dublin",
       "mode": "air",
       "sourceFragmentId": "105-circle-3p-reverse-return-tkt-01",
       "to": "Milan",
@@ -89,7 +89,7 @@
       "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "105-circle-3p-reverse-return-tkt-01",
-      "to": "Copenhagen",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Copenhagen",
+      "from": "Berlin",
       "mode": "air",
       "sourceFragmentId": "105-circle-3p-reverse-return-tkt-01",
-      "to": "Dublin",
+      "to": "Prague",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -112,10 +112,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Dublin",
+      "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "105-circle-3p-reverse-return-tkt-02",
-      "to": "Munich",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -125,7 +125,7 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Munich",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "105-circle-3p-reverse-return-tkt-03",
       "to": "Milan",
@@ -141,7 +141,7 @@
       "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "105-circle-3p-reverse-return-tkt-03",
-      "to": "Barcelona",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2",

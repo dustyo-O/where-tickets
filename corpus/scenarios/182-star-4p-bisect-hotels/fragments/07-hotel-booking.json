@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Munich",
+      "city": "Athens",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Munich"
+    "Athens"
   ],
   "confirmationCode": "HTL002182",
   "documentType": "hotel-booking",

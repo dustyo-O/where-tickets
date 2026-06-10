@@ -1,38 +1,30 @@
 {
   "cities": [
-    "Amsterdam",
+    "Copenhagen",
     "Helsinki",
-    "Zurich",
-    "Paris"
+    "Munich"
   ],
   "documentType": "air-ticket",
-  "pnr": "PNR001075",
-  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
+  "pnr": "PNR003075",
+  "sourceDocumentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
   "stations": [
     {
-      "city": "Amsterdam",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "AMS",
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "CPH",
       "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-01T03:00:00Z",
+      "arrivalAt": "2027-03-02T11:00:00Z",
       "city": "Helsinki",
-      "departureAt": "2027-03-01T08:00:00Z",
+      "departureAt": "2027-03-02T16:00:00Z",
       "identifier": "HEL",
       "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Zurich",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "ZRH",
-      "kind": "airport"
-    },
-    {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Paris",
-      "identifier": "CDG",
+      "arrivalAt": "2027-03-02T19:00:00Z",
+      "city": "Munich",
+      "identifier": "MUC",
       "kind": "airport"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Dublin",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
+      "city": "Vienna",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -39,7 +39,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Munich",
+      "city": "Rome",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -58,7 +58,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Stockholm",
+      "city": "Madrid",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -69,7 +69,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Dublin",
+      "city": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -82,10 +82,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Dublin",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "061-straight-4p-reverse-return-hotels-tkt-01",
-      "to": "Berlin",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -96,10 +96,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Berlin",
+      "from": "Vienna",
       "mode": "bus",
       "sourceFragmentId": "061-straight-4p-reverse-return-hotels-tkt-01",
-      "to": "Munich",
+      "to": "Rome",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -110,10 +110,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Munich",
+      "from": "Rome",
       "mode": "bus",
       "sourceFragmentId": "061-straight-4p-reverse-return-hotels-tkt-01",
-      "to": "Stockholm",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -124,10 +124,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Stockholm",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "061-straight-4p-reverse-return-hotels-tkt-02",
-      "to": "Dublin",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2",

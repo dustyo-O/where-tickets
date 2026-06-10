@@ -1,7 +1,7 @@
 {
   "cities": [
     "Vienna",
-    "Helsinki"
+    "New York"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003148",
@@ -15,8 +15,8 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Helsinki",
-      "identifier": "Helsinki Bus Terminal",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Munich",
-    "Zurich",
-    "Berlin",
-    "Helsinki"
+    "Stockholm",
+    "Milan",
+    "Athens",
+    "Lisbon"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001120",
   "sourceDocumentId": "120-circle-4p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MUC",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "MXP",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Athens",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "BER",
+      "identifier": "ATH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Helsinki",
-      "identifier": "HEL",
+      "city": "Lisbon",
+      "identifier": "LIS",
       "kind": "airport"
     }
   ],

@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Oslo",
-    "Moscow",
-    "Rome"
+    "New York",
+    "Athens",
+    "Berlin"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001009",
   "sourceDocumentId": "009-straight-1p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "OSL",
+      "identifier": "JFK",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Moscow",
+      "city": "Athens",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "SVO",
+      "identifier": "ATH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Rome",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "ROM",
+      "identifier": "BER",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Oslo",
-      "identifier": "OSL",
+      "city": "New York",
+      "identifier": "JFK",
       "kind": "airport"
     }
   ],

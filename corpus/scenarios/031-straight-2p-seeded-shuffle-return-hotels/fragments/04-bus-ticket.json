@@ -1,0 +1,43 @@
+{
+  "cities": [
+    "Munich",
+    "Paris",
+    "Amsterdam",
+    "Helsinki"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR001031",
+  "sourceDocumentId": "031-straight-2p-seeded-shuffle-return-hotels-tkt-01",
+  "stations": [
+    {
+      "city": "Munich",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Munich Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Paris",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Paris Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Helsinki",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2"
+  ]
+}

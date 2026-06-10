@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Prague",
+      "city": "Warsaw",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Prague"
+    "Warsaw"
   ],
   "confirmationCode": "HTL001164",
   "documentType": "hotel-booking",

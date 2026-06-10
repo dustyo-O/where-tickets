@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Vienna",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -18,7 +18,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Barcelona",
+      "city": "Moscow",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -35,7 +35,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -44,7 +44,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Athens",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -55,10 +55,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Vienna",
+      "from": "Athens",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "Barcelona",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -67,10 +67,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Barcelona",
+      "from": "Moscow",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "Stockholm",
+      "to": "Dublin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -79,10 +79,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Stockholm",
+      "from": "Dublin",
       "mode": "bus",
       "sourceFragmentId": "022-straight-2p-bisect-hotels-tkt-01",
-      "to": "Athens",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2"

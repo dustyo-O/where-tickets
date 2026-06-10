@@ -1,38 +1,22 @@
 {
   "cities": [
-    "Vienna",
-    "Berlin",
-    "Helsinki",
-    "Moscow"
+    "Prague",
+    "Frankfurt"
   ],
   "documentType": "rail-ticket",
-  "pnr": "PNR001083",
-  "sourceDocumentId": "083-circle-2p-seeded-shuffle-tkt-01",
+  "pnr": "PNR003083",
+  "sourceDocumentId": "083-circle-2p-seeded-shuffle-tkt-03",
   "stations": [
     {
-      "city": "Vienna",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "city": "Prague",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     },
     {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Berlin",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Helsinki",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Moscow",
-      "identifier": "Moscow Hauptbahnhof",
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

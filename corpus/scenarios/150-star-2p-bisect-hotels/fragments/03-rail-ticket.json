@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "London"
+    "Helsinki",
+    "Vienna"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002150",
   "sourceDocumentId": "150-star-2p-bisect-hotels-tkt-02",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "Helsinki",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Dublin Hauptbahnhof",
+      "identifier": "Helsinki Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

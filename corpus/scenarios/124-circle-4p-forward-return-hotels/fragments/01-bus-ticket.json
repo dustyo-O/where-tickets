@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Stockholm",
-    "Milan",
-    "Madrid",
-    "Munich"
+    "London",
+    "Munich",
+    "Paris",
+    "Rome"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001124",
   "sourceDocumentId": "124-circle-4p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Stockholm",
+      "city": "London",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Stockholm Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Milan",
+      "city": "Munich",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Milan Bus Terminal",
+      "identifier": "Munich Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Madrid",
+      "city": "Paris",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Madrid Bus Terminal",
+      "identifier": "Paris Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Bus Terminal",
+      "city": "Rome",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

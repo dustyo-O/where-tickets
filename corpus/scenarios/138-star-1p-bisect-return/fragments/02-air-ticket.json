@@ -1,7 +1,7 @@
 {
   "cities": [
     "Warsaw",
-    "Istanbul"
+    "Stockholm"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003138",
@@ -15,8 +15,8 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Istanbul",
-      "identifier": "IST",
+      "city": "Stockholm",
+      "identifier": "ARN",
       "kind": "airport"
     }
   ],

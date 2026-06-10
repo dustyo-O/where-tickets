@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Zurich",
-    "Barcelona"
+    "Barcelona",
+    "Istanbul"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003145",
   "sourceDocumentId": "145-star-2p-reverse-tkt-03",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Barcelona",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Zurich Bus Terminal",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Barcelona",
-      "identifier": "Barcelona Bus Terminal",
+      "city": "Istanbul",
+      "identifier": "Istanbul Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

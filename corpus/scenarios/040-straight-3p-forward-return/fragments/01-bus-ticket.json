@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Berlin",
-    "Moscow",
-    "Dublin",
-    "Amsterdam"
+    "Warsaw",
+    "Stockholm",
+    "Lisbon",
+    "Frankfurt"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001040",
   "sourceDocumentId": "040-straight-3p-forward-return-tkt-01",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Berlin Bus Terminal",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Moscow",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Dublin",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Dublin Bus Terminal",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Bus Terminal",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

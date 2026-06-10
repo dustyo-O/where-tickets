@@ -1,9 +1,9 @@
 {
   "cities": [
     "Berlin",
-    "Amsterdam",
-    "Moscow",
-    "New York"
+    "Lisbon",
+    "Athens",
+    "Warsaw"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001016",
@@ -17,22 +17,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Amsterdam",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Moscow",
+      "city": "Athens",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "New York",
-      "identifier": "New York Bus Terminal",
+      "city": "Warsaw",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

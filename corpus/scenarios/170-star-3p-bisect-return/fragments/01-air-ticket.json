@@ -1,7 +1,7 @@
 {
   "cities": [
     "Paris",
-    "Zurich"
+    "Lisbon"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002170",
@@ -15,8 +15,8 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Zurich",
-      "identifier": "ZRH",
+      "city": "Lisbon",
+      "identifier": "LIS",
       "kind": "airport"
     }
   ],

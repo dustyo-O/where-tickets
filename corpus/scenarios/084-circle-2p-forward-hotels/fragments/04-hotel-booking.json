@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Amsterdam",
+      "city": "Munich",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Amsterdam"
+    "Munich"
   ],
   "confirmationCode": "HTL003084",
   "documentType": "hotel-booking",

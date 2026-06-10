@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Oslo",
     "Athens",
-    "Copenhagen",
-    "Warsaw"
+    "Berlin",
+    "Dublin",
+    "Zurich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001110",
   "sourceDocumentId": "110-circle-3p-bisect-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Oslo",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
-      "kind": "rail_station"
-    },
-    {
-      "arrivalAt": "2027-03-01T03:00:00Z",
       "city": "Athens",
-      "departureAt": "2027-03-01T21:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
       "identifier": "Athens Hauptbahnhof",
       "kind": "rail_station"
     },
     {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Berlin",
+      "departureAt": "2027-03-01T21:00:00Z",
+      "identifier": "Berlin Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Copenhagen",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Copenhagen Hauptbahnhof",
+      "identifier": "Dublin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Warsaw",
-      "identifier": "Warsaw Hauptbahnhof",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

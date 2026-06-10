@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Istanbul",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Rome",
+      "city": "Lisbon",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Helsinki",
+      "city": "Paris",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
       "from": "Prague",
       "mode": "bus",
       "sourceFragmentId": "025-straight-2p-reverse-return-tkt-01",
-      "to": "Istanbul",
+      "to": "Barcelona",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -60,10 +60,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Istanbul",
+      "from": "Barcelona",
       "mode": "bus",
       "sourceFragmentId": "025-straight-2p-reverse-return-tkt-01",
-      "to": "Rome",
+      "to": "Lisbon",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -72,10 +72,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Rome",
+      "from": "Lisbon",
       "mode": "bus",
       "sourceFragmentId": "025-straight-2p-reverse-return-tkt-01",
-      "to": "Helsinki",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -84,8 +84,8 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Helsinki",
-      "mode": "air",
+      "from": "Paris",
+      "mode": "rail",
       "sourceFragmentId": "025-straight-2p-reverse-return-tkt-02",
       "to": "Prague",
       "travelers": [

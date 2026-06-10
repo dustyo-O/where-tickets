@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Prague",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Zurich",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Helsinki",
+      "city": "Berlin",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Prague",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Prague",
+      "from": "Frankfurt",
       "mode": "rail",
       "sourceFragmentId": "074-circle-1p-bisect-return-tkt-01",
-      "to": "Lisbon",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1"
       ]
@@ -62,10 +62,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Lisbon",
+      "from": "Istanbul",
       "mode": "rail",
       "sourceFragmentId": "074-circle-1p-bisect-return-tkt-01",
-      "to": "Zurich",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Zurich",
+      "from": "Copenhagen",
       "mode": "rail",
       "sourceFragmentId": "074-circle-1p-bisect-return-tkt-01",
-      "to": "Helsinki",
+      "to": "Berlin",
       "travelers": [
         "traveler-1"
       ]
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Helsinki",
+      "from": "Berlin",
       "mode": "bus",
       "sourceFragmentId": "074-circle-1p-bisect-return-tkt-02",
-      "to": "Lisbon",
+      "to": "Istanbul",
       "travelers": [
         "traveler-1"
       ]
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Lisbon",
+      "from": "Istanbul",
       "mode": "rail",
       "sourceFragmentId": "074-circle-1p-bisect-return-tkt-03",
-      "to": "Prague",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1"
       ]

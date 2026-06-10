@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Berlin",
+      "city": "Moscow",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Berlin"
+    "Moscow"
   ],
   "confirmationCode": "HTL002166",
   "documentType": "hotel-booking",

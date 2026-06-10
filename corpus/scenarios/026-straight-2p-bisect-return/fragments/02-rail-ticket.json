@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Oslo",
-    "Munich"
+    "Prague",
+    "Warsaw"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003026",
   "sourceDocumentId": "026-straight-2p-bisect-return-tkt-03",
   "stations": [
     {
-      "city": "Oslo",
+      "city": "Prague",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Oslo Hauptbahnhof",
+      "identifier": "Prague Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

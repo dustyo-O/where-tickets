@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-01T03:00:00Z",
-      "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Berlin",
-      "identifier": "Riverside Inn",
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "Athens",
+      "identifier": "Central Lodge",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Berlin"
+    "Athens"
   ],
-  "confirmationCode": "HTL001071",
+  "confirmationCode": "HTL004071",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-htl-01",
+  "sourceDocumentId": "071-circle-1p-seeded-shuffle-hotels-htl-04",
   "travelers": [
     "traveler-1"
   ]

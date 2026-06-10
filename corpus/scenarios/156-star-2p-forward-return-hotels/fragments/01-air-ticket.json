@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Zurich",
-    "Copenhagen",
-    "Stockholm"
+    "Istanbul",
+    "London",
+    "Amsterdam"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001156",
   "sourceDocumentId": "156-star-2p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Copenhagen",
+      "city": "London",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "CPH",
+      "identifier": "LHR",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Stockholm",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "ARN",
+      "identifier": "AMS",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Copenhagen",
-      "identifier": "CPH",
+      "city": "London",
+      "identifier": "LHR",
       "kind": "airport"
     }
   ],

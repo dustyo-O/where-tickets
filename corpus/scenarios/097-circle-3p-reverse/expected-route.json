@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Helsinki",
+      "city": "Milan",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "New York",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Barcelona",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -51,7 +51,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Zurich",
+      "city": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Helsinki",
+      "from": "Milan",
       "mode": "bus",
       "sourceFragmentId": "097-circle-3p-reverse-tkt-01",
-      "to": "Zurich",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -76,10 +76,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Zurich",
+      "from": "New York",
       "mode": "bus",
       "sourceFragmentId": "097-circle-3p-reverse-tkt-01",
-      "to": "Barcelona",
+      "to": "Stockholm",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -89,7 +89,7 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Barcelona",
+      "from": "Stockholm",
       "mode": "bus",
       "sourceFragmentId": "097-circle-3p-reverse-tkt-01",
       "to": "Berlin",
@@ -118,7 +118,7 @@
       "from": "Frankfurt",
       "mode": "bus",
       "sourceFragmentId": "097-circle-3p-reverse-tkt-03",
-      "to": "Zurich",
+      "to": "New York",
       "travelers": [
         "traveler-1",
         "traveler-2",

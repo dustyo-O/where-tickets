@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Barcelona",
-    "Zurich"
+    "Istanbul",
+    "Barcelona"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR002145",
   "sourceDocumentId": "145-star-2p-reverse-tkt-02",
   "stations": [
     {
-      "city": "Barcelona",
+      "city": "Istanbul",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Barcelona Hauptbahnhof",
+      "identifier": "Istanbul Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Hauptbahnhof",
+      "city": "Barcelona",
+      "identifier": "Barcelona Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

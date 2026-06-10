@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Berlin",
-    "Helsinki",
-    "Madrid",
-    "Paris"
+    "New York",
+    "Stockholm",
+    "Amsterdam",
+    "Frankfurt"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001029",
   "sourceDocumentId": "029-straight-2p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Berlin",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Berlin Hauptbahnhof",
+      "identifier": "New York Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Helsinki",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Stockholm Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Madrid",
+      "city": "Amsterdam",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Paris",
-      "identifier": "Paris Hauptbahnhof",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

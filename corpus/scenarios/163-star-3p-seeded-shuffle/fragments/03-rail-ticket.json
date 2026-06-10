@@ -1,0 +1,28 @@
+{
+  "cities": [
+    "Milan",
+    "Munich"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002163",
+  "sourceDocumentId": "163-star-3p-seeded-shuffle-tkt-02",
+  "stations": [
+    {
+      "city": "Milan",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Milan Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Munich",
+      "identifier": "Munich Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

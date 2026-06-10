@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T00:00:00Z",
       "checkOutAt": "2027-03-02T18:00:00Z",
-      "city": "Rome",
+      "city": "Moscow",
       "identifier": "Old Town Hostel",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Rome"
+    "Moscow"
   ],
   "confirmationCode": "HTL002172",
   "documentType": "hotel-booking",

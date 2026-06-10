@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Munich",
+      "city": "Prague",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Munich"
+    "Prague"
   ],
   "confirmationCode": "HTL003116",
   "documentType": "hotel-booking",

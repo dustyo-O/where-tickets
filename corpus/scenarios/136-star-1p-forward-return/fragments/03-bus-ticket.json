@@ -1,7 +1,7 @@
 {
   "cities": [
-    "Warsaw",
-    "Munich",
+    "Lisbon",
+    "Berlin",
     "Barcelona"
   ],
   "documentType": "bus-ticket",
@@ -9,16 +9,16 @@
   "sourceDocumentId": "136-star-1p-forward-return-tkt-03",
   "stations": [
     {
-      "city": "Warsaw",
+      "city": "Lisbon",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Warsaw Bus Terminal",
+      "identifier": "Lisbon Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
+      "city": "Berlin",
       "departureAt": "2027-03-02T16:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     },
     {

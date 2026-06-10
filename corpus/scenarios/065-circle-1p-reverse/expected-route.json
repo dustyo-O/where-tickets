@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "New York",
+      "city": "Moscow",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -9,7 +9,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Vienna",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Warsaw",
+      "city": "Dublin",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Rome",
+      "city": "Milan",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -41,7 +41,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
+      "city": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -51,10 +51,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "New York",
+      "from": "Moscow",
       "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-01",
-      "to": "Munich",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -62,10 +62,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Munich",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-01",
-      "to": "Warsaw",
+      "to": "Dublin",
       "travelers": [
         "traveler-1"
       ]
@@ -73,10 +73,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Warsaw",
+      "from": "Dublin",
       "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-01",
-      "to": "Rome",
+      "to": "Milan",
       "travelers": [
         "traveler-1"
       ]
@@ -84,10 +84,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Rome",
-      "mode": "air",
+      "from": "Milan",
+      "mode": "bus",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-02",
-      "to": "Amsterdam",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Amsterdam",
+      "from": "Copenhagen",
       "mode": "rail",
       "sourceFragmentId": "065-circle-1p-reverse-tkt-03",
-      "to": "Munich",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]

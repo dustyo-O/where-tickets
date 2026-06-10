@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Zurich",
-    "Frankfurt",
-    "London"
+    "Istanbul",
+    "Athens",
+    "Madrid"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001162",
   "sourceDocumentId": "162-star-3p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Frankfurt",
+      "city": "Athens",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "FRA",
+      "identifier": "ATH",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "London",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "LHR",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Frankfurt",
-      "identifier": "FRA",
+      "city": "Athens",
+      "identifier": "ATH",
       "kind": "airport"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Moscow",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Stockholm",
+      "city": "Munich",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Zurich",
+      "city": "Vienna",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
+      "city": "Helsinki",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -73,7 +73,7 @@
         }
       ],
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Stockholm",
+      "city": "Munich",
       "departureAt": "2027-03-04T12:00:00Z",
       "travelers": [
         "traveler-1",
@@ -83,7 +83,7 @@
     },
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
-      "city": "Moscow",
+      "city": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -95,10 +95,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Moscow",
+      "from": "Frankfurt",
       "mode": "air",
       "sourceFragmentId": "108-circle-3p-forward-return-hotels-tkt-01",
-      "to": "Stockholm",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -108,10 +108,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Stockholm",
+      "from": "Munich",
       "mode": "air",
       "sourceFragmentId": "108-circle-3p-forward-return-hotels-tkt-01",
-      "to": "Zurich",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -121,10 +121,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Zurich",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "108-circle-3p-forward-return-hotels-tkt-01",
-      "to": "Madrid",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -134,10 +134,10 @@
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Madrid",
-      "mode": "bus",
+      "from": "Helsinki",
+      "mode": "rail",
       "sourceFragmentId": "108-circle-3p-forward-return-hotels-tkt-02",
-      "to": "Stockholm",
+      "to": "Munich",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-04T15:00:00Z",
       "departureAt": "2027-03-04T12:00:00Z",
-      "from": "Stockholm",
+      "from": "Munich",
       "mode": "air",
       "sourceFragmentId": "108-circle-3p-forward-return-hotels-tkt-03",
-      "to": "Moscow",
+      "to": "Frankfurt",
       "travelers": [
         "traveler-1",
         "traveler-2",

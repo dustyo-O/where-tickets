@@ -1,9 +1,9 @@
 {
   "cities": [
     "Munich",
-    "London",
-    "Dublin",
-    "Amsterdam"
+    "Rome",
+    "Milan",
+    "Warsaw"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001046",
@@ -17,22 +17,22 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "London Bus Terminal",
+      "identifier": "Rome Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Dublin",
+      "city": "Milan",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Dublin Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Amsterdam",
-      "identifier": "Amsterdam Bus Terminal",
+      "city": "Warsaw",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

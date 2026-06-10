@@ -1,0 +1,44 @@
+{
+  "cities": [
+    "Helsinki",
+    "Amsterdam",
+    "Istanbul",
+    "Frankfurt"
+  ],
+  "documentType": "bus-ticket",
+  "pnr": "PNR001043",
+  "sourceDocumentId": "043-straight-3p-seeded-shuffle-return-tkt-01",
+  "stations": [
+    {
+      "city": "Helsinki",
+      "departureAt": "2027-03-01T00:00:00Z",
+      "identifier": "Helsinki Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T03:00:00Z",
+      "city": "Amsterdam",
+      "departureAt": "2027-03-01T08:00:00Z",
+      "identifier": "Amsterdam Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T11:00:00Z",
+      "city": "Istanbul",
+      "departureAt": "2027-03-01T16:00:00Z",
+      "identifier": "Istanbul Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-01T19:00:00Z",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
+      "kind": "bus_terminal"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3"
+  ]
+}

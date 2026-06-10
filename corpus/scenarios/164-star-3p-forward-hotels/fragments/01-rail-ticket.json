@@ -1,37 +1,37 @@
 {
   "cities": [
-    "New York",
-    "Prague",
-    "Istanbul"
+    "Stockholm",
+    "Warsaw",
+    "Moscow"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001164",
   "sourceDocumentId": "164-star-3p-forward-hotels-tkt-01",
   "stations": [
     {
-      "city": "New York",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "New York Hauptbahnhof",
+      "identifier": "Stockholm Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Prague Hauptbahnhof",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Istanbul",
+      "city": "Moscow",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Prague",
-      "identifier": "Prague Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Stockholm",
-    "Paris",
-    "Athens"
+    "Berlin",
+    "Milan",
+    "Oslo"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001179",
   "sourceDocumentId": "179-star-4p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Stockholm",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Stockholm Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Paris",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Paris Hauptbahnhof",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Athens Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Paris",
-      "identifier": "Paris Hauptbahnhof",
+      "city": "Milan",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

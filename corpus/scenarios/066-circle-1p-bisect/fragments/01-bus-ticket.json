@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Dublin",
-    "London"
+    "New York",
+    "Barcelona"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002066",
   "sourceDocumentId": "066-circle-1p-bisect-tkt-02",
   "stations": [
     {
-      "city": "Dublin",
+      "city": "New York",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Dublin Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "London",
-      "identifier": "London Bus Terminal",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

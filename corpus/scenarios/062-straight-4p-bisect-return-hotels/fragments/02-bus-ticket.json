@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Copenhagen"
+    "New York",
+    "Madrid"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002062",
   "sourceDocumentId": "062-straight-4p-bisect-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "New York",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Amsterdam Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Copenhagen",
-      "identifier": "Copenhagen Bus Terminal",
+      "city": "Madrid",
+      "identifier": "Madrid Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

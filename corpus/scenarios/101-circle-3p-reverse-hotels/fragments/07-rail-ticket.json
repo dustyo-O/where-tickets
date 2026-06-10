@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Helsinki",
-    "Copenhagen",
-    "Madrid",
-    "London"
+    "Athens",
+    "Milan",
+    "Frankfurt",
+    "Lisbon"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001101",
   "sourceDocumentId": "101-circle-3p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Helsinki",
+      "city": "Athens",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Helsinki Hauptbahnhof",
+      "identifier": "Athens Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Copenhagen",
+      "city": "Milan",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Copenhagen Hauptbahnhof",
+      "identifier": "Milan Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Madrid",
+      "city": "Frankfurt",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "Madrid Hauptbahnhof",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "London",
-      "identifier": "London Hauptbahnhof",
+      "city": "Lisbon",
+      "identifier": "Lisbon Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

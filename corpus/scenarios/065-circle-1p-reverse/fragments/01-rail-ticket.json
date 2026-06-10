@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Munich"
+    "Copenhagen",
+    "Vienna"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR003065",
   "sourceDocumentId": "065-circle-1p-reverse-tkt-03",
   "stations": [
     {
-      "city": "Amsterdam",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "Amsterdam Hauptbahnhof",
+      "identifier": "Copenhagen Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
-      "identifier": "Munich Hauptbahnhof",
+      "city": "Vienna",
+      "identifier": "Vienna Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

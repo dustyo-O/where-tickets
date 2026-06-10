@@ -1,37 +1,37 @@
 {
   "cities": [
+    "Helsinki",
     "Milan",
-    "Copenhagen",
-    "Madrid"
+    "New York"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001154",
   "sourceDocumentId": "154-star-2p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Milan",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Milan Bus Terminal",
+      "identifier": "Helsinki Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Copenhagen",
+      "city": "Milan",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Copenhagen Bus Terminal",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Madrid",
+      "city": "New York",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Madrid Bus Terminal",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Copenhagen",
-      "identifier": "Copenhagen Bus Terminal",
+      "city": "Milan",
+      "identifier": "Milan Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

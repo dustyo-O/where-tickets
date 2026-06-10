@@ -1,6 +1,6 @@
 {
   "cities": [
-    "Vienna",
+    "London",
     "Warsaw"
   ],
   "documentType": "rail-ticket",
@@ -8,9 +8,9 @@
   "sourceDocumentId": "138-star-1p-bisect-return-tkt-02",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "London",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "identifier": "London Hauptbahnhof",
       "kind": "rail_station"
     },
     {

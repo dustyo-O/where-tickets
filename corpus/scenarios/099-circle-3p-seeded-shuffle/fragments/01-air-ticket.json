@@ -1,38 +1,22 @@
 {
   "cities": [
-    "Amsterdam",
-    "Madrid",
-    "Copenhagen",
-    "Barcelona"
+    "Oslo",
+    "London"
   ],
   "documentType": "air-ticket",
-  "pnr": "PNR001099",
-  "sourceDocumentId": "099-circle-3p-seeded-shuffle-tkt-01",
+  "pnr": "PNR003099",
+  "sourceDocumentId": "099-circle-3p-seeded-shuffle-tkt-03",
   "stations": [
     {
-      "city": "Amsterdam",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "AMS",
+      "city": "Oslo",
+      "departureAt": "2027-03-02T08:00:00Z",
+      "identifier": "OSL",
       "kind": "airport"
     },
     {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Madrid",
-      "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "MAD",
-      "kind": "airport"
-    },
-    {
-      "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Copenhagen",
-      "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "CPH",
-      "kind": "airport"
-    },
-    {
-      "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Barcelona",
-      "identifier": "BCN",
+      "arrivalAt": "2027-03-02T11:00:00Z",
+      "city": "London",
+      "identifier": "LHR",
       "kind": "airport"
     }
   ],

@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Barcelona",
-    "New York"
+    "Frankfurt",
+    "Helsinki"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002028",
   "sourceDocumentId": "028-straight-2p-forward-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Barcelona",
+      "city": "Frankfurt",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "BCN",
+      "identifier": "FRA",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "New York",
-      "identifier": "JFK",
+      "city": "Helsinki",
+      "identifier": "HEL",
       "kind": "airport"
     }
   ],

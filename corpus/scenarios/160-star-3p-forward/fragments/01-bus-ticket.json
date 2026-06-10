@@ -1,37 +1,37 @@
 {
   "cities": [
-    "Vienna",
-    "New York",
-    "Athens"
+    "London",
+    "Stockholm",
+    "Copenhagen"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001160",
   "sourceDocumentId": "160-star-3p-forward-tkt-01",
   "stations": [
     {
-      "city": "Vienna",
+      "city": "London",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Vienna Bus Terminal",
+      "identifier": "London Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "New York Bus Terminal",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Copenhagen",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Athens Bus Terminal",
+      "identifier": "Copenhagen Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "New York",
-      "identifier": "New York Bus Terminal",
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

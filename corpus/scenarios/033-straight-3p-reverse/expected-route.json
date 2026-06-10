@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Warsaw",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -11,7 +11,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -21,7 +21,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Milan",
+      "city": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -33,10 +33,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
+      "from": "Stockholm",
       "mode": "air",
       "sourceFragmentId": "033-straight-3p-reverse-tkt-01",
-      "to": "Prague",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -46,10 +46,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Prague",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "033-straight-3p-reverse-tkt-01",
-      "to": "Milan",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",

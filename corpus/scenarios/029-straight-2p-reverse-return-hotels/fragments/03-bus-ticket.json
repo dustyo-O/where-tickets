@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Paris",
-    "Vienna"
+    "Frankfurt",
+    "Oslo"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR002029",
   "sourceDocumentId": "029-straight-2p-reverse-return-hotels-tkt-02",
   "stations": [
     {
-      "city": "Paris",
+      "city": "Frankfurt",
       "departureAt": "2027-03-03T15:00:00Z",
-      "identifier": "Paris Bus Terminal",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Vienna",
-      "identifier": "Vienna Bus Terminal",
+      "city": "Oslo",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

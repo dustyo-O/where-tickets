@@ -1,22 +1,22 @@
 {
   "cities": [
-    "Zurich",
-    "Munich"
+    "Milan",
+    "Stockholm"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR003120",
   "sourceDocumentId": "120-circle-4p-forward-return-tkt-03",
   "stations": [
     {
-      "city": "Zurich",
+      "city": "Milan",
       "departureAt": "2027-03-02T08:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "MXP",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Munich",
-      "identifier": "MUC",
+      "city": "Stockholm",
+      "identifier": "ARN",
       "kind": "airport"
     }
   ],

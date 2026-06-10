@@ -1,19 +1,19 @@
 {
   "accommodations": [
     {
-      "checkInAt": "2027-03-04T15:00:00Z",
-      "checkOutAt": "2027-03-05T09:00:00Z",
-      "city": "Rome",
-      "identifier": "Harbor View",
+      "checkInAt": "2027-03-03T18:00:00Z",
+      "checkOutAt": "2027-03-04T12:00:00Z",
+      "city": "London",
+      "identifier": "Central Lodge",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Rome"
+    "London"
   ],
-  "confirmationCode": "HTL005127",
+  "confirmationCode": "HTL004127",
   "documentType": "hotel-booking",
-  "sourceDocumentId": "127-circle-4p-seeded-shuffle-return-hotels-htl-05",
+  "sourceDocumentId": "127-circle-4p-seeded-shuffle-return-hotels-htl-04",
   "travelers": [
     "traveler-1",
     "traveler-2",

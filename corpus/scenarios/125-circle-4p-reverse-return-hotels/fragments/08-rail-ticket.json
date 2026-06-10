@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Istanbul",
-    "Vienna",
-    "London",
-    "Copenhagen"
+    "Berlin",
+    "Rome",
+    "Oslo",
+    "Zurich"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001125",
   "sourceDocumentId": "125-circle-4p-reverse-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Istanbul",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Berlin Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Vienna",
+      "city": "Rome",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "Vienna Hauptbahnhof",
+      "identifier": "Rome Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Oslo",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "London Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Copenhagen",
-      "identifier": "Copenhagen Hauptbahnhof",
+      "city": "Zurich",
+      "identifier": "Zurich Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "cities": [
     "Frankfurt",
-    "Zurich"
+    "New York"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR003097",
@@ -15,8 +15,8 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Zurich",
-      "identifier": "Zurich Bus Terminal",
+      "city": "New York",
+      "identifier": "New York Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

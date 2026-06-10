@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Madrid",
+      "city": "Helsinki",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -20,7 +20,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Rome",
+      "city": "Paris",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -39,7 +39,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Oslo",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -50,7 +50,7 @@
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Madrid",
+      "city": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -63,10 +63,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Madrid",
+      "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "063-straight-4p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Rome",
+      "to": "Paris",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -77,10 +77,10 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Rome",
+      "from": "Paris",
       "mode": "air",
       "sourceFragmentId": "063-straight-4p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "London",
+      "to": "Oslo",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -91,10 +91,10 @@
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
       "departureAt": "2027-03-02T18:00:00Z",
-      "from": "London",
+      "from": "Oslo",
       "mode": "air",
       "sourceFragmentId": "063-straight-4p-seeded-shuffle-return-hotels-tkt-01",
-      "to": "Madrid",
+      "to": "Helsinki",
       "travelers": [
         "traveler-1",
         "traveler-2",

@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Copenhagen",
+    "Rome"
+  ],
+  "documentType": "rail-ticket",
+  "pnr": "PNR002187",
+  "sourceDocumentId": "187-star-4p-seeded-shuffle-return-tkt-02",
+  "stations": [
+    {
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "Copenhagen Hauptbahnhof",
+      "kind": "rail_station"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Rome",
+      "identifier": "Rome Hauptbahnhof",
+      "kind": "rail_station"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

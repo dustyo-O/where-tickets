@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Munich",
-    "New York",
-    "London",
-    "Berlin"
+    "Oslo",
+    "Warsaw",
+    "Athens",
+    "Barcelona"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001076",
   "sourceDocumentId": "076-circle-1p-forward-return-hotels-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Oslo",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Munich Bus Terminal",
+      "identifier": "Oslo Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "New York Bus Terminal",
+      "identifier": "Warsaw Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "London",
+      "city": "Athens",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "London Bus Terminal",
+      "identifier": "Athens Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Berlin",
-      "identifier": "Berlin Bus Terminal",
+      "city": "Barcelona",
+      "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

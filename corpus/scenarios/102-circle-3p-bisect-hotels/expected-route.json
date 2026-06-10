@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Athens",
+      "city": "New York",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
         }
       ],
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Helsinki",
+      "city": "Milan",
       "departureAt": "2027-03-01T21:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Lisbon",
+      "city": "Berlin",
       "departureAt": "2027-03-02T18:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
         }
       ],
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Berlin",
+      "city": "Warsaw",
       "departureAt": "2027-03-03T15:00:00Z",
       "travelers": [
         "traveler-1",
@@ -65,7 +65,7 @@
     },
     {
       "arrivalAt": "2027-03-03T18:00:00Z",
-      "city": "Helsinki",
+      "city": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -77,10 +77,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Athens",
+      "from": "New York",
       "mode": "air",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
-      "to": "Helsinki",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",
@@ -90,20 +90,7 @@
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
       "departureAt": "2027-03-01T21:00:00Z",
-      "from": "Helsinki",
-      "mode": "air",
-      "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
-      "to": "Lisbon",
-      "travelers": [
-        "traveler-1",
-        "traveler-2",
-        "traveler-3"
-      ]
-    },
-    {
-      "arrivalAt": "2027-03-02T21:00:00Z",
-      "departureAt": "2027-03-02T18:00:00Z",
-      "from": "Lisbon",
+      "from": "Milan",
       "mode": "air",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
       "to": "Berlin",
@@ -114,12 +101,25 @@
       ]
     },
     {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "from": "Berlin",
+      "mode": "air",
+      "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-01",
+      "to": "Warsaw",
+      "travelers": [
+        "traveler-1",
+        "traveler-2",
+        "traveler-3"
+      ]
+    },
+    {
       "arrivalAt": "2027-03-03T18:00:00Z",
       "departureAt": "2027-03-03T15:00:00Z",
-      "from": "Berlin",
+      "from": "Warsaw",
       "mode": "bus",
       "sourceFragmentId": "102-circle-3p-bisect-hotels-tkt-02",
-      "to": "Helsinki",
+      "to": "Milan",
       "travelers": [
         "traveler-1",
         "traveler-2",

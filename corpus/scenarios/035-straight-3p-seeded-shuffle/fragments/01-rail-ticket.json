@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Athens",
-    "Munich",
-    "Rome",
-    "Stockholm"
+    "Istanbul",
+    "Amsterdam",
+    "Oslo",
+    "Warsaw"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001035",
   "sourceDocumentId": "035-straight-3p-seeded-shuffle-tkt-01",
   "stations": [
     {
-      "city": "Athens",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Athens Hauptbahnhof",
+      "identifier": "Istanbul Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Munich",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Munich Hauptbahnhof",
+      "identifier": "Amsterdam Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Rome",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Rome Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Stockholm",
-      "identifier": "Stockholm Hauptbahnhof",
+      "city": "Warsaw",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

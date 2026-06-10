@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Stockholm",
+      "city": "Rome",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Stockholm"
+    "Rome"
   ],
   "confirmationCode": "HTL003100",
   "documentType": "hotel-booking",

@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Munich",
-    "Lisbon",
-    "Istanbul",
-    "New York"
+    "Warsaw",
+    "Frankfurt",
+    "Oslo",
+    "Moscow"
   ],
   "documentType": "rail-ticket",
   "pnr": "PNR001026",
   "sourceDocumentId": "026-straight-2p-bisect-return-tkt-01",
   "stations": [
     {
-      "city": "Munich",
+      "city": "Warsaw",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Munich Hauptbahnhof",
+      "identifier": "Warsaw Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Lisbon",
+      "city": "Frankfurt",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Lisbon Hauptbahnhof",
+      "identifier": "Frankfurt Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Istanbul",
+      "city": "Oslo",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Istanbul Hauptbahnhof",
+      "identifier": "Oslo Hauptbahnhof",
       "kind": "rail_station"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "New York",
-      "identifier": "New York Hauptbahnhof",
+      "city": "Moscow",
+      "identifier": "Moscow Hauptbahnhof",
       "kind": "rail_station"
     }
   ],

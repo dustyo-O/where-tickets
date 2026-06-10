@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Moscow",
-    "Prague",
-    "Istanbul",
-    "Dublin"
+    "Berlin",
+    "Stockholm",
+    "Madrid",
+    "Frankfurt"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001073",
   "sourceDocumentId": "073-circle-1p-reverse-return-tkt-01",
   "stations": [
     {
-      "city": "Moscow",
+      "city": "Berlin",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Moscow Bus Terminal",
+      "identifier": "Berlin Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "Prague Bus Terminal",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Istanbul",
+      "city": "Madrid",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "Istanbul Bus Terminal",
+      "identifier": "Madrid Bus Terminal",
       "kind": "bus_terminal"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Dublin",
-      "identifier": "Dublin Bus Terminal",
+      "city": "Frankfurt",
+      "identifier": "Frankfurt Bus Terminal",
       "kind": "bus_terminal"
     }
   ],

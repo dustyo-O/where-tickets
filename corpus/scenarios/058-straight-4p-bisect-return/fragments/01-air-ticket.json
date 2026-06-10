@@ -1,0 +1,29 @@
+{
+  "cities": [
+    "Vienna",
+    "Oslo"
+  ],
+  "documentType": "air-ticket",
+  "pnr": "PNR002058",
+  "sourceDocumentId": "058-straight-4p-bisect-return-tkt-02",
+  "stations": [
+    {
+      "city": "Vienna",
+      "departureAt": "2027-03-02T00:00:00Z",
+      "identifier": "VIE",
+      "kind": "airport"
+    },
+    {
+      "arrivalAt": "2027-03-02T03:00:00Z",
+      "city": "Oslo",
+      "identifier": "OSL",
+      "kind": "airport"
+    }
+  ],
+  "travelers": [
+    "traveler-1",
+    "traveler-2",
+    "traveler-3",
+    "traveler-4"
+  ]
+}

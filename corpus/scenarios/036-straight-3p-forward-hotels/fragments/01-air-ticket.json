@@ -1,30 +1,30 @@
 {
   "cities": [
-    "Milan",
-    "Zurich",
-    "Paris"
+    "Istanbul",
+    "Berlin",
+    "Zurich"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001036",
   "sourceDocumentId": "036-straight-3p-forward-hotels-tkt-01",
   "stations": [
     {
-      "city": "Milan",
+      "city": "Istanbul",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "MXP",
+      "identifier": "IST",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Zurich",
+      "city": "Berlin",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "ZRH",
+      "identifier": "BER",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Paris",
-      "identifier": "CDG",
+      "city": "Zurich",
+      "identifier": "ZRH",
       "kind": "airport"
     }
   ],

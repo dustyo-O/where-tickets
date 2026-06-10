@@ -1,22 +1,22 @@
 {
   "cities": [
-    "New York",
-    "Munich"
+    "Stockholm",
+    "Oslo"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR002160",
   "sourceDocumentId": "160-star-3p-forward-tkt-02",
   "stations": [
     {
-      "city": "New York",
+      "city": "Stockholm",
       "departureAt": "2027-03-02T00:00:00Z",
-      "identifier": "JFK",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Munich",
-      "identifier": "MUC",
+      "city": "Oslo",
+      "identifier": "OSL",
       "kind": "airport"
     }
   ],

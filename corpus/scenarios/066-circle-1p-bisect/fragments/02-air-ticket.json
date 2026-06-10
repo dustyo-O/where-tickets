@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Prague",
-    "London",
-    "Berlin",
-    "Dublin"
+    "Stockholm",
+    "Barcelona",
+    "Amsterdam",
+    "New York"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001066",
   "sourceDocumentId": "066-circle-1p-bisect-tkt-01",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Stockholm",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "PRG",
+      "identifier": "ARN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "London",
+      "city": "Barcelona",
       "departureAt": "2027-03-01T08:00:00Z",
-      "identifier": "LHR",
+      "identifier": "BCN",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Berlin",
+      "city": "Amsterdam",
       "departureAt": "2027-03-01T16:00:00Z",
-      "identifier": "BER",
+      "identifier": "AMS",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Dublin",
-      "identifier": "DUB",
+      "city": "New York",
+      "identifier": "JFK",
       "kind": "airport"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Amsterdam",
+      "city": "Munich",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -17,7 +17,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Zurich",
+      "city": "Vienna",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1"
@@ -25,7 +25,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Paris",
+      "city": "Rome",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1"
@@ -33,7 +33,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "London",
+      "city": "Copenhagen",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1"
@@ -49,7 +49,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Amsterdam",
+      "city": "Munich",
       "travelers": [
         "traveler-1"
       ]
@@ -59,7 +59,7 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Amsterdam",
+      "from": "Munich",
       "mode": "air",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
       "to": "Helsinki",
@@ -73,7 +73,7 @@
       "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
-      "to": "Zurich",
+      "to": "Vienna",
       "travelers": [
         "traveler-1"
       ]
@@ -81,10 +81,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Zurich",
+      "from": "Vienna",
       "mode": "air",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-01",
-      "to": "Paris",
+      "to": "Rome",
       "travelers": [
         "traveler-1"
       ]
@@ -92,10 +92,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Paris",
+      "from": "Rome",
       "mode": "rail",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-02",
-      "to": "London",
+      "to": "Copenhagen",
       "travelers": [
         "traveler-1"
       ]
@@ -103,7 +103,7 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "London",
+      "from": "Copenhagen",
       "mode": "air",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
       "to": "Helsinki",
@@ -117,7 +117,7 @@
       "from": "Helsinki",
       "mode": "air",
       "sourceFragmentId": "075-circle-1p-seeded-shuffle-return-tkt-03",
-      "to": "Amsterdam",
+      "to": "Munich",
       "travelers": [
         "traveler-1"
       ]

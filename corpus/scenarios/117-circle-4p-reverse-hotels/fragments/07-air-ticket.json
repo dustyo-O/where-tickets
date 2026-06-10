@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Prague",
-    "Paris",
-    "Barcelona",
-    "Istanbul"
+    "Rome",
+    "Madrid",
+    "Dublin",
+    "New York"
   ],
   "documentType": "air-ticket",
   "pnr": "PNR001117",
   "sourceDocumentId": "117-circle-4p-reverse-hotels-tkt-01",
   "stations": [
     {
-      "city": "Prague",
+      "city": "Rome",
       "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "PRG",
+      "identifier": "ROM",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Paris",
+      "city": "Madrid",
       "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "CDG",
+      "identifier": "MAD",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T00:00:00Z",
-      "city": "Barcelona",
+      "city": "Dublin",
       "departureAt": "2027-03-02T18:00:00Z",
-      "identifier": "BCN",
+      "identifier": "DUB",
       "kind": "airport"
     },
     {
       "arrivalAt": "2027-03-02T21:00:00Z",
-      "city": "Istanbul",
-      "identifier": "IST",
+      "city": "New York",
+      "identifier": "JFK",
       "kind": "airport"
     }
   ],

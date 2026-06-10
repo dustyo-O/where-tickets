@@ -1,7 +1,7 @@
 {
   "stops": [
     {
-      "city": "Warsaw",
+      "city": "Vienna",
       "departureAt": "2027-03-01T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -10,7 +10,7 @@
     },
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-01T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -19,7 +19,7 @@
     },
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
-      "city": "Athens",
+      "city": "Berlin",
       "departureAt": "2027-03-01T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -28,7 +28,7 @@
     },
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-02T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -37,7 +37,7 @@
     },
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
-      "city": "Oslo",
+      "city": "Zurich",
       "departureAt": "2027-03-02T08:00:00Z",
       "travelers": [
         "traveler-1",
@@ -46,7 +46,7 @@
     },
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
-      "city": "Prague",
+      "city": "Madrid",
       "departureAt": "2027-03-02T16:00:00Z",
       "travelers": [
         "traveler-1",
@@ -55,7 +55,7 @@
     },
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
-      "city": "Helsinki",
+      "city": "Moscow",
       "departureAt": "2027-03-03T00:00:00Z",
       "travelers": [
         "traveler-1",
@@ -64,7 +64,7 @@
     },
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
-      "city": "Warsaw",
+      "city": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -75,10 +75,10 @@
     {
       "arrivalAt": "2027-03-01T03:00:00Z",
       "departureAt": "2027-03-01T00:00:00Z",
-      "from": "Warsaw",
+      "from": "Vienna",
       "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
-      "to": "Prague",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -87,10 +87,10 @@
     {
       "arrivalAt": "2027-03-01T11:00:00Z",
       "departureAt": "2027-03-01T08:00:00Z",
-      "from": "Prague",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
-      "to": "Athens",
+      "to": "Berlin",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -99,10 +99,10 @@
     {
       "arrivalAt": "2027-03-01T19:00:00Z",
       "departureAt": "2027-03-01T16:00:00Z",
-      "from": "Athens",
+      "from": "Berlin",
       "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-01",
-      "to": "Prague",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -111,10 +111,10 @@
     {
       "arrivalAt": "2027-03-02T03:00:00Z",
       "departureAt": "2027-03-02T00:00:00Z",
-      "from": "Prague",
+      "from": "Madrid",
       "mode": "air",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-02",
-      "to": "Oslo",
+      "to": "Zurich",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -123,10 +123,10 @@
     {
       "arrivalAt": "2027-03-02T11:00:00Z",
       "departureAt": "2027-03-02T08:00:00Z",
-      "from": "Oslo",
+      "from": "Zurich",
       "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
-      "to": "Prague",
+      "to": "Madrid",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -135,10 +135,10 @@
     {
       "arrivalAt": "2027-03-02T19:00:00Z",
       "departureAt": "2027-03-02T16:00:00Z",
-      "from": "Prague",
+      "from": "Madrid",
       "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
-      "to": "Helsinki",
+      "to": "Moscow",
       "travelers": [
         "traveler-1",
         "traveler-2"
@@ -147,10 +147,10 @@
     {
       "arrivalAt": "2027-03-03T03:00:00Z",
       "departureAt": "2027-03-03T00:00:00Z",
-      "from": "Helsinki",
+      "from": "Moscow",
       "mode": "rail",
       "sourceFragmentId": "152-star-2p-forward-return-tkt-03",
-      "to": "Warsaw",
+      "to": "Vienna",
       "travelers": [
         "traveler-1",
         "traveler-2"

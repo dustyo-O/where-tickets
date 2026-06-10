@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-02T21:00:00Z",
       "checkOutAt": "2027-03-03T15:00:00Z",
-      "city": "Milan",
+      "city": "Athens",
       "identifier": "Plaza Suites",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Milan"
+    "Athens"
   ],
   "confirmationCode": "HTL003166",
   "documentType": "hotel-booking",

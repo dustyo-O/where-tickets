@@ -141,10 +141,12 @@ def test_load_scenario_orders_fragments_and_parses_expected() -> None:
         "bus-ticket",
         "air-ticket",
     ]
-    # Rome appears as two distinct stops in this circle scenario.
+    # Helsinki appears as two distinct stops in this circle scenario
+    # (the circle's revisit city; post-DUS-31-Slice-11 city pool reshuffle
+    # the doubled city is Helsinki, was Rome).
     cities = [s.city for s in scenario.expected.stops]
-    assert cities == ["Helsinki", "Rome", "Lisbon", "Paris", "Rome"]
-    assert cities.count("Rome") == 2
+    assert cities == ["Stockholm", "Helsinki", "Paris", "Barcelona", "Helsinki"]
+    assert cities.count("Helsinki") == 2
 
 
 # --------------------------------------------------------------------------- #
@@ -162,13 +164,15 @@ def test_final_route_match_self_match_straight() -> None:
     assert result.category is None
 
 
-def test_final_route_match_self_match_circle_double_rom() -> None:
+def test_final_route_match_self_match_circle_double_helsinki() -> None:
     expected = load_scenario("064-circle-1p-forward").expected
     working = _working_from_expected(expected)
 
-    # Sanity: two distinct Rome stop IDs survive into the working route.
-    rom_ids = [s.id for s in working.stops if s.city == "Rome"]
-    assert len(rom_ids) == 2
+    # Sanity: two distinct Helsinki stop IDs survive into the working route
+    # (the doubled city in this circle scenario after the DUS-31 Slice-11
+    # seed reshuffle — was Rome pre-Slice-11).
+    helsinki_ids = [s.id for s in working.stops if s.city == "Helsinki"]
+    assert len(helsinki_ids) == 2
 
     result = final_route_match(working, expected)
 

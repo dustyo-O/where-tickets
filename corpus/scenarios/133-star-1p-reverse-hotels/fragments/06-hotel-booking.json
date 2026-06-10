@@ -3,13 +3,13 @@
     {
       "checkInAt": "2027-03-01T03:00:00Z",
       "checkOutAt": "2027-03-01T21:00:00Z",
-      "city": "Oslo",
+      "city": "Lisbon",
       "identifier": "Riverside Inn",
       "kind": "hotel"
     }
   ],
   "cities": [
-    "Oslo"
+    "Lisbon"
   ],
   "confirmationCode": "HTL001133",
   "documentType": "hotel-booking",

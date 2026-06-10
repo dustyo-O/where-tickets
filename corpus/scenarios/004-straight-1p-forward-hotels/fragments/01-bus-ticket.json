@@ -1,38 +1,38 @@
 {
   "cities": [
-    "Frankfurt",
-    "New York",
     "Barcelona",
-    "Vienna"
+    "Vienna",
+    "Copenhagen",
+    "Stockholm"
   ],
   "documentType": "bus-ticket",
   "pnr": "PNR001004",
   "sourceDocumentId": "004-straight-1p-forward-hotels-tkt-01",
   "stations": [
     {
-      "city": "Frankfurt",
-      "departureAt": "2027-03-01T00:00:00Z",
-      "identifier": "Frankfurt Bus Terminal",
-      "kind": "bus_terminal"
-    },
-    {
-      "arrivalAt": "2027-03-01T03:00:00Z",
-      "city": "New York",
-      "departureAt": "2027-03-01T21:00:00Z",
-      "identifier": "New York Bus Terminal",
-      "kind": "bus_terminal"
-    },
-    {
-      "arrivalAt": "2027-03-02T00:00:00Z",
       "city": "Barcelona",
-      "departureAt": "2027-03-02T18:00:00Z",
+      "departureAt": "2027-03-01T00:00:00Z",
       "identifier": "Barcelona Bus Terminal",
       "kind": "bus_terminal"
     },
     {
-      "arrivalAt": "2027-03-02T21:00:00Z",
+      "arrivalAt": "2027-03-01T03:00:00Z",
       "city": "Vienna",
+      "departureAt": "2027-03-01T21:00:00Z",
       "identifier": "Vienna Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T00:00:00Z",
+      "city": "Copenhagen",
+      "departureAt": "2027-03-02T18:00:00Z",
+      "identifier": "Copenhagen Bus Terminal",
+      "kind": "bus_terminal"
+    },
+    {
+      "arrivalAt": "2027-03-02T21:00:00Z",
+      "city": "Stockholm",
+      "identifier": "Stockholm Bus Terminal",
       "kind": "bus_terminal"
     }
   ],
